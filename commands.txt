@@ -1,0 +1,36 @@
+All of commands given below are tested and fully working:
+*Some commands from the list may have bugs while using like puresetup timezone for example*
+
+**Tested:**
+The commands Below are fully tested and working as needed:
+
+purewes controller setattr --verify-array pure00 ct1 --mode secondary
+puredrive list
+pureadm list
+pureinstall
+pureversion list
+pureboot
+pureeng
+puresetup
+puresetup timezone
+puresetup newarray --skip-connectivity-tests
+puresetup secondaryarray --skip-connectivity-tests
+puresetup show
+purealert tag --timeout
+purearray list
+purearray remoteassist --connect
+purearray list --controller
+purehw list --all
+purenetwork list
+cat /etc/timezone
+hardware_check.py
+ping
+cp
+mount
+sudo su
+ls
+exit
+quit
+
+**Experimental:**
+The commands below are not tested and may contain undesired behaviour or bugs

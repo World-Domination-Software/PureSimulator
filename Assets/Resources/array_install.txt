@@ -1,0 +1,46 @@
+1. Connect Cables
+2. Insert DFM drives (as needed)
+3. Connect to CT0
+4. Insert USB Drive with OS package (Fat32 or NTFS)
+5. Connect to array via command line
+
+Initial Login:
+1. Login as 'puresetup'
+2. Use Password: embind anecdota praiser obelize
+
+Copying OS Package Files to Controller:
+1. ls /dev/sd*1
+2. mount /dev/sdb1 /mnt  (usually sdb1)
+3. cp /mnt/FOLDERNAME/* . (the period means current folder which is /home/puresetup)
+
+Installing Purity on Controller:
+1. pureinstall {package-file-name} e.g. purity_6.5.8.ppkg
+2. pureboot list (check which version of OS will run)
+3. pureboot reboot --offline
+4. Wait for Reboot.
+
+Setting Up Purity On Controller:
+Purity is now Installed, Firmware upgrades take some time.
+1. puresetup newarray  --skip-connectivity-tests
+2. Follow On-Screen Instructions
+
+Configure Controller (Primary Config):
+ARRAY NAME: 	      PURE_STORAGE
+PHYSICAL IP:	      192.104.152.17
+VIRTUAL IP: 	      192.104.152.18
+NETMASK:			  255.255.255.0
+GATEWAY:	          192.104.152.1
+DNS SERVERS:	      10.0.0.0
+DNS DOMAIN:	          pstrg.net
+NTP SERVER:	          ntp01.pstrg.net
+EMAIL RELAY/SMTP:     mail.pstrg.net
+EMAIL SENDER DOMAIN:  pstrg.net
+ALERT RECIPIENTS:     Admin@pstrg.net
+
+Setting Time Zones:
+1. Choose Time Zone by entering the corresponding number.
+2. Enter to Reboot (applying all changes)
+3. Wait for Reboot and Login as 'pureeng' (cloudassist or C/R)
+4. Use as usual.
+
+Repeat the above steps on CT1.
