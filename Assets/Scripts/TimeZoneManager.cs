@@ -12,7 +12,7 @@ public class TimeZoneManager : MonoBehaviour
     //Used as: *Geographic Region, Locations*
     //public Dictionary<string, List<string>> TimeZoneNames = new Dictionary<string, List<string>>();
 
-    [System.Serializable]
+    [Serializable]
     public class CFTimeZoneInfo 
     {
         public string geoArea;
@@ -28,11 +28,7 @@ public class TimeZoneManager : MonoBehaviour
 
     public List<CFTimeZoneInfo> TimeZoneNames = new List<CFTimeZoneInfo>();
 
-    //Used as: *Linux Time Name, Windows Time Name*
-    public Dictionary<string, string> LinuxWindowsTimes = new Dictionary<string, string>();
-    public TextAsset zonesText;
-
-    private string selectedGeoArea, fullZone;
+    private string selectedGeoArea;
     //private DateTime dateTime;
 
     private void Start()
@@ -85,15 +81,19 @@ public class TimeZoneManager : MonoBehaviour
 
     public bool HasTimezonesUpto(int index) 
     {
+        if(index <= 0)
+            return false;
+
         for (int i = 0; i < TimeZoneNames.Count; i++)
         {
             if (selectedGeoArea == TimeZoneNames[i].geoArea)
             {
-                return TimeZoneNames[i].AreaNames.Length - 1 >= index;
+                if(index > TimeZoneNames[i].AreaNames.Length)
+                    return false;
             }
         }
 
-        return false;
+        return true;
     }
 
     public string GetTimeNow() 
@@ -167,16 +167,5 @@ public class TimeZoneManager : MonoBehaviour
         }
 
         return "err.";
-    }
-
-    private string Trim(string str) 
-    {
-        string s = "";
-        for (int i = 0; i < str.Length; i++)
-        {
-            if (str[i] != '"')
-                s+= str[i];
-        }
-        return s.Trim();
     }
 }

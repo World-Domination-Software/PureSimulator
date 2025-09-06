@@ -120,44 +120,44 @@ namespace CrimsofallTechnologies.ServerSimulator
 
         public string FindAndListFiles(string dir)
         {
-            string s = "";
+            string s = "."; //means directory is empty!
+            string[] spl = dir.Split('/');
 
-            if (dir == "/mnt" && chassis.commandProcessor.Mounted && chassis.InsertedUsbPort != null)
+            //files on controller/mounted directory:
+            if(dir == "" || (spl[0] == "mnt" && chassis.commandProcessor.Mounted))
             {
-                return chassis.InsertedUsbPort.GetFilesInside();
+                return chassis.GetCurrentController().Dir.GetFilesNames();
             }
 
-            //search with a pattern
-            if (dir.Contains("*") && dir.StartsWith("/dev") && chassis.InsertedUsbPort != null)
+            //searching USB drive directory:
+            char[] c = new char[] { '/','d','e','v','/' };
+            if(dir.TrimStart(c) == chassis.InsertedUsbPort.Dir.DirectoryName) {
+                return chassis.InsertedUsbPort.Dir.GetFilesNames();
+            }
+
+            //find and list all directories with pattern:
+            if(spl[1] == "dev")
             {
-                string[] spl = dir.Split('/');
-                string fore = spl[2].Split('*')[0], back = spl[2].Split('*')[1];
-                for (int i = 0; i < chassis.InsertedUsbPort.Folders.Length; i++)
+                if(spl.Length >= 3) //search via pattern
                 {
-                    if (chassis.InsertedUsbPort.Folders[i].StartsWith(fore) && chassis.InsertedUsbPort.Folders[i].EndsWith(back))
-                    {
-                        s += chassis.InsertedUsbPort.GetFolder(i) + " ";
+                    if(spl[2] == "") //like ls /dev/
+                        return chassis.InsertedUsbPort.Dir.DirectoryName;
+
+                    char[] pattern = spl[2].ToCharArray();
+                    string d = "*";
+                    if(chassis.InsertedUsbPort!=null && pattern.Length >= 4 && pattern[0] == 's' && 
+                        pattern[1] == 'd' && pattern[2] == '*' && pattern[3] == '1') {
+                        d = chassis.InsertedUsbPort.Dir.DirectoryName;
                     }
+                    return d;
                 }
-                if (s == "") s = ".";
-                return s;
-            }
-
-            //list all folders!
-            if (dir.StartsWith("/dev") && chassis.InsertedUsbPort != null)
-            {
-                for (int i = 0; i < chassis.InsertedUsbPort.Folders.Length; i++)
+                else if(chassis.InsertedUsbPort != null)
                 {
-                    //if (chassis.InsertedUsbPort.Folders[i] == dir)
-                    //{
-                    s += chassis.InsertedUsbPort.Folders[i]+" ";
-                    //}
+                    //return connected drive
+                    return chassis.InsertedUsbPort.Dir.DirectoryName;
                 }
-                if (s == "") s = ".";
-                return s;
             }
 
-            s = "."; //means null!
             return s;
         }
     }

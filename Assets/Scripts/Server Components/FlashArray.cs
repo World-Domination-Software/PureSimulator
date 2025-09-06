@@ -1,9 +1,12 @@
 using System;
+using System.IO;
 using System.Text;
 using UnityEngine;
 
 public class FlashArray : MonoBehaviour
 {
+    public VirtualDirectory Dir;
+
     public Material greenMat, amberMat, offMat;
     public MeshRenderer[] Lights;
     public int index = 0;
@@ -16,8 +19,8 @@ public class FlashArray : MonoBehaviour
     //ready, not-ready or offline
     public string Status = "ready";
 
-    //primary or secondary only
-    public string State = "primary";
+    //primary or secondary only, before install it should be neither
+    public string State = "neither";
 
     [Space]
     public string arrayName;
@@ -44,6 +47,7 @@ public class FlashArray : MonoBehaviour
                 sb.Append("-");
         }
         ID = sb.ToString();
+        Dir = new();
     }
 
     public void SetupDefaultConfigs() 

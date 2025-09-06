@@ -16,6 +16,7 @@ if (splits[(int)where in the split command after spacing] == "some-prewritten-co
 public static class OS
 {
     public static CommandProcessor commandProcessor;
+    private static Chassis chassis => commandProcessor.chassis;
 
     public static Color pink;
     public static Color yellow;
@@ -38,7 +39,7 @@ public static class OS
                 commandProcessor.Log(commandProcessor.LoginText + " " + cmd);
                 commandProcessor.LoggedInAs = "pureeng";
                 switchedUserToRoot = false;
-                commandProcessor.SetLoginText($"{commandProcessor.LoggedInAs}@{commandProcessor.chassis.GetComputerName()}-{commandProcessor.chassis.selectedController}:~$");
+                commandProcessor.SetLoginText($"{commandProcessor.LoggedInAs}@{chassis.GetComputerName()}-{chassis.selectedController}:~$");
             }
             else if (switchedToOtherController) //switch back to original controller!
             {
@@ -67,9 +68,10 @@ public static class OS
 
         //COMMANDS DETECTION BELOW:
 
+        //is the current command for user on 'root' only?
         if(IsRootCommand(splits) && !switchedUserToRoot)
         {
-            commandProcessor.Log("You must be on 'root' to execute this action!");
+            commandProcessor.LogError("You must be on 'root' to perform this action!");
             return;
         }
 
@@ -84,78 +86,86 @@ public static class OS
             return;
         }
 
-        if (splits[0] == "ls") //lists all files in folders
+        //lists all files in folders
+        if (splits[0] == "ls")
         {
-            if (!commandProcessor.chassis.UsbCorrect())
-            {
-                commandProcessor.LogError("No such directory exists to mount");
-                return;
-            }
-
             //find if any files exists anywhere on drives
             if (splits.Length > 1 && splits[1].StartsWith("/"))
             {
                 //list folders in this folder...
-                commandProcessor.Log(commandProcessor.chassis.commandsExtension.FindAndListFiles(splits[1]));
+                string r = chassis.commandsExtension.FindAndListFiles(splits[1]);
+
+                if(r == "*") {
+                    commandProcessor.LogError("No such file or directory exsists!");
+                    return;
+                }
+
+                commandProcessor.Log(r);
                 return;
             }
 
             //means files on the controller?
-            commandProcessor.Log(commandProcessor.chassis.GetFilesOnArray());
+            commandProcessor.Log(chassis.GetFilesOnArray());
             return;
         }
 
         if (splits[0] == "mount") 
         {
-            if (!commandProcessor.chassis.UsbCorrect())
-            {
-                commandProcessor.LogError("No such directory exists to mount: " + splits[1]);
+            if(splits.Length < 3) {
+                commandProcessor.LogError("No such file or directory exsists!");
                 return;
             }
 
-            //make sure user has mounted to */mnt*
-            if (splits[1].Split('/').Length >= 2)
+            if(splits[2] != "/mnt")
             {
-                if (splits.Length > 1 && splits[2] == "/mnt")
-                    commandProcessor.Mounted = true;
-                else 
-                {
-                    commandProcessor.LogError("No such directory exists to mount: " + splits[1]);
-                }
+                commandProcessor.LogError($"No directory selected to mount {splits[1]}!");
                 return;
             }
+
+            //is it even a directory user is mounting?
+            if (splits[2] == "/mnt" && chassis.DirectoryExsists(splits[1]) && chassis.UsbCorrect())
+            {
+                //make sure user has mounted to */mnt*
+                commandProcessor.Mounted = true;
+                return;
+            }
+
+            commandProcessor.LogError("No such file or directory exsists!");
+            return;
         }
 
         //before copying files make sure to mount the drives!
         if (splits[0] == "cp") 
         {
             if (commandProcessor.Mounted) {
-                if (!commandProcessor.chassis.UsbCorrect())
-                {
-                    commandProcessor.LogError("No such directory exists to mount: " + splits[1]);
+                if (!chassis.UsbCorrect()) {
+                    commandProcessor.LogError("No such file or directory exsists!");
                     return;
                 }
 
-                //copy all files in folder! 
-                //if (splits[1] == "/mnt/6.5.9/*") 
-                if (splits[1].Split('/').Length >= 2)
-                {
-                    commandProcessor.CopyMountFiles(10f, commandProcessor.chassis.InsertedUsbPort.Files);
+                //copy files USB -> controller:
+                string[] spls = splits[1].Split('/');
+                if (spls.Length >= 2 && chassis.DirectoryExsists(spls[2])) {
+                    commandProcessor.CopyMountFiles(chassis.InsertedUsbPort.Dir.Files, 10f * commandProcessor.timeMultiplier);
                 }
             }
             return;
         }
 
-        //if (splits[0] == "pureinstall" && splits[1].EndsWith(".ppkg") && commandProcessor.Mounted && commandProcessor.chassis.HasFilesOnArray()) 
-        if (splits[0] == "pureinstall" && commandProcessor.Mounted && commandProcessor.chassis.HasFileOnArray(splits[1]))
+        //if (splits[0] == "pureinstall" && splits[1].EndsWith(".ppkg") && commandProcessor.Mounted && chassis.HasFilesOnArray()) 
+        if (splits[0] == "pureinstall")
         {
-            //install a version of it!
-            Debug.Log("Installing new purity version...");
-            commandProcessor.StartInstallation();
+            //install a version of purity:
+            if(commandProcessor.Mounted && chassis.HasFileOnArray(splits[1])) {
+                commandProcessor.StartInstallation();
+                return;
+            }
+
+            commandProcessor.LogError("Package extraction failure!");
             return;
         }
 
-        if (splits[0] == "pureboot")
+        if (splits[0] == "pureboot" && splits.Length >= 2)
         {
             if (splits[1] == "reboot" && splits[2] == "--offline") 
             {
@@ -164,17 +174,40 @@ public static class OS
                 return;
             }
 
+            //test if the primary is active:
+            if(splits[1] == "reboot" && splits[2] == "--primary")
+            {
+                if(chassis.flashArrays[0].State == "primary" || chassis.flashArrays[1].State == "primary") {
+                    commandProcessor.RebootChassis();
+                }
+                else
+                    commandProcessor.LogError("Reboot failure! primary controller cannot be found or is not active.");
+
+                return;
+            }
+
+            //test if the secondary is active:
+            if(splits[1] == "reboot" && splits[2] == "--secondary")
+            {
+                if(chassis.flashArrays[0].State == "secondary" || chassis.flashArrays[1].State == "secondary") {
+                    commandProcessor.RebootChassis();
+                }
+                else
+                    commandProcessor.LogError("Reboot failure! secondary controller cannot be found or is not active.");
+                return;
+            }
+
             if (splits[1] == "list") 
             {
-                commandProcessor.Log($"Marked entry (*) is currently running\nMarked entry (-->) will run at next reboot\n    0. Purity {commandProcessor.chassis.GetSecondPurityPartVersion()} (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (202403191505+d9f0e688c788) on first (/dev/sda3)\n" +
-                    $"*-->1. Purity {commandProcessor.chassis.GetCurrentPurityVersion()} (202412120507+7a7df3f70616) with kernel 5.15.123+ (202411262041+7e571dbb5a84) on second (/dev/sda4)");
+                commandProcessor.Log($"Marked entry (*) is currently running\nMarked entry (-->) will run at next reboot\n    0. Purity {chassis.GetSecondPurityPartVersion()} (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (202403191505+d9f0e688c788) on first (/dev/sda3)\n" +
+                    $"*-->1. Purity {chassis.GetCurrentPurityVersion()} (202412120507+7a7df3f70616) with kernel 5.15.123+ (202411262041+7e571dbb5a84) on second (/dev/sda4)");
                 return;
             }
         }
 
         if (splits[0] == "puresetup")
         {
-            if (commandProcessor.chassis.OSInstalled() && splits[1] == "show")
+            if (chassis.OSInstalled() && splits[1] == "show")
             {
                 commandProcessor.ShowArrayInfo();
                 return;
@@ -186,16 +219,16 @@ public static class OS
                 return;
             }
 
-            if (commandProcessor.chassis.OSInstalled(commandProcessor.chassis.selectedController))
+            if (chassis.OSInstalled(chassis.selectedController))
             {
                 commandProcessor.LogError("Cannot change/update os now.");
             }
             else
             {
-                if (splits[1] == "newarray" && !commandProcessor.chassis.OSInstalled(0) && commandProcessor.chassis.selectedController == "CT0") 
+                if (splits[1] == "newarray" && !chassis.OSInstalled(0) && chassis.selectedController == "CT0") 
                     commandProcessor.StartOSSetup(true);
 
-                if (splits[1] == "secondary" && commandProcessor.chassis.OSInstalled(0) && commandProcessor.chassis.selectedController == "CT1") //make sure first array is first installed before setting secondary!
+                if (splits[1] == "secondary" && chassis.OSInstalled(0) && chassis.selectedController == "CT1") //make sure first array is first installed before setting secondary!
                     commandProcessor.StartOSSetup(true);
             }
 
@@ -239,13 +272,13 @@ public static class OS
         }
 
         //do not allow more commands while installing!
-        if (commandProcessor.chassis.selectedController == "CT0" && !commandProcessor.chassis.OSInstalled(0)) 
+        if (chassis.selectedController == "CT0" && !chassis.OSInstalled(0)) 
         {
             commandProcessor.LogError($"  '{cmd}' is not recognized as an internal or external command.");
             return;
         }
 
-        if (commandProcessor.chassis.selectedController == "CT1" && !commandProcessor.chassis.OSInstalled(1))
+        if (chassis.selectedController == "CT1" && !chassis.OSInstalled(1))
         {
             commandProcessor.LogError($"  '{cmd}' is not recognized as an internal or external command.");
             return;
@@ -268,7 +301,7 @@ public static class OS
         if (splits[0] == "sudo" && splits[1] == "su") 
         {
             commandProcessor.LoggedInAs = "root";
-            commandProcessor.SetLoginText($"{commandProcessor.LoggedInAs}@{commandProcessor.chassis.GetComputerName()}-{commandProcessor.chassis.selectedController}:/var/home/pureeng#");
+            commandProcessor.SetLoginText($"{commandProcessor.LoggedInAs}@{chassis.GetComputerName()}-{chassis.selectedController}:/var/home/pureeng#");
             switchedUserToRoot = true;
             return;
         }
@@ -288,13 +321,13 @@ public static class OS
             //if (splits[0] == "purehw" && splits[1] == "list" && splits[2] == "--all")
             if(splits[0] == "purehw" && splits[1] == "list")
             {
-                commandProcessor.Log(commandProcessor.chassis.commandsExtension.PureHWList());
+                commandProcessor.Log(chassis.commandsExtension.PureHWList());
                 return;
             }
 
             if (splits[0] == "hardware_check.py")
             {
-                commandProcessor.Log(commandProcessor.chassis.commandsExtension.HardwareCheck());
+                commandProcessor.Log(chassis.commandsExtension.HardwareCheck());
                 return;
             }
 
@@ -307,7 +340,7 @@ public static class OS
                         "gui start/running, process 2866\nrest start/running, process 4003\nmonitor stop/waiting\niostat start/running. process 7315" +
                         "\nstatistics stop/waiting\nmiddleware start/running, process 4896\nvasa start/running, process 4897");
 
-                    commandProcessor.Log(commandProcessor.chassis.RunningProcesses());
+                    commandProcessor.Log(chassis.RunningProcesses());
                 }
                 return;
             }
@@ -324,8 +357,8 @@ public static class OS
 
                 //4th part is controller name, 5th is ct1 or ct0, 6th is --mode ande 7th is primary or secondary
                 FlashArray array = null;
-                if(commandProcessor.chassis.flashArrays[0].arrayName == splits[4]) array = commandProcessor.chassis.flashArrays[0];
-                if(commandProcessor.chassis.flashArrays[1].arrayName == splits[4]) array = commandProcessor.chassis.flashArrays[1];
+                if(chassis.flashArrays[0].arrayName == splits[4]) array = chassis.flashArrays[0];
+                if(chassis.flashArrays[1].arrayName == splits[4]) array = chassis.flashArrays[1];
             
                 if(array != null && (splits[5] == "ct1" || splits[5] == "ct0") && splits[6] == "--mode") 
                 {
@@ -346,14 +379,14 @@ public static class OS
 
         if(splits[0] == "pureversion" && splits[1] == "list")
         {
-            commandProcessor.Log("Product Version: " + commandProcessor.chassis.PurityVersionInPartition0);
+            commandProcessor.Log("Product Version: " + chassis.PurityVersionInPartition0);
         }
 
         if (splits[0] == "purenetwork") 
         {
             if (splits[1] == "list") 
             {
-                commandProcessor.Log(commandProcessor.chassis.commandsExtension.PureNetworkList());
+                commandProcessor.Log(chassis.commandsExtension.PureNetworkList());
             }
             return;
         }
@@ -364,21 +397,21 @@ public static class OS
             {
                 commandProcessor.Log("Name        Status        Opened        Expires");
                 System.DateTime expires = System.DateTime.Now.AddDays(2);
-                commandProcessor.Log($"{commandProcessor.chassis.GetComputerName()}{commandProcessor.chassis.selectedController}        connecting        {System.DateTime.Now.ToString()}        {expires.ToString()}");
+                commandProcessor.Log($"{chassis.GetComputerName()}{chassis.selectedController}        connecting        {System.DateTime.Now.ToString()}        {expires.ToString()}");
             }
             if (splits[1] == "remoteassist" && splits[2] == "--status")
             {
                 commandProcessor.Log("Name        Status        Opened        Expires");
                 System.DateTime expires = System.DateTime.Now.AddDays(2);
-                commandProcessor.Log($"{commandProcessor.chassis.GetComputerName()}{commandProcessor.chassis.selectedController}        connected        {System.DateTime.Now.ToString()}        {expires.ToString()}");
-            }
-            if (splits[1] == "list" && splits[2] == "--controller")
-            {
-                commandProcessor.Log(commandProcessor.chassis.commandsExtension.GetControllersList());
+                commandProcessor.Log($"{chassis.GetComputerName()}{chassis.selectedController}        connected        {System.DateTime.Now.ToString()}        {expires.ToString()}");
             }
             if (splits[1] == "list" && splits.Length == 2)
             {
-                commandProcessor.Log(commandProcessor.chassis.rack.PurearrayList());
+                commandProcessor.Log(chassis.rack.PurearrayList());
+            }
+            else if (splits[1] == "list" && splits[2] == "--controller")
+            {
+                commandProcessor.Log(chassis.commandsExtension.GetControllersList());
             }
             return;
         }
@@ -389,7 +422,7 @@ public static class OS
         {
             if (splits[1] == "/etc/timezone") 
             {
-                commandProcessor.Log(commandProcessor.chassis.selectedController == "CT0" ? commandProcessor.chassis.flashArrays[0].TimeZone : commandProcessor.chassis.flashArrays[1].TimeZone);
+                commandProcessor.Log(chassis.selectedController == "CT0" ? chassis.flashArrays[0].TimeZone : chassis.flashArrays[1].TimeZone);
             }
             return;
         }
@@ -421,7 +454,7 @@ public static class OS
         {
             if (splits[1] == "list")
             {
-                commandProcessor.Log(commandProcessor.chassis.GetHardDrivesStatus());
+                commandProcessor.Log(chassis.GetHardDrivesStatus());
             }
 
             return;
@@ -465,7 +498,7 @@ public static class OS
         }
 
         //return an error!
-        commandProcessor.LogError($"  '{cmd}' is not recognized as an internal or external command.");
+        commandProcessor.LogError($"'{cmd}' is not recognized as an internal or external command.");
     }
 
     public static bool IsRootCommand(string[] splits)
@@ -474,6 +507,7 @@ public static class OS
         if(splits[0] == "hardware_check.py") return true;
         if(splits[0] == "pureadm") return true;
         if(splits[0] == "purewes") return true;
+        if(splits[0] == "puresetup" && splits[1] == "show") return true;
 
         return false;
     }

@@ -1,5 +1,4 @@
 using System;
-using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -34,6 +33,9 @@ namespace CrimsofallTechnologies.ServerSimulator
                 status = _status;
                 settingUp = false;
                 firmwareInstalled = true;
+
+                //register self in chassis as it is inserted and ready!
+                chassis.numInsertedDrives++;
             }
             else
             {
@@ -171,6 +173,7 @@ namespace CrimsofallTechnologies.ServerSimulator
             status = HardDriveStatus.not_inserted;
             SetLightsStatus();
             DisableGfx();
+            myChassis.numInsertedDrives--;
         }
 
         private void SettingUp() 

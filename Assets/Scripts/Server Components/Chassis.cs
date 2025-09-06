@@ -1,5 +1,4 @@
 using CrimsofallTechnologies.ServerSimulator;
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,46 +15,8 @@ public class Chassis : MonoBehaviour
     public string selectedController = ""; //either CT0 or CT1
     public string InstallSize_Type = "X20R4";
 
-    public string GetComputerName(int index = -1) 
-    {
-        if (index != -1) 
-        {
-            if (index == 0) return flashArrays[0].arrayName;
-            if (index == 1) return flashArrays[1].arrayName;
-        }
-
-        if (selectedController == "CT0") return flashArrays[0].arrayName;
-        if (selectedController == "CT1") return flashArrays[1].arrayName;
-
-        return "UNKNOWN_CONTROLLER";
-    }
-    public void SetComputerName(string Name, int index) 
-    {
-        flashArrays[index].arrayName = Name;
-    }
-
     public string purityOSVersion = "6.5.8", purityOSVersion1 = "6.5.8";
     public string PurityVersionInPartition0 = "6.5.5", PurityVersionInPartition1 = "6.5.5";
-    public string GetSecondPurityPartVersion()
-    {
-        if (selectedController == "CT1")
-            return PurityVersionInPartition1;
-
-        return PurityVersionInPartition0;
-    }
-    public string GetCurrentPurityVersion(int index = -1)
-    {
-        if (index != -1) 
-        {
-            if (index == 0) return purityOSVersion;
-            if (index == 1) return purityOSVersion1;
-        }
-
-        if (selectedController == "CT1") 
-            return purityOSVersion1;
-
-        return purityOSVersion;
-    }
 
     public CommandProcessor commandProcessor;
     public ServerRack rack;
@@ -76,13 +37,6 @@ public class Chassis : MonoBehaviour
     public HardDrive[] HardDrives { get; private set; }
     private WirePort[] wirePorts;
     public FlashArray[] flashArrays = new FlashArray[0];
-    public FlashArray GetCurrentController() 
-    {
-        if (selectedController == "CT0") return flashArrays[0];
-        if (selectedController == "CT1") return flashArrays[1];
-
-        return null;
-    }
     public ChassisCommandsExtension commandsExtension;
 
     //files of the controllers
@@ -95,7 +49,6 @@ public class Chassis : MonoBehaviour
     public bool CT1FirmWareInstalled = false;
     private bool CT0Installed = false;
     public bool CT0FirmWareInstalled = false;
-    public void ResetOSInstalls() { CT1Installed = false; CT0Installed = false; }
     private bool ETH0Connected = false;
     private bool ETH1Connected = false;
     private bool ETH2Connected = false;
@@ -108,10 +61,60 @@ public class Chassis : MonoBehaviour
     public USBPort InsertedUsbPort { get; set; }
 
     //invokable actions
-    public Action OnServerBootAction;
-    public Action OnEthernetCablesConnected;
+    public System.Action OnServerBootAction;
+    public System.Action OnEthernetCablesConnected;
 
-    public int numInsertedDrives = 0;
+    public int numInsertedDrives = 0; //number of drives inserted in this array
+
+    //USB Stuff
+    private string[] PossibleUsbNames = new string[] { "sda1", "sdc1", "sdd1", "sde1", "sdf1" };
+    private List<string> InsertedUSBDriveNames = new List<string>();
+
+    #region USEFUL-VARS
+
+    public FlashArray GetCurrentController() 
+    {
+        if (selectedController == "CT0") return flashArrays[0];
+        if (selectedController == "CT1") return flashArrays[1];
+
+        return null;
+    }
+
+    //returns a new random name for USB drives connected to the Machine:
+    public string GetNewRandomUSBName()
+    {
+        //return sdb1 mostly!
+        if(Random.value <= 0.75f && !InsertedUSBDriveNames.Contains("sdb1")) {
+            InsertedUSBDriveNames.Add("sdb1");
+            return "sdb1";
+        }
+        else {
+            int i = Random.Range(0, PossibleUsbNames.Length);
+            InsertedUSBDriveNames.Add(PossibleUsbNames[i]);
+            return PossibleUsbNames[i];
+        }
+    }
+
+    public string GetSecondPurityPartVersion()
+    {
+        if (selectedController == "CT1")
+            return PurityVersionInPartition1;
+
+        return PurityVersionInPartition0;
+    }
+    public string GetCurrentPurityVersion(int index = -1)
+    {
+        if (index != -1) 
+        {
+            if (index == 0) return purityOSVersion;
+            if (index == 1) return purityOSVersion1;
+        }
+
+        if (selectedController == "CT1") 
+            return purityOSVersion1;
+
+        return purityOSVersion;
+    }
 
     public bool IsOn() 
     {
@@ -139,6 +142,37 @@ public class Chassis : MonoBehaviour
         if (index == 1) return flashArrays[1].ModelName;
 
         return "unknown";
+    }
+
+    public string GetComputerName(int index = -1) 
+    {
+        if (index != -1) 
+        {
+            if (index == 0) return flashArrays[0].arrayName;
+            if (index == 1) return flashArrays[1].arrayName;
+        }
+
+        if (selectedController == "CT0") return flashArrays[0].arrayName;
+        if (selectedController == "CT1") return flashArrays[1].arrayName;
+
+        return "UNKNOWN_CONTROLLER";
+    }
+
+    public void SetComputerName(string Name, int index) 
+    {
+        flashArrays[index].arrayName = Name;
+    }
+
+    #endregion
+
+    public void ResetOSInstalls() { 
+        CT1Installed = false; 
+        CT0Installed = false; 
+    }
+
+    public void OnRemoveUsb(string Name)
+    {
+        if(InsertedUSBDriveNames.Contains(Name)) InsertedUSBDriveNames.Remove(Name);
     }
 
     public void OSInstallationComplete(string osVersion) 
@@ -528,6 +562,10 @@ public class Chassis : MonoBehaviour
         for (int i = 0; i < flashArrays.Length; i++)
         {
             flashArrays[i].SetLights(false, false);
+
+            //state of flash-array is 'neither' before OS install
+            flashArrays[0].State = "neither";
+            flashArrays[1].State = "neither";
         }
 
         for (int i = 0; i < wirePorts.Length; i++)
@@ -748,115 +786,43 @@ public class Chassis : MonoBehaviour
 
     public void CopyFilesToArray(string[] Files) 
     {
-        if (selectedController == "CT0") 
-        {
-            for (int i = 0; i < Files.Length; i++)
-            {
-                CT0Files.Add(Files[i]);
-            }
-        }
-
-        if (selectedController == "CT1")
-        {
-            for (int i = 0; i < Files.Length; i++)
-            {
-                CT1Files.Add(Files[i]);
-            }
-        }
+        if(selectedController == "CT0") flashArrays[0].Dir.Copy(Files);
+        if(selectedController == "CT1") flashArrays[1].Dir.Copy(Files);
     }
 
     public string GetFilesOnArray()
     {
-        if (selectedController == "CT0" && CT0Files.Count > 0)
-        {
-            string f = CT0Files[0];
-            for (int i = 1; i < CT0Files.Count; i++)
-            {
-                f += "    " + CT0Files[i];
-            }
-            return f;
-        }
-
-        if (selectedController == "CT1" && CT1Files.Count > 0)
-        {
-            string f = CT1Files[0];
-            for (int i = 1; i < CT1Files.Count; i++)
-            {
-                f += "    " + CT1Files[i];
-            }
-            return f;
-        }
-
-        return ".";
-    }
-
-    public bool HasFilesOnArray()
-    {
-        if (selectedController == "CT0" && CT0Files.Count > 0)
-        {
-            return true;
-        }
-
-        if (selectedController == "CT1" && CT1Files.Count > 0)
-        {
-            return true;
-        }
-
-        return false;
+        return selectedController == "CT0" ? flashArrays[0].Dir.GetFilesNames() : flashArrays[1].Dir.GetFilesNames();
     }
 
     public bool HasFileOnArray(string fileName)
     {
-        if (selectedController == "CT0" && CT0Files.Count > 0)
-        {
-            for (int i = 0; i < CT0Files.Count; i++)
-            {
-                if (CT0Files[i] == fileName) 
-                {
-                    return true;
-                }
-            }
-        }
-
-        if (selectedController == "CT1" && CT1Files.Count > 0)
-        {
-            for (int i = 0; i < CT1Files.Count; i++)
-            {
-                if (CT1Files[i] == fileName)
-                {
-                    return true;
-                }
-            }
-        }
-
-        return false;
+        return selectedController == "CT0" ? flashArrays[0].Dir.FileExsists(fileName) : flashArrays[1].Dir.FileExsists(fileName);
     }
 
-    public string GetClosestFileStartingWith(string fileStartingName) 
+    public string GetClosestFileStartingWith(string initials) 
     {
-        if (selectedController == "CT0") 
-        {
-            for (int i = 0; i < CT0Files.Count; i++)
-            {
-                if (CT0Files[i].StartsWith(fileStartingName)) 
-                {
-                    return CT0Files[i];
-                }
-            }
+        return selectedController == "CT0" ? flashArrays[0].Dir.GetClosestFile(initials) : flashArrays[1].Dir.GetClosestFile(initials);
+    }
+
+    public bool DirectoryExsists(string dir)
+    {
+        //USB directory at */dev/usb-name*
+        string[] spls = dir.Split('/');
+        if(InsertedUsbPort != null) {
+            if(spls.Length >= 3 && spls[1] == "dev" && spls[2] == InsertedUsbPort.Dir.DirectoryName)
+                return true;
+            if(spls.Length >= 2 && spls[1] == InsertedUsbPort.Dir.DirectoryName)
+                return true;
+            if(dir == InsertedUsbPort.Dir.DirectoryName)
+                return true;
         }
 
-        if (selectedController == "CT1") 
-        {
-            for (int i = 0; i < CT1Files.Count; i++)
-            {
-                if (CT1Files[i].StartsWith(fileStartingName))
-                {
-                    return CT1Files[i];
-                }
-            }
-        }
+        //some other directory inside controller?
+        if(dir == flashArrays[0].Dir.DirectoryName) return true;
+        if(dir == flashArrays[1].Dir.DirectoryName) return true;
 
-        return fileStartingName;
+        return false;
     }
 
     #endregion

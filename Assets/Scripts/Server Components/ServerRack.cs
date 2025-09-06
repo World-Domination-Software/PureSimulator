@@ -209,7 +209,7 @@ public class ServerRack : MonoBehaviour
         if (Servers.Length == 0)
             return "no arrays connected!";
 
-        string g = "Name                 ID                                    OS                      Version";
+        string g = "Name                 ID                                       OS                      Version";
         if (selectedChassis != null)
         {
             g += $"\n{selectedChassis.GetComputerName(0)}               {selectedChassis.flashArrays[0].StartingModelName+"-"+selectedChassis.flashArrays[0].ID}" +

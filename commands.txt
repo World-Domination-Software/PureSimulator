@@ -10,6 +10,9 @@ pureadm list
 pureinstall
 pureversion list
 pureboot
+pureboot reboot --primary
+pureboot reboot --secondary
+pureboot reboot --offline
 pureeng
 puresetup
 puresetup timezone
@@ -21,6 +24,8 @@ purearray list
 purearray remoteassist --connect
 purearray list --controller
 purehw list --all
+purearray list --controller
+purearray list
 purenetwork list
 cat /etc/timezone
 hardware_check.py

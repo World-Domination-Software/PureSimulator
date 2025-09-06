@@ -4,6 +4,8 @@ using UnityEngine.EventSystems;
 
 public class USBPort : MonoBehaviour
 {
+    public VirtualDirectory Dir;
+
     public string controllerID = "CT0";
     public Animator animator;
     public GameObject flashDriveModel;
@@ -12,46 +14,15 @@ public class USBPort : MonoBehaviour
     public string purityVersionOnDrive = "6.5.8";
 
     private bool driveInserted;
-    public string[] Files = new string[] 
+    /*public string[] Files = new string[] 
     {
         "purity_6.5.8.ppkg", "purity_6.5.8.ppkg.sha1"
-    };
-
-    public string[] Folders = new string[]
-    {
-        "/sda1", "/sdb1"
-    };
+    };*/
 
     private void Start()
     {
         flashDriveModel.SetActive(false);
-    }
-
-    /*public string GetFoldersName() 
-    {
-        if (driveInserted)
-        {
-            string s = 
-            for (int i = 0; i < Folders.Length; i++)
-            {
-
-            }
-        }
-        else
-        {
-            return ".";
-        };
-    }*/
-
-    //returns packages on this USB drive
-    public string GetFilesInside() 
-    {
-        string f = Files[0];
-        for (int i = 1; i < Files.Length; i++)
-        {
-            f += "    " + Files[i];
-        }
-        return f;
+        Dir.DirectoryName = "None";
     }
 
     //universal serial bus port?
@@ -93,6 +64,8 @@ public class USBPort : MonoBehaviour
         animator.SetBool("Insert", true);
         flashDriveModel.SetActive(true);
         chassis.InsertedUsbPort = this;
+
+        Dir.DirectoryName = chassis.GetNewRandomUSBName();
     }
 
     public void RemoveDrive() 
@@ -100,16 +73,14 @@ public class USBPort : MonoBehaviour
         driveInserted = false;
         animator.SetBool("Insert", false);
         chassis.InsertedUsbPort = null;
+        chassis.OnRemoveUsb(Dir.DirectoryName);
+        Dir.DirectoryName = "None";
+
         Invoke(nameof(SetDriveFalse), 1f);
     }
 
     public void SetDriveFalse() 
     {
         flashDriveModel.SetActive(false);
-    }
-
-    public string GetFolder(int i)
-    {
-        return "/dev/" + Folders[i];
     }
 }

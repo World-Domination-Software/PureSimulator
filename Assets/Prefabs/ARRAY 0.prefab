@@ -906,6 +906,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beb8680db7109f74b8d6c9b32ccebea1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mountDir:
+    DirectoryName: 
+    _Files: []
   greenMat: {fileID: 2100000, guid: 4b834575fa498d349af60c8388250021, type: 2}
   amberMat: {fileID: 2100000, guid: 0570b5c295732374bb272b2687e9239e, type: 2}
   offMat: {fileID: 2100000, guid: 821f843fac6540841b124cbe68efc56c, type: 2}
@@ -918,7 +921,7 @@ MonoBehaviour:
   StartingModelName: FA
   ModelName: FA-X7OR2
   Status: ready
-  State: 
+  State: neither
   arrayName: 
   physicalIp: 
   virtualIp: 
@@ -981,6 +984,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beb8680db7109f74b8d6c9b32ccebea1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mountDir:
+    DirectoryName: 
+    _Files: []
   greenMat: {fileID: 2100000, guid: 4b834575fa498d349af60c8388250021, type: 2}
   amberMat: {fileID: 2100000, guid: 0570b5c295732374bb272b2687e9239e, type: 2}
   offMat: {fileID: 2100000, guid: 821f843fac6540841b124cbe68efc56c, type: 2}
@@ -993,7 +999,7 @@ MonoBehaviour:
   StartingModelName: FA
   ModelName: FA-X7OR2
   Status: ready
-  State: 
+  State: neither
   arrayName: 
   physicalIp: 
   virtualIp: 
@@ -2094,17 +2100,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 494a32481b0d28746bffbf27abed4ae2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Dir:
+    DirectoryName: 
+    _Files:
+    - purity_6.5.8.ppkg
+    - purity_6.5.8.ppkg.sha1
   controllerID: CT1
   animator: {fileID: 4421962043937671685}
   flashDriveModel: {fileID: 5220093566807400085}
   chassis: {fileID: 3608847937302638707}
   purityVersionOnDrive: 6.5.8
-  Files:
-  - purity_6.5.8.ppkg
-  - purity_6.5.8.ppkg.sha1
-  Folders:
-  - sda1
-  - sdb1
 --- !u!95 &4421962043937671685
 Animator:
   serializedVersion: 7
@@ -2375,17 +2380,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 494a32481b0d28746bffbf27abed4ae2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Dir:
+    DirectoryName: 
+    _Files:
+    - purity_6.5.8.ppkg
+    - purity_6.5.8.ppkg.sha1
   controllerID: CT0
   animator: {fileID: 5478844201517359030}
   flashDriveModel: {fileID: 3834948372051731910}
   chassis: {fileID: 3608847937302638707}
   purityVersionOnDrive: 6.5.8
-  Files:
-  - purity_6.5.8.ppkg
-  - purity_6.5.8.ppkg.sha1
-  Folders:
-  - sda1
-  - sdb1
 --- !u!95 &5478844201517359030
 Animator:
   serializedVersion: 7
@@ -3003,17 +3007,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 494a32481b0d28746bffbf27abed4ae2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Dir:
+    DirectoryName: 
+    _Files:
+    - purity_6.5.8.ppkg
+    - purity_6.5.8.ppkg.sha1
   controllerID: CT0
   animator: {fileID: 8895856218888852173}
   flashDriveModel: {fileID: 5993449708358714290}
   chassis: {fileID: 3608847937302638707}
   purityVersionOnDrive: 6.5.8
-  Files:
-  - purity_6.5.8.ppkg
-  - purity_6.5.8.ppkg.sha1
-  Folders:
-  - sda1
-  - sdb1
 --- !u!95 &8895856218888852173
 Animator:
   serializedVersion: 7
@@ -4665,17 +4668,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 494a32481b0d28746bffbf27abed4ae2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Dir:
+    DirectoryName: 
+    _Files:
+    - purity_6.5.8.ppkg
+    - purity_6.5.8.ppkg.sha1
   controllerID: CT1
   animator: {fileID: 1398702793871237840}
   flashDriveModel: {fileID: 3845265624013600316}
   chassis: {fileID: 3608847937302638707}
   purityVersionOnDrive: 6.5.8
-  Files:
-  - purity_6.5.8.ppkg
-  - purity_6.5.8.ppkg.sha1
-  Folders:
-  - sda1
-  - sdb1
 --- !u!95 &1398702793871237840
 Animator:
   serializedVersion: 7

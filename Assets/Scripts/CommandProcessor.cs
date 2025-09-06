@@ -214,12 +214,12 @@ namespace CrimsofallTechnologies.ServerSimulator
             //Exiting purity setup
             if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.C) && !CannotQuitHeavyLoadingTask)
             {
-                if (waitingForIpSetup)
-                {
+                //exit purity setup
+                if (isSettingUpOS) {
                     ExitSetup();
                 }
 
-                //revert logins
+                //logout:
                 if (waitingForLoginSelect) 
                 {
                     LogOut();
@@ -255,6 +255,11 @@ namespace CrimsofallTechnologies.ServerSimulator
             if (enterToRebootToSetupOS && Input.GetKeyDown(KeyCode.Return))
             {
                 RebootChassis();
+            }
+
+            if(failureConfigParams && Input.GetKeyDown(KeyCode.Return))
+            {
+                ReenterArrayConfigs();
             }
 
             if (Loading || LoadingHeavy)
@@ -584,7 +589,7 @@ namespace CrimsofallTechnologies.ServerSimulator
             if (!LoadingHeavy)
             {
                 string[] lines = text.text.Split('\n');
-                if (line <= 0 || line >= lines.Length)
+                if (line < 0 || line >= lines.Length)
                     return;
 
                 lines[line] = value;
@@ -595,7 +600,7 @@ namespace CrimsofallTechnologies.ServerSimulator
             else 
             {
                 string[] lines = loadingHeavyText.text.Split('\n');
-                if (line <= 0 || line >= lines.Length)
+                if (line < 0 || line >= lines.Length)
                     return;
 
                 lines[line] = value;
@@ -659,10 +664,16 @@ namespace CrimsofallTechnologies.ServerSimulator
             //also add the size of array (since this is written as numbers too)
             colWidth += 3 + textArray.Length.ToString().Length;
 
-            string message= $"   1. " + textArray[0].PadRight(colWidth) + $"2. " + textArray[1];
-            for (int i = 2; i < textArray.Length; i+=2)
+            /*string message = $"   1. " + textArray[0].PadRight(colWidth) + $"2. " + textArray[1];
+            for (int i = 3; i < textArray.Length; i += 2)
             {
-                message += $"\n   {i}. "+textArray[i].PadRight(colWidth) + ((i + 1 < textArray.Length) ? $"{i + 1}. " + textArray[i + 1] : "");
+                message += $"\n   {i}. "+textArray[i - 1].PadRight(colWidth) + ((i + 1 < textArray.Length) ? $"{i + 1}. " + textArray[i + 1] : "");
+            }*/
+
+            string message = "";
+            for (int i = 0; i < textArray.Length; i += 2)
+            {
+                message += $"\n   {i+1}. "+textArray[i].PadRight(colWidth) + ((i + 1 < textArray.Length) ? $"{i + 2}. " + textArray[i + 1] : "");
             }
 
             if (!LoadingHeavy)
@@ -694,8 +705,9 @@ namespace CrimsofallTechnologies.ServerSimulator
                 // if (value == "pureeng" && chassis.IsOk()) //only works after array is working ok
 
                 //user should only be able to login as 'pureeng' after OS is setup and installed.
-                if (value == "pureeng" && LoggedInAs == "" && chassis.OSInstalled((chassis.selectedController == "CT0" ? 0 : 1))) //only check if OS is installed on current selected chassis.
+                if (value == "pureeng" && LoggedInAs == "" && chassis.OSInstalled(chassis.selectedController == "CT0" ? 0 : 1)) //only check if OS is installed on current selected chassis.
                 {
+                    Replace(0, $"{chassis.GetComputerName()}-{chassis.selectedController} login: "+value);
                     Log("1) Authenticate via CloudAssist\n2) Authenticate via command line\n3) Restore challenge\n" +
                         "Type the number corresponding to the authentication method you want to use.\n");
                     currentLine = Log_Line("Selection:", true);
@@ -707,15 +719,13 @@ namespace CrimsofallTechnologies.ServerSimulator
                 //after os is installed cannot login as puresetup, but make sure once the OS is installed do not login as puresetup again.
                 if (value == "puresetup") 
                 {
-					if(chassis.OSInstalled(chassis.selectedController == "CT0" ? 0 : 1) == false && LoggedInAs == "") {					
+                    //if the server is already configured fail on trying to login as puresetup!
+					if(!chassis.OSInstalled(chassis.selectedController == "CT0" ? 0 : 1) && LoggedInAs == "") {					
+                        Replace(0, $"{chassis.GetComputerName()}-{chassis.selectedController} login: "+value);
 						currentLine = Log_Line("Password:", true);
 						SetLoginText("");
 						enterEmail = true;
 						LoggedInAs = "puresetup";
-					}
-					else //if the server is already configured fail on trying to login as puresetup! 
-					{
-						
 					}
                 }
 
@@ -799,8 +809,25 @@ namespace CrimsofallTechnologies.ServerSimulator
                 }
                 else
                 {
-                    Replace(currentLine, $"Confirm time zone change from {chassis.GetCurrentController().TimeZone} to {chassis.GetCurrentController().tempTimeZone} (y/N): y");
-                    chassis.GetCurrentController().TimeZone = chassis.GetCurrentController().tempTimeZone;
+                    if(value == "y") {
+                        Replace(currentLine, $"Confirm time zone change from {chassis.GetCurrentController().TimeZone} to {chassis.GetCurrentController().tempTimeZone} (y/N): y");
+                        chassis.GetCurrentController().TimeZone = chassis.GetCurrentController().tempTimeZone;
+                    
+                        if (chassis.OSInstalled(chassis.selectedController == "CT0" ? 0 : 1) && timezoneManualChange) //only on manual timezone change + after os installation
+                        {
+                            timezoneManualChange = false;
+                            Log("Warning! /etc/timezone has been modified, a reboot is required to apply new timezone.", yellow);
+                            Log("\nPress ENTER to reboot.", true, true);
+                            Invoke(nameof(EnterToBoot), 0.5f);
+
+                            SetLoadingHeavy(true);
+                            CannotQuitHeavyLoadingTask = false;
+                            loadingHeavyText.text = text.text;
+                        }
+                    }
+
+                    if(value == "n")
+                        Replace(currentLine, $"Confirm time zone change from {chassis.GetCurrentController().TimeZone} to {chassis.GetCurrentController().tempTimeZone} (y/N): n");
                 }
 
                 SetLoginText(lastLoginText);
@@ -1128,7 +1155,7 @@ namespace CrimsofallTechnologies.ServerSimulator
                 "\n===================================================================");
         }
 
-        public void CopyMountFiles(float copyTime, string[] FilesCopied) 
+        public void CopyMountFiles(string[] FilesCopied, float copyTime) 
         {
             CannotQuitHeavyLoadingTask = true;
             SetLoadingHeavy(true);
@@ -1361,6 +1388,7 @@ namespace CrimsofallTechnologies.ServerSimulator
         public bool waitingForIpSetup { get; set; }
         public bool enterToRebootToSetupOS { get; set; }
         public bool applyConfigToArray { get; set; }
+        public bool failureConfigParams { get; set; }
 
         private bool timezoneManualChange;
         private string lastLoginText;
@@ -1641,6 +1669,9 @@ namespace CrimsofallTechnologies.ServerSimulator
         //setting up individual stuffs
         public void SetArrayName(string value) 
         {
+            if(value.Length > 32) //never max than 32 characters name
+                return;
+
             arrayName = value;
             _arrayName = false;
             _physicalIp = true;
@@ -1648,7 +1679,7 @@ namespace CrimsofallTechnologies.ServerSimulator
             currentLine = Log_Line($"Physical IP Address:", true);
         }
         public void SetPhysicalIP(string value) {
-            if (value.Split('.').Length < 4)
+            if (value.Split('.').Length != 4)
                 return;
             physicalIp = value;
             _physicalIp = false;
@@ -1667,7 +1698,7 @@ namespace CrimsofallTechnologies.ServerSimulator
         }
         public void SetVirtualIP(string value) 
         {
-            if (value.Split('.').Length < 4)
+            if (value.Split('.').Length != 4)
                 return;
 
             //make sure the first 3 octets match the IP
@@ -1686,8 +1717,9 @@ namespace CrimsofallTechnologies.ServerSimulator
         }
         public void SetNetMask(string value)
         {
-            if (value.Split('.').Length < 4)
+            if (value.Split('.').Length != 4)
                 return;
+
             Netmask = value;
             _Netmask = false;
             _Gateway = true;
@@ -1696,7 +1728,7 @@ namespace CrimsofallTechnologies.ServerSimulator
         }
         public void SetGateway(string value)
         {
-            if (value.Split('.').Length < 4)
+            if (value.Split('.').Length != 4)
                 return;
             Gateway = value;
             _Gateway = false;
@@ -1913,21 +1945,46 @@ namespace CrimsofallTechnologies.ServerSimulator
         private IEnumerator ContinueSetup_3() 
         {
             yield return new WaitForSeconds(3f * timeMultiplier);
-            Log("\nHTTP proxy for phonehome and remoteassist (optional):n");
+            Log("\nHTTP proxy for phonehome and remoteassist (optional):n"); //this is left to implement too!
             yield return new WaitForSeconds(3f * timeMultiplier);
             Log("Confirm configuration.");
             Log($"  Physical IP:             {physicalIp}\n  Virtual IP:              {virtualIp}\n  Netmask:                 {Netmask}\n  Gateway:                 {Gateway}");
             Log($"  DNS Servers:             {DNSServer}\n  DNS Domain:              {DNSDomain}\n  NTP Servers:             {NTPServers}\n  SMTP Relay Host:         {SMTPRelayHost}");
             Log($"  SMTP Sender Domain:      {SMTPSenderDomain}\n  Alert Email Recipients:  {AlertSenderRecipients}\nHTTP proxy:");
             yield return new WaitForSeconds(2f * timeMultiplier);
-            currentLine = Log_Line("Type 'y' to apply configurations or 'n' to re-enter parameters:", true);
+            
+            //recheck all info entered or fail if not correct!
+            if(CheckInsertedInfo()) {
+                currentLine = Log_Line("Type 'y' to apply configurations or 'n' to re-enter parameters:", true);
+                applyConfigToArray = true;
+            }
+            else
+            {
+                //failure!
+                LogError("Failed to establish proper configuration data. revalidate and reenter!");
+                currentLine = Log_Line("Press Enter to reenter parameters...", true);
+                failureConfigParams = true;
+            }
 
             SetLoadingHeavy(false);
             text.text = loadingHeavyText.text;
             CannotQuitHeavyLoadingTask = false;
-            applyConfigToArray = true;
             loadingHeavyText.text = "";
             SetLoginText("");
+        }
+
+        private bool CheckInsertedInfo()
+        {
+            bool done = false;
+            if(Gateway == virtualIp)
+                done = true;
+            
+            //each octet on NetMask must have 3 digits each!
+            string[] s = Netmask.Split('.');
+            if(s[0].Length != 3 || s[1].Length != 3 || s[2].Length != 3 || s[3].Length != 3)
+                done = false;
+
+            return done;
         }
 
         public void ApplyConfigToArray() 
@@ -1961,9 +2018,20 @@ namespace CrimsofallTechnologies.ServerSimulator
 
         public void ReenterArrayConfigs() 
         {
-            applyConfigToArray = false;
-            Replace(currentLine, "Type 'y' to apply configurations or 'n' to re-enter parameters: n");
+            if(applyConfigToArray) {
+                Replace(currentLine, "Type 'y' to apply configurations or 'n' to reenter parameters: n");
 
+                //reentering?
+                if(chassis.selectedController == "CT0" || chassis.OSFullyRunning)
+                    chassis.ipConfigsDoneOnCT0 = false;
+            }
+            if(failureConfigParams) {
+                Replace(currentLine, "Press Enter to reenter parameters... reenter");
+                if(chassis.selectedController == "CT0") //reentering on CT0? cancel it
+                    chassis.ipConfigsDoneOnCT0 = false;
+            }
+            applyConfigToArray = false;
+            failureConfigParams = false;
             Log("Re-enter configurations (all previous inputs are erased):");
             currentLine = Log_Line("Array Name:", true);
             _arrayName = true;
@@ -2098,9 +2166,9 @@ namespace CrimsofallTechnologies.ServerSimulator
             }
             else 
             {
-                if (!timeZoneManager.HasTimezonesUpto(value - 1)) 
+                if (!timeZoneManager.HasTimezonesUpto(value)) 
                 {
-                    Replace(currentLine, "Index is out of Range! No Time zone exists at input index!");
+                    Replace(currentLine, $"Incorrect selection! No Time zone exists at '{value}'");
                     currentLine = Log_Line("Time Zone:", true);
                     return;
                 }
@@ -2109,7 +2177,7 @@ namespace CrimsofallTechnologies.ServerSimulator
                 waitingForTimeSelection = false;
 
                 //we do not use real time zones (yet) will default and use UTC for now!
-                chassis.GetCurrentController().tempTimeZone = $"'{geoArea}/{timeZoneManager.GetAreaNameIndexed(value - 1)}'";
+                chassis.GetCurrentController().tempTimeZone = $"'{geoArea}/{timeZoneManager.GetAreaNameIndexed(value-1)}'";
                 Log("\n\nCurrent default time zone: " + $"'{geoArea}/{timeZoneManager.GetAreaNameIndexed(value-1)}'");
 
                 if (!timezoneManualChange) //auto during setup?
@@ -2122,25 +2190,14 @@ namespace CrimsofallTechnologies.ServerSimulator
                 }
                 else
                 {
-                    /*SetLoginText(lastLoginText);
-                    lastLoginText = "";
-                    lastCommandInput = "";*/
-
-                    timezoneManualChange = false;
-                    
                     //confirm
                     currentLine = Log_Line($"Confirm time zone change from {chassis.GetCurrentController().TimeZone} to {chassis.GetCurrentController().tempTimeZone} (y/N):", true);
-                    waitingForTimezoneConfirm = true;
+                    waitingForTimezoneConfirm = true; //it will ask user to reboot after setting timezone!
                 }
                 return;
             }
 
             geoRegionSelect = false;
-
-            /*if(timeZoneManager.GeographicRegions[value] == "US")
-                geoArea = timeZoneManager.GeographicRegions[2]; //select America
-            else
-                geoArea = timeZoneManager.GeographicRegions[value];*/
             geoArea = timeZoneManager.GeographicRegions[value];
 
             Log("\n\nPlease select the city or region corresponding to your time zone.\n");
@@ -2330,7 +2387,7 @@ namespace CrimsofallTechnologies.ServerSimulator
             currentLine = -1;
 
             Log("Purity Setup cancelled!\nRolling back changes... This may take several minutes");
-            Invoke(nameof(Logout_Invoke), 15f);
+            Invoke(nameof(Logout_Invoke), 15f * timeMultiplier);
         }
 
         public void ShowArrayInfo() 
