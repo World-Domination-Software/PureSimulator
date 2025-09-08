@@ -11,9 +11,9 @@ Present in wiki section.
 This source is copyrighted and should be treated as such (read LICENSE.md for more info). You can use compiled builds However you want.
 For using/distributing the source contact the developers (below).
 
-Email:
-> scarymonsterstudios@gmail.com
+Our Email(s):
 > team.crimsofall@gmail.com
+> scarymonsterstudios@gmail.com
 
 ## Credits
 
