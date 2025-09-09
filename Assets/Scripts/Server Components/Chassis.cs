@@ -83,8 +83,8 @@ public class Chassis : MonoBehaviour
     //returns a new random name for USB drives connected to the Machine:
     public string GetNewRandomUSBName()
     {
-        //return sdb1 mostly!
-        if(Random.value <= 0.75f && !InsertedUSBDriveNames.Contains("sdb1")) {
+        //return sdb1 for the first USB inserted!
+        if(!InsertedUSBDriveNames.Contains("sdb1")) {
             InsertedUSBDriveNames.Add("sdb1");
             return "sdb1";
         }

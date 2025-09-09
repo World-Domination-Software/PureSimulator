@@ -96,7 +96,7 @@ public static class OS
                 string r = chassis.commandsExtension.FindAndListFiles(splits[1]);
 
                 if(r == "*") {
-                    commandProcessor.LogError("No such file or directory exsists!");
+                    commandProcessor.LogError($"No such file or directory exsists: {splits[1]}");
                     return;
                 }
 
@@ -112,13 +112,13 @@ public static class OS
         if (splits[0] == "mount") 
         {
             if(splits.Length < 3) {
-                commandProcessor.LogError("No such file or directory exsists!");
+                commandProcessor.LogError("mount [drive] [folder] - incorrect useage!");
                 return;
             }
 
             if(splits[2] != "/mnt")
             {
-                commandProcessor.LogError($"No directory selected to mount {splits[1]}!");
+                commandProcessor.LogError($"No directory selected to exsists: {splits[1]}!");
                 return;
             }
 
@@ -139,16 +139,18 @@ public static class OS
         {
             if (commandProcessor.Mounted) {
                 if (!chassis.UsbCorrect()) {
-                    commandProcessor.LogError("No such file or directory exsists!");
                     return;
                 }
 
                 //copy files USB -> controller:
-                string[] spls = splits[1].Split('/');
-                if (spls.Length >= 2 && chassis.DirectoryExsists(spls[2])) {
+                string[] spls = splits[1].Split('/'); //used as: cp /mnt/sdb1
+                if (spls.Length >= 2 && spls[1] == "mnt" && chassis.DirectoryExsists(spls[2])) 
+                {
                     commandProcessor.CopyMountFiles(chassis.InsertedUsbPort.Dir.Files, 10f * commandProcessor.timeMultiplier);
                 }
             }
+
+            commandProcessor.LogError($"No such file or directory exsists: {splits[1]}");
             return;
         }
 
@@ -156,7 +158,7 @@ public static class OS
         if (splits[0] == "pureinstall")
         {
             //install a version of purity:
-            if(commandProcessor.Mounted && chassis.HasFileOnArray(splits[1])) {
+            if(splits.Length > 1 && commandProcessor.Mounted && chassis.HasFileOnArray(splits[1])) {
                 commandProcessor.StartInstallation();
                 return;
             }

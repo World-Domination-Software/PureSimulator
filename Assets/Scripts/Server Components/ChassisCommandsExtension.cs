@@ -124,9 +124,15 @@ namespace CrimsofallTechnologies.ServerSimulator
             string[] spl = dir.Split('/');
 
             //files on controller/mounted directory:
-            if(dir == "" || (spl[0] == "mnt" && chassis.commandProcessor.Mounted))
+            if(dir == "")
             {
                 return chassis.GetCurrentController().Dir.GetFilesNames();
+            }
+
+            //files in /mnt directory
+            if(dir == "/mnt" && chassis.commandProcessor.Mounted)
+            {
+                return chassis.InsertedUsbPort.Dir.GetFilesNames();
             }
 
             //searching USB drive directory:

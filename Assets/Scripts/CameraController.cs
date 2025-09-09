@@ -35,7 +35,7 @@ public class CameraController : MonoBehaviour
     public void SetCameraToFocusOnChassis(Transform obj) 
     {
         if(!isFrontCam)
-            offset = new Vector3(-20f, Mathf.Abs(obj.localPosition.x), -0.45f);
+            offset = new Vector3(20f, Mathf.Abs(obj.localPosition.x), -0.45f);
         else
             offset = new Vector3(-15f, Mathf.Abs(obj.localPosition.x) + 0.5f, -0.15f);
     }
