@@ -29,6 +29,6 @@ public class LogWriter : MonoBehaviour
 
         Debug.Log("Writing log cache...");
         string fileName = $"putty{System.DateTime.Now.Year:0000}-{System.DateTime.Now.Month:00}-{System.DateTime.Now.Day:00}.log";
-        File.WriteAllText(path+fileName, logCache);
+        File.WriteAllText(path+"/"+fileName, logCache);
     }
 }

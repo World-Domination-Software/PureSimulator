@@ -135,11 +135,11 @@ namespace CrimsofallTechnologies.ServerSimulator
                 return chassis.InsertedUsbPort.Dir.GetFilesNames();
             }
 
-            //searching USB drive directory:
-            char[] c = new char[] { '/','d','e','v','/' };
+            //searching USB drive directory - does not work in linux
+            /*char[] c = new char[] { '/','d','e','v','/' };
             if(dir.TrimStart(c) == chassis.InsertedUsbPort.Dir.DirectoryName) {
                 return chassis.InsertedUsbPort.Dir.GetFilesNames();
-            }
+            }*/
 
             //find and list all directories with pattern:
             if(spl[1] == "dev")

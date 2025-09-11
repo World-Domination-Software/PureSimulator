@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -61,10 +62,11 @@ public class UIManager : MonoBehaviour
     private void Start()
     {
         //always show welcome screen in builds
-        if (!Application.isEditor)
+        if (!Application.isEditor) {
             startupUI.SetActive(true);
+        }
 
-        versionText.text = "Pure Storage Simulator v." + Application.version;
+        versionText.text = "PureOPS v." + Application.version;
         frontCam.SetActive(true);
         backCam.SetActive(false);
 
@@ -162,6 +164,12 @@ public class UIManager : MonoBehaviour
 
     public void SelectSimulatorType(int index) 
     {
+        if(index == 4)
+        {
+            LoadingUI.Instance.LoadScene("Exam");
+            return;
+        }
+
         tutorSetup.StartTutor(index);
         CloseSidePanel(1);
         OpenSidePanel(0);
