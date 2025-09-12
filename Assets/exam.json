@@ -1,0 +1,2432 @@
+{
+    "1": {
+        "question": "What are the core architectural principles of a Pure Storage FlashArray?",
+        "options": {
+            "A": "Dual-controller, active\/passive, traditional RAID",
+            "B": "Dual-controller, active\/active, stateless, flash-optimized",
+            "C": "Single-controller, active\/active, commodity hardware"
+        },
+        "correct": "B"
+    },
+    "2": {
+        "question": "Describe the primary function of DirectFlash Modules (DFMs) in a FlashArray.",
+        "options": {
+            "A": "To provide additional CPU processing power for controllers.",
+            "B": "To serve as a high-speed cache for read operations only.",
+            "C": "To consolidate flash management directly onto the NAND, simplifying data path."
+        },
+        "correct": "C"
+    },
+    "3": {
+        "question": "In an XR4, what slot would the Direct Compress Accelerator card go into?",
+        "options": {
+            "A": "Slot 4",
+            "B": "Slot 1",
+            "C": "Slot 3"
+        },
+        "correct": "A"
+    },
+    "4": {
+        "question": "What is the purpose of NVRAM in a FlashArray?",
+        "options": {
+            "A": "To store static configuration files for the operating system.",
+            "B": "To provide persistent, high-speed write caching before data is destaged to flash.",
+            "C": "To house the Purity Operating Environment."
+        },
+        "correct": "B"
+    },
+    "5": {
+        "question": "Which FlashArray model is specifically designed for capacity-optimized workloads, typically with QLC flash?",
+        "options": {
+            "A": "FlashArray\/\/X",
+            "B": "FlashArray\/\/XL",
+            "C": "FlashArray\/\/C"
+        },
+        "correct": "C"
+    },
+    "6": {
+        "question": "What is the typical rack unit height for a FlashArray\/\/X chassis?",
+        "options": {
+            "A": "1U",
+            "B": "2U",
+            "C": "3U"
+        },
+        "correct": "C"
+    },
+    "7": {
+        "question": "Which port type is NOT commonly used for host connectivity on a FlashArray?",
+        "options": {
+            "A": "Fibre Channel",
+            "B": "iSCSI",
+            "C": "SAS"
+        },
+        "correct": "C"
+    },
+    "8": {
+        "question": "What is the typical rack unit height for a FlashArray\/\/XL chassis?",
+        "options": {
+            "A": "2U",
+            "B": "5U",
+            "C": "3U"
+        },
+        "correct": "B"
+    },
+    "9": {
+        "question": "What is the significance of the \"Evergreen\" program for FlashArray customers?",
+        "options": {
+            "A": "It provides a fixed discount on all future hardware purchases.",
+            "B": "It enables non-disruptive upgrades to new technology and capacity without re-buying past purchases.",
+            "C": "It's Pure Storage's recycling program for old hardware."
+        },
+        "correct": "B"
+    },
+    "10": {
+        "question": "How does FlashArray achieve its high data reduction ratios?",
+        "options": {
+            "A": "Through the use of highly compressed file systems.",
+            "B": "Primarily through global deduplication, compression, and pattern removal.",
+            "C": "By performing frequent data archiving."
+        },
+        "correct": "B"
+    },
+    "11": {
+        "question": "What are key pre-installation site readiness checks an Implementation Engineer should perform?",
+        "options": {
+            "A": "Confirming a valid Pure Storage support contract is in place.",
+            "B": "Verifying power, network connectivity, and rack space.",
+            "C": "Pre-configuring host operating systems."
+        },
+        "correct": "B"
+    },
+    "12": {
+        "question": "What is the max storage capacity of an X20R3?",
+        "options": {
+            "A": "94TB",
+            "B": "105TB",
+            "C": "22TB."
+        },
+        "correct": "A"
+    },
+    "13": {
+        "question": "How are DirectFlash Shelves (DFS) connected to a FlashArray controller?",
+        "options": {
+            "A": "Via standard Ethernet cables for management.",
+            "B": "Using dedicated SAS or NVMe-oF cables for data transfer.",
+            "C": "Through Fibre Channel cables for storage access."
+        },
+        "correct": "B"
+    },
+    "14": {
+        "question": "What is the max storage capacity of an X50R4?",
+        "options": {
+            "A": "195TB",
+            "B": "185TB",
+            "C": "125TB."
+        },
+        "correct": "B"
+    },
+    "15": {
+        "question": "What considerations are important when cabling Fibre Channel connections to a FlashArray?",
+        "options": {
+            "A": "Using straight-through Ethernet cables.",
+            "B": "Ensuring redundant paths to different FC switches for high availability.",
+            "C": "Connecting all ports to a single Fibre Channel switch for simplicity."
+        },
+        "correct": "B"
+    },
+    "16": {
+        "question": "How should iSCSI networks be configured for optimal performance and redundancy with a FlashArray?",
+        "options": {
+            "A": "All iSCSI traffic on a single VLAN.",
+            "B": "Multiple subnets and VLANs, with redundant network paths and dedicated NICs\/ports.",
+            "C": "Using a single 1GbE connection for all iSCSI traffic."
+        },
+        "correct": "B"
+    },
+    "17": {
+        "question": "Which of these is NOT an iSCSI speed on a Flasharray?",
+        "options": {
+            "A": "10G",
+            "B": "16G",
+            "C": "25G"
+        },
+        "correct": "B"
+    },
+    "18": {
+        "question": "Where would you find the serial number of a FlashArray controller?",
+        "options": {
+            "A": "Only in the Pure1 portal.",
+            "B": "On a sticker attached to the controller module or front bezel.",
+            "C": "It's automatically emailed to the customer upon purchase."
+        },
+        "correct": "B"
+    },
+    "19": {
+        "question": "What is the purpose of blanking plates in unused drive bays or expansion slots?",
+        "options": {
+            "A": "To prevent unauthorized access to the system.",
+            "B": "To improve airflow and cooling within the chassis.",
+            "C": "To store extra cables."
+        },
+        "correct": "B"
+    },
+    "20": {
+        "question": "What is the default speed of SFPs in an FC array?",
+        "options": {
+            "A": "10G",
+            "B": "16G",
+            "C": "25G"
+        },
+        "correct": "B"
+    },
+    "21": {
+        "question": "What is the initial method for connecting to a XR2\/XR3 FlashArray for configuration?",
+        "options": {
+            "A": "Using standard Cisco Console cable",
+            "B": "Through SSH directly to a management IP.",
+            "C": "Using a serial console connection and KVM cable."
+        },
+        "correct": "C"
+    },
+    "22": {
+        "question": "What initial network settings need to be configured on the FlashArray?",
+        "options": {
+            "A": "Only the hostname.",
+            "B": "Management IP addresses, subnet masks, and default gateways for each controller.",
+            "C": "DNS servers only."
+        },
+        "correct": "B"
+    },
+    "23": {
+        "question": "How do you configure NTP (Network Time Protocol) on a FlashArray?",
+        "options": {
+            "A": "NTP is automatically configured by Pure1.",
+            "B": "Via the Pure Storage CLI or GUI, specifying NTP server IP addresses.",
+            "C": "It's not a configurable option on the array."
+        },
+        "correct": "B"
+    },
+    "24": {
+        "question": "Explain the process of creating a Host and a Host Group on a FlashArray.",
+        "options": {
+            "A": "Hosts are automatically discovered, groups are not needed.",
+            "B": "Hosts represent physical servers; Host Groups are logical collections of hosts. Both are configured via GUI\/CLI.",
+            "C": "Hosts are only for Fibre Channel connections, Host Groups for iSCSI."
+        },
+        "correct": "B"
+    },
+    "25": {
+        "question": "How do you create a volume and connect it to a host or host group?",
+        "options": {
+            "A": "Volumes are created automatically when a host connects.",
+            "B": "Volumes are created via GUI\/CLI, then connected (mapped) to specified hosts or host groups.",
+            "C": "Volumes are created on the host and then registered with the array."
+        },
+        "correct": "B"
+    },
+    "26": {
+        "question": "What command is used to verify network interface status on a FlashArray?",
+        "options": {
+            "A": "`ping google.com`",
+            "B": "`purenetwork list",
+            "C": "`ipconfig \/all`"
+        },
+        "correct": "B"
+    },
+    "27": {
+        "question": "What `purearray` test option is used to verify the array's ability to reach the CCM (Cloud Control Module) service?",
+        "options": {
+            "A": null,
+            "B": null,
+            "C": null
+        },
+        "correct": "C"
+    },
+    "28": {
+        "question": "What are the best practices for setting up iSCSI initiators on a host connected to a FlashArray?",
+        "options": {
+            "A": "Use a single iSCSI initiator for all connections.",
+            "B": "Configure multiple iSCSI initiators on the host and ensure multi-pathing software is utilized.",
+            "C": "Only connect via Fibre Channel, iSCSI is not recommended."
+        },
+        "correct": "B"
+    },
+    "29": {
+        "question": "Which `purearray` monitor option is used to display historical I\/O performance information, such as for the last 24 hours or 30 days?",
+        "options": {
+            "A": null,
+            "B": null,
+            "C": null
+        },
+        "correct": "C"
+    },
+    "30": {
+        "question": "What is the purpose of creating a volume snapshot on a FlashArray?",
+        "options": {
+            "A": "To permanently delete a volume.",
+            "B": "To create an instant, point-in-time copy of a volume.",
+            "C": "To migrate data to a different array."
+        },
+        "correct": "B"
+    },
+    "31": {
+        "question": "How do you enable Safemode on a Flasharray",
+        "options": {
+            "A": "purearray safemode --enable",
+            "B": "It is enabled by default",
+            "C": "Send an email to support with the array name"
+        },
+        "correct": "B"
+    },
+    "32": {
+        "question": "For FlashArray, which `purearray` option lists replication relationships with other arrays?",
+        "options": {
+            "A": null,
+            "B": null,
+            "C": null
+        },
+        "correct": "B"
+    },
+    "33": {
+        "question": "What command determines which Purity version will be loaded at the next boot?",
+        "options": {
+            "A": "pureboot list",
+            "B": "purearray reboot",
+            "C": "pureupgrade next"
+        },
+        "correct": "C"
+    },
+    "34": {
+        "question": "Which command will show all the current alerts and warnings?",
+        "options": {
+            "A": "purehw list ",
+            "B": "purealert list",
+            "C": "puremessage list --open"
+        },
+        "correct": "C"
+    },
+    "35": {
+        "question": "What are the considerations for Purity version interoperability when performing hardware upgrades (e.g. Cards or DirectFlash Shelf)?",
+        "options": {
+            "A": "Purity versions have no impact on hardware upgrades.",
+            "B": "Ensure the current Purity version supports the new hardware components before adding them.",
+            "C": "Upgrade Purity on-site if needed before adding new hardware."
+        },
+        "correct": "B"
+    },
+    "36": {
+        "question": "How are DirectFlash Modules (DFMs) added or expanded on a FlashArray?",
+        "options": {
+            "A": "They are hot-swappable and can be added as needed to active arrays.",
+            "B": "The array must be powered down to add or remove DFMs.",
+            "C": "DFMs are only added during initial factory configuration."
+        },
+        "correct": "A"
+    },
+    "37": {
+        "question": "What is the process for evacuating a DirectFlash Shelf (DFS)?",
+        "options": {
+            "A": "Simply unplugging the DFS from the controller.",
+            "B": "Using the `pure array shelf evacuate` command to safely migrate data off the shelf before removal.",
+            "C": "Copying all data manually to another array."
+        },
+        "correct": "B"
+    },
+    "38": {
+        "question": "When should a Pure Storage support case be opened during an installation or upgrade?",
+        "options": {
+            "A": "Only for critical data loss scenarios.",
+            "B": "Whenever an unexpected error occurs, a component fails, or a planned step cannot be completed.",
+            "C": "Never, the Implementation Engineer should resolve all issues independently."
+        },
+        "correct": "B"
+    },
+    "39": {
+        "question": "What command is used to send array logs to Pure Storage Support?",
+        "options": {
+            "A": "`purearray send-logs`",
+            "B": "`purearray phonehome --send-today`",
+            "C": "`purearray send-today`"
+        },
+        "correct": "B"
+    },
+    "40": {
+        "question": "How does Pure Storage ensure non-disruptive upgrades for hardware and software?",
+        "options": {
+            "A": "By requiring downtime for all upgrades.",
+            "B": "Through its active\/active controller architecture, stateless design, and built-in migration capabilities.",
+            "C": "By performing upgrades only during off-peak hours."
+        },
+        "correct": "B"
+    },
+    "41": {
+        "question": "Explain the purpose of ActiveCluster and its high-level configuration.",
+        "options": {
+            "A": "ActiveCluster provides active\/passive replication for disaster recovery.",
+            "B": "ActiveCluster provides synchronous, active\/active stretched cluster capabilities for zero RPO\/RTO.",
+            "C": "ActiveCluster is a feature for aggregating multiple arrays into a single namespace."
+        },
+        "correct": "B"
+    },
+    "42": {
+        "question": "What is ActiveDR and how does it differ from ActiveCluster?",
+        "options": {
+            "A": "ActiveDR is a synchronous replication solution, similar to ActiveCluster.",
+            "B": "ActiveDR is an asynchronous, near-zero RPO\/RTO replication solution designed for disaster recovery to distant sites, unlike ActiveCluster's synchronous, stretched-cluster approach.",
+            "C": "ActiveDR only replicates file data, not block data."
+        },
+        "correct": "B"
+    },
+    "43": {
+        "question": "How does FlashArray provide ransomware protection through SafeMode snapshots?",
+        "options": {
+            "A": "SafeMode completely blocks all incoming network traffic.",
+            "B": "SafeMode creates immutable, time-locked snapshots that cannot be deleted or modified by unauthorized users or ransomware.",
+            "C": "SafeMode requires all data to be encrypted by a third-party tool."
+        },
+        "correct": "B"
+    },
+    "44": {
+        "question": "What are some common troubleshooting steps if a host cannot see volumes presented by the FlashArray?",
+        "options": {
+            "A": "Reboot the FlashArray controllers.",
+            "B": "Verify host initiator registration, volume mapping, Fibre Channel zoning\/iSCSI network paths.",
+            "C": "purenetwork --restart-san."
+        },
+        "correct": "B"
+    },
+    "45": {
+        "question": "Describe how to check for connectivity between the FlashArray and Pure1.",
+        "options": {
+            "A": "ping `8.8.8.8` from the array.",
+            "B": "purearray test pinghome",
+            "C": "purearray phonehome --debug"
+        },
+        "correct": "B"
+    },
+    "46": {
+        "question": "Which command displays the current capacity and data integrity?",
+        "options": {
+            "A": "puredrive admit",
+            "B": "puredrive total",
+            "C": "purearray list --space"
+        },
+        "correct": "C"
+    },
+    "47": {
+        "question": "How do you verify that data reduction is active and effective on a FlashArray volume?",
+        "options": {
+            "A": "Data reduction is always 10:1 on all volumes.",
+            "B": "Check the \"Data Reduction\" metrics in the FlashArray GUI for the specific volume or the entire array.",
+            "C": "It can only be verified by Pure Storage support."
+        },
+        "correct": "B"
+    },
+    "48": {
+        "question": "What is the purpose of Pure Storage's REST API?",
+        "options": {
+            "A": "The REST API is only for internal Pure Storage development.",
+            "B": "It allows interaction with the FlashArray for configuration, monitoring and enables automation scripts.",
+            "C": "It's a graphical user interface."
+        },
+        "correct": "B"
+    },
+    "49": {
+        "question": "How would you determine if an alert on the FlashArray requires immediate attention from Pure Storage Support?",
+        "options": {
+            "A": "All alerts require immediate support contact.",
+            "B": "Evaluate the alert severity and cause.",
+            "C": "Ignore all \"Warning\" alerts."
+        },
+        "correct": "B"
+    },
+    "50": {
+        "question": "What is the basic process for collecting logs for Pure Storage Support when troubleshooting an issue?",
+        "options": {
+            "A": "Logs are automatically sent, no action needed.",
+            "B": "Use the `purearray phonehome --send-today` command.",
+            "C": "Manually copy log files from individual controllers."
+        },
+        "correct": "B"
+    },
+    "51": {
+        "question": "What is the purpose of the \"FlashArray\/\/XR2 and \/\/XR3 to FlashArray\/\/XR4 Upgrade Guide\"?",
+        "options": {
+            "A": "To describe how to install a new FlashArray from scratch.",
+            "B": "To detail the process of upgrading a FlashArray\/\/XR2 or \/\/XR3 to a FlashArray\/\/XR4.",
+            "C": "To explain how to connect DirectFlash Shelves to any FlashArray model."
+        },
+        "correct": "B"
+    },
+    "52": {
+        "question": "What is the minimum supported Purity version for upgrading a FlashArray to an XR4a?",
+        "options": {
+            "A": "6.3.0 or later",
+            "B": "6.4.8 or later",
+            "C": "6.5.5 or later"
+        },
+        "correct": "B"
+    },
+    "53": {
+        "question": "How does Pure Storage ensure non-disruptive upgrades (NDU) for controllers during the XR2\/XR3 to XR4 upgrade?",
+        "options": {
+            "A": "By requiring a full system shutdown before any component replacement.",
+            "B": "By replacing both controllers simultaneously to minimize downtime.",
+            "C": "By replacing the controllers, one at a time, while the array is operating with no interruption in service."
+        },
+        "correct": "C"
+    },
+    "54": {
+        "question": "What are the two board revisions for FlashArray controllers mentioned in the guide?",
+        "options": {
+            "A": "R1a and R1b",
+            "B": "R3a and R3b",
+            "C": "R4a and R4b"
+        },
+        "correct": "C"
+    },
+    "55": {
+        "question": "Can an R4a controller and an R4b controller be mixed in the same chassis during an upgrade to FlashArray\/\/XR4?",
+        "options": {
+            "A": "No, this configuration is not supported.",
+            "B": "Yes, you can mix an R4a controller and an R4b controller temporarily.",
+            "C": "Yes, they are 100% compatible."
+        },
+        "correct": "B"
+    },
+    "56": {
+        "question": "What is the Purity minimum version required to support the newer R4b controller board revision?",
+        "options": {
+            "A": "Purity 6.4.8 and later.",
+            "B": "Purity 6.5.5 and later.",
+            "C": "Purity 6.0.0 and later."
+        },
+        "correct": "B"
+    },
+    "57": {
+        "question": "Which FlashArray\/\/XR4 models specifically require four NVRAM modules?",
+        "options": {
+            "A": "FlashArray\/\/X10R4 and \/\/X20R4",
+            "B": "FlashArray\/\/X20R4 and \/\/X50R4",
+            "C": "FlashArray\/\/X70R4 and \/\/X90R4"
+        },
+        "correct": "C"
+    },
+    "58": {
+        "question": "What voltage input is required for all FlashArray\/\/XR4 models?",
+        "options": {
+            "A": "110 VAC",
+            "B": "120 VAC",
+            "C": "220 VAC"
+        },
+        "correct": "C"
+    },
+    "59": {
+        "question": "What kind of file system format(s) are supported for the USB Flash drive when replacing controllers running 6.5.5 or higher?",
+        "options": {
+            "A": "NTFS only",
+            "B": "FAT32 only",
+            "C": "EXT2, EXT3, EXT4, NTFS or FAT32"
+        },
+        "correct": "C"
+    },
+    "60": {
+        "question": "When should you have a Support Case during the upgrade procedure?",
+        "options": {
+            "A": "Only if a critical error occurs.",
+            "B": "Before you begin the upgrade procedure to open a case.",
+            "C": "After the upgrade is fully completed and verified by the customer."
+        },
+        "correct": "B"
+    },
+    "61": {
+        "question": "What is one of the mandatory pre-upgrade health checks for the array, according to the guide?",
+        "options": {
+            "A": "Verify physical cabling to all hosts.",
+            "B": "Check for and resolve any open alerts.",
+            "C": "Confirm the requested Purity version."
+        },
+        "correct": "B"
+    },
+    "62": {
+        "question": "What command can be used to set a hardware upgrade tag for all alerts, providing a timeout for maintenance activities?",
+        "options": {
+            "A": "`purealert enable`",
+            "B": "`purealert tag --timeout 240m --maintenance`",
+            "C": "`purealert disable`"
+        },
+        "correct": "B"
+    },
+    "63": {
+        "question": "If phonehome is enabled, what command should be run to send the latest logs before an upgrade?",
+        "options": {
+            "A": "`purearray remoteassist --connect`",
+            "B": "`purearray phonehome --send-today`",
+            "C": "`puresupport --send-home`"
+        },
+        "correct": "B"
+    },
+    "64": {
+        "question": "What tool is required for adding customer-supplied wire terminals to 2000W DC power cord wires during a DC power supply replacement?",
+        "options": {
+            "A": "Soldering iron",
+            "B": "Wire strippers only",
+            "C": "Wire crimping tool"
+        },
+        "correct": "C"
+    },
+    "65": {
+        "question": "How many DFS shelves are supported by the XR4 Flasharrays?",
+        "options": {
+            "A": "1",
+            "B": "2",
+            "C": "4"
+        },
+        "correct": "b"
+    },
+    "66": {
+        "question": "During a controller replacement, what action should NOT be performed when disconnecting cables from the FlashArray\/\/X CT0?",
+        "options": {
+            "A": "Disconnect SAS expansion shelf cables.",
+            "B": "Disconnect Ethernet DirectFlash Shelf cables.",
+            "C": "Disconnect power cord."
+        },
+        "correct": "C"
+    },
+    "67": {
+        "question": "After replacing the first controller (CT0) during an NDU, the `puresetup replace` command might report an I\/O imbalance. What should the engineer do?",
+        "options": {
+            "A": "Contact support.",
+            "B": "Ignore the check as it's expected behavior due to mixed controller configuration.",
+            "C": "Verify with the customer that the hosts are always unbalanced"
+        },
+        "correct": "B"
+    },
+    "68": {
+        "question": "Which command is used to change a controller's mode to secondary during a manual failover (e.g., for CT0)?",
+        "options": {
+            "A": "`purearray controller --set-primary`",
+            "B": "`purewes controller setattr --verify-array arrayname ct0 --mode secondary`",
+            "C": "`puredb run giveback --safe`"
+        },
+        "correct": "B"
+    },
+    "69": {
+        "question": "After replacing a controller and running `puresetup replace`, what action should be taken if ping tests for network ports show a \"FAIL\" result?",
+        "options": {
+            "A": "Continue with the next step, as it's expected.",
+            "B": "Re-run the `puresetup replace` command.",
+            "C": "Verify cables, contact support if not ."
+        },
+        "correct": "C"
+    },
+    "70": {
+        "question": "For Purity versions 6.6.11 and later, what command is used to disable the secondary offload feature before a controller upgrade?",
+        "options": {
+            "A": "`puretune --disable secondary offload`",
+            "B": "`puretune --local-set PS_SUPPORTS_SECONDARY_OFFLOAD 0`",
+            "C": "`puretune --reset-all`"
+        },
+        "correct": "B"
+    },
+    "71": {
+        "question": "According to the \"FlashArray\/\/XR4 Port Usage and Definitions\" document, what is the default service assigned to LOM interface ETH0?",
+        "options": {
+            "A": "Management",
+            "B": "Replication\/SAN",
+            "C": "DirectFlash Shelf"
+        },
+        "correct": "C"
+    },
+    "72": {
+        "question": "Which service is explicitly stated as unable to share an interface with any other service on a FlashArray?",
+        "options": {
+            "A": "Management service",
+            "B": "iSCSI service",
+            "C": "Replication service"
+        },
+        "correct": "C"
+    },
+    "73": {
+        "question": "For FlashArray\/\/XR4(a) models, where is the SAS HBA typically preferred to be installed due to physical clearance issues?",
+        "options": {
+            "A": "Slot 0",
+            "B": "Slot 1",
+            "C": "Slot 2"
+        },
+        "correct": "B"
+    },
+    "74": {
+        "question": "What is the purpose of Eth5 when a 10GBase-T card is installed into Slot 0 on a FlashArray\/\/XR4(a)?",
+        "options": {
+            "A": "Replication",
+            "B": "Management",
+            "C": "DirectFlash Shelf connectivity"
+        },
+        "correct": "B"
+    },
+    "75": {
+        "question": "Which ports are enabled when a 100G DirectFlash shelf card is installed into Slot 0 on a FlashArray\/\/XR4(a)?",
+        "options": {
+            "A": "ETH0 and ETH1",
+            "B": "ETH2 and ETH3",
+            "C": "ETH6 and ETH7"
+        },
+        "correct": "C"
+    },
+    "76": {
+        "question": "By default, what type of optics are pre-installed in the factory in the LOM and default ETH config cards for \/\/XR4 arrays?",
+        "options": {
+            "A": "25Gb SFP optics",
+            "B": "32G FC optics",
+            "C": "10G optics"
+        },
+        "correct": "C"
+    },
+    "77": {
+        "question": "Are FC and iSCSI HBAs from previous FlashArray generations (R2\/R3 or earlier) allowed to be physically moved and reused on \/\/XR4 models?",
+        "options": {
+            "A": "Yes, all previous generation HBAs are fully compatible.",
+            "B": "No, with the exception of 10GBase-T cards and SAS cards.",
+            "C": "Only FC HBAs are allowed, iSCSI are not."
+        },
+        "correct": "B"
+    },
+    "78": {
+        "question": "What is the default slot for a 2-port 10GBASE-T card in the \/\/X20R4-FC base configuration?",
+        "options": {
+            "A": "Slot 0",
+            "B": "Slot 1",
+            "C": "Slot 2"
+        },
+        "correct": "A"
+    },
+    "79": {
+        "question": "For a \/\/X70R4-iSCSI base configuration, what is the default slot for the 4-port 10\/25Gb Ethernet card?",
+        "options": {
+            "A": "Slot 0",
+            "B": "Slot 1",
+            "C": "Slot 3"
+        },
+        "correct": "C"
+    },
+    "80": {
+        "question": "What is the primary service supported by the onboard 1Gb RJ45 Ethernet port in a \/\/XR4 controller?",
+        "options": {
+            "A": "iSCSI",
+            "B": "Replication",
+            "C": "Management"
+        },
+        "correct": "C"
+    },
+    "81": {
+        "question": "For \/\/X70R4 and \/\/X90R4 models, which slot is reserved for a DirectCompress Accelerator card?",
+        "options": {
+            "A": "Slot 0",
+            "B": "Slot 4",
+            "C": "Slot 3"
+        },
+        "correct": "B"
+    },
+    "82": {
+        "question": "What is the minimum and maximum number of DirectFlash modules that can be configured in a FlashArray\/\/XR4 chassis?",
+        "options": {
+            "A": "Minimum 10, Maximum 24",
+            "B": "Minimum 10, Maximum 20",
+            "C": "Minimum 12, Maximum 28"
+        },
+        "correct": "B"
+    },
+    "83": {
+        "question": "New FlashArray\/\/X arrays purchased after 2022 will NOT support which type of flash modules?",
+        "options": {
+            "A": "NVMe DirectFlash Modules",
+            "B": "QLC DirectFlash Modules",
+            "C": "SAS Flash Modules"
+        },
+        "correct": "C"
+    },
+    "84": {
+        "question": "When are legacy SAS media (12Gb and 6Gb SAS expansion shelves) allowed on a FlashArray\/\/XR4?",
+        "options": {
+            "A": "Only for new array deployments.",
+            "B": "Only when a previous generation array is being non-disruptively upgraded to the R4 generation.",
+            "C": "They are always supported on all \/\/XR4 models."
+        },
+        "correct": "B"
+    },
+    "85": {
+        "question": "What is the maximum number of 6G SAS-only shelves supported on an \/\/X20R4 model?",
+        "options": {
+            "A": "2",
+            "B": "3",
+            "C": "4"
+        },
+        "correct": "C"
+    },
+    "86": {
+        "question": "If a SAS shelf has a higher capacity than the chassis, what is a potential issue?",
+        "options": {
+            "A": "Increased data reduction ratios.",
+            "B": "Improved performance.",
+            "C": "Possibility of increased latency."
+        },
+        "correct": "C"
+    },
+    "87": {
+        "question": "All empty slots in a partially populated FlashArray\/\/XR4 enclosure must be filled with blanks for what reason?",
+        "options": {
+            "A": "To prevent dust accumulation.",
+            "B": "To improve airflow for thermal requirements.",
+            "C": "To secure the chassis in the rack."
+        },
+        "correct": "B"
+    },
+    "88": {
+        "question": "What is a critical rule regarding adding DFM data packs to a FlashArray\/\/XR4 chassis or shelf?",
+        "options": {
+            "A": "Drives in the chassis\/shelf and the data pack being added must all be of different capacities.",
+            "B": "The capacity being added must always exceed the model's maximum capacity.",
+            "C": "Drives in the chassis\/shelf and the data pack being added must all be of the same capacity."
+        },
+        "correct": "C"
+    },
+    "89": {
+        "question": "What is the capacity range (min-max) for a FlashArray\/\/X50R4 model?",
+        "options": {
+            "A": "22TB-94TB",
+            "B": "22TB-185TB",
+            "C": "22TB-622TB"
+        },
+        "correct": "B"
+    },
+    "90": {
+        "question": "Are DirectMemory modules supported for new R4 arrays and arrays non-disruptively upgrading to the R4 generation?",
+        "options": {
+            "A": "Yes, they are fully supported and recommended.",
+            "B": "Yes, but only if they are added before the upgrade.",
+            "C": "No, DirectMemory modules are not supported for new R4 arrays and arrays non-disruptively upgrading to the R4 generation."
+        },
+        "correct": "C"
+    },
+    "91": {
+        "question": "According to the EG\/1 FlashArray Implementation Process, what is the minimum Purity\/\/FA version that should be installed for new FlashArray arrays?",
+        "options": {
+            "A": "Purity\/\/FA 6.5 or lower",
+            "B": "Purity\/\/FA 6.6.0 or later",
+            "C": "Purity\/\/FA 6.7.0 or later"
+        },
+        "correct": "C"
+    },
+    "92": {
+        "question": "For EG\/1 FlashArray installations, the commands listed in the \"EG\/1 FlashArray Implementation Process\" document should be implemented ONLY for which of the following scenarios?",
+        "options": {
+            "A": "Non-Disruptive Upgrades (NDUs)",
+            "B": "Capacity adds",
+            "C": "Installation of new FlashArray arrays"
+        },
+        "correct": "C"
+    },
+    "93": {
+        "question": "Which command is used to enable array-side configuration for Pure Edge Services (PES) on an EG\/1 FlashArray?",
+        "options": {
+            "A": "`puresupport disable edge-management`",
+            "B": "`puresupport enable edge-management` ",
+            "C": "`pureconfig set paas-enable true`"
+        },
+        "correct": "B"
+    },
+    "94": {
+        "question": "What is the primary function of Evergreen\/\/One Service Mode on an EG\/1 FlashArray?",
+        "options": {
+            "A": "To enable Pure Edge Services automatically.",
+            "B": "To allow for 3 year upgrades.",
+            "C": "To update the FlashArray GUI to display licensed space."
+        },
+        "correct": "C"
+    },
+    "95": {
+        "question": "When a customer has questions about Evergreen\/\/One features or a comprehensive overview of the service, to whom should the Installation Engineer direct them?",
+        "options": {
+            "A": "Pure Storage Technical Support",
+            "B": "The Installation Engineer is expected to explain all features.",
+            "C": "Their Customer Success Manager (CSM)"
+        },
+        "correct": "C"
+    },
+    "96": {
+        "question": "If `ssh peer` is used alone, what action will it perform?",
+        "options": {
+            "A": "It will execute a command on the peer controller.",
+            "B": "It will log you into the other controller.",
+            "C": "It will display the peer controller's network status."
+        },
+        "correct": "B"
+    },
+    "97": {
+        "question": "For an R4 new install, what is the weight of the FlashArray chassis after drive modules or blanks are installed?",
+        "options": {
+            "A": "Approximately 39.8 kg (85.8 lbs.)",
+            "B": "Approximately 44 kg (97 lbs.)",
+            "C": "Approximately 48.5 kg (107 lbs.)"
+        },
+        "correct": "B"
+    },
+    "98": {
+        "question": "For an R4 new install, what are the dimensions of vertical rack space (RU) required for each FlashArray or DirectFlash Shelf?",
+        "options": {
+            "A": "1 RU (4.45 cm or 1.75 in.)",
+            "B": "2 RU (8.89 cm or 3.5 in.)",
+            "C": "3 RU (13.3 cm or 5.25 in.)"
+        },
+        "correct": "C"
+    },
+    "99": {
+        "question": "For an R4 new install, what is included in the \"Open Me First\" box of the FlashArray\/\/XR4 package?",
+        "options": {
+            "A": "DirectFlash Modules (DFM) or blanks",
+            "B": "Rack-mount rails and optional bezel",
+            "C": "Torx and Phillips drivers, Quick Installation Guide, End User Agreement, Passed\/Refreshed sheet, Safety and Compliance document"
+        },
+        "correct": "C"
+    },
+    "100": {
+        "question": "For an R4 new install, what type of Flash Modules does the FlashArray\/\/XR4 chassis support for new installations?",
+        "options": {
+            "A": "Only SAS-based Flash Modules",
+            "B": "Only NVMe-based DirectFlash Modules",
+            "C": "Both SAS-based and NVMe-based Flash Modules"
+        },
+        "correct": "B"
+    },
+    "101": {
+        "question": "For an R4 new install, what is the purpose of filling any unused slots in the chassis with blanks?",
+        "options": {
+            "A": "To secure unused components.",
+            "B": "To improve network connectivity.",
+            "C": "To ensure correct airflow."
+        },
+        "correct": "C"
+    },
+    "102": {
+        "question": "For an R4 new install, when connecting DirectFlash Shelves to the array, which ports are used if there is only one DirectFlash Shelf?",
+        "options": {
+            "A": "ETH2 and ETH3 (10\/25-GbE ports)",
+            "B": "ETH4 and ETH5 (1-GbE management ports)",
+            "C": "ETHO and ETH1 (100-Gb LOM ports)"
+        },
+        "correct": "C"
+    },
+    "103": {
+        "question": "For an R4 new install, how many DirectFlash Shelves does the FlashArray\/\/X20R4 model support?",
+        "options": {
+            "A": "One",
+            "B": "Two",
+            "C": "Three"
+        },
+        "correct": "A"
+    },
+    "104": {
+        "question": "What `puresw` command is used to display the status of upgrade or conventional staging progress?",
+        "options": {
+            "A": null,
+            "B": null,
+            "C": null
+        },
+        "correct": "B"
+    },
+    "105": {
+        "question": "For an R4 new install, what is the recommended procedure for powering on DirectFlash shelves in relation to the array?",
+        "options": {
+            "A": "Power on the array first, then the shelves.",
+            "B": "Power on DirectFlash shelves first, starting with the lowest ID number.",
+            "C": "Power on all shelves and the array simultaneously."
+        },
+        "correct": "B"
+    },
+    "106": {
+        "question": "For a new install of a DirectFlash Shelf Gen 2, what is the weight of the chassis *before* any drive modules are installed?",
+        "options": {
+            "A": "Approximately 41.2 kg (90.9 lbs.)",
+            "B": "Approximately 46.2 kg (102.0 lbs.)",
+            "C": "Approximately 33.2 kg (73.2 lbs.)"
+        },
+        "correct": "C"
+    },
+    "107": {
+        "question": "For a new install of a DirectFlash Shelf Gen 2, what is the recommended front-to-rear clearance for rack posts?",
+        "options": {
+            "A": "61 cm (24 in.)",
+            "B": "74 cm (29 in.)",
+            "C": "81.25 cm (32 in.)"
+        },
+        "correct": "B"
+    },
+    "108": {
+        "question": "For a new install of a DirectFlash Shelf Gen 2, what is the Purity minimum required to support DirectFlash Shelf Gen 2 on an existing FlashArray installation?",
+        "options": {
+            "A": "Purity 5.X.X or later",
+            "B": "Purity 6.4.8 or later",
+            "C": "The guide specifies \"6.X.X\" or later."
+        },
+        "correct": "C"
+    },
+    "109": {
+        "question": "For a new install of a DirectFlash Shelf Gen 2, what type of DirectFlash Modules (DFMs) are supported by the shelf?",
+        "options": {
+            "A": "Only Triple-Level Cell (TLC) DFMs",
+            "B": "Only Quad-Level Cell (QLC) DFMs",
+            "C": "Both Triple-Level Cell (TLC) and Quad-Level Cell (QLC) DFMs"
+        },
+        "correct": "C"
+    },
+    "110": {
+        "question": "For a new install of a DirectFlash Shelf Gen 2, what is the correct order for powering on devices?",
+        "options": {
+            "A": "Power on the FlashArray first, then the DirectFlash Shelf Gen 2.",
+            "B": "Power on the DirectFlash Shelf Gen 2 first, then the FlashArray.",
+            "C": "Power on both simultaneously."
+        },
+        "correct": "B"
+    },
+    "111": {
+        "question": "During pre-replacement health checks for a card add\/replacement, what is the purpose of the `purearray phonehome --send-today` command?",
+        "options": {
+            "A": "To check the array's hardware status.",
+            "B": "To send logs to Pure Storage Support.",
+            "C": "To set a maintenance tag for alerts."
+        },
+        "correct": "B"
+    },
+    "112": {
+        "question": "What is the expected output or condition for the `purehw list` command during pre-replacement health checks for a card add\/replacement?",
+        "options": {
+            "A": "It should show \"All's Well\".",
+            "B": "It should report \"working\" for all components.",
+            "C": "Everything should read \"OK\"."
+        },
+        "correct": "C"
+    },
+    "113": {
+        "question": "Before removing a controller for a card add\/replacement, which controller should be secondary?",
+        "options": {
+            "A": "CT1 needs to be secondary",
+            "B": "CT0 needs to be secondary",
+            "C": "The controller being removed"
+        },
+        "correct": "C"
+    },
+    "114": {
+        "question": "After executing stopping Purity for a card add\/replacement, what is the expected visual indicator before proceeding?",
+        "options": {
+            "A": "The controller LEDs turn green.",
+            "B": "The bang light should go Amber.",
+            "C": "All fans stop spinning."
+        },
+        "correct": "B"
+    },
+    "115": {
+        "question": "What is the purpose of the `iobalance --sampletime 30` command during health checks for a card add\/replacement?",
+        "options": {
+            "A": "To measure controller temperature for 60 seconds.",
+            "B": "To check Purity status on both controllers.",
+            "C": "To verify no unbalanced hosts or missing I\/O to either controller."
+        },
+        "correct": "C"
+    },
+    "116": {
+        "question": "For a card add\/replacement, what is the significance of the `purealert tag --timeout 240m --maintenance` command?",
+        "options": {
+            "A": "It creates a critical alert requiring immediate attention.",
+            "B": "It sends alert logs to Pure Storage support for 240 minutes.",
+            "C": "It sets a maintenance tag for four hours to suppress certain alerts."
+        },
+        "correct": "C"
+    },
+    "117": {
+        "question": "After adding an Ethernet (ETH) card during a card add\/replacement, which command would you use to verify its ports, and what is the expected output?",
+        "options": {
+            "A": "`purenetwork list`; should show new ports with \"connected\" status.",
+            "B": "`purehw list | grep ETH`; should show the new ports and confirm they are \"healthy\".",
+            "C": "`pureconfig network`; should display the new card's MAC address."
+        },
+        "correct": "B"
+    },
+    "118": {
+        "question": "During post-replacement health checks for a card add\/replacement, what should be confirmed about the controllers using `purearray list --controller`?",
+        "options": {
+            "A": "That both controllers are \"Active\/Passive\".",
+            "B": "That both controllers read \"Ready\".",
+            "C": "That only the primary controller is online."
+        },
+        "correct": "B"
+    },
+    "119": {
+        "question": "If the total number of FC or iSCSI connections is not the same after a card add\/replacement compared to before, what action is recommended?",
+        "options": {
+            "A": "Proceed, as this is expected behavior during a replacement.",
+            "B": "Reboot the array to re-discover connections.",
+            "C": "Check all connections are in the correct ports and seated properly."
+        },
+        "correct": "C"
+    },
+    "120": {
+        "question": "What is the purpose of running `purearray phonehome --send-today` at the \"Before Leaving Site\" stage of a card add\/replacement?",
+        "options": {
+            "A": "To clear all existing alerts on the array.",
+            "B": "To finalize the hardware configuration.",
+            "C": "To send the latest logs to Pure Storage Support."
+        },
+        "correct": "C"
+    },
+    "121": {
+        "question": "For a FlashArray Field Wipe, what is the primary reason this service is performed for a FlashArray being returned to Pure Storage?",
+        "options": {
+            "A": "To prepare it for relocation to a new customer site.",
+            "B": "To ensure none of the data can be accessed when the device is beyond the customer's control.",
+            "C": "To re-purpose the array for internal Pure Storage testing."
+        },
+        "correct": "B"
+    },
+    "122": {
+        "question": "For a FlashArray Field Wipe, who is authorized to use the field-wiping processes described in this document?",
+        "options": {
+            "A": "Any customer technician.",
+            "B": "Only Pure Storage Systems Engineers (SE) or Implementation Engineers (IE) acting under direction.",
+            "C": "Any Authorized Service Partner technician."
+        },
+        "correct": "B"
+    },
+    "123": {
+        "question": "For a FlashArray Field Wipe, if customer data needs to be deleted due to Pure Storage induced issues, whose approval is required before proceeding?",
+        "options": {
+            "A": "Only the customer's IT manager.",
+            "B": "A Pure Support director or vice president, or specific FlashArray GMs\/VPs\/Founder.",
+            "C": "The onsite SE\/IE only."
+        },
+        "correct": "B"
+    },
+    "124": {
+        "question": "For a FlashArray Field Wipe, how far in advance must each support case for erasing a FlashArray be opened?",
+        "options": {
+            "A": "Immediately before the wipe.",
+            "B": "A minimum of 24 hours in advance.",
+            "C": "48 hours in advance."
+        },
+        "correct": "B"
+    },
+    "125": {
+        "question": "For a FlashArray Field Wipe, what \"three sets of eyes\" rule applies to the crucial steps of the process?",
+        "options": {
+            "A": "Only the SE\/IE and the customer must witness the process.",
+            "B": "Only Pure Storage employees are allowed to witness.",
+            "C": "The SE\/IE requires two witnesses (or TSE and a Support Manager) for all critical actions."
+        },
+        "correct": "C"
+    },
+    "126": {
+        "question": "For a FlashArray Field Wipe in Purity 4.8.x+, what command should the customer run to generate an authorization token for the factory reset?",
+        "options": {
+            "A": "`purearray reset --confirm`",
+            "B": "`purearray authorize factory-reset --eradicate-all-data`",
+            "C": "`pureadmin wipe --generate-token`"
+        },
+        "correct": "B"
+    },
+    "127": {
+        "question": "For a FlashArray Field Wipe, if Purity is not running and cannot be started, what command can be used to authorize the factory reset (run as root)?",
+        "options": {
+            "A": "`purearray authorize factory-reset --force`",
+            "B": "`apartment_reset_authorization_helper --authorize ARRAY_NAME --delay 0`",
+            "C": "`pureadm start --recovery`"
+        },
+        "correct": "B"
+    },
+    "128": {
+        "question": "For a FlashArray Field Wipe, after the customer generates an authorization token, what must they do before the code will work?",
+        "options": {
+            "A": "Reboot the entire FlashArray.",
+            "B": "Log out of the session where they generated the code and then log into a new session.",
+            "C": "Contact Pure Storage Support to activate the token."
+        },
+        "correct": "B"
+    },
+    "129": {
+        "question": "For a FlashArray Field Wipe, how many hosts and volumes can be on the array?",
+        "options": {
+            "A": "1",
+            "B": "No restriction",
+            "C": "0"
+        },
+        "correct": "C"
+    },
+    "130": {
+        "question": "For a FlashArray Field Wipe, what specific information is required to obtain an Erasure Certificate?",
+        "options": {
+            "A": "Only the FlashArray name and the date of erasure.",
+            "B": "Screenshots of `ssd reset` or `reset apartment -A -T` output.",
+            "C": "Only a verbal confirmation from the customer."
+        },
+        "correct": "B"
+    },
+    "131": {
+        "question": "For a FlashArray relocation, what is the core process involved?",
+        "options": {
+            "A": "Upgrading the array hardware in place.",
+            "B": "Changing configuration variables without resetting the array.",
+            "C": "Powering down an array and reinstalling it in a new location."
+        },
+        "correct": "C"
+    },
+    "132": {
+        "question": "For a FlashArray relocation, what are the two separate services that are typically quoted to the customer for this engagement?",
+        "options": {
+            "A": "PS-FLASHARRAY-UPGRADE and PS-FLASHARRAY-CONFIG",
+            "B": "PS-FLASHARRAY-DECOMMISSION and PS-FLASHARRAY-INSTALL",
+            "C": "PS-FLASHARRAY-SUPPORT and PS-FLASHARRAY-LOGISTICS"
+        },
+        "correct": "B"
+    },
+    "133": {
+        "question": "For a FlashArray relocation, what is Pure Storage's responsibility regarding data integrity if the array is shipped with data on it?",
+        "options": {
+            "A": "Pure Storage takes full responsibility for data integrity.",
+            "B": "Pure Storage will perform a full backup of the data.",
+            "C": "The customer is responsible for backing up their data prior to de-installation."
+        },
+        "correct": "C"
+    },
+    "134": {
+        "question": "For a FlashArray relocation, which of the following tasks is performed by Pure Storage engineers during on-site hardware de-installation at the origin site?",
+        "options": {
+            "A": "Configuring iSCSI networks at the new location.",
+            "B": "Shipment of the array between locations.",
+            "C": "Executing a Secure Wipe of the Array if required."
+        },
+        "correct": "C"
+    },
+    "135": {
+        "question": "For a FlashArray relocation, what is the customer's responsibility regarding shipment between the origin and target sites?",
+        "options": {
+            "A": "Shipment is handled by Pure Storage Professional Services.",
+            "B": "Shipment is the responsibility of the customer.",
+            "C": "Pure Storage provides logistics coordination only."
+        },
+        "correct": "B"
+    },
+    "136": {
+        "question": "For a FlashArray relocation, during the \"Planning\/Document Completion\" stage of the engagement process, what is a key task for Pure Storage?",
+        "options": {
+            "A": "Executing on-site relocations.",
+            "B": "Performing health checks with Pure support.",
+            "C": "Allocating a Pure resource for migrations and formally scheduling."
+        },
+        "correct": "C"
+    },
+    "137": {
+        "question": "For a FlashArray relocation with iSCSI configurations, what is the customer responsible for providing and ensuring prior to array installation?",
+        "options": {
+            "A": "Only the iSCSI cables.",
+            "B": "SAN (SCSI\/FC) and management network fully configured, along with connectivity cables.",
+            "C": "Pure Storage handles all iSCSI network configurations."
+        },
+        "correct": "B"
+    },
+    "138": {
+        "question": "For a FlashArray relocation, what should the Pure engineer confirm regarding the iSCSI ports from the Pure GUI or CLI after assigning IP address information?",
+        "options": {
+            "A": "That all ports are showing \"disconnected\" status.",
+            "B": "That all ports have been enabled and are showing IQNs.",
+            "C": "That the ports are configured for Fibre Channel."
+        },
+        "correct": "B"
+    },
+    "139": {
+        "question": "For a FlashArray decommission, what is the primary process involved?",
+        "options": {
+            "A": "Upgrading existing hardware components.",
+            "B": "Reconfiguring the array for a new purpose.",
+            "C": "Uninstalling an array and returning it to Pure Storage, potentially including a data wipe."
+        },
+        "correct": "C"
+    },
+    "140": {
+        "question": "For a FlashArray decommission, which of the following is an optional inclusion in the engagement?",
+        "options": {
+            "A": "Physical removal from the rack only.",
+            "B": "Wiping the array of all data before return.",
+            "C": "Reconfiguration of host connectivity."
+        },
+        "correct": "B"
+    },
+    "141": {
+        "question": "According to XR4 specifications, how many NVRAM modules does a FlashArray\/\/X70R4 chassis typically have?",
+        "options": {
+            "A": "2",
+            "B": "4",
+            "C": "6"
+        },
+        "correct": "B"
+    },
+    "142": {
+        "question": "Based on XR4 specifications, what is the maximum host I\/O ports for a FlashArray\/\/X50R4 using 25G Ethernet?",
+        "options": {
+            "A": "12 25G Ethernet",
+            "B": "24 25G Ethernet",
+            "C": "8 25G Ethernet"
+        },
+        "correct": "B"
+    },
+    "143": {
+        "question": "According to XR4 specifications, what is the width of the FlashArray\/\/XR4 chassis (including rack ears)?",
+        "options": {
+            "A": "44 mm (1.7 in.)",
+            "B": "440 mm (17.3 in.)",
+            "C": "481 mm (18.9 in.)"
+        },
+        "correct": "C"
+    },
+    "144": {
+        "question": "Which `purealert` option is used to label a tag as ongoing maintenance on the array to avoid case creation from alerts?",
+        "options": {
+            "A": null,
+            "B": null,
+            "C": null
+        },
+        "correct": "C"
+    },
+    "145": {
+        "question": "According to XR4 specifications, which of the following components are hot-swappable on a FlashArray\/\/XR4?",
+        "options": {
+            "A": "CPU and motherboard",
+            "B": "Chassis and rack rails",
+            "C": "Controller, Power Supply Unit (PSU), NVRAM modules, DirectFlash Modules"
+        },
+        "correct": "C"
+    },
+    "146": {
+        "question": "According to CR4 specifications, what is a key feature of the FlashArray\/\/CR4 in its overview?",
+        "options": {
+            "A": "It exclusively supports SAS storage and expansion shelves.",
+            "B": "It features high-availability storage controllers with integrated compute, DirectFlash storage (NVMe), client I\/O, and expansion capabilities using NVMe DirectFlash Shelves.",
+            "C": "It is designed for cold-tier archival storage only."
+        },
+        "correct": "B"
+    },
+    "147": {
+        "question": "Based on CR4 specifications, how many NVRAM modules does a FlashArray\/\/C70R4 chassis typically have?",
+        "options": {
+            "A": "2",
+            "B": "4",
+            "C": "8"
+        },
+        "correct": "B"
+    },
+    "148": {
+        "question": "According to CR4 specifications, what is the height of the FlashArray\/\/CR4 chassis?",
+        "options": {
+            "A": "44 mm (1.7 in.)",
+            "B": "130 mm (5.1 in.)",
+            "C": "440 mm (17.3 in.)"
+        },
+        "correct": "B"
+    },
+    "149": {
+        "question": "Based on CR4 specifications, what is the typical AC power consumption (in Watts) for a FlashArray\/\/C50R4 under typical workload?",
+        "options": {
+            "A": "944.6 W",
+            "B": "1016.5 W",
+            "C": "1068.0 W"
+        },
+        "correct": "B"
+    },
+    "150": {
+        "question": "According to CR4 specifications, what is the maximum length for a 25-Gb 25GBASE-SR fiber optic cable (MMF) connection?",
+        "options": {
+            "A": "300 m",
+            "B": "100 m",
+            "C": "10 km"
+        },
+        "correct": "B"
+    },
+    "151": {
+        "question": "Regarding R4 enhancements, what was the primary reason for the XCER4 Controller Respin from R4a to R4b?",
+        "options": {
+            "A": "To increase the number of PCIe slots.",
+            "B": "To address intermittent issues with the i225 LOM Eth5 Management Port and switch to the more stable i210 chip.",
+            "C": "To enable SAS support in Slot 0."
+        },
+        "correct": "B"
+    },
+    "152": {
+        "question": "Regarding R4 enhancements, what new card is introduced for FA\/\/X and FA\/\/C (50\/70\/90) ETH configurations with R4b controllers, replacing two 2-port 10\/25G NICs and freeing up a slot?",
+        "options": {
+            "A": "A new 2-port 100Gb NVMe\/TCP card.",
+            "B": "The ConnectX7 4-Port 10\/25G Ethernet NIC.",
+            "C": "An updated 32G Fibre Channel card."
+        },
+        "correct": "B"
+    },
+    "153": {
+        "question": "Regarding R4 enhancements for Low-Line support on FA\/\/X20R4, what type of PSU is required and certified for 110V operations?",
+        "options": {
+            "A": "Existing 1300W AC PSUs.",
+            "B": "New 1600W Titanium PSU.",
+            "C": "2000W DC PSUs."
+        },
+        "correct": "B"
+    },
+    "154": {
+        "question": "Regarding R4 enhancements, can R4a and R4b controllers co-exist in the same system?",
+        "options": {
+            "A": "No, they are entirely incompatible.",
+            "B": "Yes, but only when a replacement is done due to an R4a controller failure.",
+            "C": "Yes, in any mixed configuration for performance reasons."
+        },
+        "correct": "B"
+    },
+    "155": {
+        "question": "Regarding R4 enhancements, which statement is true about DC Power support for existing FlashArray\/\/X R4 and FlashArray\/\/C R4 systems?",
+        "options": {
+            "A": "Existing arrays can be easily upgraded to DC power in the field using a kit.",
+            "B": "Existing arrays cannot be upgraded to DC power, as the DC Compliance sticker can only be applied at the factory.",
+            "C": "Only FA\/\/X20R4 systems can be upgraded to DC power in the field."
+        },
+        "correct": "B"
+    },
+    "156": {
+        "question": "Regarding SAN networking basics, what does Layer 1 of the OSI Model primarily represent?",
+        "options": {
+            "A": "End-user applications and formats.",
+            "B": "Data representation and encryption.",
+            "C": "Media, signaling, and transmission (e.g., Fiber, WiFi, Ethernet)."
+        },
+        "correct": "C"
+    },
+    "157": {
+        "question": "Regarding SAN networking, what is the primary function of an optical transceiver?",
+        "options": {
+            "A": "To encrypt data before transmission.",
+            "B": "To convert electrical signals into light pulses for transmission over fiber.",
+            "C": "To route data packets between different networks."
+        },
+        "correct": "B"
+    },
+    "158": {
+        "question": "Which `purehw` option is used to display the array's model string and serial numbers?",
+        "options": {
+            "A": null,
+            "B": null,
+            "C": null
+        },
+        "correct": "B"
+    },
+    "159": {
+        "question": "What `pureadm` command is used to check the status of `pureadm` services?",
+        "options": {
+            "A": null,
+            "B": null,
+            "C": null
+        },
+        "correct": "B"
+    },
+    "160": {
+        "question": "Which `purenetwork` command is used to show details of all Fibre Channel connections to the array?",
+        "options": {
+            "A": null,
+            "B": null,
+            "C": null
+        },
+        "correct": "C"
+    },
+    "161": {
+        "question": "Regarding SAN networking, what color is OM4 Multi-Mode fiber typically?",
+        "options": {
+            "A": "Aqua",
+            "B": "Yellow",
+            "C": "Magenta"
+        },
+        "correct": "C"
+    },
+    "162": {
+        "question": "Regarding SAN networking, what is a primary characteristic of an LC (Little Connector) connector?",
+        "options": {
+            "A": "It bundles multiple fiber strands together (e.g., 12 fibers).",
+            "B": "It is a single pair fiber optic connector that can carry one wavelength (\ufffd\ufffd).",
+            "C": "It is primarily used for copper cable assemblies."
+        },
+        "correct": "B"
+    },
+    "163": {
+        "question": "Regarding SAN networking, what is the purpose of passive breakout cables?",
+        "options": {
+            "A": "They encrypt signals for secure transmission.",
+            "B": "They amplify signals to extend distances beyond optical limits.",
+            "C": "They split a single higher-speed port into multiple individual, lower-speed connections."
+        },
+        "correct": "C"
+    },
+    "164": {
+        "question": "Regarding SAN networking, what is a key characteristic of cable assemblies (like DACs or AOCs) regarding compatibility?",
+        "options": {
+            "A": "They are universally compatible with all devices regardless of vendor.",
+            "B": "They must be qualified on BOTH devices they connect to, making them sub-optimal for cross-vendor connections.",
+            "C": "They only require qualification on the Pure Storage array side."
+        },
+        "correct": "B"
+    },
+    "165": {
+        "question": "Regarding SAN networking, what is Pure Storage's stance on transceivers and cables not on their compatibility list?",
+        "options": {
+            "A": "They are unofficially supported but not recommended.",
+            "B": "Customers should test them as they are usually compatible.",
+            "C": "They have not been tested, and thus are not supported."
+        },
+        "correct": "C"
+    },
+    "166": {
+        "question": "Regarding SAN networking for FlashArray\/\/X-R4b, what is the default host I\/O card configuration for an \/\/X20 controller?",
+        "options": {
+            "A": "4-Port 32\/64G FC Card on Slot1.",
+            "B": "DCA Card with 4-Port & 2-Port 32\/64G FC Cards.",
+            "C": "Either 2-Port 32\/64G FC Card OR 2-Port 10\/25G ETH Card on Slot3."
+        },
+        "correct": "C"
+    },
+    "167": {
+        "question": "Regarding SAN networking for FlashArray\/\/X-R4b, what is the default host I\/O card configuration for an \/\/X50 FC controller?",
+        "options": {
+            "A": "2-Port 10\/25G ETH Card on Slot3.",
+            "B": "DCA Card with 4-Port & 2-Port 32\/64G FC Cards.",
+            "C": "4-Port 32\/64G FC Card on Slot1."
+        },
+        "correct": "C"
+    },
+    "168": {
+        "question": "Regarding SAN networking for FlashArray\/\/X-R4b, what is the default host I\/O card configuration for an \/\/X70 or \/\/X90 ETH controller?",
+        "options": {
+            "A": "4-Port 10\/25G ETH Card on Slot3 with a DCA Card.",
+            "B": "2-Port 32\/64G FC Card on Slot3.",
+            "C": "Only 100G Ethernet cards are available."
+        },
+        "correct": "A"
+    },
+    "169": {
+        "question": "Regarding SAN networking for FlashArray\/\/C-R4b, what is the default host I\/O card configuration for a \/\/C50 FC controller?",
+        "options": {
+            "A": "2-Port 32\/64G FC Card on Slot1.",
+            "B": "4-Port 32\/64G FC Card on Slot3.",
+            "C": "4-Port 10\/25G ETH Card on Slot3."
+        },
+        "correct": "B"
+    },
+    "170": {
+        "question": "Regarding SAN networking for FlashArray\/\/C-R4b, what is the default host I\/O card configuration for a \/\/C70 or \/\/C90 ETH controller?",
+        "options": {
+            "A": "4-Port 10\/25G ETH Card on Slot3 with a DCA Card.",
+            "B": "2-Port 32\/64G FC Card on Slot3.",
+            "C": "Only 100G Ethernet cards are available."
+        },
+        "correct": "A"
+    },
+    "171": {
+        "question": "Regarding R4 enhancements in SAN networking, what was the change made to the R4b controllers concerning management ports ETH4 and ETH5?",
+        "options": {
+            "A": "They were removed completely.",
+            "B": "They became 100Gbe ports by default.",
+            "C": "They are now operational 1G Management ports directly on the board"
+        },
+        "correct": "C"
+    },
+    "172": {
+        "question": "Regarding R4 enhancements in SAN networking, what services does the new ConnectX7 4-Port 10\/25G Ethernet NIC support?",
+        "options": {
+            "A": "Only iSCSI and File services.",
+            "B": "Only Fibre Channel and NVMe\/FC.",
+            "C": "iSCSI, Replication, NVMe\/RoCE, and NVMe\/TCP."
+        },
+        "correct": "C"
+    },
+    "173": {
+        "question": "Regarding SAN networking and R4b enhancements, what is the default slot for 2nd DirectFlash Shelf (SH8) connectivity with R4b controllers?",
+        "options": {
+            "A": "100G LOM ports ETH0 and ETH1.",
+            "B": "Slot 0.",
+            "C": "Slot 2."
+        },
+        "correct": "B"
+    },
+    "174": {
+        "question": "Regarding SAN networking for FlashArray\/\/X20R4 with Low-Line power, what is its stance on SAS Drives and SAS Shelves?",
+        "options": {
+            "A": "Full support for all SAS configurations.",
+            "B": "Limited support for existing SAS shelves during upgrades, but no new SAS drives.",
+            "C": "No SAS whatsoever is supported with Low-Line power."
+        },
+        "correct": "C"
+    },
+    "175": {
+        "question": "Regarding SAN networking for FlashArray\/\/XR4, if optics are used for replication ports, what speed optics must the customer purchase to run at 25GbE?",
+        "options": {
+            "A": "10G optics",
+            "B": "25GbE optics",
+            "C": "32G FC optics"
+        },
+        "correct": "B"
+    },
+    "176": {
+        "question": "Which power cabling is required for FlashArray installations that use Titanium PSUs?",
+        "options": {
+            "A": "C13 to C14",
+            "B": "C19 to C20",
+            "C": "C14 to C19"
+        },
+        "correct": "A"
+    },
+    "177": {
+        "question": "What is the default service for ETH0\/ETH1 in an \/\/XR4 controller?",
+        "options": {
+            "A": "Management",
+            "B": "Replication",
+            "C": "DirectFlash Shelf"
+        },
+        "correct": "C"
+    },
+    "178": {
+        "question": "Which `puredrive` command is used to add all connected but unadmitted drives to the array?",
+        "options": {
+            "A": null,
+            "B": null,
+            "C": null
+        },
+        "correct": "C"
+    },
+    "179": {
+        "question": "What is the minimum number of modules that are required to be installed in a FlashArray\/\/E chassis?",
+        "options": {
+            "A": "20",
+            "B": "10",
+            "C": "14"
+        },
+        "correct": "C"
+    },
+    "180": {
+        "question": "On a new install, which command should an Implementation Engineer run to determine where the Purity USB drive is installed?",
+        "options": {
+            "A": "`ls \/dev\/sd* -lrt`",
+            "B": "`puredrive list`",
+            "C": "`ls \/dev\/usb -lrt`"
+        },
+        "correct": "A"
+    },
+    "181": {
+        "question": "What is the required rack space for a FlashArray\/\/XL (in rack units)?",
+        "options": {
+            "A": "5",
+            "B": "4",
+            "C": "3"
+        },
+        "correct": "A"
+    },
+    "182": {
+        "question": "Which slot should an Implementation Engineer install the SAS HBA in an \/\/XR4 array?",
+        "options": {
+            "A": "Slot 0",
+            "B": "Slot 1",
+            "C": "Slot 3"
+        },
+        "correct": "B"
+    },
+    "183": {
+        "question": "What is the difference between a DFM and a DFMD?",
+        "options": {
+            "A": "DFMD is direct access",
+            "B": "DFMD has higher density",
+            "C": "DFMD has onboard NVRAM"
+        },
+        "correct": "C"
+    },
+    "184": {
+        "question": "Which command should an Implementation Engineer run to verify data pack layout live on a given FlashArray?",
+        "options": {
+            "A": "`puredrive list CHO.BAY0 --pack`",
+            "B": "`purehw list CHO.BAY0 --pack`",
+            "C": "`purearray list CHO.BAY0 --pack`"
+        },
+        "correct": "A"
+    },
+    "185": {
+        "question": "What is the maximum array capacity of a Flasharray\/\/X50R4?",
+        "options": {
+            "A": "94TB",
+            "B": "185TB",
+            "C": "256TB"
+        },
+        "correct": "B"
+    },
+    "186": {
+        "question": "An Implementation Engineer has completed a FlashArray install. Which command should the Implementation Engineer run to test network connectivity using a specific array Ethernet port?",
+        "options": {
+            "A": "`purenetwork eth ping`",
+            "B": "`pureport ping`",
+            "C": "`purenetwork port ping`"
+        },
+        "correct": "A"
+    },
+    "187": {
+        "question": "Which type of solution is provided by SafeMode functionality?",
+        "options": {
+            "A": "Intrusion-prevention",
+            "B": "Ransomware-recovery",
+            "C": "Data-protection"
+        },
+        "correct": "C"
+    },
+    "188": {
+        "question": "Upon installation of a new DirectFlash Shelf to a FlashArray\/\/XL, the Implementation Engineer sees [X] on the rear LED panel of both storage controllers. What action should the Implementation Engineer take to remedy this situation?",
+        "options": {
+            "A": "Run purehw setattr --shelf SH9.",
+            "B": "Set the shelf ID via the Health section of the array GUI.",
+            "C": "Adjust cabling between the array and the shelf."
+        },
+        "correct": "C"
+    },
+    "189": {
+        "question": "What is the raw capacity range for a FlashArray\/\/XL170R5?",
+        "options": {
+            "A": "90 TB-1464 TB",
+            "B": "135 TB-1976 TB",
+            "C": "135 TB-1480 TB"
+        },
+        "correct": "B"
+    },
+    "190": {
+        "question": "What is the raw capacity range for a FlashArray\/\/XL130R5?",
+        "options": {
+            "A": "90 TB-1464 TB",
+            "B": "135 TB-1976 TB",
+            "C": "90 TB-968 TB"
+        },
+        "correct": "A"
+    },
+    "191": {
+        "question": "What is the raw capacity range for a FlashArray\/\/XL170?",
+        "options": {
+            "A": "135 TB-1480 TB",
+            "B": "90 TB-968 TB",
+            "C": "135 TB-1500 TB"
+        },
+        "correct": "A"
+    },
+    "192": {
+        "question": "What is the raw capacity range for a FlashArray\/\/XL130?",
+        "options": {
+            "A": "90 TB-968 TB",
+            "B": "135 TB-1500 TB",
+            "C": "90 TB-1464 TB"
+        },
+        "correct": "A"
+    },
+    "193": {
+        "question": "What is the raw capacity range for a FlashArray\/\/X90R4?",
+        "options": {
+            "A": "44TB-878TB",
+            "B": "44TB-915TB",
+            "C": "44TB-1024TB"
+        },
+        "correct": "B"
+    },
+    "194": {
+        "question": "What is the raw capacity range for a FlashArray\/\/X90R3?",
+        "options": {
+            "A": "44-878 TB",
+            "B": "44-915TB",
+            "C": "44-1024TB"
+        },
+        "correct": "A"
+    },
+    "195": {
+        "question": "What is the raw capacity range for a FlashArray\/\/X90R2?",
+        "options": {
+            "A": "44-878 TB",
+            "B": "44-915TB",
+            "C": "44-1024TB"
+        },
+        "correct": "A"
+    },
+    "196": {
+        "question": "What is the raw capacity range for a FlashArray\/\/X70R4?",
+        "options": {
+            "A": "22TB-658TB",
+            "B": "22TB-622 TB",
+            "C": "366TB-658TB"
+        },
+        "correct": "A"
+    },
+    "197": {
+        "question": "What is the raw capacity range for a FlashArray\/\/X70R3?",
+        "options": {
+            "A": "22-366 TB",
+            "B": "22-622 TB",
+            "C": "22-658TB"
+        },
+        "correct": "B"
+    },
+    "198": {
+        "question": "What is the raw capacity range for a FlashArray\/\/X70?",
+        "options": {
+            "A": "22 - 620 TB",
+            "B": "22 - 366 TB",
+            "C": "22 - 622 TB"
+        },
+        "correct": "A"
+    },
+    "199": {
+        "question": "What is the raw capacity range for a FlashArray\/\/X50R4?",
+        "options": {
+            "A": "19.2-185 TB",
+            "B": "22TB-185TB",
+            "C": "22TB-658TB"
+        },
+        "correct": "B"
+    },
+    "200": {
+        "question": "What is the raw capacity range for a FlashArray\/\/X50R3?",
+        "options": {
+            "A": "19.2-185 TB",
+            "B": "22TB-185TB",
+            "C": "22TB-622 TB"
+        },
+        "correct": "A"
+    },
+    "201": {
+        "question": "What is the raw capacity range for a FlashArray\/\/X50R2?",
+        "options": {
+            "A": "19.2-185 TB",
+            "B": "22TB-185TB",
+            "C": "11TB-94TB"
+        },
+        "correct": "A"
+    },
+    "202": {
+        "question": "What is the raw capacity range for a FlashArray\/\/X20R4?",
+        "options": {
+            "A": "4.8-94 TB",
+            "B": "11TB (with Capacity down licensing)-94TB",
+            "C": "4.8-22 TB"
+        },
+        "correct": "B"
+    },
+    "203": {
+        "question": "What is the raw capacity range for a FlashArray\/\/X20R3?",
+        "options": {
+            "A": "4.8-94 TB",
+            "B": "11TB-94TB",
+            "C": "4.8-22 TB"
+        },
+        "correct": "A"
+    },
+    "204": {
+        "question": "What is the raw capacity range for a FlashArray\/\/X20R2?",
+        "options": {
+            "A": "4.8-91 TB",
+            "B": "4.8-94 TB",
+            "C": "4.8-22 TB"
+        },
+        "correct": "A"
+    },
+    "205": {
+        "question": "What is the raw capacity range for a FlashArray\/\/X10R3?",
+        "options": {
+            "A": "4.8-22 TB",
+            "B": "11TB-94TB",
+            "C": "4.8-94 TB"
+        },
+        "correct": "A"
+    },
+    "206": {
+        "question": "What is the raw capacity range for a FlashArray\/\/X10R2?",
+        "options": {
+            "A": "4.8-22 TB",
+            "B": "4.8-91 TB",
+            "C": "4.8-94 TB"
+        },
+        "correct": "A"
+    },
+    "207": {
+        "question": "What is the raw capacity range for a FlashArray\/\/C90R4?",
+        "options": {
+            "A": "482 TB-2361 TB",
+            "B": "450 TB-3600 TB",
+            "C": "750TB-3600TB"
+        },
+        "correct": "A"
+    },
+    "208": {
+        "question": "What is the raw capacity range for a FlashArray\/\/C70R4?",
+        "options": {
+            "A": "240 TB-1329 TB",
+            "B": "240 TB-1350 TB",
+            "C": "750TB-1350TB"
+        },
+        "correct": "A"
+    },
+    "209": {
+        "question": "What is the raw capacity range for a FlashArray\/\/C60R3?",
+        "options": {
+            "A": "247 TB-1877 TB",
+            "B": "366 TB-1,877 TB",
+            "C": "2.3 PB"
+        },
+        "correct": "A"
+    },
+    "210": {
+        "question": "What is the raw capacity range for a FlashArray\/\/C60?",
+        "options": {
+            "A": "247 TB-1877 TB",
+            "B": "366 TB-1,877 TB",
+            "C": "1.877 TB-2.3 PB"
+        },
+        "correct": "B"
+    },
+    "211": {
+        "question": "What is the raw capacity range for a FlashArray\/\/C50R4?",
+        "options": {
+            "A": "186 TB-492 TB",
+            "B": "240 TB-492 TB",
+            "C": "186TB-525TB"
+        },
+        "correct": "B"
+    },
+    "212": {
+        "question": "What is the raw capacity range for a FlashArray\/\/C40R3?",
+        "options": {
+            "A": "247 TB-494 TB",
+            "B": "240 TB-492 TB",
+            "C": "186 TB-492 TB"
+        },
+        "correct": "A"
+    },
+    "213": {
+        "question": "What is the raw capacity range for a FlashArray\/\/E?",
+        "options": {
+            "A": "1.05PB-4.2PB",
+            "B": "1.5PB-4.2PB",
+            "C": "148 TB-260 TB"
+        },
+        "correct": "A"
+    },
+    "214": {
+        "question": "What is the raw capacity range for a FlashArray\/\/C20?",
+        "options": {
+            "A": "Min. # DFMs: 8, Max. # DFMs: 14",
+            "B": "148 TB-260 TB",
+            "C": "1.5PB-4.2PB"
+        },
+        "correct": "B"
+    },
+    "215": {
+        "question": "What is the raw capacity range for a FlashArray\/\/RC20?",
+        "options": {
+            "A": "148 TB-260 TB",
+            "B": "Min. # DFMs: 8, Max. # DFMs: 14",
+            "C": "1.05PB-4.2PB"
+        },
+        "correct": "A"
+    },
+    "216": {
+        "question": "In the Linux file system hierarchy, what does a single period (`.`) reference?",
+        "options": {
+            "A": "The root directory",
+            "B": "The parent directory",
+            "C": "The current directory"
+        },
+        "correct": "C"
+    },
+    "217": {
+        "question": "What does a double period (`..`) reference in the Linux file system?",
+        "options": {
+            "A": "The root directory",
+            "B": "The parent directory",
+            "C": "The user's home directory"
+        },
+        "correct": "B"
+    },
+    "218": {
+        "question": "What does a tilde (`~`) reference in the Linux file system?",
+        "options": {
+            "A": "The root directory",
+            "B": "The parent directory",
+            "C": "The user's home directory"
+        },
+        "correct": "C"
+    },
+    "219": {
+        "question": "In Linux commands, what is the asterisk (`*`) typically used as?",
+        "options": {
+            "A": "A separator for command arguments",
+            "B": "The wildcard key, representing multiple characters",
+            "C": "A special character for defining a new directory"
+        },
+        "correct": "B"
+    },
+    "220": {
+        "question": "Which command is at the top of the list for displaying the manual for other commands, allowing you to learn their options and usage?",
+        "options": {
+            "A": "`grep`",
+            "B": "`man`",
+            "C": "`help`"
+        },
+        "correct": "B"
+    },
+    "221": {
+        "question": "Which Linux command is a powerful tool used for searching and matching text patterns, often utilizing Regular Expressions?",
+        "options": {
+            "A": "`ls`",
+            "B": "`cd`",
+            "C": "`grep`"
+        },
+        "correct": "C"
+    },
+    "222": {
+        "question": "What is `zgrep` used for?",
+        "options": {
+            "A": "To compress files.",
+            "B": "To search within `.gz` archive files.",
+            "C": "To display the size of a directory."
+        },
+        "correct": "B"
+    },
+    "223": {
+        "question": "Which command is used to print the exact directory you are currently in?",
+        "options": {
+            "A": "`ls`",
+            "B": "`pwd`",
+            "C": "`cd`"
+        },
+        "correct": "B"
+    },
+    "224": {
+        "question": "What is the common option for the `ls` command that displays details of directory contents, including permissions, owner, date modified, and size?",
+        "options": {
+            "A": null,
+            "B": null,
+            "C": null
+        },
+        "correct": "C"
+    },
+    "225": {
+        "question": "Which command is commonly used for getting the cumulative size of a directory?",
+        "options": {
+            "A": "`ls -l`",
+            "B": "`du`",
+            "C": "`cat`"
+        },
+        "correct": "B"
+    },
+    "226": {
+        "question": "According to FlashArray\/\/XR4 Port Usage and Definitions, what IO card comes by default in an \/\/X20R4-FC base configuration?",
+        "options": {
+            "A": "2-Port 10GBASE-T card",
+            "B": "2-Port 32G\/64G FC card with 32G optics",
+            "C": "4-Port 10\/25Gb Ethernet card"
+        },
+        "correct": "B"
+    },
+    "227": {
+        "question": "According to FlashArray\/\/XR4 Port Usage and Definitions, what IO card comes by default in an \/\/X20R4-iSCSI base configuration?",
+        "options": {
+            "A": "2-port 10\/25Gb Ethernet card with 10G optics",
+            "B": "4-Port 32G\/64G FC card with 32G optics",
+            "C": "DirectCompress Accelerator card"
+        },
+        "correct": "A"
+    },
+    "228": {
+        "question": "According to FlashArray\/\/XR4 Port Usage and Definitions, what IO card comes by default in an \/\/X50R4-FC base configuration?",
+        "options": {
+            "A": "2-Port 32G\/64G FC card",
+            "B": "4-Port 32G\/64G FC card with 32G optics",
+            "C": "2x 2-port 10\/25Gb Ethernet card"
+        },
+        "correct": "B"
+    },
+    "229": {
+        "question": "According to FlashArray\/\/XR4 Port Usage and Definitions, what IO card comes by default in an \/\/X50R4-iSCSI base configuration?",
+        "options": {
+            "A": "4-Port 32G\/64G FC card",
+            "B": "2-port 10GBASE-T card",
+            "C": "4-port 10\/25Gb Ethernet card with 10G optics"
+        },
+        "correct": "C"
+    },
+    "230": {
+        "question": "According to FlashArray\/\/XR4 Port Usage and Definitions, which two FC cards come by default in an \/\/X70R4-FC base configuration?",
+        "options": {
+            "A": "2-Port 10GBASE-T card and 2-Port 32G\/64G FC card",
+            "B": "4-Port 32G\/64G FC card and 2-Port 32G\/64G FC card",
+            "C": "1x4-port 10\/25Gb Ethernet card and 2-Port 32G\/64G FC card"
+        },
+        "correct": "B"
+    },
+    "231": {
+        "question": "According to FlashArray\/\/XR4 Port Usage and Definitions, what IO cards come by default in an \/\/X70R4-iSCSI base configuration?",
+        "options": {
+            "A": "1x4-port 10\/25Gb Ethernet card with 10G optics and DirectCompress Accelerator card",
+            "B": "2x2-port 10\/25Gb Ethernet card and 4-Port 32G\/64G FC card",
+            "C": "Only 2-port 10GBASE-T card and 2-Port 32G\/64G FC card"
+        },
+        "correct": "A"
+    },
+    "232": {
+        "question": "According to FlashArray\/\/XR4 Port Usage and Definitions, which two FC cards come by default in an \/\/X90R4-FC base configuration?",
+        "options": {
+            "A": "4-Port 32G\/64G FC card and 2-Port 32G\/64G FC card",
+            "B": "2-Port 10GBASE-T card and 4-Port 32G\/64G FC card",
+            "C": "Only a single 4-Port 32G\/64G FC card"
+        },
+        "correct": "A"
+    },
+    "233": {
+        "question": "According to FlashArray\/\/XR4 Port Usage and Definitions, what IO cards come by default in an \/\/X90R4-iSCSI base configuration?",
+        "options": {
+            "A": "1x4-port 10\/25Gb Ethernet card with 10G optics and DirectCompress Accelerator card",
+            "B": "2x2-port 10\/25Gb Ethernet card and 2-Port 32G\/64G FC card",
+            "C": "Only a 2-port 10GBASE-T card"
+        },
+        "correct": "A"
+    },
+    "234": {
+        "question": "According to FlashArray\/\/XR4 Port Usage and Definitions, which specialized card is commonly included by default in \/\/X70R4 and \/\/X90R4 base configurations, regardless of FC or iSCSI type?",
+        "options": {
+            "A": "SAS HBA card",
+            "B": "DirectCompress Accelerator card",
+            "C": "Fiber Channel to Ethernet converter card"
+        },
+        "correct": "B"
+    },
+    "235": {
+        "question": "According to FlashArray\/\/XR4 Port Usage and Definitions, what type of card is the 2-port 10GBASE-T card, and in which slot is it consistently included by default across all listed \/\/XR4 models (X20, X50, X70, X90, both FC and iSCSI)?",
+        "options": {
+            "A": "A Fibre Channel card, in Slot 1",
+            "B": "An Ethernet card, in Slot 0",
+            "C": "A SAS card, in Slot 2"
+        },
+        "correct": "B"
+    },
+    "236": {
+        "question": "According to the FlashArray\/\/XR4 Port Usage and Definitions document, what is the default service assigned to LOM Interface ETH0?",
+        "options": {
+            "A": "Management",
+            "B": "Replication\/SAN",
+            "C": "DirectFlash Shelf (9)"
+        },
+        "correct": "C"
+    },
+    "237": {
+        "question": "According to the FlashArray\/\/XR4 Port Usage and Definitions document, what is the default service assigned to LOM Interface ETH1?",
+        "options": {
+            "A": "Management",
+            "B": "Replication\/SAN",
+            "C": "DirectFlash Shelf (9)"
+        },
+        "correct": "C"
+    },
+    "238": {
+        "question": "According to the FlashArray\/\/XR4 Port Usage and Definitions document, what is the default service assigned to LOM Interface ETH2?",
+        "options": {
+            "A": "DirectFlash Shelf",
+            "B": "Replication\/SAN",
+            "C": "Management"
+        },
+        "correct": "B"
+    },
+    "239": {
+        "question": "According to the FlashArray\/\/XR4 Port Usage and Definitions document, what is the default service assigned to LOM Interface ETH3?",
+        "options": {
+            "A": "DirectFlash Shelf",
+            "B": "Replication\/SAN",
+            "C": "Management"
+        },
+        "correct": "B"
+    },
+    "240": {
+        "question": "According to the FlashArray\/\/XR4 Port Usage and Definitions document, what is the default service assigned to LOM Interface ETH4?",
+        "options": {
+            "A": "DirectFlash Shelf",
+            "B": "Replication\/SAN",
+            "C": "Management"
+        },
+        "correct": "C"
+    },
+    "241": {
+        "question": "According to the FlashArray\/\/XR4 Port Usage and Definitions document, what is the default service assigned to LOM Interface ETH5?",
+        "options": {
+            "A": "DirectFlash Shelf",
+            "B": "Replication\/SAN",
+            "C": "Management"
+        },
+        "correct": "C"
+    },
+    "242": {
+        "question": "According to the FlashArray\/\/XR4 Port Usage and Definitions document, which two LOM interfaces are by default assigned the DirectFlash Shelf service?",
+        "options": {
+            "A": "ETH0 and ETH1",
+            "B": "ETH2 and ETH3",
+            "C": "ETH4 and ETH5"
+        },
+        "correct": "A"
+    },
+    "243": {
+        "question": "According to the FlashArray\/\/XR4 Port Usage and Definitions document, which service may not share an interface with any other service?",
+        "options": {
+            "A": "Management service",
+            "B": "iSCSI service",
+            "C": "Replication service"
+        },
+        "correct": "C"
+    },
+    "244": {
+        "question": "According to the FlashArray\/\/XR4 Port Usage and Definitions document, which LOM interfaces are by default assigned for Replication\/SAN services?",
+        "options": {
+            "A": "ETH0 and ETH1",
+            "B": "ETH2 and ETH3",
+            "C": "ETH4 and ETH5"
+        },
+        "correct": "B"
+    },
+    "245": {
+        "question": "According to the FlashArray\/\/XR4 Port Usage and Definitions document, which LOM interfaces are by default assigned for Management services?",
+        "options": {
+            "A": "ETH0 and ETH1",
+            "B": "ETH2 and ETH3",
+            "C": "ETH4 and ETH5"
+        },
+        "correct": "C"
+    },
+    "246": {
+        "question": "According to the FlashArray\/\/XR4 Chassis table, what are the minimum and maximum number of DirectFlash modules that can be configured in a FlashArray\/\/XR4 chassis?",
+        "options": {
+            "A": "Minimum 8, Maximum 16",
+            "B": "Minimum 10, Maximum 20",
+            "C": "Minimum 12, Maximum 24"
+        },
+        "correct": "B"
+    },
+    "247": {
+        "question": "According to the FlashArray\/\/XR4 Chassis table, for new FlashArray\/\/X arrays, is SAS support available in the chassis?",
+        "options": {
+            "A": "Yes, for both new installations and upgrades.",
+            "B": "Only when a previous generation array is being non-disruptively upgraded to the R4 generation; new arrays do not feature SAS support in chassis.",
+            "C": "Only if specific SAS HBA cards are installed in Slot 0."
+        },
+        "correct": "B"
+    },
+    "248": {
+        "question": "According to the FlashArray\/\/XR4 Chassis table, what is the maximum capacity for a 10-drive chassis configuration for an \/\/X20R4 model?",
+        "options": {
+            "A": "22TB",
+            "B": "45TB",
+            "C": "91TB"
+        },
+        "correct": "C"
+    },
+    "249": {
+        "question": "According to the FlashArray\/\/XR4 Chassis table, what is the maximum capacity for a 10-drive chassis configuration for an \/\/X90R4 model?",
+        "options": {
+            "A": "91TB",
+            "B": "183TB",
+            "C": "366TB"
+        },
+        "correct": "C"
+    },
+    "250": {
+        "question": "According to the FlashArray\/\/XR4 Chassis table, what is the capacity for a 20-drive chassis configuration using 2.2TB modules for an \/\/X20R4 model?",
+        "options": {
+            "A": "22TB",
+            "B": "44TB",
+            "C": "90TB"
+        },
+        "correct": "B"
+    },
+    "251": {
+        "question": "According to the FlashArray\/\/XR4 Chassis table, what is the maximum capacity for a 20-drive chassis configuration for an \/\/X90R4 model?",
+        "options": {
+            "A": "366TB",
+            "B": "732TB",
+            "C": "182TB"
+        },
+        "correct": "B"
+    },
+    "252": {
+        "question": "According to the FlashArray\/\/XR4 Chassis table, which FlashArray\/\/XR4 models support DirectFlash Module \"efficient bundles\" (configurations with more than 10 drives in the chassis)?",
+        "options": {
+            "A": "Only \/\/X70R4 and \/\/X90R4",
+            "B": "Only \/\/X20R4 and \/\/X50R4",
+            "C": "\/\/X20R4, \/\/X50R4, \/\/X70R4, and \/\/X90R4"
+        },
+        "correct": "C"
+    },
+    "253": {
+        "question": "According to the FlashArray\/\/XR4 Chassis table, what capacity is provided by a 14-drive chassis configuration using 2.2TB modules for an \/\/X20R4 model?",
+        "options": {
+            "A": "31TB",
+            "B": "63TB",
+            "C": "127TB"
+        },
+        "correct": "A"
+    },
+    "254": {
+        "question": "According to the FlashArray\/\/XR4 Chassis table, when used in a FlashArray\/\/X, how are DFMD drives functionally equivalent to DFM drives?",
+        "options": {
+            "A": "DFMDs have higher density and performance due to onboard NVRAM.",
+            "B": "DFMDs are exact replacements for DFM drives and are functionally equivalent.",
+            "C": "DFMDs only support QLC NAND, while DFMs support TLC."
+        },
+        "correct": "B"
+    },
+    "255": {
+        "question": "According to the FlashArray\/\/XR4 Chassis table, if an \/\/XR4 chassis is partially populated, what must be done with the empty slots?",
+        "options": {
+            "A": "They should be left empty to improve airflow.",
+            "B": "They must be populated with blanks to ensure proper airflow for thermal requirements.",
+            "C": "They can be used for additional network cards."
+        },
+        "correct": "B"
+    },
+    "256": {
+        "question": "What type of external storage shelf is Pure Storage retiring and working to remove from new deployments?",
+        "options": {
+            "A": "NVMe DirectFlash Shelves",
+            "B": "SAS Flash Shelves",
+            "C": "DirectFlash Shelf Gen 2"
+        },
+        "correct": "B"
+    },
+    "257": {
+        "question": "If you are signed off for Milestone 1 (Capacity Adds and Installations) do you need Support to assist with adding a shelf to a production array?",
+        "options": {
+            "A": "Yes, support needs to assist to ensure there are no unintended disruptions.",
+            "B": "No, Milestone 1 certification means you can perform these tasks on your own.",
+            "C": "No, unless it's a critical array."
+        },
+        "correct": "A"
+    },
+    "258": {
+        "question": "What command will you run to see if drive modules are ready to be admitted to the storage pool?",
+        "options": {
+            "A": "`purearray list --drives`",
+            "B": "`purehw list --all`",
+            "C": "`puredrive list`"
+        },
+        "correct": "C"
+    },
+    "259": {
+        "question": "How many cables typically connect a single DirectFlash Shelf (DFS) to a FlashArray?",
+        "options": {
+            "A": "Two cables",
+            "B": "Four cables",
+            "C": "Eight cables"
+        },
+        "correct": "B"
+    },
+    "260": {
+        "question": "How can you check the progress of an evacuation if you are not on site and consoled into the array?",
+        "options": {
+            "A": "Use `purearray phonehome --status` to check progress.",
+            "B": "Use `puremessage list --open` to check for related alerts.",
+            "C": "Run `puresupport list --progress`."
+        },
+        "correct": "B"
+    },
+    "261": {
+        "question": "When adding a shelf, what command do you run to make sure the cabling is correct?",
+        "options": {
+            "A": "`purenetwork list`",
+            "B": "`purehw list --all`",
+            "C": "`purearray list --connect`"
+        },
+        "correct": "B"
+    },
+    "262": {
+        "question": "What is the minimum amount of modules that a DirectFlash Shelf (DFS) can support?",
+        "options": {
+            "A": "10 modules",
+            "B": "12 modules",
+            "C": "14 modules"
+        },
+        "correct": "A"
+    },
+    "263": {
+        "question": "What ports do you connect the second DirectFlash Shelf to on an R4b controller?",
+        "options": {
+            "A": "ETH0 and ETH1 (100G LOM ports)",
+            "B": "ETH2 and ETH3 (10\/25GbE ports)",
+            "C": "ETH6 and ETH7 (100G ports on optional Slot 0 card)"
+        },
+        "correct": "C"
+    },
+    "264": {
+        "question": "What is the minimum number of modules required for a FlashArray\/\/E chassis?",
+        "options": {
+            "A": "10 modules",
+            "B": "14 modules",
+            "C": "20 modules"
+        },
+        "correct": "B"
+    },
+    "265": {
+        "question": "Can DFMD modules be used on a FlashArray\/\/X array?",
+        "options": {
+            "A": "Yes, they are an exact and functionally equivalent replacement for DFM drives.",
+            "B": "No, DFMD modules are only compatible with FlashArray\/\/XL arrays.",
+            "C": "Yes, but only for read-only workloads."
+        },
+        "correct": "A"
+    },
+    "266": {
+        "question": "How many modules can a SAS shelf configured with two data packs hold in total?",
+        "options": {
+            "A": "12 modules",
+            "B": "24 modules",
+            "C": "36 modules"
+        },
+        "correct": "B"
+    },
+    "267": {
+        "question": "What is the maximum number of modules that a DirectFlash Shelf (DFS) can hold?",
+        "options": {
+            "A": "20 modules",
+            "B": "24 modules",
+            "C": "28 modules"
+        },
+        "correct": "C"
+    },
+    "268": {
+        "question": "Which two types of drive modules can be installed in a FlashArray\/\/XL?",
+        "options": {
+            "A": "SAS drives and NVMe DFMs.",
+            "B": "DFMs and DFMDs.",
+            "C": "TLC and QLC DFMs."
+        },
+        "correct": "B"
+    },
+    "269": {
+        "question": "What is the speed difference between SFP, SFP+ and SFP28?",
+        "options": {
+            "A": "SFP is 1Gb, SFP+ is 10Gb, and SFP28 is 25Gb.",
+            "B": "SFP is 10Gb, SFP+ is 25Gb, and SFP28 is 40Gb.",
+            "C": "SFP is 1Gb, SFP+ is 25Gb, and SFP28 is 100Gb."
+        },
+        "correct": "A"
+    },
+    "270": {
+        "question": "What are the two minimum Purity versions that can be installed on an R4b array?",
+        "options": {
+            "A": "Purity 6.4.8 and 6.5.0",
+            "B": "Purity 6.5.5 and 6.6.3",
+            "C": "Purity 6.6.1 and 6.6.11"
+        },
+        "correct": "B"
+    }
+}
