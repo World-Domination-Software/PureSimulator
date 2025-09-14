@@ -236,9 +236,9 @@
     "27": {
         "question": "What `purearray` test option is used to verify the array's ability to reach the CCM (Cloud Control Module) service?",
         "options": {
-            "A": null,
-            "B": null,
-            "C": null
+            "A": "ntp",
+            "B": "phonehome",
+            "C": "pinghome"
         },
         "correct": "C"
     },
@@ -254,9 +254,9 @@
     "29": {
         "question": "Which `purearray` monitor option is used to display historical I\/O performance information, such as for the last 24 hours or 30 days?",
         "options": {
-            "A": null,
-            "B": null,
-            "C": null
+            "A": "--live",
+            "B": "--status",
+            "C": "--historical"
         },
         "correct": "C"
     },
@@ -281,9 +281,9 @@
     "32": {
         "question": "For FlashArray, which `purearray` option lists replication relationships with other arrays?",
         "options": {
-            "A": null,
-            "B": null,
-            "C": null
+            "A": "--controller",
+            "B": "--connect",
+            "C": "--space"
         },
         "correct": "B"
     },
@@ -929,9 +929,9 @@
     "104": {
         "question": "What `puresw` command is used to display the status of upgrade or conventional staging progress?",
         "options": {
-            "A": null,
-            "B": null,
-            "C": null
+            "A": "check",
+            "B": "list",
+            "C": "upgrade"
         },
         "correct": "B"
     },
@@ -1289,9 +1289,9 @@
     "144": {
         "question": "Which `purealert` option is used to label a tag as ongoing maintenance on the array to avoid case creation from alerts?",
         "options": {
-            "A": null,
-            "B": null,
-            "C": null
+            "A": "--suppress",
+            "B": "--timeout",
+            "C": "--maintenance"
         },
         "correct": "C"
     },
@@ -1415,27 +1415,27 @@
     "158": {
         "question": "Which `purehw` option is used to display the array's model string and serial numbers?",
         "options": {
-            "A": null,
-            "B": null,
-            "C": null
+            "A": "--type",
+            "B": "--spec",
+            "C": "--list-components"
         },
         "correct": "B"
     },
     "159": {
         "question": "What `pureadm` command is used to check the status of `pureadm` services?",
         "options": {
-            "A": null,
-            "B": null,
-            "C": null
+            "A": "list",
+            "B": "status",
+            "C": "restart"
         },
         "correct": "B"
     },
     "160": {
         "question": "Which `purenetwork` command is used to show details of all Fibre Channel connections to the array?",
         "options": {
-            "A": null,
-            "B": null,
-            "C": null
+            "A": "list",
+            "B": "eth list",
+            "C": "fc list"
         },
         "correct": "C"
     },
@@ -1595,9 +1595,9 @@
     "178": {
         "question": "Which `puredrive` command is used to add all connected but unadmitted drives to the array?",
         "options": {
-            "A": null,
-            "B": null,
-            "C": null
+            "A": "list",
+            "B": "enable",
+            "C": "admit"
         },
         "correct": "C"
     },
@@ -2009,9 +2009,9 @@
     "224": {
         "question": "What is the common option for the `ls` command that displays details of directory contents, including permissions, owner, date modified, and size?",
         "options": {
-            "A": null,
-            "B": null,
-            "C": null
+            "A": "-a",
+            "B": "-h",
+            "C": "-l"
         },
         "correct": "C"
     },

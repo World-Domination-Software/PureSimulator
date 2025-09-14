@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class TextFieldPutty : MonoBehaviour, IPointerDownHandler
+public class TextFieldPutty : MonoBehaviour
 {
     public bool copyOnSelect = true;
 
@@ -38,13 +38,13 @@ public class TextFieldPutty : MonoBehaviour, IPointerDownHandler
         }
     }
 
-    public void OnPointerDown(PointerEventData eventData)
+    /*public void OnPointerDown(PointerEventData eventData)
     {
         if (eventData.button == PointerEventData.InputButton.Right) //paste text from system clipboard! 
         {
             Paste();
         }
-    }
+    }*/
 
     public void Paste() 
     {

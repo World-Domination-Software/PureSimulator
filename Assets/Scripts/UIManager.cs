@@ -2,7 +2,6 @@ using System.Collections;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -66,7 +65,7 @@ public class UIManager : MonoBehaviour
             startupUI.SetActive(true);
         }
 
-        versionText.text = "PureOPS v." + Application.version;
+        versionText.text = "COM7 - PuTTY | PureOPS v." + Application.version;
         frontCam.SetActive(true);
         backCam.SetActive(false);
 
