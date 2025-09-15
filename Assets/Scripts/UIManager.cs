@@ -225,8 +225,8 @@ public class UIManager : MonoBehaviour
         backCam.SetActive(true);
         frontCam.SetActive(false);
 
-        backCamButton.SetActive(false);
-        frontCamButton.SetActive(true);
+        //backCamButton.SetActive(false);
+        //frontCamButton.SetActive(true);
     }
 
     public void FrontCamera() 
@@ -234,8 +234,8 @@ public class UIManager : MonoBehaviour
         backCam.SetActive(false);
         frontCam.SetActive(true);
 
-        backCamButton.SetActive(true);
-        frontCamButton.SetActive(false);
+        //backCamButton.SetActive(true);
+        //frontCamButton.SetActive(false);
     }
 
     public void ShowPopup(string title, string message) 

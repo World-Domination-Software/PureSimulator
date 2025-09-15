@@ -6,12 +6,19 @@ public class TutorSetup : MonoBehaviour
     public ServerRack rack;
     public CommandProcessor commandProcessor;
     public UIManager ui;
+    public GameObject checklistSide;
 
-    public TextAsset[] TutorHelps = new TextAsset[0];
+    [System.Serializable]
+    public class TutorHelpers
+    {
+        public TextAsset textFile;
+        public string pdfFileName; //file name in Application.dataPath directory
+    }
+    public TutorHelpers[] TutorHelps = new TutorHelpers[0];
 
     private Chassis selectedChassis;
     private bool tutorRunning=false;
-    private int lastRunningTutorIndex = -1;
+    private int tutorID = -1;
     private string FlashArrayInstallModelName;
 
     private void Start()
@@ -35,8 +42,10 @@ public class TutorSetup : MonoBehaviour
             selectedChassis = rack.AddArray(4, FlashArrayInstallModelName);
             ui.SeeServer();
             ui.ShowErrorUI("Connect PSU and Ethernet cables to turn on the server, then connect USB to install purityOS.");
-            ui.SetHelperText(TutorHelps[id].text);
+            ui.SetHelperText(TutorHelps[id].textFile.text);
             done = true;
+
+            checklistSide.SetActive(true);
         }
 
         if (!done) //feature not implemented? 
@@ -45,7 +54,7 @@ public class TutorSetup : MonoBehaviour
         }
 
         if (done) {
-            lastRunningTutorIndex = id;
+            tutorID = id;
             tutorRunning = true;
         }
     }
@@ -58,12 +67,13 @@ public class TutorSetup : MonoBehaviour
     public void StopLastTutor(bool changeUI = false) 
     {
         ui.SetHelperText("No Tutor Active.");
-        if(lastRunningTutorIndex == 0)
+        if(tutorID == 0)
             Destroy(selectedChassis.gameObject);
         
         if(changeUI)
             ui.SeeCommands();
-        lastRunningTutorIndex = -1;
+        tutorID = -1;
+        checklistSide.SetActive(false);
     }
 
     public void TutorComplete() 
@@ -71,6 +81,12 @@ public class TutorSetup : MonoBehaviour
         Debug.Log("Tutorial completed!");
         tutorRunning = false;
         ui.SetHelperText("No Tutor Active.");
-        lastRunningTutorIndex = -1;
+        tutorID = -1;
+        checklistSide.SetActive(false);
+    }
+
+    public void OpenTutorPDFLink()
+    {
+        Application.OpenURL(Application.dataPath + "/" + TutorHelps[tutorID].pdfFileName);
     }
 }

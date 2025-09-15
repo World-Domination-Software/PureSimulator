@@ -1,10 +1,13 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TopBar : MonoBehaviour
 {
    public GameObject simTypeUI;
-   public GameObject newArrayUI;
-
+   public GameObject newArrayUI, cameraButton, backButton;
+   public Text arrayViewText;
+   
+   private bool watchingFrontCam = true;
    private UIManager ui => UIManager.Instance;
 
     public void SimType()
@@ -22,12 +25,22 @@ public class TopBar : MonoBehaviour
     public void MoreInfo()
     {
         ui.ShowInfoPanel();
+        backButton.SetActive(true);
         CloseAllUI();
     }
 
     public void WatchArray()
     {
-        ui.SeeServer();
+        if(!ui.commandUI.activeSelf) { 
+            ui.SeeServer();
+            arrayViewText.text = "Watch CLI";
+            cameraButton.SetActive(true);
+        }
+        else { 
+            ui.SeeCommands(); 
+            arrayViewText.text = "Watch Server";
+            cameraButton.SetActive(false);
+        }
         CloseAllUI();
     }
 
@@ -46,5 +59,24 @@ public class TopBar : MonoBehaviour
     {
         simTypeUI.SetActive(false);
         newArrayUI.SetActive(false);
+    }
+
+    public void BackView()
+    {
+        watchingFrontCam = !watchingFrontCam;
+        if(!watchingFrontCam) {
+            ui.BackCamera();
+        }
+        else {
+            ui.FrontCamera();
+        }
+    }
+
+    public void BackButton() {
+        if(ui.infoPanelUI.activeSelf) 
+            ui.SeeCommands();
+        
+        ui.EnableMainCameras();
+        backButton.SetActive(false);
     }
 }

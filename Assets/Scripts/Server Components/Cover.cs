@@ -11,6 +11,7 @@ public class Cover : MonoBehaviour
     private void Awake()
     {
         mRenderer = coverGfx.GetComponent<MeshRenderer>();
+        SetLights(false);
     }
 
     private void OnMouseDown()

@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
 using UnityEngine;
@@ -13,13 +14,11 @@ public class AI_Assistant : MonoBehaviour
     public Button sendButton;
     public Text outputText;   // shows only the latest Assistant answer (or a helpful error)
 
-    [Header("OpenAI (testing only)")]
-    [Tooltip("Project-scoped key: sk-proj-...  (DO NOT ship in production)")]
-    public string openAIApiKey = "YOUR_SK_PROJ_KEY_HERE";
-    [Tooltip("Optional: set if the assistant lives under a specific org")]
-    public string openAIOrganization = ""; // e.g. "org_abc123" (optional)
-    [Tooltip("Your existing Assistant ID (assistants v2)")]
-    public string assistantId = "asst_xxxxxxxxxxxxxxxxxxxxxx";
+    public string apiFileName; //the API file name in Root folder
+
+    private string assistantId;
+    private string openAIApiKey;
+    private string openAIOrganization;
 
     [Header("Behavior")]
     public float pollIntervalSeconds = 0.5f;
@@ -34,6 +33,21 @@ public class AI_Assistant : MonoBehaviour
 
     void Awake()
     {
+        //Load the API keys from disk:
+        string path = Application.dataPath + "/" + apiFileName;
+        if(File.Exists(path))
+        {
+            string[] dat = File.ReadAllText(path).Split('\n');
+            assistantId = dat[1];
+            openAIApiKey = dat[3];
+            if(dat.Length >= 6)
+                openAIOrganization = dat[5];
+        }
+        else
+        {
+            Debug.LogError("API key file not found in " + path);
+        }
+
         if (reuseThreadAcrossRuns)
             threadId = PlayerPrefs.GetString(ThreadPP, string.Empty);
 
