@@ -86,8 +86,10 @@ public class UIManager : MonoBehaviour
         startupUI.SetActive(false);
 
         //when player starts simulator show them that small 'Ask Question Popup'
-        askQuestionPopup.SetActive(true);
-        Invoke(nameof(HideAIQuestionPopup), 3f); //close after a bit of delay!
+        if(!aiUI.activeSelf) {
+            askQuestionPopup.SetActive(true);
+            Invoke(nameof(HideAIQuestionPopup), 3f); //close after a bit of delay!
+        }
     }
     
     private void HideAIQuestionPopup() {

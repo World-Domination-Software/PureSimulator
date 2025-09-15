@@ -14,16 +14,14 @@ public class AI_Assistant : MonoBehaviour
     public Button sendButton;
     public Text outputText;   // shows only the latest Assistant answer (or a helpful error)
 
-    public string apiFileName; //the API file name in Root folder
-
-    private string assistantId;
-    private string openAIApiKey;
+    public string assistantId;
+    public string openAIApiKey;
     private string openAIOrganization;
 
     [Header("Behavior")]
     public float pollIntervalSeconds = 0.5f;
     public int   pollMaxTries = 40; // ~20s
-    public float textAddDelay = 0.01f;
+    public float textAnimationSpeed = 0.01f;
     public bool  reuseThreadAcrossRuns = true;
 
     const string BaseUrl  = "https://api.openai.com/v1";
@@ -33,21 +31,6 @@ public class AI_Assistant : MonoBehaviour
 
     void Awake()
     {
-        //Load the API keys from disk:
-        string path = Application.dataPath + "/" + apiFileName;
-        if(File.Exists(path))
-        {
-            string[] dat = File.ReadAllText(path).Split('\n');
-            assistantId = dat[1];
-            openAIApiKey = dat[3];
-            if(dat.Length >= 6)
-                openAIOrganization = dat[5];
-        }
-        else
-        {
-            Debug.LogError("API key file not found in " + path);
-        }
-
         if (reuseThreadAcrossRuns)
             threadId = PlayerPrefs.GetString(ThreadPP, string.Empty);
 
@@ -190,7 +173,7 @@ public class AI_Assistant : MonoBehaviour
         req.uploadHandler = new UploadHandlerRaw(body);
         req.uploadHandler.contentType = "application/json";     // explicit
         req.downloadHandler = new DownloadHandlerBuffer();
-        req.chunkedTransfer = false;                            // avoid chunked
+        //req.chunkedTransfer = false;                         // avoid chunked
         AttachHeaders(req);
         return req;
     }
@@ -199,7 +182,7 @@ public class AI_Assistant : MonoBehaviour
     {
         var req = UnityWebRequest.Get(url);
         req.downloadHandler = new DownloadHandlerBuffer();
-        req.chunkedTransfer = false;
+        //req.chunkedTransfer = false;
         AttachHeaders(req);
         return req;
     }
@@ -230,7 +213,7 @@ public class AI_Assistant : MonoBehaviour
         char[] chars = message.ToCharArray();
         int g = 0;
         while(g < chars.Length) {
-            yield return new WaitForSeconds(textAddDelay);
+            yield return new WaitForSeconds(1 / textAnimationSpeed);
             outputText.text += chars[g];
             g++;
         }
