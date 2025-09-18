@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -21,7 +22,8 @@ public class AI_Assistant : MonoBehaviour
     [Header("Behavior")]
     public float pollIntervalSeconds = 0.5f;
     public int   pollMaxTries = 40; // ~20s
-    public float textAnimationSpeed = 0.01f;
+    public float chunkDelay = 0.03f;
+    public int chunkSize = 3;
     public bool  reuseThreadAcrossRuns = true;
 
     const string BaseUrl  = "https://api.openai.com/v1";
@@ -199,24 +201,34 @@ public class AI_Assistant : MonoBehaviour
 
     static bool Is2xx(long code) => code >= 200 && code < 300;
 
+    private Coroutine typingCor;
     void SetOutput(string msg)
     {
-        if (outputText != null && !string.IsNullOrEmpty(msg)) {
-            //outputText.text = msg ?? "";
-            outputText.text = "";
-            StartCoroutine(SlowAddLetters(msg));
-        }
-        //Debug.Log("[AI_Assistant] " + msg);
+        outputText.text = "";
+
+        if(typingCor != null)
+            StopCoroutine(typingCor);
+        typingCor = StartCoroutine(SmoothTextAdd(msg));
+
+            /*char[] chars = msg.ToCharArray();
+            for(int i = 0; i < chars.Length; i++)
+            {
+                lastMessage.Enqueue(chars[i]);
+            }
+            NeedUIUpdate = true;*/
     }
 
-    private IEnumerator SlowAddLetters(string message){
-        char[] chars = message.ToCharArray();
-        int g = 0;
-        while(g < chars.Length) {
-            yield return new WaitForSeconds(1 / textAnimationSpeed);
-            outputText.text += chars[g];
-            g++;
+    private IEnumerator SmoothTextAdd(string message){
+        int index = 0;
+        while(index < message.Length)
+        {
+            int length = Mathf.Min(chunkSize, message.Length - index);
+            outputText.text += message.Substring(index, length);
+            index += length;
+            yield return new WaitForSeconds(chunkDelay);
         }
+
+        typingCor = null;
     }
 
     void ShowFail(string label, UnityWebRequest req)

@@ -156,7 +156,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2.1260376, y: -29.829}
+  m_AnchoredPosition: {x: 2.1260376, y: -29.82901}
   m_SizeDelta: {x: -28.77, y: -156.335}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2679194
@@ -18768,10 +18768,11 @@ MonoBehaviour:
   sendButton: {fileID: 1425820013}
   outputText: {fileID: 1382177229}
   assistantId: asst_RB7XAZhk7QayVKKLNMOT6QJA
-  openAIApiKey: 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
+  openAIApiKey: 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
   pollIntervalSeconds: 0.5
   pollMaxTries: 40
-  textAnimationSpeed: 100
+  chunkDelay: 0.03
+  chunkSize: 3
   reuseThreadAcrossRuns: 1
 --- !u!1 &1242975726
 GameObject:
