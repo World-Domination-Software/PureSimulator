@@ -10,6 +10,11 @@ public class TopBar : MonoBehaviour
    private bool watchingFrontCam = true;
    private UIManager ui => UIManager.Instance;
 
+    private void Start()
+    {
+        arrayViewText.text = "Watch Rack";   
+    }
+
     public void SimType()
     {
         simTypeUI.SetActive(!simTypeUI.activeSelf);
@@ -31,14 +36,15 @@ public class TopBar : MonoBehaviour
 
     public void WatchArray()
     {
-        if(!ui.commandUI.activeSelf) { 
+        if(ui.commandUI.activeSelf) { 
             ui.SeeServer();
             arrayViewText.text = "Watch CLI";
             cameraButton.SetActive(true);
         }
-        else { 
+        else 
+        { 
             ui.SeeCommands(); 
-            arrayViewText.text = "Watch Server";
+            arrayViewText.text = "Watch Rack";
             cameraButton.SetActive(false);
         }
         CloseAllUI();
@@ -53,6 +59,16 @@ public class TopBar : MonoBehaviour
     {
         ui.SelectSimulatorType(i);
         CloseAllUI();
+
+        ui.SeeServer();
+        ui.EnableMainCameras();
+        backButton.SetActive(false);
+        watchingFrontCam = false;
+        ui.BackCamera();
+
+        //update the top bar too!
+        arrayViewText.text = "Watch CLI";
+        cameraButton.SetActive(true);
     }
 
     public void CloseAllUI()

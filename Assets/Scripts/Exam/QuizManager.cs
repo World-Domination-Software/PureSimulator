@@ -50,7 +50,7 @@ namespace WDS.Exams
         private int current = 0;
         //private Toggle[] currentToggles = new Toggle[3];
         private List<QuestionCompleteData> questions = new List<QuestionCompleteData>();
-        private int maxTime;
+        private int currentTime;
         private bool reviewed;
 
         private void Start()
@@ -69,11 +69,11 @@ namespace WDS.Exams
         public void StartExam()
         {
             questionsPerTest = GetNumQuestion();
-            maxTime = GetTime();
+            currentTime = GetTime();
             current = 1;
             progressText.text = "Question: " + current+" / "+questionsPerTest;
             RenderCurrent();
-            timeText.text = $"Time Remaining: {(maxTime / 60):00}:00";
+            timeText.text = $"Time Remaining: {(currentTime / 60):00}:00";
             StartCoroutine(TimeLoop());
 
             initialAnimator.SetBool("Open", false);
@@ -85,15 +85,15 @@ namespace WDS.Exams
             while(!reviewed)
             {
                 yield return new WaitForSeconds(1f);
-                maxTime--;
-                if(maxTime <= 0)
+                currentTime--;
+                if(currentTime <= 0)
                 {
                     //lose the exam if time is out!
                     ShowScores();
                     timeText.text = "Timeout!";
                 }
                 else
-                    timeText.text = $"Time Remaining: {(maxTime / 60):00}:{(maxTime % 60):00}";
+                    timeText.text = $"Time Remaining: {(currentTime / 60):00}:{(currentTime % 60):00}";
             }
         }
 
@@ -101,14 +101,9 @@ namespace WDS.Exams
         public void Next()
         {
             current++;
-            
-            //check answer?
-            /*if(currentToggles[0].isOn) { questions[questions.Count - 1].answer = "A"; }
-            else if(currentToggles[1].isOn) { questions[questions.Count - 1].answer = "B"; }
-            else if(currentToggles[2].isOn) { questions[questions.Count - 1].answer = "C"; }*/
-
             if(current > questionsPerTest)
             {
+                StopAllCoroutines(); //for stopping the time loop!
                 ShowScores();
                 return;
             }
@@ -145,15 +140,11 @@ namespace WDS.Exams
                 //shown as: A: question...
                 GameObject g = Instantiate(answerPrefab, answerParent);
                 g.transform.GetChild(0).GetComponent<Text>().text = (i+1)+". "+q.options[IndexedAlpha(i)];
-                g.transform.GetChild(0).GetComponent<Button>().onClick.AddListener(()=>OnPressed(IndexedAlpha(i)));
-                /*Toggle t = g.transform.GetChild(0).GetComponent<Toggle>();
-                t.group = toggleGroup;
-                currentToggles[i] = t;
-                t.onValueChanged.AddListener(OnTogglePressed);*/
+                g.transform.GetComponent<QuizUIO>().Init(IndexedAlpha(i), this);
             }
         }
 
-        private void OnPressed(string value)
+        public void OnClickAnswer(string value)
         {
             questions[questions.Count - 1].answer = value;
             Next();
@@ -167,7 +158,10 @@ namespace WDS.Exams
 
             reviewPanel.SetActive(true);
             reviewAnimator.SetBool("Open", true);
-            scoreText.text = $"Scores: {(CorrectQuestions() / (float)questionsPerTest) * 100.0f}%"; //as a percentage!
+            reviewed = true;
+
+            int correct = CorrectQuestions();
+            scoreText.text = $"You scored {correct} out of {questionsPerTest} ({correct/(float)questionsPerTest * 100f}%)!"; //as a percentage!
 
             //show questions, answers and correct answers:
             for(int i = 0; i < questions.Count; i++)
@@ -179,8 +173,9 @@ namespace WDS.Exams
                 t.text = "Your Answer: "+questions[i].answer + " | Correct Answer: " + questions[i].correct;
                 t.color = (questions[i].answer == questions[i].correct) ? correctColor : wrongColor;
             }
-
-            reviewed = true;
+            
+            int timeLeft = GetTime() - currentTime;
+            timeText.text = $"Time Taken: {(timeLeft / 60):00}:{(timeLeft % 60):00}";
         }
 
         public void HideReviewPanel()
