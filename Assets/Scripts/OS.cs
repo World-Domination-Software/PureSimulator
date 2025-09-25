@@ -108,8 +108,34 @@ public static class OS
         }
 
         //lists all files in folders
-        if (splits[0] == "ls")
+        if (splits[0] == "ls" || splits[0] == "ll" || splits[0] == "la")
         {
+            // Convert aliases to ls with appropriate flags
+            if (splits[0] == "ll")
+            {
+                // ll is typically ls -la
+                string[] newSplits = new string[splits.Length + 1];
+                newSplits[0] = "ls";
+                newSplits[1] = "-la";
+                for (int i = 1; i < splits.Length; i++)
+                {
+                    newSplits[i + 1] = splits[i];
+                }
+                splits = newSplits;
+            }
+            else if (splits[0] == "la")
+            {
+                // la is typically ls -A
+                string[] newSplits = new string[splits.Length + 1];
+                newSplits[0] = "ls";
+                newSplits[1] = "-A";
+                for (int i = 1; i < splits.Length; i++)
+                {
+                    newSplits[i + 1] = splits[i];
+                }
+                splits = newSplits;
+            }
+
             // Use virtual file system if available
             if (fileSystemHandler != null)
             {
@@ -559,6 +585,14 @@ public static class OS
                 case "lspci":
                 case "free":
                 case "iostat":
+                case "which":
+                case "whoami":
+                case "id":
+                case "uname":
+                case "hostname":
+                case "uptime":
+                case "date":
+                case "history":
                     result = fileSystemHandler.HandleSystemCommand(splits);
                     if (result == null) handled = false;
                     break;

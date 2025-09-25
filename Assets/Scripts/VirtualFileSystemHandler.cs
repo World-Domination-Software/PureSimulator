@@ -455,7 +455,8 @@ namespace CrimsofallTechnologies.ServerSimulator
         // Handle additional system commands
         public string HandleSystemCommand(string[] args)
         {
-            if (hardwareManager == null) return "Hardware manager not initialized";
+            if (hardwareManager == null && !IsSimpleCommand(args[0])) 
+                return "Hardware manager not initialized";
 
             switch (args[0])
             {
@@ -471,9 +472,30 @@ namespace CrimsofallTechnologies.ServerSimulator
                     return HandleFreeCommand(args);
                 case "iostat":
                     return HandleIostatCommand(args);
+                case "which":
+                    return HandleWhichCommand(args);
+                case "whoami":
+                    return HandleWhoamiCommand(args);
+                case "id":
+                    return HandleIdCommand(args);
+                case "uname":
+                    return HandleUnameCommand(args);
+                case "hostname":
+                    return HandleHostnameCommand(args);
+                case "uptime":
+                    return HandleUptimeCommand(args);
+                case "date":
+                    return HandleDateCommand(args);
+                case "history":
+                    return HandleHistoryCommand(args);
                 default:
                     return null; // Command not handled
             }
+        }
+
+        private bool IsSimpleCommand(string cmd)
+        {
+            return new string[] { "which", "whoami", "id", "uname", "hostname", "uptime", "date", "history" }.Contains(cmd);
         }
 
         private string HandleDfCommand(string[] args)
@@ -529,6 +551,103 @@ Device:            tps    kB_read/s    kB_wrtn/s    kB_read    kB_wrtn
 sda              15.23       123.45       234.56     123456     234567
 nvme0n1          89.12       456.78       567.89     456789     567890
 nvme1n1          87.34       445.67       556.78     445678     556789";
+        }
+
+        private string HandleWhichCommand(string[] args)
+        {
+            if (args.Length < 2)
+            {
+                return "which: missing argument";
+            }
+
+            string command = args[1];
+            
+            // Check common locations for executables
+            string[] paths = { "/usr/bin", "/usr/local/bin", "/bin", "/sbin", "/usr/sbin", "/opt/Purity/bin" };
+            
+            foreach (string path in paths)
+            {
+                if (fileSystem.FileExists($"{path}/{command}"))
+                {
+                    return $"{path}/{command}";
+                }
+            }
+
+            return $"which: no {command} in ({string.Join(":", paths)})";
+        }
+
+        private string HandleWhoamiCommand(string[] args)
+        {
+            return fileSystem.GetCurrentUser();
+        }
+
+        private string HandleIdCommand(string[] args)
+        {
+            string user = fileSystem.GetCurrentUser();
+            return user switch
+            {
+                "root" => "uid=0(root) gid=0(root) groups=0(root)",
+                "puresetup" => "uid=1000(puresetup) gid=1000(puresetup) groups=1000(puresetup),4(adm),24(cdrom),27(sudo)",
+                "pureeng" => "uid=1001(pureeng) gid=1001(pureeng) groups=1001(pureeng),4(adm),24(cdrom),27(sudo)",
+                _ => $"uid=1002({user}) gid=1002({user}) groups=1002({user})"
+            };
+        }
+
+        private string HandleUnameCommand(string[] args)
+        {
+            if (args.Length > 1 && args[1] == "-a")
+            {
+                return "Linux purearray-ct0 5.15.123+ #1 SMP " + DateTime.Now.ToString("ddd MMM dd HH:mm:ss UTC yyyy") + " x86_64 x86_64 x86_64 GNU/Linux";
+            }
+            return "Linux";
+        }
+
+        private string HandleHostnameCommand(string[] args)
+        {
+            if (chassis != null)
+            {
+                return $"{chassis.GetComputerName()}-{chassis.selectedController}";
+            }
+            return "purearray-ct0";
+        }
+
+        private string HandleUptimeCommand(string[] args)
+        {
+            var uptime = TimeSpan.FromSeconds(UnityEngine.Random.Range(3600, 86400)); // Random uptime between 1 hour and 1 day
+            int users = 1;
+            return $" {DateTime.Now.ToString("HH:mm:ss")} up {uptime.Days} days, {uptime.Hours}:{uptime.Minutes:D2}, {users} user, load average: 0.15, 0.25, 0.30";
+        }
+
+        private string HandleDateCommand(string[] args)
+        {
+            return DateTime.Now.ToString("ddd MMM dd HH:mm:ss UTC yyyy");
+        }
+
+        private string HandleHistoryCommand(string[] args)
+        {
+            // Read the user's bash history file
+            string user = fileSystem.GetCurrentUser();
+            string historyFile = $"/home/{user}/.bash_history";
+            if (user == "root") historyFile = "/root/.bash_history";
+
+            string historyContent = fileSystem.ReadFile(historyFile);
+            if (historyContent == null)
+            {
+                return "bash: history: command not available";
+            }
+
+            // Add line numbers
+            var lines = historyContent.Split('\n');
+            var numberedLines = new List<string>();
+            for (int i = 0; i < lines.Length; i++)
+            {
+                if (!string.IsNullOrEmpty(lines[i]))
+                {
+                    numberedLines.Add($"  {i + 1,3}  {lines[i]}");
+                }
+            }
+
+            return string.Join("\n", numberedLines);
         }
     }
 }
