@@ -17,6 +17,7 @@ public static class OS
 {
     public static CommandProcessor commandProcessor;
     private static Chassis chassis => commandProcessor.chassis;
+    public static VirtualFileSystemHandler fileSystemHandler;
 
     public static Color pink;
     public static Color yellow;
@@ -26,6 +27,20 @@ public static class OS
 
     private static bool switchedUserToRoot = false;
     private static bool switchedToOtherController = false;
+
+    public static void InitializeVirtualFileSystem()
+    {
+        if (commandProcessor != null && chassis != null)
+        {
+            // Create virtual file system handler if it doesn't exist
+            if (fileSystemHandler == null)
+            {
+                var handlerObj = new GameObject("VirtualFileSystemHandler");
+                fileSystemHandler = handlerObj.AddComponent<VirtualFileSystemHandler>();
+                fileSystemHandler.Initialize(commandProcessor, chassis);
+            }
+        }
+    }
 
     public static void ProcessCommand(string cmd)
     {
@@ -40,6 +55,12 @@ public static class OS
                 commandProcessor.LoggedInAs = "pureeng";
                 switchedUserToRoot = false;
                 commandProcessor.SetLoginText($"{commandProcessor.LoggedInAs}@{chassis.GetComputerName()}-{chassis.selectedController}:~$");
+                
+                // Update virtual file system context
+                if (fileSystemHandler != null)
+                {
+                    fileSystemHandler.UpdateUserContext();
+                }
             }
             else if (switchedToOtherController) //switch back to original controller!
             {
@@ -89,6 +110,14 @@ public static class OS
         //lists all files in folders
         if (splits[0] == "ls")
         {
+            // Use virtual file system if available
+            if (fileSystemHandler != null)
+            {
+                string result = fileSystemHandler.HandleLsCommand(splits);
+                commandProcessor.Log(result);
+                return;
+            }
+
             //find if any files exists anywhere on drives
             if (splits.Length > 1 && splits[1].StartsWith("/"))
             {
@@ -111,6 +140,17 @@ public static class OS
 
         if (splits[0] == "mount") 
         {
+            // Use virtual file system handler if available
+            if (fileSystemHandler != null)
+            {
+                string result = fileSystemHandler.HandleMountCommand(splits);
+                if (!string.IsNullOrEmpty(result))
+                {
+                    commandProcessor.LogError(result);
+                }
+                return;
+            }
+
             if(splits.Length < 3) {
                 commandProcessor.LogError("mount [drive] [folder] - incorrect useage!");
                 return;
@@ -134,9 +174,37 @@ public static class OS
             return;
         }
 
+        // Add umount command
+        if (splits[0] == "umount")
+        {
+            if (fileSystemHandler != null)
+            {
+                string result = fileSystemHandler.HandleUmountCommand(splits);
+                if (!string.IsNullOrEmpty(result))
+                {
+                    commandProcessor.LogError(result);
+                }
+                return;
+            }
+
+            commandProcessor.LogError("umount: command not available in legacy mode");
+            return;
+        }
+
         //before copying files make sure to mount the drives!
         if (splits[0] == "cp") 
         {
+            // Use virtual file system handler if available
+            if (fileSystemHandler != null)
+            {
+                string result = fileSystemHandler.HandleCpCommand(splits);
+                if (!string.IsNullOrEmpty(result))
+                {
+                    commandProcessor.LogError(result);
+                }
+                return;
+            }
+
             if (commandProcessor.Mounted) {
                 if (!chassis.UsbCorrect()) {
                     return;
@@ -305,6 +373,13 @@ public static class OS
             commandProcessor.LoggedInAs = "root";
             commandProcessor.SetLoginText($"{commandProcessor.LoggedInAs}@{chassis.GetComputerName()}-{chassis.selectedController}:/var/home/pureeng#");
             switchedUserToRoot = true;
+            
+            // Update virtual file system context
+            if (fileSystemHandler != null)
+            {
+                fileSystemHandler.UpdateUserContext();
+            }
+            
             return;
         }
 
@@ -422,11 +497,81 @@ public static class OS
 
         if (splits[0] == "cat") //see folder contents!
         {
+            // Use virtual file system handler if available
+            if (fileSystemHandler != null)
+            {
+                string result = fileSystemHandler.HandleCatCommand(splits);
+                commandProcessor.Log(result);
+                return;
+            }
+
             if (splits[1] == "/etc/timezone") 
             {
                 commandProcessor.Log(chassis.selectedController == "CT0" ? chassis.flashArrays[0].TimeZone : chassis.flashArrays[1].TimeZone);
             }
             return;
+        }
+
+        // Add new Linux commands using virtual file system
+        if (fileSystemHandler != null)
+        {
+            string result = "";
+            bool handled = true;
+
+            switch (splits[0])
+            {
+                case "cd":
+                    result = fileSystemHandler.HandleCdCommand(splits);
+                    // Update command processor prompt if needed
+                    if (string.IsNullOrEmpty(result))
+                    {
+                        string newDir = fileSystemHandler.GetFileSystem().GetCurrentDirectory();
+                        string prompt = $"{commandProcessor.LoggedInAs}@{chassis.GetComputerName()}-{chassis.selectedController}:{newDir}";
+                        prompt += switchedUserToRoot ? "#" : "$";
+                        commandProcessor.SetLoginText(prompt);
+                    }
+                    break;
+                case "pwd":
+                    result = fileSystemHandler.HandlePwdCommand();
+                    break;
+                case "mkdir":
+                    result = fileSystemHandler.HandleMkdirCommand(splits);
+                    break;
+                case "rmdir":
+                    result = fileSystemHandler.HandleRmdirCommand(splits);
+                    break;
+                case "rm":
+                    result = fileSystemHandler.HandleRmCommand(splits);
+                    break;
+                case "mv":
+                    result = fileSystemHandler.HandleMvCommand(splits);
+                    break;
+                case "find":
+                    result = fileSystemHandler.HandleFindCommand(splits);
+                    break;
+                case "touch":
+                    result = fileSystemHandler.HandleTouchCommand(splits);
+                    break;
+                default:
+                    handled = false;
+                    break;
+            }
+
+            if (handled)
+            {
+                if (!string.IsNullOrEmpty(result))
+                {
+                    if (result.Contains("cannot") || result.Contains("missing") || result.Contains("failed"))
+                    {
+                        commandProcessor.LogError(result);
+                    }
+                    else
+                    {
+                        commandProcessor.Log(result);
+                    }
+                }
+                return;
+            }
         }
 
         //Easter EGGS!

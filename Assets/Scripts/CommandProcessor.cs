@@ -1047,6 +1047,9 @@ namespace CrimsofallTechnologies.ServerSimulator
             Loading = false;
             field.ActivateInputField();
 
+            // Initialize virtual file system
+            OS.InitializeVirtualFileSystem();
+
             ResetScroll = true;
             CancelInvoke(nameof(CancelScrollReset));
             Invoke(nameof(CancelScrollReset), 0.5f);

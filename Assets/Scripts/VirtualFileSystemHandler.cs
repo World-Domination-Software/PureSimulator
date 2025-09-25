@@ -1,0 +1,450 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
+
+namespace CrimsofallTechnologies.ServerSimulator
+{
+    public class VirtualFileSystemHandler : MonoBehaviour
+    {
+        private VirtualFileSystem fileSystem;
+        private CommandProcessor commandProcessor;
+        private Chassis chassis;
+
+        public void Initialize(CommandProcessor processor, Chassis chassisRef)
+        {
+            commandProcessor = processor;
+            chassis = chassisRef;
+            fileSystem = new VirtualFileSystem();
+            
+            // Set initial user and directory based on login
+            UpdateUserContext();
+        }
+
+        public void UpdateUserContext()
+        {
+            if (commandProcessor != null)
+            {
+                fileSystem.SetCurrentUser(commandProcessor.LoggedInAs);
+                
+                // Set current directory to user's home if we're not already there
+                string homeDir = fileSystem.GetUserHomeDirectory();
+                if (fileSystem.GetCurrentDirectory() == "/")
+                {
+                    fileSystem.SetCurrentDirectory(homeDir);
+                }
+            }
+        }
+
+        public VirtualFileSystem GetFileSystem()
+        {
+            return fileSystem;
+        }
+
+        // Handle ls command with various options
+        public string HandleLsCommand(string[] args)
+        {
+            bool longFormat = false;
+            bool showHidden = false;
+            string targetPath = fileSystem.GetCurrentDirectory();
+
+            // Parse arguments
+            for (int i = 1; i < args.Length; i++)
+            {
+                if (args[i].StartsWith("-"))
+                {
+                    if (args[i].Contains("l")) longFormat = true;
+                    if (args[i].Contains("a")) showHidden = true;
+                }
+                else
+                {
+                    targetPath = args[i];
+                }
+            }
+
+            var result = fileSystem.ListDirectory(targetPath, longFormat, showHidden);
+            if (result == null)
+            {
+                return $"ls: cannot access '{targetPath}': No such file or directory";
+            }
+
+            return result;
+        }
+
+        // Handle cd command
+        public string HandleCdCommand(string[] args)
+        {
+            string targetPath = args.Length > 1 ? args[1] : fileSystem.GetUserHomeDirectory();
+
+            if (fileSystem.DirectoryExists(targetPath))
+            {
+                fileSystem.SetCurrentDirectory(targetPath);
+                return "";
+            }
+            else
+            {
+                return $"cd: {targetPath}: No such file or directory";
+            }
+        }
+
+        // Handle pwd command
+        public string HandlePwdCommand()
+        {
+            return fileSystem.GetCurrentDirectory();
+        }
+
+        // Handle mkdir command
+        public string HandleMkdirCommand(string[] args)
+        {
+            if (args.Length < 2)
+            {
+                return "mkdir: missing operand";
+            }
+
+            bool success = true;
+            var errors = new List<string>();
+
+            for (int i = 1; i < args.Length; i++)
+            {
+                if (!fileSystem.CreateDirectory(args[i]))
+                {
+                    errors.Add($"mkdir: cannot create directory '{args[i]}': File exists or parent directory not found");
+                    success = false;
+                }
+            }
+
+            return success ? "" : string.Join("\n", errors);
+        }
+
+        // Handle rmdir command
+        public string HandleRmdirCommand(string[] args)
+        {
+            if (args.Length < 2)
+            {
+                return "rmdir: missing operand";
+            }
+
+            var errors = new List<string>();
+
+            for (int i = 1; i < args.Length; i++)
+            {
+                if (!fileSystem.DeleteDirectory(args[i], false))
+                {
+                    errors.Add($"rmdir: failed to remove '{args[i]}': Directory not empty or does not exist");
+                }
+            }
+
+            return errors.Count > 0 ? string.Join("\n", errors) : "";
+        }
+
+        // Handle rm command
+        public string HandleRmCommand(string[] args)
+        {
+            if (args.Length < 2)
+            {
+                return "rm: missing operand";
+            }
+
+            bool recursive = false;
+            bool force = false;
+            var filesToDelete = new List<string>();
+
+            // Parse arguments
+            for (int i = 1; i < args.Length; i++)
+            {
+                if (args[i].StartsWith("-"))
+                {
+                    if (args[i].Contains("r") || args[i].Contains("R")) recursive = true;
+                    if (args[i].Contains("f")) force = true;
+                }
+                else
+                {
+                    filesToDelete.Add(args[i]);
+                }
+            }
+
+            var errors = new List<string>();
+
+            foreach (var path in filesToDelete)
+            {
+                var node = fileSystem.GetNode(path);
+                if (node == null)
+                {
+                    if (!force) errors.Add($"rm: cannot remove '{path}': No such file or directory");
+                    continue;
+                }
+
+                bool success = false;
+                if (node.IsDirectory)
+                {
+                    if (recursive)
+                    {
+                        success = fileSystem.DeleteDirectory(path, true);
+                    }
+                    else
+                    {
+                        errors.Add($"rm: cannot remove '{path}': Is a directory");
+                        continue;
+                    }
+                }
+                else
+                {
+                    success = fileSystem.DeleteFile(path);
+                }
+
+                if (!success && !force)
+                {
+                    errors.Add($"rm: cannot remove '{path}': Operation failed");
+                }
+            }
+
+            return errors.Count > 0 ? string.Join("\n", errors) : "";
+        }
+
+        // Handle cp command
+        public string HandleCpCommand(string[] args)
+        {
+            if (args.Length < 3)
+            {
+                return "cp: missing file operand";
+            }
+
+            string source = args[1];
+            string dest = args[2];
+
+            // Special handling for mounting from /mnt to current directory
+            if (source.StartsWith("/mnt/") && chassis != null)
+            {
+                return HandleMountCopy(source, dest);
+            }
+
+            if (!fileSystem.FileExists(source))
+            {
+                return $"cp: cannot stat '{source}': No such file or directory";
+            }
+
+            if (fileSystem.CopyFile(source, dest))
+            {
+                return "";
+            }
+            else
+            {
+                return $"cp: cannot create regular file '{dest}': Operation failed";
+            }
+        }
+
+        // Handle mv command
+        public string HandleMvCommand(string[] args)
+        {
+            if (args.Length < 3)
+            {
+                return "mv: missing file operand";
+            }
+
+            string source = args[1];
+            string dest = args[2];
+
+            if (!fileSystem.FileExists(source))
+            {
+                return $"mv: cannot stat '{source}': No such file or directory";
+            }
+
+            if (fileSystem.MoveFile(source, dest))
+            {
+                return "";
+            }
+            else
+            {
+                return $"mv: cannot move '{source}' to '{dest}': Operation failed";
+            }
+        }
+
+        // Handle cat command
+        public string HandleCatCommand(string[] args)
+        {
+            if (args.Length < 2)
+            {
+                return "cat: missing file operand";
+            }
+
+            var results = new List<string>();
+
+            for (int i = 1; i < args.Length; i++)
+            {
+                string content = fileSystem.ReadFile(args[i]);
+                if (content == null)
+                {
+                    results.Add($"cat: {args[i]}: No such file or directory");
+                }
+                else
+                {
+                    results.Add(content);
+                }
+            }
+
+            return string.Join("\n", results);
+        }
+
+        // Handle find command
+        public string HandleFindCommand(string[] args)
+        {
+            string searchPath = "/";
+            string pattern = "*";
+
+            if (args.Length > 1)
+            {
+                searchPath = args[1];
+            }
+            if (args.Length > 2 && args[args.Length - 1] != "-name")
+            {
+                pattern = args[args.Length - 1];
+            }
+
+            var results = fileSystem.FindFiles(pattern, searchPath);
+            return string.Join("\n", results);
+        }
+
+        // Handle touch command
+        public string HandleTouchCommand(string[] args)
+        {
+            if (args.Length < 2)
+            {
+                return "touch: missing file operand";
+            }
+
+            var errors = new List<string>();
+
+            for (int i = 1; i < args.Length; i++)
+            {
+                if (!fileSystem.CreateFile(args[i], ""))
+                {
+                    errors.Add($"touch: cannot touch '{args[i]}': Operation failed");
+                }
+            }
+
+            return errors.Count > 0 ? string.Join("\n", errors) : "";
+        }
+
+        // Handle mount command with enhanced functionality
+        public string HandleMountCommand(string[] args)
+        {
+            if (args.Length < 3)
+            {
+                return "mount: missing arguments\nUsage: mount <device> <mountpoint>";
+            }
+
+            string device = args[1];
+            string mountpoint = args[2];
+
+            // Check if device exists (USB drive)
+            if (chassis != null && chassis.DirectoryExsists(device))
+            {
+                if (mountpoint == "/mnt" && chassis.UsbCorrect())
+                {
+                    // Create the mount point in our virtual filesystem
+                    if (!fileSystem.DirectoryExists("/mnt"))
+                    {
+                        fileSystem.CreateDirectory("/mnt");
+                    }
+
+                    // Create a symbolic reference to the USB files
+                    if (chassis.InsertedUsbPort != null)
+                    {
+                        var usbFiles = chassis.InsertedUsbPort.Dir.Files;
+                        foreach (var file in usbFiles)
+                        {
+                            fileSystem.CreateFile($"/mnt/{file}", $"[USB FILE: {file}]");
+                        }
+                    }
+
+                    commandProcessor.Mounted = true;
+                    return "";
+                }
+            }
+
+            return $"mount: {device}: No such device or operation not permitted";
+        }
+
+        // Handle umount command
+        public string HandleUmountCommand(string[] args)
+        {
+            if (args.Length < 2)
+            {
+                return "umount: missing arguments";
+            }
+
+            string mountpoint = args[1];
+
+            if (mountpoint == "/mnt" && commandProcessor.Mounted)
+            {
+                // Clear mounted files from virtual filesystem
+                var mntNode = fileSystem.GetNode("/mnt");
+                if (mntNode != null && mntNode.IsDirectory)
+                {
+                    var children = mntNode.GetChildren().ToList();
+                    foreach (var child in children)
+                    {
+                        if (!child.IsDirectory)
+                        {
+                            fileSystem.DeleteFile($"/mnt/{child.Name}");
+                        }
+                    }
+                }
+
+                commandProcessor.Mounted = false;
+                return "";
+            }
+
+            return $"umount: {mountpoint}: not mounted";
+        }
+
+        // Handle copying from mounted USB to local filesystem
+        private string HandleMountCopy(string source, string dest)
+        {
+            if (!commandProcessor.Mounted || chassis.InsertedUsbPort == null)
+            {
+                return "cp: source not mounted";
+            }
+
+            // Extract filename from source path
+            string fileName = source.Substring(source.LastIndexOf('/') + 1);
+            
+            // Check if file exists on USB
+            if (!chassis.InsertedUsbPort.Dir.FileExsists(fileName))
+            {
+                return $"cp: cannot stat '{source}': No such file or directory";
+            }
+
+            // Copy to destination in virtual filesystem
+            string destPath = dest == "." ? fileSystem.GetCurrentDirectory() + "/" + fileName : dest;
+            
+            // Create the file with simulated content
+            fileSystem.CreateFile(destPath, $"[COPIED FROM USB: {fileName}]");
+
+            // Also copy to the chassis system if needed
+            if (chassis != null)
+            {
+                chassis.CopyFilesToArray(new string[] { fileName });
+            }
+
+            return "";
+        }
+
+        // Add special files to virtual filesystem based on system state
+        public void UpdateSystemFiles()
+        {
+            if (chassis == null) return;
+
+            // Update hostname
+            fileSystem.CreateFile("/etc/hostname", $"{chassis.GetComputerName()}-{chassis.selectedController}");
+            
+            // Update timezone from chassis
+            string timeZone = chassis.selectedController == "CT0" ? 
+                chassis.flashArrays[0].TimeZone : chassis.flashArrays[1].TimeZone;
+            fileSystem.CreateFile("/etc/timezone", timeZone);
+
+            // Update version info
+            fileSystem.CreateFile("/etc/purity-version", chassis.GetCurrentPurityVersion());
+        }
+    }
+}

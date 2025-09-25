@@ -37,7 +37,7 @@ public class VirtualDirectory
             s =  "    "+ _Files[0];
             for(int i = 1; i < _Files.Count; i++)
             {
-                s += "    "+ _Files[1];
+                s += "    "+ _Files[i]; // Fixed bug: was _Files[1], should be _Files[i]
             }
         }
 
