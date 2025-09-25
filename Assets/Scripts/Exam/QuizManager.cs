@@ -49,7 +49,7 @@ namespace WDS.Exams
 
         private int current = 0;
         //private Toggle[] currentToggles = new Toggle[3];
-        private List<QuestionCompleteData> questions = new List<QuestionCompleteData>();
+        private List<QuestionData> questions = new List<QuestionData>();
         private int currentTime;
         private bool reviewed;
 
@@ -130,8 +130,9 @@ namespace WDS.Exams
                 Destroy(answerParent.GetChild(i).gameObject);
 
             QuestionData q = bank.QuestionTable[Random.Range(0, bank.QuestionTable.Count)];
-            questions.Add(new QuestionCompleteData{
-                question = q.question, correct = q.correct, answer = "",
+            questions.Add(new QuestionData 
+            {
+                question = q.question, correct = q.correct, answer = "", options = q.options,
             });
 
             questionText.text = q.question;
@@ -160,8 +161,8 @@ namespace WDS.Exams
             reviewAnimator.SetBool("Open", true);
             reviewed = true;
 
-            int correct = CorrectQuestions();
-            scoreText.text = $"You scored {correct} out of {questionsPerTest} ({correct/(float)questionsPerTest * 100f}%)!"; //as a percentage!
+            int numCorrect = CorrectQuestions();
+            scoreText.text = $"You scored {numCorrect} out of {questionsPerTest} ({numCorrect/(float)questionsPerTest * 100f}%)!"; //as a percentage!
 
             //show questions, answers and correct answers:
             for(int i = 0; i < questions.Count; i++)
@@ -170,8 +171,19 @@ namespace WDS.Exams
                 g.transform.GetChild(0).GetComponent<Text>().text = questions[i].question;
                 g.transform.GetChild(1).GetComponent<Text>().text = (i+1)+". ";
                 Text t = g.transform.GetChild(2).GetComponent<Text>();
-                t.text = "Your Answer: "+questions[i].answer + " | Correct Answer: " + questions[i].correct;
-                t.color = (questions[i].answer == questions[i].correct) ? correctColor : wrongColor;
+
+                //if answer is correct do not show the real answer, just show it in answer text.
+                if(questions[i].correct != questions[i].answer) {
+                    t.text = "Your Answer: " + questions[i].answer;
+                    t.color = wrongColor;
+                    g.transform.GetChild(3).GetComponent<Text>().text = "Correct Answer: " + questions[i].correct + $"\n<i>{questions[i].options[questions[i].correct]}</i>";
+                }
+                else
+                {
+                    t.text = "Your Answer: " + questions[i].answer + $"\n<i>{questions[i].options[questions[i].correct]}</i>";
+                    t.color = correctColor;
+                    g.transform.GetChild(3).gameObject.SetActive(false); //just disable the correct text.
+                }
             }
             
             int timeLeft = GetTime() - currentTime;
