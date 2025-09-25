@@ -552,6 +552,16 @@ public static class OS
                 case "touch":
                     result = fileSystemHandler.HandleTouchCommand(splits);
                     break;
+                // Add system information commands
+                case "df":
+                case "lsblk":
+                case "ifconfig":
+                case "lspci":
+                case "free":
+                case "iostat":
+                    result = fileSystemHandler.HandleSystemCommand(splits);
+                    if (result == null) handled = false;
+                    break;
                 default:
                     handled = false;
                     break;

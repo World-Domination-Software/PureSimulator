@@ -71,6 +71,7 @@ namespace CrimsofallTechnologies.ServerSimulator
         public VirtualFileSystem()
         {
             InitializeFileSystem();
+            VirtualFileSystemPopulator.PopulateWithSampleFiles(this);
         }
 
         private void InitializeFileSystem()

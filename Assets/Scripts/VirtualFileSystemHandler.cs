@@ -10,12 +10,17 @@ namespace CrimsofallTechnologies.ServerSimulator
         private VirtualFileSystem fileSystem;
         private CommandProcessor commandProcessor;
         private Chassis chassis;
+        private VirtualHardwareManager hardwareManager;
 
         public void Initialize(CommandProcessor processor, Chassis chassisRef)
         {
             commandProcessor = processor;
             chassis = chassisRef;
             fileSystem = new VirtualFileSystem();
+            
+            // Initialize virtual hardware
+            hardwareManager = gameObject.AddComponent<VirtualHardwareManager>();
+            hardwareManager.Initialize(this);
             
             // Set initial user and directory based on login
             UpdateUserContext();
@@ -445,6 +450,85 @@ namespace CrimsofallTechnologies.ServerSimulator
 
             // Update version info
             fileSystem.CreateFile("/etc/purity-version", chassis.GetCurrentPurityVersion());
+        }
+
+        // Handle additional system commands
+        public string HandleSystemCommand(string[] args)
+        {
+            if (hardwareManager == null) return "Hardware manager not initialized";
+
+            switch (args[0])
+            {
+                case "df":
+                    return HandleDfCommand(args);
+                case "lsblk":
+                    return HandleLsblkCommand(args);
+                case "ifconfig":
+                    return HandleIfconfigCommand(args);
+                case "lspci":
+                    return HandleLspciCommand(args);
+                case "free":
+                    return HandleFreeCommand(args);
+                case "iostat":
+                    return HandleIostatCommand(args);
+                default:
+                    return null; // Command not handled
+            }
+        }
+
+        private string HandleDfCommand(string[] args)
+        {
+            return hardwareManager.GetDriveStatus();
+        }
+
+        private string HandleLsblkCommand(string[] args)
+        {
+            var drives = hardwareManager.GetAllDrives();
+            var lines = new List<string>
+            {
+                "NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT"
+            };
+
+            foreach (var drive in drives)
+            {
+                string devicePath = drive.DevicePath;
+                string[] pathParts = devicePath.Split('/');
+                string name = pathParts[pathParts.Length - 1];
+                string mountPoint = drive.IsMounted ? drive.MountPoint : "";
+                lines.Add($"{name,-6} 8:1    0  {drive.GetFormattedSize(),-6} 0 disk {mountPoint}");
+            }
+
+            return string.Join("\n", lines);
+        }
+
+        private string HandleIfconfigCommand(string[] args)
+        {
+            return hardwareManager.GetNetworkStatus();
+        }
+
+        private string HandleLspciCommand(string[] args)
+        {
+            return hardwareManager.GetPCIeStatus();
+        }
+
+        private string HandleFreeCommand(string[] args)
+        {
+            return @"              total        used        free      shared  buff/cache   available
+Mem:       65871872     8388608    32935936     1048576    24547328    58234560
+Swap:       8388608           0     8388608";
+        }
+
+        private string HandleIostatCommand(string[] args)
+        {
+            return @"Linux 5.15.123+ (purearray-ct0)     " + DateTime.Now.ToString("MM/dd/yyyy") + @"     _x86_64_    (8 CPU)
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+           2.15    0.00    1.23    0.84    0.00   95.78
+
+Device:            tps    kB_read/s    kB_wrtn/s    kB_read    kB_wrtn
+sda              15.23       123.45       234.56     123456     234567
+nvme0n1          89.12       456.78       567.89     456789     567890
+nvme1n1          87.34       445.67       556.78     445678     556789";
         }
     }
 }
