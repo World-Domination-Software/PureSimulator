@@ -1,0 +1,481 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.07.07 09:57:26 =~=~=~=~=~=~=~=~=~=~=~=
+
+psusanc7001-ct0 login: pureeng
+1) Authenticate via CloudAssist
+2) Authenticate via command line
+3) Restore challenge
+Type the number corresponding to the authentication method you want to use.
+
+Selection: 1
+
+An email for identity verification will be sent once email is entered.
+Please follow the authentication instructions provided there and return to this screen when finished or if email has not been received.
+
+
+Enter an email address: fharris@purestorage.com
+Successfully authenticated
+
+Mon Jul 07 09:58:19 2025
+Welcome pureeng. This is Purity Version 6.8.5 on FlashArray psusanc7001
+http://www.purestorage.com/
+pureeng@psusanc7001-ct0:~$ puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    healthy  48.20T    -
+CH0.BAY1   SSD    healthy  48.20T    -
+CH0.BAY2   SSD    healthy  48.20T    -
+CH0.BAY3   SSD    healthy  48.20T    -
+CH0.BAY4   SSD    healthy  48.20T    -
+CH0.BAY5   SSD    healthy  48.20T    -
+CH0.BAY6   SSD    healthy  48.20T    -
+CH0.BAY7   SSD    healthy  48.20T    -
+CH0.BAY8   SSD    healthy  48.20T    -
+CH0.BAY9   SSD    healthy  48.20T    -
+CH0.BAY10  SSD    healthy  48.20T    -
+CH0.BAY11  SSD    healthy  48.20T    -
+CH0.BAY12  SSD    healthy  48.20T    -
+CH0.BAY13  SSD    healthy  48.20T    -
+CH0.BAY14  -      unused   0.00      -
+CH0.BAY15  -      unused   0.00      -
+CH0.BAY16  -      unused   0.00      -
+CH0.BAY17  -      unused   0.00      -
+CH0.BAY18  -      unused   0.00      -
+CH0.BAY19  -      unused   0.00      -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  healthy  7.52G     -
+CH0.NVB3   NVRAM  healthy  7.52G     -
+pureeng@psusanc7001-ct0:~$ purearray list --controller
+Name  Type              Mode       Model     Version  Status  Current Mode Since       Internal Details
+CT0   array_controller  primary    FA-C70R4  6.8.5    ready   2025-05-04 01:31:48 EDT  
+CT1   array_controller  secondary  FA-C70R4  6.8.5    ready   2025-05-04 01:45:20 EDT  
+pureeng@psusanc7001-ct0:~$ purehw list --all
+Name       Status         Identify  Slot  Index  Model             Part Number  Serial          Speed       Temperature  Voltage  Type                         Handle                                  Parent
+CH0        ok             off       -     0      M_SERIES          84-0004-06   PCHFJ23350010   -           -            -        chassis                      M_SERIES_PCHFJ23350010                  hwroot
+CH0.BAY0   ok             off       -     0      -                 83-0444-02   PFMUH23371220   -           -            -        drive_bay                    M_SERIES_PCHFJ23350010_ch_fm_bay0       M_SERIES_PCHFJ23350010
+CH0.BAY1   ok             off       -     1      -                 83-0444-02   PFMUH233712DC   -           -            -        drive_bay                    M_SERIES_PCHFJ23350010_ch_fm_bay1       M_SERIES_PCHFJ23350010
+CH0.BAY2   ok             off       -     2      -                 83-0444-02   PFMUH233712A9   -           -            -        drive_bay                    M_SERIES_PCHFJ23350010_ch_fm_bay2       M_SERIES_PCHFJ23350010
+CH0.BAY3   ok             off       -     3      -                 83-0444-02   PFMUH23371295   -           -            -        drive_bay                    M_SERIES_PCHFJ23350010_ch_fm_bay3       M_SERIES_PCHFJ23350010
+CH0.BAY4   ok             off       -     4      -                 83-0444-02   PFMUH233712DF   -           -            -        drive_bay                    M_SERIES_PCHFJ23350010_ch_fm_bay4       M_SERIES_PCHFJ23350010
+CH0.BAY5   ok             off       -     5      -                 83-0444-02   PFMUH233716AB   -           -            -        drive_bay                    M_SERIES_PCHFJ23350010_ch_fm_bay5       M_SERIES_PCHFJ23350010
+CH0.BAY6   ok             off       -     6      -                 83-0444-02   PFMUH233717ED   -           -            -        drive_bay                    M_SERIES_PCHFJ23350010_ch_fm_bay6       M_SERIES_PCHFJ23350010
+CH0.BAY7   ok             off       -     7      -                 83-0444-02   PFMUH233713B4   -           -            -        drive_bay                    M_SERIES_PCHFJ23350010_ch_fm_bay7       M_SERIES_PCHFJ23350010
+CH0.BAY8   ok             off       -     8      -                 83-0444-02   PFMUH233717E6   -           -            -        drive_bay                    M_SERIES_PCHFJ23350010_ch_fm_bay8       M_SERIES_PCHFJ23350010
+CH0.BAY9   ok             off       -     9      -                 83-0444-02   PFMUH233711FD   -           -            -        drive_bay                    M_SERIES_PCHFJ23350010_ch_fm_bay9       M_SERIES_PCHFJ23350010
+CH0.BAY10  ok             off       -     10     -                 83-0444-02   PFMUH2337128B   -           -            -        drive_bay                    M_SERIES_PCHFJ23350010_ch_fm_bay10      M_SERIES_PCHFJ23350010
+CH0.BAY11  ok             off       -     11     -                 83-0444-02   PFMUH2337120D   -           -            -        drive_bay                    M_SERIES_PCHFJ23350010_ch_fm_bay11      M_SERIES_PCHFJ23350010
+CH0.BAY12  ok             off       -     12     -                 83-0444-02   PFMUH23371202   -           -            -        drive_bay                    M_SERIES_PCHFJ23350010_ch_fm_bay12      M_SERIES_PCHFJ23350010
+CH0.BAY13  ok             off       -     13     -                 83-0444-02   PFMUH233711E9   -           -            -        drive_bay                    M_SERIES_PCHFJ23350010_ch_fm_bay13      M_SERIES_PCHFJ23350010
+CH0.BAY14  not_installed  off       -     14     -                 -            -               -           -            -        drive_bay                    M_SERIES_PCHFJ23350010_ch_fm_bay14      M_SERIES_PCHFJ23350010
+CH0.BAY15  not_installed  off       -     15     -                 -            -               -           -            -        drive_bay                    M_SERIES_PCHFJ23350010_ch_fm_bay15      M_SERIES_PCHFJ23350010
+CH0.BAY16  not_installed  off       -     16     -                 -            -               -           -            -        drive_bay                    M_SERIES_PCHFJ23350010_ch_fm_bay16      M_SERIES_PCHFJ23350010
+CH0.BAY17  not_installed  off       -     17     -                 -            -               -           -            -        drive_bay                    M_SERIES_PCHFJ23350010_ch_fm_bay17      M_SERIES_PCHFJ23350010
+CH0.BAY18  not_installed  off       -     18     -                 -            -               -           -            -        drive_bay                    M_SERIES_PCHFJ23350010_ch_fm_bay18      M_SERIES_PCHFJ23350010
+CH0.BAY19  not_installed  off       -     19     -                 -            -               -           -            -        drive_bay                    M_SERIES_PCHFJ23350010_ch_fm_bay19      M_SERIES_PCHFJ23350010
+CH0.NVB0   ok             off       -     0      -                 -            -               -           -            -        nvram_bay                    M_SERIES_PCHFJ23350010_nvme_nvram_bay0  M_SERIES_PCHFJ23350010
+CH0.NVB1   ok             off       -     1      -                 -            -               -           -            -        nvram_bay                    M_SERIES_PCHFJ23350010_nvme_nvram_bay1  M_SERIES_PCHFJ23350010
+CH0.NVB2   ok             off       -     2      -                 -            -               -           -            -        nvram_bay                    M_SERIES_PCHFJ23350010_nvme_nvram_bay2  M_SERIES_PCHFJ23350010
+CH0.NVB3   ok             off       -     3      -                 -            -               -           -            -        nvram_bay                    M_SERIES_PCHFJ23350010_nvme_nvram_bay3  M_SERIES_PCHFJ23350010
+CH0.PWR0   ok             -         -     0      CSU1800AP-3-400   -            R6694W00XHAHZ   -           -            205 V    power_supply                 M_SERIES_PCHFJ23350010_psu0             M_SERIES_PCHFJ23350010
+CH0.PWR1   ok             -         -     1      CSU1800AP-3-400   -            R6694W00QSAHZ   -           -            201 V    power_supply                 M_SERIES_PCHFJ23350010_psu1             M_SERIES_PCHFJ23350010
+CH0.TMP0   ok             -         -     0      -                 -            -               -           20 C         -        temp_sensor                  M_SERIES_PCHFJ23350010_inlet_temp0      M_SERIES_PCHFJ23350010
+CT0        ok             off       -     0      FA-C70R4          83-0475-00   PCTFJ2340000B   -           -            -        controller                   COBALTA_PCTFJ2340000B                   M_SERIES_PCHFJ23350010
+CT0.DCA4   ok             -         4     4      -                 -            -               -           -            -        direct_compress_accelerator  COBALTA_PCTFJ2340000B_0000:ab:00.0      COBALTA_PCTFJ2340000B
+CT0.ETH0   ok             -         -     0      -                 -            -               0.00 b/s    -            -        eth_port                     COBALTA_PCTFJ2340000B_0000:2a:00.0_p0   COBALTA_PCTFJ2340000B
+CT0.ETH1   ok             -         -     1      -                 -            -               0.00 b/s    -            -        eth_port                     COBALTA_PCTFJ2340000B_0000:2a:00.1_p1   COBALTA_PCTFJ2340000B
+CT0.ETH2   ok             -         -     2      -                 -            -               10.00 Gb/s  -            -        eth_port                     COBALTA_PCTFJ2340000B_0000:ac:00.0_p2   COBALTA_PCTFJ2340000B
+CT0.ETH3   ok             -         -     3      -                 -            -               10.00 Gb/s  -            -        eth_port                     COBALTA_PCTFJ2340000B_0000:ac:00.1_p3   COBALTA_PCTFJ2340000B
+CT0.ETH4   ok             -         -     4      -                 -            -               1.00 Gb/s   -            -        eth_port                     COBALTA_PCTFJ2340000B_0000:03:00.0_p4   COBALTA_PCTFJ2340000B
+CT0.ETH5   ok             -         0     5      -                 -            -               0.00 b/s    -            -        eth_port                     COBALTA_PCTFJ2340000B_0000:17:00.1_p5   COBALTA_PCTFJ2340000B
+CT0.ETH7   ok             -         0     7      -                 -            -               0.00 b/s    -            -        eth_port                     COBALTA_PCTFJ2340000B_0000:17:00.0_p7   COBALTA_PCTFJ2340000B
+CT0.ETH10  ok             -         1     10     -                 -            -               10.00 Gb/s  -            -        eth_port                     COBALTA_PCTFJ2340000B_0000:3d:00.1_p10  COBALTA_PCTFJ2340000B
+CT0.ETH11  ok             -         1     11     -                 -            -               10.00 Gb/s  -            -        eth_port                     COBALTA_PCTFJ2340000B_0000:3d:00.0_p11  COBALTA_PCTFJ2340000B
+CT0.ETH18  ok             -         3     18     -                 -            -               10.00 Gb/s  -            -        eth_port                     COBALTA_PCTFJ2340000B_0000:bd:00.1_p18  COBALTA_PCTFJ2340000B
+CT0.ETH19  ok             -         3     19     -                 -            -               10.00 Gb/s  -            -        eth_port                     COBALTA_PCTFJ2340000B_0000:bd:00.0_p19  COBALTA_PCTFJ2340000B
+CT0.FAN0   ok             -         -     0      -                 -            -               -           -            -        cooling                      COBALTA_PCTFJ2340000B_sens96            COBALTA_PCTFJ2340000B
+CT0.FAN1   ok             -         -     1      -                 -            -               -           -            -        cooling                      COBALTA_PCTFJ2340000B_sens98            COBALTA_PCTFJ2340000B
+CT0.FAN2   ok             -         -     2      -                 -            -               -           -            -        cooling                      COBALTA_PCTFJ2340000B_sens100           COBALTA_PCTFJ2340000B
+CT0.FAN3   ok             -         -     3      -                 -            -               -           -            -        cooling                      COBALTA_PCTFJ2340000B_sens102           COBALTA_PCTFJ2340000B
+CT0.FAN4   ok             -         -     4      -                 -            -               -           -            -        cooling                      COBALTA_PCTFJ2340000B_sens104           COBALTA_PCTFJ2340000B
+CT0.FAN5   ok             -         -     5      -                 -            -               -           -            -        cooling                      COBALTA_PCTFJ2340000B_sens106           COBALTA_PCTFJ2340000B
+CT0.TMP0   ok             -         -     0      -                 -            -               -           36 C         -        temp_sensor                  COBALTA_PCTFJ2340000B_sens60            COBALTA_PCTFJ2340000B
+CT0.TMP1   ok             -         -     1      -                 -            -               -           39 C         -        temp_sensor                  COBALTA_PCTFJ2340000B_sens61            COBALTA_PCTFJ2340000B
+CT0.TMP2   ok             -         -     2      -                 -            -               -           61 C         -        temp_sensor                  COBALTA_PCTFJ2340000B_sens64            COBALTA_PCTFJ2340000B
+CT0.TMP3   ok             -         -     3      -                 -            -               -           58 C         -        temp_sensor                  COBALTA_PCTFJ2340000B_sens65            COBALTA_PCTFJ2340000B
+CT0.TMP4   ok             -         -     4      -                 -            -               -           45 C         -        temp_sensor                  COBALTA_PCTFJ2340000B_sens72            COBALTA_PCTFJ2340000B
+CT0.TMP5   ok             -         -     5      -                 -            -               -           47 C         -        temp_sensor                  COBALTA_PCTFJ2340000B_sens73            COBALTA_PCTFJ2340000B
+CT0.TMP6   ok             -         -     6      -                 -            -               -           27 C         -        temp_sensor                  COBALTA_PCTFJ2340000B_sens74            COBALTA_PCTFJ2340000B
+CT0.TMP7   ok             -         -     7      -                 -            -               -           28 C         -        temp_sensor                  COBALTA_PCTFJ2340000B_sens75            COBALTA_PCTFJ2340000B
+CT0.TMP8   ok             -         -     8      -                 -            -               -           52 C         -        temp_sensor                  COBALTA_PCTFJ2340000B_sens76            COBALTA_PCTFJ2340000B
+CT0.TMP9   ok             -         -     9      -                 -            -               -           38 C         -        temp_sensor                  COBALTA_PCTFJ2340000B_sens77            COBALTA_PCTFJ2340000B
+CT0.TMP10  ok             -         -     10     -                 -            -               -           37 C         -        temp_sensor                  COBALTA_PCTFJ2340000B_sens78            COBALTA_PCTFJ2340000B
+CT0.TMP11  ok             -         -     11     -                 -            -               -           37 C         -        temp_sensor                  COBALTA_PCTFJ2340000B_sens79            COBALTA_PCTFJ2340000B
+CT0.TMP12  ok             -         -     12     -                 -            -               -           35 C         -        temp_sensor                  COBALTA_PCTFJ2340000B_sens80            COBALTA_PCTFJ2340000B
+CT0.TMP13  ok             -         -     13     -                 -            -               -           39 C         -        temp_sensor                  COBALTA_PCTFJ2340000B_sens81            COBALTA_PCTFJ2340000B
+CT0.TMP14  ok             -         -     14     -                 -            -               -           38 C         -        temp_sensor                  COBALTA_PCTFJ2340000B_sens82            COBALTA_PCTFJ2340000B
+CT0.TMP15  ok             -         -     15     -                 -            -               -           37 C         -        temp_sensor                  COBALTA_PCTFJ2340000B_sens83            COBALTA_PCTFJ2340000B
+CT0.TMP16  ok             -         -     16     -                 -            -               -           36 C         -        temp_sensor                  COBALTA_PCTFJ2340000B_sens84            COBALTA_PCTFJ2340000B
+CT0.TMP17  ok             -         -     17     -                 -            -               -           36 C         -        temp_sensor                  COBALTA_PCTFJ2340000B_sens85            COBALTA_PCTFJ2340000B
+CT0.TMP18  ok             -         -     18     -                 -            -               -           35 C         -        temp_sensor                  COBALTA_PCTFJ2340000B_sens86            COBALTA_PCTFJ2340000B
+CT0.TMP19  ok             -         -     19     -                 -            -               -           35 C         -        temp_sensor                  COBALTA_PCTFJ2340000B_sens87            COBALTA_PCTFJ2340000B
+CT0.TMP20  ok             -         -     20     -                 -            -               -           35 C         -        temp_sensor                  COBALTA_PCTFJ2340000B_sens88            COBALTA_PCTFJ2340000B
+CT0.TMP21  ok             -         -     21     -                 -            -               -           39 C         -        temp_sensor                  COBALTA_PCTFJ2340000B_sens89            COBALTA_PCTFJ2340000B
+CT0.TMP22  ok             -         -     22     -                 -            -               -           38 C         -        temp_sensor                  COBALTA_PCTFJ2340000B_sens90            COBALTA_PCTFJ2340000B
+CT0.TMP23  ok             -         -     23     -                 -            -               -           38 C         -        temp_sensor                  COBALTA_PCTFJ2340000B_sens91            COBALTA_PCTFJ2340000B
+CT0.TMP24  ok             -         -     24     -                 -            -               -           37 C         -        temp_sensor                  COBALTA_PCTFJ2340000B_sens92            COBALTA_PCTFJ2340000B
+CT1        ok             off       -     1      FA-C70R4          83-0475-00   PCTFJ23400051   -           -            -        controller                   COBALTA_PCTFJ23400051                   M_SERIES_PCHFJ23350010
+CT1.DCA4   ok             -         4     4      -                 -            -               -           -            -        direct_compress_accelerator  COBALTA_PCTFJ23400051_0000:ab:00.0      COBALTA_PCTFJ23400051
+CT1.ETH0   ok             -         -     0      -                 -            -               0.00 b/s    -            -        eth_port                     COBALTA_PCTFJ23400051_0000:2a:00.0_p0   COBALTA_PCTFJ23400051
+CT1.ETH1   ok             -         -     1      -                 -            -               0.00 b/s    -            -        eth_port                     COBALTA_PCTFJ23400051_0000:2a:00.1_p1   COBALTA_PCTFJ23400051
+CT1.ETH2   ok             -         -     2      -                 -            -               10.00 Gb/s  -            -        eth_port                     COBALTA_PCTFJ23400051_0000:ac:00.0_p2   COBALTA_PCTFJ23400051
+CT1.ETH3   ok             -         -     3      -                 -            -               10.00 Gb/s  -            -        eth_port                     COBALTA_PCTFJ23400051_0000:ac:00.1_p3   COBALTA_PCTFJ23400051
+CT1.ETH4   ok             -         -     4      -                 -            -               1.00 Gb/s   -            -        eth_port                     COBALTA_PCTFJ23400051_0000:03:00.0_p4   COBALTA_PCTFJ23400051
+CT1.ETH5   ok             -         0     5      -                 -            -               0.00 b/s    -            -        eth_port                     COBALTA_PCTFJ23400051_0000:17:00.1_p5   COBALTA_PCTFJ23400051
+CT1.ETH7   ok             -         0     7      -                 -            -               0.00 b/s    -            -        eth_port                     COBALTA_PCTFJ23400051_0000:17:00.0_p7   COBALTA_PCTFJ23400051
+CT1.ETH10  ok             -         1     10     -                 -            -               10.00 Gb/s  -            -        eth_port                     COBALTA_PCTFJ23400051_0000:3d:00.1_p10  COBALTA_PCTFJ23400051
+CT1.ETH11  ok             -         1     11     -                 -            -               10.00 Gb/s  -            -        eth_port                     COBALTA_PCTFJ23400051_0000:3d:00.0_p11  COBALTA_PCTFJ23400051
+CT1.ETH18  ok             -         3     18     -                 -            -               10.00 Gb/s  -            -        eth_port                     COBALTA_PCTFJ23400051_0000:bd:00.1_p18  COBALTA_PCTFJ23400051
+CT1.ETH19  ok             -         3     19     -                 -            -               10.00 Gb/s  -            -        eth_port                     COBALTA_PCTFJ23400051_0000:bd:00.0_p19  COBALTA_PCTFJ23400051
+CT1.FAN0   ok             -         -     0      -                 -            -               -           -            -        cooling                      COBALTA_PCTFJ23400051_sens96            COBALTA_PCTFJ23400051
+CT1.FAN1   ok             -         -     1      -                 -            -               -           -            -        cooling                      COBALTA_PCTFJ23400051_sens98            COBALTA_PCTFJ23400051
+CT1.FAN2   ok             -         -     2      -                 -            -               -           -            -        cooling                      COBALTA_PCTFJ23400051_sens100           COBALTA_PCTFJ23400051
+CT1.FAN3   ok             -         -     3      -                 -            -               -           -            -        cooling                      COBALTA_PCTFJ23400051_sens102           COBALTA_PCTFJ23400051
+CT1.FAN4   ok             -         -     4      -                 -            -               -           -            -        cooling                      COBALTA_PCTFJ23400051_sens104           COBALTA_PCTFJ23400051
+CT1.FAN5   ok             -         -     5      -                 -            -               -           -            -        cooling                      COBALTA_PCTFJ23400051_sens106           COBALTA_PCTFJ23400051
+CT1.TMP0   ok             -         -     0      -                 -            -               -           36 C         -        temp_sensor                  COBALTA_PCTFJ23400051_sens60            COBALTA_PCTFJ23400051
+CT1.TMP1   ok             -         -     1      -                 -            -               -           43 C         -        temp_sensor                  COBALTA_PCTFJ23400051_sens61            COBALTA_PCTFJ23400051
+CT1.TMP2   ok             -         -     2      -                 -            -               -           58 C         -        temp_sensor                  COBALTA_PCTFJ23400051_sens64            COBALTA_PCTFJ23400051
+CT1.TMP3   ok             -         -     3      -                 -            -               -           55 C         -        temp_sensor                  COBALTA_PCTFJ23400051_sens65            COBALTA_PCTFJ23400051
+CT1.TMP4   ok             -         -     4      -                 -            -               -           48 C         -        temp_sensor                  COBALTA_PCTFJ23400051_sens72            COBALTA_PCTFJ23400051
+CT1.TMP5   ok             -         -     5      -                 -            -               -           48 C         -        temp_sensor                  COBALTA_PCTFJ23400051_sens73            COBALTA_PCTFJ23400051
+CT1.TMP6   ok             -         -     6      -                 -            -               -           28 C         -        temp_sensor                  COBALTA_PCTFJ23400051_sens74            COBALTA_PCTFJ23400051
+CT1.TMP7   ok             -         -     7      -                 -            -               -           30 C         -        temp_sensor                  COBALTA_PCTFJ23400051_sens75            COBALTA_PCTFJ23400051
+CT1.TMP8   ok             -         -     8      -                 -            -               -           53 C         -        temp_sensor                  COBALTA_PCTFJ23400051_sens76            COBALTA_PCTFJ23400051
+CT1.TMP9   ok             -         -     9      -                 -            -               -           37 C         -        temp_sensor                  COBALTA_PCTFJ23400051_sens77            COBALTA_PCTFJ23400051
+CT1.TMP10  ok             -         -     10     -                 -            -               -           36 C         -        temp_sensor                  COBALTA_PCTFJ23400051_sens78            COBALTA_PCTFJ23400051
+CT1.TMP11  ok             -         -     11     -                 -            -               -           35 C         -        temp_sensor                  COBALTA_PCTFJ23400051_sens79            COBALTA_PCTFJ23400051
+CT1.TMP12  ok             -         -     12     -                 -            -               -           33 C         -        temp_sensor                  COBALTA_PCTFJ23400051_sens80            COBALTA_PCTFJ23400051
+CT1.TMP13  ok             -         -     13     -                 -            -               -           39 C         -        temp_sensor                  COBALTA_PCTFJ23400051_sens81            COBALTA_PCTFJ23400051
+CT1.TMP14  ok             -         -     14     -                 -            -               -           37 C         -        temp_sensor                  COBALTA_PCTFJ23400051_sens82            COBALTA_PCTFJ23400051
+CT1.TMP15  ok             -         -     15     -                 -            -               -           36 C         -        temp_sensor                  COBALTA_PCTFJ23400051_sens83            COBALTA_PCTFJ23400051
+CT1.TMP16  ok             -         -     16     -                 -            -               -           35 C         -        temp_sensor                  COBALTA_PCTFJ23400051_sens84            COBALTA_PCTFJ23400051
+CT1.TMP17  ok             -         -     17     -                 -            -               -           37 C         -        temp_sensor                  COBALTA_PCTFJ23400051_sens85            COBALTA_PCTFJ23400051
+CT1.TMP18  ok             -         -     18     -                 -            -               -           36 C         -        temp_sensor                  COBALTA_PCTFJ23400051_sens86            COBALTA_PCTFJ23400051
+CT1.TMP19  ok             -         -     19     -                 -            -               -           35 C         -        temp_sensor                  COBALTA_PCTFJ23400051_sens87            COBALTA_PCTFJ23400051
+CT1.TMP20  ok             -         -     20     -                 -            -               -           35 C         -        temp_sensor                  COBALTA_PCTFJ23400051_sens88            COBALTA_PCTFJ23400051
+CT1.TMP21  ok             -         -     21     -                 -            -               -           39 C         -        temp_sensor                  COBALTA_PCTFJ23400051_sens89            COBALTA_PCTFJ23400051
+CT1.TMP22  ok             -         -     22     -                 -            -               -           38 C         -        temp_sensor                  COBALTA_PCTFJ23400051_sens90            COBALTA_PCTFJ23400051
+CT1.TMP23  ok             -         -     23     -                 -            -               -           38 C         -        temp_sensor                  COBALTA_PCTFJ23400051_sens91            COBALTA_PCTFJ23400051
+CT1.TMP24  ok             -         -     24     -                 -            -               -           37 C         -        temp_sensor                  COBALTA_PCTFJ23400051_sens92            COBALTA_PCTFJ23400051
+pureeng@psusanc7001-ct0:~$ purenetwork eth list
+Name            Enabled  Type       Subnet           Address        Mask           Gateway      MTU   MAC                Speed        Services     Subinterfaces
+ct0.eth0        False    physical   -                -              -              -            1500  24:a9:37:5e:7b:e7  100.00 Gb/s  -            -
+ct0.eth1        False    physical   -                -              -              -            1500  24:a9:37:5e:7b:e8  100.00 Gb/s  -            -
+ct0.eth2        True     physical   -                10.66.215.11   255.255.255.0  10.66.215.1  1500  24:a9:37:5e:7b:e9  25.00 Gb/s   replication  -
+ct0.eth3        True     physical   -                10.66.215.13   255.255.255.0  10.66.215.1  1500  24:a9:37:5e:7b:ea  25.00 Gb/s   replication  -
+ct0.eth4        True     physical   -                10.66.204.101  255.255.255.0  10.66.204.1  1500  24:a9:37:5e:7b:eb  2.00 Gb/s    management   -
+ct0.eth5        False    physical   -                -              -              -            1500  50:7c:6f:5b:22:05  10.00 Gb/s   management   -
+ct0.eth7        False    physical   -                -              -              -            1500  50:7c:6f:5b:22:04  10.00 Gb/s   -            -
+ct1.eth0        False    physical   -                -              -              -            1500  24:a9:37:5d:ea:40  100.00 Gb/s  -            -
+ct1.eth1        False    physical   -                -              -              -            1500  24:a9:37:5d:ea:41  100.00 Gb/s  -            -
+ct1.eth2        True     physical   -                10.66.215.12   255.255.255.0  10.66.215.1  1500  24:a9:37:5d:ea:42  25.00 Gb/s   replication  -
+ct1.eth3        True     physical   -                10.66.215.14   255.255.255.0  10.66.215.1  1500  24:a9:37:5d:ea:43  25.00 Gb/s   replication  -
+ct1.eth4        True     physical   -                10.66.204.102  255.255.255.0  10.66.204.1  1500  24:a9:37:5d:ea:44  2.00 Gb/s    management   -
+ct1.eth5        False    physical   -                -              -              -            1500  50:7c:6f:5a:20:bd  10.00 Gb/s   management   -
+ct1.eth7        False    physical   -                -              -              -            1500  50:7c:6f:5a:20:bc  10.00 Gb/s   -            -
+drfilevif2036p  False    vif        -                172.31.70.25   255.255.254.0  172.31.70.1  1500  fe:e3:4d:88:ac:53  50.00 Gb/s   file         lacp2.2036
+                                                                                                                                                   lacp3.2036
+drfilevif2036t  False    vif        -                172.31.70.23   255.255.254.0  172.31.70.1  1500  d2:14:dd:f9:9b:06  50.00 Gb/s   file         lacp2.2036
+                                                                                                                                                   lacp3.2036
+drfilevif2037   False    vif        -                172.31.72.23   255.255.254.0  172.31.72.1  1500  72:dd:80:ec:86:a5  50.00 Gb/s   file         lacp2.2037
+                                                                                                                                                   lacp3.2037
+filevifsu771    True     vif        -                10.66.204.103  255.255.255.0  10.66.204.1  1500  5a:2f:1a:4c:f6:8a  50.00 Gb/s   file         lacp2.771
+                                                                                                                                                   lacp3.771
+lacp2           True     lacp_bond  -                -              -              -            1500  fa:25:95:c5:4e:62  50.00 Gb/s   iscsi        ct0.eth10
+                                                                                                                                                   ct0.eth18
+lacp2.771       True     vif        sung-services-2  -              255.255.255.0  10.66.204.1  1500  fa:25:95:c5:4e:62  50.00 Gb/s   iscsi        -
+lacp2.2036      True     vif        NFSESX2036       -              255.255.254.0  172.31.70.1  1500  fa:25:95:c5:4e:62  50.00 Gb/s   iscsi        -
+lacp2.2037      True     vif        NFSESX2037       -              255.255.254.0  172.31.72.1  1500  fa:25:95:c5:4e:62  50.00 Gb/s   iscsi        -
+lacp3           True     lacp_bond  -                -              -              -            1500  2a:a3:5f:79:5e:af  50.00 Gb/s   iscsi        ct1.eth10
+                                                                                                                                                   ct1.eth18
+lacp3.771       True     vif        sung-services-2  -              255.255.255.0  10.66.204.1  1500  2a:a3:5f:79:5e:af  50.00 Gb/s   iscsi        -
+lacp3.2036      True     vif        NFSESX2036       -              255.255.254.0  172.31.70.1  1500  2a:a3:5f:79:5e:af  50.00 Gb/s   iscsi        -
+lacp3.2037      True     vif        NFSESX2037       -              255.255.254.0  172.31.72.1  1500  2a:a3:5f:79:5e:af  50.00 Gb/s   iscsi        -
+lacp4           True     lacp_bond  -                10.66.204.108  255.255.255.0  10.66.204.1  1500  7e:0b:48:7c:99:23  50.00 Gb/s   iscsi        ct0.eth11
+                                                                                                                                                   ct0.eth19
+lacp5           True     lacp_bond  -                10.66.204.109  255.255.255.0  10.66.204.1  1500  9e:67:9d:63:55:61  50.00 Gb/s   iscsi        ct1.eth11
+                                                                                                                                                   ct1.eth19
+vir4            True     vif        -                10.66.204.100  255.255.255.0  10.66.204.1  1500  da:74:6e:14:2f:02  2.00 Gb/s    management   -
+vir5            False    vif        -                -              -              -            1500  5a:9e:ba:ee:e3:6a  10.00 Gb/s   management   -
+pureeng@psusanc7001-ct0:~$ purenetwork fc list
+pureeng@psusanc7001-ct0:~$ cat /etc/timezone 
+US/Easternpureeng@psusanc7001-ct0:~$ puremessage list --open
+pureeng@psusanc7001-ct0:~$ puremessage list --open --hidden
+pureeng@psusanc7001-ct0:~$ iobalance --sampetletime 30
+sampling host I/O for 30 seconds...
+                Host  CT0 I/O Count  CT1 I/O Count  
+            phoecs01        4.00        4.00  
+            phoecs02        8.00        0.00  ! no I/O to CT1
+            thoecs01        4.00        4.00  
+            thoecs02        4.00        4.00  
+pureeng@psusanc7001-ct0:~$ fcpureportlist=`pureport list --initiator | awk '/Target/,0' | cut -d. -f1 | awk '{print $1,$5}' | grep -v '-' | grep -v "Initiator" | uniq -c; echo`; fcpureportlistcount=`echo "$fcpureportlist" | awk '{total += $ 1} END {print total}'`; echo -e "$fcpureportlist\n\n"; echo -e "\tTotal FC connections: $fcpureportlistcount\n\n";
+
+
+
+Total FC connections: 0
+
+
+pureeng@psusanc7001-ct0:~$ 
+pureeng@psusanc7001-ct0:~$ iscsipureportlist=`pureport list --initiator | grep -v FC | awk -F' CT' '{print "CT"$2,$8}' | grep -v 'CT ' | awk -F '.ETH' '{print $1, $2}' | awk '{print $1, $5, $6}' | sort | uniq -c; echo`; iscsipureportlistcount=`echo "$iscsipureportlist" | awk '{total += $1} END {print total}'`; echo -e  "$iscsipureportlist\n\n"; echo -e "\tTotal iSCSI connections: $iscsipureportlistcount\n\n";
+
+
+
+Total iSCSI connections: 0
+
+
+pureeng@psusanc7001-ct0:~$ purealert tag --timeout 240m --maintenance
+Name         Created                  Expires
+maintenance  2025-07-07 10:00:44 EDT  2025-07-07 14:00:44 EDT
+pureeng@psusanc7001-ct0:~$ sudo su
+     root@psusanc7001-ct0:/var/home/pureeng# purearray phonehome --send-today && ssh peer purearray phonehome --send-today
+Status   Action
+running  send_today
+phonehome is already running
+Status   Action
+running  send_today
+     root@psusanc7001-ct0:/var/home/pureeng# purearray purearray list --connect --path && ssh peer purearray list --connect --path
+Name           Local Port  Local Address  Remote Port  Remote Address  Status     Transport  Encryption   Encryption Mode
+phosanc7001    ct0.eth3    10.66.215.13   ct0.eth3     172.31.84.15    connected  ip         unencrypted  -
+phosanc7001    ct0.eth3    10.66.215.13   ct1.eth2     172.31.84.16    connected  ip         unencrypted  -
+phosanc7001    ct0.eth2    10.66.215.11   ct1.eth2     172.31.84.16    connected  ip         unencrypted  -
+phosanc7001    ct0.eth2    10.66.215.11   ct0.eth3     172.31.84.15    connected  ip         unencrypted  -
+phosanxl17001  ct1.eth2    10.66.215.12   ct1.lacp1    172.31.84.12    connected  ip         unencrypted  -
+phosanxl17001  ct0.eth2    10.66.215.11   ct1.lacp1    172.31.84.12    connected  ip         unencrypted  -
+psusanseed01   ct0.eth3    10.66.215.13   ct1.eth2     10.66.214.27    connected  ip         unencrypted  -
+psusanseed01   ct0.eth2    10.66.215.11   ct1.eth2     10.66.214.27    connected  ip         unencrypted  -
+psusanseed01   ct0.eth2    10.66.215.11   ct0.eth3     10.66.214.26    connected  ip         unencrypted  -
+psusanseed01   ct0.eth3    10.66.215.13   ct0.eth2     10.66.214.25    connected  ip         unencrypted  -
+psusanseed01   ct0.eth3    10.66.215.13   ct0.eth3     10.66.214.26    connected  ip         unencrypted  -
+psusanseed01   ct0.eth2    10.66.215.11   ct0.eth2     10.66.214.25    connected  ip         unencrypted  -
+psusanseed01   ct0.eth2    10.66.215.11   ct1.eth3     10.66.214.28    connected  ip         unencrypted  -
+psusanseed01   ct0.eth3    10.66.215.13   ct1.eth3     10.66.214.28    connected  ip         unencrypted  -
+
+Name           Local Port  Local Address  Remote Port  Remote Address  Status     Transport  Encryption   Encryption Mode
+phosanc7001    ct0.eth3    10.66.215.13   ct0.eth3     172.31.84.15    connected  ip         unencrypted  -
+phosanc7001    ct0.eth3    10.66.215.13   ct1.eth2     172.31.84.16    connected  ip         unencrypted  -
+phosanc7001    ct0.eth2    10.66.215.11   ct1.eth2     172.31.84.16    connected  ip         unencrypted  -
+phosanc7001    ct0.eth2    10.66.215.11   ct0.eth3     172.31.84.15    connected  ip         unencrypted  -
+phosanxl17001  ct1.eth2    10.66.215.12   ct1.lacp1    172.31.84.12    connected  ip         unencrypted  -
+phosanxl17001  ct0.eth2    10.66.215.11   ct1.lacp1    172.31.84.12    connected  ip         unencrypted  -
+psusanseed01   ct0.eth3    10.66.215.13   ct1.eth2     10.66.214.27    connected  ip         unencrypted  -
+psusanseed01   ct0.eth2    10.66.215.11   ct1.eth2     10.66.214.27    connected  ip         unencrypted  -
+psusanseed01   ct0.eth2    10.66.215.11   ct0.eth3     10.66.214.26    connected  ip         unencrypted  -
+psusanseed01   ct0.eth3    10.66.215.13   ct0.eth2     10.66.214.25    connected  ip         unencrypted  -
+psusanseed01   ct0.eth3    10.66.215.13   ct0.eth3     10.66.214.26    connected  ip         unencrypted  -
+psusanseed01   ct0.eth2    10.66.215.11   ct0.eth2     10.66.214.25    connected  ip         unencrypted  -
+psusanseed01   ct0.eth2    10.66.215.11   ct1.eth3     10.66.214.28    connected  ip         unencrypted  -
+psusanseed01   ct0.eth3    10.66.215.13   ct1.eth3     10.66.214.28    connected  ip         unencrypted  -
+     root@psusanc7001-ct0:/var/home/pureeng# purearray phonehome --status
+Status   Action
+running  send_today
+     root@psusanc7001-ct0:/var/home/pureeng# purearray list --space
+Name         Capacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  Total
+psusanc7001  451.85T   100%    -                 119.96T  42%                3.2 to 1        9.8 to 1         38.42T  144.87T    16.18T  0.00    0.00         199.47T
+     root@psusanc7001-ct0:/var/home/pureeng# pureport list
+Name   WWN  Portal              IQN                                                      NQN  Failover
+LACP4  -    10.66.204.108:3260  iqn.2010-06.com.purestorage:flasharray.780f9b3de57644db  -    -
+LACP5  -    10.66.204.109:3260  iqn.2010-06.com.purestorage:flasharray.780f9b3de57644db  -    -
+     root@psusanc7001-ct0:/var/home/pureeng# pureneettwork list
+Name            Enabled  Speed        Services
+ct0.eth0        False    100.00 Gb/s  -
+ct0.eth1        False    100.00 Gb/s  -
+ct0.eth2        True     25.00 Gb/s   replication
+ct0.eth3        True     25.00 Gb/s   replication
+ct0.eth4        True     2.00 Gb/s    management
+ct0.eth5        False    10.00 Gb/s   management
+ct0.eth7        False    10.00 Gb/s   -
+ct1.eth0        False    100.00 Gb/s  -
+ct1.eth1        False    100.00 Gb/s  -
+ct1.eth2        True     25.00 Gb/s   replication
+ct1.eth3        True     25.00 Gb/s   replication
+ct1.eth4        True     2.00 Gb/s    management
+ct1.eth5        False    10.00 Gb/s   management
+ct1.eth7        False    10.00 Gb/s   -
+drfilevif2036p  False    50.00 Gb/s   file
+drfilevif2036t  False    50.00 Gb/s   file
+drfilevif2037   False    50.00 Gb/s   file
+filevifsu771    True     50.00 Gb/s   file
+lacp2           True     50.00 Gb/s   iscsi
+lacp2.771       True     50.00 Gb/s   iscsi
+lacp2.2036      True     50.00 Gb/s   iscsi
+lacp2.2037      True     50.00 Gb/s   iscsi
+lacp3           True     50.00 Gb/s   iscsi
+lacp3.771       True     50.00 Gb/s   iscsi
+lacp3.2036      True     50.00 Gb/s   iscsi
+lacp3.2037      True     50.00 Gb/s   iscsi
+lacp4           True     50.00 Gb/s   iscsi
+lacp5           True     50.00 Gb/s   iscsi
+vir4            True     2.00 Gb/s    management
+vir5            False    10.00 Gb/s   management
+     root@psusanc7001-ct0:/var/home/pureeng# purevol list --connect | grep "protocol-endpoint"
+     root@psusanc7001-ct0:/var/home/pureeng# puretune --list 
+Consistently set tunables:
+PS_FILE_GATEWAY_ENABLED : 1 (''<CS0574501>'', '<CS0574501>')
+Inconsistently or unnecessarily set tunables:
+PURITY_START_ON_BOOT:
+local pureadm             - 1 
+peer pureadm              - 1 
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+PS_APPS_CPU_MASK:
+local pureadm             - 0x3e003e003e003e 
+peer pureadm              - 0x3e003e003e003e 
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+ATOM_10033:
+local pureadm             - 1  (CLOUD-131861)
+peer pureadm              - 1  (CLOUD-131861)
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+ATOM_REFRESH_CONFIG:
+local pureadm             - PCTFJ2340000B,PCTFJ23400051,6.6.8  (CLOUD-131861 set by atom)
+peer pureadm              - PCTFJ2340000B,PCTFJ23400051,6.6.8  (CLOUD-131861 set by atom)
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+ATOM_10072:
+local pureadm             - GH  (CLOUD-152371)
+peer pureadm              - GH  (CLOUD-152371)
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+ATOM_SECURITY_PATCH_FA_2025_A:
+local pureadm             - PCTFJ2340000B,PCTFJ23400051,6.6.11  (CLOUD-152371 set by atom-vats)
+peer pureadm              - PCTFJ2340000B,PCTFJ23400051,6.6.11  (CLOUD-152371 set by atom-vats)
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+PS_FILEGW_SMB_IGNORE_SACL_ACCESS_ERROR_WITHOUT_AUDITING:
+local pureadm             - 1  (Set during upgrade to 6.8.5 - CLOUD-143684)
+peer pureadm              - 1  (Set during upgrade to 6.8.5 - CLOUD-143684)
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+PS_AU_POSTFILL_TIMEOUT_SEC:
+local pureadm             - 3600  (PURE-243573)
+peer pureadm              - 3600  (PURE-243573)
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+PS_MAX_FILEGW_FUTEX_COUNT:
+local pureadm             - <unset> 
+peer pureadm              - <unset> 
+local puredb              - 552 
+peer puredb               - 552 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+     root@psusanc7001-ct0:/var/home/pureeng# puresetup show
+##########################################
+#   Welcome to the Purity Setup Wizard   #
+##########################################
+  Physical IP:           10.66.204.101
+  Virtual IP:            10.66.204.100
+  Netmask:               255.255.255.0
+  Gateway:               10.66.204.1
+  DNS Servers:           10.66.205.5,172.20.20.12
+  DNS Domain:            fbfs.com
+  NTP Servers:           ntp1.fbfs.com,ntp2.fbfs.com,ntp3.fbfs.com
+  SMTP Relay Host:       mail.fbfs.com
+  SMTP Sender Domain:    fbfs.com
+  Alert Email Recipients:flasharray-alerts@purestorage.com,ITServerteam@fbfs.com
+  HTTP proxy:            
+  Capacity Limit:        
+  Capacity Limit Target: 
+  Physical IP:           10.66.204.102
+  Netmask:               255.255.255.0
+  Gateway:               10.66.204.1
+CONFIG_TASK_COMPLETED:CONFIG_TASK_PURESETUP_EXITED
+     root@psusanc7001-ct0:/var/home/pureeng# purearray phoenhomeenehome --status
+Status   Action
+running  send_today
+     root@psusanc7001-ct0:/var/home/pureeng# purearray phonehome --status
+Status  Action
+-       -
+     root@psusanc7001-ct0:/var/home/pureeng# 
+     root@psusanc7001-ct0:/var/home/pureeng# purearray list --controller
+Name  Type              Mode       Model     Version  Status  Current Mode Since       Internal Details
+CT0   array_controller  primary    FA-C70R4  6.8.5    ready   2025-05-04 01:31:48 EDT  
+CT1   array_controller  secondary  FA-C70R4  6.8.5    ready   2025-05-04 01:45:20 EDT  
+     root@psusanc7001-ct0:/var/home/pureeng# ssh peer
+Last login: Mon Jun 24 22:37:03 2024 from fe80::26a9:37ff:fe5e:7be6%haeth0
+
+Mon Jul 07 10:10:03 2025
+Welcome root. This is Purity Version 6.8.5 on FlashArray psusanc7001
+http://www.purestorage.com/
+     root@psusanc7001-ct1:~# pureadrray listphenehome onehome --status
+Status  Action
+-       -
+     root@psusanc7001-ct1:~# pureadm stop
+monitor stop/waiting
+wait-for-state pureapp stop/waiting
+wait-for-state mariadb stop/waiting
+lio-drv disabling
+platform stop/waiting
+wait-for-state foed stop/waiting
+iostat stop/waiting
+statistics stop/waiting
+wait-for-state lio-drv stop/waiting
+purity stop/waiting
+wait-for-state purity_started stop/waiting
+wait-for-state pure_ems_fusiond stop/waiting
+Pure Storage is offline.
+     root@psusanc7001-ct1:~# exit
+logout
+     root@psusanc7001-ct0:/var/home/pureeng# purreadm stop
+monitor stop/waiting
+wait-for-state pureapp stop/waiting
+wait-for-state mariadb stop/waiting
+lio-drv disabling
+platform stop/waiting
+wait-for-state foed stop/waiting
+iostat stop/waiting
+statistics stop/waiting
+wait-for-state lio-drv stop/waiting
+purity stop/waiting
+wait-for-state purity_started stop/waiting
+wait-for-state pure_ems_fusiond stop/waiting
+Pure Storage is offline.
+     root@psusanc7001-ct0:/var/home/pureeng# exit
+exit
+pureeng@psusanc7001-ct0:~$ exit
+logout
+
+psusanc7001-ct0 login: 

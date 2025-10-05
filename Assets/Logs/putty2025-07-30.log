@@ -1,0 +1,2245 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.07.30 09:57:44 =~=~=~=~=~=~=~=~=~=~=~=
+
+PCTFJ244900C8 login: puresetup
+Password: 
+
+Wed Jul 30 13:56:42 2025
+Welcome puresetup. This is Purity Version 6.5.5 on FlashArray PCTFJ244900C8
+http://www.purestorage.com/
+puresetup@PCTFJ244900C8:~$ pureboot list
+
+Marked entry (*) is currently running
+Marked entry (-->) will run at next reboot
+*-->0. Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (202403191505+d9f0e688c788) on first (/dev/sda3)
+    1. Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (202403191505+d9f0e688c788) on second (/dev/sda4)
+puresetup@PCTFJ244900C8:~$ ls /mount /dev/sdb1 /mnt
+puresetup@PCTFJ244900C8:~$ cp /mnt/6.5.10/* .
+puresetup@PCTFJ244900C8:~$ pureinstlall purity_6.5.10_202503222031+c6937a2616b9.ppkg
+Installing Purity on alternate partition labeled second.
+Erasing Purity software image from alternate partition second to prepare for installation.
+WARNING: Do not interrupt this process!!
+Unpacking new Purity software.
+.................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Verifying package...
+
+Finalizing installation. This may take several minutes.
+Executing /altroot/opt/purextras/bin/finish-install.sh
+Executing /altroot/opt/purextras/bin/finish-install.azure-propagate.sh
+Executing /altroot/opt/purextras/bin/finish-install.cbs.sh
+Executing /altroot/opt/purextras/bin/finish-install.cdu-pureinstall-lib.sh
+Executing /altroot/opt/purextras/bin/finish-install.fix-dpkg.sh
+Purity installed.
+Installation complete. The new Purity version will load at next reboot.
+
+Important!
+The first boot of a new Purity version may take longer if the new version includes controller firmware updates.
+DO NOT REBOOT THE CONTROLLER DURING THE FIRMWARE UPDATE.
+
+Refer to http://community.purestorage.com for more information about the Purity upgrade process and firmware updates.
+puresetup@PCTFJ244900C8:~$ pureboot reboot --foflinfline
+[Errno 111] Connection refused
+
+PCTFJ2449008D login: puresetup
+Password: 
+
+Wed Jul 30 14:02:26 2025
+Welcome puresetup. This is Purity Version 6.5.5 on FlashArray PCTFJ2449008D
+http://www.purestorage.com/
+puresetup@PCTFJ2449008D:~$ moun t/det /dev /sdb1 /mnt
+puresetup@PCTFJ2449008D:~$ pcp /mnt/6.510.10/* .
+puresetup@PCTFJ2449008D:~$ pureinstall purity_6.5.10_202503222031+c6937a2616b9.ppkg
+Installing Purity on alternate partition labeled second.
+Erasing Purity software image from alternate partition second to prepare for installation.
+WARNING: Do not interrupt this process!!
+Unpacking new Purity software.
+.................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Verifying package...
+
+Finalizing installation. This may take several minutes.
+Executing /altroot/opt/purextras/bin/finish-install.sh
+Executing /altroot/opt/purextras/bin/finish-install.azure-propagate.sh
+Executing /altroot/opt/purextras/bin/finish-install.cbs.sh
+Executing /altroot/opt/purextras/bin/finish-install.cdu-pureinstall-lib.sh
+Executing /altroot/opt/purextras/bin/finish-install.fix-dpkg.sh
+Purity installed.
+Installation complete. The new Purity version will load at next reboot.
+
+Important!
+The first boot of a new Purity version may take longer if the new version includes controller firmware updates.
+DO NOT REBOOT THE CONTROLLER DURING THE FIRMWARE UPDATE.
+
+Refer to http://community.purestorage.com for more information about the Purity upgrade process and firmware updates.
+puresetup@PCTFJ2449008D:~$ pureboot reboot --offline
+[Errno 111] Connection refused
+ GNU GRUB  version 2.06
+
+/----------------------------------------------------------------------------\||||||||||||||||||||||||||\----------------------------------------------------------------------------/     Use the ^ and v keys to select which entry is highlighted.          
+      Press enter to boot the selected OS, `e' to edit the commands       
+      before booting or `c' for a command-line.                             Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (2024031915>
+*Purity 6.5.10 (202503222031+c6937a2616b9) with kernel 5.15.123+ (202502120>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        The highlighted entry will be executed automatically in 3s.                    The highlighted entry will be executed automatically in 2s.                    The highlighted entry will be executed automatically in 1s.                    The highlighted entry will be executed automatically in 0s.                 
+Purity
+
+PCTFJ2449008D login: pureseutp
+Password: 
+
+Login incorrect
+PCTFJ2449008D login: puresetup
+Password: 
+
+Login incorrect
+PCTFJ2449008D login: puresetup
+Password: 
+<fw_update_tool>
+===================================================================
+=                            NOTICE                               =
+===================================================================
+=                                                                 =
+=    Firmware is currently being checked and/or updated           =
+=    on this controller.                                          =
+=                                                                 =
+=    If updates are necessary they will be applied automatically, =
+=    and one or more automatic reboots may occur as a result.     =
+=    A completion notice will be provided when done.              =
+=                                                                 =
+=    DO NOT RESTART OR REMOVE POWER WHILE UPDATE IS IN PROGRESS   =
+=                                                                 =
+===================================================================
+<fw_update_tool>
+Last login: Wed Jul 30 14:02:25 UTC 2025 on ttyS0
+
+Wed Jul 30 14:10:08 2025
+Welcome puresetup. This is Purity Version 6.5.10 on FlashArray PCTFJ2449008D
+http://www.purestorage.com/
+puresetup@PCTFJ2449008D:~$ pureinstall purity_6.5.10_202503222031+c6937a2616b9.ppkg
+Installing Purity on alternate partition labeled first.
+Erasing Purity software image from alternate partition first to prepare for installation.
+WARNING: Do not interrupt this process!!
+Unpacking new Purity software.
+.................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Verifying package...
+
+Finalizing installation. This may take several minutes.
+Executing /altroot/opt/purextras/bin/finish-install.sh
+Executing /altroot/opt/purextras/bin/finish-install.azure-propagate.sh
+Executing /altroot/opt/purextras/bin/finish-install.cbs.sh
+Executing /altroot/opt/purextras/bin/finish-install.cdu-pureinstall-lib.sh
+Executing /altroot/opt/purextras/bin/finish-install.fix-dpkg.sh
+Purity installed.
+===================================================================
+=                            NOTICE                               =
+===================================================================
+=                                                                 =
+=    Firmware is currently being checked and/or updated           =
+=    on this controller.                                          =
+=                                                                 =
+=    If updates are necessary they will be applied automatically, =
+=    and one or more automatic reboots may occur as a result.     =
+=    A completion notice will be provided when done.              =
+=                                                                 =
+=    DO NOT RESTART OR REMOVE POWER WHILE UPDATE IS IN PROGRESS   =
+=                                                                 =
+===================================================================
+
+/opt/Purity/bin/pureboot update is not allowed during an automatic firmware update
+Error: Problem updating boot files
+
+
+I'm sorry, we've encountered an error and could not complete the install.
+Please see /var/log/installer/pureinstall.log for more details.
+puresetup@PCTFJ2449008D:~$ pureinstallls
+purity_6.5.10_202503222031+c6937a2616b9.ppkg
+purity_6.5.10_202503222031+c6937a2616b9.ppkg.sha1
+puresetup@PCTFJ2449008D:~$ pureinstall purity_6.5.10_202503222031+c6937a2616b9.ppkg
+Installing Purity on alternate partition labeled first.
+Erasing Purity software image from alternate partition first to prepare for installation.
+WARNING: Do not interrupt this process!!
+Unpacking new Purity software.
+.................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Verifying package...
+
+Finalizing installation. This may take several minutes.
+Executing /altroot/opt/purextras/bin/finish-install.sh
+Executing /altroot/opt/purextras/bin/finish-install.azure-propagate.sh
+Executing /altroot/opt/purextras/bin/finish-install.cbs.sh
+Executing /altroot/opt/purextras/bin/finish-install.cdu-pureinstall-lib.sh
+Executing /altroot/opt/purextras/bin/finish-install.fix-dpkg.sh
+Purity installed.
+===================================================================
+=                            NOTICE                               =
+===================================================================
+=                                                                 =
+=    Firmware is currently being checked and/or updated           =
+=    on this controller.                                          =
+=                                                                 =
+=    If updates are necessary they will be applied automatically, =
+=    and one or more automatic reboots may occur as a result.     =
+=    A completion notice will be provided when done.              =
+=                                                                 =
+=    DO NOT RESTART OR REMOVE POWER WHILE UPDATE IS IN PROGRESS   =
+=                                                                 =
+===================================================================
+
+/opt/Purity/bin/pureboot update is not allowed during an automatic firmware update
+Error: Problem updating boot files
+
+
+I'm sorry, we've encountered an error and could not complete the install.
+Please see /var/log/installer/pureinstall.log for more details.
+puresetup@PCTFJ2449008D:~$ pureboot list
+===================================================================
+=                            NOTICE                               =
+===================================================================
+=                                                                 =
+=    Firmware is currently being checked and/or updated           =
+=    on this controller.                                          =
+=                                                                 =
+=    If updates are necessary they will be applied automatically, =
+=    and one or more automatic reboots may occur as a result.     =
+=    A completion notice will be provided when done.              =
+=                                                                 =
+=    DO NOT RESTART OR REMOVE POWER WHILE UPDATE IS IN PROGRESS   =
+=                                                                 =
+===================================================================
+
+
+Marked entry (*) is currently running
+Marked entry (-->) will run at next reboot
+    0. Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (202403191505+d9f0e688c788) on first (/dev/sda3)
+*-->1. Purity 6.5.10 (202503222031+c6937a2616b9) with kernel 5.15.123+ (202502120717+4e5bb8230c85) on second (/dev/sda4)
+puresetup@PCTFJ2449008D:~$ 
+PCTFJ244900C8 login: puresetup
+Password: 
+<fw_update_tool>
+===================================================================
+=                            NOTICE                               =
+===================================================================
+=                                                                 =
+=    Firmware is currently being checked and/or updated           =
+=    on this controller.                                          =
+=                                                                 =
+=    If updates are necessary they will be applied automatically, =
+=    and one or more automatic reboots may occur as a result.     =
+=    A completion notice will be provided when done.              =
+=                                                                 =
+=    DO NOT RESTART OR REMOVE POWER WHILE UPDATE IS IN PROGRESS   =
+=                                                                 =
+===================================================================
+<fw_update_tool>
+Last login: Wed Jul 30 13:56:41 UTC 2025 on ttyS0
+
+Wed Jul 30 14:13:37 2025
+Welcome puresetup. This is Purity Version 6.5.10 on FlashArray PCTFJ244900C8
+http://www.purestorage.com/
+puresetup@PCTFJ244900C8:~$ purepureboot list
+===================================================================
+=                            NOTICE                               =
+===================================================================
+=                                                                 =
+=    Firmware is currently being checked and/or updated           =
+=    on this controller.                                          =
+=                                                                 =
+=    If updates are necessary they will be applied automatically, =
+=    and one or more automatic reboots may occur as a result.     =
+=    A completion notice will be provided when done.              =
+=                                                                 =
+=    DO NOT RESTART OR REMOVE POWER WHILE UPDATE IS IN PROGRESS   =
+=                                                                 =
+===================================================================
+
+
+Marked entry (*) is currently running
+Marked entry (-->) will run at next reboot
+    0. Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (202403191505+d9f0e688c788) on first (/dev/sda3)
+*-->1. Purity 6.5.10 (202503222031+c6937a2616b9) with kernel 5.15.123+ (202502120717+4e5bb8230c85) on second (/dev/sda4)
+puresetup@PCTFJ244900C8:~$ 
+puresetup@PCTFJ2449008D:~$ pureboot list
+===================================================================
+=                            NOTICE                               =
+===================================================================
+=                                                                 =
+=    Firmware is currently being checked and/or updated           =
+=    on this controller.                                          =
+=                                                                 =
+=    If updates are necessary they will be applied automatically, =
+=    and one or more automatic reboots may occur as a result.     =
+=    A completion notice will be provided when done.              =
+=                                                                 =
+=    DO NOT RESTART OR REMOVE POWER WHILE UPDATE IS IN PROGRESS   =
+=                                                                 =
+===================================================================
+
+
+Marked entry (*) is currently running
+Marked entry (-->) will run at next reboot
+    0. Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (202403191505+d9f0e688c788) on first (/dev/sda3)
+*-->1. Purity 6.5.10 (202503222031+c6937a2616b9) with kernel 5.15.123+ (202502120717+4e5bb8230c85) on second (/dev/sda4)
+puresetup@PCTFJ2449008D:~$ embind anecdota praiser obelize GNU GRUB  version 2.06
+
+/----------------------------------------------------------------------------\||||||||||||||||||||||||||\----------------------------------------------------------------------------/     Use the ^ and v keys to select which entry is highlighted.          
+      Press enter to boot the selected OS, `e' to edit the commands       
+      before booting or `c' for a command-line.                             Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (2024031915>
+*Purity 6.5.10 (202503222031+c6937a2616b9) with kernel 5.15.123+ (202502120>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        The highlighted entry will be executed automatically in 3s.                    The highlighted entry will be executed automatically in 2s.                    The highlighted entry will be executed automatically in 1s.                    The highlighted entry will be executed automatically in 0s.                 
+Purity
+
+PCTFJ244900C8 login: puresetup
+Password: 
+<fw_update_tool>
+===================================================================
+=                            NOTICE                               =
+===================================================================
+=                                                                 =
+=    Firmware is currently being checked and/or updated           =
+=    on this controller.                                          =
+=                                                                 =
+=    If updates are necessary they will be applied automatically, =
+=    and one or more automatic reboots may occur as a result.     =
+=    A completion notice will be provided when done.              =
+=                                                                 =
+=    DO NOT RESTART OR REMOVE POWER WHILE UPDATE IS IN PROGRESS   =
+=                                                                 =
+===================================================================
+<fw_update_tool>
+Last login: Wed Jul 30 14:13:37 UTC 2025 on ttyS0
+
+Wed Jul 30 14:24:34 2025
+Welcome puresetup. This is Purity Version 6.5.10 on FlashArray PCTFJ244900C8
+http://www.purestorage.com/
+puresetup@PCTFJ244900C8:~$ pureboot list
+===================================================================
+=                            NOTICE                               =
+===================================================================
+=                                                                 =
+=    Firmware is currently being checked and/or updated           =
+=    on this controller.                                          =
+=                                                                 =
+=    If updates are necessary they will be applied automatically, =
+=    and one or more automatic reboots may occur as a result.     =
+=    A completion notice will be provided when done.              =
+=                                                                 =
+=    DO NOT RESTART OR REMOVE POWER WHILE UPDATE IS IN PROGRESS   =
+=                                                                 =
+===================================================================
+
+
+Marked entry (*) is currently running
+Marked entry (-->) will run at next reboot
+    0. Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (202403191505+d9f0e688c788) on first (/dev/sda3)
+*-->1. Purity 6.5.10 (202503222031+c6937a2616b9) with kernel 5.15.123+ (202502120717+4e5bb8230c85) on second (/dev/sda4)
+puresetup@PCTFJ244900C8:~$                                                                                
+Broadcast message from root@PCTFJ244900C8 (somewhere) (Wed Jul 30 14:25:48 2025
+                                                                               
+===================================================================            
+=                   UPDATE AND/OR CHECK COMPLETE                  =            
+=                                                                 =            
+=    The firmware checks/updates on this system are now complete. =            
+=    No further action is required, and the controller will       =            
+=    continue running as usual                                    =            
+=                                                                 =            
+===================================================================            
+                                                                               
+                                                                               
+
+puresetup@PCTFJ244900C8:~$ puresetup newarray --skipt-connectivity-tests
+##########################################
+#   Welcome to the Purity Setup Wizard   #
+##########################################
+CONFIG_TASKS:CONFIG_TASK_START_PURITY,CONFIG_TASK_CONFIG_FLASHARRAY,CONFIG_TASK_TEST_CONNECTIVITY,CONFIG_TASK_ALL_COMPLETE,CONFIG_TASK_PURESETUP_EXITED
+Controller hardware model is compatible with the controller purity version
+0 shelves connected to this controller.
+Verifying controller firmware is up to date. Controller may reboot if firmware is updated.
+                                                                               
+Broadcast message from root@PCTFJ244900C8 (somewhere) (Wed Jul 30 14:27:31 2025
+                                                                               
+===================================================================            
+=                   UPDATE AND/OR CHECK COMPLETE                  =            
+=                                                                 =            
+=    The firmware checks/updates on this system are now complete. =            
+=    No further action is required, and the controller will       =            
+=    continue running as usual                                    =            
+=                                                                 =            
+===================================================================            
+                                                                               
+                                                                               
+                                                                               
+Broadcast message from root@PCTFJ244900C8 (somewhere) (Wed Jul 30 14:27:31 2025
+                                                                               
+===================================================================            
+=                   UPDATE AND/OR CHECK COMPLETE                  =            
+=                                                                 =            
+=    The firmware checks/updates on this system are now complete. =            
+=    No further action is required, and the controller will       =            
+=    continue running as usual                                    =            
+=                                                                 =            
+===================================================================            
+                                                                               
+                                                                               
+fw_update_tool started.
+Starting Boot-Time Components Update.
+Skipping BOOT_DRIVE_M5400 update since current image: (D4MU002) matches latest image: (D4MU002)
+Skipping BIOS update since current image: (L11P1N15) matches latest image: (L11P1N15)
+Skipping BIOS_CFG update since current image: (a61d36) matches latest image: (a61d36)
+Skipping BIOS_STBY-0 update since current image: (L11P1N14) to latest image: (L11P1N15) is not supported.
+Skipping BMC update since current image: (v0.0e-0aad-r0010) matches latest image: (v0.0e-0aad-r0010)
+Skipping BMC_STBY-0 update since current image: (v0.09-0aad-r0010) to latest image: (v0.0e-0aad-r0010) is not supported.
+Skipping CPLD update since current image: (R126) matches latest image: (R126)
+Skipping ADD_IN_ETH_MLX_CX6_100G-1 update since current image: (22.37.1014) matches latest image: (22.37.1014)
+Skipping ADD_IN_ETH_MLX_CX6_100G-2 update since current image: (22.37.1014) matches latest image: (22.37.1014)
+Skipping ADD_IN_ETH_MLX_CX7_25G-3 update since current image: (28.39.2048) matches latest image: (28.39.2048)
+Skipping PFX_68A0_IMG update since current image: (0x0390b762) matches latest image: (0x0390b762)
+Skipping PFX_68A0_CFG update since current image: (0x3249620c) matches latest image: (0x3249620c)
+Skipping PFX_68B0_IMG update since current image: (0x0390b762) matches latest image: (0x0390b762)
+Skipping PFX_68B0_CFG update since current image: (0x3249620c) matches latest image: (0x3249620c)
+Skipping LOM_ETH_MLX_CX6_100G update since current image: (22.37.1014) matches latest image: (22.37.1014)
+Skipping LOM_ETH_MLX_CX6_25G update since current image: (26.37.1014) matches latest image: (26.37.1014)
+All Boot-Time Components are up-to-date.
+
+Controller firmware is up to date.
+Verifying power supply firmware is up to date. If power supply firmware updates are needed, the update process can take a while.
+fw_update_tool started.
+Update PSU Devices
+ Policy: Update to latest but only if current version is below the specified minimum version allowed for the field, and don't downgrade.
+Skipping PSU_DELTA_TI_1600-0 update since current image: (00.36.37) to latest image: (00.36.30) is a downgrade
+Skipping PSU_DELTA_TI_1600-1 update since current image: (00.36.37) to latest image: (00.36.30) is a downgrade
+ Update PSU Complete
+Power supply firmware is up to date.
+Verifying WSSD firmware is up to date.
+fw_update_tool started.
+Checking for Purity activity on 10 wssd devices before attempting updates
+Beginning parallel fw version check/update for 10 WSSD Devices
+ Policy: Update to latest but only if current version is different than latest, and don't downgrade.
+ Successful parallel update of WSSD /dev/nvme10n1 From:2.8.30 To:2.8.41
+ Successful parallel update of WSSD /dev/nvme11n1 From:2.8.30 To:2.8.41
+ Successful parallel update of WSSD /dev/nvme1n1 From:2.8.30 To:2.8.41
+ Successful parallel update of WSSD /dev/nvme2n1 From:2.8.30 To:2.8.41
+ Successful parallel update of WSSD /dev/nvme3n1 From:2.8.30 To:2.8.41
+ Successful parallel update of WSSD /dev/nvme4n1 From:2.8.30 To:2.8.41
+ Successful parallel update of WSSD /dev/nvme6n1 From:2.8.30 To:2.8.41
+ Successful parallel update of WSSD /dev/nvme0n1 From:2.8.30 To:2.8.41
+ Successful parallel update of WSSD /dev/nvme7n1 From:2.8.30 To:2.8.41
+ Successful parallel update of WSSD /dev/nvme8n1 From:2.8.30 To:2.8.41
+Updated 10 WSSD Devices
+ Performing additional version check/update for 10 WSSD Devices
+Done! Completed additional check/update, which updated 0 WSSD devices
+WSSD firmware is up to date.
+Controller type supports multiple storage types, detecting type of storage installed...
+Detected storage type X
+Pre-existing storage type X was found on the device
+Successfully configured storage type X for array controller
+Purity Apartment not found.
+Initial system setup is required which will remove everything from this array.
+If you believe the array may contain data, exit the puresetup procedure and contact Pure Storage Support to determine the appropriate action.
+(continue/EXIT):continue(continue/EXIT): continue
+wait-for-state pureapp stop/waiting
+wait-for-state mariadb stop/waiting
+lio-drv disabling
+wait-for-state foed stop/waiting
+wait-for-state lio-drv stop/waiting
+wait-for-state purity_started stop/waiting
+Pure Storage is offline.
+Configure Rapid Data Locking (y/N):nConfigure Rapid Data Locking (y/N): n
+Verifying interposer firmware is up to date.
+Beginning recycle of 0 bays...
+Recycle complete.
+Interposer firmware is up to date.
+Check io card pci id's........ OK
+purity.service stablized: done
+purity start/running
+platform: ..done
+foed: .done
+gui: .....done
+rest: done
+platform_env: 0.done
+quorum: ....done
+foed_env: 673.673.673.406.0.done
+foed_ready: done
+remote_patch: done
+driver: done
+san: .......done
+health: done
+lio-drv: done
+middleware-db: done
+middleware: ....                                                                               
+Broadcast message from root@PCTFJ244900C8 (somewhere) (Wed Jul 30 14:32:11 2025
+                                                                               
+                                                                               
+Purity//FA Information System Status                                           
+====================================                                           
+Purity//FA has successfully started for                                        
+the first time after an install                                                
+or upgrade. Purity//FA 6.5.10 (202503222031+c6937a2616b9-65x)                  
+is now set to be the default.                                                  
+                                                                               
+                                                                               
+Broadcast message from root@PCTFJ244900C8 (somewhere) (Wed Jul 30 14:32:11 2025
+                                                                               
+                                                                               
+Purity//FA Information System Status                                           
+====================================                                           
+Purity//FA has successfully started for                                        
+the first time after an install                                                
+or upgrade. Purity//FA 6.5.10 (202503222031+c6937a2616b9-65x)                  
+is now set to be the default.                                                  
+                                                                               
+done
+vasa: done
+Pure Storage is online.
+
+CONFIG_TASK_ARRAY_ID: 2871299-251897301-3950286644334531265
+CONFIG_TASK_COMPLETED:CONFIG_TASK_START_PURITY
+Name       Created                  Expires
+puresetup  2025-07-30 14:32:12 UTC  2025-07-30 15:32:12 UTC
+Start initial configuration for management and support connectivity.
+No changes are made until entire configuration is confirmed.
+Enter CTRL-C at any time to quit the puresetup procedure.
+Array Name:EWR4PSX50BLK01Array Name: EWR4PSX50BLK01
+Note: All IP addresses are entered as IPv4 address or IPv6 address,
+and netmask takes the format xxx.xxx.xxx.xxx for IPv4 or [0-128] for IPv6.
+The following management port configuration will be applied to ct0.eth0
+Physical IP Address:172.17.1.42Physical IP Address: 172.17.1.42
+Virtual IP Address:172.17.1.41Virtual IP Address: 172.17.1.41
+Netmask:255.255.255.224Netmask: 255.255.255.224
+Gateway:255.255.255.22417217.1.4133Gateway: 172.17.1.33
+DNS Servers (1-3, comma-separated):10.32.203.247,10.32.203.248DNS Servers (1-3, comma-separated): 10.32.203.247,10.32.203.248
+DNS Domain Suffix (Optional):corp.localDNS Domain Suffix (Optional): corp.local
+NTP Server: time1.purestorage.com,time2.purestorage.com,time3.purestorage.com0.us.pool.ntp.org,3.pool.ntp.orgNTP Server: 0.us.pool.ntp.org,3.pool.ntp.org
+Email Relay Server (Optional):Email Relay Server (Optional):
+Email Sender Domain:internalmail.shi.comEmail Sender Domain: internalmail.shi.com
+Alert Email Recipients (Optional: 0-19, comma-separated):sanadmins@shi.comAlert Email Recipients (Optional: 0-19, comma-separated): sanadmins@shi.com
+HTTP proxy for phonehome and remoteassist (optional):HTTP proxy for phonehome and remoteassist (optional):
+Confirm configuration.
+  Physical IP:             172.17.1.42
+  Virtual IP:              172.17.1.41
+  Netmask:                 255.255.255.224
+  Gateway:                 172.17.1.33
+  DNS Servers:             10.32.203.247,10.32.203.248
+  DNS Domain:              corp.local
+  NTP Servers:             0.us.pool.ntp.org,3.pool.ntp.org
+  SMTP Relay Host:         
+  SMTP Sender Domain:      internalmail.shi.com
+  Alert Email Recipients:  sanadmins@shi.com
+  HTTP proxy:              
+Type 'y' to apply configurations or 'n' to re-enter parameters:yType 'y' to apply configurations or 'n' to re-enter parameters: y
+Applying configuration to the array.
+Configuring array name.
+Configuring management port.
+Configuring network interfaces
+Configuring DNS.
+Configuring NTP server.
+Configuring HTTP proxy.
+Configuring SMTP sender domain and relay host.
+Configuring capacity limit.
+Configuring alert email.
+New configuration applied.
+CONFIG_TASK_COMPLETED:CONFIG_TASK_CONFIG_FLASHARRAY
+Skipping connectivity tests.
+CONFIG_TASK_COMPLETED:CONFIG_TASK_TEST_CONNECTIVITY
+passwd: password expiry information changed.
+Current time zone: Etc/UTC
+Change time zone [requires reboot] (y/n):yChange time zone [requires reboot] (y/n): y
+Configuring tzdata
+------------------
+
+Please select the geographic area in which you live. Subsequent configuration 
+questions will narrow this down by presenting a list of cities, representing the
+time zones in which they are located.
+
+  1. Africa      4. Australia     7. Atlantic Ocean  10. Pacific Ocean
+  2. America     5. Arctic Ocean  8. Europe          11. US
+  3. Antarctica  6. Asia          9. Indian Ocean    12. None of the above
+
+Geographic area: 2
+
+
+Please select the city or region corresponding to your time zone.
+
+  1. Adak                       80. Juneau
+  2. Anchorage                  81. Louisville (Kentucky)
+  3. Anguilla                   82. Monticello (Kentucky)
+  4. Antigua                    83. Kralendijk
+  5. Araguaina                  84. La Paz
+  6. Buenos Aires (Argentina)   85. Lima
+  7. Catamarca (Argentina)      86. Los Angeles
+  8. Cordoba (Argentina)        87. Lower Princes
+  9. Jujuy (Argentina)          88. Maceio
+  10. La Rioja (Argentina)      89. Managua
+  11. Mendoza (Argentina)       90. Manaus
+  12. Rio Gallegos (Argentina)  91. Marigot
+  13. Salta (Argentina)         92. Martinique
+  14. San Juan (Argentina)      93. Matamoros
+  15. San Luis (Argentina)      94. Mazatlan
+  16. Tucuman (Argentina)       95. Menominee
+  17. Ushuaia (Argentina)       96. Merida
+  18. Aruba                     97. Metlakatla
+[More] 
+
+  19. Asuncion                  98. Mexico City
+  20. Atikokan                  99. Miquelon
+  21. Atka                      100. Moncton
+  22. Bahia                     101. Monterrey
+  23. Bahia Banderas            102. Montevideo
+  24. Barbados                  103. Montreal
+  25. Belem                     104. Montserrat
+  26. Belize                    105. Nassau
+  27. Blanc-Sablon              106. New York
+  28. Boa Vista                 107. Nipigon
+  29. Bogota                    108. Nome
+  30. Boise                     109. Fernando de Noronha
+  31. Cambridge Bay             110. Beulah (North Dakota)
+  32. Campo Grande              111. Center (North Dakota)
+  33. Cancun                    112. New Salem (North Dakota)
+  34. Caracas                   113. Nuuk
+  35. Cayenne                   114. Ojinaga
+  36. Cayman                    115. Panama
+  37. Chicago                   116. Pangnirtung
+  38. Chihuahua                 117. Paramaribo
+  39. Ciudad_Juarez             118. Phoenix
+  40. Coral Harbour             119. Port-au-Prince
+[More] 
+
+  41. Costa Rica                120. Port of Spain
+  42. Creston                   121. Porto Acre
+  43. Cuiaba                    122. Porto Velho
+  44. Curaçao                  123. Puerto Rico
+  45. Danmarkshavn              124. Punta Arenas
+  46. Dawson                    125. Rainy River
+  47. Dawson Creek              126. Rankin Inlet
+  48. Denver                    127. Recife
+  49. Detroit                   128. Regina
+  50. Dominica                  129. Resolute
+  51. Edmonton                  130. Rio Branco
+  52. Eirunepe                  131. Santa Isabel
+  53. El Salvador               132. Santarém
+  54. Ensenada                  133. Santiago
+  55. Fort Nelson               134. Santo Domingo
+  56. Fortaleza                 135. São Paulo
+  57. Glace Bay                 136. Scoresbysund
+  58. Godthab                   137. Shiprock
+  59. Goose Bay                 138. Sitka
+  60. Grand Turk                139. St Barthelemy
+  61. Grenada                   140. St Johns
+  62. Guadeloupe                141. St Kitts
+[More] 
+
+  63. Guatemala                 142. St Lucia
+  64. Guayaquil                 143. St Thomas
+  65. Guyana                    144. St Vincent
+  66. Halifax                   145. Swift Current
+  67. Havana                    146. Tegucigalpa
+  68. Hermosillo                147. Thule
+  69. Indianapolis (Indiana)    148. Thunder Bay
+  70. Knox (Indiana)            149. Tijuana
+  71. Marengo (Indiana)         150. Toronto
+  72. Petersburg (Indiana)      151. Tortola
+  73. Tell City (Indiana)       152. Vancouver
+  74. Vevay (Indiana)           153. Virgin
+  75. Vincennes (Indiana)       154. Whitehorse
+  76. Winamac (Indiana)         155. Winnipeg
+  77. Inuvik                    156. Yakutat
+  78. Iqaluit                   157. Yellowknife
+  79. Jamaica
+
+Time zone: 106
+
+
+
+Current default time zone: 'America/New_York'
+Local time is now:      Wed Jul 30 10:37:36 EDT 2025.
+Universal Time is now:  Wed Jul 30 14:37:36 UTC 2025.
+
+'/cache/timezone/localtime' -> '/usr/share/zoneinfo/America/New_York'
+Confirm time zone change from Etc/UTC to America/New_York
+(y/N):y(y/N): y
+monitor stop/waiting
+
+wait-for-state pureapp stop/waiting
+wait-for-state mariadb stop/waiting
+lio-drv disabling
+platform stop/waiting
+wait-for-state foed stop/waiting
+iostat stop/waiting
+statistics stop/waiting
+rtm-file-collector stop/waiting
+wait-for-state lio-drv stop/waiting
+purity stop/waiting
+wait-for-state purity_started stop/waiting
+Pure Storage is offline.
+Tunable parameter set: PURITY_START_ON_BOOT=1
+Press ENTER to reboot
+Array is ready to use after reboot. You can access the Purity GUI and CLI on 172.17.1.41
+[Errno 111] Connection refused
+
+PCTFJ2449008D login: puresetup
+Password: 
+Last login: Wed Jul 30 14:10:07 UTC 2025 on ttyS0
+
+Wed Jul 30 14:39:23 2025
+Welcome puresetup. This is Purity Version 6.5.10 on FlashArray PCTFJ2449008D
+http://www.purestorage.com/
+puresetup@PCTFJ2449008D:~$ pureboot list
+
+Marked entry (*) is currently running
+Marked entry (-->) will run at next reboot
+    0. Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (202403191505+d9f0e688c788) on first (/dev/sda3)
+*-->1. Purity 6.5.10 (202503222031+c6937a2616b9) with kernel 5.15.123+ (202502120717+4e5bb8230c85) on second (/dev/sda4)
+puresetup@PCTFJ2449008D:~$ puresetup secondary --skip-connectivity-tests
+##########################################
+#   Welcome to the Purity Setup Wizard   #
+##########################################
+CONFIG_TASKS:CONFIG_TASK_START_PURITY,CONFIG_TASK_CONFIG_FLASHARRAY,CONFIG_TASK_TEST_CONNECTIVITY,CONFIG_TASK_ALL_COMPLETE,CONFIG_TASK_PURESETUP_EXITED
+Verifying controller firmware is up to date. Controller may reboot if firmware is updated.
+                                                                               
+Broadcast message from root@PCTFJ2449008D (somewhere) (Wed Jul 30 14:40:30 2025
+                                                                               
+===================================================================            
+=                   UPDATE AND/OR CHECK COMPLETE                  =            
+=                                                                 =            
+=    The firmware checks/updates on this system are now complete. =            
+=    No further action is required, and the controller will       =            
+=    continue running as usual                                    =            
+=                                                                 =            
+===================================================================            
+                                                                               
+                                                                               
+                                                                               
+Broadcast message from root@PCTFJ2449008D (somewhere) (Wed Jul 30 14:40:30 2025
+                                                                               
+===================================================================            
+=                   UPDATE AND/OR CHECK COMPLETE                  =            
+=                                                                 =            
+=    The firmware checks/updates on this system are now complete. =            
+=    No further action is required, and the controller will       =            
+=    continue running as usual                                    =            
+=                                                                 =            
+===================================================================            
+                                                                               
+                                                                               
+fw_update_tool started.
+Starting Boot-Time Components Update.
+Skipping BOOT_DRIVE_M5400 update since current image: (D4MU002) matches latest image: (D4MU002)
+Skipping BIOS update since current image: (L11P1N15) matches latest image: (L11P1N15)
+Skipping BIOS_CFG update since current image: (a61d36) matches latest image: (a61d36)
+Skipping BIOS_STBY-0 update since current image: (L11P1N14) to latest image: (L11P1N15) is not supported.
+Skipping BMC update since current image: (v0.0e-0aad-r0010) matches latest image: (v0.0e-0aad-r0010)
+Skipping BMC_STBY-0 update since current image: (v0.09-0aad-r0010) to latest image: (v0.0e-0aad-r0010) is not supported.
+Skipping CPLD update since current image: (R126) matches latest image: (R126)
+Skipping ADD_IN_ETH_MLX_CX6_100G-1 update since current image: (22.37.1014) matches latest image: (22.37.1014)
+Skipping ADD_IN_ETH_MLX_CX6_100G-2 update since current image: (22.37.1014) matches latest image: (22.37.1014)
+Skipping ADD_IN_ETH_MLX_CX7_25G-3 update since current image: (28.39.2048) matches latest image: (28.39.2048)
+Skipping PFX_68A0_IMG update since current image: (0x0390b762) matches latest image: (0x0390b762)
+Skipping PFX_68A0_CFG update since current image: (0x3249620c) matches latest image: (0x3249620c)
+Skipping PFX_68B0_IMG update since current image: (0x0390b762) matches latest image: (0x0390b762)
+Skipping PFX_68B0_CFG update since current image: (0x3249620c) matches latest image: (0x3249620c)
+Skipping LOM_ETH_MLX_CX6_100G update since current image: (22.37.1014) matches latest image: (22.37.1014)
+Skipping LOM_ETH_MLX_CX6_25G update since current image: (26.37.1014) matches latest image: (26.37.1014)
+All Boot-Time Components are up-to-date.
+
+
+Controller firmware is up to date.
+Verifying power supply firmware is up to date. If power supply firmware updates are needed, the update process can take a while.
+fw_update_tool started.
+No updatable PSU's found, the psu may not be updatable, or the controller is not chassis master
+Power supply firmware is up to date.
+Controller hardware model is compatible with the controller purity version
+Controller type supports multiple storage types, detecting type of storage installed...
+Detected storage type X
+Pre-existing storage type X was found on the device
+Successfully configured storage type X for array controller
+Check io card pci id's........ OK
+purity.service stablized: done
+purity start/running
+platform: ..done
+foed: .done
+gui: .....done
+rest: done
+platform_env: 0.done
+quorum: .....done
+foed_env: 0.done
+foed_ready: done
+remote_patch: done
+driver: done
+san: ................done
+health: done
+lio-drv: done
+middleware-db: done
+middleware: done
+vasa: done
+Pure Storage is online.
+
+CONFIG_TASK_ARRAY_ID: 2871299-251897301-3950286644334531265
+CONFIG_TASK_COMPLETED:CONFIG_TASK_START_PURITY
+Name       Created                  Expires
+puresetup  2025-07-30 14:40:25 UTC  2025-07-30 15:40:25 UTC
+Error: [{'msg': 'Unable to communicate due to exception. Please try again.', 'raw_exception': ConnectionError(ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))}]
+
+Exit without saving changes.
+CONFIG_TASK_COMPLETED:CONFIG_TASK_PURESETUP_EXITED
+                                                                               
+Broadcast message from root@EWR4PSX50BLK01-ct1 (somewhere) (Wed Jul 30 14:41:11
+                                                                               
+                                                                               
+Purity//FA Information System Status                                           
+====================================                                           
+Purity//FA has successfully started for                                        
+the first time after an install                                                
+or upgrade. Purity//FA 6.5.10 (202503222031+c6937a2616b9-65x)                  
+is now set to be the default.                                                  
+                                                                               
+                                                                               
+Broadcast message from root@EWR4PSX50BLK01-ct1 (somewhere) (Wed Jul 30 14:41:11
+                                                                               
+                                                                               
+Purity//FA Information System Status                                           
+====================================                                           
+Purity//FA has successfully started for                                        
+the first time after an install                                                
+or upgrade. Purity//FA 6.5.10 (202503222031+c6937a2616b9-65x)                  
+is now set to be the default.                                                  
+                                                                               
+puresetup@PCTFJ2449008D:~$ 
+puresetup@PCTFJ2449008D:~$ purepureinstall secondary --skip-connectivity-tests
+usage: pureinstall [-h] [--version] [--streaming] package
+pureinstall: error: unrecognized arguments: --skip-connectivity-tests
+puresetup@PCTFJ2449008D:~$ pureinstall secondary --skip-connectivity-testss
+usage: pureinstall [-h] [--version] [--streaming] package
+pureinstall: error: unrecognized arguments: --skip-connectivity-tests
+puresetup@PCTFJ2449008D:~$ puresetup secondary --skip-connectivity-tests
+##########################################
+#   Welcome to the Purity Setup Wizard   #
+##########################################
+CONFIG_TASKS:CONFIG_TASK_START_PURITY,CONFIG_TASK_CONFIG_FLASHARRAY,CONFIG_TASK_TEST_CONNECTIVITY,CONFIG_TASK_ALL_COMPLETE,CONFIG_TASK_PURESETUP_EXITED
+Verifying controller firmware is up to date. Controller may reboot if firmware is updated.
+                                                                               
+Broadcast message from root@EWR4PSX50BLK01-ct1 (somewhere) (Wed Jul 30 14:43:37
+                                                                               
+===================================================================            
+=                   UPDATE AND/OR CHECK COMPLETE                  =            
+=                                                                 =            
+=    The firmware checks/updates on this system are now complete. =            
+=    No further action is required, and the controller will       =            
+=    continue running as usual                                    =            
+=                                                                 =            
+===================================================================            
+                                                                               
+                                                                               
+                                                                               
+Broadcast message from root@EWR4PSX50BLK01-ct1 (somewhere) (Wed Jul 30 14:43:37
+                                                                               
+===================================================================            
+=                   UPDATE AND/OR CHECK COMPLETE                  =            
+=                                                                 =            
+=    The firmware checks/updates on this system are now complete. =            
+=    No further action is required, and the controller will       =            
+=    continue running as usual                                    =            
+=                                                                 =            
+===================================================================            
+                                                                               
+                                                                               
+fw_update_tool started.
+Starting Boot-Time Components Update.
+Skipping BOOT_DRIVE_M5400 update since current image: (D4MU002) matches latest image: (D4MU002)
+Skipping BIOS update since current image: (L11P1N15) matches latest image: (L11P1N15)
+Skipping BIOS_CFG update since current image: (a61d36) matches latest image: (a61d36)
+Skipping BIOS_STBY-0 update since current image: (L11P1N14) to latest image: (L11P1N15) is not supported.
+Skipping BMC update since current image: (v0.0e-0aad-r0010) matches latest image: (v0.0e-0aad-r0010)
+Skipping BMC_STBY-0 update since current image: (v0.09-0aad-r0010) to latest image: (v0.0e-0aad-r0010) is not supported.
+Skipping CPLD update since current image: (R126) matches latest image: (R126)
+Skipping ADD_IN_ETH_MLX_CX6_100G-1 update since current image: (22.37.1014) matches latest image: (22.37.1014)
+Skipping ADD_IN_ETH_MLX_CX6_100G-2 update since current image: (22.37.1014) matches latest image: (22.37.1014)
+Skipping ADD_IN_ETH_MLX_CX7_25G-3 update since current image: (28.39.2048) matches latest image: (28.39.2048)
+Skipping PFX_68A0_IMG update since current image: (0x0390b762) matches latest image: (0x0390b762)
+Skipping PFX_68A0_CFG update since current image: (0x3249620c) matches latest image: (0x3249620c)
+Skipping PFX_68B0_IMG update since current image: (0x0390b762) matches latest image: (0x0390b762)
+Skipping PFX_68B0_CFG update since current image: (0x3249620c) matches latest image: (0x3249620c)
+Skipping LOM_ETH_MLX_CX6_100G update since current image: (22.37.1014) matches latest image: (22.37.1014)
+Skipping LOM_ETH_MLX_CX6_25G update since current image: (26.37.1014) matches latest image: (26.37.1014)
+All Boot-Time Components are up-to-date.
+
+Controller firmware is up to date.
+Verifying power supply firmware is up to date. If power supply firmware updates are needed, the update process can take a while.
+fw_update_tool started.
+Purity should not be running when updating firmware. Please execute 'pureadm stop' on the local controller before proceeding with firmware updates.
+Controller hardware model is compatible with the controller purity version
+Controller type supports multiple storage types, detecting type of storage installed...
+Detected storage type X
+Pre-existing storage type X was found on the device
+Successfully configured storage type X for array controller
+Check io card pci id's........ OK
+purity.service stablized: done
+platform: done
+foed: done
+gui: done
+rest: done
+platform_env: 0.done
+quorum: done
+foed_env: 0.done
+foed_ready: done
+remote_patch: done
+driver: done
+san: done
+health: done
+lio-drv: done
+middleware-db: done
+middleware: done
+vasa: done
+Pure Storage is online.
+
+CONFIG_TASK_ARRAY_ID: 2871299-251897301-3950286644334531265
+CONFIG_TASK_COMPLETED:CONFIG_TASK_START_PURITY
+Name       Created                  Expires
+puresetup  2025-07-30 14:43:01 UTC  2025-07-30 15:43:01 UTC
+Start initial configuration for management and support connectivity.
+No changes are made until entire configuration is confirmed.
+Enter CTRL-C at any time to quit the puresetup procedure.
+Note: All IP addresses are entered as IPv4 address or IPv6 address,
+and netmask takes the format xxx.xxx.xxx.xxx for IPv4 or [0-128] for IPv6.
+The following management port configuration will be applied to ct1.eth0
+Physical IP Address:172.17.1.43Physical IP Address: 172.17.1.43
+Netmask:255.255.255.224Netmask: 255.255.255.224
+Gateway:255.255.255.22417217.1.4333Gateway: 172.17.1.33
+  Physical IP:             172.17.1.43
+  Netmask:                 255.255.255.224
+  Gateway:                 172.17.1.33
+Type 'y' to apply configurations or 'n' to re-enter parameters:yType 'y' to apply configurations or 'n' to re-enter parameters: y
+Applying configuration to the array.
+Configuring management port.
+Configuring network interfaces
+New configuration applied.
+CONFIG_TASK_COMPLETED:CONFIG_TASK_CONFIG_FLASHARRAY
+Skipping connectivity tests.
+CONFIG_TASK_COMPLETED:CONFIG_TASK_TEST_CONNECTIVITY
+passwd: password expiry information changed.
+Setting the new pureuser password.
+Type 'continue' to enter the new pureuser password:Setting the new pureuser password.                                              
+Type 'continue' to enter the new pureuser password:                             
+
+Exit without saving changes.
+CONFIG_TASK_COMPLETED:CONFIG_TASK_PURESETUP_EXITED
+puresetup@PCTFJ2449008D:~$ puresetup timezone
+##########################################
+#   Welcome to the Purity Setup Wizard   #
+##########################################
+Name       Created                  Expires
+puresetup  2025-07-30 14:44:03 UTC  2025-07-30 15:44:03 UTC
+Changing the time zone will require a reboot on this controller.
+Current time zone: Etc/UTC
+Change time zone [requires reboot] (y/n):yChange time zone [requires reboot] (y/n): y
+Configuring tzdata
+------------------
+
+Please select the geographic area in which you live. Subsequent configuration 
+questions will narrow this down by presenting a list of cities, representing the
+time zones in which they are located.
+
+  1. Africa      4. Australia     7. Atlantic Ocean  10. Pacific Ocean
+  2. America     5. Arctic Ocean  8. Europe          11. US
+  3. Antarctica  6. Asia          9. Indian Ocean    12. None of the above
+
+Geographic area: 
+
+Geographic area: 2
+
+
+Please select the city or region corresponding to your time zone.
+
+  1. Adak                       80. Juneau
+  2. Anchorage                  81. Louisville (Kentucky)
+  3. Anguilla                   82. Monticello (Kentucky)
+  4. Antigua                    83. Kralendijk
+  5. Araguaina                  84. La Paz
+  6. Buenos Aires (Argentina)   85. Lima
+  7. Catamarca (Argentina)      86. Los Angeles
+  8. Cordoba (Argentina)        87. Lower Princes
+  9. Jujuy (Argentina)          88. Maceio
+  10. La Rioja (Argentina)      89. Managua
+  11. Mendoza (Argentina)       90. Manaus
+  12. Rio Gallegos (Argentina)  91. Marigot
+  13. Salta (Argentina)         92. Martinique
+  14. San Juan (Argentina)      93. Matamoros
+  15. San Luis (Argentina)      94. Mazatlan
+  16. Tucuman (Argentina)       95. Menominee
+  17. Ushuaia (Argentina)       96. Merida
+  18. Aruba                     97. Metlakatla
+[More] 
+
+  19. Asuncion                  98. Mexico City
+  20. Atikokan                  99. Miquelon
+  21. Atka                      100. Moncton
+  22. Bahia                     101. Monterrey
+  23. Bahia Banderas            102. Montevideo
+  24. Barbados                  103. Montreal
+  25. Belem                     104. Montserrat
+  26. Belize                    105. Nassau
+  27. Blanc-Sablon              106. New York
+  28. Boa Vista                 107. Nipigon
+  29. Bogota                    108. Nome
+  30. Boise                     109. Fernando de Noronha
+  31. Cambridge Bay             110. Beulah (North Dakota)
+  32. Campo Grande              111. Center (North Dakota)
+  33. Cancun                    112. New Salem (North Dakota)
+  34. Caracas                   113. Nuuk
+  35. Cayenne                   114. Ojinaga
+  36. Cayman                    115. Panama
+  37. Chicago                   116. Pangnirtung
+  38. Chihuahua                 117. Paramaribo
+  39. Ciudad_Juarez             118. Phoenix
+  40. Coral Harbour             119. Port-au-Prince
+[More] 
+
+  41. Costa Rica                120. Port of Spain
+  42. Creston                   121. Porto Acre
+  43. Cuiaba                    122. Porto Velho
+  44. Curaçao                  123. Puerto Rico
+  45. Danmarkshavn              124. Punta Arenas
+  46. Dawson                    125. Rainy River
+  47. Dawson Creek              126. Rankin Inlet
+  48. Denver                    127. Recife
+  49. Detroit                   128. Regina
+  50. Dominica                  129. Resolute
+  51. Edmonton                  130. Rio Branco
+  52. Eirunepe                  131. Santa Isabel
+  53. El Salvador               132. Santarém
+  54. Ensenada                  133. Santiago
+  55. Fort Nelson               134. Santo Domingo
+  56. Fortaleza                 135. São Paulo
+  57. Glace Bay                 136. Scoresbysund
+  58. Godthab                   137. Shiprock
+  59. Goose Bay                 138. Sitka
+  60. Grand Turk                139. St Barthelemy
+  61. Grenada                   140. St Johns
+  62. Guadeloupe                141. St Kitts
+[More] 
+
+  63. Guatemala                 142. St Lucia
+  64. Guayaquil                 143. St Thomas
+  65. Guyana                    144. St Vincent
+  66. Halifax                   145. Swift Current
+  67. Havana                    146. Tegucigalpa
+  68. Hermosillo                147. Thule
+  69. Indianapolis (Indiana)    148. Thunder Bay
+  70. Knox (Indiana)            149. Tijuana
+  71. Marengo (Indiana)         150. Toronto
+  72. Petersburg (Indiana)      151. Tortola
+  73. Tell City (Indiana)       152. Vancouver
+  74. Vevay (Indiana)           153. Virgin
+  75. Vincennes (Indiana)       154. Whitehorse
+  76. Winamac (Indiana)         155. Winnipeg
+  77. Inuvik                    156. Yakutat
+  78. Iqaluit                   157. Yellowknife
+  79. Jamaica
+
+Time zone: 
+
+Time zone: 
+
+Time zone: 106
+
+
+
+Current default time zone: 'America/New_York'
+Local time is now:      Wed Jul 30 10:44:54 EDT 2025.
+Universal Time is now:  Wed Jul 30 14:44:54 UTC 2025.
+
+'/cache/timezone/localtime' -> '/usr/share/zoneinfo/America/New_York'
+Confirm time zone change from Etc/UTC to America/New_York
+(y/N):y(y/N): y
+Press ENTER to reboot
+
+This controller will be online after reboot.
+
+EWR4PSX50BLK01-ct0 login: pureeng
+1) Authenticate via CloudAssist
+2) Authenticate via command line
+3) Restore challenge
+Type the number corresponding to the authentication method you want to use.
+
+Selection: 1
+
+An email for identity verification will be sent once email is entered.
+Please follow the authentication instructions provided there and return to this screen when finished or if email has not been received.
+
+
+Enter an email address: fharriS s@purestorage.com
+An error occurred with CloudAssist authentication!
+
+1) Authenticate via CloudAssist
+2) Authenticate via command line
+3) Restore challenge
+Type the number corresponding to the authentication method you want to use.
+
+Selection: pureeng
+pureeng is not a valid input
+
+1) Authenticate via CloudAssist
+2) Authenticate via command line
+3) Restore challenge
+Type the number corresponding to the authentication method you want to use.
+
+Selection: 2
+Challenge: kid:1 tinean neural minny lumbar 2871299-251897301-3950286644334531265
+
+Enter response or type 'save' to save challenge for later: 9e860-21ea9-64a26-404e0-aec61-622a4-d97c9-7260b-8d0f6-bf2b1-65c6c-066ae-f2a57-af0ab-d4151-b5d09-c49b5-4ce87-e4eca-63990-00b37-2728d-113e1-045c4-009d1-32f
+Successfully authenticated
+Last login: Tue May 20 15:37:52 EDT 2025 on ttyS0
+
+Wed Jul 30 10:46:29 2025
+Welcome pureeng. This is Purity Version 6.5.10 on FlashArray EWR4PSX50BLK01
+**********************************************************************
+WARNING: The user pureuser is still configured with the default password.
+         Please change the password now: pureadmin setattr pureuser --password
+**********************************************************************
+http://www.purestorage.com/
+pureeng@EWR4PSX50BLK01-ct0:~$ puresudo su
+     root@EWR4PSX50BLK01-ct0:/var/home/pureeng# puresetup show
+##########################################
+#   Welcome to the Purity Setup Wizard   #
+##########################################
+  Physical IP:             172.17.1.42
+  Virtual IP:              172.17.1.41
+  Netmask:                 255.255.255.224
+  Gateway:                 172.17.1.33
+  DNS Servers:             10.32.203.247,10.32.203.248
+  DNS Domain:              corp.local
+  NTP Servers:             0.us.pool.ntp.org,3.pool.ntp.org
+  SMTP Relay Host:         
+  SMTP Sender Domain:      internalmail.shi.com
+  Alert Email Recipients:  flasharray-alerts@purestorage.com,sanadmins@shi.com
+  HTTP proxy:              
+  Capacity Limit:          
+  Capacity Limit Target:   
+  Physical IP:             172.17.1.43
+  Netmask:                 255.255.255.224
+  Gateway:                 172.17.1.33
+CONFIG_TASK_COMPLETED:CONFIG_TASK_PURESETUP_EXITED
+     root@EWR4PSX50BLK01-ct0:/var/home/pureeng# ping 172.17.1.33
+PING 172.17.1.33 (172.17.1.33) 56(84) bytes of data.
+From 172.17.1.42 icmp_seq=1 Destination Host Unreachable
+From 172.17.1.42 icmp_seq=2 Destination Host Unreachable
+^C
+--- 172.17.1.33 ping statistics ---
+2 packets transmitted, 0 received, +2 errors, 100% packet loss, time 1063ms
+pipe 2
+     root@EWR4PSX50BLK01-ct0:/var/home/pureeng# purenetwork eth list
+Name       Enabled  Type      Subnet  Address      Mask             Gateway      MTU   MAC                Speed        Services     Subinterfaces
+ct0.eth0   False    physical  -       -            -                -            1500  24:a9:37:63:82:2e  100.00 Gb/s  -            -
+ct0.eth1   False    physical  -       -            -                -            1500  24:a9:37:63:82:2f  100.00 Gb/s  -            -
+ct0.eth2   False    physical  -       -            -                -            1500  24:a9:37:63:82:30  25.00 Gb/s   replication  -
+ct0.eth3   False    physical  -       -            -                -            1500  24:a9:37:63:82:31  25.00 Gb/s   replication  -
+ct0.eth4   True     physical  -       172.17.1.42  255.255.255.224  172.17.1.33  1500  24:a9:37:63:82:32  1.00 Gb/s    management   -
+ct0.eth5   False    physical  -       -            -                -            1500  24:a9:37:63:82:33  1.00 Gb/s    management   -
+ct0.eth10  False    physical  -       -            -                -            1500  e0:9d:73:db:a0:89  100.00 Gb/s  -            -
+ct0.eth11  False    physical  -       -            -                -            1500  e0:9d:73:db:a0:88  100.00 Gb/s  -            -
+ct0.eth14  False    physical  -       -            -                -            1500  e0:9d:73:db:b0:2d  100.00 Gb/s  -            -
+ct0.eth15  False    physical  -       -            -                -            1500  e0:9d:73:db:b0:2c  100.00 Gb/s  -            -
+ct0.eth18  False    physical  -       -            -                -            1500  a0:88:c2:7e:8d:b9  25.00 Gb/s   -            -
+ct0.eth19  False    physical  -       -            -                -            1500  a0:88:c2:7e:8d:b8  25.00 Gb/s   -            -
+ct0.eth20  False    physical  -       -            -                -            1500  a0:88:c2:7e:8d:b7  25.00 Gb/s   -            -
+ct0.eth21  False    physical  -       -            -                -            1500  a0:88:c2:7e:8d:b6  25.00 Gb/s   -            -
+ct1.eth0   False    physical  -       -            -                -            1500  24:a9:37:63:85:ef  100.00 Gb/s  -            -
+ct1.eth1   False    physical  -       -            -                -            1500  24:a9:37:63:85:f0  100.00 Gb/s  -            -
+ct1.eth2   False    physical  -       -            -                -            1500  24:a9:37:63:85:f1  25.00 Gb/s   replication  -
+ct1.eth3   False    physical  -       -            -                -            1500  24:a9:37:63:85:f2  25.00 Gb/s   replication  -
+ct1.eth4   True     physical  -       172.17.1.43  255.255.255.224  172.17.1.33  1500  24:a9:37:63:85:f3  1.00 Gb/s    management   -
+ct1.eth5   False    physical  -       -            -                -            1500  24:a9:37:63:85:f4  1.00 Gb/s    management   -
+ct1.eth10  False    physical  -       -            -                -            1500  e0:9d:73:db:ab:01  100.00 Gb/s  -            -
+ct1.eth11  False    physical  -       -            -                -            1500  e0:9d:73:db:ab:00  100.00 Gb/s  -            -
+ct1.eth14  False    physical  -       -            -                -            1500  e0:9d:73:db:b6:85  100.00 Gb/s  -            -
+ct1.eth15  False    physical  -       -            -                -            1500  e0:9d:73:db:b6:84  100.00 Gb/s  -            -
+ct1.eth18  False    physical  -       -            -                -            1500  a0:88:c2:7e:88:39  25.00 Gb/s   -            -
+ct1.eth19  False    physical  -       -            -                -            1500  a0:88:c2:7e:88:38  25.00 Gb/s   -            -
+ct1.eth20  False    physical  -       -            -                -            1500  a0:88:c2:7e:88:37  25.00 Gb/s   -            -
+ct1.eth21  False    physical  -       -            -                -            1500  a0:88:c2:7e:88:36  25.00 Gb/s   -            -
+replbond   False    bond      -       -            -                -            1500  c2:51:53:d2:4b:51  0.00 b/s     replication  -
+vir4       True     vif       -       172.17.1.41  255.255.255.224  172.17.1.33  1500  32:35:bd:b6:60:05  1.00 Gb/s    management   -
+vir5       False    vif       -       -            -                -            1500  f2:b6:c3:e0:11:5b  1.00 Gb/s    management   -
+     root@EWR4PSX50BLK01-ct0:/var/home/pureeng# purenetwork list
+Name       Enabled  Speed        Services
+ct0.eth0   False    100.00 Gb/s  -
+ct0.eth1   False    100.00 Gb/s  -
+ct0.eth2   False    25.00 Gb/s   replication
+ct0.eth3   False    25.00 Gb/s   replication
+ct0.eth4   True     1.00 Gb/s    management
+ct0.eth5   False    1.00 Gb/s    management
+ct0.eth10  False    100.00 Gb/s  -
+ct0.eth11  False    100.00 Gb/s  -
+ct0.eth14  False    100.00 Gb/s  -
+ct0.eth15  False    100.00 Gb/s  -
+ct0.eth18  False    25.00 Gb/s   -
+ct0.eth19  False    25.00 Gb/s   -
+ct0.eth20  False    25.00 Gb/s   -
+ct0.eth21  False    25.00 Gb/s   -
+ct1.eth0   False    100.00 Gb/s  -
+ct1.eth1   False    100.00 Gb/s  -
+ct1.eth2   False    25.00 Gb/s   replication
+ct1.eth3   False    25.00 Gb/s   replication
+ct1.eth4   True     1.00 Gb/s    management
+ct1.eth5   False    1.00 Gb/s    management
+ct1.eth10  False    100.00 Gb/s  -
+ct1.eth11  False    100.00 Gb/s  -
+ct1.eth14  False    100.00 Gb/s  -
+ct1.eth15  False    100.00 Gb/s  -
+ct1.eth18  False    25.00 Gb/s   -
+ct1.eth19  False    25.00 Gb/s   -
+ct1.eth20  False    25.00 Gb/s   -
+ct1.eth21  False    25.00 Gb/s   -
+replbond   False    0.00 b/s     replication
+vir4       True     1.00 Gb/s    management
+vir5       False    1.00 Gb/s    management
+     root@EWR4PSX50BLK01-ct0:/var/home/pureeng# ssh peer
+Last login: Fri Feb 14 20:07:11 2025 from 10.125.0.1
+
+Wed Jul 30 10:50:35 2025
+Welcome root. This is Purity Version 6.5.10 on FlashArray EWR4PSX50BLK01
+**********************************************************************
+WARNING: The user pureuser is still configured with the default password.
+         Please change the password now: pureadmin setattr pureuser --password
+**********************************************************************
+http://www.purestorage.com/
+     root@EWR4PSX50BLK01-ct1:~# ping 9e860-21ea9-64a26-404e0-aec61-622a4-d97c9-7260b-8d0f6-bf2b1-65c6c-066ae-f2a57-af0ab-d4151-b5d09-c49b5-4ce87-e4eca-63990-00b37-2728d-113e1-045c4-009d1-32f^C
+     root@EWR4PSX50BLK01-ct1:~# 
+     root@EWR4PSX50BLK01-ct1:~# puresetup show
+##########################################
+#   Welcome to the Purity Setup Wizard   #
+##########################################
+  Physical IP:             172.17.1.42
+  Virtual IP:              172.17.1.41
+  Netmask:                 255.255.255.224
+  Gateway:                 172.17.1.33
+  DNS Servers:             10.32.203.247,10.32.203.248
+  DNS Domain:              corp.local
+  NTP Servers:             0.us.pool.ntp.org,3.pool.ntp.org
+  SMTP Relay Host:         
+  SMTP Sender Domain:      internalmail.shi.com
+  Alert Email Recipients:  flasharray-alerts@purestorage.com,sanadmins@shi.com
+  HTTP proxy:              
+  Capacity Limit:          
+  Capacity Limit Target:   
+  Physical IP:             172.17.1.43
+  Netmask:                 255.255.255.224
+  Gateway:                 172.17.1.33
+CONFIG_TASK_COMPLETED:CONFIG_TASK_PURESETUP_EXITED
+     root@EWR4PSX50BLK01-ct1:~# ping 172.17.1.33
+PING 172.17.1.33 (172.17.1.33) 56(84) bytes of data.
+^C
+--- 172.17.1.33 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2040ms
+
+     root@EWR4PSX50BLK01-ct1:~# pureexit
+logout
+     root@EWR4PSX50BLK01-ct0:/var/home/pureeng# preureadm status
+Process status:
+purity start/running
+lio-drv start/running
+foed start/running, process 7480
+platform start/running, process 7437
+gui start/running, process 7413
+rest start/running, process 9185
+monitor start/running, process 7425
+iostat start/running, process 15526
+statistics start/running, process 7457
+middleware start/running, process 9159
+vasa start/running, process 10776
+platform working
+foed working
+gui working
+platform_env working
+quorum working
+foed_env working
+foed_ready working
+remote_patch working
+driver working
+san working
+health working
+lio-drv working
+middleware-db working
+middleware working
+vasa working
+     root@EWR4PSX50BLK01-ct0:/var/home/pureeng# purearray list --controller
+Name  Type              Mode       Model     Version  Status  Internal Details
+CT0   array_controller  primary    FA-X50R4  6.5.10   ready   
+CT1   array_controller  secondary  FA-X50R4  6.5.10   ready   
+     root@EWR4PSX50BLK01-ct0:/var/home/pureeng# purehw list
+Name       Status         Identify  Slot  Index  Speed        Temperature  Voltage  Details
+CH0        ok             off       -     0      -            -            -        -
+CH0.BAY0   ok             off       -     0      -            -            -        -
+CH0.BAY1   ok             off       -     1      -            -            -        -
+CH0.BAY2   ok             off       -     2      -            -            -        -
+CH0.BAY3   ok             off       -     3      -            -            -        -
+CH0.BAY4   ok             off       -     4      -            -            -        -
+CH0.BAY5   ok             off       -     5      -            -            -        -
+CH0.BAY6   ok             off       -     6      -            -            -        -
+CH0.BAY7   ok             off       -     7      -            -            -        -
+CH0.BAY8   ok             off       -     8      -            -            -        -
+CH0.BAY9   ok             off       -     9      -            -            -        -
+CH0.BAY10  not_installed  off       -     10     -            -            -        -
+CH0.BAY11  not_installed  off       -     11     -            -            -        -
+CH0.BAY12  not_installed  off       -     12     -            -            -        -
+CH0.BAY13  not_installed  off       -     13     -            -            -        -
+CH0.BAY14  not_installed  off       -     14     -            -            -        -
+CH0.BAY15  not_installed  off       -     15     -            -            -        -
+CH0.BAY16  not_installed  off       -     16     -            -            -        -
+CH0.BAY17  not_installed  off       -     17     -            -            -        -
+CH0.BAY18  not_installed  off       -     18     -            -            -        -
+CH0.BAY19  not_installed  off       -     19     -            -            -        -
+CH0.NVB0   ok             off       -     0      -            -            -        -
+CH0.NVB1   ok             off       -     1      -            -            -        -
+CH0.NVB2   not_installed  off       -     2      -            -            -        -
+CH0.NVB3   not_installed  off       -     3      -            -            -        -
+CH0.PWR0   ok             -         -     0      -            -            206 V    -
+CH0.PWR1   ok             -         -     1      -            -            206 V    -
+CH0.TMP0   ok             -         -     0      -            23 C         -        -
+CT0        ok             off       -     0      -            -            -        -
+CT0.ETH0   ok             -         -     0      0.00 b/s     -            -        -
+CT0.ETH1   ok             -         -     1      0.00 b/s     -            -        -
+CT0.ETH2   ok             -         -     2      0.00 b/s     -            -        -
+CT0.ETH3   ok             -         -     3      0.00 b/s     -            -        -
+CT0.ETH4   ok             -         -     4      1.00 Gb/s    -            -        -
+CT0.ETH5   ok             -         -     5      0.00 b/s     -            -        -
+CT0.ETH10  ok             -         1     10     100.00 Gb/s  -            -        -
+CT0.ETH11  ok             -         1     11     100.00 Gb/s  -            -        -
+CT0.ETH14  ok             -         2     14     100.00 Gb/s  -            -        -
+CT0.ETH15  ok             -         2     15     100.00 Gb/s  -            -        -
+CT0.ETH18  ok             -         3     18     0.00 b/s     -            -        -
+CT0.ETH19  ok             -         3     19     0.00 b/s     -            -        -
+CT0.ETH20  ok             -         3     20     0.00 b/s     -            -        -
+CT0.ETH21  ok             -         3     21     0.00 b/s     -            -        -
+CT0.FAN0   ok             -         -     0      -            -            -        -
+CT0.FAN1   ok             -         -     1      -            -            -        -
+CT0.FAN2   ok             -         -     2      -            -            -        -
+CT0.FAN3   ok             -         -     3      -            -            -        -
+CT0.FAN4   ok             -         -     4      -            -            -        -
+CT0.FAN5   ok             -         -     5      -            -            -        -
+CT0.TMP0   ok             -         -     0      -            36 C         -        -
+CT0.TMP1   ok             -         -     1      -            37 C         -        -
+CT0.TMP2   ok             -         -     2      -            44 C         -        -
+CT0.TMP3   ok             -         -     3      -            45 C         -        -
+CT0.TMP4   ok             -         -     4      -            40 C         -        -
+CT0.TMP5   ok             -         -     5      -            42 C         -        -
+CT0.TMP6   ok             -         -     6      -            26 C         -        -
+CT0.TMP7   ok             -         -     7      -            27 C         -        -
+CT0.TMP8   ok             -         -     8      -            48 C         -        -
+CT0.TMP9   ok             -         -     9      -            31 C         -        -
+CT0.TMP11  ok             -         -     11     -            30 C         -        -
+CT0.TMP12  ok             -         -     12     -            30 C         -        -
+CT0.TMP13  ok             -         -     13     -            32 C         -        -
+CT0.TMP14  ok             -         -     14     -            31 C         -        -
+CT0.TMP15  ok             -         -     15     -            30 C         -        -
+CT0.TMP17  ok             -         -     17     -            31 C         -        -
+CT0.TMP19  ok             -         -     19     -            30 C         -        -
+CT0.TMP20  ok             -         -     20     -            30 C         -        -
+CT0.TMP21  ok             -         -     21     -            35 C         -        -
+CT0.TMP22  ok             -         -     22     -            34 C         -        -
+CT0.TMP23  ok             -         -     23     -            33 C         -        -
+CT1        ok             off       -     1      -            -            -        -
+CT1.ETH0   ok             -         -     0      0.00 b/s     -            -        -
+CT1.ETH1   ok             -         -     1      0.00 b/s     -            -        -
+CT1.ETH2   ok             -         -     2      0.00 b/s     -            -        -
+CT1.ETH3   ok             -         -     3      0.00 b/s     -            -        -
+CT1.ETH4   ok             -         -     4      1.00 Gb/s    -            -        -
+CT1.ETH5   ok             -         -     5      0.00 b/s     -            -        -
+CT1.ETH10  ok             -         1     10     100.00 Gb/s  -            -        -
+CT1.ETH11  ok             -         1     11     100.00 Gb/s  -            -        -
+CT1.ETH14  ok             -         2     14     100.00 Gb/s  -            -        -
+CT1.ETH15  ok             -         2     15     100.00 Gb/s  -            -        -
+CT1.ETH18  ok             -         3     18     0.00 b/s     -            -        -
+CT1.ETH19  ok             -         3     19     0.00 b/s     -            -        -
+CT1.ETH20  ok             -         3     20     0.00 b/s     -            -        -
+CT1.ETH21  ok             -         3     21     0.00 b/s     -            -        -
+CT1.FAN0   ok             -         -     0      -            -            -        -
+CT1.FAN1   ok             -         -     1      -            -            -        -
+CT1.FAN2   ok             -         -     2      -            -            -        -
+CT1.FAN3   ok             -         -     3      -            -            -        -
+CT1.FAN4   ok             -         -     4      -            -            -        -
+CT1.FAN5   ok             -         -     5      -            -            -        -
+CT1.TMP0   ok             -         -     0      -            37 C         -        -
+CT1.TMP1   ok             -         -     1      -            38 C         -        -
+CT1.TMP2   ok             -         -     2      -            51 C         -        -
+CT1.TMP3   ok             -         -     3      -            50 C         -        -
+CT1.TMP4   ok             -         -     4      -            44 C         -        -
+CT1.TMP5   ok             -         -     5      -            43 C         -        -
+CT1.TMP6   ok             -         -       purehw list --all
+Name       Status         Identify  Slot  Index  Model            Part Number  Serial          Speed        Temperature  Voltage  Type          Handle                                  Parent
+CH0        ok             off       -     0      M_SERIES         84-0004-06   PCHFJ24480096   -            -            -        chassis       M_SERIES_PCHFJ24480096                  hwroot
+CH0.BAY0   ok             off       -     0      -                83-0439-07   PFMUH244411C6   -            -            -        drive_bay     M_SERIES_PCHFJ24480096_ch_fm_bay0       M_SERIES_PCHFJ24480096
+CH0.BAY1   ok             off       -     1      -                83-0439-07   PFMUH244410A0   -            -            -        drive_bay     M_SERIES_PCHFJ24480096_ch_fm_bay1       M_SERIES_PCHFJ24480096
+CH0.BAY2   ok             off       -     2      -                83-0439-07   PFMUH24370073   -            -            -        drive_bay     M_SERIES_PCHFJ24480096_ch_fm_bay2       M_SERIES_PCHFJ24480096
+CH0.BAY3   ok             off       -     3      -                83-0439-07   PFMUH244410B5   -            -            -        drive_bay     M_SERIES_PCHFJ24480096_ch_fm_bay3       M_SERIES_PCHFJ24480096
+CH0.BAY4   ok             off       -     4      -                83-0439-07   PFMUH244410C6   -            -            -        drive_bay     M_SERIES_PCHFJ24480096_ch_fm_bay4       M_SERIES_PCHFJ24480096
+CH0.BAY5   ok             off       -     5      -                83-0439-07   PFMUH2441013D   -            -            -        drive_bay     M_SERIES_PCHFJ24480096_ch_fm_bay5       M_SERIES_PCHFJ24480096
+CH0.BAY6   ok             off       -     6      -                83-0439-07   PFMUH24441220   -            -            -        drive_bay     M_SERIES_PCHFJ24480096_ch_fm_bay6       M_SERIES_PCHFJ24480096
+CH0.BAY7   ok             off       -     7      -                83-0439-07   PFMUH2444115A   -            -            -        drive_bay     M_SERIES_PCHFJ24480096_ch_fm_bay7       M_SERIES_PCHFJ24480096
+CH0.BAY8   ok             off       -     8      -                83-0439-07   PFMUH24440E16   -            -            -        drive_bay     M_SERIES_PCHFJ24480096_ch_fm_bay8       M_SERIES_PCHFJ24480096
+CH0.BAY9   ok             off       -     9      -                83-0439-07   PFMUH24440DEC   -            -            -        drive_bay     M_SERIES_PCHFJ24480096_ch_fm_bay9       M_SERIES_PCHFJ24480096
+CH0.BAY10  not_installed  off       -     10     -                -            -               -            -            -        drive_bay     M_SERIES_PCHFJ24480096_ch_fm_bay10      M_SERIES_PCHFJ24480096
+CH0.BAY11  not_installed  off       -     11     -                -            -               -            -            -        drive_bay     M_SERIES_PCHFJ24480096_ch_fm_bay11      M_SERIES_PCHFJ24480096
+CH0.BAY12  not_installed  off       -     12     -                -            -               -            -            -        drive_bay     M_SERIES_PCHFJ24480096_ch_fm_bay12      M_SERIES_PCHFJ24480096
+CH0.BAY13  not_installed  off       -     13     -                -            -               -            -            -        drive_bay     M_SERIES_PCHFJ24480096_ch_fm_bay13      M_SERIES_PCHFJ24480096
+CH0.BAY14  not_installed  off       -     14     -                -            -               -            -            -        drive_bay     M_SERIES_PCHFJ24480096_ch_fm_bay14      M_SERIES_PCHFJ24480096
+CH0.BAY15  not_installed  off       -     15     -                -            -               -            -            -        drive_bay     M_SERIES_PCHFJ24480096_ch_fm_bay15      M_SERIES_PCHFJ24480096
+CH0.BAY16  not_installed  off       -     16     -                -            -               -            -            -        drive_bay     M_SERIES_PCHFJ24480096_ch_fm_bay16      M_SERIES_PCHFJ24480096
+CH0.BAY17  not_installed  off       -     17     -                -            -               -            -            -        drive_bay     M_SERIES_PCHFJ24480096_ch_fm_bay17      M_SERIES_PCHFJ24480096
+CH0.BAY18  not_installed  off       -     18     -                -            -               -            -            -        drive_bay     M_SERIES_PCHFJ24480096_ch_fm_bay18      M_SERIES_PCHFJ24480096
+CH0.BAY19  not_installed  off       -     19     -                -            -               -            -            -        drive_bay     M_SERIES_PCHFJ24480096_ch_fm_bay19      M_SERIES_PCHFJ24480096
+CH0.NVB0   ok             off       -     0      -                -            -               -            -            -        nvram_bay     M_SERIES_PCHFJ24480096_nvme_nvram_bay0  M_SERIES_PCHFJ24480096
+CH0.NVB1   ok             off       -     1      -                -            -               -            -            -        nvram_bay     M_SERIES_PCHFJ24480096_nvme_nvram_bay1  M_SERIES_PCHFJ24480096
+CH0.NVB2   not_installed  off       -     2      -                -            -               -            -            -        nvram_bay     M_SERIES_PCHFJ24480096_nvme_nvram_bay2  M_SERIES_PCHFJ24480096
+CH0.NVB3   not_installed  off       -     3      -                -            -               -            -            -        nvram_bay     M_SERIES_PCHFJ24480096_nvme_nvram_bay3  M_SERIES_PCHFJ24480096
+CH0.PWR0   ok             -         -     0      DPS-1600AB-52 B  -            LICD2429012501  -            -            206 V    power_supply  M_SERIES_PCHFJ24480096_psu0             M_SERIES_PCHFJ24480096
+CH0.PWR1   ok             -         -     1      DPS-1600AB-52 B  -            LICD2429012506  -            -            206 V    power_supply  M_SERIES_PCHFJ24480096_psu1             M_SERIES_PCHFJ24480096
+CH0.TMP0   ok             -         -     0      -                -            -               -            23 C         -        temp_sensor   M_SERIES_PCHFJ24480096_inlet_temp0      M_SERIES_PCHFJ24480096
+CT0        ok             off       -     0      FA-X50R4         83-0551-01   PCTFJ244900C8   -            -            -        controller    COBALTA_PCTFJ244900C8                   M_SERIES_PCHFJ24480096
+CT0.ETH0   ok             -         -     0      -                -            -               0.00 b/s     -            -        eth_port      COBALTA_PCTFJ244900C8_0000:2a:00.0_p0   COBALTA_PCTFJ244900C8
+CT0.ETH1   ok             -         -     1      -                -            -               0.00 b/s     -            -        eth_port      COBALTA_PCTFJ244900C8_0000:2a:00.1_p1   COBALTA_PCTFJ244900C8
+CT0.ETH2   ok             -         -     2      -                -            -               0.00 b/s     -            -        eth_port      COBALTA_PCTFJ244900C8_0000:ac:00.0_p2   COBALTA_PCTFJ244900C8
+CT0.ETH3   ok             -         -     3      -                -            -               0.00 b/s     -            -        eth_port      COBALTA_PCTFJ244900C8_0000:ac:00.1_p3   COBALTA_PCTFJ244900C8
+CT0.ETH4   ok             -         -     4      -                -            -               1.00 Gb/s    -            -        eth_port      COBALTA_PCTFJ244900C8_0000:03:00.0_p4   COBALTA_PCTFJ244900C8
+CT0.ETH5   ok             -         -     5      -                -            -               0.00 b/s     -            -        eth_port      COBALTA_PCTFJ244900C8_0000:05:00.0_p5   COBALTA_PCTFJ244900C8
+CT0.ETH10  ok             -         1     10     -                -            -               100.00 Gb/s  -            -        eth_port      COBALTA_PCTFJ244900C8_0000:3d:00.1_p10  COBALTA_PCTFJ244900C8
+CT0.ETH11  ok             -         1     11     -                -            -               100.00 Gb/s  -            -        eth_port      COBALTA_PCTFJ244900C8_0000:3d:00.0_p11  COBALTA_PCTFJ244900C8
+CT0.ETH14  ok             -         2     14     -                -            -               100.00 Gb/s  -            -        eth_port      COBALTA_PCTFJ244900C8_0000:99:00.1_p14  COBALTA_PCTFJ244900C8
+CT0.ETH15  ok             -         2     15     -                -            -               100.00 Gb/s  -            -        eth_port      COBALTA_PCTFJ244900C8_0000:99:00.0_p15  COBALTA_PCTFJ244900C8
+CT0.ETH18  ok             -         3     18     -                -            -               0.00 b/s     -            -        eth_port      COBALTA_PCTFJ244900C8_0000:bd:00.3_p18  COBALTA_PCTFJ244900C8
+CT0.ETH19  ok             -         3     19     -                -            -               0.00 b/s     -            -         -         -     4      -                80-1792-00   -               -            -            -        cooling       COBALTA_PCTFJ244900C8_sens104           COBALTA_PCTFJ244900C8
+CT0.FAN5   ok             -         -     5      -                80-1792-00   -               -            -            -        cooling       COBALTA_PCTFJ244900C8_sens106           COBALTA_PCTFJ244900C8
+CT0.TMP0   ok             -         -     0      -                -            -               -            36 C         -        temp_sensor   COBALTA_PCTFJ244900C8_sens60            COBALTA_PCTFJ244900C8
+CT0.TMP1   ok             -         -     1      -                -            -               -            37 C         -        temp_sensor   COBALTA_PCTFJ244900C8_sens61            COBALTA_PCTFJ244900C8
+CT0.TMP2   ok             -         -     2      -                -            -               -            44 C         -        temp_sensor   COBALTA_PCTFJ244900C8_sens64            COBALTA_PCTFJ244900C8
+CT0.TMP3   ok             -         -     3      -                -            -               -            45 C         -        temp_sensor   COBALTA_PCTFJ244900C8_sens65            COBALTA_PCTFJ244900C8
+CT0.TMP4   ok             -         -     4      -                -            -               -            40 C         -        temp_sensor   COBALTA_PCTFJ244900C8_sens72            COBALTA_PCTFJ244900C8
+CT0.TMP5   ok             -         -     5      -                -            -               -            42 C         -        temp_sensor   COBALTA_PCTFJ244900C8_sens73            COBALTA_PCTFJ244900C8
+CT0.TMP6   ok             -         -     6      -                -            -               -            26 C         -        temp_sensor   COBALTA_PCTFJ244900C8_sens74            COBALTA_PCTFJ244900C8
+CT0.TMP7   ok             -         -     7      -                -            -               -            26 C         -        temp_sensor   COBALTA_PCTFJ244900C8_sens75            COBALTA_PCTFJ244900C8
+CT0.TMP8   ok             -         -     8      -                -            -               -            48 C         -        temp_sensor   COBALTA_PCTFJ244900C8_sens76            COBALTA_PCTFJ244900C8
+CT0.TMP9   ok             -         -     9      -                -            -               -            31 C         -        temp_sensor   COBALTA_PCTFJ244900C8_sens77            COBALTA_PCTFJ244900C8
+CT0.TMP11  ok             -         -     11     -                -            -               -            30 C         -        temp_sensor   COBALTA_PCTFJ244900C8_sens79            COBALTA_PCTFJ244900C8
+CT0.TMP12  ok             -         -     12     -                -            -               -            30 C         -        temp_sensor   COBALTA_PCTFJ244900C8_sens80            COBALTA_PCTFJ244900C8
+CT0.TMP13  ok             -         -     13     -                -            -               -            32 C         -        temp_sensor   COBALTA_PCTFJ244900C8_sens81            COBALTA_PCTFJ244900C8
+CT0.TMP14  ok             -         -     14     -                -            -               -            31 C         -        temp_sensor   COBALTA_PCTFJ244900C8_sens82            COBALTA_PCTFJ244900C8
+CT0.TMP15  ok             -         -     15     -                -            -               -            30 C         -        temp_sensor   COBALTA_PCTFJ244900C8_sens83            COBALTA_PCTFJ244900C8
+CT0.TMP17  ok             -         -     17     -                -            -               -            31 C         -        temp_sensor   COBALTA_PCTFJ244900C8_sens85            COBALTA_PCTFJ244900C8
+CT0.TMP19  ok             -         -     19     -                -            -               -            30 C         -        temp_sensor   COBALTA_PCTFJ244900C8_sens87            COBALTA_PCTFJ244900C8
+CT0.TMP20  ok             -         -     20     -                -            -               -            30 C         -        temp_sensor   COBALTA_PCTFJ244900C8_sens88            COBALTA_PCTFJ244900C8
+CT0.TMP21  ok             -         -     21     -                -            -               -            35 C         -        temp_sensor   COBALTA_PCTFJ244900C8_sens89            COBALTA_PCTFJ244900C8
+CT0.TMP22  ok             -         -     22     -                -            -               -            34 C         -        temp_sensor   COBALTA_PCTFJ244900C8_sens90            COBALTA_PCTFJ244900C8
+CT0.TMP23  ok             -         -     23     -                -            -               -            33 C         -        temp_sensor   COBALTA_PCTFJ244900C8_sens91            COBALTA_PCTFJ244900C8
+CT1        ok             off       -     1      FA-X50R4         83-0551-01   PCTFJ2449008D   -            -            -        controller    COBALTA_PCTFJ2449008D                   M_SERIES_PCHFJ24480096
+CT1.ETH0   ok             -         -     0      -                -            -               0.00 b/s     -            -        eth_port      COBALTA_PCTFJ2449008D_0000:2a:00.0_p0   COBALTA_PCTFJ2449008D
+CT1.ETH1   ok             -         -     1      -                -            -               0.00 b/s     -            -        eth_port      COBALTA_PCTFJ2449008D_0000:2a:00.1_p1   COBALTA_PCTFJ2449008D
+CT1.ETH2   ok             -         -     2      -                -            -               0.00 b/s     -            -        eth_port      COBALTA_PCTFJ2449008D_0000:ac:00.0_p2   COBALTA_PCTFJ2449008D
+CT1.ETH3   ok             -         -     3      -                -            -               0.00 b/s     -            -        eth_port      COBALTA_PCTFJ2449008D_0000:ac:00.1_p3   COBALTA_PCTFJ2449008D
+CT1.ETH4   ok             -         -     4      -                -            -               1.00 Gb/s    -            -        eth_port      COBALTA_PCTFJ2449008D_0000:03:00.0_p4   COBALTA_PCTFJ2449008D
+CT1.ETH5   ok             -         -     5      -                -            -               0.00 b/s     -            -        eth_port      COBALTA_PCTFJ2449008D_0000:05:00.0_p5   COBALTA_PCTFJ2449008D
+CT1.ETH10  ok             -         1     10     -                -            -               100.00 Gb/s  -            -        eth_port      COBALTA_PCTFJ2449008D_0000:3d:00.1_p10  COBALTA_PCTFJ2449008D
+CT1.ETH11  ok             -         1     11     -                -            -               100.00 Gb/s  -            -        eth_port      COBALTA_PCTFJ2449008D_0000:3d:00.0_p11  COBALTA_PCTFJ2449008D
+CT1.ETH14  ok             -         2     14     -                -            -               100.00 Gb/s  -            -        eth_port      COBALTA_PCTFJ2449008D_0000:99:00.1_p14  COBALTA_PCTFJ2449008D
+CT1.ETH15  ok             -         2     15     -                -            -               100.00 Gb/s  -            -        eth_port      COBALTA_PCTFJ2449008D_0000:99:00.0_p15  COBALTA_PCTFJ2449008D
+CT1.ETH18  ok             -         3     18     -                -            -               0.00 b/s     -            -        eth_port      COBALTA_PCTFJ2449008D_0000:bd:00.3_p18  COBALTA_PCTFJ2449008D
+CT1.ETH19  ok             -         3     19     -                -            -               0.00 b/s     -            -        eth_port      COBALTA_PCTFJ2449008D_0000:bd:00.2_p19  COBALTA_PCTFJ2449008D
+CT1.ETH20  ok             -         3     20     -                -            -               0.00 b/s     -            -        eth_port      COBALTA_PCTFJ2449008D_0000:bd:00.1_p20  COBALTA_PCTFJ2449008D
+CT1.ETH21  ok             -         3     21     -                -            -               0.00 b/s     -            -        eth_port      COBALTA_PCTFJ2449008D_0000:bd:00.0_p21  COBALTA_PCTFJ2449008D
+CT1.FAN0   ok             -         -     0      -                80-1792-00   -               -            -            -        cooling       COBALTA_PCTFJ2449008D_sens96            COBALTA_PCTFJ2449008D
+CT1.FAN1   ok             -         -     1      -                80-1792-00   -               -            -            -        cooling       COBALTA_PCTFJ2449008D_sens98            COBALTA_PCTFJ2449008D
+CT1.FAN2   ok             -         -     2      -                80-1792-00   -               -            -            -        cooling       COBALTA_PCTFJ2449008D_sens100           COBALTA_PCTFJ2449008D
+CT1.FAN3   ok             -         -     3      -                80-1792-00   -               -            -            -        cooling       COBALTA_PCTFJ2449008D_sens102           COBALTA_PCTFJ2449008D
+CT1.FAN4   ok             -         -     4      -                80-1792-00   -               -            -            -        cooling       COBALTA_PCTFJ2449008D_sens104           COBALTA_PCTFJ2449008D
+CT1.FAN5   ok             -         -     5      -                80-1792-00   -               -            -            -        cooling       COBALTA_PCTFJ2449008D_sens106           COBALTA_PCTFJ2449008D
+CT1.TMP0   ok             -         -     0      -                -            -               -            37 C         -        temp_sensor   COBALTA_PCTFJ2449008D_sens60            COBALTA_PCTFJ2449008D
+CT1.TMP1   ok             -         -     1      -                -            -               -            38 C         -        temp_sensor   COBALTA_PCTFJ2449008D_sens61            COBALTA_PCTFJ2449008D
+CT1.TMP2   ok             -         -     2      -                -            -               -            51 C         -        temp_sensor   COBALTA_PCTFJ2449008D_sens64            COBALTA_PCTFJ2449008D
+CT1.TMP3   ok             -         -     3      -                -            -               -            50 C         -        temp_sensor   COBALTA_PCTFJ2449008D_sens65            COBALTA_PCTFJ2449008D
+CT1.TMP4   ok             -         -     4      -                -            -               -            44 C         -        temp_sensor   COBALTA_PCTFJ2449008D_sens72            COBALTA_PCTFJ2449008D
+CT1.TMP5   ok             -         -     5      -                -            -               -            43 C         -        temp_sensor   COBALTA_PCTFJ2449008D_sens73            COBALTA_PCTFJ2449008D
+CT1.TMP6   ok             -         -     6      -                -            -               -            27 C         -        temp_sensor   COBALTA_PCTFJ2449008D_sens74            COBALTA_PCTFJ2449008D
+CT1.TMP7   ok             -         -     7      -                -            -               -            28 C         -        temp_sensor   COBALTA_PCTFJ2449008D_sens75            COBALTA_PCTFJ2449008D
+CT1.TMP8   ok             -         -     8      -                -            -               -            50 C         -        temp_sensor   COBALTA_PCTFJ2449008D_sens76            COBALTA_PCTFJ2449008D
+CT1.TMP9   ok             -         -     9      -                -            -               -            34 C         -        temp_sensor   COBALTA_PCTFJ2449008D_sens77            COBALTA_PCTFJ2449008D
+CT1.TMP11  ok             -         -     11     -                -            -               -            32 C         -        temp_sensor   COBALTA_PCTFJ2449008D_sens79            COBALTA_PCTFJ2449008D
+CT1.TMP12  ok             -         -     12     -                -            -               -            31 C         -        temp_sensor   COBALTA_PCTFJ2449008D_sens80            COBALTA_PCTFJ2449008D
+CT1.TMP13  ok             -         -     13     -                -            -               -            34 C         -        temp_sensor   COBALTA_PCTFJ2449008D_sens81            COBALTA_PCTFJ2449008D
+CT1.TMP14  ok             -         -     14     -                -            -               -            33 C         -        temp_sensor   COBALTA_PCTFJ2449008D_sens82            COBALTA_PCTFJ2449008D
+CT1.TMP15  ok             -         -     15     -                -            -               -            32 C         -        temp_sensor   COBALTA_PCTFJ2449008D_sens83            COBALTA_PCTFJ2449008D
+CT1.TMP17  ok             -         -     17     -                -            -               -            33 C         -        temp_sensor   COBALTA_PCTFJ2449008D_sens85            COBALTA_PCTFJ2449008D
+CT1.TMP19  ok             -         -     19     -                -            -               -            32 C         -        temp_sensor   COBALTA_PCTFJ2449008D_sens87            COBALTA_PCTFJ2449008D
+CT1.TMP20  ok             -         -     20     -                -            -               -            31 C         -        temp_sensor   COBALTA_PCTFJ2449008D_sens88            COBALTA_PCTFJ2449008D
+CT1.TMP21  ok             -         -     21     -                -            -               -            35 C         -        temp_sensor   COBALTA_PCTFJ2449008D_sens89            COBALTA_PCTFJ2449008D
+CT1.TMP22  ok             -         -     22     -                -            -               -            34 C         -        temp_sensor   COBALTA_PCTFJ2449008D_sens90            COBALTA_PCTFJ2449008D
+CT1.TMP23  ok             -         -     23     -                -            -               -            33 C         -        temp_sensor   COBALTA_PCTFJ2449008D_sens91            COBALTA_PCTFJ2449008D
+     root@EWR4PSX50BLK01-ct0:/var/home/pureeng# puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    healthy  4.56T     -
+CH0.BAY1   SSD    healthy  4.56T     -
+CH0.BAY2   SSD    healthy  4.56T     -
+CH0.BAY3   SSD    healthy  4.56T     -
+CH0.BAY4   SSD    healthy  4.56T     -
+CH0.BAY5   SSD    healthy  4.56T     -
+CH0.BAY6   SSD    healthy  4.56T     -
+CH0.BAY7   SSD    healthy  4.56T     -
+CH0.BAY8   SSD    healthy  4.56T     -
+CH0.BAY9   SSD    healthy  4.56T     -
+CH0.BAY10  -      unused   0.00      -
+CH0.BAY11  -      unused   0.00      -
+CH0.BAY12  -      unused   0.00      -
+CH0.BAY13  -      unused   0.00      -
+CH0.BAY14  -      unused   0.00      -
+CH0.BAY15  -      unused   0.00      -
+CH0.BAY16  -      unused   0.00      -
+CH0.BAY17  -      unused   0.00      -
+CH0.BAY18  -      unused   0.00      -
+CH0.BAY19  -      unused   0.00      -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  unused   0.00      -
+CH0.NVB3   NVRAM  unused   0.00      -
+     root@EWR4PSX50BLK01-ct0:/var/home/pureeng# puredb list --sdrives
+usage: puredb list [-h] [--csv] [--pretty] [--notitle]
+                   {apartment_mappings,appcpus,au_count,contexts,failpoints,job,drives,nvrams,memory,mode,peer,persist_seq,readonly,reservation,reservedarea,type,schemas,segment_range,segment_extent,segment_format,segment,uptick,services,snap,objects,pgroup_objects,space,pod_space,fe_space,effective_used,ssd_mapped,tunable,uptime,watchdog,nvram_throttle,traffic_shaping,supported_drives,write_group_evenness,wide_segments,evac_segment_count,logbook,frontier_tracker_health,au_fullness,evacs,drive_params,primary_ac_compression_format,secondary_rdma_compression_format}
+                   ...
+puredb list: error: the following arguments are required: {apartment_mappings,appcpus,au_count,contexts,failpoints,job,drives,nvrams,memory,mode,peer,persist_seq,readonly,reservation,reservedarea,type,schemas,segment_range,segment_extent,segment_format,segment,uptick,services,snap,objects,pgroup_objects,space,pod_space,fe_space,effective_used,ssd_mapped,tunable,uptime,watchdog,nvram_throttle,traffic_shaping,supported_drives,write_group_evenness,wide_segments,evac_segment_count,logbook,frontier_tracker_health,au_fullness,evacs,drive_params,primary_ac_compression_format,secondary_rdma_compression_format}
+     root@EWR4PSX50BLK01-ct0:/var/home/pureeng# purebdb list drieves
+Name      Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0  1        SSD    NVMe      healthy  4.56T     0.00          0.00      7576843699326174397:10598773361840577690   6/97           21/103551
+CH0.DRV1  1        SSD    NVMe      healthy  4.56T     0.00          0.00      9152185689846269061:13828674980875920587   4/97           22/103544
+CH0.DRV2  1        SSD    NVMe      healthy  4.56T     0.00          0.00      6559444938786229052:10666287945745882069   6/97           19/103521
+CH0.DRV3  1        SSD    NVMe      healthy  4.56T     0.00          0.00      12727117649592797399:9676702377844359869   5/97           21/103544
+CH0.DRV4  1        SSD    NVMe      healthy  4.56T     0.00          0.00      3271754445714640366:10889403328439479855   4/97           27/103569
+CH0.DRV5  1        SSD    NVMe      healthy  4.56T     0.00          0.00      10604082016023888802:9744347700167328182   4/97           22/103433
+CH0.DRV6  1        SSD    NVMe      healthy  4.56T     0.00          0.00      3564231740239201769:10181971212337513365   4/97           22/103469
+CH0.DRV7  1        SSD    NVMe      healthy  4.56T     0.00          0.00      8473868982833728166:12215955807476107976   4/97           22/103622
+CH0.DRV8  1        SSD    NVMe      healthy  4.56T     0.00          0.00      12504464628448052298:10184547783538661810  6/97           22/103509
+CH0.DRV9  1        SSD    NVMe      healthy  4.56T     0.00          0.00      2902993545199239875:9461796718558278711    4/97           22/103556
+CH0.NVR0  0        NVRAM  NVMe      healthy  7.52G     -             0.00      16696426990794393586:13146854498223009731  -              -
+CH0.NVR1  0        NVRAM  NVMe      healthy  7.52G     -             0.00      7308884866699971361:11523049880750619761   -              -
+     root@EWR4PSX50BLK01-ct0:/var/home/pureeng# purenetwrwork ping eth4 eth4 ping 
+usage: purenetwork [-h] {eth,fc,list} ...
+purenetwork: error: argument subcommand: invalid choice: 'eth4' (choose from 'eth', 'fc', 'list')
+     root@EWR4PSX50BLK01-ct0:/var/home/pureeng# purenetwork eth4 ping puresetup show
+##########################################
+#   Welcome to the Purity Setup Wizard   #
+##########################################
+  Physical IP:             172.17.1.42
+  Virtual IP:              172.17.1.41
+  Netmask:                 255.255.255.224
+  Gateway:                 172.17.1.33
+  DNS Servers:             10.32.203.247,10.32.203.248
+  DNS Domain:              corp.local
+  NTP Servers:             0.us.pool.ntp.org,3.pool.ntp.org
+  SMTP Relay Host:         
+  SMTP Sender Domain:      internalmail.shi.com
+  Alert Email Recipients:  flasharray-alerts@purestorage.com,sanadmins@shi.com
+  HTTP proxy:              
+  Capacity Limit:          
+  Capacity Limit Target:   
+  Physical IP:             172.17.1.43
+  Netmask:                 255.255.255.224
+  Gateway:                 172.17.1.33
+CONFIG_TASK_COMPLETED:CONFIG_TASK_PURESETUP_EXITED
+     root@EWR4PSX50BLK01-ct0:/var/home/pureeng# purenetwork ethct1.eth4 ping 8.8.8. .
+usage: purenetwork [-h] {eth,fc,list} ...
+purenetwork: error: argument subcommand: invalid choice: 'ct1.eth4' (choose from 'eth', 'fc', 'list')
+     root@EWR4PSX50BLK01-ct0:/var/home/pureeng# purenetwork ct1.eth4 ping 8.8.8. 
+
+     root@EWR4PSX50BLK01-ct0:/var/home/pureeng# purenetwork eth ping
+usage: purenetwork eth ping [-h] [--count COUNT] [--interface INTERFACE]
+                            [--no-hostname] [--packet-size PACKET-SIZE]
+                            [--user-to-user-latency]
+                            DEST
+purenetwork eth ping: error: the following arguments are required: DEST
+     root@EWR4PSX50BLK01-ct0:/var/home/pureeng# purenetwork eth ping 8.8.8.8
+Error: PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+From 172.17.1.42 icmp_seq=1 Destination Host Unreachable
+
+--- 8.8.8.8 ping statistics ---
+1 packets transmitted, 0 received, +1 errors, 100% packet loss, time 0ms
+     root@EWR4PSX50BLK01-ct0:/var/home/pureeng# purenetwrowoworkork eth --interface ct0. eth10 ping 8.8.8.8
+usage: purenetwork eth [-h]
+                       {create,delete,disable,enable,list,monitor,neighbor,ping,setattr,trace}
+                       ...
+purenetwork eth: error: argument subcommand: invalid choice: 'ct0.eth10' (choose from 'create', 'delete', 'disable', 'enable', 'list', 'ping', 'setattr', 'trace', 'monitor', 'neighbor')
+     root@EWR4PSX50BLK01-ct0:/var/home/pureeng# purearray test pinghome
+purearray: error: Could not ping using CCM.
+     root@EWR4PSX50BLK01-ct0:/var/home/pureeng# pureboot lsit
+usage: pureboot [-h] [--version]
+                {setenv,listenv,update,list,reboot,poweroff,setboot} ...
+pureboot: error: argument {setenv,listenv,update,list,reboot,poweroff,setboot}: invalid choice: 'lsit' (choose from 'setenv', 'listenv', 'update', 'list', 'reboot', 'poweroff', 'setboot')
+     root@EWR4PSX50BLK01-ct0:/var/home/pureeng# pureboot list
+
+Marked entry (*) is currently running
+Marked entry (-->) will run at next reboot
+*-->0. Purity 6.5.10 (202503222031+c6937a2616b9) with kernel 5.15.123+ (202502120717+4e5bb8230c85) on second (/dev/sda4)
+    1. Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (202403191505+d9f0e688c788) on first (/dev/sda3)
+     root@EWR4PSX50BLK01-ct0:/var/home/pureeng# puredrive list CH0.BATYY0. --pack
+Name      Type  Status   Capacity  Details
+CH0.BAY0  SSD   healthy  4.56T     -
+CH0.BAY1  SSD   healthy  4.56T     -
+CH0.BAY2  SSD   healthy  4.56T     -
+CH0.BAY3  SSD   healthy  4.56T     -
+CH0.BAY4  SSD   healthy  4.56T     -
+CH0.BAY5  SSD   healthy  4.56T     -
+CH0.BAY6  SSD   healthy  4.56T     -
+CH0.BAY7  SSD   healthy  4.56T     -
+CH0.BAY8  SSD   healthy  4.56T     -
+CH0.BAY9  SSD   healthy  4.56T     -
+     root@EWR4PSX50BLK01-ct0:/var/home/pureeng# purearray list --space
+Name            Capacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  Total
+EWR4PSX50BLK01  23.38T    100%    0                 0.00     0%                 -               -                0.00    0.00       0.00    0.00    0.00         0.00 
+     root@EWR4PSX50BLK01-ct0:/var/home/pureeng# purepursetupeesetup show
+##########################################
+#   Welcome to the Purity Setup Wizard   #
+##########################################
+  Physical IP:             172.17.1.42
+  Virtual IP:              172.17.1.41
+  Netmask:                 255.255.255.224
+  Gateway:                 172.17.1.33
+  DNS Servers:             10.32.203.247,10.32.203.248
+  DNS Domain:              corp.local
+  NTP Servers:             0.us.pool.ntp.org,3.pool.ntp.org
+  SMTP Relay Host:         
+  SMTP Sender Domain:      internalmail.shi.com
+  Alert Email Recipients:  flasharray-alerts@purestorage.com,sanadmins@shi.com
+  HTTP proxy:              
+  Capacity Limit:          
+  Capacity Limit Target:   
+  Physical IP:             172.17.1.43
+  Netmask:                 255.255.255.224
+  Gateway:                 172.17.1.33
+CONFIG_TASK_COMPLETED:CONFIG_TASK_PURESETUP_EXITED
+     root@EWR4PSX50BLK01-ct0:/var/home/pureeng# ping 172.17.1.3
+PING 172.17.1.3 (172.17.1.3) 56(84) bytes of data.
+From 172.17.1.42 icmp_seq=1 Destination Host Unreachable
+^C
+--- 172.17.1.3 ping statistics ---
+2 packets transmitted, 0 received, +1 errors, 100% packet loss, time 1001ms
+
+     root@EWR4PSX50BLK01-ct0:/var/home/pureeng# ping 172.17.1.33
+PING 172.17.1.33 (172.17.1.33) 56(84) bytes of data.
+From 172.17.1.42 icmp_seq=1 Destination Host Unreachable
+From 172.17.1.42 icmp_seq=2 Destination Host Unreachable
+From 172.17.1.42 icmp_seq=3 Destination Host Unreachable
+From 172.17.1.42 icmp_seq=4 Destination Host Unreachable
+From 172.17.1.42 icmp_seq=5 Destination Host Unreachable
+From 172.17.1.42 icmp_seq=6 Destination Host Unreachable
+From 172.17.1.42 icmp_seq=7 Destination Host Unreachable
+From 172.17.1.42 icmp_seq=8 Destination Host Unreachable
+From 172.17.1.42 icmp_seq=9 Destination Host Unreachable
+^C
+--- 172.17.1.33 ping statistics ---
+11 packets transmitted, 0 received, +9 errors, 100% packet loss, time 10242ms
+pipe 3
+     root@EWR4PSX50BLK01-ct0:/var/home/pureeng# ping ping 172.17.1.3343
+PING 172.17.1.43 (172.17.1.43) 56(84) bytes of data.
+64 bytes from 172.17.1.43: icmp_seq=1 ttl=64 time=0.284 ms
+64 bytes from 172.17.1.43: icmp_seq=2 ttl=64 time=0.099 ms
+64 bytes from 172.17.1.43: icmp_seq=3 ttl=64 time=0.113 ms
+64 bytes from 172.17.1.43: icmp_seq=4 ttl=64 time=0.129 ms
+^C
+--- 172.17.1.43 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3054ms
+rtt min/avg/max/mdev = 0.099/0.156/0.284/0.074 ms
+     root@EWR4PSX50BLK01-ct0:/var/home/pureeng# ping 0.ssh peer
+Last login: Wed Jul 30 10:50:35 2025 from fe80::26a9:37ff:fe63:822d%haeth0
+
+Wed Jul 30 11:11:41 2025
+Welcome root. This is Purity Version 6.5.10 on FlashArray EWR4PSX50BLK01
+**********************************************************************
+WARNING: The user pureuser is still configured with the default password.
+         Please change the password now: pureadmin setattr pureuser --password
+**********************************************************************
+http://www.purestorage.com/
+     root@EWR4PSX50BLK01-ct1:~# ping 172.17.1.33
+PING 172.17.1.33 (172.17.1.33) 56(84) bytes of data.
+From 172.17.1.43 icmp_seq=1 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=2 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=3 Destination Host Unreachable
+^C
+--- 172.17.1.33 ping statistics ---
+6 packets transmitted, 0 received, +3 errors, 100% packet loss, time 5102ms
+pipe 3
+     root@EWR4PSX50BLK01-ct1:~# tracert 172.17.1.33
+-bash: tracert: command not found
+     root@EWR4PSX50BLK01-ct1:~# tracece
+EWR4PSX50BLK01-ct1 login: pureeng
+1) Authenticate via CloudAssist
+2) Authenticate via command line
+3) Restore challenge
+Type the number corresponding to the authentication method you want to use.
+
+Selection: 2
+Challenge: kid:1 shapy ring spend gouger 2871299-251897301-3950286644334531265
+
+Enter response or type 'save' to save challenge for later: b3f63-5cf16-a504f-dcf9b-d88e6-ea232-a955c-9a35e-7b8fc-f46f2-8fcb4-e54bb-95ea1-e38f1-353ce-f4276-bf107-65bf9-53fb8-994c9-bfcee-4ee65-61b3b-e8b44-be07c-91e
+Successfully authenticated
+Last login: Tue May 20 15:38:22 EDT 2025 on ttyS0
+
+Wed Jul 30 11:23:07 2025
+Welcome pureeng. This is Purity Version 6.5.10 on FlashArray EWR4PSX50BLK01
+**********************************************************************
+WARNING: The user pureuser is still configured with the default password.
+         Please change the password now: pureadmin setattr pureuser --password
+**********************************************************************
+http://www.purestorage.com/
+pureeng@EWR4PSX50BLK01-ct1:~$ sudo su
+     root@EWR4PSX50BLK01-ct1:/var/home/pureeng# pureping puresetup show
+##########################################
+#   Welcome to the Purity Setup Wizard   #
+##########################################
+  Physical IP:             172.17.1.42
+  Virtual IP:              172.17.1.41
+  Netmask:                 255.255.255.224
+  Gateway:                 172.17.1.33
+  DNS Servers:             10.32.203.247,10.32.203.248
+  DNS Domain:              corp.local
+  NTP Servers:             0.us.pool.ntp.org,3.pool.ntp.org
+  SMTP Relay Host:         
+  SMTP Sender Domain:      internalmail.shi.com
+  Alert Email Recipients:  flasharray-alerts@purestorage.com,sanadmins@shi.com
+  HTTP proxy:              
+  Capacity Limit:          
+  Capacity Limit Target:   
+  Physical IP:             172.17.1.43
+  Netmask:                 255.255.255.224
+  Gateway:                 172.17.1.33
+CONFIG_TASK_COMPLETED:CONFIG_TASK_PURESETUP_EXITED
+     root@EWR4PSX50BLK01-ct1:/var/home/pureeng# ping 172.17.1.33
+PING 172.17.1.33 (172.17.1.33) 56(84) bytes of data.
+From 172.17.1.43 icmp_seq=1 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=2 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=3 Destination Host Unreachable
+^C
+--- 172.17.1.33 ping statistics ---
+5 packets transmitted, 0 received, +3 errors, 100% packet loss, time 4117ms
+pipe 3
+     root@EWR4PSX50BLK01-ct1:/var/home/pureeng# ping pping 172.17.1.33
+PING 172.17.1.33 (172.17.1.33) 56(84) bytes of data.
+From 172.17.1.43 icmp_seq=1 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=2 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=3 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=4 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=5 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=6 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=7 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=8 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=9 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=10 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=11 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=12 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=13 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=14 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=15 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=16 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=17 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=18 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=19 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=20 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=21 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=22 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=23 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=24 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=25 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=26 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=27 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=28 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=29 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=30 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=31 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=32 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=33 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=34 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=35 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=36 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=37 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=38 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=39 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=42 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=45 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=48 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=51 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=54 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=57 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=58 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=60 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=61 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=63 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=66 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=67 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=68 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=69 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=70 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=71 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=72 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=73 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=74 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=75 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=76 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=77 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=78 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=79 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=80 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=81 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=82 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=83 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=84 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=85 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=86 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=87 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=88 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=89 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=90 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=94 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=95 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=96 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=97 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=98 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=99 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=100 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=104 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=107 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=108 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=109 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=113 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=116 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=117 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=118 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=119 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=120 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=121 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=122 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=123 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=124 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=128 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=129 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=131 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=132 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=133 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=134 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=135 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=136 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=137 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=138 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=139 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=140 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=141 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=142 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=143 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=144 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=145 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=146 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=147 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=148 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=149 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=150 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=151 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=152 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=153 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=154 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=155 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=156 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=157 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=158 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=159 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=160 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=161 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=162 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=163 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=164 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=165 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=166 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=167 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=168 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=169 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=170 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=171 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=185 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=186 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=187 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=188 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=189 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=190 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=195 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=196 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=197 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=198 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=199 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=200 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=201 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=204 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=205 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=206 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=213 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=214 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=216 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=217 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=219 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=220 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=222 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=223 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=225 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=226 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=228 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=229 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=231 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=234 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=237 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=238 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=239 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=240 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=241 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=242 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=243 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=244 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=245 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=246 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=247 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=248 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=249 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=250 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=251 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=252 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=253 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=254 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=255 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=256 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=257 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=258 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=259 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=260 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=267 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=273 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=274 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=275 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=276 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=277 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=285 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=286 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=291 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=294 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=295 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=296 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=297 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=298 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=299 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=300 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=301 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=302 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=303 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=304 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=305 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=306 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=307 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=308 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=309 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=310 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=311 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=315 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=318 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=319 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=320 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=321 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=322 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=323 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=324 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=325 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=326 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=327 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=328 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=329 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=330 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=334 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=335 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=336 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=337 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=338 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=339 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=340 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=341 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=349 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=350 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=351 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=352 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=355 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=358 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=361 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=370 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=371 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=372 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=373 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=374 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=375 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=376 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=377 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=378 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=382 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=383 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=384 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=385 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=386 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=387 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=388 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=389 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=390 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=391 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=392 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=393 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=394 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=395 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=396 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=397 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=398 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=399 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=400 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=401 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=402 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=403 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=404 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=405 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=406 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=407 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=408 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=409 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=410 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=411 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=412 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=413 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=414 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=415 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=416 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=417 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=418 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=419 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=420 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=421 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=422 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=423 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=434 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=435 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=436 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=437 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=438 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=439 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=440 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=441 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=442 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=443 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=444 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=445 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=446 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=456 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=457 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=458 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=462 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=463 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=464 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=465 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=466 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=467 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=468 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=469 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=470 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=471 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=472 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=473 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=474 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=475 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=476 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=477 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=478 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=479 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=480 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=481 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=482 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=483 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=484 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=485 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=486 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=487 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=488 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=489 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=490 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=491 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=492 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=493 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=494 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=495 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=496 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=497 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=498 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=499 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=500 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=501 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=502 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=503 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=504 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=505 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=506 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=507 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=508 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=509 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=510 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=511 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=512 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=513 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=514 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=515 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=516 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=517 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=518 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=519 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=520 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=521 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=522 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=523 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=524 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=525 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=526 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=527 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=528 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=529 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=530 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=531 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=532 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=537 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=538 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=539 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=552 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=553 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=554 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=555 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=556 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=557 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=558 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=559 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=560 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=561 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=562 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=563 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=564 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=565 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=566 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=567 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=568 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=569 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=570 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=571 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=572 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=573 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=574 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=575 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=576 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=577 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=578 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=579 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=580 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=581 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=582 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=583 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=584 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=585 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=586 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=587 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=588 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=589 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=590 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=591 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=592 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=593 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=594 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=595 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=596 Destination Host Unreachable
+From 172.17.1.43 icmp_seq=606 Destination Host Unreachable
+^C
+--- 172.17.1.33 ping statistics ---
+610 packets transmitted, 0 received, +435 errors, 100% packet loss, time 623596ms
+pipe 4
+     root@EWR4PSX50BLK01-ct1:/var/home/pureeng# ssh eppeeer
+Last login: Fri Feb 14 20:07:11 2025 from 10.125.0.1
+
+Wed Jul 30 11:36:56 2025
+Welcome root. This is Purity Version 6.5.10 on FlashArray EWR4PSX50BLK01
+**********************************************************************
+WARNING: The user pureuser is still configured with the default password.
+         Please change the password now: pureadmin setattr pureuser --password
+**********************************************************************
+http://www.purestorage.com/
+     root@EWR4PSX50BLK01-ct0:~# echo $?printf PTC_START; printf _COMMAND; echo ; sed -E ':a;N;$!ba;s/\r{0,1}\n/\\n/g' /cache/ccm/cert/activation_pub.pemecho $?
+^C
+     root@EWR4PSX50BLK01-ct0:~# ppreuresetup whoshow
+##########################################
+#   Welcome to the Purity Setup Wizard   #
+##########################################
+  Physical IP:             172.17.1.42
+  Virtual IP:              172.17.1.41
+  Netmask:                 255.255.255.224
+  Gateway:                 172.17.1.33
+  DNS Servers:             10.32.203.247,10.32.203.248
+  DNS Domain:              corp.local
+  NTP Servers:             0.us.pool.ntp.org,3.pool.ntp.org
+  SMTP Relay Host:         
+  SMTP Sender Domain:      internalmail.shi.com
+  Alert Email Recipients:  flasharray-alerts@purestorage.com,sanadmins@shi.com
+  HTTP proxy:              
+  Capacity Limit:          
+  Capacity Limit Target:   
+  Physical IP:             172.17.1.43
+  Netmask:                 255.255.255.224
+  Gateway:                 172.17.1.33
+CONFIG_TASK_COMPLETED:CONFIG_TASK_PURESETUP_EXITED
+     root@EWR4PSX50BLK01-ct0:~# puresetup showecho $?printf PTC_START; printf _COMMAND; echo ; sed -E ':a;N;$!ba;s/\r{0,1}\n/\\n/g' /cache/ccm/cert/activation_pub.pemdate
+echo $?printf PTC_START; printf _COMMAND; echo ; md5sum /cache/ccm/cert/activation_pub.pem | awk '{print $1}'date
+chmod 444 /cache/ccm/cert/activation_pub.pemecho $?printf PTC_START; printf _COMMAND; echo ; ls /cache/ccm/cert/activation_pub.pem     root@EWR4PSX50BLK01-ct0:~# date
+openssl rsa -pubout -in /cache/ccm/cert/activation_priv.pem -out /cache/ccm/cert/activation_pub.pemcd /opt/Purity/bin/mfg_test
+hmod 400 /cache/ccm/cert/activation_priv.pemecho $?chmod 400 /cache/ccm/cert/activation_priv.pemd /opt/Purity/bin/mfg_testopenssl rsa -pubout -in /cache/ccm/cert/activation_priv.pem -out /cache/ccm/cert/activation_pub.pemdate
+printf PTC_START; printf _COMMAND; echo ; ls /cache/ccm/cert/activation_pub.pem     root@EWR4PSX50BLK01-ct0:~# echo $?
+chmod 444 /cache/ccm/cert/activation_pub.pemdateprintf PTC_START; printf _COMMAND; echo ; md5sum /cache/ccm/cert/activation_pub.pem | awk '{print $1}'echo $?
+dateprintf PTC_START; printf _COMMAND; echo ; sed -E ':a;N;$!ba;s/\r{0,1}\n/\\n/g' /cache/ccm/cert/activation_pub.pemecho $?
+puresetup show
+     root@EWR4PSX50BLK01-ct0:~# ping 172.17.1.33
+PING 172.17.1.33 (172.17.1.33) 56(84) bytes of data.
+From 172.17.1.42 icmp_seq=1 Destination Host Unreachable
+From 172.17.1.42 icmp_seq=2 Destination Host Unreachable
+From 172.17.1.42 icmp_seq=3 Destination Host Unreachable
+From 172.17.1.42 icmp_seq=4 Destination Host Unreachable
+^C
+--- 172.17.1.33 ping statistics ---
+6 packets transmitted, 0 received, +4 errors, 100% packet loss, time 5093ms
+pipe 3
+     root@EWR4PSX50BLK01-ct0:~# ping 172.17.1.33
+PING 172.17.1.33 (172.17.1.33) 56(84) bytes of data.
+From 172.17.1.42 icmp_seq=1 Destination Host Unreachable
+From 172.17.1.42 icmp_seq=2 Destination Host Unreachable
+From 172.17.1.42 icmp_seq=3 Destination Host Unreachable
+From 172.17.1.42 icmp_seq=4 Destination Host Unreachable
+^C
+--- 172.17.1.33 ping statistics ---
+6 packets transmitted, 0 received, +4 errors, 100% packet loss, time 5084ms
+pipe 3
+     root@EWR4PSX50BLK01-ct0:~# ping 172.17.1.33
+PING 172.17.1.33 (172.17.1.33) 56(84) bytes of data.
+From 172.17.1.42 icmp_seq=1 Destination Host Unreachable
+From 172.17.1.42 icmp_seq=2 Destination Host Unreachable
+From 172.17.1.42 icmp_seq=3 Destination Host Unreachable
+^C
+--- 172.17.1.33 ping statistics ---
+5 packets transmitted, 0 received, +3 errors, 100% packet loss, time 4097ms
+pipe 3
+     root@EWR4PSX50BLK01-ct0:~# ping 172.17.1.33
+PING 172.17.1.33 (172.17.1.33) 56(84) bytes of data.
+From 172.17.1.42 icmp_seq=1 Destination Host Unreachable
+From 172.17.1.42 icmp_seq=2 Destination Host Unreachable
+From 172.17.1.42 icmp_seq=3 Destination Host Unreachable
+From 172.17.1.42 icmp_seq=4 Destination Host Unreachable
+From 172.17.1.42 icmp_seq=5 Destination Host Unreachable
+From 172.17.1.42 icmp_seq=6 Destination Host Unreachable
+^C
+--- 172.17.1.33 ping statistics ---
+8 packets transmitted, 0 received, +6 errors, 100% packet loss, time 7156ms
+pipe 3
+     root@EWR4PSX50BLK01-ct0:~# ping 172.17.1.33
+PING 172.17.1.33 (172.17.1.33) 56(84) bytes of data.
+From 172.17.1.42 icmp_seq=1 Destination Host Unreachable
+From 172.17.1.42 icmp_seq=2 Destination Host Unreachable
+From 172.17.1.42 icmp_seq=3 Destination Host Unreachable
+^C
+--- 172.17.1.33 ping statistics ---
+4 packets transmitted, 0 received, +3 errors, 100% packet loss, time 3051ms
+pipe 3
+     root@EWR4PSX50BLK01-ct0:~# 

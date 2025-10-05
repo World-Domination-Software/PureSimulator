@@ -1,0 +1,426 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.08.20 13:26:10 =~=~=~=~=~=~=~=~=~=~=~=
+
+     root@DELOREAN-FA1-ct0:/var/home/pureeng# 
+     root@DELOREAN-FA1-ct0:/var/home/pureeng# puresetup show
+##########################################
+#   Welcome to the Purity Setup Wizard   #
+##########################################
+  Physical IP:           172.23.0.5
+  Virtual IP:            172.23.0.4
+  Netmask:               255.255.255.240
+  Gateway:               172.23.0.1
+  DNS Servers:           192.168.1.195,192.168.2.236
+  DNS Domain:            palmbayflorida.org
+  NTP Servers:           192.168.1.195
+  SMTP Relay Host:       192.168.1.75
+  SMTP Sender Domain:    palmbayflorida.org
+  Alert Email Recipients:flasharray-alerts@purestorage.com,networkoperations@palmbayflorida.org
+  HTTP proxy:            
+  Capacity Limit:        
+  Capacity Limit Target: 
+  Physical IP:           172.23.0.7
+  Netmask:               255.255.255.240
+  Gateway:               172.23.0.1
+CONFIG_TASK_COMPLETED:CONFIG_TASK_PURESETUP_EXITED
+     root@DELOREAN-FA1-ct0:/var/home/pureeng# ping 172.23.0.1
+PING 172.23.0.1 (172.23.0.1) 56(84) bytes of data.
+From 172.23.0.5 icmp_seq=1 Destination Host Unreachable
+From 172.23.0.5 icmp_seq=2 Destination Host Unreachable
+From 172.23.0.5 icmp_seq=3 Destination Host Unreachable
+^C
+--- 172.23.0.1 ping statistics ---
+5 packets transmitted, 0 received, +3 errors, 100% packet loss, time 4135ms
+pipe 3
+     root@DELOREAN-FA1-ct0:/var/home/pureeng# ping 1712.23.0.6
+PING 172.23.0.6 (172.23.0.6) 56(84) bytes of data.
+From 172.23.0.5 icmp_seq=1 Destination Host Unreachable
+From 172.23.0.5 icmp_seq=2 Destination Host Unreachable
+From 172.23.0.5 icmp_seq=3 Destination Host Unreachable
+^C
+--- 172.23.0.6 ping statistics ---
+5 packets transmitted, 0 received, +3 errors, 100% packet loss, time 4099ms
+pipe 3
+     root@DELOREAN-FA1-ct0:/var/home/pureeng# ping 172.23.0.67
+PING 172.23.0.7 (172.23.0.7) 56(84) bytes of data.
+64 bytes from 172.23.0.7: icmp_seq=1 ttl=64 time=0.204 ms
+64 bytes from 172.23.0.7: icmp_seq=2 ttl=64 time=0.115 ms
+64 bytes from 172.23.0.7: icmp_seq=3 ttl=64 time=0.097 ms
+64 bytes from 172.23.0.7: icmp_seq=4 ttl=64 time=0.137 ms
+64 bytes from 172.23.0.7: icmp_seq=5 ttl=64 time=0.104 ms
+64 bytes from 172.23.0.7: icmp_seq=6 ttl=64 time=0.095 ms
+64 bytes from 172.23.0.7: icmp_seq=7 ttl=64 time=0.096 ms
+64 bytes from 172.23.0.7: icmp_seq=8 ttl=64 time=0.130 ms
+64 bytes from 172.23.0.7: icmp_seq=9 ttl=64 time=0.100 ms
+64 bytes from 172.23.0.7: icmp_seq=10 ttl=64 time=0.119 ms
+64 bytes from 172.23.0.7: icmp_seq=11 ttl=64 time=0.114 ms
+64 bytes from 172.23.0.7: icmp_seq=12 ttl=64 time=0.136 ms
+64 bytes from 172.23.0.7: icmp_seq=13 ttl=64 time=0.121 ms
+64 bytes from 172.23.0.7: icmp_seq=14 ttl=64 time=0.132 ms
+64 bytes from 172.23.0.7: icmp_seq=15 ttl=64 time=0.131 ms
+64 bytes from 172.23.0.7: icmp_seq=16 ttl=64 time=0.105 ms
+64 bytes from 172.23.0.7: icmp_seq=17 ttl=64 time=0.115 ms
+64 bytes from 172.23.0.7: icmp_seq=18 ttl=64 time=0.140 ms
+64 bytes from 172.23.0.7: icmp_seq=19 ttl=64 time=0.130 ms
+64 bytes from 172.23.0.7: icmp_seq=20 ttl=64 time=0.113 ms
+64 bytes from 172.23.0.7: icmp_seq=21 ttl=64 time=0.137 ms
+64 bytes from 172.23.0.7: icmp_seq=22 ttl=64 time=0.111 ms
+64 bytes from 172.23.0.7: icmp_seq=23 ttl=64 time=0.127 ms
+64 bytes from 172.23.0.7: icmp_seq=24 ttl=64 time=0.144 ms
+64 bytes from 172.23.0.7: icmp_seq=25 ttl=64 time=0.183 ms
+64 bytes from 172.23.0.7: icmp_seq=26 ttl=64 time=0.109 ms
+^C
+--- 172.23.0.7 ping statistics ---
+26 packets transmitted, 26 received, 0% packet loss, time 25609ms
+rtt min/avg/max/mdev = 0.095/0.124/0.204/0.024 ms
+     root@DELOREAN-FA1-ct0:/var/home/pureeng# 
+     root@DELOREAN-FA1-ct0:/var/home/pureeng# ssh peer
+Last login: Tue Mar 11 14:45:09 2025 from 10.125.0.1
+
+Wed Aug 20 13:27:49 2025
+Welcome root. This is Purity Version 6.9.0 on FlashArray DELOREAN-FA1
+**********************************************************************
+WARNING: The user pureuser is still configured with the default password.
+         Please change the password now: pureadmin setattr pureuser --password
+**********************************************************************
+http://www.purestorage.com/
+     root@DELOREAN-FA1-ct1:~# 
+     root@DELOREAN-FA1-ct1:~# exit
+logout
+     root@DELOREAN-FA1-ct0:/var/home/pureeng# ssh peerping 172.23.0.7
+PING 172.23.0.7 (172.23.0.7) 56(84) bytes of data.
+From 172.23.0.5 icmp_seq=1 Destination Host Unreachable
+From 172.23.0.5 icmp_seq=2 Destination Host Unreachable
+From 172.23.0.5 icmp_seq=3 Destination Host Unreachable
+^C
+--- 172.23.0.7 ping statistics ---
+4 packets transmitted, 0 received, +3 errors, 100% packet loss, time 3081ms
+pipe 3
+     root@DELOREAN-FA1-ct0:/var/home/pureeng# ping 172.23.0.7ssh peerping 172.23.0.761
+PING 172.23.0.1 (172.23.0.1) 56(84) bytes of data.
+64 bytes from 172.23.0.1: icmp_seq=1 ttl=254 time=0.270 ms
+64 bytes from 172.23.0.1: icmp_seq=2 ttl=254 time=0.453 ms
+64 bytes from 172.23.0.1: icmp_seq=3 ttl=254 time=0.303 ms
+64 bytes from 172.23.0.1: icmp_seq=4 ttl=254 time=0.293 ms
+64 bytes from 172.23.0.1: icmp_seq=5 ttl=254 time=0.438 ms
+64 bytes from 172.23.0.1: icmp_seq=6 ttl=254 time=0.353 ms
+64 bytes from 172.23.0.1: icmp_seq=7 ttl=254 time=0.251 ms
+64 bytes from 172.23.0.1: icmp_seq=8 ttl=254 time=0.288 ms
+64 bytes from 172.23.0.1: icmp_seq=9 ttl=254 time=0.282 ms
+64 bytes from 172.23.0.1: icmp_seq=10 ttl=254 time=0.279 ms
+64 bytes from 172.23.0.1: icmp_seq=11 ttl=254 time=0.245 ms
+64 bytes from 172.23.0.1: icmp_seq=12 ttl=254 time=0.307 ms
+64 bytes from 172.23.0.1: icmp_seq=13 ttl=254 time=0.268 ms
+64 bytes from 172.23.0.1: icmp_seq=14 ttl=254 time=0.359 ms
+64 bytes from 172.23.0.1: icmp_seq=15 ttl=254 time=0.282 ms
+64 bytes from 172.23.0.1: icmp_seq=16 ttl=254 time=0.310 ms
+64 bytes from 172.23.0.1: icmp_seq=17 ttl=254 time=0.410 ms
+64 bytes from 172.23.0.1: icmp_seq=18 ttl=254 time=0.294 ms
+^C
+--- 172.23.0.1 ping statistics ---
+18 packets transmitted, 18 received, 0% packet loss, time 17394ms
+rtt min/avg/max/mdev = 0.245/0.315/0.453/0.060 ms
+     root@DELOREAN-FA1-ct0:/var/home/pureeng# ping 172.23.0.17
+PING 172.23.0.7 (172.23.0.7) 56(84) bytes of data.
+64 bytes from 172.23.0.7: icmp_seq=1 ttl=64 time=0.231 ms
+64 bytes from 172.23.0.7: icmp_seq=2 ttl=64 time=0.103 ms
+64 bytes from 172.23.0.7: icmp_seq=3 ttl=64 time=0.107 ms
+64 bytes from 172.23.0.7: icmp_seq=4 ttl=64 time=0.101 ms
+^C
+--- 172.23.0.7 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3075ms
+rtt min/avg/max/mdev = 0.101/0.135/0.231/0.055 ms
+     root@DELOREAN-FA1-ct0:/var/home/pureeng# 
+RESERVOIR-FA1-ct0 login: pureeng
+RESERVOIR-FA1-ct1 login: 
+RESERVOIR-FA1-ct1 login: 
+RESERVOIR-FA1-ct1 login: 
+1) Authenticate via CloudAssist
+2) Authenticate via command line
+3) Restore challenge
+Type the number corresponding to the authentication method you want to use.
+
+Selection: pure    ^C
+RESERVOIR-FA1-ct0 login: pureeng
+1) Authenticate via CloudAssist
+2) Authenticate via command line
+3) Restore challenge
+Type the number corresponding to the authentication method you want to use.
+
+Selection: 1
+
+An email for identity verification will be sent once email is entered.
+Please follow the authentication instructions provided there and return to this screen when finished or if email has not been received.
+
+
+Enter an email address: fharris@purestorage.com
+Successfully authenticated
+
+Wed Aug 20 13:37:04 2025
+Welcome pureeng. This is Purity Version 6.9.0 on FlashArray RESERVOIR-FA1
+**********************************************************************
+WARNING: The user pureuser is still configured with the default password.
+         Please change the password now: pureadmin setattr pureuser --password
+**********************************************************************
+http://www.purestorage.com/
+pureeng@RESERVOIR-FA1-ct0:~$ sudo su
+     root@RESERVOIR-FA1-ct0:/var/home/pureeng# puresetupetup show
+##########################################
+#   Welcome to the Purity Setup Wizard   #
+##########################################
+  Physical IP:           10.200.20.5
+  Virtual IP:            10.200.20.4
+  Netmask:               255.255.255.240
+  Gateway:               10.200.20.1
+  DNS Servers:           192.168.1.195,192.168.2.236
+  DNS Domain:            palmbayflorida.org
+  NTP Servers:           192.168.1.195
+  SMTP Relay Host:       192.168.1.75
+  SMTP Sender Domain:    palmbayflorida.org
+  Alert Email Recipients:flasharray-alerts@purestorage.com,networkoperations@palmbayflorida.org
+  HTTP proxy:            
+  Capacity Limit:        
+  Capacity Limit Target: 
+  Physical IP:           10.200.20.6
+  Netmask:               255.255.255.240
+  Gateway:               10.200.20.1
+CONFIG_TASK_COMPLETED:CONFIG_TASK_PURESETUP_EXITED
+     root@RESERVOIR-FA1-ct0:/var/home/pureeng# ping 10.200.20.1
+PING 10.200.20.1 (10.200.20.1) 56(84) bytes of data.
+64 bytes from 10.200.20.1: icmp_seq=1 ttl=254 time=0.413 ms
+64 bytes from 10.200.20.1: icmp_seq=2 ttl=254 time=0.276 ms
+64 bytes from 10.200.20.1: icmp_seq=3 ttl=254 time=0.294 ms
+64 bytes from 10.200.20.1: icmp_seq=4 ttl=254 time=0.381 ms
+64 bytes from 10.200.20.1: icmp_seq=5 ttl=254 time=0.306 ms
+64 bytes from 10.200.20.1: icmp_seq=6 ttl=254 time=0.292 ms
+64 bytes from 10.200.20.1: icmp_seq=7 ttl=254 time=0.280 ms
+^C
+--- 10.200.20.1 ping statistics ---
+7 packets transmitted, 7 received, 0% packet loss, time 6125ms
+rtt min/avg/max/mdev = 0.276/0.320/0.413/0.050 ms
+     root@RESERVOIR-FA1-ct0:/var/home/pureeng# exit
+exit
+pureeng@RESERVOIR-FA1-ct0:~$ exit
+logout
+
+RESERVOIR-FA1-ct0 login: 
+     root@DELOREAN-FA1-ct0:/var/home/pureeng# exit
+exit
+pureeng@DELOREAN-FA1-ct0:~$ exit
+logout
+
+DELOREAN-FA1-ct0 login: =~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.08.20 14:05:09 =~=~=~=~=~=~=~=~=~=~=~=
+
+pureeng@DELOREAN-FA2-ct0:~$ sudo su
+     root@DELOREAN-FA2-ct0:/var/home/pureeng# puresetup shwo
+usage: puresetup [-h]
+                 {newarray,secondary,replace,timezone,product_ext,show,cleanup}
+                 ...
+puresetup: error: argument {newarray,secondary,replace,timezone,product_ext,show,cleanup}: invalid choice: 'shwo' (choose from 'newarray', 'secondary', 'replace', 'timezone', 'product_ext', 'show', 'cleanup')
+CONFIG_TASK_COMPLETED:CONFIG_TASK_PURESETUP_EXITED
+     root@DELOREAN-FA2-ct0:/var/home/pureeng# puresetup show
+##########################################
+#   Welcome to the Purity Setup Wizard   #
+##########################################
+  Physical IP:           172.24.0.5
+  Virtual IP:            172.24.0.4
+  Netmask:               255.255.255.240
+  Gateway:               172.24.0.1
+  DNS Servers:           192.168.1.195,192.168.2.236
+  DNS Domain:            palmbayflorida.org
+  NTP Servers:           192.168.1.195
+  SMTP Relay Host:       192.168.1.75
+  SMTP Sender Domain:    palmbayflorida.org
+  Alert Email Recipients:flasharray-alerts@purestorage.com,networkoperations@palmbayflorida.org
+  HTTP proxy:            
+  Capacity Limit:        
+  Capacity Limit Target: 
+  Physical IP:           172.24.0.7
+  Netmask:               255.255.255.240
+  Gateway:               172.24.0.1
+CONFIG_TASK_COMPLETED:CONFIG_TASK_PURESETUP_EXITED
+     root@DELOREAN-FA2-ct0:/var/home/pureeng# ping 172.24.0.1
+PING 172.24.0.1 (172.24.0.1) 56(84) bytes of data.
+From 172.24.0.4 icmp_seq=1 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=2 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=3 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=4 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=5 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=8 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=9 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=10 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=11 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=12 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=13 Destination Host Unreachable
+ping: sendmsg: No route to host
+From 172.24.0.4 icmp_seq=14 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=15 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=17 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=18 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=19 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=20 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=21 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=22 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=23 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=24 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=25 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=26 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=27 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=28 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=29 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=30 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=31 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=32 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=33 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=34 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=35 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=36 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=37 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=38 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=39 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=40 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=41 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=42 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=45 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=48 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=49 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=51 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=52 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=53 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=54 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=55 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=56 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=57 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=58 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=59 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=60 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=61 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=62 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=63 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=64 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=65 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=69 Destination Host Unreachable
+From 172.24.0.4 icmp_seq=70 Destination Host Unreachable
+From 172.24.0.5 icmp_seq=71 Destination Host Unreachable
+From 172.24.0.5 icmp_seq=72 Destination Host Unreachable
+From 172.24.0.5 icmp_seq=73 Destination Host Unreachable
+From 172.24.0.5 icmp_seq=74 Destination Host Unreachable
+From 172.24.0.5 icmp_seq=75 Destination Host Unreachable
+From 172.24.0.5 icmp_seq=76 Destination Host Unreachable
+64 bytes from 172.24.0.1: icmp_seq=79 ttl=254 time=0.563 ms
+64 bytes from 172.24.0.1: icmp_seq=80 ttl=254 time=0.377 ms
+64 bytes from 172.24.0.1: icmp_seq=81 ttl=254 time=0.407 ms
+64 bytes from 172.24.0.1: icmp_seq=82 ttl=254 time=0.892 ms
+64 bytes from 172.24.0.1: icmp_seq=83 ttl=254 time=0.423 ms
+64 bytes from 172.24.0.1: icmp_seq=84 ttl=254 time=0.670 ms
+64 bytes from 172.24.0.1: icmp_seq=85 ttl=254 time=1.94 ms
+64 bytes from 172.24.0.1: icmp_seq=86 ttl=254 time=0.434 ms
+64 bytes from 172.24.0.1: icmp_seq=87 ttl=254 time=0.734 ms
+64 bytes from 172.24.0.1: icmp_seq=88 ttl=254 time=0.426 ms
+64 bytes from 172.24.0.1: icmp_seq=89 ttl=254 time=0.943 ms
+64 bytes from 172.24.0.1: icmp_seq=90 ttl=254 time=0.434 ms
+64 bytes from 172.24.0.1: icmp_seq=91 ttl=254 time=0.420 ms
+64 bytes from 172.24.0.1: icmp_seq=92 ttl=254 time=2.53 ms
+64 bytes from 172.24.0.1: icmp_seq=93 ttl=254 time=0.497 ms
+64 bytes from 172.24.0.1: icmp_seq=94 ttl=254 time=0.483 ms
+64 bytes from 172.24.0.1: icmp_seq=95 ttl=254 time=0.380 ms
+64 bytes from 172.24.0.1: icmp_seq=96 ttl=254 time=0.426 ms
+64 bytes from 172.24.0.1: icmp_seq=97 ttl=254 time=0.429 ms
+64 bytes from 172.24.0.1: icmp_seq=98 ttl=254 time=0.417 ms
+64 bytes from 172.24.0.1: icmp_seq=99 ttl=254 time=0.375 ms
+64 bytes from 172.24.0.1: icmp_seq=100 ttl=254 time=0.430 ms
+64 bytes from 172.24.0.1: icmp_seq=101 ttl=254 time=0.694 ms
+64 bytes from 172.24.0.1: icmp_seq=102 ttl=254 time=0.409 ms
+64 bytes from 172.24.0.1: icmp_seq=103 ttl=254 time=0.408 ms
+64 bytes from 172.24.0.1: icmp_seq=104 ttl=254 time=0.807 ms
+64 bytes from 172.24.0.1: icmp_seq=105 ttl=254 time=0.410 ms
+64 bytes from 172.24.0.1: icmp_seq=106 ttl=254 time=0.546 ms
+64 bytes from 172.24.0.1: icmp_seq=107 ttl=254 time=0.634 ms
+64 bytes from 172.24.0.1: icmp_seq=108 ttl=254 time=0.523 ms
+64 bytes from 172.24.0.1: icmp_seq=109 ttl=254 time=0.578 ms
+64 bytes from 172.24.0.1: icmp_seq=110 ttl=254 time=0.635 ms
+64 bytes from 172.24.0.1: icmp_seq=111 ttl=254 time=0.549 ms
+64 bytes from 172.24.0.1: icmp_seq=112 ttl=254 time=0.628 ms
+64 bytes from 172.24.0.1: icmp_seq=113 ttl=254 time=0.397 ms
+64 bytes from 172.24.0.1: icmp_seq=114 ttl=254 time=0.402 ms
+64 bytes from 172.24.0.1: icmp_seq=115 ttl=254 time=0.381 ms
+64 bytes from 172.24.0.1: icmp_seq=116 ttl=254 time=0.399 ms
+64 bytes from 172.24.0.1: icmp_seq=117 ttl=254 time=0.438 ms
+64 bytes from 172.24.0.1: icmp_seq=118 ttl=254 time=0.404 ms
+64 bytes from 172.24.0.1: icmp_seq=119 ttl=254 time=0.376 ms
+64 bytes from 172.24.0.1: icmp_seq=120 ttl=254 time=0.385 ms
+64 bytes from 172.24.0.1: icmp_seq=121 ttl=254 time=0.458 ms
+64 bytes from 172.24.0.1: icmp_seq=122 ttl=254 time=0.400 ms
+64 bytes from 172.24.0.1: icmp_seq=123 ttl=254 time=0.435 ms
+64 bytes from 172.24.0.1: icmp_seq=124 ttl=254 time=0.412 ms
+64 bytes from 172.24.0.1: icmp_seq=125 ttl=254 time=0.417 ms
+64 bytes from 172.24.0.1: icmp_seq=126 ttl=254 time=0.686 ms
+64 bytes from 172.24.0.1: icmp_seq=127 ttl=254 time=0.425 ms
+64 bytes from 172.24.0.1: icmp_seq=128 ttl=254 time=0.461 ms
+64 bytes from 172.24.0.1: icmp_seq=129 ttl=254 time=0.706 ms
+64 bytes from 172.24.0.1: icmp_seq=130 ttl=254 time=0.447 ms
+64 bytes from 172.24.0.1: icmp_seq=131 ttl=254 time=0.428 ms
+64 bytes from 172.24.0.1: icmp_seq=132 ttl=254 time=0.516 ms
+64 bytes from 172.24.0.1: icmp_seq=133 ttl=254 time=0.450 ms
+64 bytes from 172.24.0.1: icmp_seq=134 ttl=254 time=0.759 ms
+64 bytes from 172.24.0.1: icmp_seq=135 ttl=254 time=0.412 ms
+64 bytes from 172.24.0.1: icmp_seq=136 ttl=254 time=0.419 ms
+
+     root@continue-ct0:/var/home/pureeng# puresetup show
+##########################################
+#   Welcome to the Purity Setup Wizard   #
+##########################################
+  Physical IP:           10.200.21.5
+  Virtual IP:            10.200.21.4
+  Netmask:               255.255.255.240
+  Gateway:               10.200.21.1
+  DNS Servers:           192.168.1.195,192.168.2.236
+  DNS Domain:            palmbayflorida.org
+  NTP Servers:           192.168.1.195
+  SMTP Relay Host:       192.168.1.75
+  SMTP Sender Domain:    palmbayflorida.org
+  Alert Email Recipients:flasharray-alerts@purestorage.com,networkoperations@palmbayflorida.org
+  HTTP proxy:            
+  Capacity Limit:        
+  Capacity Limit Target: 
+  Physical IP:           10.200.21.6
+  Netmask:               255.255.255.240
+  Gateway:               10.200.21.1
+CONFIG_TASK_COMPLETED:CONFIG_TASK_PURESETUP_EXITED
+     root@continue-ct0:/var/home/pureeng# ping 10.200.21.1
+PING 10.200.21.1 (10.200.21.1) 56(84) bytes of data.
+From 10.200.21.5 icmp_seq=2 Destination Host Unreachable
+From 10.200.21.5 icmp_seq=3 Destination Host Unreachable
+64 bytes from 172.24.0.1: icmp_seq=176 ttl=254 time=0.430 ms
+64 bytes from 172.24.0.1: icmp_seq=177 ttl=254 time=0.404 ms
+64 bytes from 172.24.0.1: icmp_seq=178 ttl=254 time=0.430 ms
+64 bytes from 172.24.0.1: icmp_seq=179 ttl=254 time=0.398 ms
+64 bytes from 172.24.0.1: icmp_seq=180 ttl=254 time=18.8 ms
+64 bytes from 172.24.0.1: icmp_seq=181 ttl=254 time=0.524 ms
+64 bytes from 172.24.0.1: icmp_seq=182 ttl=254 time=0.471 ms
+64 bytes from 172.24.0.1: icmp_seq=183 ttl=254 time=0.479 ms
+^C
+--- 172.24.0.1 ping statistics ---
+183 packets transmitted, 105 received, +65 errors, 42.623% packet loss, time 186361ms
+rtt min/avg/max/mdev = 0.375/0.701/18.831/1.797 ms, pipe 4
+     root@DELOREAN-FA2-ct0:/var/home/pureeng# exit
+exit
+pureeng@DELOREAN-FA2-ct0:~$ exit
+logout
+
+DELOREAN-FA2-ct0 login: 64 bytes from 10.200.21.1: icmp_seq=33 ttl=254 time=0.426 ms
+64 bytes from 10.200.21.1: icmp_seq=34 ttl=254 time=0.397 ms
+64 bytes from 10.200.21.1: icmp_seq=35 ttl=254 time=0.622 ms
+64 bytes from 10.200.21.1: icmp_seq=36 ttl=254 time=0.406 ms
+64 bytes from 10.200.21.1: icmp_seq=37 ttl=254 time=0.469 ms
+64 bytes from 10.200.21.1: icmp_seq=38 ttl=254 time=0.461 ms
+64 bytes from 10.200.21.1: icmp_seq=39 ttl=254 time=0.578 ms
+^C
+--- 10.200.21.1 ping statistics ---
+39 packets transmitted, 20 received, +10 errors, 48.7179% packet loss, time 38917ms
+rtt min/avg/max/mdev = 0.397/0.493/0.852/0.124 ms, pipe 4
+     root@continue-ct0:/var/home/pureeng# exit
+exit
+pureeng@continue-ct0:~$ exit
+logout
+
+continue-ct0 login: 

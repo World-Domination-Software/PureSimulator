@@ -1,0 +1,316 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.05.13 23:58:50 =~=~=~=~=~=~=~=~=~=~=~=
+
+Purity
+
+PCTFJ242401E4 login: puresetup
+Password: 
+<fw_update_tool>
+===================================================================
+=                            NOTICE                               =
+===================================================================
+=                                                                 =
+=    Firmware is currently being checked and/or updated           =
+=    on this controller.                                          =
+=                                                                 =
+=    If updates are necessary they will be applied automatically, =
+=    and one or more automatic reboots may occur as a result.     =
+=    A completion notice will be provided when done.              =
+=                                                                 =
+=    DO NOT RESTART OR REMOVE POWER WHILE UPDATE IS IN PROGRESS   =
+=                                                                 =
+===================================================================
+<fw_update_tool>
+
+Wed May 14 04:03:16 2025
+Welcome puresetup. This is Purity Version 6.5.5 on FlashArray PCTFJ242401E4
+http://www.purestorage.com/
+puresetup@PCTFJ242401E4:~$ ls /dev/mount /dev/sd*1b1 /mnt
+puresetup@PCTFJ242401E4:~$ ls /mnt
+ 6.3.14   6.5.5   6.5.8    6.6.11   6.6.8   6.7.2   Info
+ 6.3.9    6.5.6   6.5.9    6.6.2    6.6.9   DFS    'System Volume Information'
+ 6.5.10   6.5.7   6.6.10   6.6.7    6.7.1   FB
+puresetup@PCTFJ242401E4:~$ cp /mnt/6.5.8/* .
+puresetup@PCTFJ242401E4:~$ pureboot list
+===================================================================
+=                            NOTICE                               =
+===================================================================
+=                                                                 =
+=    Firmware is currently being checked and/or updated           =
+=    on this controller.                                          =
+=                                                                 =
+=    If updates are necessary they will be applied automatically, =
+=    and one or more automatic reboots may occur as a result.     =
+=    A completion notice will be provided when done.              =
+=                                                                 =
+=    DO NOT RESTART OR REMOVE POWER WHILE UPDATE IS IN PROGRESS   =
+=                                                                 =
+===================================================================
+
+
+Marked entry (*) is currently running
+Marked entry (-->) will run at next reboot
+*-->0. Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (202403191505+d9f0e688c788) on first (/dev/sda3)
+    1. Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (202403191505+d9f0e688c788) on second (/dev/sda4)
+puresetup@PCTFJ242401E4:~$ 
+PCTFJ242401CF login: puresetup
+Password: 
+
+Wed May 14 04:00:35 2025
+Welcome puresetup. This is Purity Version 6.5.5 on FlashArray PCTFJ242401CF
+http://www.purestorage.com/
+puresetup@PCTFJ242401CF:~$ ls
+puresetup@PCTFJ242401CF:~$ pureboot lst
+usage: pureboot [-h] [--version]
+                {setenv,listenv,update,list,reboot,poweroff,setboot} ...
+pureboot: error: argument {setenv,listenv,update,list,reboot,poweroff,setboot}: invalid choice: 'lst' (choose from 'setenv', 'listenv', 'update', 'list', 'reboot', 'poweroff', 'setboot')
+puresetup@PCTFJ242401CF:~$ pureboot list
+
+Marked entry (*) is currently running
+Marked entry (-->) will run at next reboot
+*-->0. Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (202403191505+d9f0e688c788) on first (/dev/sda3)
+    1. Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (202403191505+d9f0e688c788) on second (/dev/sda4)
+puresetup@PCTFJ242401CF:~$ mount /dev/sdb1 /mnt
+puresetup@PCTFJ242401CF:~$ cp /mnt/6.5.8/* .
+puresetup@PCTFJ242401CF:~$ pureinstall purity_6.5.8_202408090136+b967c2f84655.ppkg
+Installing Purity on alternate partition labeled second.
+Erasing Purity software image from alternate partition second to prepare for installation.
+WARNING: Do not interrupt this process!!
+Unpacking new Purity software.
+................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Verifying package...
+
+Finalizing installation. This may take several minutes.
+Executing /altroot/opt/purextras/bin/finish-install.sh
+Executing /altroot/opt/purextras/bin/finish-install.azure-propagate.sh
+Executing /altroot/opt/purextras/bin/finish-install.cbs.sh
+Executing /altroot/opt/purextras/bin/finish-install.cdu-pureinstall-lib.sh
+Executing /altroot/opt/purextras/bin/finish-install.fix-dpkg.sh
+Purity installed.
+Installation complete. The new Purity version will load at next reboot.
+
+Important!
+The first boot of a new Purity version may take longer if the new version includes controller firmware updates.
+DO NOT REBOOT THE CONTROLLER DURING THE FIRMWARE UPDATE.
+
+Refer to http://community.purestorage.com for more information about the Purity upgrade process and firmware updates.
+puresetup@PCTFJ242401CF:~$ pureboot reboot --offline
+[Errno 111] Connection refused
+
+Purity
+
+PCTFJ242401E4 login: 
+PCTFJ242401E4 login: puresetup
+Password: 
+<fw_update_tool>
+===================================================================
+=                            NOTICE                               =
+===================================================================
+=                                                                 =
+=    Firmware is currently being checked and/or updated           =
+=    on this controller.                                          =
+=                                                                 =
+=    If updates are necessary they will be applied automatically, =
+=    and one or more automatic reboots may occur as a result.     =
+=    A completion notice will be provided when done.              =
+=                                                                 =
+=    DO NOT RESTART OR REMOVE POWER WHILE UPDATE IS IN PROGRESS   =
+=                                                                 =
+===================================================================
+<fw_update_tool>
+Last login: Wed May 14 04:03:13 UTC 2025 on ttyS0
+
+Wed May 14 04:07:46 2025
+Welcome puresetup. This is Purity Version 6.5.5 on FlashArray PCTFJ242401E4
+http://www.purestorage.com/
+puresetup@PCTFJ242401E4:~$ pureboot list
+===================================================================
+=                            NOTICE                               =
+===================================================================
+=                                                                 =
+=    Firmware is currently being checked and/or updated           =
+=    on this controller.                                          =
+=                                                                 =
+=    If updates are necessary they will be applied automatically, =
+=    and one or more automatic reboots may occur as a result.     =
+=    A completion notice will be provided when done.              =
+=                                                                 =
+=    DO NOT RESTART OR REMOVE POWER WHILE UPDATE IS IN PROGRESS   =
+=                                                                 =
+===================================================================
+
+
+Marked entry (*) is currently running
+Marked entry (-->) will run at next reboot
+*-->0. Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (202403191505+d9f0e688c788) on first (/dev/sda3)
+    1. Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (202403191505+d9f0e688c788) on second (/dev/sda4)
+puresetup@PCTFJ242401E4:~$ ls
+purity_6.5.8_202408090136+b967c2f84655.ppkg
+purity_6.5.8_202408090136+b967c2f84655.ppkg.sha1
+puresetup@PCTFJ242401E4:~$                                                                                
+Broadcast message from root@PCTFJ242401E4 (somewhere) (Wed May 14 04:09:43 2025
+                                                                               
+===================================================================            
+=                   UPDATE AND/OR CHECK COMPLETE                  =            
+=                                                                 =            
+=    The firmware checks/updates on this system are now complete. =            
+=    No further action is required, and the controller will       =            
+=    continue running as usual                                    =            
+=                                                                 =            
+===================================================================            
+                                                                               
+                                                                               
+
+puresetup@PCTFJ242401E4:~$ pureinstall purity_6.5.8_202408090136+b967c2f84655.ppkg
+Installing Purity on alternate partition labeled second.
+Erasing Purity software image from alternate partition second to prepare for installation.
+WARNING: Do not interrupt this process!!
+Unpacking new Purity software.
+................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Verifying package...
+
+Finalizing installation. This may take several minutes.
+Executing /altroot/opt/purextras/bin/finish-install.sh
+Executing /altroot/opt/purextras/bin/finish-install.azure-propagate.sh
+Executing /altroot/opt/purextras/bin/finish-install.cbs.sh
+Executing /altroot/opt/purextras/bin/finish-install.cdu-pureinstall-lib.sh
+Executing /altroot/opt/purextras/bin/finish-install.fix-dpkg.sh
+Purity installed.
+Installation complete. The new Purity version will load at next reboot.
+
+Important!
+The first boot of a new Purity version may take longer if the new version includes controller firmware updates.
+DO NOT REBOOT THE CONTROLLER DURING THE FIRMWARE UPDATE.
+
+Refer to http://community.purestorage.com for more information about the Purity upgrade process and firmware updates.
+puresetup@PCTFJ242401E4:~$ pureboot reboot --offline
+[Errno 111] Connection refused
+ GNU GRUB  version 2.06
+
+/----------------------------------------------------------------------------\||||||||||||||||||||||||||\----------------------------------------------------------------------------/     Use the ^ and v keys to select which entry is highlighted.          
+      Press enter to boot the selected OS, `e' to edit the commands       
+      before booting or `c' for a command-line.                             Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (2024031915>
+*Purity 6.5.8 (202408090136+b967c2f84655) with kernel 5.15.123+ (2024071402>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        The highlighted entry will be executed automatically in 3s.                    The highlighted entry will be executed automatically in 2s.                    The highlighted entry will be executed automatically in 1s.                    The highlighted entry will be executed automatically in 0s.                 
+Purity
+
+PCTFJ242401E4 login: puresetup
+Password: 
+<fw_update_tool>
+===================================================================
+=                            NOTICE                               =
+===================================================================
+=                                                                 =
+=    Firmware is currently being checked and/or updated           =
+=    on this controller.                                          =
+=                                                                 =
+=    If updates are necessary they will be applied automatically, =
+=    and one or more automatic reboots may occur as a result.     =
+=    A completion notice will be provided when done.              =
+=                                                                 =
+=    DO NOT RESTART OR REMOVE POWER WHILE UPDATE IS IN PROGRESS   =
+=                                                                 =
+===================================================================
+<fw_update_tool>
+Last login: Wed May 14 04:07:46 UTC 2025 on ttyS0
+
+Wed May 14 04:18:46 2025
+Welcome puresetup. This is Purity Version 6.5.8 on FlashArray PCTFJ242401E4
+http://www.purestorage.com/
+puresetup@PCTFJ242401E4:~$ 
+Purity
+
+PCTFJ242401CF login: puresetup
+Password: 
+<fw_update_tool>
+===================================================================
+=                            NOTICE                               =
+===================================================================
+=                                                                 =
+=    Firmware is currently being checked and/or updated           =
+=    on this controller.                                          =
+=                                                                 =
+=    If updates are necessary they will be applied automatically, =
+=    and one or more automatic reboots may occur as a result.     =
+=    A completion notice will be provided when done.              =
+=                                                                 =
+=    DO NOT RESTART OR REMOVE POWER WHILE UPDATE IS IN PROGRESS   =
+=                                                                 =
+===================================================================
+<fw_update_tool>
+Last login: Wed May 14 04:00:35 UTC 2025 on ttyS0
+
+Wed May 14 04:14:41 2025
+Welcome puresetup. This is Purity Version 6.5.8 on FlashArray PCTFJ242401CF
+http://www.purestorage.com/
+puresetup@PCTFJ242401CF:~$                                                                                
+Broadcast message from root@PCTFJ242401CF (somewhere) (Wed May 14 04:15:19 2025
+                                                                               
+===================================================================            
+=                   UPDATE AND/OR CHECK COMPLETE                  =            
+=                                                                 =            
+=    The firmware checks/updates on this system are now complete. =            
+=    No further action is required, and the controller will       =            
+=    continue running as usual                                    =            
+=                                                                 =            
+===================================================================            
+                                                                               
+                                                                               
+
+puresetup@PCTFJ242401CF:~$ pureboot list
+
+Marked entry (*) is currently running
+Marked entry (-->) will run at next reboot
+    0. Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (202403191505+d9f0e688c788) on first (/dev/sda3)
+*-->1. Purity 6.5.8 (202408090136+b967c2f84655) with kernel 5.15.123+ (202407140227+e4052619b975) on second (/dev/sda4)
+puresetup@PCTFJ242401CF:~$ 
+PCTFJ242401E4 login: puresetup
+Password: 
+<fw_update_tool>
+===================================================================
+=                            NOTICE                               =
+===================================================================
+=                                                                 =
+=    Firmware is currently being checked and/or updated           =
+=    on this controller.                                          =
+=                                                                 =
+=    If updates are necessary they will be applied automatically, =
+=    and one or more automatic reboots may occur as a result.     =
+=    A completion notice will be provided when done.              =
+=                                                                 =
+=    DO NOT RESTART OR REMOVE POWER WHILE UPDATE IS IN PROGRESS   =
+=                                                                 =
+===================================================================
+<fw_update_tool>
+Last login: Wed May 14 04:18:46 UTC 2025 on ttyS0
+
+Wed May 14 04:23:17 2025
+Welcome puresetup. This is Purity Version 6.5.8 on FlashArray PCTFJ242401E4
+http://www.purestorage.com/
+puresetup@PCTFJ242401E4:~$                                                                                
+Broadcast message from root@PCTFJ242401E4 (somewhere) (Wed May 14 04:24:02 2025
+                                                                               
+===================================================================            
+=                   UPDATE AND/OR CHECK COMPLETE                  =            
+=                                                                 =            
+=    The firmware checks/updates on this system are now complete. =            
+=    No further action is required, and the controller will       =            
+=    continue running as usual                                    =            
+=                                                                 =            
+===================================================================            
+                                                                               
+                                                                               
+
+puresetup@PCTFJ242401E4:~$ pureboot list
+
+Marked entry (*) is currently running
+Marked entry (-->) will run at next reboot
+    0. Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (202403191505+d9f0e688c788) on first (/dev/sda3)
+*-->1. Purity 6.5.8 (202408090136+b967c2f84655) with kernel 5.15.123+ (202407140227+e4052619b975) on second (/dev/sda4)
+puresetup@PCTFJ242401E4:~$ 
+puresetup@PCTFJ242401CF:~$ pureboot list
+
+Marked entry (*) is currently running
+Marked entry (-->) will run at next reboot
+    0. Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (202403191505+d9f0e688c788) on first (/dev/sda3)
+*-->1. Purity 6.5.8 (202408090136+b967c2f84655) with kernel 5.15.123+ (202407140227+e4052619b975) on second (/dev/sda4)
+puresetup@PCTFJ242401CF:~$ 

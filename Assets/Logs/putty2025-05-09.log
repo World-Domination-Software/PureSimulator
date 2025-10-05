@@ -1,0 +1,1065 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.05.09 08:02:34 =~=~=~=~=~=~=~=~=~=~=~=
+
+SDCPURESRV2-ct0 login: pureeng
+1) Authenticate via CloudAssist
+2) Authenticate via command line
+3) Restore challenge
+Type the number corresponding to the authentication method you want to use.
+
+Selection: 1
+
+An email for identity verification will be sent once email is entered.
+Please follow the authentication instructions provided there and return to this screen when finished or if email has not been received.
+
+
+Enter an email address: fharris@purestorage.com
+Successfully authenticated
+Last login: Sat Oct 21 10:32:18 EDT 2023 on ttyS0
+
+Fri May 09 08:03:19 2025
+Welcome pureeng. This is Purity Version 6.5.9 on FlashArray SDCPURESRV2
+http://www.purestorage.com/
+pureeng@SDCPURESRV2-ct0:~$ purehost list
+pureeng@SDCPURESRV2-ct0:~$ iobalance --samptletime 30
+sampling host I/O for 30 seconds...
+                Host  CT0 I/O Count  CT1 I/O Count  
+pureeng@SDCPURESRV2-ct0:~$ purealert tag --timeout 300m --maintenance
+Name         Created                  Expires
+maintenance  2025-05-09 08:04:22 EDT  2025-05-09 13:04:22 EDT
+pureeng@SDCPURESRV2-ct0:~$ pureadm status
+usage: pureadm [-h]
+               {debug-foe,dump-bdag,dump-volumes,firewall,remote-rpc,force-gc,force-triage,list-tunable,lo-mem,mem-track,prepare-shutdown,profile-foe,release-foe,restart,start,status,stop,tune,multitune,wait}
+               ...
+
+positional arguments:
+  {debug-foe,dump-bdag,dump-volumes,firewall,remote-rpc,force-gc,force-triage,list-tunable,lo-mem,mem-track,prepare-shutdown,profile-foe,release-foe,restart,start,status,stop,tune,multitune,wait}
+    debug-foe           run Purity in debug mode on next restart
+    dump-bdag           dump medium bdag table to a csv file
+    dump-volumes        dump volumes table data to a csv file
+    firewall            configure the firewall
+    remote-rpc          configure the remote-rpc
+    force-gc            force gc to start/stop or query status
+    force-triage        force triage to start
+    list-tunable        list set tunables
+    lo-mem              configure tunables to control memory usage; pureadm
+                        stop / rmmod ps_bdrv / pureadm start required
+    mem-track           configure memory tracking
+    prepare-shutdown    prepare for shutdown
+    profile-foe         run Purity in profile mode on next restart
+    release-foe         run Purity in release mode on next restart
+    restart             restart Purity
+    start               start Purity
+    status              status Purity
+    stop                stop Purity
+    tune                set or clear tunables
+    multitune           set or clear multiple tunables
+    wait                wait for Purity services to become ready
+
+options:
+  -h, --help            show this help message and exit
+(must be run as root)
+pureeng@SDCPURESRV2-ct0:~$ sudo su
+     root@SDCPURESRV2-ct0:/var/home/pureeng# purearmdm statu
+usage: pureadm [-h]
+               {debug-foe,dump-bdag,dump-volumes,firewall,remote-rpc,force-gc,force-triage,list-tunable,lo-mem,mem-track,prepare-shutdown,profile-foe,release-foe,restart,start,status,stop,tune,multitune,wait}
+               ...
+pureadm: error: argument {debug-foe,dump-bdag,dump-volumes,firewall,remote-rpc,force-gc,force-triage,list-tunable,lo-mem,mem-track,prepare-shutdown,profile-foe,release-foe,restart,start,status,stop,tune,multitune,wait}: invalid choice: 'statu' (choose from 'debug-foe', 'dump-bdag', 'dump-volumes', 'firewall', 'remote-rpc', 'force-gc', 'force-triage', 'list-tunable', 'lo-mem', 'mem-track', 'prepare-shutdown', 'profile-foe', 'release-foe', 'restart', 'start', 'status', 'stop', 'tune', 'multitune', 'wait')
+     root@SDCPURESRV2-ct0:/var/home/pureeng# pureadm status
+Process status:
+purity start/running
+lio-drv start/running
+foed start/running, process 12567
+platform start/running, process 12525
+gui start/running, process 12502
+rest start/running, process 14150
+monitor start/running, process 12514
+iostat start/running, process 19743
+statistics start/running, process 12548
+middleware start/running, process 15434
+vasa start/running, process 15439
+platform working
+foed working
+gui working
+platform_env working
+quorum working
+foed_env working
+foed_ready working
+remote_patch working
+driver working
+san working
+health working
+lio-drv working
+middleware-db working
+middleware working
+vasa working
+     root@SDCPURESRV2-ct0:/var/home/pureeng# purehw list
+Name          Status  Identify  Slot  Index  Speed       Temperature  Voltage  Details
+CH0           ok      off       -     0      -           -            -        -
+CH0.BAY0      ok      off       -     0      -           -            -        -
+CH0.BAY1      ok      off       -     1      -           -            -        -
+CH0.BAY2      ok      off       -     2      -           -            -        -
+CH0.BAY3      ok      off       -     3      -           -            -        -
+CH0.BAY4      ok      off       -     4      -           -            -        -
+CH0.BAY5      ok      off       -     5      -           -            -        -
+CH0.BAY6      ok      off       -     6      -           -            -        -
+CH0.BAY7      ok      off       -     7      -           -            -        -
+CH0.BAY8      ok      off       -     8      -           -            -        -
+CH0.BAY9      ok      off       -     9      -           -            -        -
+CH0.BAY10     ok      off       -     10     -           -            -        -
+CH0.BAY11     ok      off       -     11     -           -            -        -
+CH0.BAY12     ok      off       -     12     -           -            -        -
+CH0.BAY13     ok      off       -     13     -           -            -        -
+CH0.BAY14     ok      off       -     14     -           -            -        -
+CH0.BAY15     ok      off       -     15     -           -            -        -
+CH0.BAY16     ok      off       -     16     -           -            -        -
+CH0.BAY17     ok      off       -     17     -           -            -        -
+CH0.BAY18     ok      off       -     18     -           -            -        -
+CH0.BAY19     ok      off       -     19     -           -            -        -
+CH0.NVB0      ok      off       -     0      -           -            -        -
+CH0.NVB1      ok      off       -     1      -           -            -        -
+CH0.NVB2      ok      off       -     2      -           -            -        -
+CH0.NVB3      ok      off       -     3      -           -            -        -
+CH0.PWR0      ok      -         -     0      -           -            205 V    -
+CH0.PWR1      ok      -         -     1      -           -            205 V    -
+CH0.TMP0      ok      -         -     0      -           27 C         -        -
+CT0           ok      off       -     0      -           -            -        -
+CT0.DCA4      ok      -         4     4      -           -            -        -
+CT0.ETH0      ok      -         -     0      50.00 Gb/s  -            -        -
+CT0.ETH1      ok      -         -     1      50.00 Gb/s  -            -        -
+CT0.ETH2      ok      -         -     2      10.00 Gb/s  -            -        -
+CT0.ETH3      ok      -         -     3      10.00 Gb/s  -            -        -
+CT0.ETH4      ok      -         -     4      1.00 Gb/s   -            -        -
+CT0.ETH5      ok      -         0     5      0.00 b/s    -            -        -
+CT0.ETH7      ok      -         0     7      0.00 b/s    -            -        -
+CT0.FAN0      ok      -         -     0      -           -            -        -
+CT0.FAN1      ok      -         -     1      -           -            -        -
+CT0.FAN2      ok      -         -     2      -           -            -        -
+CT0.FAN3      ok      -         -     3      -           -            -        -
+CT0.FAN4      ok      -         -     4      -           -            -        -
+CT0.FAN5      ok      -         -     5      -           -            -        -
+CT0.FC4       ok      -         1     4      16.00 Gb/s  -            -        -
+CT0.FC5       ok      -         1     5      16.00 Gb/s  -            -        -
+CT0.FC6       ok      -         1     6      16.00 Gb/s  -            -        -
+CT0.FC7       ok      -         1     7      16.00 Gb/s  -            -        -
+CT0.FC12      ok      -         3     12     16.00 Gb/s  -            -        -
+CT0.FC13      ok      -         3     13     16.00 Gb/s  -            -        -
+CT0.TMP0      ok      -         -     0      -           42 C         -        -
+CT0.TMP1      ok      -         -     1      -           43 C         -        -
+CT0.TMP2      ok      -         -     2      -           65 C         -        -
+CT0.TMP3      ok      -         -     3      -           59 C         -        -
+CT0.TMP4      ok      -         -     4      -           53 C         -        -
+CT0.TMP5      ok      -         -     5      -           51 C         -        -
+CT0.TMP6      ok      -         -     6      -           33 C         -        -
+CT0.TMP7      ok      -         -     7      -           35 C         -        -
+CT0.TMP8      ok      -         -     8      -           54 C         -        -
+CT0.TMP9      ok      -         -     9      -           44 C         -        -
+CT0.TMP10     ok      -         -     10     -           43 C         -        -
+CT0.TMP11     ok      -         -     11     -           43 C         -        -
+CT0.TMP12     ok      -         -     12     -           41 C         -        -
+CT0.TMP13     ok      -         -     13     -           43 C         -        -
+CT0.TMP14     ok      -         -     14     -           42 C         -        -
+CT0.TMP15     ok      -         -     15     -           41 C         -        -
+CT0.TMP16     ok      -         -     16     -           40 C         -        -
+CT0.TMP17     ok      -         -     17     -           43 C         -        -
+CT0.TMP18     ok      -         -     18     -           41 C         -        -
+CT0.TMP19     ok      -         -     19     -           41 C         -        -
+CT0.TMP20     ok      -         -     20     -           41 C         -        -
+CT0.TMP21     ok      -         -     21     -           44 C         -        -
+CT0.TMP22     ok      -         -     22     -           43 C         -        -
+CT0.TMP23     ok      -         -     23     -           43 C         -        -
+CT0.TMP24     ok      -         -     24     -           42 C         -        -
+CT1           ok      off       -     1      -           -            -        -
+CT1.DCA4      ok      -         4     4      -           -            -        -
+CT1.ETH0      ok      -         -     0      50.00 Gb/s  -            -        -
+CT1.ETH1      ok      -         -     1      50.00 Gb/s  -            -        -
+CT1.ETH2      ok      -         -     2      10.00 Gb/s  -            -        -
+CT1.ETH3      ok      -         -     3      10.00 Gb/s  -            -        -
+CT1.ETH4      ok      -         -     4      1.00 Gb/s   -            -        -
+CT1.ETH5      ok      -         0     5      0.00 b/s    -            -        -
+CT1.ETH7      ok      -         0     7      0.00 b/s    -            -        -
+CT1.FAN0      ok      -         -     0      -           -            -        -
+CT1.FAN1      ok      -         -     1      -           -            -        -
+CT1.FAN2      ok      -         -     2      -           -            -        -
+CT1.FAN3      ok      -         -     3      -           -            -        -
+CT1.FAN4      ok      -         -     4      -           -            -        -
+CT1.FAN5      ok      -         -     5      -           -            -        -
+CT1.FC4       ok      -         1     4      16.00 Gb/s  -            -        -
+CT1.FC5       ok      -         1     5      16.00 Gb/s  -            -        -
+CT1.FC6       ok      -         1     6      16.00 Gb/s  -            -        -
+CT1.FC7       ok      -         1     7      16.00 Gb/s  -            -        -
+CT1.FC12      ok      -         3     12     16.00 Gb/s  -            -        -
+CT1.FC13      ok      -         3     13     16.00 Gb/s  -            -        -
+CT1.TMP0      ok      -         -     0      -           43 C         -        -
+CT1.TMP1      ok      -         -     1      -           43 C         -        -
+CT1.TMP2      ok      -         -     2      -           62 C         -        -
+CT1.TMP3      ok      -         -     3      -           56 C         -        -
+CT1.TMP4      ok      -         -     4      -           53 C         -        -
+CT1.TMP5      ok      -         -     5      -           50 C         -        -
+CT1.TMP6      ok      -         -     6      -           34 C         -        -
+CT1.TMP7      ok      -         -     7      -           37 C         -        -
+CT1.TMP8      ok      -         -     8      -           53 C         -        -
+CT1.TMP9      ok      -         -     9      -           45 C         -        -
+CT1.TMP10     ok      -         -     10     -           44 C         -        -
+CT1.TMP11     ok      -         -     11     -           43 C         -        -
+CT1.TMP12     ok      -         -     12     -           43 C         -        -
+CT1.TMP13     ok      -         -     13     -           43 C         -        -
+CT1.TMP14     ok      -         -     14     -           42 C         -        -
+CT1.TMP15     ok      -         -     15     -           42 C         -        -
+CT1.TMP16     ok      -         -     16     -           41 C         -        -
+CT1.TMP17     ok      -         -     17     -           42 C         -        -
+CT1.TMP18     ok      -         -     18     -           41 C         -        -
+CT1.TMP19     ok      -         -     19     -           40 C         -        -
+CT1.TMP20     ok      -         -     20     -           40 C         -        -
+CT1.TMP21     ok      -         -     21     -           43 C         -        -
+CT1.TMP22     ok      -         -     22     -           42 C         -        -
+CT1.TMP23     ok      -         -     23     -           42 C         -        -
+CT1.TMP24     ok      -         -     24     -           41 C         -        -
+SH9           ok      off       -     9      -           29 C         -        -
+SH9.BAY0      ok      off       -     0      -           -            -        -
+SH9.BAY1      ok      off       -     1      -           -            -        -
+SH9.BAY2      ok      off       -     2      -           -            -        -
+SH9.BAY3      ok      off       -     3      -           -            -        -
+SH9.BAY4      ok      off       -     4      -           -            -        -
+SH9.BAY5      ok      off       -     5      -           -            -        -
+SH9.BAY6      ok      off       -     6      -           -            -        -
+SH9.BAY7      ok      off       -     7      -           -            -        -
+SH9.BAY8      ok      off       -     8      -           -            -        -
+SH9.BAY9      ok      off       -     9      -           -            -        -
+SH9.BAY10     ok      off       -     10     -           -            -        -
+SH9.BAY11     ok      off       -     11     -           -            -        -
+SH9.BAY12     ok      off       -     12     -           -            -        -
+SH9.BAY13     ok      off       -     13     -           -            -        -
+SH9.BAY14     ok      off       -     14     -           -            -        -
+SH9.BAY15     ok      off       -     15     -           -            -        -
+SH9.BAY16     ok      off       -     16     -           -            -        -
+SH9.BAY17     ok      off       -     17     -           -            -        -
+SH9.BAY18     ok      off       -     18     -           -            -        -
+SH9.BAY19     ok      off       -     19     -           -            -        -
+SH9.BAY20     ok      off       -     20     -           -            -        -
+SH9.BAY21     ok      off       -     21     -           -            -        -
+SH9.BAY22     ok      off       -     22     -           -            -        -
+SH9.BAY23     ok      off       -     23     -           -            -        -
+SH9.BAY24     ok      off       -     24     -           -            -        -
+SH9.BAY25     ok      off       -     25     -           -            -        -
+SH9.BAY26     ok      off       -     26     -           -            -        -
+SH9.BAY27     ok      off       -     27     -           -            -        -
+SH9.PWR0      ok      -         -     0      -           -            206 V    -
+SH9.PWR1      ok      -         -     1      -           -            206 V    -
+SH9.SC0       ok      off       -     0      -           37 C         -        -
+SH9.SC0.ETH0  ok      -         -     0      50.00 Gb/s  -            -        -
+SH9.SC0.ETH1  ok      -         -     1      0.00 b/s    -            -        -
+SH9.SC0.ETH2  ok      -         -     2      50.00 Gb/s  -            -        -
+SH9.SC0.ETH3  ok      -         -     3      0.00 b/s    -            -        -
+SH9.SC0.FAN0  ok      -         -     0      -           -            -        -
+SH9.SC0.FAN1  ok      -         -     1      -           -            -        -
+SH9.SC0.FAN2  ok      -         -     2      -           -            -        -
+SH9.SC0.FAN3  ok      -         -     3      -           -            -        -
+SH9.SC0.FAN4  ok      -         -     4      -           -            -        -
+SH9.SC0.FAN5  ok      -         -     5      -           -            -        -
+SH9.SC1       ok      off       -     1      -           37 C         -        -
+SH9.SC1.ETH0  ok      -         -     0      50.00 Gb/s  -            -        -
+SH9.SC1.ETH1  ok      -         -     1      0.00 b/s    -            -        -
+SH9.SC1.ETH2  ok      -         -     2      50.00 Gb/s  -            -        -
+SH9.SC1.ETH3  ok      -         -     3      0.00 b/s    -            -        -
+SH9.SC1.FAN0  ok      -         -     0      -           -            -        -
+SH9.SC1.FAN1  ok      -         -     1      -           -            -        -
+SH9.SC1.FAN2  ok      -         -     2      -           -            -        -
+SH9.SC1.FAN3  ok      -         -     3      -           -            -        -
+SH9.SC1.FAN4  ok      -         -     4      -           -            -        -
+SH9.SC1.FAN5  ok      -         -     5      -           -            -        -
+     root@SDCPURESRV2-ct0:/var/home/pureeng# puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    healthy  2.25T     -
+CH0.BAY1   SSD    healthy  2.25T     -
+CH0.BAY2   SSD    healthy  2.25T     -
+CH0.BAY3   SSD    healthy  2.25T     -
+CH0.BAY4   SSD    healthy  2.25T     -
+CH0.BAY5   SSD    healthy  2.25T     -
+CH0.BAY6   SSD    healthy  2.25T     -
+CH0.BAY7   SSD    healthy  2.25T     -
+CH0.BAY8   SSD    healthy  2.25T     -
+CH0.BAY9   SSD    healthy  2.25T     -
+CH0.BAY10  SSD    healthy  2.25T     -
+CH0.BAY11  SSD    healthy  2.25T     -
+CH0.BAY12  SSD    healthy  2.25T     -
+CH0.BAY13  SSD    healthy  2.25T     -
+CH0.BAY14  SSD    healthy  2.25T     -
+CH0.BAY15  SSD    healthy  2.25T     -
+CH0.BAY16  SSD    healthy  2.25T     -
+CH0.BAY17  SSD    healthy  2.25T     -
+CH0.BAY18  SSD    healthy  2.25T     -
+CH0.BAY19  SSD    healthy  2.25T     -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  healthy  7.52G     -
+CH0.NVB3   NVRAM  healthy  7.52G     -
+SH9.BAY0   SSD    healthy  4.56T     -
+SH9.BAY1   SSD    healthy  4.56T     -
+SH9.BAY2   SSD    healthy  4.56T     -
+SH9.BAY3   SSD    healthy  4.56T     -
+SH9.BAY4   SSD    healthy  4.56T     -
+SH9.BAY5   SSD    healthy  4.56T     -
+SH9.BAY6   SSD    healthy  4.56T     -
+SH9.BAY7   SSD    healthy  4.56T     -
+SH9.BAY8   SSD    healthy  4.56T     -
+SH9.BAY9   SSD    healthy  4.56T     -
+SH9.BAY10  SSD    healthy  4.56T     -
+SH9.BAY11  SSD    healthy  4.56T     -
+SH9.BAY12  SSD    healthy  4.56T     -
+SH9.BAY13  SSD    healthy  4.56T     -
+SH9.BAY14  SSD    healthy  9.10T     -
+SH9.BAY15  SSD    healthy  9.10T     -
+SH9.BAY16  SSD    healthy  9.10T     -
+SH9.BAY17  SSD    healthy  9.10T     -
+SH9.BAY18  SSD    healthy  9.10T     -
+SH9.BAY19  SSD    healthy  9.10T     -
+SH9.BAY20  SSD    healthy  9.10T     -
+SH9.BAY21  SSD    healthy  9.10T     -
+SH9.BAY22  SSD    healthy  9.10T     -
+SH9.BAY23  SSD    healthy  9.10T     -
+SH9.BAY24  SSD    healthy  9.10T     -
+SH9.BAY25  SSD    healthy  9.10T     -
+SH9.BAY26  SSD    healthy  9.10T     -
+SH9.BAY27  SSD    healthy  9.10T     -
+     root@SDCPURESRV2-ct0:/var/home/pureeng# purmeemessage list --open
+     root@SDCPURESRV2-ct0:/var/home/pureeng# puremessage list --openssssh peer
+ID        Time                     Severity  Category  Code   Component                    Name                          Event                                                                     Expected           Actual        Details
+10104950  2020-06-12 09:20:17 EDT  warning   array     42     hardware                     ct0.eth2                      failure                                                                   -                  -             
+10104950  2020-06-12 09:20:17 EDT  warning   array     42     hardware                     ct0.eth2                      failure                                                                   -                  -             
+10106345  2020-08-07 18:49:06 EDT  info      software  110    update                       Purity//FA                    new update available                                                      -                  ["5.3.8"]     
+10106345  2020-08-07 18:49:06 EDT  info      software  110    update                       Purity//FA                    new update available                                                      -                  ["5.3.8"]     
+10106404  2020-08-10 01:58:36 EDT  info      software  105    update                       upgrades                      update completed                                                          -                  -             
+10106404  2020-08-10 01:58:36 EDT  info      software  105    update                       upgrades                      update completed                                                          -                  -             
+10106405  2020-08-10 01:59:08 EDT  info      software  105    software upgrade             Purity//FA                    completed                                                                 -                  -             0x9ee50fed
+10106405  2020-08-10 01:59:08 EDT  info      software  105    software upgrade             Purity//FA                    completed                                                                 -                  -             0x9ee50fed
+10106611  2020-08-23 14:02:23 EDT  warning   hardware  60     drive                        sh9.bay15                     failure                                                                   healthy            unhealthy     
+10106611  2020-08-23 14:02:23 EDT  warning   hardware  60     drive                        sh9.bay15                     failure                                                                   healthy            unhealthy     
+10106613  2020-08-23 14:03:22 EDT  warning   hardware  60     drive                        sh9.bay18                     failure                                                                   healthy            unhealthy     
+10106613  2020-08-23 14:03:22 EDT  warning   hardware  60     drive                        sh9.bay18                     failure                                                                   healthy            unhealthy     
+10106615  2020-08-23 14:03:52 EDT  warning   hardware  60     drive                        sh9.bay20                     failure                                                                   healthy            unhealthy     
+10106615  2020-08-23 14:03:52 EDT  warning   hardware  60     drive                        sh9.bay20                     failure                                                                   healthy            unhealthy     
+10106616  2020-08-23 14:04:22 EDT  warning   hardware  60     drive                        sh9.bay17                     failure                                                                   healthy            unhealthy     
+10106616  2020-08-23 14:04:22 EDT  warning   hardware  60     drive                        sh9.bay17                     failure                                                                   healthy            unhealthy     
+10106617  2020-08-23 14:04:22 EDT  warning   hardware  60     drive                        sh9.bay22                     failure                                                                   healthy            unhealthy     
+10106617  2020-08-23 14:04:22 EDT  warning   hardware  60     drive                        sh9.bay22                     failure                                                                   healthy            unhealthy     
+10106618  2020-08-23 14:04:51 EDT  warning   hardware  60     drive                        sh9.bay19                     failure                                                                   healthy            unhealthy     
+10106618  2020-08-23 14:04:51 EDT  warning   hardware  60     drive                        sh9.bay19                     failure                                                                   healthy            unhealthy     
+10106620  2020-08-23 14:04:51 EDT  warning   hardware  60     drive                        sh9.bay24                     failure                                                                   healthy            unhealthy     
+10106620  2020-08-23 14:04:51 EDT  warning   hardware  60     drive                        sh9.bay24                     failure                                                                   healthy            unhealthy     
+10106622  2020-08-23 14:05:21 EDT  warning   hardware  60     drive                        sh9.bay21                     failure                                                                   healthy            unhealthy     
+10106622  2020-08-23 14:05:21 EDT  warning   hardware  60     drive                        sh9.bay21                     failure                                                                   healthy            unhealthy     
+10106623  2020-08-23 14:05:21 EDT  warning   hardware  60     drive                        sh9.bay27                     failure                                                                   healthy            unhealthy     
+10106623  2020-08-23 14:05:21 EDT  warning   hardware  60     drive                        sh9.bay27                     failure                                                                   healthy            unhealthy     
+10106624  2020-08-23 14:05:50 EDT  warning   hardware  60     drive                        sh9.bay23                     failure                                                                   healthy            unhealthy     
+10106624  2020-08-23 14:05:50 EDT  warning   hardware  60     drive                        sh9.bay23                     failure                                                                   healthy            unhealthy     
+10106625  2020-08-23 14:06:21 EDT  warning   hardware  60     drive                        sh9.bay25                     failure                                                                   healthy            unhealthy     
+10106625  2020-08-23 14:06:21 EDT  warning   hardware  60     drive                        sh9.bay25                     failure                                                                   healthy            unhealthy     
+10106626  2020-08-23 14:06:47 EDT  warning   hardware  60     drive                        sh9.bay26                     failure                                                                   healthy            unhealthy     
+10106626  2020-08-23 14:06:47 EDT  warning   hardware  60     drive                        sh9.bay26                     failure                                                                   healthy            unhealthy     
+10107544  2020-10-07 21:23:20 EDT  critical  software  67     host                         sdc01vmhost045s               host connected to single controller                                       -                  -             
+10107544  2020-10-07 21:23:20 EDT  critical  software  67     host                         sdc01vmhost045s               host connected to single controller                                       -                  -             
+10107545  2020-10-07 21:23:50 EDT  critical  software  67     host                         sdc01eclndpa04x               host connected to single controller                                       -                  -             
+10107545  2020-10-07 21:23:50 EDT  critical  software  67     host                         sdc01eclndpa04x               host connected to single controller                                       -                  -             
+10109733  2021-02-18 12:18:06 EST  critical  software  67     host                         sdc01eclmtta01x               host connected to single controller                                       -                  -             
+10109733  2021-02-18 12:18:06 EST  critical  software  67     host                         sdc01eclmtta01x               host connected to single controller                                       -                  -             
+10110980  2021-04-25 07:05:34 EDT  warning   array     104    service                      array.syslog_server           misconfiguration                                                          -                  -             
+10110980  2021-04-25 07:05:34 EDT  warning   array     104    service                      array.syslog_server           misconfiguration                                                          -                  -             
+10111386  2021-05-22 20:31:18 EDT  critical  array     126    power_supply                 ch0.pwr1                      failure                                                                   ok                 critical      
+10111386  2021-05-22 20:31:18 EDT  critical  array     126    power_supply                 ch0.pwr1                      failure                                                                   ok                 critical      
+10111387  2021-05-22 20:31:18 EDT  critical  array     126    power_supply                 sh9.pwr1                      failure                                                                   ok                 critical      
+10111387  2021-05-22 20:31:18 EDT  critical  array     126    power_supply                 sh9.pwr1                      failure                                                                   ok                 critical      
+10111478  2021-06-05 01:41:08 EDT  warning   hardware  39     hardware                     ct1.fc2                       Fibre Channel link failure                                                -                  1             
+10111478  2021-06-05 01:41:08 EDT  warning   hardware  39     hardware                     ct1.fc2                       Fibre Channel link failure                                                -                  1             
+10111799  2021-06-14 17:05:23 EDT  warning   array     51     replication                  ecl                           delayed                                                                   -                  -             
+10111799  2021-06-14 17:05:23 EDT  warning   array     51     replication                  ecl                           delayed                                                                   -                  -             
+10111951  2021-06-21 12:20:19 EDT  warning   array     51     replication                  ecl                           delayed                                                                   -                  -             
+10111951  2021-06-21 12:20:19 EDT  warning   array     51     replication                  ecl                           delayed                                                                   -                  -             
+10112186  2021-07-03 04:26:11 EDT  warning   hardware  39     hardware                     ct1.fc2                       Fibre Channel link failure                                                -                  1             
+10112186  2021-07-03 04:26:11 EDT  warning   hardware  39     hardware                     ct1.fc2                       Fibre Channel link failure                                                -                  1             
+10112830  2021-08-13 14:55:23 EDT  info      software  110    update                       Purity//FA                    new update available                                                      -                  ["5.3.16"]    
+10112830  2021-08-13 14:55:23 EDT  info      software  110    update                       Purity//FA                    new update available                                                      -                  ["5.3.16"]    
+10112831  2021-08-13 14:55:23 EDT  info      software  110    update                       Purity//DFS                   new update available                                                      -                  ["1.1.3"]     
+10112831  2021-08-13 14:55:23 EDT  info      software  110    update                       Purity//DFS                   new update available                                                      -                  ["1.1.3"]     
+10112989  2021-08-20 12:13:20 EDT  info      software  110    update                       Purity//FA                    new update available                                                      -                  ["5.3.16"]    
+10112989  2021-08-20 12:13:20 EDT  info      software  110    update                       Purity//FA                    new update available                                                      -                  ["5.3.16"]    
+10112990  2021-08-20 12:13:20 EDT  info      software  110    update                       Purity//DFS                   new update available                                                      -                  ["1.1.3"]     
+10112990  2021-08-20 12:13:20 EDT  info      software  110    update                       Purity//DFS                   new update available                                                      -                  ["1.1.3"]     
+10113098  2021-08-21 20:15:33 EDT  critical  array     126    power_supply                 sh9.pwr0                      failure                                                                   40 V               0 V           
+10113098  2021-08-21 20:15:33 EDT  critical  array     126    power_supply                 sh9.pwr0                      failure                                                                   40 V               0 V           
+10113099  2021-08-21 20:15:33 EDT  critical  array     126    power_supply                 ch0.pwr0                      failure                                                                   180 V              0 V           
+10113099  2021-08-21 20:15:33 EDT  critical  array     126    power_supply                 ch0.pwr0                      failure                                                                   180 V              0 V           
+10113142  2021-08-25 21:11:25 EDT  critical  software  67     host                         sdc01oafaoqd01s               host connected to single controller                                       -                  -             
+10113142  2021-08-25 21:11:25 EDT  critical  software  67     host                         sdc01oafaoqd01s               host connected to single controller                                       -                  -             
+10113161  2021-08-27 02:57:41 EDT  info      software  110    update                       Purity//FA                    new update available                                                      -                  ["5.3.16"]    
+10113161  2021-08-27 02:57:41 EDT  info      software  110    update                       Purity//FA                    new update available                                                      -                  ["5.3.16"]    
+10113162  2021-08-27 02:57:41 EDT  info      software  110    update                       Purity//DFS                   new update available                                                      -                  ["1.1.3"]     
+10113162  2021-08-27 02:57:41 EDT  info      software  110    update                       Purity//DFS                   new update available                                                      -                  ["1.1.3"]     
+10113276  2021-09-03 05:16:33 EDT  info      software  110    update                       Purity//FA                    new update available                                                      -                  ["5.3.16"]    
+10113276  2021-09-03 05:16:33 EDT  info      software  110    update                       Purity//FA                    new update available                                                      -                  ["5.3.16"]    
+10113277  2021-09-03 05:16:33 EDT  info      software  110    update                       Purity//DFS                   new update available                                                      -                  ["1.1.3"]     
+10113277  2021-09-03 05:16:33 EDT  info      software  110    update                       Purity//DFS                   new update available                                                      -                  ["1.1.3"]     
+10113412  2021-09-09 07:51:05 EDT  info      software  110    update                       Purity//DFS                   new update available                                                      -                  ["1.1.3"]     
+10113412  2021-09-09 07:51:05 EDT  info      software  110    update                       Purity//DFS                   new update available                                                      -                  ["1.1.3"]     
+10113413  2021-09-09 07:51:06 EDT  info      software  110    update                       Purity//FA                    new update available                                                      -                  ["5.3.16"]    
+10113413  2021-09-09 07:51:06 EDT  info      software  110    update                       Purity//FA                    new update available                                                      -                  ["5.3.16"]    
+10113620  2021-09-18 21:13:08 EDT  info      software  110    update                       Purity//FA                    new update available                                                      -                  ["5.3.16"]    
+10113620  2021-09-18 21:13:08 EDT  info      software  110    update                       Purity//FA                    new update available                                                      -                  ["5.3.16"]    
+10113621  2021-09-18 21:13:08 EDT  info      software  110    update                       Purity//DFS                   new update available                                                      -                  ["1.1.3"]     
+10113621  2021-09-18 21:13:08 EDT  info      software  110    update                       Purity//DFS                   new update available                                                      -                  ["1.1.3"]     
+10113663  2021-09-24 21:28:05 EDT  info      software  110    update                       Purity//DFS                   new update available                                                      -                  ["1.1.3"]     
+10113663  2021-09-24 21:28:05 EDT  info      software  110    update                       Purity//DFS                   new update available                                                      -                  ["1.1.3"]     
+10113664  2021-09-24 21:28:05 EDT  info      software  110    update                       Purity//FA                    new update available                                                      -                  ["5.3.16"]    
+10113664  2021-09-24 21:28:05 EDT  info      software  110    update                       Purity//FA                    new update available                                                      -                  ["5.3.16"]    
+10113762  2021-10-01 03:37:19 EDT  info      software  110    update                       Purity//FA                    new update available                                                      -                  ["5.3.16"]    
+10113762  2021-10-01 03:37:19 EDT  info      software  110    update                       Purity//FA                    new update available                                                      -                  ["5.3.16"]    
+10113763  2021-10-01 03:37:19 EDT  info      software  110    update                       Purity//DFS                   new update available                                                      -                  ["1.1.3"]     
+10113763  2021-10-01 03:37:19 EDT  info      software  110    update                       Purity//DFS                   new update available                                                      -                  ["1.1.3"]     
+10113856  2021-10-08 14:33:28 EDT  info      software  110    update                       Purity//FA                    new update available                                                      -                  ["5.3.16"]    
+10113856  2021-10-08 14:33:28 EDT  info      software  110    update                       Purity//FA                    new update available                                                      -                  ["5.3.16"]    
+10113857  2021-10-08 14:33:28 EDT  info      software  110    update                       Purity//DFS                   new update available                                                      -                  ["1.1.3"]     
+10113857  2021-10-08 14:33:28 EDT  info      software  110    update                       Purity//DFS                   new update available                                                      -                  ["1.1.3"]     
+10114068  2021-10-18 22:17:08 EDT  info      software  110    update                       Purity//FA                    new update available                                                      -                  ["5.3.16"]    
+10114068  2021-10-18 22:17:08 EDT  info      software  110    update                       Purity//FA                    new update available                                                      -                  ["5.3.16"]    
+10114069  2021-10-18 22:17:09 EDT  info      software  110    update                       Purity//DFS                   new update available                                                      -                  ["1.1.3"]     
+10114069  2021-10-18 22:17:09 EDT  info      software  110    update                       Purity//DFS                   new update available                                                      -                  ["1.1.3"]     
+10114215  2021-10-24 02:35:12 EDT  critical  hardware  15     shelf_controller             sh9.sc1                       failure                                                                   ok                 critical      
+10114215  2021-10-24 02:35:12 EDT  critical  hardware  15     shelf_controller             sh9.sc1                       failure                                                                   ok                 critical      
+10114220  2021-10-24 02:46:01 EDT  critical  hardware  15     shelf_controller             sh9.sc0                       failure                                                                   ok                 critical      
+10114220  2021-10-24 02:46:01 EDT  critical  hardware  15     shelf_controller             sh9.sc0                       failure                                                                   ok                 critical      
+10114222  2021-10-24 02:50:55 EDT  info      software  105    update                       Purity//DFS upgrades          update completed                                                          -                  -             
+10114222  2021-10-24 02:50:55 EDT  info      software  105    update                       Purity//DFS upgrades          update completed                                                          -                  -             
+10114223  2021-10-24 02:51:23 EDT  info      software  105    software upgrade             Xenon                         completed                                                                 -                  -             purity//dfs
+10114223  2021-10-24 02:51:23 EDT  info      software  105    software upgrade             Xenon                         completed                                                                 -                  -             purity//dfs
+10114226  2021-10-24 03:02:30 EDT  info      software  105    update                       upgrades                      update completed                                                          -                  -             
+10114226  2021-10-24 03:02:30 EDT  info      software  105    update                       upgrades                      update completed                                                          -                  -             
+10114227  2021-10-24 03:02:51 EDT  info      software  105    software upgrade             Purity//FA                    completed                                                                 -                  -             0x973c6f66
+10114227  2021-10-24 03:02:51 EDT  info      software  105    software upgrade             Purity//FA                    completed                                                                 -                  -             0x973c6f66
+10114441  2021-11-25 19:07:24 EST  warning   hardware  39     hardware                     ct1.fc2                       Fibre Channel link failure                                                -                  1             
+10114441  2021-11-25 19:07:24 EST  warning   hardware  39     hardware                     ct1.fc2                       Fibre Channel link failure                                                -                  1             
+10114966  2021-12-21 04:11:44 EST  info      software  105    software upgrade             Purity//FA                    completed                                                                 -                  -             0xee875b98
+10114966  2021-12-21 04:11:44 EST  info      software  105    software upgrade             Purity//FA                    completed                                                                 -                  -             0xee875b98
+10115750  2022-02-15 11:50:18 EST  warning   array     51     replication                  ecl                           delayed                                                                   -                  -             
+10115750  2022-02-15 11:50:18 EST  warning   array     51     replication                  ecl                           delayed                                                                   -                  -             
+10116016  2022-04-06 15:12:35 EDT  warning   software  5200   software                     software                      Proactive Monitoring                                                      None               None          Proactive monitoring detected an known issue, please check Purity Optimizations on PURE1
+10116016  2022-04-06 15:12:35 EDT  warning   software  5200   software                     software                      Proactive Monitoring                                                      None               None          Proactive monitoring detected an known issue, please check Purity Optimizations on PURE1
+10116248  2022-05-12 07:33:08 EDT  warning   hardware  39     hardware                     ct1.fc2                       Fibre Channel link failure                                                -                  2             
+10116248  2022-05-12 07:33:08 EDT  warning   hardware  39     hardware                     ct1.fc2                       Fibre Channel link failure                                                -                  2             
+10116375  2022-05-29 16:23:00 EDT  warning   hardware  39     hardware                     ct1.fc2                       Fibre Channel link failure                                                -                  1             
+10116375  2022-05-29 16:23:00 EDT  warning   hardware  39     hardware                     ct1.fc2                       Fibre Channel link failure                                                -                  1             
+10116528  2022-06-10 05:58:03 EDT  warning   hardware  39     hardware                     ct1.fc2                       Fibre Channel link failure                                                -                  1             
+10116528  2022-06-10 05:58:03 EDT  warning   hardware  39     hardware                     ct1.fc2                       Fibre Channel link failure                                                -                  1             
+10116595  2022-06-20 01:39:48 EDT  critical  software  67     host                         sdc01pabirih01                host connected to single controller                                       -                  -             
+10116595  2022-06-20 01:39:48 EDT  critical  software  67     host                         sdc01pabirih01                host connected to single controller                                       -                  -             
+10116597  2022-06-20 01:39:52 EDT  info      software  105    software upgrade             Purity//FA                    completed                                                                 -                  -             1f5a218f-a962-4bb0-9cb1-34da6d9875e7
+10116597  2022-06-20 01:39:52 EDT  info      software  105    software upgrade             Purity//FA                    completed                                                                 -                  -             1f5a218f-a962-4bb0-9cb1-34da6d9875e7
+10116698  2022-08-03 03:08:25 EDT  warning   array     104    service                      array.syslog_server           misconfiguration                                                          -                  -             
+10116698  2022-08-03 03:08:25 EDT  warning   array     104    service                      array.syslog_server           misconfiguration                                                          -                  -             
+10117232  2023-03-11 20:01:40 EST  critical  array     126    power_supply                 ch0.pwr1                      failure                                                                   180 V              0 V           Power supply input lost
+10117232  2023-03-11 20:01:40 EST  critical  array     126    power_supply                 ch0.pwr1                      failure                                                                   180 V              0 V           Power supply input lost
+10117233  2023-03-11 20:01:40 EST  critical  array     126    power_supply                 sh9.pwr1                      failure                                                                   40 V               0 V           Power supply input lost
+10117233  2023-03-11 20:01:40 EST  critical  array     126    power_supply                 sh9.pwr1                      failure                                                                   40 V               0 V           Power supply input lost
+10117266  2023-04-03 22:30:37 EDT  warning   hardware  60     drive                        ch0.nvb2                      failure                                                                   healthy            failed        
+10117266  2023-04-03 22:30:37 EDT  warning   hardware  60     drive                        ch0.nvb2                      failure                                                                   healthy            failed        
+10117267  2023-04-03 23:01:08 EDT  critical  hardware  60     shelf                        CH0                           shelf drive failure(s)                                                    0                  1             
+10117267  2023-04-03 23:01:08 EDT  critical  hardware  60     shelf                        CH0                           shelf drive failure(s)                                                    0                  1             
+10117340  2023-05-01 00:08:40 EDT  critical  array     4      controller                   ct0                           failure                                                                   ready              not ready     
+10117340  2023-05-01 00:08:40 EDT  critical  array     4      controller                   ct0                           failure                                                                   ready              not ready     
+10117343  2023-05-01 00:10:05 EDT  critical  software  67     host                         sdc01pabirih01                host connected to single controller                                       -                  -             
+10117343  2023-05-01 00:10:05 EDT  critical  software  67     host                         sdc01pabirih01                host connected to single controller                                       -                  -             
+10117354  2023-05-04 04:40:01 EDT  warning   array     51     replication                  abi                           delayed                                                                   -                  -             
+10117354  2023-05-04 04:40:01 EDT  warning   array     51     replication                  abi                           delayed                                                                   -                  -             
+10117558  2023-06-17 20:35:58 EDT  critical  array     126    power_supply                 sh9.pwr0                      failure                                                                   40 V               0 V           Power supply input lost
+10117558  2023-06-17 20:35:58 EDT  critical  array     126    power_supply                 sh9.pwr0                      failure                                                                   40 V               0 V           Power supply input lost
+10117559  2023-06-17 20:35:58 EDT  critical  array     126    power_supply                 ch0.pwr0                      failure                                                                   180 V              0 V           Power supply input lost
+10117559  2023-06-17 20:35:58 EDT  critical  array     126    power_supply                 ch0.pwr0                      failure                                                                   180 V              0 V           Power supply input lost
+10117645  2023-06-29 14:27:31 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10117645  2023-06-29 14:27:31 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10117704  2023-07-21 08:32:27 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10117704  2023-07-21 08:32:27 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10117705  2023-07-21 08:39:47 EDT  warning   array     51     replication                  abi                           delayed                                                                   -                  -             
+10117705  2023-07-21 08:39:47 EDT  warning   array     51     replication                  abi                           delayed                                                                   -                  -             
+10117717  2023-07-22 22:02:28 EDT  critical  array     7      storage                      ct0./var                      boot drive overutilization                                                95%                96%           
+10117717  2023-07-22 22:02:28 EDT  critical  array     7      storage                      ct0./var                      boot drive overutilization                                                95%                96%           
+10117746  2023-07-25 06:17:26 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10117746  2023-07-25 06:17:26 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10117754  2023-07-26 00:16:28 EDT  warning   array     51     replication                  sdcabihost01-to-rdcabihost02  delayed                                                                   -                  -             
+10117754  2023-07-26 00:16:28 EDT  warning   array     51     replication                  sdcabihost01-to-rdcabihost02  delayed                                                                   -                  -             
+10117786  2023-08-01 11:12:27 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10117786  2023-08-01 11:12:27 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10117832  2023-08-08 06:57:39 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10117832  2023-08-08 06:57:39 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10117846  2023-08-12 06:51:20 EDT  warning   array     51     replication                  sdcabihost01-to-rdcabihost02  delayed                                                                   -                  -             
+10117846  2023-08-12 06:51:20 EDT  warning   array     51     replication                  sdcabihost01-to-rdcabihost02  delayed                                                                   -                  -             
+10117847  2023-08-12 06:55:11 EDT  warning   array     51     replication                  abi                           delayed                                                                   -                  -             
+10117847  2023-08-12 06:55:11 EDT  warning   array     51     replication                  abi                           delayed                                                                   -                  -             
+10117851  2023-08-15 09:42:16 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10117851  2023-08-15 09:42:16 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10117859  2023-08-17 11:50:35 EDT  warning   array     51     replication                  ecl                           delayed                                                                   -                  -             
+10117859  2023-08-17 11:50:35 EDT  warning   array     51     replication                  ecl                           delayed                                                                   -                  -             
+10117879  2023-08-22 06:57:37 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10117879  2023-08-22 06:57:37 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10117918  2023-08-29 09:12:18 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10117918  2023-08-29 09:12:18 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10118035  2023-09-03 17:19:48 EDT  critical  array     15     shelf_controller             sh9.sc1                       failure                                                                   ok                 critical      
+10118035  2023-09-03 17:19:48 EDT  critical  array     15     shelf_controller             sh9.sc1                       failure                                                                   ok                 critical      
+10118042  2023-09-03 17:33:35 EDT  critical  array     15     shelf_controller             sh9.sc0                       failure                                                                   ok                 critical      
+10118042  2023-09-03 17:33:35 EDT  critical  array     15     shelf_controller             sh9.sc0                       failure                                                                   ok                 critical      
+10118047  2023-09-03 17:37:17 EDT  info      array     105    software upgrade             Xenon                         completed                                                                 -                  -             purity//dfs
+10118047  2023-09-03 17:37:17 EDT  info      array     105    software upgrade             Xenon                         completed                                                                 -                  -             purity//dfs
+10118049  2023-09-03 17:39:45 EDT  info      array     105    software upgrade             Purity//FA                    completed                                                                 -                  -             9fdf9cc9-4ae5-4efa-91f1-f35e04a27c91
+10118049  2023-09-03 17:39:45 EDT  info      array     105    software upgrade             Purity//FA                    completed                                                                 -                  -             9fdf9cc9-4ae5-4efa-91f1-f35e04a27c91
+10118051  2023-09-03 18:22:59 EDT  warning   array     60     drive                        ch0.nvb2                      failure                                                                   healthy            unrecognized  
+10118051  2023-09-03 18:22:59 EDT  warning   array     60     drive                        ch0.nvb2                      failure                                                                   healthy            unrecognized  
+10118068  2023-09-06 07:02:37 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10118068  2023-09-06 07:02:37 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10118069  2023-09-06 07:21:19 EDT  warning   array     51     replication                  sdcabihost01-to-rdcabihost02  delayed                                                                   -                  -             
+10118069  2023-09-06 07:21:19 EDT  warning   array     51     replication                  sdcabihost01-to-rdcabihost02  delayed                                                                   -                  -             
+10118070  2023-09-06 07:24:49 EDT  warning   array     51     replication                  abi                           delayed                                                                   -                  -             
+10118070  2023-09-06 07:24:49 EDT  warning   array     51     replication                  abi                           delayed                                                                   -                  -             
+10118086  2023-09-12 00:32:55 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10118086  2023-09-12 00:32:55 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10118106  2023-09-19 10:12:42 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10118106  2023-09-19 10:12:42 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10118127  2023-09-27 07:17:48 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10118127  2023-09-27 07:17:48 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10118143  2023-10-04 00:32:28 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10118143  2023-10-04 00:32:28 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10118152  2023-10-06 07:25:02 EDT  warning   array     51     replication                  abi                           delayed                                                                   -                  -             
+10118152  2023-10-06 07:25:02 EDT  warning   array     51     replication                  abi                           delayed                                                                   -                  -             
+10118160  2023-10-11 03:02:23 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10118160  2023-10-11 03:02:23 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10118162  2023-10-11 03:21:26 EDT  warning   array     51     replication                  sdcabihost01-to-rdcabihost02  delayed                                                                   -                  -             
+10118162  2023-10-11 03:21:26 EDT  warning   array     51     replication                  sdcabihost01-to-rdcabihost02  delayed                                                                   -                  -             
+10118163  2023-10-11 03:25:00 EDT  warning   array     51     replication                  abi                           delayed                                                                   -                  -             
+10118163  2023-10-11 03:25:00 EDT  warning   array     51     replication                  abi                           delayed                                                                   -                  -             
+10118202  2023-10-17 00:23:10 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10118202  2023-10-17 00:23:10 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10118209  2023-10-19 08:07:28 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10118209  2023-10-19 08:07:28 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10118218  2023-10-21 10:18:49 EDT  warning   array     42     hardware                     ct0.eth4                      failure                                                                   -                  -             
+10118218  2023-10-21 10:18:49 EDT  warning   array     42     hardware                     ct0.eth4                      failure                                                                   -                  -             
+10118281  2023-10-21 12:18:52 EDT  warning   array     42     hardware                     ct1.eth3                      failure                                                                   -                  -             
+10118281  2023-10-21 12:18:52 EDT  warning   array     42     hardware                     ct1.eth3                      failure                                                                   -                  -             
+10118383  2023-11-09 08:07:48 EST  warning   array     15     direct_compress_accelerator  ct1.dca4                      failure                                                                   ok                 critical      frequent failures 4
+10118383  2023-11-09 08:07:48 EST  warning   array     15     direct_compress_accelerator  ct1.dca4                      failure                                                                   ok                 critical      frequent failures 4
+10118444  2023-11-14 11:47:43 EST  warning   array     51     replication                  vmuptuadrprd                  delayed                                                                   -                  -             
+10118444  2023-11-14 11:47:43 EST  warning   array     51     replication                  vmuptuadrprd                  delayed                                                                   -                  -             
+10118454  2023-11-15 21:05:55 EST  warning   array     42     hardware                     ct1.eth4                      failure                                                                   -                  -             
+10118454  2023-11-15 21:05:55 EST  warning   array     42     hardware                     ct1.eth4                      failure                                                                   -                  -             
+10118455  2023-11-15 21:06:32 EST  warning   array     42     hardware                     ct0.eth4                      failure                                                                   -                  -             
+10118455  2023-11-15 21:06:32 EST  warning   array     42     hardware                     ct0.eth4                      failure                                                                   -                  -             
+10118464  2023-11-16 09:37:25 EST  warning   array     51     replication                  vmuptuadrprd                  delayed                                                                   -                  -             
+10118464  2023-11-16 09:37:25 EST  warning   array     51     replication                  vmuptuadrprd                  delayed                                                                   -                  -             
+10118533  2023-12-04 22:24:07 EST  warning   array     42     hardware                     ct1.eth4                      failure                                                                   -                  -             
+10118533  2023-12-04 22:24:07 EST  warning   array     42     hardware                     ct1.eth4                      failure                                                                   -                  -             
+10118534  2023-12-04 22:24:30 EST  warning   array     42     hardware                     ct0.eth4                      failure                                                                   -                  -             
+10118534  2023-12-04 22:24:30 EST  warning   array     42     hardware                     ct0.eth4                      failure                                                                   -                  -             
+10118714  2024-02-16 12:26:18 EST  warning   array     51     replication                  abi-to-rdc                    delayed                                                                   -                  -             
+10118714  2024-02-16 12:26:18 EST  warning   array     51     replication                  abi-to-rdc                    delayed                                                                   -                  -             
+10118869  2024-03-09 12:49:53 EST  info      array     105    software upgrade             purity//fa                    completed                                                                 -                  -             1a82c174-359c-4399-905d-d7b9d5f3a5ca
+10118869  2024-03-09 12:49:53 EST  info      array     105    software upgrade             purity//fa                    completed                                                                 -                  -             1a82c174-359c-4399-905d-d7b9d5f3a5ca
+10118964  2024-04-08 08:43:05 EDT  warning   array     51     replication                  migration-to-rdc              delayed                                                                   -                  -             
+10118964  2024-04-08 08:43:05 EDT  warning   array     51     replication                  migration-to-rdc              delayed                                                                   -                  -             
+10118965  2024-04-08 08:56:34 EDT  warning   array     51     replication                  abi-to-rdc                    delayed                                                                   -                  -             
+10118965  2024-04-08 08:56:34 EDT  warning   array     51     replication                  abi-to-rdc                    delayed                                                                   -                  -             
+10118966  2024-04-08 09:01:31 EDT  warning   array     51     replication                  abi-to-adc                    delayed                                                                   -                  -             
+10118966  2024-04-08 09:01:31 EDT  warning   array     51     replication                  abi-to-adc                    delayed                                                                   -                  -             
+10118967  2024-04-08 09:12:18 EDT  warning   array     51     replication                  vmuptuadrprd                  delayed                                                                   -                  -             
+10118967  2024-04-08 09:12:18 EDT  warning   array     51     replication                  vmuptuadrprd                  delayed                                                                   -                  -             
+10119075  2024-04-18 11:28:04 EDT  warning   array     51     replication                  migration-to-rdc              delayed                                                                   -                  -             
+10119075  2024-04-18 11:28:04 EDT  warning   array     51     replication                  migration-to-rdc              delayed                                                                   -                  -             
+10119545  2024-07-21 02:30:00 EDT  critical  array     15     shelf_controller             sh9.sc1                       failure                                                                   ok                 critical      
+10119545  2024-07-21 02:30:00 EDT  critical  array     15     shelf_controller             sh9.sc1                       failure                                                                   ok                 critical      
+10119611  2024-07-21 02:41:53 EDT  critical  array     15     shelf_controller             sh9.sc0                       failure                                                                   ok                 critical      
+10119611  2024-07-21 02:41:53 EDT  critical  array     15     shelf_controller             sh9.sc0                       failure                                                                   ok                 critical      
+10119616  2024-07-21 02:45:54 EDT  info      array     105    software upgrade             xenon                         completed                                                                 -                  -             purity//dfs
+10119616  2024-07-21 02:45:54 EDT  info      array     105    software upgrade             xenon                         completed                                                                 -                  -             purity//dfs
+10119618  2024-07-21 02:48:21 EDT  info      array     105    software upgrade             purity//fa                    completed                                                                 -                  -             65e41af6-d252-42fc-b3bc-3e0542ce3bc6
+10119618  2024-07-21 02:48:21 EDT  info      array     105    software upgrade             purity//fa                    completed                                                                 -                  -             65e41af6-d252-42fc-b3bc-3e0542ce3bc6
+10119713  2024-08-25 05:12:19 EDT  warning   array     51     replication                  vmuptuadrprd-unixprd          delayed                                                                   -                  -             
+10119713  2024-08-25 05:12:19 EDT  warning   array     51     replication                  vmuptuadrprd-unixprd          delayed                                                                   -                  -             
+10119811  2024-09-25 02:22:56 EDT  warning   array     30     service                      array.directory_service       pureds test failure                                                       -                  -             
+10119811  2024-09-25 02:22:56 EDT  warning   array     30     service                      array.directory_service       pureds test failure                                                       -                  -             
+10119854  2024-10-09 21:27:57 EDT  warning   array     51     replication                  migration-to-rdc              delayed                                                                   -                  -             
+10119854  2024-10-09 21:27:57 EDT  warning   array     51     replication                  migration-to-rdc              delayed                                                                   -                  -             
+10119855  2024-10-09 21:32:52 EDT  warning   array     51     replication                  Migration-to-RDC              delayed                                                                   -                  -             
+10119855  2024-10-09 21:32:52 EDT  warning   array     51     replication                  Migration-to-RDC              delayed                                                                   -                  -             
+10119856  2024-10-09 21:56:24 EDT  warning   array     51     replication                  abi-to-rdc                    delayed                                                                   -                  -             
+10119856  2024-10-09 21:56:24 EDT  warning   array     51     replication                  abi-to-rdc                    delayed                                                                   -                  -             
+10119927  2024-12-03 21:27:54 EST  warning   array     51     replication                  migration-to-rdc              delayed                                                                   -                  -             
+10119927  2024-12-03 21:27:54 EST  warning   array     51     replication                  migration-to-rdc              delayed                                                                   -                  -             
+10120019  2025-01-12 23:53:33 EST  warning   array     3      software                     ct0.failover                  failover                                                                  -                  -             
+10120019  2025-01-12 23:53:33 EST  warning   array     3      software                     ct0.failover                  failover                                                                  -                  -             
+10120021  2025-01-12 23:53:33 EST  critical  array     4      controller                   ct1                           failure                                                                   primary|secondary  offline       
+10120021  2025-01-12 23:53:33 EST  critical  array     4      controller                   ct1                           failure                                                                   primary|secondary  offline       
+10120038  2025-01-13 03:13:45 EST  warning   array     3      software                     ct1.failover                  failover                                                                  -                  -             
+10120038  2025-01-13 03:13:45 EST  warning   array     3      software                     ct1.failover                  failover                                                                  -                  -             
+10120039  2025-01-13 03:13:45 EST  critical  array     4      controller                   ct0                           failure                                                                   ready              not ready     
+10120039  2025-01-13 03:13:45 EST  critical  array     4      controller                   ct0                           failure                                                                   ready              not ready     
+10120053  2025-01-13 08:57:51 EST  warning   array     51     replication                  migration-to-rdc              delayed                                                                   -                  -             
+10120053  2025-01-13 08:57:51 EST  warning   array     51     replication                  migration-to-rdc              delayed                                                                   -                  -             
+10120268  2025-02-07 09:13:10 EST  warning   array     51     replication                  migration-to-rdc              delayed                                                                   -                  -             
+10120268  2025-02-07 09:13:10 EST  warning   array     51     replication                  migration-to-rdc              delayed                                                                   -                  -             
+10120430  2025-02-12 22:45:42 EST  critical  array     15     shelf_controller             sh9.sc1                       failure                                                                   ok                 critical      
+10120430  2025-02-12 22:45:42 EST  critical  array     15     shelf_controller             sh9.sc1                       failure                                                                   ok                 critical      
+10120439  2025-02-12 22:57:35 EST  critical  array     15     shelf_controller             sh9.sc0                       failure                                                                   ok                 critical      
+10120439  2025-02-12 22:57:35 EST  critical  array     15     shelf_controller             sh9.sc0                       failure                                                                   ok                 critical      
+10120444  2025-02-12 23:01:46 EST  info      array     105    software upgrade             xenon                         completed                                                                 -                  -             purity//dfs
+10120444  2025-02-12 23:01:46 EST  info      array     105    software upgrade             xenon                         completed                                                                 -                  -             purity//dfs
+10120446  2025-02-12 23:03:44 EST  info      array     105    software upgrade             purity//fa                    completed                                                                 -                  -             8f6a003d-85bc-4c07-9d1d-ef4ba95f3da9
+10120446  2025-02-12 23:03:44 EST  info      array     105    software upgrade             purity//fa                    completed                                                                 -                  -             8f6a003d-85bc-4c07-9d1d-ef4ba95f3da9
+10120555  2025-03-07 04:37:47 EST  info      array     10072  software                     software                      The optimization security_patch_fa_2025_A has been successfully applied.  -                  -             Please follow KB for alert 10072 and visit Purity Optimizations on PURE1
+10120555  2025-03-07 04:37:47 EST  info      array     10072  software                     software                      The optimization security_patch_fa_2025_A has been successfully applied.  -                  -             Please follow KB for alert 10072 and visit Purity Optimizations on PURE1
+10120818  2025-04-12 20:00:17 EDT  critical  array     126    power_supply                 ch0.pwr1                      failure                                                                   180 V              0 V           Power supply input lost
+10120818  2025-04-12 20:00:17 EDT  critical  array     126    power_supply                 ch0.pwr1                      failure                                                                   180 V              0 V           Power supply input lost
+10120819  2025-04-12 20:00:17 EDT  critical  array     126    power_supply                 ch0.pwr0                      failure                                                                   ok                 degraded      Power supply outputs are not balanced
+10120819  2025-04-12 20:00:17 EDT  critical  array     126    power_supply                 ch0.pwr0                      failure                                                                   ok                 degraded      Power supply outputs are not balanced
+10120820  2025-04-12 20:00:17 EDT  critical  array     126    power_supply                 sh9.pwr1                      failure                                                                   ok                 degraded      Power supply outputs are not balanced
+10120820  2025-04-12 20:00:17 EDT  critical  array     126    power_supply                 sh9.pwr1                      failure                                                                   ok                 degraded      Power supply outputs are not balanced
+10120880  2025-04-25 20:24:24 EDT  warning   array     39     hardware                     ct0.fc13                      Fibre Channel link failure                                                -                  1             
+10120880  2025-04-25 20:24:24 EDT  warning   array     39     hardware                     ct0.fc13                      Fibre Channel link failure                                                -                  1             
+10120881  2025-04-25 20:24:24 EDT  warning   array     39     hardware                     ct0.fc7                       Fibre Channel link failure                                                -                  1             
+10120881  2025-04-25 20:24:24 EDT  warning   array     39     hardware                     ct0.fc7                       Fibre Channel link failure                                                -                  1             
+10120882  2025-04-25 20:24:24 EDT  warning   array     39     hardware                     ct0.fc5                       Fibre Channel link failure                                                -                  1             
+10120882  2025-04-25 20:24:24 EDT  warning   array     39     hardware                     ct0.fc5                       Fibre Channel link failure                                                -                  1             
+10120883  2025-04-25 20:24:31 EDT  warning   array     39     hardware                     ct1.fc7                       Fibre Channel link failure                                                -                  1             
+10120883  2025-04-25 20:24:31 EDT  warning   array     39     hardware                     ct1.fc7                       Fibre Channel link failure                                                -                  1             
+10120884  2025-04-25 20:24:32 EDT  warning   array     39     hardware                     ct1.fc13                      Fibre Channel link failure                                                -                  1             
+10120884  2025-04-25 20:24:32 EDT  warning   array     39     hardware                     ct1.fc13                      Fibre Channel link failure                                                -                  1             
+10120885  2025-04-25 20:24:32 EDT  warning   array     39     hardware                     ct1.fc5                       Fibre Channel link failure                                                -                  1             
+10120885  2025-04-25 20:24:32 EDT  warning   array     39     hardware                     ct1.fc5                       Fibre Channel link failure                                                -                  1             
+10120886  2025-04-26 17:49:40 EDT  warning   array     39     hardware                     ct0.fc12                      Fibre Channel link failure                                                -                  1             
+10120886  2025-04-26 17:49:40 EDT  warning   array     39     hardware                     ct0.fc12                      Fibre Channel link failure                                                -                  1             
+10120887  2025-04-26 17:49:40 EDT  warning   array     39     hardware                     ct0.fc4                       Fibre Channel link failure                                                -                  1             
+10120887  2025-04-26 17:49:40 EDT  warning   array     39     hardware                     ct0.fc4                       Fibre Channel link failure                                                -                  1             
+10120888  2025-04-26 17:49:40 EDT  warning   array     39     hardware                     ct0.fc6                       Fibre Channel link failure                                                -                  1             
+10120888  2025-04-26 17:49:40 EDT  warning   array     39     hardware                     ct0.fc6                       Fibre Channel link failure                                                -                  1             
+10120889  2025-04-26 17:49:53 EDT  warning   array     39     hardware                     ct1.fc4                       Fibre Channel link failure                                                -                  1             
+10120889  2025-04-26 17:49:53 EDT  warning   array     39     hardware                     ct1.fc4                       Fibre Channel link failure                                                -                  1             
+10120890  2025-04-26 17:49:53 EDT  warning   array     39     hardware                     ct1.fc6                       Fibre Channel link failure                                                -                  1             
+10120890  2025-04-26 17:49:53 EDT  warning   array     39     hardware                     ct1.fc6                       Fibre Channel link failure                                                -                  1             
+10120891  2025-04-26 17:49:53 EDT  warning   array     39     hardware                     ct1.fc12                      Fibre Channel link failure                                                -                  1             
+10120891  2025-04-26 17:49:53 EDT  warning   array     39     hardware                     ct1.fc12                      Fibre Channel link failure                                                -                  1             
+     root@SDCPURESRV2-ct0:/var/home/pureeng# puremessage list ssh peerpuremessage list 
+ID        Time                     Severity  Category  Code   Component                    Name                          Event                                                                     Expected           Actual        Details
+10104950  2020-06-12 09:20:17 EDT  warning   array     42     hardware                     ct0.eth2                      failure                                                                   -                  -             
+10106345  2020-08-07 18:49:06 EDT  info      software  110    update                       Purity//FA                    new update available                                                      -                  ["5.3.8"]     
+10106404  2020-08-10 01:58:36 EDT  info      software  105    update                       upgrades                      update completed                                                          -                  -             
+10106405  2020-08-10 01:59:08 EDT  info      software  105    software upgrade             Purity//FA                    completed                                                                 -                  -             0x9ee50fed
+10106611  2020-08-23 14:02:23 EDT  warning   hardware  60     drive                        sh9.bay15                     failure                                                                   healthy            unhealthy     
+10106613  2020-08-23 14:03:22 EDT  warning   hardware  60     drive                        sh9.bay18                     failure                                                                   healthy            unhealthy     
+10106615  2020-08-23 14:03:52 EDT  warning   hardware  60     drive                        sh9.bay20                     failure                                                                   healthy            unhealthy     
+10106616  2020-08-23 14:04:22 EDT  warning   hardware  60     drive                        sh9.bay17                     failure                                                                   healthy            unhealthy     
+10106617  2020-08-23 14:04:22 EDT  warning   hardware  60     drive                        sh9.bay22                     failure                                                                   healthy            unhealthy     
+10106618  2020-08-23 14:04:51 EDT  warning   hardware  60     drive                        sh9.bay19                     failure                                                                   healthy            unhealthy     
+10106620  2020-08-23 14:04:51 EDT  warning   hardware  60     drive                        sh9.bay24                     failure                                                                   healthy            unhealthy     
+10106622  2020-08-23 14:05:21 EDT  warning   hardware  60     drive                        sh9.bay21                     failure                                                                   healthy            unhealthy     
+10106623  2020-08-23 14:05:21 EDT  warning   hardware  60     drive                        sh9.bay27                     failure                                                                   healthy            unhealthy     
+10106624  2020-08-23 14:05:50 EDT  warning   hardware  60     drive                        sh9.bay23                     failure                                                                   healthy            unhealthy     
+10106625  2020-08-23 14:06:21 EDT  warning   hardware  60     drive                        sh9.bay25                     failure                                                                   healthy            unhealthy     
+10106626  2020-08-23 14:06:47 EDT  warning   hardware  60     drive                        sh9.bay26                     failure                                                                   healthy            unhealthy     
+10107544  2020-10-07 21:23:20 EDT  critical  software  67     host                         sdc01vmhost045s               host connected to single controller                                       -                  -             
+10107545  2020-10-07 21:23:50 EDT  critical  software  67     host                         sdc01eclndpa04x               host connected to single controller                                       -                  -             
+10109733  2021-02-18 12:18:06 EST  critical  software  67     host                         sdc01eclmtta01x               host connected to single controller                                       -                  -             
+10110980  2021-04-25 07:05:34 EDT  warning   array     104    service                      array.syslog_server           misconfiguration                                                          -                  -             
+10111386  2021-05-22 20:31:18 EDT  critical  array     126    power_supply                 ch0.pwr1                      failure                                                                   ok                 critical      
+10111387  2021-05-22 20:31:18 EDT  critical  array     126    power_supply                 sh9.pwr1                      failure                                                                   ok                 critical      
+10111478  2021-06-05 01:41:08 EDT  warning   hardware  39     hardware                     ct1.fc2                       Fibre Channel link failure                                                -                  1             
+10111799  2021-06-14 17:05:23 EDT  warning   array     51     replication                  ecl                           delayed                                                                   -                  -             
+10111951  2021-06-21 12:20:19 EDT  warning   array     51     replication                  ecl                           delayed                                                                   -                  -             
+10112186  2021-07-03 04:26:11 EDT  warning   hardware  39     hardware                     ct1.fc2                       Fibre Channel link failure                                                -                  1             
+10112830  2021-08-13 14:55:23 EDT  info      software  110    update                       Purity//FA                    new update available                                                      -                  ["5.3.16"]    
+10112831  2021-08-13 14:55:23 EDT  info      software  110    update                       Purity//DFS                   new update available                                                      -                  ["1.1.3"]     
+10112989  2021-08-20 12:13:20 EDT  info      software  110    update                       Purity//FA                    new update available                                                      -                  ["5.3.16"]    
+10112990  2021-08-20 12:13:20 EDT  info      software  110    update                       Purity//DFS                   new update available                                                      -                  ["1.1.3"]     
+10113098  2021-08-21 20:15:33 EDT  critical  array     126    power_supply                 sh9.pwr0                      failure                                                                   40 V               0 V           
+10113099  2021-08-21 20:15:33 EDT  critical  array     126    power_supply                 ch0.pwr0                      failure                                                                   180 V              0 V           
+10113142  2021-08-25 21:11:25 EDT  critical  software  67     host                         sdc01oafaoqd01s               host connected to single controller                                       -                  -             
+10113161  2021-08-27 02:57:41 EDT  info      software  110    update                       Purity//FA                    new update available                                                      -                  ["5.3.16"]    
+10113162  2021-08-27 02:57:41 EDT  info      software  110    update                       Purity//DFS                   new update available                                                      -                  ["1.1.3"]     
+10113276  2021-09-03 05:16:33 EDT  info      software  110    update                       Purity//FA                    new update available                                                      -                  ["5.3.16"]    
+10113277  2021-09-03 05:16:33 EDT  info      software  110    update                       Purity/ D           ["5.3.16"]    
+10113762  2021-10-01 03:37:19 EDT  info      software  110    update                       Purity//FA                    new update available                                                      -                  ["5.3.16"]    
+10113763  2021-10-01 03:37:19 EDT  info      software  110    update                       Purity//DFS                   new update available                                                      -                  ["1.1.3"]     
+10113856  2021-10-08 14:33:28 EDT  info      software  110    update                       Purity//FA                    new update available                                                      -                  ["5.3.16"]    
+10113857  2021-10-08 14:33:28 EDT  info      software  110    update                       Purity//DFS                   new update available                                                      -                  ["1.1.3"]     
+10114068  2021-10-18 22:17:08 EDT  info      software  110    update                       Purity//FA                    new update available                                                      -                  ["5.3.16"]    
+10114069  2021-10-18 22:17:09 EDT  info      software  110    update                       Purity//DFS                   new update available                                                      -                  ["1.1.3"]     
+10114215  2021-10-24 02:35:12 EDT  critical  hardware  15     shelf_controller             sh9.sc1                       failure                                                                   ok                 critical      
+10114220  2021-10-24 02:46:01 EDT  critical  hardware  15     shelf_controller             sh9.sc0                       failure                                                                   ok                 critical      
+10114222  2021-10-24 02:50:55 EDT  info      software  105    update                       Purity//DFS upgrades          update completed                                                          -                  -             
+10114223  2021-10-24 02:51:23 EDT  info      software  105    software upgrade             Xenon                         completed                                                                 -                  -             purity//dfs
+10114226  2021-10-24 03:02:30 EDT  info      software  105    update                       upgrades                      update completed                                                          -                  -             
+10114227  2021-10-24 03:02:51 EDT  info      software  105    software upgrade             Purity//FA                    completed                                                                 -                  -             0x973c6f66
+10114441  2021-11-25 19:07:24 EST  warning   hardware  39     hardware                     ct1.fc2                       Fibre Channel link failure                                                -                  1             
+10114966  2021-12-21 04:11:44 EST  info      software  105    software upgrade             Purity//FA                    completed                                                                 -                  -             0xee875b98
+10115750  2022-02-15 11:50:18 EST  warning   array     51     replication                  ecl                           delayed                                                                   -                  -             
+10116016  2022-04-06 15:12:35 EDT  warning   software  5200   software                     software                      Proactive Monitoring                                                      None               None          Proactive monitoring detected an known issue, please check Purity Optimizations on PURE1
+10116248  2022-05-12 07:33:08 EDT  warning   hardware  39     hardware                     ct1.fc2                       Fibre Channel link failure                                                -                  2             
+10116375  2022-05-29 16:23:00 EDT  warning   hardware  39     hardware                     ct1.fc2                       Fibre Channel link failure                                                -                  1             
+10116528  2022-06-10 05:58:03 EDT  warning   hardware  39     hardware                     ct1.fc2                       Fibre Channel link failure                                                -                  1             
+10116595  2022-06-20 01:39:48 EDT  critical  software  67     host                         sdc01pabirih01                host connected to single controller                                       -                  -             
+10116597  2022-06-20 01:39:52 EDT  info      software  105    software upgrade             Purity//FA                    completed                                                                 -                  -             1f5a218f-a962-4bb0-9cb1-34da6d9875e7
+10116698  2022-08-03 03:08:25 EDT  warning   array     104    service                      array.syslog_server           misconfiguration                                                          -                  -             
+10117232  2023-03-11 20:01:40 EST  critical  array     126    power_supply                 ch0.pwr1                      failure                                                                   180 V              0 V           Power supply input lost
+10117233  2023-03-11 20:01:40 EST  critical  array     126    power_supply                 sh9.pwr1                      failure                                                                   40 V               0 V           Power supply input lost
+10117266  2023-04-03 22:30:37 EDT  warning   hardware  60     drive                        ch0.nvb2                      failure                                                                   healthy            failed        
+10117267  2023-04-03 23:01:08 EDT  critical  hardware  60     shelf                        CH0                           shelf drive failure(s)                                                    0                  1             
+10117340  2023-05-01 00:08:40 EDT  critical  array     4      controller                   ct0                           failure                                                                   ready              not ready     
+10117343  2023-05-01 00:10:05 EDT  critical  software  67     host                         sdc01pabirih01                host connected to single controller                                       -                  -             
+10117354  2023-05-04 04:40:01 EDT  warning   array     51     replication                  abi                           delayed                                                                   -                  -             
+10117558  2023-06-17 20:35:58 EDT  critical  array     126    power_supply                 sh9.pwr0                      failure                                                                   40 V               0 V           Power supply input lost
+10117559  2023-06-17 20:35:58 EDT  critical  array     126    power_supply                 ch0.pwr0                      failure                                                                   180 V              0 V           Power supply input lost
+10117645  2023-06-29 14:27:31 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10117704  2023-07-21 08:32:27 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10117705  2023-07-21 08:39:47 EDT  warning   array     51     replicat2o3-07-25 06:17:26 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10117754  2023-07-26 00:16:28 EDT  warning   array     51     replication                  sdcabihost01-to-rdcabihost02  delayed                                                                   -                  -             
+10117786  2023-08-01 11:12:27 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10117832  2023-08-08 06:57:39 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10117846  2023-08-12 06:51:20 EDT  warning   array     51     replication                  sdcabihost01-to-rdcabihost02  delayed                                                                   -                  -             
+10117847  2023-08-12 06:55:11 EDT  warning   array     51     replication                  abi                           delayed                                                                   -                  -             
+10117851  2023-08-15 09:42:16 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10117859  2023-08-17 11:50:35 EDT  warning   array     51     replication                  ecl                           delayed                                                                   -                  -             
+10117879  2023-08-22 06:57:37 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10117918  2023-08-29 09:12:18 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10118035  2023-09-03 17:19:48 EDT  critical  array     15     shelf_controller             sh9.sc1                       failure                                                                   ok                 critical      
+10118042  2023-09-03 17:33:35 EDT  critical  array     15     shelf_controller             sh9.sc0                       failure                                                                   ok                 critical      
+10118047  2023-09-03 17:37:17 EDT  info      array     105    software upgrade             Xenon                         completed                                                                 -                  -             purity//dfs
+10118049  2023-09-03 17:39:45 EDT  info      array     105    software upgrade             Purity//FA                    completed                                                                 -                  -             9fdf9cc9-4ae5-4efa-91f1-f35e04a27c91
+10118051  2023-09-03 18:22:59 EDT  warning   array     60     drive                        ch0.nvb2                      failure                                                                   healthy            unrecognized  
+10118068  2023-09-06 07:02:37 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10118069  2023-09-06 07:21:19 EDT  warning   array     51     replication                  sdcabihost01-to-rdcabihost02  delayed                                                                   -                  -             
+10118070  2023-09-06 07:24:49 EDT  warning   array     51     replication                  abi                           delayed                                                                   -                  -             
+10118086  2023-09-12 00:32:55 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10118106  2023-09-19 10:12:42 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10118127  2023-09-27 07:17:48 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10118143  2023-10-04 00:32:28 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10118152  2023-10-06 07:25:02 EDT  warning   array     51     replication                  abi                           delayed                                                                   -                  -             
+10118160  2023-10-11 03:02:23 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10118162  2023-10-11 03:21:26 EDT  warning   array     51     replication                  sdcabihost01-to-rdcabihost02  delayed                                                                   -                  -             
+10118163  2023-10-11 03:25:00 EDT  warning   array     51     replication                  abi                           delayed                                                                   -                  -             
+10118202  2023-10-17 00:23:10 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10118209  2023-10-19 08:07:28 EDT  warning   array     51     replication                  vmptuadrprd                   delayed                                                                   -                  -             
+10118218  2023-10-21 10:18:49 EDT  warning   array     42     hardware                     ct0.eth4                      failure                                                                   -                  -             
+10118281  2023-10-21 12:18:52 EDT  warning   array     42     hardware                     ct1.eth3                      failure                                                                   -                  -             
+10118383  2023-11-09 08:07:48 EST  warning   array     15     direct_compress_accelerator  ct1.dca4                      failure                                                                   ok                 critical      frequent failures 4
+10118444  2023-11-14 11:47:43 EST  warning   array     51     replication                  vmuptuadrprd                  delayed                                                                   -                  -             
+10118454  2023-11-15 21:05:55 EST  warning   array     42     hardware                     ct1.eth4                      failure                                                                   -                  -             
+10118455  2023-11-15 21:06:32 EST  warning   array     42     hardware                     ct0.eth4                      failure                                                                   -                  -             
+10118464  2023-11-16 09:37:25 EST  warning   array     51     replication                  vmuptuadrprd                  delayed                                                                   -                  -             
+10118533  2023-12-04 22:24:07 EST  warning   array     42     hardware                     ct1.eth4                      failure                                                                   -                  -             
+10118534  2023-12-04 22:24:30 EST  warning   array     42     hardware                     ct0.eth4                      failure                                                                   -                  -             
+10118714  2024-02-16 12:26:18 EST  warning   array     51     replication                  abi-to-rdc                    delayed                                                                   -                  -             
+10118869  2024-03-09 12:49:53 EST  info      array     105    software upgrade             purity//fa                    completed                                                                 -                  -             1a82c174-359c-4399-905d-d7b9d5f3a5ca
+10118964  2024-04-08 08:43:05 EDT  warning   array     51     replication                  migration-to-rdc              delayed                                                                   -                  -             
+10118965  2024-04-08 08:56:34 EDT  warning   array     51     replication                  abi-to-rdc                    delayed                                                                   -                  -             
+10118966  2024-04-08 09:01:31 EDT  warning   array     51     replication                  abi-to-adc                    delayed                                                                   -                  -             
+10118967  2024-04-08 09:12:18 EDT  warning   array     51     replication                  vmuptuadrprd                  delayed                                                                   -                  -             
+10119075  2024-04-18 11:28:04 EDT  warning   array     51     replication                  migration-to-rdc              delayed                                                                   -                  -             
+10119545  2024-07-21 02:30:00 EDT  critical  array     15     shelf_controller             sh9.sc1                       failure                                                                   ok                 critical      
+10119611  2024-07-21 02:41:53 EDT  critical  array     15     shelf_controller             sh9.sc0                       failure                                                                   ok                 critical      
+10119616  2024-07-21 02:45:54 EDT  info      array     105    software upgrade             xenon                         completed                                                                 -                  -             purity//dfs
+10119618  2024-07-21 02:48:21 EDT  info      array     105    software upgrade             purity//fa                    completed                                                                 -                  -             65e41af6-d252-42fc-b3bc-3e0542ce3bc6
+10119713  2024-08-25 05:12:19 EDT  warning   array     51     replication                  vmuptuadrprd-unixprd          delayed                                                                   -                  -             
+10119811  2024-09-25 02:22:56 EDT  warning   array     30     service                      array.directory_service       pureds test failure                                                       -                  -             
+10119854  2024-10-09 21:27:57 EDT  warning   array     51     replication                  migration-to-rdc              delayed                                                                   -                  -             
+10119855  2024-10-09 21:32:52 EDT  w r            delayed                                                                   -                  -             
+10119927  2024-12-03 21:27:54 EST  warning   array     51     replication                  migration-to-rdc              delayed                                                                   -                  -             
+10120019  2025-01-12 23:53:33 EST  warning   array     3      software                     ct0.failover                  failover                                                                  -                  -             
+10120021  2025-01-12 23:53:33 EST  critical  array     4      controller                   ct1                           failure                                                                   primary|secondary  offline       
+10120038  2025-01-13 03:13:45 EST  warning   array     3      software                     ct1.failover                  failover                                                                  -                  -             
+10120039  2025-01-13 03:13:45 EST  critical  array     4      controller                   ct0                           failure                                                                   ready              not ready     
+10120053  2025-01-13 08:57:51 EST  warning   array     51     replication                  migration-to-rdc              delayed                                                                   -                  -             
+10120268  2025-02-07 09:13:10 EST  warning   array     51     replication                  migration-to-rdc              delayed                                                                   -                  -             
+10120430  2025-02-12 22:45:42 EST  critical  array     15     shelf_controller             sh9.sc1                       failure                                                                   ok                 critical      
+10120439  2025-02-12 22:57:35 EST  critical  array     15     shelf_controller             sh9.sc0                       failure                                                                   ok                 critical      
+10120444  2025-02-12 23:01:46 EST  info      array     105    software upgrade             xenon                         completed                                                                 -                  -             purity//dfs
+10120446  2025-02-12 23:03:44 EST  info      array     105    software upgrade             purity//fa                    completed                                                                 -                  -             8f6a003d-85bc-4c07-9d1d-ef4ba95f3da9
+10120555  2025-03-07 04:37:47 EST  info      array     10072  software                     software                      The optimization security_patch_fa_2025_A has been successfully applied.  -                  -             Please follow KB for alert 10072 and visit Purity Optimizations on PURE1
+10120818  2025-04-12 20:00:17 EDT  critical  array     126    power_supply                 ch0.pwr1                      failure                                                                   180 V              0 V           Power supply input lost
+10120819  2025-04-12 20:00:17 EDT  critical  array     126    power_supply                 ch0.pwr0                      failure                                                                   ok                 degraded      Power supply outputs are not balanced
+10120820  2025-04-12 20:00:17 EDT  critical  array     126    power_supply                 sh9.pwr1                      failure                                                                   ok                 degraded      Power supply outputs are not balanced
+10120880  2025-04-25 20:24:24 EDT  warning   array     39     hardware                     ct0.fc13                      Fibre Channel link failure                                                -                  1             
+10120881  2025-04-25 20:24:24 EDT  warning   array     39     hardware                     ct0.fc7                       Fibre Channel link failure                                                -                  1             
+10120882  2025-04-25 20:24:24 EDT  warning   array     39     hardware                     ct0.fc5                       Fibre Channel link failure                                                -                  1             
+10120883  2025-04-25 20:24:31 EDT  warning   array     39     hardware                     ct1.fc7                       Fibre Channel link failure                                                -                  1             
+10120884  2025-04-25 20:24:32 EDT  warning   array     39     hardware                     ct1.fc13                      Fibre Channel link failure                                                -                  1             
+10120885  2025-04-25 20:24:32 EDT  warning   array     39     hardware                     ct1.fc5                       Fibre Channel link failure                                                -                  1             
+10120886  2025-04-26 17:49:40 EDT  warning   array     39     hardware                     ct0.fc12                      Fibre Channel link failure                                                -                  1             
+10120887  2025-04-26 17:49:40 EDT  warning   array     39     hardware                     ct0.fc4                       Fibre Channel link failure                                                -                  1             
+10120888  2025-04-26 17:49:40 EDT  warning   array     39     hardware                     ct0.fc6                       Fibre Channel link failure                                                -                  1             
+10120889  2025-04-26 17:49:53 EDT  warning   array     39     hardware                     ct1.fc4                       Fibre Channel link failure                                                -                  1             
+10120890  2025-04-26 17:49:53 EDT  warning   array     39     hardware                     ct1.fc6                       Fibre Channel link failure                                                -                  1             
+10120891  2025-04-26 17:49:53 EDT  warning   array     39     hardware                     ct1.fc12                      Fibre Channel link failure                                                -                  1             
+     root@SDCPURESRV2-ct0:/var/home/pureeng# ^C
+     root@SDCPURESRV2-ct0:/var/home/pureeng# puremessage list ssh peer --open
+     root@SDCPURESRV2-ct0:/var/home/pureeng# ssh peer
+Last login: Mon Jan 13 10:05:03 2025 from fe80::26a9:37ff:fe5d:d2f6%haeth0
+
+Fri May 09 08:05:50 2025
+Welcome root. This is Purity Version 6.5.9 on FlashArray SDCPURESRV2
+http://www.purestorage.com/
+     root@SDCPURESRV2-ct1:~# fcpureportlist=`pureport list --initiator | awk '/Target/,0' | cut -d. -f1 | awk '{print $1,$5}' | grep -v '-' | grep -v "Initiator" | uniq -c; echo`; fcpureportlistcount=`echo "$fcpureportlist" | awk '{total += $1} END {print total}'`; echo -e "$fcpureportlist\n\n"; echo -e "\tTotal FC connections: $fcpureportlistcount\n\n";
+      1 10:00:00:FD:45:F9:5C:D1 CT0
+      1 10:00:00:FD:45:F9:5C:D1 CT1
+      1 10:00:00:FD:45:F9:5C:D9 CT0
+      1 10:00:00:FD:45:F9:5C:D9 CT1
+      1 10:00:08:F1:EA:1C:DD:51 CT0
+      1 10:00:08:F1:EA:1C:DD:51 CT1
+      1 10:00:08:F1:EA:1C:DD:59 CT0
+      1 10:00:08:F1:EA:1C:DD:59 CT1
+      1 10:00:08:F1:EA:1C:FD:F1 CT0
+      1 10:00:08:F1:EA:1C:FD:F1 CT1
+      1 10:00:08:F1:EA:1C:FD:F9 CT0
+      1 10:00:08:F1:EA:1C:FD:F9 CT1
+      1 10:00:08:F1:EA:FE:06:11 CT0
+      1 10:00:08:F1:EA:FE:06:11 CT1
+      1 10:00:08:F1:EA:FE:06:19 CT0
+      1 10:00:08:F1:EA:FE:06:19 CT1
+      1 10:00:08:F1:EA:FE:06:D1 CT0
+      1 10:00:08:F1:EA:FE:06:D1 CT1
+      1 10:00:08:F1:EA:FE:06:D9 CT0
+      1 10:00:08:F1:EA:FE:06:D9 CT1
+      1 10:00:08:F1:EA:FE:06:E1 CT0
+      1 10:00:08:F1:EA:FE:06:E1 CT1
+      1 10:00:08:F1:EA:FE:06:E9 CT0
+      1 10:00:08:F1:EA:FE:06:E9 CT1
+      1 10:00:08:F1:EA:FE:16:11 CT0
+      1 10:00:08:F1:EA:FE:16:11 CT1
+      1 10:00:08:F1:EA:FE:16:19 CT0
+      1 10:00:08:F1:EA:FE:16:19 CT1
+      1 10:00:08:F1:EA:FE:16:B1 CT0
+      1 10:00:08:F1:EA:FE:16:B1 CT1
+      1 10:00:08:F1:EA:FE:16:B9 CT0
+      1 10:00:08:F1:EA:FE:16:B9 CT1
+      1 10:00:08:F1:EA:FE:16:D1 CT0
+      1 10:00:08:F1:EA:FE:16:D1 CT1
+      1 10:00:08:F1:EA:FE:16:D9 CT0
+      1 10:00:08:F1:EA:FE:16:D9 CT1
+      1 10:00:08:F1:EA:FE:16:E1 CT0
+      1 10:00:08:F1:EA:FE:16:E1 CT1
+      1 10:00:08:F1:EA:FE:16:E9 CT0
+      1 10:00:08:F1:EA:FE:16:E9 CT1
+      1 10:00:08:F1:EA:FE:16:F1 CT0
+      1 10:00:08:F1:EA:FE:16:F1 CT1
+      1 10:00:08:F1:EA:FE:16:F9 CT0
+      1 10:00:08:F1:EA:FE:16:F9 CT1
+      1 10:00:08:F1:EA:FE:26:31 CT0
+      1 10:00:08:F1:EA:FE:26:31 CT1
+      1 10:00:08:F1:EA:FE:26:39 CT0
+      1 10:00:08:F1:EA:FE:26:39 CT1
+      1 10:00:08:F1:EA:FE:26:41 CT0
+      1 10:00:08:F1:EA:FE:26:41 CT1
+      1 10:00:08:F1:EA:FE:26:49 CT0
+      1 10:00:08:F1:EA:FE:26:49 CT1
+      1 10:00:08:F1:EA:FE:36:61 CT0
+      1 10:00:08:F1:EA:FE:36:61 CT1
+      1 10:00:08:F1:EA:FE:36:69 CT0
+      1 10:00:08:F1:EA:FE:36:69 CT1
+      1 10:00:08:F1:EA:FE:46:51 CT0
+      1 10:00:08:F1:EA:FE:46:51 CT1
+      1 10:00:08:F1:EA:FE:46:59 CT0
+      1 10:00:08:F1:EA:FE:46:59 CT1
+      1 10:00:08:F1:EA:FE:46:61 CT0
+      1 10:00:08:F1:EA:FE:46:61 CT1
+      1 10:00:08:F1:EA:FE:46:69 CT0
+      1 10:00:08:F1:EA:FE:46:69 CT1
+      1 10:00:08:F1:EA:FE:D6:A1 CT0
+      1 10:00:08:F1:EA:FE:D6:A1 CT1
+      1 10:00:08:F1:EA:FE:D6:A9 CT0
+      1 10:00:08:F1:EA:FE:D6:A9 CT1
+      1 10:00:08:F1:EA:FE:E5:41 CT0
+      1 10:00:08:F1:EA:FE:E5:41 CT1
+      1 10:00:08:F1:EA:FE:E5:49 CT0
+      1 10:00:08:F1:EA:FE:E5:49 CT1
+      1 10:00:08:F1:EA:FE:E5:81 CT0
+      1 10:00:08:F1:EA:FE:E5:81 CT1
+      1 10:00:08:F1:EA:FE:E5:89 CT0
+      1 10:00:08:F1:EA:FE:E5:89 CT1
+      1 10:00:08:F1:EA:FE:E5:C1 CT0
+      1 10:00:08:F1:EA:FE:E5:C1 CT1
+      1 10:00:08:F1:EA:FE:E5:C9 CT0
+      1 10:00:08:F1:EA:FE:E5:C9 CT1
+      1 10:00:08:F1:EA:FE:E6:31 CT0
+      1 10:00:08:F1:EA:FE:E6:31 CT1
+      1 10:00:08:F1:EA:FE:E6:39 CT0
+      1 10:00:08:F1:EA:FE:E6:39 CT1
+      1 10:00:08:F1:EA:FE:F5:01 CT0
+      1 10:00:08:F1:EA:FE:F5:01 CT1
+      1 10:00:08:F1:EA:FE:F5:09 CT0
+      1 10:00:08:F1:EA:FE:F5:09 CT1
+      1 10:00:08:F1:EA:FE:F5:51 CT0
+      1 10:00:08:F1:EA:FE:F5:51 CT1
+      1 10:00:08:F1:EA:FE:F5:59 CT0
+      1 10:00:08:F1:EA:FE:F5:59 CT1
+      1 10:00:08:F1:EA:FE:F5:A1 CT0
+      1 10:00:08:F1:EA:FE:F5:A1 CT1
+      1 10:00:08:F1:EA:FE:F5:A9 CT0
+      1 10:00:08:F1:EA:FE:F5:A9 CT1
+      1 10:00:08:F1:EA:FE:F5:B1 CT0
+      1 10:00:08:F1:EA:FE:F5:B1 CT1
+      1 10:00:08:F1:EA:FE:F5:B9 CT0
+      1 10:00:08:F1:EA:FE:F5:B9 CT1
+      1 10:00:08:F1:EA:FE:F5:E1 CT0
+      1 10:00:08:F1:EA:FE:F5:E1 CT1
+      1 10:00:08:F1:EA:FE:F5:E9 CT0
+      1 10:00:08:F1:EA:FE:F5:E9 CT1
+      1 10:00:70:10:6F:EB:21:09 CT0
+      1 10:00:70:10:6F:EB:21:09 CT1
+      1 10:00:70:10:6F:EB:21:11 CT0
+      1 10:00:70:10:6F:EB:21:11 CT1
+      1 10:00:70:10:6F:EB:B3:B9 CT0
+      1 10:00:70:10:6F:EB:B3:B9 CT1
+      1 10:00:70:10:6F:EB:B3:C1 CT0
+      1 10:00:70:10:6F:EB:B3:C1 CT1
+      1 10:00:B8:83:03:27:94:A1 CT0
+      1 10:00:B8:83:03:27:94:A1 CT1
+      1 10:00:B8:83:03:27:94:A9 CT0
+      1 10:00:B8:83:03:27:94:A9 CT1
+      1 10:00:B8:83:03:27:A4:31 CT0
+      1 10:00:B8:83:03:27:A4:31 CT1
+      1 10:00:B8:83:03:27:A4:39 CT0
+      1 10:00:B8:83:03:27:A4:39 CT1
+      1 10:00:D0:BF:9C:F0:30:69 CT0
+      1 10:00:D0:BF:9C:F0:30:69 CT1
+      1 10:00:D0:BF:9C:F0:30:71 CT0
+      1 10:00:D0:BF:9C:F0:30:71 CT1
+      1 20:00:B4:7A:F1:18:95:42 CT0
+      1 20:00:B4:7A:F1:18:95:42 CT1
+      1 20:00:B4:7A:F1:18:95:43 CT0
+      1 20:00:B4:7A:F1:18:95:43 CT1
+      2 50:01:43:80:23:18:C3:76 CT0
+      2 50:01:43:80:23:18:C3:76 CT1
+      2 50:01:43:80:23:1A:22:88 CT0
+      2 50:01:43:80:23:1A:22:88 CT1
+
+
+Total FC connections: 136
+
+
+     root@SDCPURESRV2-ct1:~# purearray list --connect --path && ssh peer purearray list --connect --path
+Name         Local Port  Local Address   Remote Port  Remote Address   Status     Transport
+RDCPURESRV1  replbond    192.168.18.100  replbond     192.168.118.105  connected  ip
+RDCPURESRV8  replbond    192.168.18.100  replbond     192.168.118.108  connected  ip
+SDCPURESRV3  replbond    192.168.18.100  replbond     192.168.18.104   connected  ip
+Name         Local Port  Local Address   Remote Port  Remote Address   Status     Transport
+RDCPURESRV1  replbond    192.168.18.100  replbond     192.168.118.105  connected  ip
+RDCPURESRV8  replbond    192.168.18.100  replbond     192.168.118.108  connected  ip
+SDCPURESRV3  replbond    192.168.18.100  replbond     192.168.18.104   connected  ip
+     root@SDCPURESRV2-ct1:~# pureadm stop
+monitor stop/waiting
+wait-for-state pureapp stop/waiting
+wait-for-state mariadb stop/waiting
+lio-drv disabling
+platform stop/waiting
+wait-for-state foed stop/waiting
+iostat stop/waiting
+statistics stop/waiting
+rtm-file-collector stop/killed
+wait-for-state lio-drv stop/waiting
+purity stop/waiting
+wait-for-state purity_started stop/waiting
+Pure Storage is offline.
+     root@SDCPURESRV2-ct1:~# exit
+logout
+     root@SDCPURESRV2-ct0:/var/home/pureeng# pureadm stattop
+monitor stop/waiting
+wait-for-state pureapp stop/waiting
+wait-for-state mariadb stop/waiting
+lio-drv disabling
+platform stop/waiting
+wait-for-state foed stop/waiting
+iostat stop/waiting
+statistics stop/waiting
+rtm-file-collector stop/waiting
+wait-for-state lio-drv stop/waiting
+purity stop/waiting
+wait-for-state purity_started stop/waiting
+Pure Storage is offline.
+     root@SDCPURESRV2-ct0:/var/home/pureeng# exit
+exit
+pureeng@SDCPURESRV2-ct0:~$ exit
+logout
+
+SDCPURESRV2-ct0 login: =~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.05.09 08:10:26 =~=~=~=~=~=~=~=~=~=~=~=
+
+SDCPURESRV3-ct0 login: pureeng
+1) Authenticate via CloudAssist
+2) Authenticate via command line
+3) Restore challenge
+Type the number corresponding to the authentication method you want to use.
+
+Selection: 1
+
+An email for identity verification will be sent once email is entered.
+Please follow the authentication instructions provided there and return to this screen when finished or if email has not been received.
+
+
+Enter an email address: fharris@purestorage.com
+Successfully authenticated
+Last login: Thu May  2 11:03:46 EDT 2024 on ttyS0
+
+Fri May 09 08:11:36 2025
+Welcome pureeng. This is Purity Version 6.5.9 on FlashArray SDCPURESRV3
+http://www.purestorage.com/
+pureeng@SDCPURESRV3-ct0:~$ sudo su
+     root@SDCPURESRV3-ct0:/var/home/pureeng# puredrive list
+Name       Type   Status            Capacity  Details
+CH0.BAY0   SSD    healthy           18.30T    -
+CH0.BAY1   SSD    healthy           18.30T    -
+CH0.BAY2   SSD    healthy           18.30T    -
+CH0.BAY3   SSD    healthy           18.30T    -
+CH0.BAY4   SSD    healthy           18.30T    -
+CH0.BAY5   SSD    healthy           18.30T    -
+CH0.BAY6   SSD    healthy           18.30T    -
+CH0.BAY7   SSD    healthy           18.30T    -
+CH0.BAY8   SSD    healthy           18.30T    -
+CH0.BAY9   SSD    healthy           18.30T    -
+CH0.BAY10  SSD    healthy           18.30T    -
+CH0.BAY11  SSD    healthy           18.30T    -
+CH0.BAY12  SSD    healthy           18.30T    -
+CH0.BAY13  SSD    healthy           18.30T    -
+CH0.BAY14  SSD    healthy           18.30T    -
+CH0.BAY15  SSD    healthy           18.30T    -
+CH0.BAY16  SSD    healthy           18.30T    -
+CH0.BAY17  SSD    healthy           18.30T    -
+CH0.BAY18  SSD    healthy           18.30T    -
+CH0.BAY19  SSD    healthy           18.30T    -
+CH0.NVB0   NVRAM  healthy           7.52G     -
+CH0.NVB1   NVRAM  healthy           7.52G     -
+CH0.NVB2   NVRAM  healthy           7.52G     -
+CH0.NVB3   NVRAM  healthy           7.52G     -
+SH9.BAY0   SSD    evacuating (46%)  18.30T    -
+SH9.BAY1   SSD    evacuating (46%)  18.30T    -
+SH9.BAY2   SSD    evacuating (46%)  18.30T    -
+SH9.BAY3   SSD    evacuating (46%)  18.30T    -
+SH9.BAY4   SSD    evacuating (46%)  18.30T    -
+SH9.BAY5   SSD    evacuating (46%)  18.30T    -
+SH9.BAY6   SSD    evacuating (46%)  18.30T    -
+SH9.BAY7   SSD    evacuating (46%)  18.30T    -
+SH9.BAY8   SSD    evacuating (46%)  18.30T    -
+SH9.BAY9   SSD    evacuating (46%)  18.30T    -
+SH9.BAY10  SSD    evacuating (46%)  18.30T    -
+SH9.BAY11  SSD    evacuating (46%)  18.30T    -
+SH9.BAY12  SSD    evacuating (46%)  18.30T    -
+SH9.BAY13  SSD    evacuating (46%)  18.30T    -
+SH9.BAY14  -      unused            0.00      -
+SH9.BAY15  -      unused            0.00      -
+SH9.BAY16  -      unused            0.00      -
+SH9.BAY17  -      unused            0.00      -
+SH9.BAY18  -      unused            0.00      -
+SH9.BAY19  -      unused            0.00      -
+SH9.BAY20  -      unused            0.00      -
+SH9.BAY21  -      unused            0.00      -
+SH9.BAY22  -      unused            0.00      -
+SH9.BAY23  -      unused            0.00      -
+SH9.BAY24  -      unused            0.00      -
+SH9.BAY25  -      unused            0.00      -
+SH9.BAY26  -      unused            0.00      -
+SH9.BAY27  -      unused            0.00      -
+     root@SDCPURESRV3-ct0:/var/home/pureeng# exit
+exit
+pureeng@SDCPURESRV3-ct0:~$ exit
+logout
+
+SDCPURESRV3-ct0 login: 

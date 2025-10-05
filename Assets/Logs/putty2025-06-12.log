@@ -1,0 +1,443 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.06.12 10:41:12 =~=~=~=~=~=~=~=~=~=~=~=
+
+PureArray001-ct0 login: pureeng
+1) Authenticate via CloudAssist
+2) Authenticate via command line
+3) Restore challenge
+Type the number corresponding to the authentication method you want to use.
+
+Selection: 1
+
+An email for identity verification will be sent once email is entered.
+Please follow the authentication instructions provided there and return to this screen when finished or if email has not been received.
+
+
+Enter an email address: fharris@purestorage.com
+Successfully authenticated
+Last login: Tue Jan 14 12:12:07 EST 2025 on ttyS0
+
+Thu Jun 12 10:41:51 2025
+Welcome pureeng. This is Purity Version 6.5.8 on FlashArray PureArray001
+http://www.purestorage.com/
+pureeng@PureArray001-ct0:~$ puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    healthy  1.92T     -
+CH0.BAY1   SSD    healthy  1.92T     -
+CH0.BAY2   SSD    healthy  1.92T     -
+CH0.BAY3   SSD    healthy  1.92T     -
+CH0.BAY4   SSD    healthy  1.92T     -
+CH0.BAY5   SSD    healthy  1.92T     -
+CH0.BAY6   SSD    healthy  1.92T     -
+CH0.BAY7   SSD    healthy  1.92T     -
+CH0.BAY8   SSD    healthy  1.92T     -
+CH0.BAY9   SSD    healthy  1.92T     -
+CH0.BAY10  SSD    healthy  1.92T     -
+CH0.BAY11  SSD    healthy  1.92T     -
+CH0.BAY12  SSD    healthy  1.92T     -
+CH0.BAY13  SSD    healthy  1.92T     -
+CH0.BAY14  -      unused   0.00      -
+CH0.BAY15  -      unused   0.00      -
+CH0.BAY16  -      unused   0.00      -
+CH0.BAY17  -      unused   0.00      -
+CH0.BAY18  -      unused   0.00      -
+CH0.BAY19  -      unused   0.00      -
+CH0.NVB0   NVRAM  healthy  7.00G     -
+CH0.NVB1   NVRAM  healthy  7.00G     -
+CH0.NVB2   NVRAM  unused   0.00      -
+CH0.NVB3   NVRAM  unused   0.00      -
+pureeng@PureArray001-ct0:~$ purehw list
+Name       Status         Identify  Slot  Index  Speed       Temperature  Voltage  Details
+CH0        ok             off       -     0      -           -            -        -
+CH0.BAY0   ok             off       -     0      -           -            -        -
+CH0.BAY1   ok             off       -     1      -           -            -        -
+CH0.BAY2   ok             off       -     2      -           -            -        -
+CH0.BAY3   ok             off       -     3      -           -            -        -
+CH0.BAY4   ok             off       -     4      -           -            -        -
+CH0.BAY5   ok             off       -     5      -           -            -        -
+CH0.BAY6   ok             off       -     6      -           -            -        -
+CH0.BAY7   ok             off       -     7      -           -            -        -
+CH0.BAY8   ok             off       -     8      -           -            -        -
+CH0.BAY9   ok             off       -     9      -           -            -        -
+CH0.BAY10  ok             off       -     10     -           -            -        -
+CH0.BAY11  ok             off       -     11     -           -            -        -
+CH0.BAY12  ok             off       -     12     -           -            -        -
+CH0.BAY13  ok             off       -     13     -           -            -        -
+CH0.BAY14  not_installed  off       -     14     -           -            -        -
+CH0.BAY15  not_installed  off       -     15     -           -            -        -
+CH0.BAY16  not_installed  off       -     16     -           -            -        -
+CH0.BAY17  not_installed  off       -     17     -           -            -        -
+CH0.BAY18  not_installed  off       -     18     -           -            -        -
+CH0.BAY19  not_installed  off       -     19     -           -            -        -
+CH0.NVB0   ok             off       -     0      -           -            -        -
+CH0.NVB1   ok             off       -     1      -           -            -        -
+CH0.NVB2   not_installed  off       -     2      -           -            -        -
+CH0.NVB3   not_installed  off       -     3      -           -            -        -
+CH0.PWR0   ok             -         -     0      -           -            204 V    -
+CH0.PWR1   ok             -         -     1      -           -            206 V    -
+CH0.TMP0   ok             -         -     0      -           18 C         -        -
+CT0        ok             off       -     0      -           -            -        -
+CT0.ETH0   ok             -         -     0      1.00 Gb/s   -            -        -
+CT0.ETH1   ok             -         -     1      0.00 b/s    -            -        -
+CT0.ETH2   ok             -         -     2      0.00 b/s    -            -        -
+CT0.ETH3   ok             -         -     3      0.00 b/s    -            -        -
+CT0.ETH4   ok             -         -     4      0.00 b/s    -            -        -
+CT0.ETH5   ok             -         -     5      0.00 b/s    -            -        -
+CT0.ETH6   ok             -         -     6      0.00 b/s    -            -        -
+CT0.ETH7   ok             -         -     7      0.00 b/s    -            -        -
+CT0.ETH8   ok             -         -     8      0.00 b/s    -            -        -
+CT0.ETH9   ok             -         -     9      0.00 b/s    -            -        -
+CT0.FAN0   ok             -         -     0      -           -            -        -
+CT0.FAN1   ok             -         -     1      -           -            -        -
+CT0.FAN2   ok             -         -     2      -           -            -        -
+CT0.FAN3   ok             -         -     3      -           -            -        -
+CT0.FAN4   ok             -         -     4      -           -            -        -
+CT0.FAN5   ok             -         -     5      -           -            -        -
+CT0.FC0    ok             -         0     0      16.00 Gb/s  -            -        -
+CT0.FC1    ok             -         0     1      0.00 b/s    -            -        -
+CT0.FC2    ok             -         0     2      0.00 b/s    -            -        -
+CT0.FC3    ok             -         0     3      0.00 b/s    -            -        -
+CT0.FC4    ok             -         1     4      0.00 b/s    -            -        -
+CT0.FC5    ok             -         1     5      0.00 b/s    -            -        -
+CT0.FC6    ok             -         1     6      0.00 b/s    -            -        -
+CT0.FC7    ok             -         1     7      0.00 b/s    -            -        -
+CT0.FC8    ok             -         2     8      16.00 Gb/s  -            -        -
+CT0.FC9    ok             -         2     9      0.00 b/s    -            -        -
+CT0.TMP0   ok             -         -     0      -           28 C         -        -
+CT0.TMP1   ok             -         -     1      -           29 C         -        -
+CT0.TMP2   ok             -         -     2      -           25 C         -        -
+CT0.TMP3   ok             -         -     3      -           34 C         -        -
+CT0.TMP4   ok             -         -     4      -           36 C         -        -
+CT0.TMP5   ok             -         -     5      -           28 C         -        -
+CT0.TMP6   ok             -         -     6      -           34 C         -        -
+CT0.TMP7   ok             -         -     7      -           24 C         -        -
+CT0.TMP8   ok             -         -     8      -           24 C         -        -
+CT0.TMP9   ok             -         -     9      -           25 C         -        -
+CT0.TMP10  ok             -         -     10     -           24 C         -        -
+CT0.TMP11  ok             -         -     11     -           24 C         -        -
+CT0.TMP12  ok             -         -     12     -           23 C         -        -
+CT0.TMP13  ok             -         -     13     -           27 C         -        -
+CT0.TMP14  ok             -         -     14     -           27 C         -        -
+CT0.TMP15  ok             -         -     15     -           27 C         -        -
+CT0.TMP16  ok             -         -     16     -           26 C         -        -
+CT0.TMP17  ok             -         -     17     -           26 C         -        -
+CT0.TMP18  ok             -         -     18     -           26 C         -        -
+CT0.TMP19  ok             -         -     19     -           27 C         -        -
+CT0.TMP20  ok             -         -     20     -           23 C         -        -
+CT0.TMP21  ok             -         -     21     -           30 C         -        -
+CT0.TMP22  ok             -         -     22     -           27 C         -        -
+CT0.TMP23  ok             -         -     23     -           30 C         -        -
+CT0.TMP24  ok             -         -     24     -           31 C         -        -
+CT0.TMP25  ok             -         -     25     -           31 C         -        -
+CT0.TMP26  ok             -         -     26     -           26 C         -        -
+CT1        ok             off       -     1      -           -            -        -
+CT1.ETH0   ok             -         -     0      1.00 Gb/s   -            -        -
+CT1.ETH1   ok             -         -     1      0.00 b/s    -            -        -
+CT1.ETH2   ok             -         -     2      0.00 b/s    -            -        -
+CT1.ETH3   ok             -         -     3      0.00 b/s    -            -        -
+CT1.ETH4   ok             -         -     4      0.00 b/s    -            -        -
+CT1.ETH5   ok             -         -     5      0.00 b/s    -            -        -
+CT1.ETH6   ok             -         -     6      0.00 b/s    -            -        -
+CT1.ETH7   ok             -         -     7      0.00 b/s    -            -        -
+CT1.ETH8   ok             -         -     8      0.00 b/s    -            -        -
+CT1.ETH9   ok             -         -     9      0.00 b/s    -            -        -
+CT1.FAN0   ok             -         -     0      -           -            -        -
+CT1.FAN1   ok             -         -     1      -           -            -        -
+CT1.FAN2   ok             -         -     2      -           -            -        -
+CT1.FAN3   ok             -         -     3      -           -            -        -
+CT1.FAN4   ok             -         -     4      -           -            -        -
+CT1.FAN5   ok             -         -     5      -           -            -        -
+CT1.FC0    ok             -         0     0      16.00 Gb/s  -            -        -
+CT1.FC1    ok             -         0     1      0.00 b/s    -            -        -
+CT1.FC2    ok             -         0     2      0.00 b/s    -            -        -
+CT1.FC3    ok             -         0     3      0.00 b/s    -            -        -
+CT1.FC4    ok             -         1     4      0.00 b/s    -            -        -
+CT1.FC5    ok             -         1     5      0.00 b/s    -            -        -
+CT1.FC6    ok             -         1     6      0.00 b/s    -            -        -
+CT1.FC7    ok             -         1     7      0.00 b/s    -            -        -
+CT1.FC8    ok             -         2     8      16.00 Gb/s  -            -        -
+CT1.FC9    ok             -         2     9      0.00 b/s    -            -        -
+CT1.TMP0   ok             -         -     0      -           32 C         -        -
+CT1.TMP1   ok             -         -     1      -           33 C         -        -
+CT1.TMP2   ok             -         -     2      -           27 C         -        -
+CT1.TMP3   ok             -         -     3      -           46 C         -        -
+CT1.TMP4   ok             -         -     4      -           46 C         -        -
+CT1.TMP5   ok             -         -     5      -           36 C         -        -
+CT1.TMP6   ok             -         -     6      -           40 C         -        -
+CT1.TMP7   ok             -         -     7      -           28 C         -        -
+CT1.TMP8   ok             -         -     8      -           28 C         -        -
+CT1.TMP9   ok             -         -     9      -           29 C         -        -
+CT1.TMP10  ok             -         -     10     -           28 C         -        -
+CT1.TMP11  ok             -         -     11     -           27 C         -        -
+CT1.TMP12  ok             -         -     12     -           26 C         -        -
+CT1.TMP13  ok             -         -     13     -           29 C         -        -
+CT1.TMP14  ok             -         -     14     -           29 C         -        -
+CT1.TMP15  ok             -         -     15     -           28 C         -        -
+CT1.TMP16  ok             -         -     16     -           28 C         -        -
+CT1.TMP17  ok             -         -     17     -           29 C         -        -
+CT1.TMP18  ok             -         -     18     -           29 C         -        -
+CT1.TMP19  ok             -         -     19     -           27 C         -        -
+CT1.TMP20  ok             -         -     20     -           26 C         -        -
+CT1.TMP21  ok             -         -     21     -           34 C         -        -
+CT1.TMP22  ok             -         -     22     -           33 C         -        -
+CT1.TMP23  ok             -         -     23     -           33 C         -        -
+CT1.TMP24  ok             -         -     24     -           36 C         -        -
+CT1.TMP25  ok             -         -     25     -           38 C         -        -
+CT1.TMP26  ok             -         -     26     -           29 C         -        -
+pureeng@PureArray001-ct0:~$ puremessage list --open
+ID        Time                     Severity  Category  Code  Component  Name            Event             Expected  Actual  Details
+10104899  2025-03-29 07:14:05 EDT  warning   array     25    storage    array.capacity  high utilization  < 90%     91.29%  
+pureeng@PureArray001-ct0:~$ purealert tag --timeout 30m --maintenance
+Name         Created                  Expires
+maintenance  2025-06-12 10:42:29 EDT  2025-06-12 11:12:29 EDT
+pureeng@PureArray001-ct0:~$ puredrive list
+Name       Type   Status    Capacity  Details
+CH0.BAY0   SSD    healthy   1.92T     -
+CH0.BAY1   SSD    healthy   1.92T     -
+CH0.BAY2   SSD    healthy   1.92T     -
+CH0.BAY3   SSD    healthy   1.92T     -
+CH0.BAY4   SSD    healthy   1.92T     -
+CH0.BAY5   SSD    healthy   1.92T     -
+CH0.BAY6   SSD    healthy   1.92T     -
+CH0.BAY7   SSD    healthy   1.92T     -
+CH0.BAY8   SSD    healthy   1.92T     -
+CH0.BAY9   SSD    healthy   1.92T     -
+CH0.BAY10  SSD    healthy   1.92T     -
+CH0.BAY11  SSD    healthy   1.92T     -
+CH0.BAY12  SSD    healthy   1.92T     -
+CH0.BAY13  SSD    healthy   1.92T     -
+CH0.BAY14  SSD    updating  0.00      -
+CH0.BAY15  -      unused    0.00      -
+CH0.BAY16  -      unused    0.00      -
+CH0.BAY17  -      unused    0.00      -
+CH0.BAY18  -      unused    0.00      -
+CH0.BAY19  -      unused    0.00      -
+CH0.NVB0   NVRAM  healthy   7.00G     -
+CH0.NVB1   NVRAM  healthy   7.00G     -
+CH0.NVB2   NVRAM  unused    0.00      -
+CH0.NVB3   NVRAM  unused    0.00      -
+pureeng@PureArray001-ct0:~$ watch puredrive list --pack CT0.BAY14
+Every 2.0s: puredrive list --pack...  PureArray001-ct0: Thu Jun 12 10:45:02 2025Error on CT0.BAY14: The specified drive does not exist.47pureeng@PureArray001-ct0:~$ watch puredrive list --pack CT0.BAY140.BAY14h0.BAY140.BAY14H0.BAY14
+Every 2.0s: puredrive list --pack...  PureArray001-ct0: Thu Jun 12 10:45:18 2025NameType  Status    Capacity  DetailsCH0.BAY14  SSD   updating  0.00-20Not accessible from CT1;25730-25     Capacity  Detailsfailed     0.00      -CH0.BAY15  SSD   unhealthy  0.00Not accessible from CT1;740updating24        Capacity  Details      0.00      -recognized  0.00      -79ngrecovering  0.00      WSSD tuneup in progress (http://go/w2)  524796:024  Capacity  Details      0.00      -unrecognized  0.00      -CH0.BAY16  SSD   unhealthy     0.00Not accessible from CT1;6nghealthy9        Capacity  Details   0.00      Not accessible from CT1;   0.00      Firmware upgrade in progress. Current firmware: 4.1.20(http://go/zh)CH0.BAY16  SSD   unrecognized  0.00-114ng0.00      Firmware upgrade in progress. Current firrecovering  0.00      WSSD tuneup in progress (http://go/w2)  69-213  Capacity  Details      0.00      -  0.00      Firmware upgrade in progress. Current firmware: 4.1.20(http://go/zh)unrecognized  0.00      WSSD tuneup in progress (http://go/w2)68Firmware upgrade in progress. Current firmware: 4.1.20(http://go/zh)31ng0.00      Firmware upgrade in progress. Current firmhealthy  0.00      Firmware upgrade in progress. Current firm3        Capacity  Details   0.00      Not accessible from CT1;   0.00      Firmware upgrade in progress. Current firmware: 4.1.20(http://go/zh)   0.00      Firmware upgrade in progress. Current firmware: 4.1.20(http://go/zh)CH0.BAY17  SSD   unrecognized  0.00-68WSSD tuneup in progress (http://go/w2)410.00      -0.00      Firmware upgrade in progress. Current fir0.00      Firmware upgrade in progress. Current firrecovering358503WSSD tuneup in progress (http://go/w2)-5ng0.00      Firmware upgrade in progress. Current firm0.00      Firmware upgrade in progress. Current firmunhealthy8Firmware upgrade in progress. Current firmware: 4.1.20(http://go/zh)7:0035      Capacity  Detailsrecovering  0.00      WSSD tuneup in progress (http://go/w2) 0.00      Firmware upgrade in progress. Current firmware: 4.1.20(http://go/zh)  0.00      Firmware upgrade in progress. Current firmware: 4.1.20(http://go/zh)  0.00      Firmware upgrade in progress. Current firmware: 4.1.20(http://go/zh)7-10unadmittedCH0.BAY18  SSD   unhealthy   0.00Not accessible from CT1;2waiting for userWSSD tuneup in progress (http://go/w2); Not accessible from CT1;5recovering   7202479  Capacity  Details    0.00      waiting for user  0.00      Firmware upgrade in progress. Current firmware: 4.1.20(http://go/zh)  0.00      Firmware upgrade in progress. Current firmware: 4.1.20(http://go/zh)  0.00      Firmware upgrade in progress. Current firmware: 4.1.20(http://go/zh)unrecognized  0.00      -324  0.00      Firmware upgrade in progress. Current fir0.00      Firmware upgrade in progress. Current fir0.00      Firmware upgrade in progress. Current firpdating  CH0.BAY19  SSD   unhealthy   0.00Not accessible from CT1;79424  Capacity  Details    0.00      waiting for user  0.00      Firmware upgrade in progress. Current firmware: 4.1.20(http://go/zh)  0.00      Firmware upgrade in progress. Current firmware: 4.1.20(http://go/zh)  0.00      Firmware upgrade in progress. Current firmware: 4.1.20(http://go/zh)      0.00      -recognized  0.00      -69  0.00      Firmware upgrade in progress. Current fir0.00      Firmware upgrade in progress. Current fir0.00      Firmware upgrade in progress. Current firrecovering  0.00      WSSD tuneup in progress (http://go/w2)  514698:013  Capacity  Details    0.00      waiting for user  0.00      Firmware upgrade in progress. Current firmware: 4.1.20(http://go/zh)  0.00      Firmware upgrade in progress. Current firmware: 4.1.20(http://go/zh)  0.00      Firmware upgrade in progress. Current firmware: 4.1.20(http://go/zh)      0.00      -unrecognized  0.00      -6  0.00      Firmware upgrade in progress. Current fir0.00      Firmware upgrade in progress. Current fir0.00      Firmware upgrade in progress. Current firhealthy 8Firmware upgrade in progress. Current firmware: 4.1.20(http://go/zh)11368213583035840Not accessible from CT1;35850-25failed  79:00updating25791247922479Not accessible from CT1;314-69414685136850:00Not accessible from CT1;35-8103waiting for user582025nadmitted730257942479524CH0.BAY15  SSD   updating    0.00-691:01469114682136830failed  35updating8402575025792:02479124failed  69updating21469313684135850Not accessible from CT1;35-83:002571024Not accessible from CT1;79224-6931469waiting for user413nadmitted68513684:01358103-5pdating 820257302579424failed  79updating524795:0146911469Not accessible from CT1;213-68failed  314updating6841368513686:00358103572025730Not accessible from CT1;2479424-79514waiting for user69nadmitted7:014691136821358CH0.BAY16  SSD   unhealthy   0.00-30pdating 35840257502578:002479124792146931468Not accessible from CT1;4136-8513589:003581025720Not accessible from CT1;25-793247942469Not accessible from CT1;514-691:00:01368waiting for user1136nadmitted821358303584025pdating 7CH0.BAY17  SSD   updating    0.00-5025791:0247912469failed  214updating6931468413685135Not accessible from CT1;82:0035-81025720257932479Not accessible from CT1;424-79514693:01468Not accessible from CT1;1136821-358waiting for user3035nadmitted840257502574:00257912479224693146941468513685:0135812469pureeng@PureArray001-ct0:~$ purearray list --space
+Name          Capacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared   System  Replication  Total
+PureArray001  17.91T    100%    67484G            19.12T   71%                1.2 to 1        4.1 to 1         15.57T  286.84G    512.71G  0.00    0.00         16.35T
+pureeng@PureArray001-ct0:~$ puredrive admit
+Name       Type  Status   Capacity  Details
+CH0.BAY14  SSD   healthy  1.92T     -
+CH0.BAY15  SSD   healthy  1.92T     -
+CH0.BAY16  SSD   healthy  1.92T     -
+CH0.BAY17  SSD   healthy  1.92T     -
+CH0.BAY18  SSD   healthy  1.92T     -
+CH0.BAY19  SSD   healthy  1.92T     -
+pureeng@PureArray001-ct0:~$ purepuredrive admitarray list --space
+Name          Capacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared   System  Replication  Total
+PureArray001  17.91T    100%    67484G            19.12T   71%                1.2 to 1        4.1 to 1         15.57T  286.84G    512.71G  0.00    0.00         16.35T
+pureeng@PureArray001-ct0:~$ purearray list --space
+Name          Capacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared   System  Replication  Total
+PureArray001  17.91T    100%    67484G            19.12T   71%                1.2 to 1        4.1 to 1         15.57T  286.84G    512.71G  0.00    0.00         16.35T
+pureeng@PureArray001-ct0:~$ puremwssageeessage list --open
+ID        Time                     Severity  Category  Code  Component  Name            Event             Expected  Actual  Details
+10104899  2025-03-29 07:14:05 EDT  warning   array     25    storage    array.capacity  high utilization  < 90%     91.30%  
+pureeng@PureArray001-ct0:~$ puremessage list --open --hidden
+ID        Time                     Severity  Category  Code  Component  Name            Event             Expected  Actual  Details
+10104899  2025-03-29 07:14:05 EDT  warning   array     25    storage    array.capacity  high utilization  < 90%     91.30%  
+pureeng@PureArray001-ct0:~$ purehw list
+Name       Status         Identify  Slot  Index  Speed       Temperature  Voltage  Details
+CH0        ok             off       -     0      -           -            -        -
+CH0.BAY0   ok             off       -     0      -           -            -        -
+CH0.BAY1   ok             off       -     1      -           -            -        -
+CH0.BAY2   ok             off       -     2      -           -            -        -
+CH0.BAY3   ok             off       -     3      -           -            -        -
+CH0.BAY4   ok             off       -     4      -           -            -        -
+CH0.BAY5   ok             off       -     5      -           -            -        -
+CH0.BAY6   ok             off       -     6      -           -            -        -
+CH0.BAY7   ok             off       -     7      -           -            -        -
+CH0.BAY8   ok             off       -     8      -           -            -        -
+CH0.BAY9   ok             off       -     9      -           -            -        -
+CH0.BAY10  ok             off       -     10     -           -            -        -
+CH0.BAY11  ok             off       -     11     -           -            -        -
+CH0.BAY12  ok             off       -     12     -           -            -        -
+CH0.BAY13  ok             off       -     13     -           -            -        -
+CH0.BAY14  ok             off       -     14     -           -            -        -
+CH0.BAY15  ok             off       -     15     -           -            -        -
+CH0.BAY16  ok             off       -     16     -           -            -        -
+CH0.BAY17  ok             off       -     17     -           -            -        -
+CH0.BAY18  ok             off       -     18     -           -            -        -
+CH0.BAY19  ok             off       -     19     -           -            -        -
+CH0.NVB0   ok             off       -     0      -           -            -        -
+CH0.NVB1   ok             off       -     1      -           -            -        -
+CH0.NVB2   not_installed  off       -     2      -           -            -        -
+CH0.NVB3   not_installed  off       -     3      -           -            -        -
+CH0.PWR0   ok             -         -     0      -           -            204 V    -
+CH0.PWR1   ok             -         -     1      -           -            206 V    -
+CH0.TMP0   ok             -         -     0      -           18 C         -        -
+CT0        ok             off       -     0      -           -            -        -
+CT0.ETH0   ok             -         -     0      1.00 Gb/s   -            -        -
+CT0.ETH1   ok             -         -     1      0.00 b/s    -            -        -
+CT0.ETH2   ok             -         -     2      0.00 b/s    -            -        -
+CT0.ETH3   ok             -         -     3      0.00 b/s    -            -        -
+CT0.ETH4   ok             -         -     4      0.00 b/s    -            -        -
+CT0.ETH5   ok             -         -     5      0.00 b/s    -            -        -
+CT0.ETH6   ok             -         -     6      0.00 b/s    -            -        -
+CT0.ETH7   ok             -         -     7      0.00 b/s    -            -        -
+CT0.ETH8   ok             -         -     8      0.00 b/s    -            -        -
+CT0.ETH9   ok             -         -     9      0.00 b/s    -            -        -
+CT0.FAN0   ok             -         -     0      -           -            -        -
+CT0.FAN1   ok             -         -     1      -           -            -        -
+CT0.FAN2   ok             -         -     2      -           -            -        -
+CT0.FAN3   ok             -         -     3      -           -            -        -
+CT0.FAN4   ok             -         -     4      -           -            -        -
+CT0.FAN5   ok             -         -     5      -           -            -        -
+CT0.FC0    ok             -         0     0      16.00 Gb/s  -            -        -
+CT0.FC1    ok             -         0     1      0.00 b/s    -            -        -
+CT0.FC2    ok             -         0     2      0.00 b/s    -            -        -
+CT0.FC3    ok             -         0     3      0.00 b/s    -            -        -
+CT0.FC4    ok             -         1     4      0.00 b/s    -            -        -
+CT0.FC5    ok             -         1     5      0.00 b/s    -            -        -
+CT0.FC6    ok             -         1     6      0.00 b/s    -            -        -
+CT0.FC7    ok             -         1     7      0.00 b/s    -            -        -
+CT0.FC8    ok             -         2     8      16.00 Gb/s  -            -        -
+CT0.FC9    ok             -         2     9      0.00 b/s    -            -        -
+CT0.TMP0   ok             -         -     0      -           28 C         -        -
+CT0.TMP1   ok             -         -     1      -           29 C         -        -
+CT0.TMP2   ok             -         -     2      -           25 C         -        -
+CT0.TMP3   ok             -         -     3      -           32 C         -        -
+CT0.TMP4   ok             -         -     4      -           32 C         -        -
+CT0.TMP5   ok             -         -     5      -           28 C         -        -
+CT0.TMP6   ok             -         -     6      -           33 C         -        -
+CT0.TMP7   ok             -         -     7      -           24 C         -        -
+CT0.TMP8   ok             -         -     8      -           24 C         -        -
+CT0.TMP9   ok             -         -     9      -           25 C         -        -
+CT0.TMP10  ok             -         -     10     -           24 C         -        -
+CT0.TMP11  ok             -         -     11     -           24 C         -        -
+CT0.TMP12  ok             -         -     12     -           23 C         -        -
+CT0.TMP13  ok             -         -     13     -           27 C         -        -
+CT0.TMP14  ok             -         -     14     -           26 C         -        -
+CT0.TMP15  ok             -         -     15     -           26 C         -        -
+CT0.TMP16  ok             -         -     16     -           25 C         -        -
+CT0.TMP17  ok             -         -     17     -           26 C         -        -
+CT0.TMP18  ok             -         -     18     -           26 C         -        -
+CT0.TMP19  ok             -         -     19     -           26 C         -        -
+CT0.TMP20  ok             -         -     20     -           23 C         -        -
+CT0.TMP21  ok             -         -     21     -           30 C         -        -
+CT0.TMP22  ok             -         -     22     -           27 C         -        -
+CT0.TMP23  ok             -         -     23     -           29 C         -        -
+CT0.TMP24  ok             -         -     24     -           31 C         -        -
+CT0.TMP25  ok             -         -     25     -           30 C         -        -
+CT0.TMP26  ok             -         -     26     -           26 C         -        -
+CT1        ok             off       -     1      -           -            -        -
+CT1.ETH0   ok             -         -     0      1.00 Gb/s   -            -        -
+CT1.ETH1   ok             -         -     1      0.00 b/s    -            -        -
+CT1.ETH2   ok             -         -     2      0.00 b/s    -            -        -
+CT1.ETH3   ok             -         -     3      0.00 b/s    -            -        -
+CT1.ETH4   ok             -         -     4      0.00 b/s    -            -        -
+CT1.ETH5   ok             -         -     5      0.00 b/s    -            -        -
+CT1.ETH6   ok             -         -     6      0.00 b/s    -            -        -
+CT1.ETH7   ok             -         -     7      0.00 b/s    -            -        -
+CT1.ETH8   ok             -         -     8      0.00 b/s    -            -        -
+CT1.ETH9   ok             -         -     9      0.00 b/s    -            -        -
+CT1.FAN0   ok             -         -     0      -           -            -        -
+CT1.FAN1   ok             -         -     1      -           -            -        -
+CT1.FAN2   ok             -         -     2      -           -            -        -
+CT1.FAN3   ok             -         -     3      -           -            -        -
+CT1.FAN4   ok             -         -     4      -           -            -        -
+CT1.FAN5   ok             -         -     5      -           -            -        -
+CT1.FC0    ok             -         0     0      16.00 Gb/s  -            -        -
+CT1.FC1    ok             -         0     1      0.00 b/s    -            -        -
+CT1.FC2    ok             -         0     2      0.00 b/s    -            -        -
+CT1.FC3    ok             -         0     3      0.00 b/s    -            -        -
+CT1.FC4    ok             -         1     4      0.00 b/s    -            -        -
+CT1.FC5    ok             -         1     5      0.00 b/s    -            -        -
+CT1.FC6    ok             -         1     6      0.00 b/s    -            -        -
+CT1.FC7    ok             -         1     7      0.00 b/s    -            -        -
+CT1.FC8    ok             -         2     8      16.00 Gb/s  -            -        -
+CT1.FC9    ok             -         2     9      0.00 b/s    -            -        -
+CT1.TMP0   ok             -         -     0      -           32 C         -        -
+CT1.TMP1   ok             -         -     1      -           31 C         -        -
+CT1.TMP2   ok             -         -     2      -           28 C         -        -
+CT1.TMP3   ok             -         -     3      -           46 C         -        -
+CT1.TMP4   ok             -         -     4      -           44 C         -        -
+CT1.TMP5   ok             -         -     5      -           36 C         -        -
+CT1.TMP6   ok             -         -     6      -           38 C         -        -
+CT1.TMP7   ok             -         -     7      -           28 C         -        -
+CT1.TMP8   ok             -         -     8      -           28 C         -        -
+CT1.TMP9   ok             -         -     9      -           29 C         -        -
+CT1.TMP10  ok             -         -     10     -           29 C         -        -
+CT1.TMP11  ok             -         -     11     -           28 C         -        -
+CT1.TMP12  ok             -         -     12     -           27 C         -        -
+CT1.TMP13  ok             -         -     13     -           28 C         -        -
+CT1.TMP14  ok             -         -     14     -           28 C         -        -
+CT1.TMP15  ok             -         -     15     -           27 C         -        -
+CT1.TMP16  ok             -         -     16     -           28 C         -        -
+CT1.TMP17  ok             -         -     17     -           28 C         -        -
+CT1.TMP18  ok             -         -     18     -           29 C         -        -
+CT1.TMP19  ok             -         -     19     -           26 C         -        -
+CT1.TMP20  ok             -         -     20     -           27 C         -        -
+CT1.TMP21  ok             -         -     21     -           35 C         -        -
+CT1.TMP22  ok             -         -     22     -           34 C         -        -
+CT1.TMP23  ok             -         -     23     -           32 C         -        -
+CT1.TMP24  ok             -         -     24     -           35 C         -        -
+CT1.TMP25  ok             -         -     25     -           38 C         -        -
+CT1.TMP26  ok             -         -     26     -           28 C         -        -
+pureeng@PureArray001-ct0:~$ 
+pureeng@PureArray001-ct0:~$ pureeng@PureArray001-ct0:~$ purearray list --space
+Thin Provisioning  Data Reductio-bash: pureeng@PureArray001-ct0:~$: command not found
+n  Total Reduction  Unique  Snapshots  Shared   System  Replication  Total
+PureArray001  17.91T    100%    67484G            19.12T   71%                1.2 to 1        4.1 to 1         15.57T  286.84G    512.71G  0.00    0.00         16.35T
+pureeng@PureArray001-ct0:~$ puredrive admit
+Name       Type  Status   Capacity  Details
+CH0.BAY14  SSD   healthy  1.92T     -
+CH0.BAY15  SSD   healthy  1.92T     -
+CH0.BAY16  SSD   healthy  1.92T     -
+CH0.BAY17  SSD   healthy  1.92T     -
+CH0.BAY18  SSD   healthy  1.92T     -
+CH0.BAY19  SSD   healthy  1.92T     -
+pureeng@PureArray001-ct0:~$ Name          Capacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared   System  Replication  Total
+-bash: Name: command not found
+pureeng@PureArray001-ct0:~$ PureArray001  17.91T    100%    67484G            19.12T   71%                1.2 to 1        4.1 to 1         15.57T  286.84G    512.71G  0.00    0.00         16.35T
+-bash: PureArray001: command not found
+pureeng@PureArray001-ct0:~$ pureeng@PureArray001-ct0:~$ puredrive admit
+-bash: pureeng@PureArray001-ct0:~$: command not found
+pureeng@PureArray001-ct0:~$ Name       Type  Status   Capacity  Details
+-bash: Name: command not found
+pureeng@PureArray001-ct0:~$ CH0.BAY14  SSD   healthy  1.92T     -
+-bash: CH0.BAY14: command not found
+pureeng@PureArray001-ct0:~$ CH0.BAY15  SSD   healthy  1.92T     -
+-bash: CH0.BAY15: command not found
+pureeng@PureArray001-ct0:~$ CH0.BAY16  SSD   healthy  1.92T     -
+-bash: CH0.BAY16: command not found
+pureeng@PureArray001-ct0:~$ CH0.BAY17  SSD   healthy  1.92T     -
+-bash: CH0.BAY17: command not found
+pureeng@PureArray001-ct0:~$ CH0.BAY18  SSD   healthy  1.92T     -
+-bash: CH0.BAY18: command not found
+pureeng@PureArray001-ct0:~$ CH0.BAY19  SSD   healthy  1.92T     -
+-bash: CH0.BAY19: command not found
+pureeng@PureArray001-ct0:~$ puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    healthy  1.92T     -
+CH0.BAY1   SSD    healthy  1.92T     -
+CH0.BAY2   SSD    healthy  1.92T     -
+CH0.BAY3   SSD    healthy  1.92T     -
+CH0.BAY4   SSD    healthy  1.92T     -
+CH0.BAY5   SSD    healthy  1.92T     -
+CH0.BAY6   SSD    healthy  1.92T     -
+CH0.BAY7   SSD    healthy  1.92T     -
+CH0.BAY8   SSD    healthy  1.92T     -
+CH0.BAY9   SSD    healthy  1.92T     -
+CH0.BAY10  SSD    healthy  1.92T     -
+CH0.BAY11  SSD    healthy  1.92T     -
+CH0.BAY12  SSD    healthy  1.92T     -
+CH0.BAY13  SSD    healthy  1.92T     -
+CH0.BAY14  SSD    healthy  1.92T     -
+CH0.BAY15  SSD    healthy  1.92T     -
+CH0.BAY16  SSD    healthy  1.92T     -
+CH0.BAY17  SSD    healthy  1.92T     -
+CH0.BAY18  SSD    healthy  1.92T     -
+CH0.BAY19  SSD    healthy  1.92T     -
+CH0.NVB0   NVRAM  healthy  7.00G     -
+CH0.NVB1   NVRAM  healthy  7.00G     -
+CH0.NVB2   NVRAM  unused   0.00      -
+CH0.NVB3   NVRAM  unused   0.00      -
+pureeng@PureArray001-ct0:~$ puredrive listCH0.BAY19  SSD   healthy  1.92T     -8789puredrive listpurearray list --space
+Name          Capacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared   System  Replication  Total
+PureArray001  26.87T    100%    67484G            19.12T   71%                1.2 to 1        4.1 to 1         15.57T  287.20G    516.53G  0.00    0.00         16.36T
+pureeng@PureArray001-ct0:~$ 

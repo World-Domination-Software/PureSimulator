@@ -1,0 +1,1912 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.05.22 09:07:39 =~=~=~=~=~=~=~=~=~=~=~=
+
+WO1Pure01-ct1 login: pureeng
+1) Authenticate via CloudAssist
+2) Authenticate via command line
+3) Restore challenge
+Type the number corresponding to the authentication method you want to use.
+
+Selection: 1
+
+An email for identity verification will be sent once email is entered.
+Please follow the authentication instructions provided there and return to this screen when finished or if email has not been received.
+
+
+Enter an email address: fharris@purestorage.com
+Successfully authenticated
+Last login: Thu Apr 13 12:09:16 EDT 2023 on ttyS0
+
+Thu May 22 09:08:14 2025
+Welcome pureeng. This is Purity Version 6.5.10 on FlashArray WO1Pure01
+http://www.purestorage.com/
+pureeng@WO1Pure01-ct1:~$ puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    healthy  2.05T     -
+CH0.BAY1   SSD    healthy  2.05T     -
+CH0.BAY2   SSD    healthy  2.05T     -
+CH0.BAY3   SSD    healthy  2.05T     -
+CH0.BAY4   SSD    healthy  2.05T     -
+CH0.BAY5   SSD    healthy  2.05T     -
+CH0.BAY6   SSD    healthy  2.05T     -
+CH0.BAY7   SSD    healthy  2.05T     -
+CH0.BAY8   SSD    healthy  2.05T     -
+CH0.BAY9   SSD    healthy  2.05T     -
+CH0.BAY10  -      unused   0.00      -
+CH0.BAY11  -      unused   0.00      -
+CH0.BAY12  -      unused   0.00      -
+CH0.BAY13  -      unused   0.00      -
+CH0.BAY14  -      unused   0.00      -
+CH0.BAY15  -      unused   0.00      -
+CH0.BAY16  -      unused   0.00      -
+CH0.BAY17  -      unused   0.00      -
+CH0.BAY18  -      unused   0.00      -
+CH0.BAY19  -      unused   0.00      -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  unused   0.00      -
+CH0.NVB3   NVRAM  unused   0.00      -
+pureeng@WO1Pure01-ct1:~$ purepuretune --local --set PS_RECOVERY_LAZY_REBUILD_DELAY_SEC 60 'Relocate Drives PURE-332116'
+Error: changing tunables requires root.
+pureeng@WO1Pure01-ct1:~$ sudo su
+     root@WO1Pure01-ct1:/var/home/pureeng# puretune --local --set PS_RECOVERY_LAZY_REBUILD_DELAY_SEC 60 'Relocate Drives PURE-332116'
+Set tunable on local (filegw skipped, pureadm done, puredb done, puremw done)
+Tunable successfully set
+     root@WO1Pure01-ct1:/var/home/pureeng# purealert tag --timeout 240m --maintenance
+Name         Created                  Expires
+maintenance  2025-05-22 09:10:29 EDT  2025-05-22 13:10:29 EDT
+     root@WO1Pure01-ct1:/var/home/pureeng# purearray list --controller
+Name  Type              Mode       Model     Version  Status  Internal Details
+CT0   array_controller  primary    FA-X50R3  6.5.10   ready   
+CT1   array_controller  secondary  FA-X50R3  6.5.10   ready   
+     root@WO1Pure01-ct1:/var/home/pureeng# puremesshw list
+Name       Status         Identify  Slot  Index  Speed       Temperature  Voltage  Details
+CH0        ok             off       -     0      -           -            -        -
+CH0.BAY0   ok             off       -     0      -           -            -        -
+CH0.BAY1   ok             off       -     1      -           -            -        -
+CH0.BAY2   ok             off       -     2      -           -            -        -
+CH0.BAY3   ok             off       -     3      -           -            -        -
+CH0.BAY4   ok             off       -     4      -           -            -        -
+CH0.BAY5   ok             off       -     5      -           -            -        -
+CH0.BAY6   ok             off       -     6      -           -            -        -
+CH0.BAY7   ok             off       -     7      -           -            -        -
+CH0.BAY8   ok             off       -     8      -           -            -        -
+CH0.BAY9   ok             off       -     9      -           -            -        -
+CH0.BAY10  not_installed  off       -     10     -           -            -        -
+CH0.BAY11  not_installed  off       -     11     -           -            -        -
+CH0.BAY12  not_installed  off       -     12     -           -            -        -
+CH0.BAY13  not_installed  off       -     13     -           -            -        -
+CH0.BAY14  not_installed  off       -     14     -           -            -        -
+CH0.BAY15  not_installed  off       -     15     -           -            -        -
+CH0.BAY16  not_installed  off       -     16     -           -            -        -
+CH0.BAY17  not_installed  off       -     17     -           -            -        -
+CH0.BAY18  not_installed  off       -     18     -           -            -        -
+CH0.BAY19  not_installed  off       -     19     -           -            -        -
+CH0.NVB0   ok             off       -     0      -           -            -        -
+CH0.NVB1   ok             off       -     1      -           -            -        -
+CH0.NVB2   not_installed  off       -     2      -           -            -        -
+CH0.NVB3   not_installed  off       -     3      -           -            -        -
+CH0.PWR0   ok             -         -     0      -           -            238 V    -
+CH0.PWR1   ok             -         -     1      -           -            238 V    -
+CH0.TMP0   ok             -         -     0      -           20 C         -        -
+CT0        ok             off       -     0      -           -            -        -
+CT0.ETH0   ok             -         -     0      1.00 Gb/s   -            -        -
+CT0.ETH1   ok             -         -     1      0.00 b/s    -            -        -
+CT0.ETH2   ok             -         -     2      0.00 b/s    -            -        -
+CT0.ETH3   ok             -         -     3      0.00 b/s    -            -        -
+CT0.ETH4   ok             -         -     4      10.00 Gb/s  -            -        -
+CT0.ETH5   ok             -         -     5      10.00 Gb/s  -            -        -
+CT0.ETH6   ok             -         -     6      0.00 b/s    -            -        -
+CT0.ETH7   ok             -         -     7      0.00 b/s    -            -        -
+CT0.ETH8   ok             -         -     8      0.00 b/s    -            -        -
+CT0.ETH9   ok             -         -     9      0.00 b/s    -            -        -
+CT0.ETH18  ok             -         2     18     0.00 b/s    -            -        -
+CT0.ETH19  ok             -         2     19     0.00 b/s    -            -        -
+CT0.FAN0   ok             -         -     0      -           -            -        -
+CT0.FAN1   ok             -         -     1      -           -            -        -
+CT0.FAN2   ok             -         -     2      -           -            -        -
+CT0.FAN3   ok             -         -     3      -           -            -        -
+CT0.FAN4   ok             -         -     4      -           -            -        -
+CT0.FAN5   ok             -         -     5      -           -            -        -
+CT0.FC0    ok             -         0     0      0.00 b/s    -            -        -
+CT0.FC1    ok             -         0     1      0.00 b/s    -            -        -
+CT0.FC2    ok             -         0     2      0.00 b/s    -            -        -
+CT0.FC3    ok             -         0     3      0.00 b/s    -            -        -
+CT0.TMP0   ok             -         -     0      -           36 C         -        -
+CT0.TMP1   ok             -         -     1      -           38 C         -        -
+CT0.TMP2   ok             -         -     2      -           27 C         -        -
+CT0.TMP3   ok           k             -         -     11     -           27 C         -        -
+CT0.TMP12  ok             -         -     12     -           27 C         -        -
+CT0.TMP13  ok             -         -     13     -           33 C         -        -
+CT0.TMP14  ok             -         -     14     -           32 C         -        -
+CT0.TMP15  ok             -         -     15     -           32 C         -        -
+CT0.TMP16  ok             -         -     16     -           30 C         -        -
+CT0.TMP17  ok             -         -     17     -           30 C         -        -
+CT0.TMP18  ok             -         -     18     -           30 C         -        -
+CT0.TMP19  ok             -         -     19     -           33 C         -        -
+CT0.TMP20  ok             -         -     20     -           28 C         -        -
+CT0.TMP21  ok             -         -     21     -           39 C         -        -
+CT0.TMP22  ok             -         -     22     -           33 C         -        -
+CT0.TMP23  ok             -         -     23     -           37 C         -        -
+CT0.TMP24  ok             -         -     24     -           39 C         -        -
+CT0.TMP25  ok             -         -     25     -           44 C         -        -
+CT0.TMP26  ok             -         -     26     -           30 C         -        -
+CT1        ok             off       -     1      -           -            -        -
+CT1.ETH0   ok             -         -     0      1.00 Gb/s   -            -        -
+CT1.ETH1   ok             -         -     1      0.00 b/s    -            -        -
+CT1.ETH2   ok             -         -     2      0.00 b/s    -            -        -
+CT1.ETH3   ok             -         -     3      0.00 b/s    -            -        -
+CT1.ETH4   ok             -         -     4      10.00 Gb/s  -            -        -
+CT1.ETH5   ok             -         -     5      10.00 Gb/s  -            -        -
+CT1.ETH6   ok             -         -     6      0.00 b/s    -            -        -
+CT1.ETH7   ok             -         -     7      0.00 b/s    -            -        -
+CT1.ETH8   ok             -         -     8      0.00 b/s    -            -        -
+CT1.ETH9   ok             -         -     9      0.00 b/s    -            -        -
+CT1.ETH18  ok             -         2     18     0.00 b/s    -            -        -
+CT1.ETH19  ok             -         2     19     0.00 b/s    -            -        -
+CT1.FAN0   ok             -         -     0      -           -            -        -
+CT1.FAN1   ok             -         -     1      -           -            -        -
+CT1.FAN2   ok             -         -     2      -           -            -        -
+CT1.FAN3   ok             -         -     3      -           -            -        -
+CT1.FAN4   ok             -         -     4      -           -            -        -
+CT1.FAN5   ok             -         -     5      -           -            -        -
+CT1.FC0    ok             -         0     0      0.00 b/s    -            -        -
+CT1.FC1    ok             -         0     1      0.00 b/s    -            -        -
+CT1.FC2    ok             -         0     2      0.00 b/s    -            -        -
+CT1.FC3    ok             -         0     3      0.00 b/s    -            -        -
+CT1.TMP0   ok             -         -     0      -           33 C         -        -
+CT1.TMP1   ok             -         -     1      -           34 C         -        -
+CT1.TMP2   ok             -         -     2      -           30 C         -        -
+CT1.TMP3   ok             -         -     3      -           37 C         -        -
+CT1.TMP4   ok             -         -     4      -           36 C         -        -
+CT1.TMP5   ok             -         -     5      -           35 C         -        -
+CT1.TMP6   ok             -         -     6      -           38 C         -        -
+CT1.TMP7   ok             -         -     7      -           29 C         -        -
+CT1.TMP8   ok             -         -     8      -           29 C         -        -
+CT1.TMP9   ok             -         -     9      -           30 C         -        -
+CT1.TMP10  ok             -         -     10     -           28 C         -        -
+CT1.TMP11  ok             -         -     11     -           28 C         -        -
+CT1.TMP12  ok             -         -     12     -           27 C         -        -
+CT1.TMP13  ok             -         -     13     -           32 C         -        -
+CT1.TMP14  ok             -         -     14     -           31 C         -        -
+CT1.TMP15  ok             -         -     15     -           31 C         -        -
+CT1.TMP16  ok             -         -     16     -           30 C         -        -
+CT1.TMP17  ok             -         -     17     -           30 C         -        -
+CT1.TMP18  ok             -         -     18     -           30 C         -        -
+CT1.TMP19  ok             -         -     19     -           31 C         -        -
+CT1.TMP20  ok             -         -     20     -           27 C         -        -
+CT1.TMP21  ok             -         -     21     -           34 C         -        -
+CT1.TMP22  ok             -         -     22     -           33 C         -        -
+CT1.TMP23  ok             -         -     23     -           35 C         -        -
+CT1.TMP24  ok             -         -     24     -           35 C         -        -
+CT1.TMP25  ok             -         -     25     -           37 C         -        -
+CT1.TMP26  ok             -         -     26     -           32 C         -        -
+     root@WO1Pure01-ct1:/var/home/pureeng# purearray list --space
+Name       Capacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  Total
+WO1Pure01  11.17T    100%    55519109686784B   26.22T   48%                4.6 to 1        8.8 to 1         4.85T   2.11T      1.65T   0.00    0.00         8.61T
+     root@WO1Pure01-ct1:/var/home/pureeng# puremessage list --open
+     root@WO1Pure01-ct1:/var/home/pureeng# puretune list
+usage: puretune [-h]
+                (--set tunable value JIRA | --unset tunable | --list [LIST ...])
+                [--app NAME | --local | --virtual-drives] [--csv]
+                [--ignore-puredb] [--ignore-fe-fsck] [--verbose]
+                [--verbose-debug]
+puretune: error: one of the arguments --set --unset --list is required
+     root@WO1Pure01-ct1:/var/home/pureeng# puretune --list
+Warning: failed to retrieve some tunable status (peer puredb, peer puredb-platform, peer puredb-chastity)
+Inconsistently or unnecessarily set tunables:
+PS_FILEGW_SMB_HIDE_DOT_SNAPSHOT:
+local pureadm             - 0  (Set during upgrade to 6.3.10 - CLOUD-75192)
+peer pureadm              - 0  (Set during upgrade to 6.3.10 - CLOUD-75192)
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+PURITY_START_ON_BOOT:
+local pureadm             - 1 
+peer pureadm              - 1  ('')
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+ATOM_5206:
+local pureadm             - 1 
+peer pureadm              - 1 
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+ATOM_5177:
+local pureadm             - DEF  (CLOUD-113977)
+peer pureadm              - DEF  (CLOUD-113977)
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+ATOM_SECURITY_BUNDLE_FA_2024_01_15:
+local pureadm             - PCTFJ230200AC,PCTFJ2306000D,6.4.4  (CLOUD-113977 set by atom)
+peer pureadm              - PCTFJ230200AC,PCTFJ2306000D,6.4.4  (CLOUD-113977 set by atom)
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+ATOM_PUREAPP_MONITOR_MEM_LEAK:
+local pureadm             - PCTFJ230200AC,PCTFJ2306000D,6.4.4  (PURE-295339 set by cdu)
+peer pureadm              - PCTFJ230200AC,PCTFJ2306000D,6.4.4  (PURE-295339 set by cdu)
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+ATOM_10052:
+local pureadm             - 1  (PURE-357200)
+peer pureadm              - 1  (PURE-357200)
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+ATOM_REFRESH_STALE_CONFIG:
+local pureadm             - PCTFJ230200AC,PCTFJ2306000D,6.5.6  (PURE-357200 set by atom-vats)
+peer pureadm              - PCTFJ230200AC,PCTFJ2306000D,6.5.6  (PURE-357200 set by atom-vats)
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+ATOM_10072:
+local pureadm             - GH  (CLOUD-152371)
+peer pureadm              - GH  (CLOUD-152371)
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+ATOM_SECURITY_PATCH_FA_2025_A:
+local pureadm             - PCTFJ230200AC,PCTFJ2306000D,6.5.6  (CLOUD-152371 set by atom-vats)
+peer pureadm              - PCTFJ230200AC,PCTFJ2306000D,6.5.6  (CLOUD-152371 set by atom-vats)
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+PS_RECOVERY_LAZY_REBUILD_DELAY_SEC:
+local pureadm             - 60  ('Relocate Drives PURE-332116')
+peer pureadm              - <unset> 
+local puredb              - 60 
+peer puredb               - <unset> 
+local puredb --platform   - 60 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - 60 
+peer puredb --chastity    - <unset> 
+     root@WO1Pure01-ct1:/var/home/pureeng# puredrive list
+Name       Type   Status        Capacity  Details
+CH0.BAY0   SSD    empty         0.00      -
+CH0.BAY1   SSD    healthy       2.05T     -
+CH0.BAY2   SSD    healthy       2.05T     -
+CH0.BAY3   SSD    healthy       2.05T     -
+CH0.BAY4   SSD    healthy       2.05T     -
+CH0.BAY5   SSD    healthy       2.05T     -
+CH0.BAY6   SSD    healthy       2.05T     -
+CH0.BAY7   SSD    healthy       2.05T     -
+CH0.BAY8   SSD    healthy       2.05T     -
+CH0.BAY9   SSD    healthy       2.05T     -
+CH0.BAY10  SSD    unrecognized  0.00      -
+CH0.BAY11  SSD    empty         0.00      -
+CH0.BAY12  SSD    empty         0.00      -
+CH0.BAY13  SSD    empty         0.00      -
+CH0.BAY14  SSD    empty         0.00      -
+CH0.BAY15  SSD    empty         0.00      -
+CH0.BAY16  SSD    empty         0.00      -
+CH0.BAY17  SSD    empty         0.00      -
+CH0.BAY18  SSD    empty         0.00      -
+CH0.BAY19  SSD    empty         0.00      -
+CH0.NVB0   NVRAM  healthy       7.52G     -
+CH0.NVB1   NVRAM  healthy       7.52G     -
+CH0.NVB2   NVRAM  unused        0.00      -
+CH0.NVB3   NVRAM  unused        0.00      -
+     root@WO1Pure01-ct1:/var/home/pureeng# purearray list --space
+Name       Capacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  Total
+WO1Pure01  11.17T    95%     55519109686784B   26.22T   48%                4.6 to 1        8.8 to 1         4.85T   2.11T      1.65T   0.00    0.00         8.61T
+     root@WO1Pure01-ct1:/var/home/pureeng# purearray list --spacewatch 
+Every 2.0s: purearray list --spaceWO1Pure01-ct1: Thu May 22 09:13:42 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  DataReduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  TotalWO1Pure01  11.17T    24%     55519109686784B   26.22T   48%4.6 to 18.8 to 14.85T   2.11T1.65T   0.00    0.008.61T579524794:01469113682135830357402579524795:0146911468213683135840358503586:0025710257     root@WO1Pure01-ct1:/var/home/pureeng# puredrive list
+Name       Type   Status     Capacity  Details
+CH0.BAY0   SSD    empty      0.00      -
+CH0.BAY1   SSD    healthy    2.05T     -
+CH0.BAY2   SSD    healthy    2.05T     -
+CH0.BAY3   SSD    healthy    2.05T     -
+CH0.BAY4   SSD    healthy    2.05T     -
+CH0.BAY5   SSD    healthy    2.05T     -
+CH0.BAY6   SSD    healthy    2.05T     -
+CH0.BAY7   SSD    healthy    2.05T     -
+CH0.BAY8   SSD    healthy    2.05T     -
+CH0.BAY9   SSD    healthy    2.05T     -
+CH0.BAY10  SSD    unhealthy  2.05T     -
+CH0.BAY11  SSD    empty      0.00      -
+CH0.BAY12  SSD    empty      0.00      -
+CH0.BAY13  SSD    empty      0.00      -
+CH0.BAY14  SSD    empty      0.00      -
+CH0.BAY15  SSD    empty      0.00      -
+CH0.BAY16  SSD    empty      0.00      -
+CH0.BAY17  SSD    empty      0.00      -
+CH0.BAY18  SSD    empty      0.00      -
+CH0.BAY19  SSD    empty      0.00      -
+CH0.NVB0   NVRAM  healthy    7.52G     -
+CH0.NVB1   NVRAM  healthy    7.52G     -
+CH0.NVB2   NVRAM  unused     0.00      -
+CH0.NVB3   NVRAM  unused     0.00      -
+     root@WO1Pure01-ct1:/var/home/pureeng# puredrive listwatch purearray list --space
+Name       Capacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  Total
+WO1Pure01  11.17T    24%     55519109686784B   26.22T   48%                4.6 to 1        8.8 to 1         4.85T   2.11T      1.65T   0.00    0.00         8.61T
+     root@WO1Pure01-ct1:/var/home/pureeng# purearray list --space
+Name       Capacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  Total
+WO1Pure01  11.17T    24%     55519109686784B   26.22T   48%                4.6 to 1        8.8 to 1         4.85T   2.11T      1.65T   0.00    0.00         8.61T
+     root@WO1Pure01-ct1:/var/home/pureeng# purearray list --space
+Name       Capacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  Total
+WO1Pure01  11.17T    24%     55519109686784B   26.22T   48%                4.6 to 1        8.8 to 1         4.85T   2.11T      1.65T   0.00    0.00         8.61T
+     root@WO1Pure01-ct1:/var/home/pureeng# purearray list --space
+Name       Capacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  Total
+WO1Pure01  11.17T    24%     55519109686784B   26.22T   48%                4.6 to 1        8.8 to 1         4.85T   2.11T      1.65T   0.00    0.00         8.61T
+     root@WO1Pure01-ct1:/var/home/pureeng# purearray list --space
+Name       Capacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  Total
+WO1Pure01  11.17T    100%    55519109686784B   26.22T   48%                4.6 to 1        8.8 to 1         4.85T   2.11T      1.65T   0.00    0.00         8.61T
+     root@WO1Pure01-ct1:/var/home/pureeng# purearray list --spacewatch 
+Every 2.0s: purearray list --spaceWO1Pure01-ct1: Thu May 22 09:19:22 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  DataReduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  TotalWO1Pure01  11.17T    100%    55519109686784B   26.22T   48%4.6 to 18.8 to 14.85T   2.11T1.65T   0.00    0.008.61T479314     root@WO1Pure01-ct1:/var/home/pureeng# puredrive list
+Name       Type   Status     Capacity  Details
+CH0.BAY0   SSD    empty      0.00      -
+CH0.BAY1   SSD    healthy    2.05T     -
+CH0.BAY2   SSD    healthy    2.05T     -
+CH0.BAY3   SSD    healthy    2.05T     -
+CH0.BAY4   SSD    healthy    2.05T     -
+CH0.BAY5   SSD    healthy    2.05T     -
+CH0.BAY6   SSD    healthy    2.05T     -
+CH0.BAY7   SSD    healthy    2.05T     -
+CH0.BAY8   SSD    healthy    2.05T     -
+CH0.BAY9   SSD    healthy    2.05T     -
+CH0.BAY10  SSD    unhealthy  2.05T     -
+CH0.BAY11  SSD    empty      0.00      -
+CH0.BAY12  SSD    empty      0.00      -
+CH0.BAY13  SSD    empty      0.00      -
+CH0.BAY14  SSD    empty      0.00      -
+CH0.BAY15  SSD    empty      0.00      -
+CH0.BAY16  SSD    empty      0.00      -
+CH0.BAY17  SSD    empty      0.00      -
+CH0.BAY18  SSD    empty      0.00      -
+CH0.BAY19  SSD    empty      0.00      -
+CH0.NVB0   NVRAM  healthy    7.52G     -
+CH0.NVB1   NVRAM  healthy    7.52G     -
+CH0.NVB2   NVRAM  unused     0.00      -
+CH0.NVB3   NVRAM  unused     0.00      -
+     root@WO1Pure01-ct1:/var/home/pureeng# puretune --local --unset PS_RECOVERY_LAZY_REBUILD_DELAY_SEC
+Unset tunable on local (filegw skipped, pureadm done, puredb done, puremw done)
+Tunable successfully unset
+     root@WO1Pure01-ct1:/var/home/pureeng# puretune --local --unset PS_RECOVERY_LAZY_REBUILD_DELAY_SEC     root@WO1Pure01-ct1:/var/home/pureeng# drive list
+watch purearray list --spacedrive listwatch purearray list --spacedrive listarray list --spacewatch puredrive listarray list --spacewatch puredrive listtune --local --unset PS_RECOVERY_LAZY_REBUILD_DELAY_SEC     root@WO1Pure01-ct1:/var/home/pureeng# 
+puredrb list drives
+Name       Subslot  Type   Protocol  Status        Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+(unknown)  0        -      -         unrecognized  0.00      0.00          0.00      -                                          -              -
+(unknown)  0        -      -         unrecognized  0.00      0.00          0.00      -                                          -              -
+(unknown)  0        SSD              healthy       1.02T     0.00          0.00      11684753354239002048:10189161312450512542  7/112          87332/121906
+(unknown)  0        SSD              healthy       1.02T     0.00          0.00      5171810664639843263:11469579641183796992   4/112          87508/121906
+CH0.DRV1   1        SSD    SAS       healthy       1.02T     0.00          0.00      17381656047604682157:13341453536743265161  11/112         87463/121906
+CH0.DRV1   2        SSD    SAS       healthy       1.02T     0.00          0.00      15558145747563204387:12781481067571740859  9/112          87644/121906
+CH0.DRV2   1        SSD    SAS       healthy       1.02T     0.00          0.00      14048521526934651094:11194862240709531437  17/112         87460/121906
+CH0.DRV2   2        SSD    SAS       healthy       1.02T     0.00          0.00      4705659660218682810:11797620468873607449   11/112         87641/121906
+CH0.DRV3   1        SSD    SAS       healthy       1.02T     0.00          0.00      18310297109533247001:10565477030146539534  13/112         87318/121906
+CH0.DRV3   2        SSD    SAS       healthy       1.02T     0.00          0.00      17068359933879403923:12779574209278599039  9/112          87481/121906
+CH0.DRV4   1        SSD    SAS       healthy       1.02T     0.00          0.00      3967088115660769033:13408702704865899655   15/112         87619/121906
+CH0.DRV4   2        SSD    SAS       healthy       1.02T     0.00          0.00      7532297607958579232:13151439470950782189   10/112         87409/121906
+CH0.DRV5   1        SSD    SAS       healthy       1.02T     0.00          0.00      10607505162956457674:9755084173039550079   9/112          87629/121906
+CH0.DRV5   2        SSD    SAS       healthy       1.02T     0.00          0.00      17180542211280094093:10788304930742092845  8/112          87497/121906
+CH0.DRV6   1        SSD    SAS       healthy       1.02T     0.00          0.00      7784945525409267835:12679367617211426569   18/112         87344/121906
+CH0.DRV6   2        SSD    SAS       healthy       1.02T     0.00          0.00      18286533655153295415:12608073289142559268  10/112         87721/121906
+CH0.DRV7   1        SSD    SAS       healthy       1.02T     0.00          0.00      7295418427082818555:10661884535681033089   12/112         87542/121906
+CH0.DRV7   2        SSD    SAS       healthy       1.02T     0.00          0.00      5569993883093323391:9746190733069949112    14/112         87144/121906
+CH0.DRV8   1        SSD    SAS       healthy       1.02T     0.00          0.00      1198219088314387589:12099988685935801141   6/112          87661/121906
+CH0.DRV8   2        SSD    SAS       healthy       1.02T     0.00          0.00      14429471539599262054:9896439568403346675   13/112         87481/121906
+CH0.DRV9   1        SSD    SAS       healthy       1.02T     0.00          0.00      15932722363311801392:12086752879741954417  10/112         87385/121906
+CH0.DRV9   2        SSD    SAS       healthy       1.02T     0.00          0.00      12429935582841291023:9450681679943580635   2/112          87621/121906
+CH0.NVR0   0        NVRAM  NVMe      healthy       7.52G     -             0.00      5797665763654715294:12034874128201944279   -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy       7.52G     -             0.00      6833619492250075803:11418301514983864663   -              -
+     root@WO1Pure01-ct1:/var/home/pureeng# puredrive list
+Name       Type   Status     Capacity  Details
+CH0.BAY0   SSD    empty      0.00      -
+CH0.BAY1   SSD    healthy    2.05T     -
+CH0.BAY2   SSD    healthy    2.05T     -
+CH0.BAY3   SSD    healthy    2.05T     -
+CH0.BAY4   SSD    healthy    2.05T     -
+CH0.BAY5   SSD    healthy    2.05T     -
+CH0.BAY6   SSD    healthy    2.05T     -
+CH0.BAY7   SSD    healthy    2.05T     -
+CH0.BAY8   SSD    healthy    2.05T     -
+CH0.BAY9   SSD    healthy    2.05T     -
+CH0.BAY10  SSD    unhealthy  2.05T     -
+CH0.BAY11  SSD    empty      0.00      -
+CH0.BAY12  SSD    empty      0.00      -
+CH0.BAY13  SSD    empty      0.00      -
+CH0.BAY14  SSD    empty      0.00      -
+CH0.BAY15  SSD    empty      0.00      -
+CH0.BAY16  SSD    empty      0.00      -
+CH0.BAY17  SSD    empty      0.00      -
+CH0.BAY18  SSD    empty      0.00      -
+CH0.BAY19  SSD    empty      0.00      -
+CH0.NVB0   NVRAM  healthy    7.52G     -
+CH0.NVB1   NVRAM  healthy    7.52G     -
+CH0.NVB2   NVRAM  unused     0.00      -
+CH0.NVB3   NVRAM  unused     0.00      -
+     root@WO1Pure01-ct1:/var/home/pureeng# puredrive listpuredrive list
+Name       Type   Status     Capacity  Details
+CH0.BAY0   SSD    empty      0.00      -
+CH0.BAY1   SSD    healthy    2.05T     -
+CH0.BAY2   SSD    healthy    2.05T     -
+CH0.BAY3   SSD    healthy    2.05T     -
+CH0.BAY4   SSD    healthy    2.05T     -
+CH0.BAY5   SSD    healthy    2.05T     -
+CH0.BAY6   SSD    healthy    2.05T     -
+CH0.BAY7   SSD    healthy    2.05T     -
+CH0.BAY8   SSD    healthy    2.05T     -
+CH0.BAY9   SSD    healthy    2.05T     -
+CH0.BAY10  SSD    unhealthy  2.05T     -
+CH0.BAY11  SSD    empty      0.00      -
+CH0.BAY12  SSD    empty      0.00      -
+CH0.BAY13  SSD    empty      0.00      -
+CH0.BAY14  SSD    empty      0.00      -
+CH0.BAY15  SSD    empty      0.00      -
+CH0.BAY16  SSD    empty      0.00      -
+CH0.BAY17  SSD    empty      0.00      -
+CH0.BAY18  SSD    empty      0.00      -
+CH0.BAY19  SSD    empty      0.00      -
+CH0.NVB0   NVRAM  healthy    7.52G     -
+CH0.NVB1   NVRAM  healthy    7.52G     -
+CH0.NVB2   NVRAM  unused     0.00      -
+CH0.NVB3   NVRAM  unused     0.00      -
+     root@WO1Pure01-ct1:/var/home/pureeng# purearray list --sappace
+Name       Capacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  Total
+WO1Pure01  11.17T    100%    55519109686784B   26.22T   48%                4.6 to 1        8.8 to 1         4.85T   2.11T      1.65T   0.00    0.00         8.61T
+     root@WO1Pure01-ct1:/var/home/pureeng# purearray list --space
+Name       Capacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  Total
+WO1Pure01  11.17T    38%     55519109686784B   26.22T   48%                4.6 to 1        8.8 to 1         4.85T   2.11T      1.65T   0.00    0.00         8.61T
+     root@WO1Pure01-ct1:/var/home/pureeng# preureaarray list --pack CH0.BAY0
+usage: purearray [-h]
+                 {activate,authorize,connect,default-protection,diagnose,disable,disconnect,enable,encryption,eradication-config,erase,eula,factory-reset-token,list,monitor,phonehome,remoteassist,rename,replace,report,setattr,suspend,tag,test,throttle,untag}
+                 ...
+purearray: error: unrecognized arguments: --pack
+     root@WO1Pure01-ct1:/var/home/pureeng# purearray list --pack CH0.BAY01
+usage: purearray [-h]
+                 {activate,authorize,connect,default-protection,diagnose,disable,disconnect,enable,encryption,eradication-config,erase,eula,factory-reset-token,list,monitor,phonehome,remoteassist,rename,replace,report,setattr,suspend,tag,test,throttle,untag}
+                 ...
+purearray: error: unrecognized arguments: --pack
+     root@WO1Pure01-ct1:/var/home/pureeng# purearray list --pack CH0.BAY10DRdrive
+     root@WO1Pure01-ct1:/var/home/pureeng# puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    empty    0.00      -
+CH0.BAY1   SSD    healthy  2.05T     -
+CH0.BAY2   SSD    healthy  2.05T     -
+CH0.BAY3   SSD    healthy  2.05T     -
+CH0.BAY4   SSD    healthy  2.05T     -
+CH0.BAY5   SSD    healthy  2.05T     -
+CH0.BAY6   SSD    healthy  2.05T     -
+CH0.BAY7   SSD    healthy  2.05T     -
+CH0.BAY8   SSD    healthy  2.05T     -
+CH0.BAY9   SSD    healthy  2.05T     -
+CH0.BAY10  SSD    healthy  2.05T     -
+CH0.BAY11  SSD    empty    0.00      -
+CH0.BAY12  SSD    empty    0.00      -
+CH0.BAY13  SSD    empty    0.00      -
+CH0.BAY14  SSD    empty    0.00      -
+CH0.BAY15  SSD    empty    0.00      -
+CH0.BAY16  SSD    empty    0.00      -
+CH0.BAY17  SSD    empty    0.00      -
+CH0.BAY18  SSD    empty    0.00      -
+CH0.BAY19  SSD    empty    0.00      -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  unused   0.00      -
+CH0.NVB3   NVRAM  unused   0.00      -
+     root@WO1Pure01-ct1:/var/home/pureeng# purearray list --space
+Name       Capacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  Total
+WO1Pure01  11.17T    39%     55519109686784B   26.22T   48%                4.6 to 1        8.8 to 1         4.85T   2.11T      1.65T   0.00    0.00         8.61T
+     root@WO1Pure01-ct1:/var/home/pureeng# purearray list --space 
+Name       Capacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  Total
+WO1Pure01  11.17T    39%     55519109686784B   26.22T   48%                4.6 to 1        8.8 to 1         4.85T   2.11T      1.65T   0.00    0.00         8.61T
+     root@WO1Pure01-ct1:/var/home/pureeng# puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    empty    0.00      -
+CH0.BAY1   SSD    healthy  2.05T     -
+CH0.BAY2   SSD    healthy  2.05T     -
+CH0.BAY3   SSD    healthy  2.05T     -
+CH0.BAY4   SSD    healthy  2.05T     -
+CH0.BAY5   SSD    healthy  2.05T     -
+CH0.BAY6   SSD    healthy  2.05T     -
+CH0.BAY7   SSD    healthy  2.05T     -
+CH0.BAY8   SSD    healthy  2.05T     -
+CH0.BAY9   SSD    healthy  2.05T     -
+CH0.BAY10  SSD    healthy  2.05T     -
+CH0.BAY11  SSD    empty    0.00      -
+CH0.BAY12  SSD    empty    0.00      -
+CH0.BAY13  SSD    empty    0.00      -
+CH0.BAY14  SSD    empty    0.00      -
+CH0.BAY15  SSD    empty    0.00      -
+CH0.BAY16  SSD    empty    0.00      -
+CH0.BAY17  SSD    empty    0.00      -
+CH0.BAY18  SSD    empty    0.00      -
+CH0.BAY19  SSD    empty    0.00      -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  unused   0.00      -
+CH0.NVB3   NVRAM  unused   0.00      -
+     root@WO1Pure01-ct1:/var/home/pureeng# puredrive listarray list --space 
+Name       Capacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  Total
+WO1Pure01  11.17T    39%     55519109686784B   26.22T   48%                4.6 to 1        8.8 to 1         4.85T   2.11T      1.65T   0.00    0.00         8.61T
+     root@WO1Pure01-ct1:/var/home/pureeng# purearray list --space 
+Name       Capacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  Total
+WO1Pure01  11.17T    39%     55519109686784B   26.22T   48%                4.6 to 1        8.8 to 1         4.85T   2.11T      1.65T   0.00    0.00         8.61T
+     root@WO1Pure01-ct1:/var/home/pureeng# purearray list --space watch 
+Every 2.0s: purearray list --spaceWO1Pure01-ct1: Thu May 22 09:26:02 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  DataReduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  TotalWO1Pure01  11.17T    39%     55519109686784B   26.22T   48%4.6 to 18.8 to 14.85T   2.11T1.65T   0.00    0.008.61T469114682136830358402579524797:014673911368213583035100%74025     root@WO1Pure01-ct1:/var/home/pureeng# puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    empty    0.00      -
+CH0.BAY1   SSD    healthy  2.05T     -
+CH0.BAY2   SSD    healthy  2.05T     -
+CH0.BAY3   SSD    healthy  2.05T     -
+CH0.BAY4   SSD    healthy  2.05T     -
+CH0.BAY5   SSD    healthy  2.05T     -
+CH0.BAY6   SSD    healthy  2.05T     -
+CH0.BAY7   SSD    healthy  2.05T     -
+CH0.BAY8   SSD    healthy  2.05T     -
+CH0.BAY9   SSD    healthy  2.05T     -
+CH0.BAY10  SSD    healthy  2.05T     -
+CH0.BAY11  SSD    empty    0.00      -
+CH0.BAY12  SSD    empty    0.00      -
+CH0.BAY13  SSD    empty    0.00      -
+CH0.BAY14  SSD    empty    0.00      -
+CH0.BAY15  SSD    empty    0.00      -
+CH0.BAY16  SSD    empty    0.00      -
+CH0.BAY17  SSD    empty    0.00      -
+CH0.BAY18  SSD    empty    0.00      -
+CH0.BAY19  SSD    empty    0.00      -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  unused   0.00      -
+CH0.NVB3   NVRAM  unused   0.00      -
+     root@WO1Pure01-ct1:/var/home/pureeng# puredrive listwatch purearray list --space 
+Every 2.0s: purearray list --spaceWO1Pure01-ct1: Thu May 22 09:28:35 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  DataReduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  TotalWO1Pure01  11.17T    38%     55519109686784B   26.22T   48%4.6 to 18.8 to 14.85T   2.11T1.65T   0.00    0.008.61T7402479514699:013681135820357302579424795146930:01368113582035730257942479514691:01368113582025730247942469514682:013615 8103582035730257942479514693:013657811368203583025987402479524694:0146100%81136820358302538% 7402479524695:01468113682035830257402479524696:01469113682135830357402579524797:02469114682136830358402575024798:02469114682136830358402575024799:0247911469213683135518403575025740:00247100%91246921468313638% 840358502571:00247912469214683136840358503572:002527912479214693146841358503573:00257912479224693146841368513584:00357102579224793146941468513685:0035810257202479324655941468513686:0035988102572024793246941468513687:0035100%810257202479324698% 941468513688:01353810357202579324794146     root@WO1Pure01-ct1:/var/home/pureeng# puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    empty    0.00      -
+CH0.BAY1   SSD    empty    0.00      -
+CH0.BAY2   SSD    empty    0.00      -
+CH0.BAY3   SSD    empty    0.00      -
+CH0.BAY4   SSD    healthy  2.05T     -
+CH0.BAY5   SSD    healthy  2.05T     -
+CH0.BAY6   SSD    healthy  2.05T     -
+CH0.BAY7   SSD    healthy  2.05T     -
+CH0.BAY8   SSD    healthy  2.05T     -
+CH0.BAY9   SSD    healthy  2.05T     -
+CH0.BAY10  SSD    healthy  2.05T     -
+CH0.BAY11  SSD    healthy  2.05T     -
+CH0.BAY12  SSD    healthy  2.05T     -
+CH0.BAY13  SSD    healthy  2.05T     -
+CH0.BAY14  SSD    empty    0.00      -
+CH0.BAY15  SSD    empty    0.00      -
+CH0.BAY16  SSD    empty    0.00      -
+CH0.BAY17  SSD    empty    0.00      -
+CH0.BAY18  SSD    empty    0.00      -
+CH0.BAY19  SSD    empty    0.00      -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  unused   0.00      -
+CH0.NVB3   NVRAM  unused   0.00      -
+     root@WO1Pure01-ct1:/var/home/pureeng# puredrive listwatch purearray list --space 
+Every 2.0s: purearray list --spaceWO1Pure01-ct1: Thu May 22 09:48:56 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  DataReduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  TotalWO1Pure01  11.17T    38%     55519109686784B   26.22T   48%4.5 to 18.8 to 14.85T   2.11T1.65T   0.00    0.008.61T89:003581035720257932479414695136850:00358103572025793246941468513681:00358102572024793246941468513682:00358102572024793246941468513683:0035581025720247932469941469513684:0135100%81035820257302598% 7942479514695:01468113582035730257942479514696:01368113     root@WO1Pure01-ct1:/var/home/pureeng# puredrive list
+Name       Type   Status      Capacity  Details
+CH0.BAY0   SSD    empty       0.00      -
+CH0.BAY1   SSD    empty       0.00      -
+CH0.BAY2   SSD    empty       0.00      -
+CH0.BAY3   SSD    empty       0.00      -
+CH0.BAY4   SSD    healthy     2.05T     -
+CH0.BAY5   SSD    healthy     2.05T     -
+CH0.BAY6   SSD    healthy     2.05T     -
+CH0.BAY7   SSD    healthy     2.05T     -
+CH0.BAY8   SSD    healthy     2.05T     -
+CH0.BAY9   SSD    healthy     2.05T     -
+CH0.BAY10  SSD    healthy     2.05T     -
+CH0.BAY11  SSD    healthy     2.05T     -
+CH0.BAY12  SSD    healthy     2.05T     -
+CH0.BAY13  SSD    recovering  0.00      -
+CH0.BAY14  SSD    empty       0.00      -
+CH0.BAY15  SSD    empty       0.00      -
+CH0.BAY16  SSD    empty       0.00      -
+CH0.BAY17  SSD    empty       0.00      -
+CH0.BAY18  SSD    empty       0.00      -
+CH0.BAY19  SSD    empty       0.00      -
+CH0.NVB0   NVRAM  healthy     7.52G     -
+CH0.NVB1   NVRAM  healthy     7.52G     -
+CH0.NVB2   NVRAM  unused      0.00      -
+CH0.NVB3   NVRAM  unused      0.00      -
+     root@WO1Pure01-ct1:/var/home/pureeng# puredb list --drives
+usage: puredb list [-h] [--csv] [--pretty] [--notitle]
+                   {apartment_mappings,appcpus,au_count,contexts,failpoints,job,drives,nvrams,memory,mode,peer,persist_seq,readonly,reservation,reservedarea,type,schemas,segment_range,segment_extent,segment_format,segment,uptick,services,snap,objects,pgroup_objects,space,pod_space,fe_space,effective_used,ssd_mapped,tunable,uptime,watchdog,nvram_throttle,traffic_shaping,supported_drives,write_group_evenness,wide_segments,evac_segment_count,logbook,frontier_tracker_health,au_fullness,evacs,drive_params,primary_ac_compression_format,secondary_rdma_compression_format}
+                   ...
+puredb list: error: the following arguments are required: {apartment_mappings,appcpus,au_count,contexts,failpoints,job,drives,nvrams,memory,mode,peer,persist_seq,readonly,reservation,reservedarea,type,schemas,segment_range,segment_extent,segment_format,segment,uptick,services,snap,objects,pgroup_objects,space,pod_space,fe_space,effective_used,ssd_mapped,tunable,uptime,watchdog,nvram_throttle,traffic_shaping,supported_drives,write_group_evenness,wide_segments,evac_segment_count,logbook,frontier_tracker_health,au_fullness,evacs,drive_params,primary_ac_compression_format,secondary_rdma_compression_format}
+     root@WO1Pure01-ct1:/var/home/pureeng# puredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV4   1        SSD    SAS       healthy  1.02T     0.00          531.78G   3967088115660769033:13408702704865899655   22/112         87770/121906
+CH0.DRV4   2        SSD    SAS       healthy  1.02T     0.00          530.56G   7532297607958579232:13151439470950782189   18/112         87529/121906
+CH0.DRV5   1        SSD    SAS       healthy  1.02T     0.00          531.12G   10607505162956457674:9755084173039550079   23/112         87738/121906
+CH0.DRV5   2        SSD    SAS       healthy  1.02T     0.00          531.12G   17180542211280094093:10788304930742092845  19/112         87671/121906
+CH0.DRV6   1        SSD    SAS       healthy  1.02T     0.00          530.37G   7784945525409267835:12679367617211426569   24/112         87495/121906
+CH0.DRV6   2        SSD    SAS       healthy  1.02T     0.00          532.32G   18286533655153295415:12608073289142559268  21/112         87842/121906
+CH0.DRV7   1        SSD    SAS       healthy  1.02T     0.00          530.87G   7295418427082818555:10661884535681033089   23/112         87663/121906
+CH0.DRV7   2        SSD    SAS       healthy  1.02T     0.00          528.90G   5569993883093323391:9746190733069949112    21/112         87287/121906
+CH0.DRV8   1        SSD    SAS       healthy  1.02T     0.00          532.07G   1198219088314387589:12099988685935801141   22/112         87796/121906
+CH0.DRV8   2        SSD    SAS       healthy  1.02T     0.00          531.07G   14429471539599262054:9896439568403346675   22/112         87630/121906
+CH0.DRV9   1        SSD    SAS       healthy  1.02T     0.00          530.21G   15932722363311801392:12086752879741954417  23/112         87544/121906
+CH0.DRV9   2        SSD    SAS       healthy  1.02T     0.00          531.44G   12429935582841291023:9450681679943580635   16/112         87747/121906
+CH0.DRV10  1        SSD    SAS       healthy  1.02T     0.00          528.60G   5171810664639843263:11469579641183796992   20/112         87353/121906
+CH0.DRV10  2        SSD    SAS       healthy  1.02T     0.00          525.83G   11684753354239002048:10189161312450512542  22/112         86954/121906
+CH0.DRV11  1        SSD    SAS       healthy  1.02T     0.00          530.54G   17381656047604682157:13341453536743265161  20/112         87587/121906
+CH0.DRV11  2        SSD    SAS       healthy  1.02T     0.00          532.48G   15558145747563204387:12781481067571740859  24/112         87813/121906
+CH0.DRV12  1        SSD    SAS       healthy  1.02T     0.00          529.88G   14048521526934651094:11194862240709531437  21/112         87588/121906
+CH0.DRV12  2        SSD    SAS       healthy  1.02T     0.00          531.17G   4705659660218682810:11797620468873607449   21/112         87740/121906
+CH0.DRV13  1        SSD    SAS       healthy  1.02T     0.00          681.75G   18310297109533247001:10565477030146539534  23/112         87247/121906
+CH0.DRV13  2        SSD    SAS       healthy  1.02T     0.00          682.75G   17068359933879403923:12779574209278599039  17/112         87381/121906
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      5797665763654715294:12034874128201944279   -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      6833619492250075803:11418301514983864663   -              -
+     root@WO1Pure01-ct1:/var/home/pureeng# puredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV4   1        SSD    SAS       healthy  1.02T     0.00          531.77G   3967088115660769033:13408702704865899655   22/112         87772/121906
+CH0.DRV4   2        SSD    SAS       healthy  1.02T     0.00          530.55G   7532297607958579232:13151439470950782189   18/112         87528/121906
+CH0.DRV5   1        SSD    SAS       healthy  1.02T     0.00          531.11G   10607505162956457674:9755084173039550079   23/112         87738/121906
+CH0.DRV5   2        SSD    SAS       healthy  1.02T     0.00          531.12G   17180542211280094093:10788304930742092845  19/112         87673/121906
+CH0.DRV6   1        SSD    SAS       healthy  1.02T     0.00          530.36G   7784945525409267835:12679367617211426569   24/112         87496/121906
+CH0.DRV6   2        SSD    SAS       healthy  1.02T     0.00          532.30G   18286533655153295415:12608073289142559268  21/112         87840/121906
+CH0.DRV7   1        SSD    SAS       healthy  1.02T     0.00          530.85G   7295418427082818555:10661884535681033089   23/112         87662/121906
+CH0.DRV7   2        SSD    SAS       healthy  1.02T     0.00          528.90G   5569993883093323391:9746190733069949112    21/112         87289/121906
+CH0.DRV8   1        SSD    SAS       healthy  1.02T     0.00          532.06G   1198219088314387589:12099988685935801141   22/112         87794/121906
+CH0.DRV8   2        SSD    SAS       healthy  1.02T     0.00          531.07G   14429471539599262054:9896439568403346675   22/112         87631/121906
+CH0.DRV9   1        SSD    SAS       healthy  1.02T     0.00          530.20G   15932722363311801392:12086752879741954417  23/112         87545/121906
+CH0.DRV9   2        SSD    SAS       healthy  1.02T     0.00          531.42G   12429935582841291023:9450681679943580635   16/112         87745/121906
+CH0.DRV10  1        SSD    SAS       healthy  1.02T     0.00          528.59G   5171810664639843263:11469579641183796992   20/112         87352/121906
+CH0.DRV10  2        SSD    SAS       healthy  1.02T     0.00          525.83G   11684753354239002048:10189161312450512542  22/112         86955/121906
+CH0.DRV11  1        SSD    SAS       healthy  1.02T     0.00          530.52G   17381656047604682157:13341453536743265161  20/112         87584/121906
+CH0.DRV11  2        SSD    SAS       healthy  1.02T     0.00          532.47G   15558145747563204387:12781481067571740859  24/112         87816/121906
+CH0.DRV12  1        SSD    SAS       healthy  1.02T     0.00          529.87G   14048521526934651094:11194862240709531437  21/112         87590/121906
+CH0.DRV12  2        SSD    SAS       healthy  1.02T     0.00          531.16G   4705659660218682810:11797620468873607449   21/112         87738/121906
+CH0.DRV13  1        SSD    SAS       healthy  1.02T     0.00          681.74G   18310297109533247001:10565477030146539534  23/112         87248/121906
+CH0.DRV13  2        SSD    SAS       healthy  1.02T     0.00          682.73G   17068359933879403923:12779574209278599039  17/112         87381/121906
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      5797665763654715294:12034874128201944279   -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      6833619492250075803:11418301514983864663   -              -
+     root@WO1Pure01-ct1:/var/home/pureeng# puredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV4   1        SSD    SAS       healthy  1.02T     0.00          531.77G   3967088115660769033:13408702704865899655   22/112         87772/121906
+CH0.DRV4   2        SSD    SAS       healthy  1.02T     0.00          530.55G   7532297607958579232:13151439470950782189   18/112         87528/121906
+CH0.DRV5   1        SSD    SAS       healthy  1.02T     0.00          531.11G   10607505162956457674:9755084173039550079   23/112         87738/121906
+CH0.DRV5   2        SSD    SAS       healthy  1.02T     0.00          531.12G   17180542211280094093:10788304930742092845  19/112         87673/121906
+CH0.DRV6   1        SSD    SAS       healthy  1.02T     0.00          530.36G   7784945525409267835:12679367617211426569   24/112         87496/121906
+CH0.DRV6   2        SSD    SAS       healthy  1.02T     0.00          532.30G   18286533655153295415:12608073289142559268  21/112         87840/121906
+CH0.DRV7   1        SSD    SAS       healthy  1.02T     0.00          530.85G   7295418427082818555:10661884535681033089   23/112         87662/121906
+CH0.DRV7   2        SSD    SAS       healthy  1.02T     0.00          528.90G   5569993883093323391:9746190733069949112    21/112         87289/121906
+CH0.DRV8   1        SSD    SAS       healthy  1.02T     0.00          532.06G   1198219088314387589:12099988685935801141   22/112         87794/121906
+CH0.DRV8   2        SSD    SAS       healthy  1.02T     0.00          531.07G   14429471539599262054:9896439568403346675   22/112         87631/121906
+CH0.DRV9   1        SSD    SAS       healthy  1.02T     0.00          530.20G   15932722363311801392:12086752879741954417  23/112         87545/121906
+CH0.DRV9   2        SSD    SAS       healthy  1.02T     0.00          531.42G   12429935582841291023:9450681679943580635   16/112         87745/121906
+CH0.DRV10  1        SSD    SAS       healthy  1.02T     0.00          528.59G   5171810664639843263:11469579641183796992   20/112         87352/121906
+CH0.DRV10  2        SSD    SAS       healthy  1.02T     0.00          525.83G   11684753354239002048:10189161312450512542  22/112         86955/121906
+CH0.DRV11  1        SSD    SAS       healthy  1.02T     0.00          530.52G   17381656047604682157:13341453536743265161  20/112         87584/121906
+CH0.DRV11  2        SSD    SAS       healthy  1.02T     0.00          532.47G   15558145747563204387:12781481067571740859  24/112         87816/121906
+CH0.DRV12  1        SSD    SAS       healthy  1.02T     0.00          529.87G   14048521526934651094:11194862240709531437  21/112         87590/121906
+CH0.DRV12  2        SSD    SAS       healthy  1.02T     0.00          531.16G   4705659660218682810:11797620468873607449   21/112         87738/121906
+CH0.DRV13  1        SSD    SAS       healthy  1.02T     0.00          681.74G   18310297109533247001:10565477030146539534  23/112         87248/121906
+CH0.DRV13  2        SSD    SAS       healthy  1.02T     0.00          682.73G   17068359933879403923:12779574209278599039  17/112         87381/121906
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      5797665763654715294:12034874128201944279   -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      6833619492250075803:11418301514983864663   -              -
+     root@WO1Pure01-ct1:/var/home/pureeng# puredb list drives--drivesrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    empty    0.00      -
+CH0.BAY1   SSD    empty    0.00      -
+CH0.BAY2   SSD    empty    0.00      -
+CH0.BAY3   SSD    empty    0.00      -
+CH0.BAY4   SSD    healthy  2.05T     -
+CH0.BAY5   SSD    healthy  2.05T     -
+CH0.BAY6   SSD    healthy  2.05T     -
+CH0.BAY7   SSD    healthy  2.05T     -
+CH0.BAY8   SSD    healthy  2.05T     -
+CH0.BAY9   SSD    healthy  2.05T     -
+CH0.BAY10  SSD    healthy  2.05T     -
+CH0.BAY11  SSD    healthy  2.05T     -
+CH0.BAY12  SSD    healthy  2.05T     -
+CH0.BAY13  SSD    healthy  2.05T     -
+CH0.BAY14  SSD    empty    0.00      -
+CH0.BAY15  SSD    empty    0.00      -
+CH0.BAY16  SSD    empty    0.00      -
+CH0.BAY17  SSD    empty    0.00      -
+CH0.BAY18  SSD    empty    0.00      -
+CH0.BAY19  SSD    empty    0.00      -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  unused   0.00      -
+CH0.NVB3   NVRAM  unused   0.00      -
+     root@WO1Pure01-ct1:/var/home/pureeng# puredrive listb list drives--drivesrive listwatch purearray list --space 
+Every 2.0s: purearray list --spaceWO1Pure01-ct1: Thu May 22 09:57:43 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  DataReduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  TotalWO1Pure01  11.17T    38%     55519109686784B   26.22T   48%4.5 to 18.8 to 14.85T   2.11T1.65T   0.00    0.008.61T68513588:00358102572024793246941468513689:003581035720247932469414695136810:00:01358103572025793247941469513681:0135810357202573024789942469514692:0136988113582035830257402479524793:014691136     root@WO1Pure01-ct1:/var/home/pureeng# watch purearray list --space puredrive list
+Name       Type   Status      Capacity  Details
+CH0.BAY0   SSD    empty       0.00      -
+CH0.BAY1   SSD    empty       0.00      -
+CH0.BAY2   SSD    empty       0.00      -
+CH0.BAY3   SSD    empty       0.00      -
+CH0.BAY4   SSD    healthy     2.05T     -
+CH0.BAY5   SSD    healthy     2.05T     -
+CH0.BAY6   SSD    healthy     2.05T     -
+CH0.BAY7   SSD    healthy     2.05T     -
+CH0.BAY8   SSD    healthy     2.05T     -
+CH0.BAY9   SSD    healthy     2.05T     -
+CH0.BAY10  SSD    healthy     2.05T     -
+CH0.BAY11  SSD    healthy     2.05T     -
+CH0.BAY12  SSD    healthy     2.05T     -
+CH0.BAY13  SSD    recovering  0.00      -
+CH0.BAY14  SSD    empty       0.00      -
+CH0.BAY15  SSD    empty       0.00      -
+CH0.BAY16  SSD    empty       0.00      -
+CH0.BAY17  SSD    empty       0.00      -
+CH0.BAY18  SSD    empty       0.00      -
+CH0.BAY19  SSD    empty       0.00      -
+CH0.NVB0   NVRAM  healthy     7.52G     -
+CH0.NVB1   NVRAM  healthy     7.52G     -
+CH0.NVB2   NVRAM  unused      0.00      -
+CH0.NVB3   NVRAM  unused      0.00      -
+     root@WO1Pure01-ct1:/var/home/pureeng# puredrive listwatch purearray list --space 
+Every 2.0s: purearray list --spaceWO1Pure01-ct1: Thu May 22 10:03:27 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  DataReduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  TotalWO1Pure01  11.17T    98%     55519109686784B   26.22T   48%4.5 to 18.8 to 14.85T   2.11T1.65T   0.00    0.008.61T9314     root@WO1Pure01-ct1:/var/home/pureeng# watch purearray list --space puredrive listwatch purearray list --space puredrive listb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+(unknown)  0        SSD              failed   1.02T     0.00          681.76G   18310297109533247001:10565477030146539534  22/112         87269/121906
+(unknown)  0        SSD              failed   1.02T     0.00          682.76G   17068359933879403923:12779574209278599039  19/112         87388/121906
+CH0.DRV4   1        SSD    SAS       healthy  1.02T     0.00          531.79G   3967088115660769033:13408702704865899655   22/112         87814/121906
+CH0.DRV4   2        SSD    SAS       healthy  1.02T     0.00          530.56G   7532297607958579232:13151439470950782189   25/112         87575/121906
+CH0.DRV5   1        SSD    SAS       healthy  1.02T     0.00          531.16G   10607505162956457674:9755084173039550079   27/112         87787/121906
+CH0.DRV5   2        SSD    SAS       healthy  1.02T     0.00          531.15G   17180542211280094093:10788304930742092845  21/112         87718/121906
+CH0.DRV6   1        SSD    SAS       healthy  1.02T     0.00          530.41G   7784945525409267835:12679367617211426569   26/112         87545/121906
+CH0.DRV6   2        SSD    SAS       healthy  1.02T     0.00          532.31G   18286533655153295415:12608073289142559268  24/112         87891/121906
+CH0.DRV7   1        SSD    SAS       healthy  1.02T     0.00          530.88G   7295418427082818555:10661884535681033089   27/112         87709/121906
+CH0.DRV7   2        SSD    SAS       healthy  1.02T     0.00          528.89G   5569993883093323391:9746190733069949112    22/112         87334/121906
+CH0.DRV8   1        SSD    SAS       healthy  1.02T     0.00          532.09G   1198219088314387589:12099988685935801141   26/112         87848/121906
+CH0.DRV8   2        SSD    SAS       healthy  1.02T     0.00          531.10G   14429471539599262054:9896439568403346675   23/112         87679/121906
+CH0.DRV9   1        SSD    SAS       healthy  1.02T     0.00          530.23G   15932722363311801392:12086752879741954417  26/112         87586/121906
+CH0.DRV9   2        SSD    SAS       healthy  1.02T     0.00          531.48G   12429935582841291023:9450681679943580635   19/112         87798/121906
+CH0.DRV10  1        SSD    SAS       healthy  1.02T     0.00          528.59G   5171810664639843263:11469579641183796992   20/112         87392/121906
+CH0.DRV10  2        SSD    SAS       healthy  1.02T     0.00          525.84G   11684753354239002048:10189161312450512542  24/112         87004/121906
+CH0.DRV11  1        SSD    SAS       healthy  1.02T     0.00          530.52G   17381656047604682157:13341453536743265161  22/112         87635/121906
+CH0.DRV11  2        SSD    SAS       healthy  1.02T     0.00          532.48G   15558145747563204387:12781481067571740859  24/112         87861/121906
+CH0.DRV12  1        SSD    SAS       healthy  1.02T     0.00          529.88G   14048521526934651094:11194862240709531437  22/112         87635/121906
+CH0.DRV12  2        SSD    SAS       healthy  1.02T     0.00          531.18G   4705659660218682810:11797620468873607449   24/112         87787/121906
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      5797665763654715294:12034874128201944279   -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      6833619492250075803:11418301514983864663   -              -
+     root@WO1Pure01-ct1:/var/home/pureeng# puredb list driveswatch purearray list --space 
+Every 2.0s: purearray list --spaceWO1Pure01-ct1: Thu May 22 10:05:19 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  DataReduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  TotalWO1Pure01  11.17T    38%     55519109686784B   26.22T   48%4.5 to 18.8 to 14.85T   2.11T1.65T   0.00    0.008.61T224693146941368     root@WO1Pure01-ct1:/var/home/pureeng# purearray remoteassist --connect
+Name           Status      Opened                   Expires
+WO1Pure01-ct1  connecting  2025-05-22 10:05:57 EDT  2025-05-24 10:05:57 EDT
+     root@WO1Pure01-ct1:/var/home/pureeng# pureararay list --drives
+usage: purearray [-h]
+                 {activate,authorize,connect,default-protection,diagnose,disable,disconnect,enable,encryption,eradication-config,erase,eula,factory-reset-token,list,monitor,phonehome,remoteassist,rename,replace,report,setattr,suspend,tag,test,throttle,untag}
+                 ...
+purearray: error: unrecognized arguments: --drives
+     root@WO1Pure01-ct1:/var/home/pureeng# puredrdrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    empty    0.00      -
+CH0.BAY1   SSD    empty    0.00      -
+CH0.BAY2   SSD    empty    0.00      -
+CH0.BAY3   SSD    empty    0.00      -
+CH0.BAY4   SSD    healthy  2.05T     -
+CH0.BAY5   SSD    healthy  2.05T     -
+CH0.BAY6   SSD    healthy  2.05T     -
+CH0.BAY7   SSD    healthy  2.05T     -
+CH0.BAY8   SSD    healthy  2.05T     -
+CH0.BAY9   SSD    healthy  2.05T     -
+CH0.BAY10  SSD    healthy  2.05T     -
+CH0.BAY11  SSD    healthy  2.05T     -
+CH0.BAY12  SSD    healthy  2.05T     -
+CH0.BAY13  SSD    healthy  2.05T     -
+CH0.BAY14  SSD    empty    0.00      -
+CH0.BAY15  SSD    empty    0.00      -
+CH0.BAY16  SSD    empty    0.00      -
+CH0.BAY17  SSD    empty    0.00      -
+CH0.BAY18  SSD    empty    0.00      -
+CH0.BAY19  SSD    empty    0.00      -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  unused   0.00      -
+CH0.NVB3   NVRAM  unused   0.00      -
+     root@WO1Pure01-ct1:/var/home/pureeng# puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    empty    0.00      -
+CH0.BAY1   SSD    empty    0.00      -
+CH0.BAY2   SSD    empty    0.00      -
+CH0.BAY3   SSD    empty    0.00      -
+CH0.BAY4   SSD    healthy  2.05T     -
+CH0.BAY5   SSD    healthy  2.05T     -
+CH0.BAY6   SSD    healthy  2.05T     -
+CH0.BAY7   SSD    healthy  2.05T     -
+CH0.BAY8   SSD    healthy  2.05T     -
+CH0.BAY9   SSD    healthy  2.05T     -
+CH0.BAY10  SSD    healthy  2.05T     -
+CH0.BAY11  SSD    healthy  2.05T     -
+CH0.BAY12  SSD    healthy  2.05T     -
+CH0.BAY13  SSD    healthy  2.05T     -
+CH0.BAY14  SSD    empty    0.00      -
+CH0.BAY15  SSD    empty    0.00      -
+CH0.BAY16  SSD    empty    0.00      -
+CH0.BAY17  SSD    empty    0.00      -
+CH0.BAY18  SSD    empty    0.00      -
+CH0.BAY19  SSD    empty    0.00      -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  unused   0.00      -
+CH0.NVB3   NVRAM  unused   0.00      -
+     root@WO1Pure01-ct1:/var/home/pureeng# puredrive listarray list --drivesremoteassist --connectwatch purearray list --space 
+Every 2.0s: purearray list --spaceWO1Pure01-ct1: Thu May 22 10:10:43 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  DataReduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  TotalWO1Pure01  11.17T    98%     55519109686784B   26.22T   48%4.5 to 18.8 to 14.85T   2.11T1.65T   0.00    0.008.61T58502571:0025100%7912     root@WO1Pure01-ct1:/var/home/pureeng# watch purearray list --space puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    empty    0.00      -
+CH0.BAY1   SSD    empty    0.00      -
+CH0.BAY2   SSD    empty    0.00      -
+CH0.BAY3   SSD    empty    0.00      -
+CH0.BAY4   SSD    healthy  2.05T     -
+CH0.BAY5   SSD    healthy  2.05T     -
+CH0.BAY6   SSD    healthy  2.05T     -
+CH0.BAY7   SSD    healthy  2.05T     -
+CH0.BAY8   SSD    healthy  2.05T     -
+CH0.BAY9   SSD    healthy  2.05T     -
+CH0.BAY10  SSD    healthy  2.05T     -
+CH0.BAY11  SSD    healthy  2.05T     -
+CH0.BAY12  SSD    healthy  2.05T     -
+CH0.BAY13  SSD    healthy  2.05T     -
+CH0.BAY14  SSD    empty    0.00      -
+CH0.BAY15  SSD    empty    0.00      -
+CH0.BAY16  SSD    empty    0.00      -
+CH0.BAY17  SSD    empty    0.00      -
+CH0.BAY18  SSD    empty    0.00      -
+CH0.BAY19  SSD    empty    0.00      -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  unused   0.00      -
+CH0.NVB3   NVRAM  unused   0.00      -
+     root@WO1Pure01-ct1:/var/home/pureeng# puredrive listwatch purearray list --space 
+Every 2.0s: purearray list --spaceWO1Pure01-ct1: Thu May 22 10:11:20 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  DataReduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  TotalWO1Pure01  11.17T    100%    55519109686784B   26.22T   48%4.5 to 18.8 to 14.85T   2.11T1.65T   0.00    0.008.61T357302598% 794247951     root@WO1Pure01-ct1:/var/home/pureeng# watch purearray list --space puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    empty    0.00      -
+CH0.BAY1   SSD    empty    0.00      -
+CH0.BAY2   SSD    empty    0.00      -
+CH0.BAY3   SSD    empty    0.00      -
+CH0.BAY4   SSD    healthy  2.05T     -
+CH0.BAY5   SSD    healthy  2.05T     -
+CH0.BAY6   SSD    healthy  2.05T     -
+CH0.BAY7   SSD    healthy  2.05T     -
+CH0.BAY8   SSD    healthy  2.05T     -
+CH0.BAY9   SSD    healthy  2.05T     -
+CH0.BAY10  SSD    healthy  2.05T     -
+CH0.BAY11  SSD    healthy  2.05T     -
+CH0.BAY12  SSD    healthy  2.05T     -
+CH0.BAY13  SSD    healthy  2.05T     -
+CH0.BAY14  SSD    empty    0.00      -
+CH0.BAY15  SSD    empty    0.00      -
+CH0.BAY16  SSD    empty    0.00      -
+CH0.BAY17  SSD    empty    0.00      -
+CH0.BAY18  SSD    empty    0.00      -
+CH0.BAY19  SSD    empty    0.00      -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  unused   0.00      -
+CH0.NVB3   NVRAM  unused   0.00      -
+     root@WO1Pure01-ct1:/var/home/pureeng# purearray list -redrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    empty    0.00      -
+CH0.BAY1   SSD    empty    0.00      -
+CH0.BAY2   SSD    empty    0.00      -
+CH0.BAY3   SSD    empty    0.00      -
+CH0.BAY4   SSD    healthy  2.05T     -
+CH0.BAY5   SSD    healthy  2.05T     -
+CH0.BAY6   SSD    healthy  2.05T     -
+CH0.BAY7   SSD    healthy  2.05T     -
+CH0.BAY8   SSD    healthy  2.05T     -
+CH0.BAY9   SSD    healthy  2.05T     -
+CH0.BAY10  SSD    healthy  2.05T     -
+CH0.BAY11  SSD    healthy  2.05T     -
+CH0.BAY12  SSD    healthy  2.05T     -
+CH0.BAY13  SSD    healthy  2.05T     -
+CH0.BAY14  SSD    empty    0.00      -
+CH0.BAY15  SSD    empty    0.00      -
+CH0.BAY16  SSD    empty    0.00      -
+CH0.BAY17  SSD    empty    0.00      -
+CH0.BAY18  SSD    empty    0.00      -
+CH0.BAY19  SSD    empty    0.00      -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  unused   0.00      -
+CH0.NVB3   NVRAM  unused   0.00      -
+     root@WO1Pure01-ct1:/var/home/pureeng# puredrive listwatch purearray list --space 
+Every 2.0s: purearray list --spaceWO1Pure01-ct1: Thu May 22 10:16:35 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  DataReduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  TotalWO1Pure01  11.17T    98%     55519109686784B   26.22T   48%4.6 to 18.8 to 14.85T   2.11T1.64T   0.00    0.008.61T7402479524697:014669581136820     root@WO1Pure01-ct1:/var/home/pureeng# watch purearray list --space puredrive list
+Name       Type   Status      Capacity  Details
+CH0.BAY0   SSD    empty       0.00      -
+CH0.BAY1   SSD    empty       0.00      -
+CH0.BAY2   SSD    empty       0.00      -
+CH0.BAY3   SSD    empty       0.00      -
+CH0.BAY4   SSD    healthy     2.05T     -
+CH0.BAY5   SSD    healthy     2.05T     -
+CH0.BAY6   SSD    healthy     2.05T     -
+CH0.BAY7   SSD    healthy     2.05T     -
+CH0.BAY8   SSD    healthy     2.05T     -
+CH0.BAY9   SSD    healthy     2.05T     -
+CH0.BAY10  SSD    healthy     2.05T     -
+CH0.BAY11  SSD    healthy     2.05T     -
+CH0.BAY12  SSD    healthy     2.05T     -
+CH0.BAY13  SSD    recovering  0.00      Not accessible from CT0; 
+CH0.BAY14  SSD    empty       0.00      -
+CH0.BAY15  SSD    empty       0.00      -
+CH0.BAY16  SSD    empty       0.00      -
+CH0.BAY17  SSD    empty       0.00      -
+CH0.BAY18  SSD    empty       0.00      -
+CH0.BAY19  SSD    empty       0.00      -
+CH0.NVB0   NVRAM  healthy     7.52G     -
+CH0.NVB1   NVRAM  healthy     7.52G     -
+CH0.NVB2   NVRAM  unused      0.00      -
+CH0.NVB3   NVRAM  unused      0.00      -
+     root@WO1Pure01-ct1:/var/home/pureeng# puredrive listwatch purearray list --space 
+Every 2.0s: purearray list --spaceWO1Pure01-ct1: Thu May 22 10:18:35 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  DataReduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  TotalWO1Pure01  11.17T    38%     55519109686784B   26.22T   48%4.6 to 18.8 to 14.85T   2.11T1.65T   0.00    0.008.61T79424     root@WO1Pure01-ct1:/var/home/pureeng# watch purearray list --space puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    empty    0.00      -
+CH0.BAY1   SSD    empty    0.00      -
+CH0.BAY2   SSD    empty    0.00      -
+CH0.BAY3   SSD    empty    0.00      -
+CH0.BAY4   SSD    healthy  2.05T     -
+CH0.BAY5   SSD    healthy  2.05T     -
+CH0.BAY6   SSD    healthy  2.05T     -
+CH0.BAY7   SSD    healthy  2.05T     -
+CH0.BAY8   SSD    healthy  2.05T     -
+CH0.BAY9   SSD    healthy  2.05T     -
+CH0.BAY10  SSD    healthy  2.05T     -
+CH0.BAY11  SSD    healthy  2.05T     -
+CH0.BAY12  SSD    healthy  2.05T     -
+CH0.BAY13  SSD    healthy  2.05T     -
+CH0.BAY14  SSD    empty    0.00      -
+CH0.BAY15  SSD    empty    0.00      -
+CH0.BAY16  SSD    empty    0.00      -
+CH0.BAY17  SSD    empty    0.00      -
+CH0.BAY18  SSD    empty    0.00      -
+CH0.BAY19  SSD    empty    0.00      -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  unused   0.00      -
+CH0.NVB3   NVRAM  unused   0.00      -
+     root@WO1Pure01-ct1:/var/home/pureeng# puredrive listwatch purearray list --space puredrive listwatch purearray list --space puredrive listwatch purearray list --space puredrive listwatch purearray list --space puredrive listarray list --drivesremoteassist --connectwatch purearray list --space puredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV4   1        SSD    SAS       healthy  1.02T     0.00          531.09G   3967088115660769033:13408702704865899655   25/112         87770/121906
+CH0.DRV4   2        SSD    SAS       healthy  1.02T     0.00          529.80G   7532297607958579232:13151439470950782189   26/112         87538/121906
+CH0.DRV5   1        SSD    SAS       healthy  1.02T     0.00          530.35G   10607505162956457674:9755084173039550079   28/112         87755/121906
+CH0.DRV5   2        SSD    SAS       healthy  1.02T     0.00          530.48G   17180542211280094093:10788304930742092845  26/112         87673/121906
+CH0.DRV6   1        SSD    SAS       healthy  1.02T     0.00          529.79G   7784945525409267835:12679367617211426569   35/112         87512/121906
+CH0.DRV6   2        SSD    SAS       healthy  1.02T     0.00          531.60G   18286533655153295415:12608073289142559268  28/112         87859/121906
+CH0.DRV7   1        SSD    SAS       healthy  1.02T     0.00          530.08G   7295418427082818555:10661884535681033089   30/112         87673/121906
+CH0.DRV7   2        SSD    SAS       healthy  1.02T     0.00          528.27G   5569993883093323391:9746190733069949112    32/112         87303/121906
+CH0.DRV8   1        SSD    SAS       healthy  1.02T     0.00          531.29G   1198219088314387589:12099988685935801141   30/112         87805/121906
+CH0.DRV8   2        SSD    SAS       healthy  1.02T     0.00          530.43G   14429471539599262054:9896439568403346675   33/112         87629/121906
+CH0.DRV9   1        SSD    SAS       healthy  1.02T     0.00          529.55G   15932722363311801392:12086752879741954417  34/112         87554/121906
+CH0.DRV9   2        SSD    SAS       healthy  1.02T     0.00          530.71G   12429935582841291023:9450681679943580635   26/112         87770/121906
+CH0.DRV10  1        SSD    SAS       healthy  1.02T     0.00          527.93G   5171810664639843263:11469579641183796992   29/112         87372/121906
+CH0.DRV10  2        SSD    SAS       healthy  1.02T     0.00          525.21G   11684753354239002048:10189161312450512542  33/112         86968/121906
+CH0.DRV11  1        SSD    SAS       healthy  1.02T     0.00          529.73G   17381656047604682157:13341453536743265161  31/112         87596/121906
+CH0.DRV11  2        SSD    SAS       healthy  1.02T     0.00          531.80G   15558145747563204387:12781481067571740859  29/112         87822/121906
+CH0.DRV12  1        SSD    SAS       healthy  1.02T     0.00          529.23G   14048521526934651094:11194862240709531437  34/112         87604/121906
+CH0.DRV12  2        SSD    SAS       healthy  1.02T     0.00          530.45G   4705659660218682810:11797620468873607449   28/112         87754/121906
+CH0.DRV13  1        SSD    SAS       healthy  1.02T     0.00          680.88G   18310297109533247001:10565477030146539534  24/112         87151/121906
+CH0.DRV13  2        SSD    SAS       healthy  1.02T     0.00          681.76G   17068359933879403923:12779574209278599039  21/112         87286/121906
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      5797665763654715294:12034874128201944279   -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      6833619492250075803:11418301514983864663   -              -
+     root@WO1Pure01-ct1:/var/home/pureeng# puredb list drivesrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    empty    0.00      -
+CH0.BAY1   SSD    empty    0.00      -
+CH0.BAY2   SSD    empty    0.00      -
+CH0.BAY3   SSD    empty    0.00      -
+CH0.BAY4   SSD    healthy  2.05T     -
+CH0.BAY5   SSD    healthy  2.05T     -
+CH0.BAY6   SSD    healthy  2.05T     -
+CH0.BAY7   SSD    healthy  2.05T     -
+CH0.BAY8   SSD    healthy  2.05T     -
+CH0.BAY9   SSD    healthy  2.05T     -
+CH0.BAY10  SSD    healthy  2.05T     -
+CH0.BAY11  SSD    healthy  2.05T     -
+CH0.BAY12  SSD    healthy  2.05T     -
+CH0.BAY13  SSD    healthy  2.05T     -
+CH0.BAY14  SSD    empty    0.00      -
+CH0.BAY15  SSD    empty    0.00      -
+CH0.BAY16  SSD    empty    0.00      -
+CH0.BAY17  SSD    empty    0.00      -
+CH0.BAY18  SSD    empty    0.00      -
+CH0.BAY19  SSD    empty    0.00      -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  unused   0.00      -
+CH0.NVB3   NVRAM  unused   0.00      -
+     root@WO1Pure01-ct1:/var/home/pureeng# puredrive listb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV4   1        SSD    SAS       healthy  1.02T     0.00          16.00M    3967088115660769033:13408702704865899655   25/112         87769/121906
+CH0.DRV4   2        SSD    SAS       healthy  1.02T     0.00          0.00      7532297607958579232:13151439470950782189   25/112         87529/121906
+CH0.DRV5   1        SSD    SAS       healthy  1.02T     0.00          0.00      10607505162956457674:9755084173039550079   27/112         87745/121906
+CH0.DRV5   2        SSD    SAS       healthy  1.02T     0.00          16.00M    17180542211280094093:10788304930742092845  27/112         87669/121906
+CH0.DRV6   1        SSD    SAS       healthy  1.02T     0.00          0.00      7784945525409267835:12679367617211426569   34/112         87506/121906
+CH0.DRV6   2        SSD    SAS       healthy  1.02T     0.00          0.00      18286533655153295415:12608073289142559268  29/112         87848/121906
+CH0.DRV7   1        SSD    SAS       healthy  1.02T     0.00          0.00      7295418427082818555:10661884535681033089   26/112         87664/121906
+CH0.DRV7   2        SSD    SAS       healthy  1.02T     0.00          16.00M    5569993883093323391:9746190733069949112    34/112         87298/121906
+CH0.DRV8   1        SSD    SAS       healthy  1.02T     0.00          0.00      1198219088314387589:12099988685935801141   27/112         87799/121906
+CH0.DRV8   2        SSD    SAS       healthy  1.02T     0.00          0.00      14429471539599262054:9896439568403346675   33/112         87628/121906
+CH0.DRV9   1        SSD    SAS       healthy  1.02T     0.00          16.00M    15932722363311801392:12086752879741954417  35/112         87547/121906
+CH0.DRV9   2        SSD    SAS       healthy  1.02T     0.00          0.00      12429935582841291023:9450681679943580635   25/112         87765/121906
+CH0.DRV10  1        SSD    SAS       healthy  1.02T     0.00          0.00      5171810664639843263:11469579641183796992   28/112         87366/121906
+CH0.DRV10  2        SSD    SAS       healthy  1.02T     0.00          8.00M     11684753354239002048:10189161312450512542  34/112         86964/121906
+CH0.DRV11  1        SSD    SAS       healthy  1.02T     0.00          0.00      17381656047604682157:13341453536743265161  29/112         87591/121906
+CH0.DRV11  2        SSD    SAS       healthy  1.02T     0.00          16.00M    15558145747563204387:12781481067571740859  30/112         87818/121906
+CH0.DRV12  1        SSD    SAS       healthy  1.02T     0.00          8.00M     14048521526934651094:11194862240709531437  34/112         87600/121906
+CH0.DRV12  2        SSD    SAS       healthy  1.02T     0.00          0.00      4705659660218682810:11797620468873607449   27/112         87742/121906
+CH0.DRV13  1        SSD    SAS       healthy  1.02T     0.00          16.00M    18310297109533247001:10565477030146539534  25/112         87147/121906
+CH0.DRV13  2        SSD    SAS       healthy  1.02T     0.00          0.00      17068359933879403923:12779574209278599039  19/112         87278/121906
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      5797665763654715294:12034874128201944279   -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      6833619492250075803:11418301514983864663   -              -
+     root@WO1Pure01-ct1:/var/home/pureeng# puredb list drivesrive listb list drivesrive listwatch purearray list --space 
+Every 2.0s: purearray list --spaceWO1Pure01-ct1: Thu May 22 10:24:03 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  DataReduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  TotalWO1Pure01  11.17T    98%     55519109686784B   26.22T   48%4.5 to 18.8 to 14.85T   2.12T1.65T   0.00    0.008.61T68113582035     root@WO1Pure01-ct1:/var/home/pureeng# watch purearray list --space puredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV4   1        SSD    SAS       healthy  1.02T     0.00          8.00M     3967088115660769033:13408702704865899655   25/112         87770/121906
+CH0.DRV4   2        SSD    SAS       healthy  1.02T     0.00          8.00M     7532297607958579232:13151439470950782189   25/112         87533/121906
+CH0.DRV5   1        SSD    SAS       healthy  1.02T     0.00          16.00M    10607505162956457674:9755084173039550079   27/112         87750/121906
+CH0.DRV5   2        SSD    SAS       healthy  1.02T     0.00          8.00M     17180542211280094093:10788304930742092845  27/112         87669/121906
+CH0.DRV6   1        SSD    SAS       healthy  1.02T     0.00          0.00      7784945525409267835:12679367617211426569   34/112         87508/121906
+CH0.DRV6   2        SSD    SAS       healthy  1.02T     0.00          8.00M     18286533655153295415:12608073289142559268  29/112         87851/121906
+CH0.DRV7   1        SSD    SAS       healthy  1.02T     0.00          8.00M     7295418427082818555:10661884535681033089   26/112         87667/121906
+CH0.DRV7   2        SSD    SAS       healthy  1.02T     0.00          8.00M     5569993883093323391:9746190733069949112    34/112         87298/121906
+CH0.DRV8   1        SSD    SAS       healthy  1.02T     0.00          16.00M    1198219088314387589:12099988685935801141   27/112         87804/121906
+CH0.DRV8   2        SSD    SAS       healthy  1.02T     0.00          0.00      14429471539599262054:9896439568403346675   33/112         87629/121906
+CH0.DRV9   1        SSD    SAS       healthy  1.02T     0.00          8.00M     15932722363311801392:12086752879741954417  35/112         87546/121906
+CH0.DRV9   2        SSD    SAS       healthy  1.02T     0.00          8.00M     12429935582841291023:9450681679943580635   25/112         87768/121906
+CH0.DRV10  1        SSD    SAS       healthy  1.02T     0.00          16.00M    5171810664639843263:11469579641183796992   28/112         87370/121906
+CH0.DRV10  2        SSD    SAS       healthy  1.02T     0.00          0.00      11684753354239002048:10189161312450512542  34/112         86963/121906
+CH0.DRV11  1        SSD    SAS       healthy  1.02T     0.00          8.00M     17381656047604682157:13341453536743265161  29/112         87595/121906
+CH0.DRV11  2        SSD    SAS       healthy  1.02T     0.00          8.00M     15558145747563204387:12781481067571740859  30/112         87819/121906
+CH0.DRV12  1        SSD    SAS       healthy  1.02T     0.00          0.00      14048521526934651094:11194862240709531437  34/112         87601/121906
+CH0.DRV12  2        SSD    SAS       healthy  1.02T     0.00          8.00M     4705659660218682810:11797620468873607449   27/112         87744/121906
+CH0.DRV13  1        SSD    SAS       healthy  1.02T     0.00          8.00M     18310297109533247001:10565477030146539534  25/112         87148/121906
+CH0.DRV13  2        SSD    SAS       healthy  1.02T     0.00          16.00M    17068359933879403923:12779574209278599039  19/112         87288/121906
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      5797665763654715294:12034874128201944279   -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      6833619492250075803:11418301514983864663   -              -
+     root@WO1Pure01-ct1:/var/home/pureeng# puredb list driveswatch purearray list --space 
+Every 2.0s: purearray list --spaceWO1Pure01-ct1: Thu May 22 10:25:36 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  DataReduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  TotalWO1Pure01  11.17T    98%     55519109686784B   26.22T   48%4.5 to 18.8 to 14.85T   2.12T1.65T   0.00    0.008.61T94146851368     root@WO1Pure01-ct1:/var/home/pureeng# watch purearray list --space puredb list driveswatch purearray list --space puredb list drivesrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    empty    0.00      -
+CH0.BAY1   SSD    empty    0.00      -
+CH0.BAY2   SSD    empty    0.00      -
+CH0.BAY3   SSD    empty    0.00      -
+CH0.BAY4   SSD    healthy  2.05T     -
+CH0.BAY5   SSD    healthy  2.05T     -
+CH0.BAY6   SSD    healthy  2.05T     -
+CH0.BAY7   SSD    healthy  2.05T     -
+CH0.BAY8   SSD    healthy  2.05T     -
+CH0.BAY9   SSD    healthy  2.05T     -
+CH0.BAY10  SSD    healthy  2.05T     -
+CH0.BAY11  SSD    healthy  2.05T     -
+CH0.BAY12  SSD    healthy  2.05T     -
+CH0.BAY13  SSD    failed   0.00      -
+CH0.BAY14  SSD    empty    0.00      -
+CH0.BAY15  SSD    empty    0.00      -
+CH0.BAY16  SSD    empty    0.00      -
+CH0.BAY17  SSD    empty    0.00      -
+CH0.BAY18  SSD    empty    0.00      -
+CH0.BAY19  SSD    empty    0.00      -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  unused   0.00      -
+CH0.NVB3   NVRAM  unused   0.00      -
+     root@WO1Pure01-ct1:/var/home/pureeng# puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    empty    0.00      -
+CH0.BAY1   SSD    empty    0.00      -
+CH0.BAY2   SSD    empty    0.00      -
+CH0.BAY3   SSD    empty    0.00      -
+CH0.BAY4   SSD    healthy  2.05T     -
+CH0.BAY5   SSD    healthy  2.05T     -
+CH0.BAY6   SSD    healthy  2.05T     -
+CH0.BAY7   SSD    healthy  2.05T     -
+CH0.BAY8   SSD    healthy  2.05T     -
+CH0.BAY9   SSD    healthy  2.05T     -
+CH0.BAY10  SSD    healthy  2.05T     -
+CH0.BAY11  SSD    healthy  2.05T     -
+CH0.BAY12  SSD    healthy  2.05T     -
+CH0.BAY13  SSD    failed   0.00      -
+CH0.BAY14  SSD    empty    0.00      -
+CH0.BAY15  SSD    empty    0.00      -
+CH0.BAY16  SSD    empty    0.00      -
+CH0.BAY17  SSD    empty    0.00      -
+CH0.BAY18  SSD    empty    0.00      -
+CH0.BAY19  SSD    empty    0.00      -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  unused   0.00      -
+CH0.NVB3   NVRAM  unused   0.00      -
+     root@WO1Pure01-ct1:/var/home/pureeng# puredrive listwatch purearray list --space 
+Every 2.0s: purearray list --spaceWO1Pure01-ct1: Thu May 22 10:26:25 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  DataReduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  TotalWO1Pure01  11.17T    45%     55519109686784B   26.22T   48%4.5 to 18.8 to 14.85T   2.12T1.65T   0.00    0.008.61T730253879424795146     root@WO1Pure01-ct1:/var/home/pureeng# watch purearray list --space puredrive listwatch purearray list --space puredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+(unknown)  0        SSD              failed   1.02T     0.00          680.95G   18310297109533247001:10565477030146539534  23/112         87141/121906
+(unknown)  0        SSD              failed   1.02T     0.00          681.99G   17068359933879403923:12779574209278599039  21/112         87278/121906
+CH0.DRV4   1        SSD    SAS       healthy  1.02T     0.00          531.12G   3967088115660769033:13408702704865899655   27/112         87784/121906
+CH0.DRV4   2        SSD    SAS       healthy  1.02T     0.00          529.96G   7532297607958579232:13151439470950782189   27/112         87554/121906
+CH0.DRV5   1        SSD    SAS       healthy  1.02T     0.00          530.53G   10607505162956457674:9755084173039550079   31/112         87768/121906
+CH0.DRV5   2        SSD    SAS       healthy  1.02T     0.00          530.49G   17180542211280094093:10788304930742092845  28/112         87678/121906
+CH0.DRV6   1        SSD    SAS       healthy  1.02T     0.00          529.82G   7784945525409267835:12679367617211426569   36/112         87524/121906
+CH0.DRV6   2        SSD    SAS       healthy  1.02T     0.00          531.76G   18286533655153295415:12608073289142559268  32/112         87873/121906
+CH0.DRV7   1        SSD    SAS       healthy  1.02T     0.00          530.21G   7295418427082818555:10661884535681033089   28/112         87682/121906
+CH0.DRV7   2        SSD    SAS       healthy  1.02T     0.00          528.29G   5569993883093323391:9746190733069949112    36/112         87315/121906
+CH0.DRV8   1        SSD    SAS       healthy  1.02T     0.00          531.47G   1198219088314387589:12099988685935801141   31/112         87826/121906
+CH0.DRV8   2        SSD    SAS       healthy  1.02T     0.00          530.45G   14429471539599262054:9896439568403346675   34/112         87645/121906
+CH0.DRV9   1        SSD    SAS       healthy  1.02T     0.00          529.57G   15932722363311801392:12086752879741954417  35/112         87562/121906
+CH0.DRV9   2        SSD    SAS       healthy  1.02T     0.00          530.88G   12429935582841291023:9450681679943580635   28/112         87788/121906
+CH0.DRV10  1        SSD    SAS       healthy  1.02T     0.00          528.08G   5171810664639843263:11469579641183796992   32/112         87391/121906
+CH0.DRV10  2        SSD    SAS       healthy  1.02T     0.00          525.25G   11684753354239002048:10189161312450512542  36/112         86981/121906
+CH0.DRV11  1        SSD    SAS       healthy  1.02T     0.00          529.91G   17381656047604682157:13341453536743265161  33/112         87619/121906
+CH0.DRV11  2        SSD    SAS       healthy  1.02T     0.00          531.83G   15558145747563204387:12781481067571740859  31/112         87838/121906
+CH0.DRV12  1        SSD    SAS       healthy  1.02T     0.00          529.27G   14048521526934651094:11194862240709531437  36/112         87615/121906
+CH0.DRV12  2        SSD    SAS       healthy  1.02T     0.00          530.60G   4705659660218682810:11797620468873607449   29/112         87764/121906
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      5797665763654715294:12034874128201944279   -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      6833619492250075803:11418301514983864663   -              -
+     root@WO1Pure01-ct1:/var/home/pureeng# puredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+(unknown)  0        SSD              failed   1.02T     0.00          670.19G   17068359933879403923:12779574209278599039  21/112         87278/121906
+(unknown)  0        SSD              failed   1.02T     0.00          680.95G   18310297109533247001:10565477030146539534  23/112         87141/121906
+CH0.DRV4   1        SSD    SAS       healthy  1.02T     0.00          531.02G   3967088115660769033:13408702704865899655   29/112         87788/121906
+CH0.DRV4   2        SSD    SAS       healthy  1.02T     0.00          518.74G   7532297607958579232:13151439470950782189   27/112         87787/121906
+CH0.DRV5   1        SSD    SAS       healthy  1.02T     0.00          519.36G   10607505162956457674:9755084173039550079   31/112         87981/121906
+CH0.DRV5   2        SSD    SAS       healthy  1.02T     0.00          530.40G   17180542211280094093:10788304930742092845  31/112         87684/121906
+CH0.DRV6   1        SSD    SAS       healthy  1.02T     0.00          529.70G   7784945525409267835:12679367617211426569   38/112         87529/121906
+CH0.DRV6   2        SSD    SAS       healthy  1.02T     0.00          520.47G   18286533655153295415:12608073289142559268  32/112         88106/121906
+CH0.DRV7   1        SSD    SAS       healthy  1.02T     0.00          519.23G   7295418427082818555:10661884535681033089   28/112         87933/121906
+CH0.DRV7   2        SSD    SAS       healthy  1.02T     0.00          528.20G   5569993883093323391:9746190733069949112    37/112         87320/121906
+CH0.DRV8   1        SSD    SAS       healthy  1.02T     0.00          520.27G   1198219088314387589:12099988685935801141   31/112         88061/121906
+CH0.DRV8   2        SSD    SAS       healthy  1.02T     0.00          530.35G   14429471539599262054:9896439568403346675   37/112         87651/121906
+CH0.DRV9   1        SSD    SAS       healthy  1.02T     0.00          529.49G   15932722363311801392:12086752879741954417  39/112         87569/121906
+CH0.DRV9   2        SSD    SAS       healthy  1.02T     0.00          519.65G   12429935582841291023:9450681679943580635   28/112         88017/121906
+CH0.DRV10  1        SSD    SAS       healthy  1.02T     0.00          516.98G   5171810664639843263:11469579641183796992   32/112         87591/121906
+CH0.DRV10  2        SSD    SAS       healthy  1.02T     0.00          525.16G   11684753354239002048:10189161312450512542  39/112         86986/121906
+CH0.DRV11  1        SSD    SAS       healthy  1.02T     0.00          518.52G   17381656047604682157:13341453536743265161  33/112         87815/121906
+CH0.DRV11  2        SSD    SAS       healthy  1.02T     0.00          531.73G   15558145747563204387:12781481067571740859  33/112         87841/121906
+CH0.DRV12  1        SSD    SAS       healthy  1.02T     0.00          529.18G   14048521526934651094:11194862240709531437  38/112         87620/121906
+CH0.DRV12  2        SSD    SAS       healthy  1.02T     0.00          519.45G   4705659660218682810:11797620468873607449   30/112         88005/121906
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      5797665763654715294:12034874128201944279   -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      6833619492250075803:11418301514983864663   -              -
+     root@WO1Pure01-ct1:/var/home/pureeng# puredb list driveswatch purearray list --space 
+Every 2.0s: purearray list --spaceWO1Pure01-ct1: Thu May 22 10:28:43 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  DataReduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  TotalWO1Pure01  11.17T    39%     55519109686784B   26.22T   48%4.5 to 18.8 to 14.85T   2.12T1.65T   0.00    0.008.61T58     root@WO1Pure01-ct1:/var/home/pureeng# watch purearray list --space puredb list driveswatch purearray list --space puremessage list --open
+     root@WO1Pure01-ct1:/var/home/pureeng# puremessage list --open --hidden
+ID        Time                     Severity  Category  Code  Component  Name       Event    Expected  Actual  Details
+10137431  2025-05-22 09:48:18 EDT  hidden    array     60    drive      ch0.bay13  failure  healthy   failed  
+     root@WO1Pure01-ct1:/var/home/pureeng# puremessage list --open --hiddenwatch purearray list --space 
+Name       Capacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  Total
+WO1Pure01  11.17T    98%     55519109686784B   26.22T   48%                4.5 to 1        8.8 to 1         4.85T   2.12T      1.65T   0.00    0.00         8.61T
+     root@WO1Pure01-ct1:/var/home/pureeng# purearray list --space message list --open --hiddenwatch purearray list --space 
+Every 2.0s: purearray list --spaceWO1Pure01-ct1: Thu May 22 10:30:55 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  DataReduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  TotalWO1Pure01  11.17T    98%     55519109686784B   26.22T   48%4.5 to 18.8 to 14.85T   2.12T1.65T   0.00    0.008.61T81:00357102579224793146941368513582:00353917102572024793246941468513683:0135418103582025730247100%94146951468     root@WO1Pure01-ct1:/var/home/pureeng# watch purearray list --space message list --open --hiddenwatch purearray list --space puredb list driveswatch purearray list --space puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    empty    0.00      -
+CH0.BAY1   SSD    empty    0.00      -
+CH0.BAY2   SSD    empty    0.00      -
+CH0.BAY3   SSD    empty    0.00      -
+CH0.BAY4   SSD    healthy  2.05T     -
+CH0.BAY5   SSD    healthy  2.05T     -
+CH0.BAY6   SSD    healthy  2.05T     -
+CH0.BAY7   SSD    healthy  2.05T     -
+CH0.BAY8   SSD    healthy  2.05T     -
+CH0.BAY9   SSD    healthy  2.05T     -
+CH0.BAY10  SSD    healthy  2.05T     -
+CH0.BAY11  SSD    healthy  2.05T     -
+CH0.BAY12  SSD    healthy  2.05T     -
+CH0.BAY13  SSD    healthy  2.05T     -
+CH0.BAY14  SSD    empty    0.00      -
+CH0.BAY15  SSD    empty    0.00      -
+CH0.BAY16  SSD    empty    0.00      -
+CH0.BAY17  SSD    empty    0.00      -
+CH0.BAY18  SSD    empty    0.00      -
+CH0.BAY19  SSD    empty    0.00      -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  unused   0.00      -
+CH0.NVB3   NVRAM  unused   0.00      -
+     root@WO1Pure01-ct1:/var/home/pureeng# puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    empty    0.00      -
+CH0.BAY1   SSD    empty    0.00      -
+CH0.BAY2   SSD    empty    0.00      -
+CH0.BAY3   SSD    empty    0.00      -
+CH0.BAY4   SSD    healthy  2.05T     -
+CH0.BAY5   SSD    healthy  2.05T     -
+CH0.BAY6   SSD    healthy  2.05T     -
+CH0.BAY7   SSD    healthy  2.05T     -
+CH0.BAY8   SSD    healthy  2.05T     -
+CH0.BAY9   SSD    healthy  2.05T     -
+CH0.BAY10  SSD    healthy  2.05T     -
+CH0.BAY11  SSD    healthy  2.05T     -
+CH0.BAY12  SSD    healthy  2.05T     -
+CH0.BAY13  SSD    healthy  2.05T     -
+CH0.BAY14  SSD    empty    0.00      -
+CH0.BAY15  SSD    empty    0.00      -
+CH0.BAY16  SSD    empty    0.00      -
+CH0.BAY17  SSD    empty    0.00      -
+CH0.BAY18  SSD    empty    0.00      -
+CH0.BAY19  SSD    empty    0.00      -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  unused   0.00      -
+CH0.NVB3   NVRAM  unused   0.00      -
+     root@WO1Pure01-ct1:/var/home/pureeng# puredrive listwatch purearray list --space 
+Every 2.0s: purearray list --spaceWO1Pure01-ct1: Thu May 22 10:37:10 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  DataReduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  TotalWO1Pure01  11.17T    100%    55519109686784B   26.21T   48%4.5 to 18.8 to 14.85T   2.12T1.65T   0.00    0.008.61T35820257302438% 7942469514688:0136810358202573024741942469514689:0136928103582025793247100%9414695136840:01358103572025730247941469513681:0135     root@WO1Pure01-ct1:/var/home/pureeng# puretune --list
+Consistently set tunables:
+PS_RECOVERY_LAZY_REBUILD_DELAY_SEC : 60 ('CS0978229')
+Inconsistently or unnecessarily set tunables:
+PS_FILEGW_SMB_HIDE_DOT_SNAPSHOT:
+local pureadm             - 0  (Set during upgrade to 6.3.10 - CLOUD-75192)
+peer pureadm              - 0  (Set during upgrade to 6.3.10 - CLOUD-75192)
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+PURITY_START_ON_BOOT:
+local pureadm             - 1 
+peer pureadm              - 1  ('')
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+ATOM_5206:
+local pureadm             - 1 
+peer pureadm              - 1 
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+ATOM_5177:
+local pureadm             - DEF  (CLOUD-113977)
+peer pureadm              - DEF  (CLOUD-113977)
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+ATOM_SECURITY_BUNDLE_FA_2024_01_15:
+local pureadm             - PCTFJ230200AC,PCTFJ2306000D,6.4.4  (CLOUD-113977 set by atom)
+peer pureadm              - PCTFJ230200AC,PCTFJ2306000D,6.4.4  (CLOUD-113977 set by atom)
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+ATOM_PUREAPP_MONITOR_MEM_LEAK:
+local pureadm             - PCTFJ230200AC,PCTFJ2306000D,6.4.4  (PURE-295339 set by cdu)
+peer pureadm              - PCTFJ230200AC,PCTFJ2306000D,6.4.4  (PURE-295339 set by cdu)
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+ATOM_10052:
+local pureadm             - 1  (PURE-357200)
+peer pureadm              - 1  (PURE-357200)
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+ATOM_REFRESH_STALE_CONFIG:
+local pureadm             - PCTFJ230200AC,PCTFJ2306000D,6.5.6  (PURE-357200 set by atom-vats)
+peer pureadm              - PCTFJ230200AC,PCTFJ2306000D,6.5.6  (PURE-357200 set by atom-vats)
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+ATOM_10072:
+local pureadm             - GH  (CLOUD-152371)
+peer pureadm              - GH  (CLOUD-152371)
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+ATOM_SECURITY_PATCH_FA_2025_A:
+local pureadm             - PCTFJ230200AC,PCTFJ2306000D,6.5.6  (CLOUD-152371 set by atom-vats)
+peer pureadm              - PCTFJ230200AC,PCTFJ2306000D,6.5.6  (CLOUD-152371 set by atom-vats)
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+     root@WO1Pure01-ct1:/var/home/pureeng# puretune --listwatch purearray list --space 
+Every 2.0s: purearray list --spaceWO1Pure01-ct1: Thu May 22 10:41:31 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  DataReduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  TotalWO1Pure01  11.17T    100%    55519109686784B   26.21T   48%4.5 to 18.8 to 14.85T   2.12T1.65T   0.00    0.008.61T36841358503582:002527102479224693146841368503583:002     root@WO1Pure01-ct1:/var/home/pureeng# watch purearray list --space puretune --listwatch purearray list --space puredrive list
+Name       Type   Status        Capacity  Details
+CH0.BAY0   SSD    empty         0.00      -
+CH0.BAY1   SSD    empty         0.00      -
+CH0.BAY2   SSD    empty         0.00      -
+CH0.BAY3   SSD    empty         0.00      -
+CH0.BAY4   SSD    empty         0.00      -
+CH0.BAY5   SSD    empty         0.00      -
+CH0.BAY6   SSD    healthy       2.05T     -
+CH0.BAY7   SSD    healthy       2.05T     -
+CH0.BAY8   SSD    healthy       2.05T     -
+CH0.BAY9   SSD    healthy       2.05T     -
+CH0.BAY10  SSD    healthy       2.05T     -
+CH0.BAY11  SSD    healthy       2.05T     -
+CH0.BAY12  SSD    healthy       2.05T     -
+CH0.BAY13  SSD    healthy       2.05T     -
+CH0.BAY14  SSD    healthy       2.05T     -
+CH0.BAY15  SSD    unrecognized  0.00      -
+CH0.BAY16  SSD    empty         0.00      -
+CH0.BAY17  SSD    empty         0.00      -
+CH0.BAY18  SSD    empty         0.00      -
+CH0.BAY19  SSD    empty         0.00      -
+CH0.NVB0   NVRAM  healthy       7.52G     -
+CH0.NVB1   NVRAM  healthy       7.52G     -
+CH0.NVB2   NVRAM  unused        0.00      -
+CH0.NVB3   NVRAM  unused        0.00      -
+     root@WO1Pure01-ct1:/var/home/pureeng# puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    empty    0.00      -
+CH0.BAY1   SSD    empty    0.00      -
+CH0.BAY2   SSD    empty    0.00      -
+CH0.BAY3   SSD    empty    0.00      -
+CH0.BAY4   SSD    empty    0.00      -
+CH0.BAY5   SSD    empty    0.00      -
+CH0.BAY6   SSD    healthy  2.05T     -
+CH0.BAY7   SSD    healthy  2.05T     -
+CH0.BAY8   SSD    healthy  2.05T     -
+CH0.BAY9   SSD    healthy  2.05T     -
+CH0.BAY10  SSD    healthy  2.05T     -
+CH0.BAY11  SSD    healthy  2.05T     -
+CH0.BAY12  SSD    healthy  2.05T     -
+CH0.BAY13  SSD    healthy  2.05T     -
+CH0.BAY14  SSD    healthy  2.05T     -
+CH0.BAY15  SSD    failed   2.05T     -
+CH0.BAY16  SSD    empty    0.00      -
+CH0.BAY17  SSD    empty    0.00      -
+CH0.BAY18  SSD    empty    0.00      -
+CH0.BAY19  SSD    empty    0.00      -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  unused   0.00      -
+CH0.NVB3   NVRAM  unused   0.00      -
+     root@WO1Pure01-ct1:/var/home/pureeng# puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    empty    0.00      -
+CH0.BAY1   SSD    empty    0.00      -
+CH0.BAY2   SSD    empty    0.00      -
+CH0.BAY3   SSD    empty    0.00      -
+CH0.BAY4   SSD    empty    0.00      -
+CH0.BAY5   SSD    empty    0.00      -
+CH0.BAY6   SSD    healthy  2.05T     -
+CH0.BAY7   SSD    healthy  2.05T     -
+CH0.BAY8   SSD    healthy  2.05T     -
+CH0.BAY9   SSD    healthy  2.05T     -
+CH0.BAY10  SSD    healthy  2.05T     -
+CH0.BAY11  SSD    healthy  2.05T     -
+CH0.BAY12  SSD    healthy  2.05T     -
+CH0.BAY13  SSD    healthy  2.05T     -
+CH0.BAY14  SSD    healthy  2.05T     -
+CH0.BAY15  SSD    healthy  2.05T     -
+CH0.BAY16  SSD    empty    0.00      -
+CH0.BAY17  SSD    empty    0.00      -
+CH0.BAY18  SSD    empty    0.00      -
+CH0.BAY19  SSD    empty    0.00      -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  unused   0.00      -
+CH0.NVB3   NVRAM  unused   0.00      -
+     root@WO1Pure01-ct1:/var/home/pureeng# puredrive listwatch purearray list --space puretune --listwatch purearray list --space 
+Every 2.0s: purearray list --spaceWO1Pure01-ct1: Thu May 22 10:43:23 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  DataReduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  TotalWO1Pure01  11.17T    38%     55519109686784B   26.22T   48%4.5 to 18.8 to 14.85T   2.12T1.65T   0.00    0.008.61T5730257942479514694:013642811358203573025100%7942479524695:014681136820358302574% 7402479524696:014638811368203583025407402479524697:0146732811368203583025100%7402579524698:014624% 9113682035830257402479524699:014698113682035830259874024795246950:01468113682135830357402579524791:024     root@WO1Pure01-ct1:/var/home/pureeng# watch purearray list --space puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    empty    0.00      -
+CH0.BAY1   SSD    empty    0.00      -
+CH0.BAY2   SSD    empty    0.00      -
+CH0.BAY3   SSD    empty    0.00      -
+CH0.BAY4   SSD    empty    0.00      -
+CH0.BAY5   SSD    empty    0.00      -
+CH0.BAY6   SSD    empty    0.00      -
+CH0.BAY7   SSD    empty    0.00      -
+CH0.BAY8   SSD    healthy  2.05T     -
+CH0.BAY9   SSD    healthy  2.05T     -
+CH0.BAY10  SSD    healthy  2.05T     -
+CH0.BAY11  SSD    healthy  2.05T     -
+CH0.BAY12  SSD    healthy  2.05T     -
+CH0.BAY13  SSD    healthy  2.05T     -
+CH0.BAY14  SSD    healthy  2.05T     -
+CH0.BAY15  SSD    healthy  2.05T     -
+CH0.BAY16  SSD    healthy  2.05T     -
+CH0.BAY17  SSD    healthy  2.05T     -
+CH0.BAY18  SSD    empty    0.00      -
+CH0.BAY19  SSD    empty    0.00      -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  unused   0.00      -
+CH0.NVB3   NVRAM  unused   0.00      -
+     root@WO1Pure01-ct1:/var/home/pureeng# puredrive listwatch purearray list --space 
+Every 2.0s: purearray list --spaceWO1Pure01-ct1: Thu May 22 10:51:10 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  DataReduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  TotalWO1Pure01  11.17T    100%    55519109686784B   26.22T   48%4.5 to 18.8 to 14.85T   2.12T1.65T   0.00    0.008.62T2479224693146941368513582:003538% 1710257922479314624941468513683:00357810257202479324672941468513684:0035100%8102572024793246941468513685:0035810257202479324638% 941468513686:0035810257202579324752941469513687:0135100%2810357202579     root@WO1Pure01-ct1:/var/home/pureeng# puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   -      unused   0.00      -
+CH0.BAY1   -      unused   0.00      -
+CH0.BAY2   -      unused   0.00      -
+CH0.BAY3   -      unused   0.00      -
+CH0.BAY4   -      unused   0.00      -
+CH0.BAY5   -      unused   0.00      -
+CH0.BAY6   -      unused   0.00      -
+CH0.BAY7   -      unused   0.00      -
+CH0.BAY8   -      unused   0.00      -
+CH0.BAY9   -      unused   0.00      -
+CH0.BAY10  SSD    healthy  2.05T     -
+CH0.BAY11  SSD    healthy  2.05T     -
+CH0.BAY12  SSD    healthy  2.05T     -
+CH0.BAY13  SSD    healthy  2.05T     -
+CH0.BAY14  SSD    healthy  2.05T     -
+CH0.BAY15  SSD    healthy  2.05T     -
+CH0.BAY16  SSD    healthy  2.05T     -
+CH0.BAY17  SSD    healthy  2.05T     -
+CH0.BAY18  SSD    healthy  2.05T     -
+CH0.BAY19  SSD    healthy  2.05T     -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  unused   0.00      -
+CH0.NVB3   NVRAM  unused   0.00      -
+     root@WO1Pure01-ct1:/var/home/pureeng# purehw list
+Name       Status         Identify  Slot  Index  Speed       Temperature  Voltage  Details
+CH0        ok             off       -     0      -           -            -        -
+CH0.BAY0   not_installed  off       -     0      -           -            -        -
+CH0.BAY1   not_installed  off       -     1      -           -            -        -
+CH0.BAY2   not_installed  off       -     2      -           -            -        -
+CH0.BAY3   not_installed  off       -     3      -           -            -        -
+CH0.BAY4   not_installed  off       -     4      -           -            -        -
+CH0.BAY5   not_installed  off       -     5      -           -            -        -
+CH0.BAY6   not_installed  off       -     6      -           -            -        -
+CH0.BAY7   not_installed  off       -     7      -           -            -        -
+CH0.BAY8   not_installed  off       -     8      -           -            -        -
+CH0.BAY9   not_installed  off       -     9      -           -            -        -
+CH0.BAY10  ok             off       -     10     -           -            -        -
+CH0.BAY11  ok             off       -     11     -           -            -        -
+CH0.BAY12  ok             off       -     12     -           -            -        -
+CH0.BAY13  ok             off       -     13     -           -            -        -
+CH0.BAY14  ok             off       -     14     -           -            -        -
+CH0.BAY15  ok             off       -     15     -           -            -        -
+CH0.BAY16  ok             off       -     16     -           -            -        -
+CH0.BAY17  ok             off       -     17     -           -            -        -
+CH0.BAY18  ok             off       -     18     -           -            -        -
+CH0.BAY19  ok             off       -     19     -           -            -        -
+CH0.NVB0   ok             off       -     0      -           -            -        -
+CH0.NVB1   ok             off       -     1      -           -            -        -
+CH0.NVB2   not_installed  off       -     2      -           -            -        -
+CH0.NVB3   not_installed  off       -     3      -           -            -        -
+CH0.PWR0   ok             -         -     0      -           -            238 V    -
+CH0.PWR1   ok             -         -     1      -           -            238 V    -
+CH0.TMP0   ok             -         -     0      -           21 C         -        -
+CT0        ok             off       -     0      -           -            -        -
+CT0.ETH0   ok             -         -     0      1.00 Gb/s   -            -        -
+CT0.ETH1   ok             -         -     1      0.00 b/s    -            -        -
+CT0.ETH2   ok             -         -     2      0.00 b/s    -            -        -
+CT0.ETH3   ok             -         -     3      0.00 b/s    -            -        -
+CT0.ETH4   ok             -         -     4      10.00 Gb/s  -            -        -
+CT0.ETH5   ok             -         -     5      10.00 Gb/s  -            -        -
+CT0.ETH6   ok             -         -     6      0.00 b/s    -            -        -
+CT0.ETH7   ok             -         -     7      0.00 b/s    -            -        -
+CT0.ETH8   ok             -         -     8      0.00 b/s    -            -        -
+CT0.ETH9   ok             -         -     9      0.00 b/s    -            -        -
+CT0.ETH18  ok             -         2     18     0.00 b/s    -            -        -
+CT0.ETH19  ok             -         2     19     0.00 b/s    -            -        -
+CT0.FAN0   ok             -         -     0      -           -            -        -
+CT0.FAN1   ok             -         -     1      -           -            -        -
+CT0.FAN2   ok             -         -     2      -           -            -        -
+CT0.FAN3   ok             -         -     3      -           -            -        -
+CT0.FAN4   ok             -         -     4      -           -            -        -
+CT0.FAN5   ok             -         -     5      -           -            -        -
+CT0.FC0    ok             -         0     0      0.00 b/s    -            -        -
+CT0.FC1    ok             -         0     1      0.00 b/s    -            -        -
+CT0.FC2    ok             -         0     2      0.00 b/s    -            -        -
+CT0.FC3    ok             -         0     3      0.00 b/s    -            -        -
+CT0.TMP0   ok             -         -     0      -           36 C         -        -
+CT0.TMP1   ok             -         -     1      -           35 C         -        -
+CT0.TMP2   ok             -         -     2      -           28 C         -        -
+CT0.TMP3   ok             -         -     3      -           54 C         -        -
+CT0.TMP4   ok             -         -     4      -           51 C         -        -
+CT0.TMP5   ok             -         -     5      -           37 C         -        -
+CT0.TMP6   ok             -         -     6      -           43 C         -        -
+CT0.TMP7   ok             -         -     7      -           30 C         -        -
+CT0.TMP8   ok             -         -     8      -           30 C         -        -
+CT0.TMP9   ok             -         -     9      -           31 C         -        -
+CT0.TMP10  ok             -         -     10     -           29 C         -        -
+CT0.TMP11  ok             -         -     11     -           29 C         -        -
+CT0.TMP12  ok             -         -     12     -           28 C         -        -
+CT0.TMP13  ok             -         -     13     -           31 C         -        -
+CT0.TMP14  ok             -         -     14     -           31 C         -        -
+CT0.TMP15  ok             -         -     15     -           30 C         -        -
+CT0.TMP16  ok             -         -     16     -           30 C         -        -
+CT0.TMP17  ok             -         -     17     -           30 C         -        -
+CT0.TMP18  ok             -         -     18     -           30 C         -        -
+CT0.TMP19  ok             -         -     19     -           31 C         -        -
+CT0.TMP20  ok             -         -     20     -           30 C         -        -
+CT0.TMP21  ok             -         -     21     -           39 C         -        -
+CT0.TMP22  ok             -         -     22     -           34 C         -        -
+CT0.TMP23  ok             -         -     23     -           35 C         -        -
+CT0.TMP24  ok             -         -     24     -           38 C         -        -
+CT0.TMP25  ok             -         -     25     -           44 C         -        -
+CT0.TMP26  ok             -         -     26     -           29 C         -        -
+CT1        ok             off       -     1      -           -            -        -
+CT1.ETH0   ok             -         -     0      1.00 Gb/s   -            -        -
+CT1.ETH1   ok             -         -     1      0.00 b/s    -            -        -
+CT1.ETH2   ok             -         -     2      0.00 b/s    -            -        -
+CT1.ETH3   ok             -         -     3      0.00 b/s    -            -        -
+CT1.ETH4   ok             -         -     4      10.00 Gb/s  -            -        -
+CT1.ETH5   ok             -         -     5      10.00 Gb/s  -            -        -
+CT1.ETH6   ok             -         -     6      0.00 b/s    -            -        -
+CT1.ETH7   ok             -         -     7      0.00 b/s    -            -        -
+CT1.ETH8   ok             -         -     8      0.00 b/s    -            -        -
+CT1.ETH9   ok             -         -     9      0.00 b/s    -            -        -
+CT1.ETH18  ok             -         2     18     0.00 b/s    -            -        -
+CT1.ETH19  ok             -         2     19     0.00 b/s    -            -        -
+CT1.FAN0   ok             -         -     0      -           -            -        -
+CT1.FAN1   ok             -         -     1      -           -            -        -
+CT1.FAN2   ok             -         -     2      -           -            -        -
+CT1.FAN3   ok             -         -     3      -           -            -        -
+CT1.FAN4   ok             -         -     4      -           -            -        -
+CT1.FAN5   ok             -         -     5      -           -            -        -
+CT1.FC0    ok             -         0     0      0.00 b/s    -            -        -
+CT1.FC1    ok             -         0     1      0.00 b/s    -            -        -
+CT1.FC2    ok             -         0     2      0.00 b/s    -            -        -
+CT1.FC3    ok             -         0     3      0.00 b/s    -            -        -
+CT1.TMP0   ok             -         -     0      -           32 C         -        -
+CT1.TMP1   ok             -         -     1      -           30 C         -        -
+CT1.TMP2   ok             -         -     2      -           29 C         -        -
+CT1.TMP3   ok             -         -     3      -           38 C         -        -
+CT1.TMP4   ok             -         -     4      -           34 C         -        -
+CT1.TMP5   ok             -         -     5      -           35 C         -        -
+CT1.TMP6   ok             -         -     6      -           34 C         -        -
+CT1.TMP7   ok             -         -     7      -           27 C         -        -
+CT1.TMP8   ok             -         -     8      -           28 C         -        -
+CT1.TMP9   ok             -         -     9      -           28 C         -        -
+CT1.TMP10  ok             -         -     10     -           30 C         -        -
+CT1.TMP11  ok             -         -     11     -           29 C         -        -
+CT1.TMP12  ok             -         -     12     -           29 C         -        -
+CT1.TMP13  ok             -         -     13     -           28 C         -        -
+CT1.TMP14  ok             -         -     14     -           27 C         -        -
+CT1.TMP15  ok             -         -     15     -           27 C         -        -
+CT1.TMP16  ok             -         -     16     -           27 C         -        -
+CT1.TMP17  ok             -         -     17     -           28 C         -        -
+CT1.TMP18  ok             -         -     18     -           28 C         -        -
+CT1.TMP19  ok             -         -     19     -           27 C         -        -
+CT1.TMP20  ok             -         -     20     -           28 C         -        -
+CT1.TMP21  ok             -         -     21     -           33 C         -        -
+CT1.TMP22  ok             -         -     22     -           34 C         -        -
+CT1.TMP23  ok             -         -     23     -           31 C         -        -
+CT1.TMP24  ok             -         -     24     -           32 C         -        -
+CT1.TMP25  ok             -         -     25     -           37 C         -        -
+CT1.TMP26  ok             -         -     26     -           29 C         -        -
+     root@WO1Pure01-ct1:/var/home/pureeng# puremessage list --open
+     root@WO1Pure01-ct1:/var/home/pureeng# puremessage list --openhw listdrive
+Name       Type   Status      Capacity  Details
+CH0.BAY0   SSD    unadmitted  0.00      waiting for user
+CH0.BAY1   SSD    unadmitted  0.00      waiting for user
+CH0.BAY2   SSD    updating    0.00      -
+CH0.BAY3   SSD    recovering  0.00      WSSD tuneup in progress (http://go/w2)
+CH0.BAY4   -      unused      0.00      -
+CH0.BAY5   -      unused      0.00      -
+CH0.BAY6   -      unused      0.00      -
+CH0.BAY7   -      unused      0.00      -
+CH0.BAY8   -      unused      0.00      -
+CH0.BAY9   -      unused      0.00      -
+CH0.BAY10  SSD    healthy     2.05T     -
+CH0.BAY11  SSD    healthy     2.05T     -
+CH0.BAY12  SSD    healthy     2.05T     -
+CH0.BAY13  SSD    healthy     2.05T     -
+CH0.BAY14  SSD    healthy     2.05T     -
+CH0.BAY15  SSD    healthy     2.05T     -
+CH0.BAY16  SSD    healthy     2.05T     -
+CH0.BAY17  SSD    healthy     2.05T     -
+CH0.BAY18  SSD    healthy     2.05T     -
+CH0.BAY19  SSD    healthy     2.05T     -
+CH0.NVB0   NVRAM  healthy     7.52G     -
+CH0.NVB1   NVRAM  healthy     7.52G     -
+CH0.NVB2   NVRAM  unused      0.00      -
+CH0.NVB3   NVRAM  unused      0.00      -
+     root@WO1Pure01-ct1:/var/home/pureeng# puredrive list
+Name       Type   Status      Capacity  Details
+CH0.BAY0   SSD    unadmitted  0.00      waiting for user
+CH0.BAY1   SSD    unadmitted  0.00      waiting for user
+CH0.BAY2   SSD    unadmitted  0.00      waiting for user
+CH0.BAY3   SSD    updating    0.00      -
+CH0.BAY4   SSD    updating    0.00      -
+CH0.BAY5   SSD    unhealthy   0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)
+CH0.BAY6   -      unused      0.00      -
+CH0.BAY7   -      unused      0.00      -
+CH0.BAY8   -      unused      0.00      -
+CH0.BAY9   -      unused      0.00      -
+CH0.BAY10  SSD    healthy     2.05T     -
+CH0.BAY11  SSD    healthy     2.05T     -
+CH0.BAY12  SSD    healthy     2.05T     -
+CH0.BAY13  SSD    healthy     2.05T     -
+CH0.BAY14  SSD    healthy     2.05T     -
+CH0.BAY15  SSD    healthy     2.05T     -
+CH0.BAY16  SSD    healthy     2.05T     -
+CH0.BAY17  SSD    healthy     2.05T     -
+CH0.BAY18  SSD    healthy     2.05T     -
+CH0.BAY19  SSD    healthy     2.05T     -
+CH0.NVB0   NVRAM  healthy     7.52G     -
+CH0.NVB1   NVRAM  healthy     7.52G     -
+CH0.NVB2   NVRAM  unused      0.00      -
+CH0.NVB3   NVRAM  unused      0.00      -
+     root@WO1Pure01-ct1:/var/home/pureeng# puredrive list
+Name       Type   Status      Capacity  Details
+CH0.BAY0   SSD    unadmitted  0.00      waiting for user
+CH0.BAY1   SSD    unadmitted  0.00      waiting for user
+CH0.BAY2   SSD    unadmitted  0.00      waiting for user
+CH0.BAY3   SSD    unadmitted  0.00      waiting for user
+CH0.BAY4   SSD    unadmitted  0.00      waiting for user
+CH0.BAY5   SSD    unadmitted  0.00      waiting for user
+CH0.BAY6   SSD    unadmitted  0.00      waiting for user
+CH0.BAY7   SSD    unadmitted  0.00      waiting for user
+CH0.BAY8   SSD    unadmitted  0.00      waiting for user
+CH0.BAY9   SSD    unadmitted  0.00      waiting for user
+CH0.BAY10  SSD    healthy     2.05T     -
+CH0.BAY11  SSD    healthy     2.05T     -
+CH0.BAY12  SSD    healthy     2.05T     -
+CH0.BAY13  SSD    healthy     2.05T     -
+CH0.BAY14  SSD    healthy     2.05T     -
+CH0.BAY15  SSD    healthy     2.05T     -
+CH0.BAY16  SSD    healthy     2.05T     -
+CH0.BAY17  SSD    healthy     2.05T     -
+CH0.BAY18  SSD    healthy     2.05T     -
+CH0.BAY19  SSD    healthy     2.05T     -
+CH0.NVB0   NVRAM  healthy     7.52G     -
+CH0.NVB1   NVRAM  healthy     7.52G     -
+CH0.NVB2   NVRAM  unused      0.00      -
+CH0.NVB3   NVRAM  unused      0.00      -
+     root@WO1Pure01-ct1:/var/home/pureeng# puredrive admit
+Name      Type  Status   Capacity  Installed Capacity  Details
+CH0.BAY0  SSD   healthy  -         -                   -
+CH0.BAY1  SSD   healthy  -         -                   -
+CH0.BAY2  SSD   healthy  -         -                   -
+CH0.BAY3  SSD   healthy  -         -                   -
+CH0.BAY4  SSD   healthy  -         -                   -
+CH0.BAY5  SSD   healthy  -         -                   -
+CH0.BAY6  SSD   healthy  -         -                   -
+CH0.BAY7  SSD   healthy  -         -                   -
+CH0.BAY8  SSD   healthy  -         -                   -
+CH0.BAY9  SSD   healthy  -         -                   -
+     root@WO1Pure01-ct1:/var/home/pureeng# puredrive admitlistmessage list --opendrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    healthy  4.56T     -
+CH0.BAY1   SSD    healthy  4.56T     -
+CH0.BAY2   SSD    healthy  4.56T     -
+CH0.BAY3   SSD    healthy  4.56T     -
+CH0.BAY4   SSD    healthy  4.56T     -
+CH0.BAY5   SSD    healthy  4.56T     -
+CH0.BAY6   SSD    healthy  4.56T     -
+CH0.BAY7   SSD    healthy  4.56T     -
+CH0.BAY8   SSD    healthy  4.56T     -
+CH0.BAY9   SSD    healthy  4.56T     -
+CH0.BAY10  SSD    healthy  2.05T     -
+CH0.BAY11  SSD    healthy  2.05T     -
+CH0.BAY12  SSD    healthy  2.05T     -
+CH0.BAY13  SSD    healthy  2.05T     -
+CH0.BAY14  SSD    healthy  2.05T     -
+CH0.BAY15  SSD    healthy  2.05T     -
+CH0.BAY16  SSD    healthy  2.05T     -
+CH0.BAY17  SSD    healthy  2.05T     -
+CH0.BAY18  SSD    healthy  2.05T     -
+CH0.BAY19  SSD    healthy  2.05T     -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  unused   0.00      -
+CH0.NVB3   NVRAM  unused   0.00      -
+     root@WO1Pure01-ct1:/var/home/pureeng# puredrive listadmitlistmessage list --openhw listmessage list --opendrive listadmitlistmessage list --openhw listdrivewatch purearray list --space 
+Every 2.0s: purearray list --spaceWO1Pure01-ct1: Thu May 22 11:18:16 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  DataReduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  TotalWO1Pure01  35.12T    100%    55519109686784B   26.22T   48%4.5 to 18.8 to 14.85T   2.12T1.65T   0.00    0.008.62T82035830257402479524799:014691136821368303584025750257920:0247911469213683135     root@WO1Pure01-ct1:/var/home/pureeng# purewhhw list
+Name       Status         Identify  Slot  Index  Speed       Temperature  Voltage  Details
+CH0        ok             off       -     0      -           -            -        -
+CH0.BAY0   ok             off       -     0      -           -            -        -
+CH0.BAY1   ok             off       -     1      -           -            -        -
+CH0.BAY2   ok             off       -     2      -           -            -        -
+CH0.BAY3   ok             off       -     3      -           -            -        -
+CH0.BAY4   ok             off       -     4      -           -            -        -
+CH0.BAY5   ok             off       -     5      -           -            -        -
+CH0.BAY6   ok             off       -     6      -           -            -        -
+CH0.BAY7   ok             off       -     7      -           -            -        -
+CH0.BAY8   ok             off       -     8      -           -            -        -
+CH0.BAY9   ok             off       -     9      -           -            -        -
+CH0.BAY10  ok             off       -     10     -           -            -        -
+CH0.BAY11  ok             off       -     11     -           -            -        -
+CH0.BAY12  ok             off       -     12     -           -            -        -
+CH0.BAY13  ok             off       -     13     -           -            -        -
+CH0.BAY14  ok             off       -     14     -           -            -        -
+CH0.BAY15  ok             off       -     15     -           -            -        -
+CH0.BAY16  ok             off       -     16     -           -            -        -
+CH0.BAY17  ok             off       -     17     -           -            -        -
+CH0.BAY18  ok             off       -     18     -           -            -        -
+CH0.BAY19  ok             off       -     19     -           -            -        -
+CH0.NVB0   ok             off       -     0      -           -            -        -
+CH0.NVB1   ok             off       -     1      -           -            -        -
+CH0.NVB2   not_installed  off       -     2      -           -            -        -
+CH0.NVB3   not_installed  off       -     3      -           -            -        -
+CH0.PWR0   ok             -         -     0      -           -            238 V    -
+CH0.PWR1   ok             -         -     1      -           -            238 V    -
+CH0.TMP0   ok             -         -     0      -           20 C         -        -
+CT0        ok             off       -     0      -           -            -        -
+CT0.ETH0   ok             -         -     0      1.00 Gb/s   -            -        -
+CT0.ETH1   ok             -         -     1      0.00 b/s    -            -        -
+CT0.ETH2   ok             -         -     2      0.00 b/s    -            -        -
+CT0.ETH3   ok             -         -     3      0.00 b/s    -            -        -
+CT0.ETH4   ok             -         -     4      10.00 Gb/s  -            -        -
+CT0.ETH5   ok             -         -     5      10.00 Gb/s  -            -        -
+CT0.ETH6   ok             -         -     6      0.00 b/s    -            -        -
+CT0.ETH7   ok             -         -     7      0.00 b/s    -            -        -
+CT0.ETH8   ok             -         -     8      0.00 b/s    -            -        -
+CT0.ETH9   ok             -         -     9      0.00 b/s    -            -        -
+CT0.ETH18  ok             -         2     18     0.00 b/s    -            -        -
+CT0.ETH19  ok             -         2     19     0.00 b/s    -            -        -
+CT0.FAN0   ok             -         -     0      -           -            -        -
+CT0.FAN1   ok             -         -     1      -           -            -        -
+CT0.FAN2   ok             -         -     2      -           -            -        -
+CT0.FAN3   ok             -         -     3      -           -            -        -
+CT0.FAN4   ok             -         -     4      -           -            -        -
+CT0.FAN5   ok             -         -     5      -           -            -        -
+CT0.FC0    ok             -         0     0      0.00 b/s    -            -        -
+CT0.FC1    ok             -         0     1      0.00 b/s    -            -        -
+CT0.FC2    ok             -         0     2      0.00 b/s    -            -        -
+CT0.FC3    ok             -         0     3      0.00 b/s    -            -        -
+CT0.TMP0   ok             -         -     0      -           36 C         -        -
+CT0.TMP1   ok             -         -     1      -           37 C         -        -
+CT0.TMP2   ok             -         -     2      -           29 C         -        -
+CT0.TMP3   ok             -         -     3      -           55 C         -        -
+CT0.TMP4   ok             -         -     4      -           54 C         -        -
+CT0.TMP5   ok             -         -     5      -           37 C         -        -
+CT0.TMP6   ok             -         -     6      -           44 C         -        -
+CT0.TMP7   ok             -         -     7      -           30 C         -        -
+CT0.TMP8   ok             -         -     8      -           30 C         -        -
+CT0.TMP9   ok             -         -     9      -           31 C         -        -
+CT0.TMP10  ok             -         -     10     -           29 C         -        -
+CT0.TMP11  ok             -         -     11     -           29 C         -        -
+CT0.TMP12  ok             -         -     12     -           28 C         -        -
+CT0.TMP13  ok             -         -     13     -           32 C         -        -
+CT0.TMP14  ok             -         -     14     -           32 C         -        -
+CT0.TMP15  ok             -         -     15     -           31 C         -        -
+CT0.TMP16  ok             -         -     16     -           30 C         -        -
+CT0.TMP17  ok             -         -     17     -           31 C         -        -
+CT0.TMP18  ok             -         -     18     -           30 C         -        -
+CT0.TMP19  ok             -         -     19     -           32 C         -        -
+CT0.TMP20  ok             -         -     20     -           29 C         -        -
+CT0.TMP21  ok             -         -     21     -           39 C         -        -
+CT0.TMP22  ok             -         -     22     -           35 C         -        -
+CT0.TMP23  ok             -         -     23     -           36 C         -        -
+CT0.TMP24  ok             -         -     24     -           39 C         -        -
+CT0.TMP25  ok             -         -     25     -           44 C         -        -
+CT0.TMP26  ok             -         -     26     -           30 C         -        -
+CT1        ok             off       -     1      -           -            -        -
+CT1.ETH0   ok             -         -     0      1.00 Gb/s   -            -        -
+CT1.ETH1   ok             -         -     1      0.00 b/s    -            -        -
+CT1.ETH2   ok             -         -     2      0.00 b/s    -            -        -
+CT1.ETH3   ok             -         -     3      0.00 b/s    -            -        -
+CT1.ETH4   ok             -         -     4      10.00 Gb/s  -            -        -
+CT1.ETH5   ok             -         -     5      10.00 Gb/s  -            -        -
+CT1.ETH6   ok             -         -     6      0.00 b/s    -            -        -
+CT1.ETH7   ok             -         -     7      0.00 b/s    -            -        -
+CT1.ETH8   ok             -         -     8      0.00 b/s    -            -        -
+CT1.ETH9   ok             -         -     9      0.00 b/s    -            -        -
+CT1.ETH18  ok             -         2     18     0.00 b/s    -            -        -
+CT1.ETH19  ok             -         2     19     0.00 b/s    -            -        -
+CT1.FAN0   ok             -         -     0      -           -            -        -
+CT1.FAN1   ok             -         -     1      -           -            -        -
+CT1.FAN2   ok             -         -     2      -           -            -        -
+CT1.FAN3   ok             -         -     3      -           -            -        -
+CT1.FAN4   ok             -         -     4      -           -            -        -
+CT1.FAN5   ok             -         -     5      -           -            -        -
+CT1.FC0    ok             -         0     0      0.00 b/s    -            -        -
+CT1.FC1    ok             -         0     1      0.00 b/s    -            -        -
+CT1.FC2    ok             -         0     2      0.00 b/s    -            -        -
+CT1.FC3    ok             -         0     3      0.00 b/s    -            -        -
+CT1.TMP0   ok             -         -     0      -           35 C         -        -
+CT1.TMP1   ok             -         -     1      -           33 C         -        -
+CT1.TMP2   ok             -         -     2      -           31 C         -        -
+CT1.TMP3   ok             -         -     3      -           39 C         -        -
+CT1.TMP4   ok             -         -     4      -           37 C         -        -
+CT1.TMP5   ok             -         -     5      -           36 C         -        -
+CT1.TMP6   ok             -         -     6      -           37 C         -        -
+CT1.TMP7   ok             -         -     7      -           30 C         -        -
+CT1.TMP8   ok             -         -     8      -           30 C         -        -
+CT1.TMP9   ok             -         -     9      -  9     -           31 C         -        -
+CT1.TMP20  ok             -         -     20     -           29 C         -        -
+CT1.TMP21  ok             -         -     21     -           35 C         -        -
+CT1.TMP22  ok             -         -     22     -           35 C         -        -
+CT1.TMP23  ok             -         -     23     -           34 C         -        -
+CT1.TMP24  ok             -         -     24     -           35 C         -        -
+CT1.TMP25  ok             -         -     25     -           39 C         -        -
+CT1.TMP26  ok             -         -     26     -           32 C         -        -
+     root@WO1Pure01-ct1:/var/home/pureeng# puremessage list --open
+     root@WO1Pure01-ct1:/var/home/pureeng# puremessage list --open --hiddent
+     root@WO1Pure01-ct1:/var/home/pureeng# puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    healthy  4.56T     -
+CH0.BAY1   SSD    healthy  4.56T     -
+CH0.BAY2   SSD    healthy  4.56T     -
+CH0.BAY3   SSD    healthy  4.56T     -
+CH0.BAY4   SSD    healthy  4.56T     -
+CH0.BAY5   SSD    healthy  4.56T     -
+CH0.BAY6   SSD    healthy  4.56T     -
+CH0.BAY7   SSD    healthy  4.56T     -
+CH0.BAY8   SSD    healthy  4.56T     -
+CH0.BAY9   SSD    healthy  4.56T     -
+CH0.BAY10  SSD    healthy  2.05T     -
+CH0.BAY11  SSD    healthy  2.05T     -
+CH0.BAY12  SSD    healthy  2.05T     -
+CH0.BAY13  SSD    healthy  2.05T     -
+CH0.BAY14  SSD    healthy  2.05T     -
+CH0.BAY15  SSD    healthy  2.05T     -
+CH0.BAY16  SSD    healthy  2.05T     -
+CH0.BAY17  SSD    healthy  2.05T     -
+CH0.BAY18  SSD    healthy  2.05T     -
+CH0.BAY19  SSD    healthy  2.05T     -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  unused   0.00      -
+CH0.NVB3   NVRAM  unused   0.00      -
+     root@WO1Pure01-ct1:/var/home/pureeng# purearrryay remoteassist --status
+Name           Status          Opened                   Expires
+WO1Pure01-ct1  session-active  2025-05-22 10:05:57 EDT  2025-05-24 10:05:57 EDT
+     root@WO1Pure01-ct1:/var/home/pureeng# ssh peer
+Last login: Mon Feb 27 13:37:57 2023
+
+Thu May 22 11:21:36 2025
+Welcome root. This is Purity Version 6.5.10 on FlashArray WO1Pure01
+http://www.purestorage.com/
+     root@WO1Pure01-ct0:~# purearray remoteassist --status
+Name           Status        Opened  Expires
+WO1Pure01-ct0  disconnected  -       -
+     root@WO1Pure01-ct0:~# purearray remoteassist --statusconnected
+usage: purearray remoteassist [-h] [--connect] [--disconnect] [--status]
+purearray remoteassist: error: one of the arguments --connect --disconnect --status is required
+     root@WO1Pure01-ct0:~# purearray remoteassist --connected
+Name           Status      Opened                   Expires
+WO1Pure01-ct0  connecting  2025-05-22 11:21:52 EDT  2025-05-24 11:21:52 EDT
+     root@WO1Pure01-ct0:~# purearray remoteassist --connectpurearray remoteassist --connectedstatus
+Name           Status     Opened                   Expires
+WO1Pure01-ct0  connected  2025-05-22 11:21:52 EDT  2025-05-24 11:21:52 EDT
+     root@WO1Pure01-ct0:~# purealert untag --maintenance
+Name
+maintenance
+     root@WO1Pure01-ct0:~# exit
+logout
+     root@WO1Pure01-ct1:/var/home/pureeng# purearray phonehome --send-today && ssh peer purearray phonehome --send-today
+Status   Action
+running  send_today
+phonehome is already running
+Status   Action
+running  send_today
+     root@WO1Pure01-ct1:/var/home/pureeng# exit
+exit
+pureeng@WO1Pure01-ct1:~$ exit
+logout
+
+WO1Pure01-ct1 login: 

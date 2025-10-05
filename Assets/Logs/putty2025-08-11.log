@@ -1,0 +1,2844 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.08.11 09:39:49 =~=~=~=~=~=~=~=~=~=~=~=
+
+PCTFJ2440004E login: puresetup
+Password: 
+
+Mon Aug 11 13:33:02 2025
+Welcome puresetup. This is Purity Version 6.5.5 on FlashArray PCTFJ2440004E
+http://www.purestorage.com/
+puresetup@PCTFJ2440004E:~$ 
+FlashBlade on Ubuntu
+
+irsled login: ir
+Password: 
+
+Welcome to Purity//FB! This is component irsled
+If you're seeing this message, it means that the system is not ready for use, and core system software is not running.
+If you are not expecting this message, please try logging out and logging back in. If the message persists, please
+contact Pure support. 
+http://www.purestorage.com/
+ir@irsled:~$ sudo su
+root@irsled:/home/ir# mount /dev/sdb1 /mnt
+root@irsled:/home/ir# ls /mnt
+ 4.5.11   6.6.11   6.9   DFS   FB  'System Volume Information'
+root@irsled:/home/ir# cp /ntmkdir sd/ssd/releases
+root@irsled:/home/ir# cp /mnt/34.5.11/* ./ssd/releases/
+root@irsled:/home/ir# ir_vewsion | grep build
+bash: ir_vewsion: command not found
+root@irsled:/home/ir# ir_vewsion | grep buildr
+Dec 31 23.59.60.000000 FEEDBABEFEED N ir_version Starting ir_version (RELEASE build "a3331e0b", elasticity "4.1.0.xfmcto1", user_email )
+root@irsled:/home/ir# cd /ssd/releases
+root@irsled:/ssd/releases# cdchown cdchown ir:ir *
+root@irsled:/ssd/releases# chmod +uxu+x elasticity_4.5.11_23bffa26895aabce264ab51c0553720bb178f3677.run 
+root@irsled:/ssd/releases# cd ..
+root@irsled:/ssd# dhochown ir:ir /ssd/releases
+root@irsled:/ssd# cd releases/
+root@irsled:/ssd/releases# ./elasticity_4.5.11_23bffa26895aabce264ab51c053720bb1778f3677.run upgrade --not-bootstrapped --disruptive --skipupgrade-validity-check  --skip-fbhealth-check --force-standby
+Verifying checksum... done
+Extracting Purity//FB 4.5.11... 
+FlashBlade on Ubuntu
+
+irsled login: ior  r
+Password: 
+
+Welcome to Purity//FB! This is component irsled
+If you're seeing this message, it means that the system is not ready for use, and core system software is not running.
+If you are not expecting this message, please try logging out and logging back in. If the message persists, please
+contact Pure support. 
+http://www.purestorage.com/
+ir@irsled:~$ sudo su
+root@irsled:/home/ir# mkdir /ssd/releases
+root@irsled:/home/ir# chown ir:ir /ssd/releases
+root@irsled:/home/ir# mount /de/vsdv/sdb1 /mnt
+root@irsled:/home/ir# cd /cp /mnt/4.5.11/* /ssd/releases
+root@irsled:/home/ir# cd /ssd/releases/
+root@irsled:/ssd/releases# chown ir:ir e*I
+root@irsled:/ssd/releases# chmod u+x elasticity_4.5.11_23bffa26895aabce264ab51c0553720bb178f3677.run 
+root@irsled:/ssd/releases# ./elasticity_4.5.11_23bffa26895aabce264ab51c053720bb1778f3677.run upgrade --not-bootstrapped --disruptive --skipupgrade-validity-check  --skip-fbhealth-check --force-standby
+Verifying checksum... done
+Extracting Purity//FB 4.5.11... done
+running /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fixups/python_shebang.fixup
+-------------------------------------------------------------------------------
+For TMUX help, type ^B ?. To detach, ^B d. To re-attach, "sudo tmux attach".
+Logging session to fbupgrade.log
+-------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[elasticit0:bash*                                       "irsled" 14:02 11-Aug-25-------------------------------------------------------------------------------
+For TMUX help, type ^B ?. To detach, ^B d. To re-attach, "sudo tmux attach".
+Logging session to fbupgrade.log
+-------------------------------------------------------------------------------
+running /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fixups/python_shebang.fixup
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[elasticit0:bash*                                       "irsled" 14:02 11-Aug-25usage: fbupgrade_cli.py [-h]
+                        {bootstrap-cluster,clean-component,clean-component-helper,wipe-array-helper,prepare-device,prepare-device-helper,erase-all-flash-helper,deploy,deploy-helper,distribute-software,elasticity-version,elasticity-version-helper,kexec,power-ctl,reboot,reboot-helper,restart-sw,restart-sw-helper,replace-bios,replace-bmc,replace-cpld,replace-fpga,replace-fpga-switch,replace-iros,replace-fastrak,replace-bios-helper,replace-bmc-helper,replace-cpld-helper,replace-fpga-helper,replace-fpga-switch-helper,replace-iros-helper,replace-fastrak-helper,reset-bmc-ipmi,reset-bmc-ipmi-helper,resgroup-cutover,first-gen-to-s-upgrade,run-upgrade-tasks-helper,rolling-reboot,upgrade-helper,replace-ssdfw,replace-ssdfw-helper,replace-mlxfw,replace-mlxfw-helper,replace-wssdfw,replace-wssdfw-helper,blade-drive-add-helper,pre-first-gen-to-s-networking-setup,install-admin-tools}
+                        ...
+fbupgrade_cli.py: error: unrecognized arguments: --skipupgrade-validity-check
+*** Program exited, error code 2 ***
+Press RETURN to exit TMUX: [elasticit0:bash*                                       "irsled" 14:03 11-Aug-25[elasticit0:bash*                                       "irsled" 14:04 11-Aug-25
+[exited]
+root@irsled:/ssd/releases# clear
+root@irsled:/ssd/releases# clear./elasticity_4.5.11_23bffa26895aabce264ab51c053720bb1778f3677.run upgrade --not-bootstrapped --disruptive --skipupgrade-validity-check  --skip-fbhealth-check --force-standby
+
+Extract directory already exists.Verifying checksum... 
+^C
+root@irsled:/ssd/releases# 
+root@irsled:/ssd/releases# 
+root@irsled:/ssd/releases# stty cols 240
+root@irsled:/ssd/releases# 
+root@irsled:/ssd/releases# 
+root@irsled:/ssd/releases# ./fbhealth upgrade --not-bootstrapped --disruptive --skipupgrade-validity-check --skip-fbhealth-check --force-standby
+bash: ./fbhealth: No such file or directory
+root@irsled:/ssd/releases# ^C
+root@irsled:/ssd/releases# 
+root@irsled:/ssd/releases# [4560360.738060,000] ntfs: (device sdb1): ntfs_end_buffer_async_read(): Buffer I/O error, logical block 0x600008.
+[4560360.749247,000] ntfs: (device sdb1): ntfs_end_buffer_async_read(): Buffer I/O error, logical block 0x600009.
+[4560360.760424,000] ntfs: (device sdb1): ntfs_end_buffer_async_read(): Buffer I/O error, logical block 0x60000a.
+[4560360.771607,000] ntfs: (device sdb1): ntfs_end_buffer_async_read(): Buffer I/O error, logical block 0x60000b.
+[4560360.782792,000] ntfs: (device sdb1): ntfs_end_buffer_async_read(): Buffer I/O error, logical block 0x60000c.
+[4560360.793975,000] ntfs: (device sdb1): ntfs_end_buffer_async_read(): Buffer I/O error, logical block 0x60000d.
+[4560360.805158,000] ntfs: (device sdb1): ntfs_end_buffer_async_read(): Buffer I/O error, logical block 0x60000e.
+[4560360.816339,000] ntfs: (device sdb1): ntfs_end_buffer_async_read(): Buffer I/O error, logical block 0x60000f.
+[4560360.827521,000] ntfs: (device sdb1): map_mft_record(): Failed with error code 5.
+[4560360.835981,000] ntfs: (device sdb1): ntfs_read_block(): Failed to read from inode 0x6, attribute type 0x80, vcn 0x0, offset 0x0 because its location on disk could not be determined even after retrying (error code -5).
+
+root@irsled:/ssd/releases# 
+root@irsled:/ssd/releases# 
+root@irsled:/ssd/releases# ./elasticity_4.5.11_23bffa26895aabce264ab51c053720bb178f3677.run upgrade --not-bootstrapped --disruptive --skipupgrade-validity-check --skip-fbhealth-check --force-standby
+Extract directory already exists.Verifying checksum... done
+Extracting Purity//FB 4.5.11... done
+running /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fixups/python_shebang.fixup
+-------------------------------------------------------------------------------
+For TMUX help, type ^B ?. To detach, ^B d. To re-attach, "sudo tmux attach".
+Logging session to fbupgrade.log
+-------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[elasticit0:bash*                                                                                                                                                                                                       "irsled" 14:06 11-Aug-25
+-------------------------------------------------------------------------------
+For TMUX help, type ^B ?. To detach, ^B d. To re-attach, "sudo tmux attach".
+Logging session to fbupgrade.log
+-------------------------------------------------------------------------------
+running /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fixups/python_shebang.fixup
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[elasticit0:bash*                                                                                                                                                                                                       "irsled" 14:06 11-Aug-25usage: fbupgrade_cli.py [-h]
+                        {bootstrap-cluster,clean-component,clean-component-helper,wipe-array-helper,prepare-device,prepare-device-helper,erase-all-flash-helper,deploy,deploy-helper,distribute-software,elasticity-version,elasticity-version-helper,kexec,power-ctl,reboot,reboot-helper,restart-sw,restart-sw-helper,replace-bios,replace-bmc,replace-cpld,replace-fpga,replace-fpga-switch,replace-iros,replace-fastrak,replace-bios-helper,replace-bmc-helper,replace-cpld-helper,replace-fpga-helper,replace-fpga-switch-helper,replace-iros-helper,replace-fastrak-helper,reset-bmc-ipmi,reset-bmc-ipmi-helper,resgroup-cutover,first-gen-to-s-upgrade,run-upgrade-tasks-helper,rolling-reboot,upgrade-helper,replace-ssdfw,replace-ssdfw-helper,replace-mlxfw,replace-mlxfw-helper,replace-wssdfw,replace-wssdfw-helper,blade-drive-add-helper,pre-first-gen-to-s-networking-setup,install-admin-tools}
+                        ...
+fbupgrade_cli.py: error: unrecognized arguments: --skipupgrade-validity-check
+*** Program exited, error code 2 ***
+Press RETURN to exit TMUX: ^C[exited]
+root@irsled:/ssd/releases# ./elasticity_4.5.11_23bffa26895aabce264ab51c053720bb178f3677.run upgrade --not-bootstrapped --disruptive --skipupgrade-validity-check --skip-fbhealth-check --force-standby-
+Extract directory already exists.Verifying checksum... done
+Extracting Purity//FB 4.5.11... [4560473.889196,000] ntfs: (device sdb1): ntfs_end_buffer_async_read(): Buffer I/O error, logical block 0x600008.
+[4560473.900412,000] ntfs: (device sdb1): ntfs_end_buffer_async_read(): Buffer I/O error, logical block 0x600009.
+[4560473.911614,000] ntfs: (device sdb1): ntfs_end_buffer_async_read(): Buffer I/O error, logical block 0x60000a.
+[4560473.922811,000] ntfs: (device sdb1): ntfs_end_buffer_async_read(): Buffer I/O error, logical block 0x60000b.
+[4560473.934008,000] ntfs: (device sdb1): ntfs_end_buffer_async_read(): Buffer I/O error, logical block 0x60000c.
+[4560473.945205,000] ntfs: (device sdb1): ntfs_end_buffer_async_read(): Buffer I/O error, logical block 0x60000d.
+[4560473.956413,000] ntfs: (device sdb1): ntfs_end_buffer_async_read(): Buffer I/O error, logical block 0x60000e.
+[4560473.967620,000] ntfs: (device sdb1): ntfs_end_buffer_async_read(): Buffer I/O error, logical block 0x60000f.
+[4560473.978816,000] ntfs: (device sdb1): map_mft_record(): Failed with error code 5.
+[4560473.987291,000] ntfs: (device sdb1): ntfs_lookup_inode_by_name(): map_mft_record() failed with error code 5.
+
+done
+running /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fixups/python_shebang.fixup
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[elasticit0:bash*                                                                                                                                                                                                       "irsled" 14:07 11-Aug-25-------------------------------------------------------------------------------
+For TMUX help, type ^B ?. To detach, ^B d. To re-attach, "sudo tmux attach".
+Logging session to fbupgrade.log
+-------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[elasticit0:bash*                                                                                                                                                                                                       "irsled" 14:07 11-Aug-25running /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fixups/python_shebang.fixup
+FlashBlade Upgrade Stage 1: Gather System Information
+Creating the NDU lock file /ssd/ndu/ndu_lock.txt on current controller
+Successfully created the NDU lock file /ssd/ndu/ndu_lock.txt on current controller
+[4560525.293253,003] ntfs: (device sdb1): ntfs_end_buffer_async_read(): Buffer I/O error, logical block 0x600008.
+[4560525.304457,003] ntfs: (device sdb1): ntfs_end_buffer_async_read(): Buffer I/O error, logical block 0x600009.
+[4560525.315639,003] ntfs: (device sdb1): ntfs_end_buffer_async_read(): Buffer I/O error, logical block 0x60000a.
+[4560525.326811,003] ntfs: (device sdb1): ntfs_end_buffer_async_read(): Buffer I/O error, logical block 0x60000b.
+[4560525.337998,003] ntfs: (device sdb1): ntfs_end_buffer_async_read(): Buffer I/O error, logical block 0x60000c.
+[4560525.349180,003] ntfs: (device sdb1): ntfs_end_buffer_async_read(): Buffer I/O error, logical block 0x60000d.
+[4560525.360365,003] ntfs: (device sdb1): ntfs_end_buffer_async_read(): Buffer I/O error, logical block 0x60000e.
+[4560525.371547,003] ntfs: (device sdb1): ntfs_end_buffer_async_read(): Buffer I/O error, logical block 0x60000f.
+[4560525.382735,003] ntfs: (device sdb1): map_mft_record(): Failed with error code 5.
+[4560525.391196,003] ntfs: (device sdb1): ntfs_lookup_inode_by_name(): map_mft_record() failed with error code 5.
+NDU lock does not exist on am1
+NDU lock is acquired on /ssd/ndu/ndu_lock.txt by process 26737.
+current extract directory: elasticity-contents.4.5.11-23bffa26
+Stray extract directories: []
+No stray elasticity extract directories found to be deleted.
+Checking if the user invoked the upgrade correctly
+Discovering XFMs: 
+1
+Discovering supervisors: 
+
+Discovering nodes: 
+
+Discovering XFMs: 
+1
+
+Discovering supervisors: 
+
+Discovering nodes: 
+
+Discovering XFMs: 
+1
+Discovering supervisors: 
+
+Discovering nodes: 
+
+All targeted components are discoverable through HAL.
+Starting run_all of ParallelTaskRunner
+Finished run_all - parallel tasks completed in 3.9344653487205505e-05 seconds.
+[elasticit0:bash*                                                                                                                                                                                                       "irsled" 14:08 11-Aug-25
+
+finding topology_v3 failed: RPC timeout
+will try fallback of calling topology
+
+finding topology_v3/topology failed: RPC timeout
+etcd may be unavailable or cluster may not be bootstrapped
+upgrade without peer with current controller am1
+Discovering XFMs: 
+1
+Discovering supervisors: 
+
+Discovering nodes: 
+
+Checking that the total disk usage on root (/) of ['am1'] is not over 90 percent
+am1's disk usage on root (/): 9%
+Installing tools on all components
+Checking if target hosts can be pinged
+Pinging target hosts
+Received ping response from am1
+Cleaning temporary admin tools from []
+Successfully removed /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin from 
+Installing temporary admin tools on []
+Successfully setup  for tool install
+Succesfully copied /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin to 
+Creating symlinks /opt/ir/binD -> /opt/ir/bin and /opt/ir/libD -> /opt/ir/lib
+Successfully created Debug bin and lib symlinks on am1
+Checking if we need to setup rssh
+Release package compatibility check for current cluster
+Checking if target hosts can be pinged
+Pinging target hosts
+Received ping response from am1
+Release package is compatible with current cluster. Please be advised that this guard does NOT protect against invalid cluster configuration even though release package may be compatible for components present on the cluster.
+Disruptive upgrade on a non-bootstrapped cluster, skipping NFS persistent forms check.
+Performing Version Health Check to validate upgrade
+Make sure pre-upgrade task CheckShamir16BitShardsPresent passes for every upgrade.
+Not bootstrapped, CheckShamir16BitShardsPresent will pass
+Pre-upgrade CheckShamir16BitShardsPresent task finished.
+Skip fbhealth log check due to --skip-fbhealth-check flag.
+
+
+
+
+
+
+
+
+
+Release requested for install:
+{
+    "_comment": "Overall release information for elasticity",
+    "date": "2025-07-24",
+    "gitref": "23bffa26895aabce264ab51c053720bb178f3677",
+    "version": "4.5.11"
+}
+Target Version: 4.5.11
+IrOS: "23bffa26895aabce264ab51c053720bb178f3677" "99.99.99"
+
+
+Version health check results:
+
+Level 0: OS Versions Evaluation
+
+
+
+
+
+OS Config Resolution: {
+  "failure_msg": null,
+  "os_config_cmpnt_map": null,
+  "os_config_file_exists": false,
+  "resolved": true
+}
+
+Level 1: Version consistency
+deploy            : version a3331e0b unknown            on hosts: am1
+elasticity_version: version 4.1.0.xfmcto1               on hosts: am1
+iros              : version a3331e0b 5.119.0            on hosts: am1
+
+Level 2: Upgrade state
+
+
+
+
+
+{
+  "last_successful_file_exists": false,
+  "last_successful_file_synced": false,
+  "no_last_attempted_manifest": true,
+  "no_upgrades_in_progress": true
+}
+
+Level 3: Expected versions
+{}
+
+Summary:
+Level 0: OS Versions Evaluation       Pass
+Level 1: Version consistency          Pass
+Level 2: Upgrade state                Warning
+Level 3: Expected versions            Pass
+
+Performing Upgrade Validity Check.
+Performing NDU sanity checks
+Checking for running rssh NDU commands
+Checking chassis0 vlan
+Checking for collisions with protected vlans
+[elasticit0:bash*                                                                                                                                                                                                       "irsled" 14:09 11-Aug-25
+Checking if fbupgrade was invoked just to restart software and exit
+Checking array health before upgrade
+  0.00 trying sup-ping
+  0.02 trying sup-login
+  0.13 trying host-ping
+  0.15 trying host-login
+  0.26 trying host-ssd
+  0.41 trying host-bios
+  0.42 trying host-fastrak
+  0.43 trying wssd-nvme
+  0.43 trying su-regs
+  0.44 trying su-upgrade
+  0.44 Succeeded
+Checking cluster data sanity
+
+finding topology_v3 failed: RPC timeout
+will try fallback of calling topology
+
+finding topology_v3/topology failed: RPC timeout
+etcd may be unavailable or cluster may not be bootstrapped
+check_bootstrapped failed: no blades in cluster
+Upgrading from 4.1.0 to 4.5.11
+Trying to auto-convert from Smb-Adapter to Native if applicable
+Skipping auto-convert from Smb-Adapter to Native
+Skipping Samba mode check
+Generating customer confirmation prompt
+----------------------
+SYSTEM INFO: 
+----------------------
+Hostname (sys):  irsled
+Hostname (conf): unknown
+Appliance ID:    unknown
+----------------------
+UPGRADE INFO: 
+----------------------
+Start version: 4.1.0.xfmcto1
+Start git revision: a3331e0b
+End version: 4.5.11
+End git revision: 23bffa26895aabce264ab51c053720bb178f3677
+Upgrade Log functionality disabled, no state to initialize from previous upgrade
+First upgrade step is going to be persist_upgrade_manifest
+remove stale work dirs
+caching os config resolution not required - /ssd/os/os_config_v2 does not exist.
+iros_install_map: {'ubuntu2404': [XFMSpec(1)]}
+Skipping preupgrade ECMP check in disruptive mode
+Skipping preupgrade LACP check in disruptive mode
+Skipping preupgrade BGP check in disruptive mode
+Start upgrade step: persist_upgrade_manifest
+FlashBlade Upgrade Stage 2: Upgrade software and restart
+Software will be upgraded and restarted. Upgrade tasks will execute as necessary.
+Persisting last_attempted_upgrade_manifest
+'/ssd/ndu/last_attempted_upgrade_manifest.txt' => './manifest.txt'
+End upgrade step: persist_upgrade_manifest
+Start upgrade step: run_pre_upgrade_tasks
+tunables_service_ndu: No blades in the cluster. Skipping tunables service NDU
+End upgrade step: run_pre_upgrade_tasks
+Start upgrade step: run_pre_master_upgrade_tasks
+End upgrade step: run_pre_master_upgrade_tasks
+Start upgrade step: upgrade_iros
+iros_install_map: {'ubuntu2404': [XFMSpec(1)]}
+Upgrade IrOS: Stage IrOS image(s) ['./23bffa26895aabce264ab51c053720bb178f3677_ubuntu2404_iros.img.gz']
+Calling replace_iros --stage with img: ./23bffa26895aabce264ab51c053720bb178f3677_ubuntu2404_iros.img.gz
+[elasticit0:bash*                                                                                                                                                                                                       "irsled" 14:10 11-Aug-25
+
+
+local_info: {'image_git_rev': '23bffa26', 'image_version': '99.99.99', 'os': 'ubuntu2404'}, remote_info: {XFMSpec(1): {'installed_git_rev': 'a3331e0b', 'installed_os': 'ubuntu1804', 'installed_version': '5.119.0', 'running_git_rev': 'a3331e0b', 'running_os': 'ubuntu1804', 'running_version': '5.119.0'}}, replace_cmd_base: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fbupgrade replace-iros, image_filename: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/23bffa26895aabce264ab51c053720bb178f3677_ubuntu2404_iros.img.gz ips: [XFMSpec(1)], flags: -v
+Stage iros will happen for: am1
+Hosts not eligible for Staging iros: []
+Copying /ssd/ndu/elasticity-contents.4.5.11-23bffa26/23bffa26895aabce264ab51c053720bb178f3677_ubuntu2404_iros.img.gz to ['am1']:/ssd/tmp/iros_dist.26737/23bffa26895aabce264ab51c053720bb178f3677_ubuntu2404_iros.img.gz
+retrieved host ips to argparse: -x 1  from ips: ['am1']
+[elasticit0:bash*                                                                                                                                                                                                       "irsled" 14:11 11-Aug-25
+Running fbupgrade replace-iros --stage on [XFMSpec(1)]
+running iros parallel upgrade[4560773.501943,006] ntfs: (device sdb1): ntfs_end_buffer_async_read(): Buffer I/O error, logical block 0x600008.
+[4560773.513153,006] ntfs: (device sdb1): ntfs_end_buffer_async_read(): Buffer I/O error, logical block 0x600009.
+[4560773.524342,006] ntfs: (device sdb1): ntfs_end_buffer_async_read(): Buffer I/O error, logical block 0x60000a.
+[4560773.535530,006] ntfs: (device sdb1): ntfs_end_buffer_async_read(): Buffer I/O error, logical block 0x60000b.
+[4560773.546724,006] ntfs: (device sdb1): ntfs_end_buffer_async_read(): Buffer I/O error, logical block 0x60000c.
+[4560773.557912,006] ntfs: (device sdb1): ntfs_end_buffer_async_read(): Buffer I/O error, logical block 0x60000d.
+[4560773.569107,006] ntfs: (device sdb1): ntfs_end_buffer_async_read(): Buffer I/O error, logical block 0x60000e.
+[4560773.580299,006] ntfs: (device sdb1): ntfs_end_buffer_async_read(): Buffer I/O error, logical block 0x60000f.
+[4560773.591491,006] ntfs: (device sdb1): map_mft_record(): Failed with error code 5.
+[4560773.599957,006] ntfs: (device sdb1): ntfs_lookup_inode_by_name(): map_mft_record() failed with error code 5.
+
+[elasticit0:bash*                                                                                                                                                                                                       "irsled" 14:12 11-Aug-25
+[elasticit0:bash*                                                                                                                                                                                                       "irsled" 14:13 11-Aug-25
+[am1] Replace IrOS(stage) with image /ssd/tmp/iros_dist.26737/23bffa26895aabce264ab51c053720bb178f3677_ubuntu2404_iros.img.gz
+[am1] Verified that both /sysimg/casper/iros-id.sh and /sysimg/casper/lsb-release exist on the current component. Will use them to extract installed revision details
+[am1] Versions (git revision, Ubuntu OS version, IrOS version):
+[am1] Installed: a3331e0b, ubuntu1804, 5.119.0
+[am1] Running:   a3331e0b, ubuntu1804, 5.119.0
+[am1] Requested: 23bffa26, ubuntu2404, 99.99.99
+[am1] Start staging IrOS with version 23bffa26 built for ubuntu2404
+[am1] Staging new IrOS with version 23bffa26
+[am1] Updating ucode to version: 0x0e000014 date: 09182021, current version: 0xe000012
+[am1] Stage complete for new IrOS: SHA 23bffa26895aabce264ab51c053720bb178f3677_ubuntu2404_iros.img, version 23bffa26
+[am1] all_ok
+[am1] Replace IrOS(stage) with image /ssd/tmp/iros_dist.26737/23bffa26895aabce264ab51c053720bb178f3677_ubuntu2404_iros.img.gz
+[am1] Verified that both /sysimg/casper/iros-id.sh and /sysimg/casper/lsb-release exist on the current component. Will use them to extract installed revision details
+[am1] Versions (git revision, Ubuntu OS version, IrOS version):
+[am1] Installed: a3331e0b, ubuntu1804, 5.119.0
+[am1] Running:   a3331e0b, ubuntu1804, 5.119.0
+[am1] Requested: 23bffa26, ubuntu2404, 99.99.99
+[am1] Start staging IrOS with version 23bffa26 built for ubuntu2404
+[am1] Staging new IrOS with version 23bffa26
+[am1] Updating ucode to version: 0x0e000014 date: 09182021, current version: 0xe000012
+[am1] Stage complete for new IrOS: SHA 23bffa26895aabce264ab51c053720bb178f3677_ubuntu2404_iros.img, version 23bffa26
+[am1] all_ok
+iros_install_map: {'ubuntu2404': [XFMSpec(1)]}
+Upgrade IrOS: Activate IrOS image(s) ['./23bffa26895aabce264ab51c053720bb178f3677_ubuntu2404_iros.img.gz']
+Calling replace_iros --activate with img: ./23bffa26895aabce264ab51c053720bb178f3677_ubuntu2404_iros.img.gz
+[elasticit0:bash*                                                                                                                                                                                                       "irsled" 14:14 11-Aug-25
+
+
+local_info: {'image_git_rev': '23bffa26', 'image_version': '99.99.99', 'os': 'ubuntu2404'}, remote_info: {XFMSpec(1): {'installed_git_rev': 'a3331e0b', 'installed_os': 'ubuntu1804', 'installed_version': '5.119.0', 'running_git_rev': 'a3331e0b', 'running_os': 'ubuntu1804', 'running_version': '5.119.0'}}, replace_cmd_base: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fbupgrade replace-iros, image_filename: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/23bffa26895aabce264ab51c053720bb178f3677_ubuntu2404_iros.img.gz ips: [XFMSpec(1)], flags: -v
+Hosts not eligible to activate iros: []
+Running fbupgrade replace-iros --activate on [XFMSpec(1)]
+running iros parallel upgrade
+[am1] Replace IrOS(activate) with image ./23bffa26895aabce264ab51c053720bb178f3677_ubuntu2404_iros.img.gz
+[am1] Verified that both /sysimg/casper/iros-id.sh and /sysimg/casper/lsb-release exist on the current component. Will use them to extract installed revision details
+[am1] Versions (git revision, Ubuntu OS version, IrOS version):
+[am1] Installed: a3331e0b, ubuntu1804, 5.119.0
+[am1] Running:   a3331e0b, ubuntu1804, 5.119.0
+[am1] Requested: 23bffa26, ubuntu2404, 99.99.99
+[am1] NOTE: Replacing IrOS with a different OS than                                     currently running. Provided IrOS OS ubuntu2404 and running                                     OS ubuntu1804
+[am1] Start activating IrOS with version 23bffa26
+[am1] Activating new IrOS with version 23bffa26
+[am1] casper_link: changing casper link from casperA to casperB
+[am1] removed staged iros image file: /ssd/tmp/iros_staged_image_23bffa26895aabce264ab51c053720bb178f3677_ubuntu2404_iros.img
+[am1] Activation complete for new IrOS (23bffa26895aabce264ab51c053720bb178f3677_ubuntu2404_iros.img) with version 23bffa26
+[am1] Removing existing overlays
+[am1] reboot_required
+[am1] Replace IrOS(activate) with image ./23bffa26895aabce264ab51c053720bb178f3677_ubuntu2404_iros.img.gz
+[am1] Verified that both /sysimg/casper/iros-id.sh and /sysimg/casper/lsb-release exist on the current component. Will use them to extract installed revision details
+[am1] Versions (git revision, Ubuntu OS version, IrOS version):
+[am1] Installed: a3331e0b, ubuntu1804, 5.119.0
+[am1] Running:   a3331e0b, ubuntu1804, 5.119.0
+[am1] Requested: 23bffa26, ubuntu2404, 99.99.99
+[am1] NOTE: Replacing IrOS with a different OS than                                     currently running. Provided IrOS OS ubuntu2404 and running                                     OS ubuntu1804
+[am1] Start activating IrOS with version 23bffa26
+[am1] Activating new IrOS with version 23bffa26
+[am1] casper_link: changing casper link from casperA to casperB
+[am1] removed staged iros image file: /ssd/tmp/iros_staged_image_23bffa26895aabce264ab51c053720bb178f3677_ubuntu2404_iros.img
+[am1] Activation complete for new IrOS (23bffa26895aabce264ab51c053720bb178f3677_ubuntu2404_iros.img) with version 23bffa26
+[am1] Removing existing overlays
+[am1] reboot_required
+End upgrade step: upgrade_iros
+Start upgrade step: run_post_deploy_upgrade_tasks
+End upgrade step: run_post_deploy_upgrade_tasks
+Start upgrade step: reboot_controllers_phase1
+Skipping phase1 controller reboot, upgrade transfer not required
+End upgrade step: reboot_controllers_phase1
+Start upgrade step: transfer_upgrade_leadership_to_peer
+Upgrade does not need to transfer to peer
+End upgrade step: transfer_upgrade_leadership_to_peer
+Start upgrade step: reboot_controllers_phase2
+Disruptive upgrade, skipping reboot_controllers_phase2 step
+End upgrade step: reboot_controllers_phase2
+Start upgrade step: kexec_blades
+Disruptive upgrade, skipping kexec_blades step
+End upgrade step: kexec_blades
+Start upgrade step: disruptive_reboots
+Disruptive rebooting remaining components
+Prepare upgrade to resume after controller reboot.
+'/ssd/ndu/upgrade_workdir-8e1c9de476bc11f0b93111e0cb8f98db/in_progress_elasticity.run' => '/ssd/releases/elasticity_4.5.11_23bffa26895aabce264ab51c053720bb178f3677.run'
+'/ssd/ndu/monitor-upgrade' => '/ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/internal/monitor-upgrade'
+=================================================================
+Upgrade not finished yet, will resume on reboot. Continue to monitor progress with:
+       /ssd/ndu/monitor-upgrade
+=================================================================
+Rebooting current controller for the upgrade
+Running power cycle command on am1: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fbupgrade power-ctl -v -x 1 cycle
+Exit upgrade step: disruptive_reboots
+Flashblade upgrade exited as planned: Rebooting current controller for the upgrade
+Lock released on /ssd/ndu/ndu_lock.txt by pid 26737Press RETURN to exit TMUX: [4560960.904177,003] ntfs: (device sdb1): ntfs_end_buffer_async_read(): Buffer I/O error, logical block 0x600008.
+[4560960.915380,003] ntfs: (device sdb1): ntfs_end_buffer_async_read(): Buffer I/O error, logical block 0x600009.
+[4560960.926565,003] ntfs: (device sdb1): ntfs_end_buffer_async_read(): Buffer I/O error, logical block 0x60000a.
+[4560960.937769,003] ntfs: (device sdb1): ntfs_end_buffer_async_read(): Buffer I/O error, logical block 0x60000b.
+[4560960.948942,003] ntfs: (device sdb1): ntfs_end_buffer_async_read(): Buffer I/O error, logical block 0x60000c.
+[4560960.960126,003] ntfs: (device sdb1): ntfs_end_buffer_async_read(): Buffer I/O error, logical block 0x60000d.
+[4560960.971305,003] ntfs: (device sdb1): ntfs_end_buffer_async_read(): Buffer I/O error, logical block 0x60000e.
+[4560960.982491,003] ntfs: (device sdb1): ntfs_end_buffer_async_read(): Buffer I/O error, logical block 0x60000f.
+[4560960.993676,003] ntfs: (device sdb1): map_mft_record(): Failed with error code 5.
+[4560961.002144,003] ntfs: (device sdb1): ntfs_read_block(): Failed to read from inode 0x6, attribute type 0x80, vcn 0x0, offset 0x0 because its location on disk could not be determined even after retrying (error code -5).
+BIOS version :  3.01.00
+
+BIOS boot start...
+POST: BMC Enabled.
+BMC Support.
+Intel(R) Xeon(R) CPU D-1627 @ 2.90GHz
+
+Boot from Primary BIOS...
+Reset cause(0x11): Power on reset.
+CPLD_BaseBoard version : 1.8
+CPLD_COMe version : 1.7
+POST: Memory init start...
+Total Memory Size = 16GB
+Memory Speed = 2133MHz
+9892A0A2Version 2.20.1276. Copyright (C) 2023 American Megatrends, Inc.                 BIOS Date: 11/06/2023 15:08:54 Ver: 0ACOH009                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Press <F2> or <DEL> to enter setup.Press <F11> to enter boot menu.Welcome to GRUB!
+
+GNU GRUB  version 2.02
+
++----------------------------------------------------------------------------+||||||||||||||||||||||||+----------------------------------------------------------------------------+     Use the ^ and v keys to select which entry is highlighted.          
+      Press enter to boot the selected OS, `e' to edit the commands       
+      before booting or `c' for a command-line.                            *IrOS-OS-a3331e0b7bd25eaa5954cbebba172d52f688a1bf                            ONIE                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   The highlighted entry will be executed automatically in 5s.                    The highlighted entry will be executed automatically in 4s.                    The highlighted entry will be executed automatically in 3s.                    The highlighted entry will be executed automatically in 2s.                    The highlighted entry will be executed automatically in 1s.                    The highlighted entry will be executed automatically in 0s.                   Booting `IrOS-OS-a3331e0b7bd25eaa5954cbebba172d52f688a1bf'
+
+Press F3 to view casper grub boot menu  Booting `casper'
+
+[    0.197637,002] ipmi:dmi: Base address is zero, assuming no IPMI interface
+boot IrOS on SSD
+Waiting for sy[    0.740400,000] EXT4-fs: Mount option(s) incompatible with ext2
+simg done.
+[    1.339550,004] systemd[1]: Failed to find module 'autofs4'
+[    2.008910,007] cls-ocores-i2c cls-ocores-i2c.1: error -ENXIO: IRQ index 0 not found
+[    2.017740,007] cls-ocores-i2c cls-ocores-i2c.2: error -ENXIO: IRQ index 0 not found
+[    2.026766,007] cls-ocores-i2c cls-ocores-i2c.3: error -ENXIO: IRQ index 0 not found
+[    2.036797,003] cls-ocores-i2c cls-ocores-i2c.4: error -ENXIO: IRQ index 0 not found
+[    2.046466,003] cls-ocores-i2c cls-ocores-i2c.5: error -ENXIO: IRQ index 0 not found
+[    2.084471,003] Error: Driver 'cls-switchboard' is already registered, aborting...
+[    3.416164] kdump-tools[820]: Starting kdump-tools:
+[    3.423206] kdump-tools[900]:  * loaded kdump kernel
+
+FlashBlade on Purity//FB
+
+irsled login: ir
+Password: 
+
+Welcome to Purity//FB! This is component irsled
+If you're seeing this message, it means that the system is not ready for use, and core system software is not running.
+If you are not expecting this message, please try logging out and logging back in. If the message persists, please
+contact Pure support. 
+http://www.purestorage.com/
+
+==========================================================
+An upgrade is in progress on this controller, monitor with
+         /ssd/ndu/monitor-upgrade
+==========================================================
+ir@irsled:~$ /ssd/ndu/monitor-upgrade
++ date +%s
++ stat -c %Y /ssd/ndu/resume_upgrade.sh
++ script_age=128
++ [ 128 -lt 86400 ]
++ EXIT_STATUS=0
++ /ssd/ndu/upgrade_workdir-8e1c9de476bc11f0b93111e0cb8f98db/in_progress_elasticity.run upgrade -v --not-bootstrapped --disruptive --skip-upgrade-validity-check --skip-fbhealth-check --force-standby --resume-single-controller-upgrade
+Extract directory already exists.Verifying checksum... done
+Extracting Purity//FB 4.5.11... done
+running /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fixups/python_shebang.fixup
+-------------------------------------------------------------------------------
+Logging session to fbupgrade.log
+-------------------------------------------------------------------------------
+running /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fixups/python_shebang.fixup
+Resuming Upgrade With Single Controller
+NDU lock is acquired on /ssd/ndu/ndu_lock.txt by process 7970.
+Upgrade has read and set the state info
+Checking if the user invoked the upgrade correctly
+Discovering XFMs: 
+1
+Discovering supervisors: 
+
+Discovering nodes: 
+
+Discovering XFMs: 
+1
+Discovering supervisors: 
+
+Discovering nodes: 
+
+Discovering XFMs: 
+1
+Discovering supervisors: 
+
+Discovering nodes: 
+
+All targeted components are discoverable through HAL.
+Starting run_all of ParallelTaskRunner
+Finished run_all - parallel tasks completed in 4.4872999993117446e-05 seconds.
+finding topology_v3 failed: RPC bad status 400. {"jsonrpc": "2.0", "error": {"code": -32602, "message": "The array is not clustered yet, not ready to service this RPC"}, "id": 3262758043}
+will try fallback of calling topology
+finding topology_v3/topology failed: RPC bad status 404. {"jsonrpc": "2.0", "error": {"code": -32601, "message": "Method not found", "data": "topology"}, "id": 479309727}
+etcd may be unavailable or cluster may not be bootstrapped
+Resuming upgrade with current controller only, no peer controller included
+Checking if we need to setup rssh
+Checking array health before upgrade
+  0.00 trying sup-ping
+  0.02 trying sup-login
+  0.16 trying host-ping
+  0.18 trying host-login
+  0.32 trying host-ssd
+  0.48 trying host-bios
+  0.49 trying host-fastrak
+  0.50 trying wssd-nvme
+  0.50 trying su-regs
+  0.51 trying su-upgrade
+  0.51 Succeeded
+Upgrade Log functionality disabled, no state to initialize from previous upgrade
+First upgrade step is going to be disruptive_reboots
+Continue upgrade step: disruptive_reboots
+Resuming single controller upgrade after reboot on am1
+End upgrade step: disruptive_reboots
+Start upgrade step: upgrade_ssdfw
+SSD Firmware {
+    "_comment": "SSD Firmware for boot drives",
+    "firmwares": [
+        {
+            "platform": "Intel-SSDSCKJW180H6",
+            "version": "RG30"
+        },
+        {
+            "platform": "Intel-SSDSCKJW240H6",
+            "version": "RG30"
+        }
+    ]
+}
+SSD Firmware image ./ssdfw_Intel-SSDSCKJW180H6_vRG30.tar.gz
+local_info: {'image_platform': 'INTEL-SSDSCKJW180H6', 'image_version': 'RG30 INTEL-SSDSCKJW180H6'}, remote_info: {XFMSpec(1): {'current_platform': 'INNODISK-3IE2/3ME2/3MG2/3SE2/3TG6-SSDS\nDEVICE-MODEL', 'current_version': 'A21412M INNODISK-3IE2/3ME2/3MG2/3SE2/3TG6-SSDS\nDEVICE-MODEL'}}, replace_cmd_base: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fbupgrade replace-ssdfw, image_filename: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/ssdfw_Intel-SSDSCKJW180H6_vRG30.tar.gz ips: (XFMSpec(1),), flags: -v
+'fbupgrade replace-ssdfw' will happen in 
+Given hosts [XFMSpec(1)] are not eligible for fbupgrade replace-ssdfw
+Skipping fbupgrade replace-ssdfw
+SSD Firmware image ./ssdfw_Intel-SSDSCKJW240H6_vRG30.tar.gz
+local_info: {'image_platform': 'INTEL-SSDSCKJW240H6', 'image_version': 'RG30 INTEL-SSDSCKJW240H6'}, remote_info: {XFMSpec(1): {'current_platform': 'INNODISK-3IE2/3ME2/3MG2/3SE2/3TG6-SSDS\nDEVICE-MODEL', 'current_version': 'A21412M INNODISK-3IE2/3ME2/3MG2/3SE2/3TG6-SSDS\nDEVICE-MODEL'}}, replace_cmd_base: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fbupgrade replace-ssdfw, image_filename: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/ssdfw_Intel-SSDSCKJW240H6_vRG30.tar.gz ips: (XFMSpec(1),), flags: -v
+'fbupgrade replace-ssdfw' will happen in 
+Given hosts [XFMSpec(1)] are not eligible for fbupgrade replace-ssdfw
+Skipping fbupgrade replace-ssdfw
+End upgrade step: upgrade_ssdfw
+Start upgrade step: upgrade_mlxfw
+Mellanox NIC firmware {
+    "_comment": "Mellanox NIC firmware for Skyforce, Thor & Zeus",
+    "firmwares": [
+        {
+            "platform": "PST0000000001",
+            "version": "14.27.1016"
+        },
+        {
+            "platform": "PST0000000002",
+            "version": "16.35.2000"
+        },
+        {
+            "platform": "PST0000000009",
+            "version": "22.39.1002"
+        }
+    ]
+}
+Mellanox firmware image ./mlxfw_PST0000000001_v14.27.1016.tar.gz
+local_info: {'image_platform': 'PST0000000001', 'image_version': '14.27.1016 PST0000000001'}, remote_info: {XFMSpec(1): {'current_platform': 'N/A', 'current_version': 'N/A N/A'}}, replace_cmd_base: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fbupgrade replace-mlxfw, image_filename: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/mlxfw_PST0000000001_v14.27.1016.tar.gz ips: (XFMSpec(1),), flags: -v
+'fbupgrade replace-mlxfw' will happen in 
+Given hosts [XFMSpec(1)] are not eligible for fbupgrade replace-mlxfw
+Skipping fbupgrade replace-mlxfw
+Mellanox firmware image ./mlxfw_PST0000000002_v16.35.2000.tar.gz
+local_info: {'image_platform': 'PST0000000002', 'image_version': '16.35.2000 PST0000000002'}, remote_info: {XFMSpec(1): {'current_platform': 'N/A', 'current_version': 'N/A N/A'}}, replace_cmd_base: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fbupgrade replace-mlxfw, image_filename: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/mlxfw_PST0000000002_v16.35.2000.tar.gz ips: (XFMSpec(1),), flags: -v
+'fbupgrade replace-mlxfw' will happen in 
+Given hosts [XFMSpec(1)] are not eligible for fbupgrade replace-mlxfw
+Skipping fbupgrade replace-mlxfw
+Mellanox firmware image ./mlxfw_PST0000000009_v22.39.1002.tar.gz
+local_info: {'image_platform': 'PST0000000009', 'image_version': '22.39.1002 PST0000000009'}, remote_info: {XFMSpec(1): {'current_platform': 'N/A', 'current_version': 'N/A N/A'}}, replace_cmd_base: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fbupgrade replace-mlxfw, image_filename: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/mlxfw_PST0000000009_v22.39.1002.tar.gz ips: (XFMSpec(1),), flags: -v
+'fbupgrade replace-mlxfw' will happen in 
+Given hosts [XFMSpec(1)] are not eligible for fbupgrade replace-mlxfw
+Skipping fbupgrade replace-mlxfw
+End upgrade step: upgrade_mlxfw
+Start upgrade step: upgrade_bios
+BIOS {
+    "_comment": "BIOS for the EFM-310",
+    "amiversion": "00100",
+    "dateversion": "05-19-2016",
+    "gitref": "f7ff3ef327de8e9603ab57fc3e9489292fcbc9a8",
+    "platform": "vardo",
+    "prefix": "bios_vardo"
+}
+BIOS image ./bios_vardo_00100_v05-19-2016.bin installing on :[] 
+local_info: {'image_version': '05-19-2016', 'platform': 'vardo'}, remote_info: {}, replace_cmd_base: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fbupgrade replace-bios, image_filename: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/bios_vardo_00100_v05-19-2016.bin ips: [], flags: -v
+'fbupgrade replace-bios' will happen in 
+Given hosts [] are not eligible for fbupgrade replace-bios
+Skipping fbupgrade replace-bios
+BIOS {
+    "_comment": "BIOS for the rest of x86 platforms",
+    "amiversion": "00400",
+    "dateversion": "05-19-2016",
+    "gitref": "f7ff3ef327de8e9603ab57fc3e9489292fcbc9a8",
+    "platform": "default",
+    "prefix": "bios_default"
+}
+BIOS image ./bios_default_00400_v05-19-2016.bin installing on :[] 
+local_info: {'image_version': '05-19-2016', 'platform': 'default'}, remote_info: {}, replace_cmd_base: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fbupgrade replace-bios, image_filename: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/bios_default_00400_v05-19-2016.bin ips: [], flags: -v
+'fbupgrade replace-bios' will happen in 
+Given hosts [] are not eligible for fbupgrade replace-bios
+Skipping fbupgrade replace-bios
+End upgrade step: upgrade_bios
+Start upgrade step: upgrade_bmc
+BMC {
+    "_comment": "BMC firmware for XFMs. Version field must be different to trigger upgrade.",
+    "gitref": "71b713a6aff35abbd2c20f5f4be4c197c60bb86c",
+    "platform": "am",
+    "version": "20191119"
+}
+Legacy BMC image ./bmc_71b713a6aff35abbd2c20f5f4be4c197c60bb86c_v20191119.zip installing on :[] 
+
+puresetup@PCTFJ2440004E:~$ mountmount /dev/sdb1 /mnt
+The disk contains an unclean file system (0, 0).
+The file system wasn't safely closed on Windows. Fixing.
+puresetup@PCTFJ2440004E:~$ cp /mnt/6.7.2/* .
+puresetup@PCTFJ2440004E:~$ pureinstall purity_6.7.2_202501290440+0d1c24065579.ppkg
+Installing Purity on alternate partition labeled second.
+Erasing Purity software image from alternate partition second to prepare for installation.
+WARNING: Do not interrupt this process!!
+Unpacking new Purity software.
+............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Verifying package...
+
+Finalizing installation. This may take several minutes.
+Executing /altroot/opt/purextras/bin/finish-install.sh
+Executing /altroot/opt/purextras/bin/finish-install.azure-propagate.sh
+Executing /altroot/opt/purextras/bin/finish-install.cbs.sh
+Executing /altroot/opt/purextras/bin/finish-install.fix-dpkg.sh
+Purity installed.
+Installation complete. The new Purity version will load at next reboot.
+
+Important!
+The first boot of a new Purity version may take longer if the new version includes controller firmware updates.
+DO NOT REBOOT THE CONTROLLER DURING THE FIRMWARE UPDATE.
+
+Refer to http://community.purestorage.com for more information about the Purity upgrade process and firmware updates.
+puresetup@PCTFJ2440004E:~$ pureboot reboot --offline
+[Errno 111] Connection refused
+
+PCTFJ24400030 login: puresetup
+Password: 
+
+Mon Aug 11 14:12:04 2025
+Welcome puresetup. This is Purity Version 6.5.5 on FlashArray PCTFJ24400030
+http://www.purestorage.com/
+puresetup@PCTFJ24400030:~$ mount /dev/sdb1 /mnt
+puresetup@PCTFJ24400030:~$ cp /mnt/6.7.2/* .
+puresetup@PCTFJ24400030:~$ pureinstall purity_6.7.2_202501290440+0d1c24065579.ppkg
+Installing Purity on alternate partition labeled second.
+Erasing Purity software image from alternate partition second to prepare for installation.
+WARNING: Do not interrupt this process!!
+Unpacking new Purity software.
+............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Verifying package...
+
+Finalizing installation. This may take several minutes.
+Executing /altroot/opt/purextras/bin/finish-install.sh
+Executing /altroot/opt/purextras/bin/finish-install.azure-propagate.sh
+Executing /altroot/opt/purextras/bin/finish-install.cbs.sh
+Executing /altroot/opt/purextras/bin/finish-install.fix-dpkg.sh
+Purity installed.
+Installation complete. The new Purity version will load at next reboot.
+
+Important!
+The first boot of a new Purity version may take longer if the new version includes controller firmware updates.
+DO NOT REBOOT THE CONTROLLER DURING THE FIRMWARE UPDATE.
+
+Refer to http://community.purestorage.com for more information about the Purity upgrade process and firmware updates.
+puresetup@PCTFJ24400030:~$ pureboot reboot --offline
+[Errno 111] Connection refused
+
+[am1] Resetting BMC now
+[am1] Waiting 180s for BMC to restart
+[am1] Waiting for BMC to become reachable
+[am1] [localhost]  20 81 03 50 02 bf 02 30 00 c4 0f 00 00 00 00
+[am1] BMC is now reachable
+End upgrade step: reset_bmc_ipmi
+Start upgrade step: upgrade_ipmi_bios
+BIOS IPMI manifest {
+    "_comment": "Bios Firmwares for platforms supporting IPMI.",
+    "firmwares": [
+        {
+            "_comment": "Thor Bios Firmware.",
+            "platform": "thor",
+            "version": "K13P1N12"
+        },
+        {
+            "_comment": "Idun Bios Firmware.",
+            "platform": "idun",
+            "version": "030100"
+        }
+    ]
+}
+Thor BIOS manifest {
+    "_comment": "Thor Bios Firmware.",
+    "platform": "thor",
+    "version": "K13P1N12"
+}
+Thor BIOS image = ./bios_thor_K13P1N12.bin
+local_info: {'image_version': 'K13P1N12', 'platform': 'thor'}, remote_info: {}, replace_cmd_base: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fbupgrade replace-bios, image_filename: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/bios_thor_K13P1N12.bin ips: [], flags: -v
+'fbupgrade replace-bios' will happen in 
+Given hosts [] are not eligible for fbupgrade replace-bios
+Skipping fbupgrade replace-bios
+Idun BIOS manifest {
+    "_comment": "Idun Bios Firmware.",
+    "platform": "idun",
+    "version": "030100"
+}
+Idun BIOS image = ./bios_idun_030100.bin
+local_info: {'image_version': '3.1.0', 'platform': 'idun'}, remote_info: {XFMSpec(1): {'active_part': 0, 'current_version': '3.1.0', 'in_progress': False, 'platform': 'idun'}}, replace_cmd_base: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fbupgrade replace-bios, image_filename: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/bios_idun_030100.bin ips: [XFMSpec(1)], flags: -v
+'fbupgrade replace-bios' will happen in 
+Given hosts [XFMSpec(1)] are not eligible for fbupgrade replace-bios
+Skipping fbupgrade replace-bios
+End upgrade step: upgrade_ipmi_bios
+Start upgrade step: upgrade_ipmi_cpld
+CPLD IPMI manifest {
+    "_comment": "CPLD Firmwares for platforms supporting IPMI.",
+    "firmwares": [
+        {
+            "_comment": "CPLD Firmware for Idun XFMs.",
+            "platform": "idun",
+            "version": "0108"
+        }
+    ]
+}
+Idun CPLD manifest {
+    "_comment": "CPLD Firmware for Idun XFMs.",
+    "platform": "idun",
+    "version": "0108"
+}
+Idun CPLD image = ./cpld_idun_0108.vme
+local_info: {'image_version': '1.08', 'platform': 'idun'}, remote_info: {XFMSpec(1): {'current_version': '1.08', 'in_progress': False, 'platform': 'idun'}}, replace_cmd_base: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fbupgrade replace-cpld, image_filename: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/cpld_idun_0108.vme ips: [XFMSpec(1)], flags: -v
+'fbupgrade replace-cpld' will happen in 
+Given hosts [XFMSpec(1)] are not eligible for fbupgrade replace-cpld
+Skipping fbupgrade replace-cpld
+End upgrade step: upgrade_ipmi_cpld
+Start upgrade step: upgrade_bios_nxp
+BIOS {
+    "_comment": "BIOS for Odin (Legend FIOM)",
+    "dateversion": "03-12-2024",
+    "platform": "odin",
+    "prefix": "bios_odin",
+    "version": "0ACQH003_release"
+}
+BIOS image ./bios_odin_0ACQH003_release_v03-12-2024.bin installing on :[] 
+local_info: {'image_version': '03-12-2024', 'platform': 'odin'}, remote_info: {}, replace_cmd_base: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fbupgrade replace-bios, image_filename: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/bios_odin_0ACQH003_release_v03-12-2024.bin ips: [], flags: -v
+'fbupgrade replace-bios' will happen in 
+Given hosts [] are not eligible for fbupgrade replace-bios
+Skipping fbupgrade replace-bios
+BIOS {
+    "_comment": "BIOS for Skyforce Blades",
+    "dateversion": "08-28-2024",
+    "platform": "skyforce",
+    "prefix": "bios_skyforce",
+    "version": "0ACHK004_release"
+}
+BIOS image ./bios_skyforce_0ACHK004_release_v08-28-2024.bin installing on :[] 
+local_info: {'image_version': '08-28-2024', 'platform': 'skyforce'}, remote_info: {}, replace_cmd_base: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fbupgrade replace-bios, image_filename: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/bios_skyforce_0ACHK004_release_v08-28-2024.bin ips: [], flags: -v
+'fbupgrade replace-bios' will happen in 
+Given hosts [] are not eligible for fbupgrade replace-bios
+Skipping fbupgrade replace-bios
+End upgrade step: upgrade_bios_nxp
+Start upgrade step: upgrade_bios_redfish
+BIOS {
+    "_comment": "Zeus Bios Firmware.",
+    "platform": "zeus",
+    "version": "N13P1N0A"
+}
+Skipping BIOS Firmware upgrade for Redfish as it is not supported on any of the platforms for the following components: [XFMSpec(1)]
+End upgrade step: upgrade_bios_redfish
+Start upgrade step: upgrade_cpld_redfish
+CPLD {
+    "_comment": "CPLD firmware for Zeus blades.",
+    "platform": "zeus",
+    "version": "R10"
+}
+Skipping CPLD Firmware upgrade for Redfish as it is not supported on any of the platforms for the following components: [XFMSpec(1)]
+End upgrade step: upgrade_cpld_redfish
+Start upgrade step: upgrade_fpga
+Skipping FPGA upgrade, not needed.
+End upgrade step: upgrade_fpga
+Start upgrade step: upgrade_fpga_switch
+FPGA SWITCH manifest {
+    "_comment": "FPGA Firmware Image for Switches platforms",
+    "firmwares": [
+        {
+            "_comment": "FPGA Firmware Image for XFMs on the Idun Platform",
+            "platform": "idun",
+            "version": "0108"
+        }
+    ]
+}
+Idun FPGA manifest {
+    "_comment": "FPGA Firmware Image for XFMs on the Idun Platform",
+    "platform": "idun",
+    "version": "0108"
+}
+Idun FPGA image = ./fpga_idun_0108.bin
+local_info: {'image_version': '1.08', 'platform': 'idun'}, remote_info: {XFMSpec(1): {'current_version': '1.08', 'in_progress': False, 'platform': 'idun'}}, replace_cmd_base: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fbupgrade replace-fpga-switch, image_filename: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/fpga_idun_0108.bin ips: [XFMSpec(1)], flags: -v
+'fbupgrade replace-fpga_switch' will happen in 
+Given hosts [XFMSpec(1)] are not eligible for fbupgrade replace-fpga_switch
+Skipping fbupgrade replace-fpga_switch
+End upgrade step: upgrade_fpga_switch
+Start upgrade step: upgrade_legend_wssdfw
+Not a legend cluster or simulation, skipping upgrade_legend_wssdfw
+End upgrade step: upgrade_legend_wssdfw
+Start upgrade step: check_reboot_required
+End upgrade step: check_reboot_required
+Start upgrade step: run_post_local_upgrade_tasks
+End upgrade step: run_post_local_upgrade_tasks
+Start upgrade step: reboot_non_master_components
+End upgrade step: reboot_non_master_components
+Start upgrade step: check_and_persist_elasticity_file
+Persisting runfile on am1
+attempt to persist using /ssd/ndu/upgrade_workdir-8e1c9de476bc11f0b93111e0cb8f98db/in_progress_elasticity.run
+renamed '/ssd/ndu/upgrade_workdir-8e1c9de476bc11f0b93111e0cb8f98db/in_progress_elasticity.run' -> '/ssd/ndu/last_successful_upgrade_elasticity.run' 
+Persist elasticity.run on am1: Succeeded
+Total time to persist runfile: 0.0
+End upgrade step: check_and_persist_elasticity_file
+Start upgrade step: cleanup_tools
+End upgrade step: cleanup_tools
+Start upgrade step: reboot_master_controller
+End upgrade step: reboot_master_controller
+Start upgrade step: complete_upgrade
+FlashBlade upgrade complete! Upgrade completed at Aug 11 2025 14:31:04. Took 1398.1517660617828 seconds.
+End upgrade step: complete_upgrade
+Lock released on /ssd/ndu/ndu_lock.txt by pid 7970
++ echo exit_code:exited exit_status:0
+status file was written at 2025-08-11 14:31:04.106697534 +0000
+exit_code:exited exit_status:0
+===============================================
+Upgrade succeeded, details in /logs/fbupgrade.log
+===============================================
+ir@irsled:~$ 
+ir@irsled:~$ fbadmin config-slot-id 2
+Configured current XFM slot id as 2
+ir@irsled:~$ sync; sync; sync && sudo reboot
+
+Broadcast message from root@irsled on pts/1 (Mon 2025-08-11 14:38:37 UTC):
+
+The system will reboot [ 1325.942092] kdump-tools[98436]: Stopping kdump-tools:
+[ 1325.950153] kdump-tools[98523]:  * unloaded kdump kernel
+[FAILED] Failed unmounting sysimg.mount - /sysimg.
+[FAILED] Failed unmounting ssd.mount.
+[FAILED] Failed unmounting var.mount.
+[ 1329.369011,006] (sd-umount)[98880]: Failed to unmount /run/shutdown/mounts/e056c10be4883e5e: Device or resource busy
+[ 1329.382639,003] systemd-shutdown[1]: Could not detach loopback /dev/loop0: Device or resource busy
+[ 1329.392823,003] systemd-shutdown[1]: Unable to finalize remaining file systems, loop devices, ignoring.
+[ 1329.489147,000] reboot: Restarting system
+BIOS version :  3.01.00
+
+BIOS boot start...
+POST: BMC Enabled.
+BMC Support.
+Intel(R) Xeon(R) CPU D-1627 @ 2.90GHz
+
+Boot from Primary BIOS...
+Reset cause(0x44): CPU warm reset.
+CPLD_BaseBoard version : 1.8
+CPLD_COMe version : 1.7
+POST: Memory init start...
+Total Memory Size = 16GB
+Memory Speed = 2133MHz
+9892A0A2Version 2.20.1276. Copyright (C) 2023 American Megatrends, Inc.                 BIOS Date: 11/06/2023 15:08:54 Ver: 0ACOH009                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Press <F2> or <DEL> to enter setup.Press <F11> to enter boot menu.Welcome to GRUB!
+
+GNU GRUB  version 2.02
+
++----------------------------------------------------------------------------+||||||||||||||||||||||||+----------------------------------------------------------------------------+     Use the ^ and v keys to select which entry is highlighted.          
+      Press enter to boot the selected OS, `e' to edit the commands       
+      before booting or `c' for a command-line.                            *IrOS-OS-a3331e0b7bd25eaa5954cbebba172d52f688a1bf                            ONIE                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   The highlighted entry will be executed automatically in 5s.                    The highlighted entry will be executed automatically in 4s.                    The highlighted entry will be executed automatically in 3s.                    The highlighted entry will be executed automatically in 2s.                    The highlighted entry will be executed automatically in 1s.                    The highlighted entry will be executed automatically in 0s.                   Booting `IrOS-OS-a3331e0b7bd25eaa5954cbebba172d52f688a1bf'
+
+Press F3 to view casper grub boot menu  Booting `casper'
+
+[    0.197559,002] ipmi:dmi: Base address is zero, assuming no IPMI interface
+boot IrOS on SSD
+Waiting for sy[    0.741341,002] EXT4-fs: Mount option(s) incompatible with ext2
+simg done.
+[    1.122598,006] systemd[1]: Failed to find module 'autofs4'
+[    1.810670,007] cls-ocores-i2c cls-ocores-i2c.1: error -ENXIO: IRQ index 0 not found
+[    1.819477,007] cls-ocores-i2c cls-ocores-i2c.2: error -ENXIO: IRQ index 0 not found
+[    1.829224,005] cls-ocores-i2c cls-ocores-i2c.3: error -ENXIO: IRQ index 0 not found
+[    1.838206,005] cls-ocores-i2c cls-ocores-i2c.4: error -ENXIO: IRQ index 0 not found
+[    1.847074,001] cls-ocores-i2c cls-ocores-i2c.5: error -ENXIO: IRQ index 0 not found
+[    1.901208,005] Error: Driver 'cls-switchboard' is already registered, aborting...
+[    3.745115] kdump-tools[820]: Starting kdump-tools:
+[    3.752144] kdump-tools[903]:  * loaded kdump kernel
+
+FlashBlade on Purity//FB
+
+irsled login: 
+ir@irsled:~$ /ssd/dndu/monitor=-upgrade
++ date +%s
++ stat -c %Y /ssd/ndu/resume_upgrade.sh
++ script_age=127
++ [ 127 -lt 86400 ]
++ EXIT_STATUS=0
++ /ssd/ndu/upgrade_workdir-f7af0e1f76bc11f0b9e20dafb326c546/in_progress_elasticity.run upgrade -v --not-bootstrapped --disruptive --skip-upgrade-validity-check --skip-fbhealth-check --resume-single-controller-upgrade
+Extract directory already exists.Verifying checksum... done
+Extracting Purity//FB 4.5.11... done
+running /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fixups/python_shebang.fixup
+-------------------------------------------------------------------------------
+Logging session to fbupgrade.log
+-------------------------------------------------------------------------------
+running /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fixups/python_shebang.fixup
+Resuming Upgrade With Single Controller
+NDU lock is acquired on /ssd/ndu/ndu_lock.txt by process 6838.
+Upgrade has read and set the state info
+Checking if the user invoked the upgrade correctly
+Discovering XFMs: 
+1
+Discovering supervisors: 
+
+Discovering nodes: 
+
+Discovering XFMs: 
+1
+Discovering supervisors: 
+
+Discovering nodes: 
+
+Discovering XFMs: 
+1
+Discovering supervisors: 
+
+Discovering nodes: 
+
+All targeted components are discoverable through HAL.
+Starting run_all of ParallelTaskRunner
+Finished run_all - parallel tasks completed in 3.7563000006457514e-05 seconds.
+finding topology_v3 failed: RPC bad status 400. {"jsonrpc": "2.0", "error": {"code": -32602, "message": "The array is not clustered yet, not ready to service this RPC"}, "id": 531730541}
+will try fallback of calling topology
+finding topology_v3/topology failed: RPC bad status 404. {"jsonrpc": "2.0", "error": {"code": -32601, "message": "Method not found", "data": "topology"}, "id": 1822857511}
+etcd may be unavailable or cluster may not be bootstrapped
+Resuming upgrade with current controller only, no peer controller included
+Checking if we need to setup rssh
+Checking array health before upgrade
+  0.00 trying sup-ping
+  0.02 trying sup-login
+  0.39 trying host-ping
+  0.41 trying host-login
+  0.55 trying host-ssd
+  0.71 trying host-bios
+  0.72 trying host-fastrak
+  0.73 trying wssd-nvme
+  0.74 trying su-regs
+  0.74 trying su-upgrade
+  0.75 Succeeded
+Upgrade Log functionality disabled, no state to initialize from previous upgrade
+First upgrade step is going to be disruptive_reboots
+Continue upgrade step: disruptive_reboots
+Resuming single controller upgrade after reboot on am1
+End upgrade step: disruptive_reboots
+Start upgrade step: upgrade_ssdfw
+SSD Firmware {
+    "_comment": "SSD Firmware for boot drives",
+    "firmwares": [
+        {
+            "platform": "Intel-SSDSCKJW180H6",
+            "version": "RG30"
+        },
+        {
+            "platform": "Intel-SSDSCKJW240H6",
+            "version": "RG30"
+        }
+    ]
+}
+SSD Firmware image ./ssdfw_Intel-SSDSCKJW180H6_vRG30.tar.gz
+local_info: {'image_platform': 'INTEL-SSDSCKJW180H6', 'image_version': 'RG30 INTEL-SSDSCKJW180H6'}, remote_info: {XFMSpec(1): {'current_platform': 'INNODISK-3IE2/3ME2/3MG2/3SE2/3TG6-SSDS\nDEVICE-MODEL', 'current_version': 'A21412M INNODISK-3IE2/3ME2/3MG2/3SE2/3TG6-SSDS\nDEVICE-MODEL'}}, replace_cmd_base: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fbupgrade replace-ssdfw, image_filename: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/ssdfw_Intel-SSDSCKJW180H6_vRG30.tar.gz ips: (XFMSpec(1),), flags: -v
+'fbupgrade replace-ssdfw' will happen in 
+Given hosts [XFMSpec(1)] are not eligible for fbupgrade replace-ssdfw
+Skipping fbupgrade replace-ssdfw
+SSD Firmware image ./ssdfw_Intel-SSDSCKJW240H6_vRG30.tar.gz
+local_info: {'image_platform': 'INTEL-SSDSCKJW240H6', 'image_version': 'RG30 INTEL-SSDSCKJW240H6'}, remote_info: {XFMSpec(1): {'current_platform': 'INNODISK-3IE2/3ME2/3MG2/3SE2/3TG6-SSDS\nDEVICE-MODEL', 'current_version': 'A21412M INNODISK-3IE2/3ME2/3MG2/3SE2/3TG6-SSDS\nDEVICE-MODEL'}}, replace_cmd_base: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fbupgrade replace-ssdfw, image_filename: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/ssdfw_Intel-SSDSCKJW240H6_vRG30.tar.gz ips: (XFMSpec(1),), flags: -v
+'fbupgrade replace-ssdfw' will happen in 
+Given hosts [XFMSpec(1)] are not eligible for fbupgrade replace-ssdfw
+Skipping fbupgrade replace-ssdfw
+End upgrade step: upgrade_ssdfw
+Start upgrade step: upgrade_mlxfw
+Mellanox NIC firmware {
+    "_comment": "Mellanox NIC firmware for Skyforce, Thor & Zeus",
+    "firmwares": [
+        {
+            "platform": "PST0000000001",
+            "version": "14.27.1016"
+        },
+        {
+            "platform": "PST0000000002",
+            "version": "16.35.2000"
+        },
+        {
+            "platform": "PST0000000009",
+            "version": "22.39.1002"
+        }
+    ]
+}
+Mellanox firmware image ./mlxfw_PST0000000001_v14.27.1016.tar.gz
+local_info: {'image_platform': 'PST0000000001', 'image_version': '14.27.1016 PST0000000001'}, remote_info: {XFMSpec(1): {'current_platform': 'N/A', 'current_version': 'N/A N/A'}}, replace_cmd_base: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fbupgrade replace-mlxfw, image_filename: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/mlxfw_PST0000000001_v14.27.1016.tar.gz ips: (XFMSpec(1),), flags: -v
+'fbupgrade replace-mlxfw' will happen in 
+Given hosts [XFMSpec(1)] are not eligible for fbupgrade replace-mlxfw
+Skipping fbupgrade replace-mlxfw
+Mellanox firmware image ./mlxfw_PST0000000002_v16.35.2000.tar.gz
+local_info: {'image_platform': 'PST0000000002', 'image_version': '16.35.2000 PST0000000002'}, remote_info: {XFMSpec(1): {'current_platform': 'N/A', 'current_version': 'N/A N/A'}}, replace_cmd_base: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fbupgrade replace-mlxfw, image_filename: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/mlxfw_PST0000000002_v16.35.2000.tar.gz ips: (XFMSpec(1),), flags: -v
+'fbupgrade replace-mlxfw' will happen in 
+Given hosts [XFMSpec(1)] are not eligible for fbupgrade replace-mlxfw
+Skipping fbupgrade replace-mlxfw
+Mellanox firmware image ./mlxfw_PST0000000009_v22.39.1002.tar.gz
+local_info: {'image_platform': 'PST0000000009', 'image_version': '22.39.1002 PST0000000009'}, remote_info: {XFMSpec(1): {'current_platform': 'N/A', 'current_version': 'N/A N/A'}}, replace_cmd_base: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fbupgrade replace-mlxfw, image_filename: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/mlxfw_PST0000000009_v22.39.1002.tar.gz ips: (XFMSpec(1),), flags: -v
+'fbupgrade replace-mlxfw' will happen in 
+Given hosts [XFMSpec(1)] are not eligible for fbupgrade replace-mlxfw
+Skipping fbupgrade replace-mlxfw
+End upgrade step: upgrade_mlxfw
+Start upgrade step: upgrade_bios
+BIOS {
+    "_comment": "BIOS for the EFM-310",
+    "amiversion": "00100",
+    "dateversion": "05-19-2016",
+    "gitref": "f7ff3ef327de8e9603ab57fc3e9489292fcbc9a8",
+    "platform": "vardo",
+    "prefix": "bios_vardo"
+}
+BIOS image ./bios_vardo_00100_v05-19-2016.bin installing on :[] 
+local_info: {'image_version': '05-19-2016', 'platform': 'vardo'}, remote_info: {}, replace_cmd_base: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fbupgrade replace-bios, image_filename: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/bios_vardo_00100_v05-19-2016.bin ips: [], flags: -v
+'fbupgrade replace-bios' will happen in 
+Given hosts [] are not eligible for fbupgrade replace-bios
+Skipping fbupgrade replace-bios
+BIOS {
+    "_comment": "BIOS for the rest of x86 platforms",
+    "amiversion": "00400",
+    "dateversion": "05-19-2016",
+    "gitref": "f7ff3ef327de8e9603ab57fc3e9489292fcbc9a8",
+    "platform": "default",
+    "prefix": "bios_default"
+}
+BIOS image ./bios_default_00400_v05-19-2016.bin installing on :[] 
+local_info: {'image_version': '05-19-2016', 'platform': 'default'}, remote_info: {}, replace_cmd_base: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fbupgrade replace-bios, image_filename: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/bios_default_00400_v05-19-2016.bin ips: [], flags: -v
+'fbupgrade replace-bios' will happen in 
+Given hosts [] are not eligible for fbupgrade replace-bios
+Skipping fbupgrade replace-bios
+End upgrade step: upgrade_bios
+Start upgrade step: upgrade_bmc
+BMC {
+    "_comment": "BMC firmware for XFMs. Version field must be different to trigger upgrade.",
+    "gitref": "71b713a6aff35abbd2c20f5f4be4c197c60bb86c",
+    "platform": "am",
+    "version": "20191119"
+}
+Legacy BMC image ./bmc_71b713a6aff35abbd2c20f5f4be4c197c60bb86c_v20191119.zip installing on :[] 
+local_info: {'image_version': '20191119', 'platform': 'am'}, remote_info: {}, replace_cmd_base: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fbupgrade replace-bmc, image_filename: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/bmc_71b713a6aff35abbd2c20f5f4be4c197c60bb86c_v20191119.zip ips: [], flags: -v
+'fbupgrade replace-bmc' will happen in 
+Given hosts [] are not eligible for fbupgrade replace-bmc
+Skipping fbupgrade replace-bmc
+Felcher BMC image ./felcher-and-sons_71b713a6aff35abbd2c20f5f4be4c197c60bb86c_v20191119.img installing on :[] 
+local_info: {'image_version': '20191119', 'platform': 'am'}, remote_info: {}, replace_cmd_base: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fbupgrade replace-bmc, image_filename: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/felcher-and-sons_71b713a6aff35abbd2c20f5f4be4c197c60bb86c_v20191119.img ips: [], flags: -v
+'fbupgrade replace-bmc' will happen in 
+Given hosts [] are not eligible for fbupgrade replace-bmc
+Skipping fbupgrade replace-bmc
+End upgrade step: upgrade_bmc
+Start upgrade step: upgrade_fastrak
+Fastrak {
+    "_comment": "Firmware image for NXP microcontrollers",
+    "gitref": "aaf89814bf7e2e5769510e3e6ebefa32484eeeab",
+    "version": "2.2"
+}
+Fastrak image ./fastrak_aaf89814bf7e2e5769510e3e6ebefa32484eeeab_v2.2.bin
+No components to upgrade for fastrak, skipping
+End upgrade step: upgrade_fastrak
+Start upgrade step: upgrade_ipmi_bmc
+BMC IPMI manifest {
+    "_comment": "BMC Firmwares for platforms supporting IPMI.",
+    "firmwares": [
+        {
+            "_comment": "BMC firmware for Thor blades.",
+            "platform": "thor",
+            "version": "0017A0170P"
+        },
+        {
+            "_comment": "BMC firmware for Idun XFMs.",
+            "platform": "idun",
+            "version": "0332"
+        },
+        {
+            "_comment": "BMC firmware for Idun2.1 XFMs.",
+            "platform": "idun2.1",
+            "version": "0332"
+        }
+    ]
+}
+Thor BMC manifest {
+    "_comment": "BMC firmware for Thor blades.",
+    "platform": "thor",
+    "version": "0017A0170P"
+}
+Thor BMC image = ./bmc_thor_0017A0170P.rom
+local_info: {'image_version': '0.17A', 'platform': 'thor'}, remote_info: {}, replace_cmd_base: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fbupgrade replace-bmc, image_filename: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/bmc_thor_0017A0170P.rom ips: [], flags: -v
+'fbupgrade replace-bmc' will happen in 
+Given hosts [] are not eligible for fbupgrade replace-bmc
+Skipping fbupgrade replace-bmc
+Idun BMC manifest {
+    "_comment": "BMC firmware for Idun XFMs.",
+    "platform": "idun",
+    "version": "0332"
+}
+Idun BMC image = ./bmc_idun_0332.ima
+local_info: {'image_version': '3.50', 'platform': 'idun'}, remote_info: {XFMSpec(1): {'active_part': 0, 'current_version': '3.40', 'in_progress': False, 'inactive_version': '3.40', 'next_boot': '0 (active)', 'platform': 'idun'}}, replace_cmd_base: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fbupgrade replace-bmc, image_filename: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/bmc_idun_0332.ima ips: [XFMSpec(1)], flags: -v
+'fbupgrade replace-bmc' will happen in am1
+Given hosts [] are not eligible for fbupgrade replace-bmc
+Copying /ssd/ndu/elasticity-contents.4.5.11-23bffa26/bmc_idun_0332.ima to ['am1']:/ssd/tmp/bmc_dist.6838/bmc_idun_0332.ima
+retrieved host ips to argparse: -x 1  from ips: ['am1']
+Running fbupgrade replace-bmc on [XFMSpec(1)]
+running bmc fully serial upgrade
+[am1] Replace BMC with image /ssd/tmp/bmc_dist.6838/bmc_idun_0332.ima
+[am1] Running   BMC version: 3.40 on idun (SPI part 0)
+[am1] Inactive  BMC version: 3.40
+[am1] Requested BMC version: 3.50 on idun
+[am1] Reading version of /usr/local/bin/CFUFLASH
+[am1] Supported version of /usr/local/bin/CFUFLASH: 6.81.6
+[am1] Executing FW update command: /usr/local/bin/CFUFLASH -cd -d 1 -mse 0 -non-interactive -q /ssd/tmp/bmc_dist.6838/bmc_idun_0332.ima
+[am1] Waiting for BMC to boot
+[am1] BMC booted successfully
+[am1] Disabling virtual USB device
+[am1] Setting next boot to inactive part
+[am1] idun 3.40 (active, SPI part 0) / 3.50 (inactive, SPI part 1, next boot)
+[am1] all_ok
+[am1] Replace BMC with image /ssd/tmp/bmc_dist.6838/bmc_idun_0332.ima
+[am1] Running   BMC version: 3.40 on idun (SPI part 0)
+[am1] Inactive  BMC version: 3.40
+[am1] Requested BMC version: 3.50 on idun
+[am1] Reading version of /usr/local/bin/CFUFLASH
+[am1] Supported version of /usr/local/bin/CFUFLASH: 6.81.6
+[am1] Executing FW update command: /usr/local/bin/CFUFLASH -cd -d 1 -mse 0 -non-interactive -q /ssd/tmp/bmc_dist.6838/bmc_idun_0332.ima
+[am1] Waiting for BMC to boot
+[am1] BMC booted successfully
+[am1] Disabling virtual USB device
+[am1] Setting next boot to inactive part
+[am1] idun 3.40 (active, SPI part 0) / 3.50 (inactive, SPI part 1, next boot)
+[am1] all_ok
+Idun2.1 BMC manifest {
+    "_comment": "BMC firmware for Idun2.1 XFMs.",
+    "platform": "idun2.1",
+    "version": "0332"
+}
+Idun2.1 BMC image = ./bmc_idun2.1_0332.ima
+local_info: {'image_version': '3.50', 'platform': 'idun2.1'}, remote_info: {}, replace_cmd_base: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fbupgrade replace-bmc, image_filename: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/bmc_idun2.1_0332.ima ips: [], flags: -v
+'fbupgrade replace-bmc' will happen in 
+Given hosts [] are not eligible for fbupgrade replace-bmc
+Skipping fbupgrade replace-bmc
+End upgrade step: upgrade_ipmi_bmc
+Start upgrade step: upgrade_bmc_redfish
+BMC {
+    "_comment": "BMC firmware for Zeus blades.",
+    "platform": "zeus",
+    "version": "3.0-d28"
+}
+Skipping BMC Firmware upgrade for Redfish as it is not supported on any of the platforms for the following components: [XFMSpec(1)]
+End upgrade step: upgrade_bmc_redfish
+Start upgrade step: reset_bmc_ipmi
+Get current active SPI part
+[am1]  01
+Get next active SPI part
+[am1]  02
+Bmc reset will happen on ['am1']
+BMC reset for am1
+[am1] Resetting BMC now
+[am1] Waiting 180s for BMC to restart
+[am1] Waiting for BMC to become reachable
+[am1] [localhost]  20 81 03 50 02 bf 02 30 00 c4 0f 00 00 00 00
+[am1] BMC is now reachable
+End upgrade step: reset_bmc_ipmi
+Start upgrade step: upgrade_ipmi_bios
+BIOS IPMI manifest {
+    "_comment": "Bios Firmwares for platforms supporting IPMI.",
+    "firmwares": [
+        {
+            "_comment": "Thor Bios Firmware.",
+            "platform": "thor",
+            "version": "K13P1N12"
+        },
+        {
+            "_comment": "Idun Bios Firmware.",
+            "platform": "idun",
+            "version": "030100"
+        }
+    ]
+}
+Thor BIOS manifest {
+    "_comment": "Thor Bios Firmware.",
+    "platform": "thor",
+    "version": "K13P1N12"
+}
+Thor BIOS image = ./bios_thor_K13P1N12.bin
+local_info: {'image_version': 'K13P1N12', 'platform': 'thor'}, remote_info: {}, replace_cmd_base: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fbupgrade replace-bios, image_filename: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/bios_thor_K13P1N12.bin ips: [], flags: -v
+'fbupgrade replace-bios' will happen in 
+Given hosts [] are not eligible for fbupgrade replace-bios
+Skipping fbupgrade replace-bios
+Idun BIOS manifest {
+    "_comment": "Idun Bios Firmware.",
+    "platform": "idun",
+    "version": "030100"
+}
+Idun BIOS image = ./bios_idun_030100.bin
+local_info: {'image_version': '3.1.0', 'platform': 'idun'}, remote_info: {XFMSpec(1): {'active_part': 0, 'current_version': '3.1.0', 'in_progress': False, 'platform': 'idun'}}, replace_cmd_base: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fbupgrade replace-bios, image_filename: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/bios_idun_030100.bin ips: [XFMSpec(1)], flags: -v
+'fbupgrade replace-bios' will happen in 
+Given hosts [XFMSpec(1)] are not eligible for fbupgrade replace-bios
+Skipping fbupgrade replace-bios
+End upgrade step: upgrade_ipmi_bios
+Start upgrade step: upgrade_ipmi_cpld
+CPLD IPMI manifest {
+    "_comment": "CPLD Firmwares for platforms supporting IPMI.",
+    "firmwares": [
+        {
+            "_comment": "CPLD Firmware for Idun XFMs.",
+            "platform": "idun",
+            "version": "0108"
+        }
+    ]
+}
+Idun CPLD manifest {
+    "_comment": "CPLD Firmware for Idun XFMs.",
+    "platform": "idun",
+    "version": "0108"
+}
+Idun CPLD image = ./cpld_idun_0108.vme
+local_info: {'image_version': '1.08', 'platform': 'idun'}, remote_info: {XFMSpec(1): {'current_version': '1.08', 'in_progress': False, 'platform': 'idun'}}, replace_cmd_base: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fbupgrade replace-cpld, image_filename: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/cpld_idun_0108.vme ips: [XFMSpec(1)], flags: -v
+'fbupgrade replace-cpld' will happen in 
+Given hosts [XFMSpec(1)] are not eligible for fbupgrade replace-cpld
+Skipping fbupgrade replace-cpld
+End upgrade step: upgrade_ipmi_cpld
+Start upgrade step: upgrade_bios_nxp
+BIOS {
+    "_comment": "BIOS for Odin (Legend FIOM)",
+    "dateversion": "03-12-2024",
+    "platform": "odin",
+    "prefix": "bios_odin",
+    "version": "0ACQH003_release"
+}
+BIOS image ./bios_odin_0ACQH003_release_v03-12-2024.bin installing on :[] 
+local_info: {'image_version': '03-12-2024', 'platform': 'odin'}, remote_info: {}, replace_cmd_base: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fbupgrade replace-bios, image_filename: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/bios_odin_0ACQH003_release_v03-12-2024.bin ips: [], flags: -v
+'fbupgrade replace-bios' will happen in 
+Given hosts [] are not eligible for fbupgrade replace-bios
+Skipping fbupgrade replace-bios
+BIOS {
+    "_comment": "BIOS for Skyforce Blades",
+    "dateversion": "08-28-2024",
+    "platform": "skyforce",
+    "prefix": "bios_skyforce",
+    "version": "0ACHK004_release"
+}
+BIOS image ./bios_skyforce_0ACHK004_release_v08-28-2024.bin installing on :[] 
+local_info: {'image_version': '08-28-2024', 'platform': 'skyforce'}, remote_info: {}, replace_cmd_base: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fbupgrade replace-bios, image_filename: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/bios_skyforce_0ACHK004_release_v08-28-2024.bin ips: [], flags: -v
+'fbupgrade replace-bios' will happen in 
+Given hosts [] are not eligible for fbupgrade replace-bios
+Skipping fbupgrade replace-bios
+End upgrade step: upgrade_bios_nxp
+Start upgrade step: upgrade_bios_redfish
+BIOS {
+    "_comment": "Zeus Bios Firmware.",
+    "platform": "zeus",
+    "version": "N13P1N0A"
+}
+Skipping BIOS Firmware upgrade for Redfish as it is not supported on any of the platforms for the following components: [XFMSpec(1)]
+End upgrade step: upgrade_bios_redfish
+Start upgrade step: upgrade_cpld_redfish
+CPLD {
+    "_comment": "CPLD firmware for Zeus blades.",
+    "platform": "zeus",
+    "version": "R10"
+}
+Skipping CPLD Firmware upgrade for Redfish as it is not supported on any of the platforms for the following components: [XFMSpec(1)]
+End upgrade step: upgrade_cpld_redfish
+Start upgrade step: upgrade_fpga
+Skipping FPGA upgrade, not needed.
+End upgrade step: upgrade_fpga
+Start upgrade step: upgrade_fpga_switch
+FPGA SWITCH manifest {
+    "_comment": "FPGA Firmware Image for Switches platforms",
+    "firmwares": [
+        {
+            "_comment": "FPGA Firmware Image for XFMs on the Idun Platform",
+            "platform": "idun",
+            "version": "0108"
+        }
+    ]
+}
+Idun FPGA manifest {
+    "_comment": "FPGA Firmware Image for XFMs on the Idun Platform",
+    "platform": "idun",
+    "version": "0108"
+}
+Idun FPGA image = ./fpga_idun_0108.bin
+local_info: {'image_version': '1.08', 'platform': 'idun'}, remote_info: {XFMSpec(1): {'current_version': '1.08', 'in_progress': False, 'platform': 'idun'}}, replace_cmd_base: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/admin/fbupgrade replace-fpga-switch, image_filename: /ssd/ndu/elasticity-contents.4.5.11-23bffa26/fpga_idun_0108.bin ips: [XFMSpec(1)], flags: -v
+'fbupgrade replace-fpga_switch' will happen in 
+Given hosts [XFMSpec(1)] are not eligible for fbupgrade replace-fpga_switch
+Skipping fbupgrade replace-fpga_switch
+End upgrade step: upgrade_fpga_switch
+Start upgrade step: upgrade_legend_wssdfw
+Not a legend cluster or simulation, skipping upgrade_legend_wssdfw
+End upgrade step: upgrade_legend_wssdfw
+Start upgrade step: check_reboot_required
+End upgrade step: check_reboot_required
+Start upgrade step: run_post_local_upgrade_tasks
+End upgrade step: run_post_local_upgrade_tasks
+Start upgrade step: reboot_non_master_components
+End upgrade step: reboot_non_master_components
+Start upgrade step: check_and_persist_elasticity_file
+Persisting runfile on am1
+attempt to persist using /ssd/ndu/upgrade_workdir-f7af0e1f76bc11f0b9e20dafb326c546/in_progress_elasticity.run
+renamed '/ssd/ndu/upgrade_workdir-f7af0e1f76bc11f0b9e20dafb326c546/in_progress_elasticity.run' -> '/ssd/ndu/last_successful_upgrade_elasticity.run' 
+Persist elasticity.run on am1: Succeeded
+Total time to persist runfile: 0.0
+End upgrade step: check_and_persist_elasticity_file
+Start upgrade step: cleanup_tools
+End upgrade step: cleanup_tools
+Start upgrade step: reboot_master_controller
+End upgrade step: reboot_master_controller
+Start upgrade step: complete_upgrade
+FlashBlade upgrade complete! Upgrade completed at Aug 11 2025 14:38:06. Took 1643.4120826721191 seconds.
+End upgrade step: complete_upgrade
+Lock released on /ssd/ndu/ndu_lock.txt by pid 6838
++ echo exit_code:exited exit_status:0
+status file was written at 2025-08-11 14:38:06.480102746 +0000
+exit_code:exited exit_status:0
+===============================================
+Upgrade succeeded, details in /logs/fbupgrade.log
+===============================================
+ir@irsled:~$ ffbadmin config-slot-id 1
+Configured current XFM slot id as 1
+ir@irsled:~$ sync; sync; sync && sudo reboot
+
+Broadcast message from root@irsled on pts/1 (Mon 2025-08-11 14:41:50 UTC):
+
+The system will reboot [ 1105.822111] kdump-tools[80893]: Stopping kdump-tools:
+[ 1105.830167] kdump-tools[80974]:  * unloaded kdump kernel
+[FAILED] Failed unmounting sysimg.mount - /sysimg.
+[FAILED] Failed unmounting ssd.mount.
+[FAILED] Failed unmounting var.mount.
+[ 1109.239529,005] (sd-umount)[81324]: Failed to unmount /run/shutdown/mounts/bb5e68fe4de4c6ed: Device or resource busy
+[ 1109.253275,006] systemd-shutdown[1]: Could not detach loopback /dev/loop0: Device or resource busy
+[ 1109.263464,006] systemd-shutdown[1]: Unable to finalize remaining file systems, loop devices, ignoring.
+[ 1109.360426,000] reboot: Restarting system
+BIOS version :  3.01.00
+
+BIOS boot start...
+POST: BMC Enabled.
+BMC Support.
+Intel(R) Xeon(R) CPU D-1627 @ 2.90GHz
+
+Boot from Primary BIOS...
+Reset cause(0x44): CPU warm reset.
+CPLD_BaseBoard version : 1.8
+CPLD_COMe version : 1.7
+POST: Memory init start...
+ GNU GRUB  version 2.06
+
+/----------------------------------------------------------------------------\||||||||||||||||||||||||||\----------------------------------------------------------------------------/     Use the ^ and v keys to select which entry is highlighted.          
+      Press enter to boot the selected OS, `e' to edit the commands       
+      before booting or `c' for a command-line.                             Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (2024031915>
+*Purity 6.7.2 (202501290440+0d1c24065579) with kernel 5.15.123+ (2025011604>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        The highlighted entry will be executed automatically in 3s.                    The highlighted entry will be executed automatically in 2s.                    The highlighted entry will be executed automatically in 1s.                    The highlighted entry will be executed automatically in 0s.                 
+Purity
+
+PCTFJ2440004E login: puresetup
+Password: 
+
+Login incorrect
+PCTFJ2440004E login: puresetup
+Password: 
+<fw_update_tool>
+===================================================================
+=                            NOTICE                               =
+===================================================================
+=                                                                 =
+=    Firmware is currently being checked and/or updated           =
+=    on this controller.                                          =
+=                                                                 =
+=    If updates are necessary they will be applied automatically, =
+=    and one or more automatic reboots may occur as a result.     =
+=    A completion notice will be provided when done.              =
+=                                                                 =
+=    DO NOT RESTART OR REMOVE POWER WHILE UPDATE IS IN PROGRESS   =
+=                                                                 =
+===================================================================
+<fw_update_tool>
+Last login: Mon Aug 11 13:33:02 UTC 2025 on ttyS0
+
+Mon Aug 11 14:34:19 2025
+Welcome puresetup. This is Purity Version 6.7.2 on FlashArray PCTFJ2440004E
+http://www.purestorage.com/
+puresetup@PCTFJ2440004E:~$ pureboot list
+===================================================================
+=                            NOTICE                               =
+===================================================================
+=                                                                 =
+=    Firmware is currently being checked and/or updated           =
+=    on this controller.                                          =
+=                                                                 =
+=    If updates are necessary they will be applied automatically, =
+=    and one or more automatic reboots may occur as a result.     =
+=    A completion notice will be provided when done.              =
+=                                                                 =
+=    DO NOT RESTART OR REMOVE POWER WHILE UPDATE IS IN PROGRESS   =
+=                                                                 =
+===================================================================
+
+
+Marked entry (*) is currently running
+Marked entry (-->) will run at next reboot
+    0. Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (202403191505+d9f0e688c788) on first (/dev/sda3)
+*-->1. Purity 6.7.2 (202501290440+0d1c24065579) with kernel 5.15.123+ (202501160448+1cb33bf4bf4f) on second (/dev/sda4)
+puresetup@PCTFJ2440004E:~$                                                                                
+Broadcast message from root@PCTFJ2440004E (somewhere) (Mon Aug 11 14:34:45 2025
+                                                                               
+===================================================================            
+=                   UPDATE AND/OR CHECK COMPLETE                  =            
+=                                                                 =            
+=    The firmware checks/updates on this system are now complete. =            
+=    No further action is required, and the controller will       =            
+=    continue running as usual                                    =            
+=                                                                 =            
+===================================================================            
+                                                                               
+                                                                               
+
+puresetup@PCTFJ2440004E:~$ puresetup newarray --skip-connectivity-tests
+##########################################
+#   Welcome to the Purity Setup Wizard   #
+##########################################
+Aug 11 14:39:33.919 puresetup: PROGRESS: Starting new array setup
+CONFIG_TASKS:CONFIG_TASK_START_PURITY,CONFIG_TASK_CONFIG_FLASHARRAY,CONFIG_TASK_TEST_CONNECTIVITY,CONFIG_TASK_ALL_COMPLETE,CONFIG_TASK_PURESETUP_EXITED
+Aug 11 14:39:35.995 puresetup.py: PROGRESS: Checking if the current Purity version supports this controller model
+Controller hardware model is compatible with the controller purity version
+Aug 11 14:39:36.105 puresetup.py: PROGRESS: Detecting shelves connected to the array
+0 shelves connected to this controller.
+Aug 11 14:39:36.113 puresetup.py: PROGRESS: Verifying controller firmware is up to date. Controller may reboot if firmware is updated.
+                                                                               
+Broadcast message from root@PCTFJ2440004E (somewhere) (Mon Aug 11 14:40:28 2025
+                                                                               
+===================================================================            
+=                   UPDATE AND/OR CHECK COMPLETE                  =            
+=                                                                 =            
+=    The firmware checks/updates on this system are now complete. =            
+=    No further action is required, and the controller will       =            
+=    continue running as usual                                    =            
+=                                                                 =            
+===================================================================            
+                                                                               
+                                                                               
+                                                                               
+Broadcast message from root@PCTFJ2440004E (somewhere) (Mon Aug 11 14:40:28 2025
+                                                                               
+===================================================================            
+=                   UPDATE AND/OR CHECK COMPLETE                  =            
+=                                                                 =            
+=    The firmware checks/updates on this system are now complete. =            
+=    No further action is required, and the controller will       =            
+=    continue running as usual                                    =            
+=                                                                 =            
+===================================================================            
+                                                                               
+                                                                               
+fw_update_tool started.
+Starting Boot-Time Components Update.
+Skipping BOOT_DRIVE_M5400 update since current image: (D4MU002) matches latest image: (D4MU002)
+Skipping BIOS update since current image: (L11P1N15) matches latest image: (L11P1N15)
+Skipping BIOS_CFG update since current image: (363d69) matches latest image: (363d69)
+Skipping BIOS_STBY-0 update since current image: (L11P1N14) to latest image: (L11P1N15) is not supported.
+Skipping BMC update since current image: (v0.0e-0aad-r0010) matches latest image: (v0.0e-0aad-r0010)
+Skipping BMC_STBY-0 update since current image: (v0.09-0aad-r0010) to latest image: (v0.0e-0aad-r0010) is not supported.
+Skipping CPLD update since current image: (R126) matches latest image: (R126)
+Skipping ADD_IN_DCA-4 update since current image: (1.0.3) matches latest image: (1.0.3)
+Skipping PFX_68A0_IMG update since current image: (0x0390b762) matches latest image: (0x0390b762)
+Skipping PFX_68A0_CFG update since current image: (0x3249620c) matches latest image: (0x3249620c)
+Skipping PFX_68B0_IMG update since current image: (0x0390b762) matches latest image: (0x0390b762)
+Skipping PFX_68B0_CFG update since current image: (0x3249620c) matches latest image: (0x3249620c)
+Skipping LOM_ETH_MLX_CX6_100G update since current image: (22.37.1014) matches latest image: (22.37.1014)
+Skipping LOM_ETH_MLX_CX6_25G update since current image: (26.37.1014) matches latest image: (26.37.1014)
+Skipping ADD_IN_FC_ELX_G7PLUS-1 update since current image: (14.0.663.12) matches latest image: (14.0.663.12)
+Skipping ADD_IN_FC_ELX_G7PLUS-3 update since current image: (14.0.663.12) matches latest image: (14.0.663.12)
+All Boot-Time Components are up-to-date.
+
+Controller firmware is up to date.
+Aug 11 14:40:33.384 puresetup.py: PROGRESS: Verifying power supply firmware is up to date. If power supply firmware updates are needed, the update process can take a while.
+fw_update_tool started.
+Update PSU Devices
+ Policy: Update to latest but only if current version is below the specified minimum version allowed for the field, and don't downgrade.
+Skipping PSU_ARTESYN_1800-0 update since current image: (80.01.01) matches latest image: (80.01.01)
+Skipping PSU_ARTESYN_1800-1 update since current image: (80.01.01) matches latest image: (80.01.01)
+ Update PSU Complete
+Power supply firmware is up to date.
+Aug 11 14:40:37.663 puresetup.py: PROGRESS: Verifying WSSD firmware is up to date.
+fw_update_tool started.
+Checking for Purity activity on 40 wssd devices before attempting updates
+Beginning parallel fw version check/update for 20 WSSD Devices
+ Policy: Update to latest but only if current version is different than latest, and don't downgrade.
+ Successful parallel update of WSSD /dev/nvme0n1 From:4.0.29 To:4.1.29
+ Successful parallel update of WSSD /dev/nvme11n1 From:4.0.29 To:4.1.29
+ Successful parallel update of WSSD /dev/nvme10n1 From:4.0.29 To:4.1.29
+ Successful parallel update of WSSD /dev/nvme1n1 From:4.0.29 To:4.1.29
+ Successful parallel update of WSSD /dev/nvme2n1 From:4.0.29 To:4.1.29
+ Successful parallel update of WSSD /dev/nvme12n1 From:4.0.29 To:4.1.29
+ Successful parallel update of WSSD /dev/nvme3n1 From:4.0.29 To:4.1.29
+ Successful parallel update of WSSD /dev/nvme6n1 From:4.0.29 To:4.1.29
+ Successful parallel update of WSSD /dev/nvme13n1 From:4.0.29 To:4.1.29
+ Successful parallel update of WSSD /dev/nvme14n1 From:4.0.29 To:4.1.29
+ Successful parallel update of WSSD /dev/nvme4n1 From:4.0.29 To:4.1.29
+ Successful parallel update of WSSD /dev/nvme15n1 From:4.0.29 To:4.1.29
+ Successful parallel update of WSSD /dev/nvme8n1 From:4.0.29 To:4.1.29
+ Successful parallel update of WSSD /dev/nvme18n1 From:4.0.29 To:4.1.29
+ Successful parallel update of WSSD /dev/nvme7n1 From:4.0.29 To:4.1.29
+ Successful parallel update of WSSD /dev/nvme16n1 From:4.0.29 To:4.1.29
+ Successful parallel update of WSSD /dev/nvme20n1 From:4.0.29 To:4.1.29
+ Successful parallel update of WSSD /dev/nvme22n1 From:4.0.29 To:4.1.29
+ Successful parallel update of WSSD /dev/nvme19n1 From:4.0.29 To:4.1.29
+ Successful parallel update of WSSD /dev/nvme23n1 From:4.0.29 To:4.1.29
+Updated 20 WSSD Devices
+ Performing additional version check/update for 20 WSSD Devices
+Done! Completed additional check/update, which updated 0 WSSD devices
+WSSD firmware is up to date.
+FA-X90R4 supports multiple storage types, configuring...
+The controller will be rebooted when puresetup finishes
+Pre-configured storage type X was found on the controller, will proceed to overwrite
+Detected storage type X based on inventory of installed drives
+Successfully configured storage type X for controller
+Aug 11 14:43:44.787 puresetup.py: PROGRESS: Checking if apartment already exists
+Aug 11 14:43:47.813 puresetup.py: ERROR: unable to determine apartment. lsapt returned: Product Version 6.7.2 SVN Version 202501290440+0d1c24065579-67x Driver Version 532259904
+Name                                    Size            Type Device                                      Group                                       Apartment                                   Seq1Group1Seq2Group2
+NVRAM0111_00MA008GM02_PNVFJ2433000E     7516192768      NVRAM<0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+NVRAM0111_00MA008GM02_PNVFJ2429005C     7516192768      NVRAM<0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+NVRAM0111_00MA008GM02_PNVFJ2432010B     7516192768      NVRAM<0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+NVRAM0111_00MA008GM02_PNVFJ242901C6     7516192768      NVRAM<0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4705_04GRA009TSM308_dp_PFMUH24290FA98719209332736   SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4705_04GRA009TSM308_dp_PFMUH24290FFB8719209332736   SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4705_04GRA009TSM308_dp_PFMUH24290FCA8719209332736   SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4705_04GRA009TSM308_dp_PFMUH24341BD28719209332736   SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4705_04GRA009TSM308_dp_PFMUH242910568719209332736   SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4705_04GRA009TSM308_dp_PFMUH24290FCF8719209332736   SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4705_04GRA009TSM308_dp_PFMUH243419EE8719209332736   SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4705_04GRA009TSM308_dp_PFMUH243419ED8719209332736   SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4705_04GRA009TSM308_dp_PFMUH242910838719209332736   SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4705_04GRA009TSM308_dp_PFMUH24290FFA8719209332736   SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4705_04GRA009TSM308_dp_PFMUH24341B428719209332736   SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4705_04GRA009TSM308_dp_PFMUH24290FC08719209332736   SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4705_04GRA009TSM308_dp_PFMUH24341AFD8719209332736   SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4705_04GRA009TSM308_dp_PFMUH243419E88719209332736   SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4705_04GRA009TSM308_dp_PFMUH24341AE78719209332736   SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4705_04GRA009TSM308_dp_PFMUH24290FCE8719209332736   SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4705_04GRA009TSM308_dp_PFMUH24341B988719209332736   SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4705_04GRA009TSM308_dp_PFMUH24341BA38719209332736   SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4705_04GRA009TSM308_dp_PFMUH243419EF8719209332736   SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4705_04GRA009TSM308_dp_PFMUH24290FDF8719209332736   SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+
+
+Purity Apartment not found.
+Initial system setup is required which will remove everything from this array.
+If you believe the array may contain data, exit the puresetup procedure and 
+contact Pure Storage Support to determine the appropriate action.
+(continue/EXIT):
+irsled login: 
+irsled login: ir
+Password: 
+
+Welcome to Purity//FB! This is component irsled
+If you're seeing this message, it means that the system is not ready for use, and core system software is not running.
+If you are not expecting this message, please try logging out and logging back in. If the message persists, please
+contact Pure support. 
+http://www.purestorage.com/
+ir@irsled:~$ puremastership list
+Name  Mode
+XFM1  master
+XFM2  standby
+ir@irsled:~$ 
+irsled login: ir
+Password: 
+
+Welcome to Purity//FB! This is component irsled
+If you're seeing this message, it means that the system is not ready for use, and core system software is not running.
+If you are not expecting this message, please try logging out and logging back in. If the message persists, please
+contact Pure support. 
+http://www.purestorage.com/
+ir@irsled:~$ 
+ir@irsled:~$ 
+ir@irsled:~$ sudo su
+root@irsled:/home/ir# 
+root@irsled:/home/ir# 
+root@irsled:/home/ir# puremastership list
+Name  Mode
+XFM1  master
+XFM2  standby
+root@irsled:/home/ir# 
+root@irsled:/home/ir# 
+root@irsled:/home/ir# 
+root@irsled:/home/ir# fbadmnmin fc-config
+usage: fbadmin_cli.py [-h]
+                      {account-sync,array-config,chpass-fix,clear-ports-stats,config-chassis-id,config-golden,config-slot-id,edit-iros,etcd,exec,mc-config,n2l-ndc-clear,n2l-ndc-set,ntp,rpc,rssh,secondary-admin-net,set-chassis-links-speed,set-ecmp-table-size,tunables,force-umount,upgrade-tasks}
+                      ...
+fbadmin_cli.py: error: argument {account-sync,array-config,chpass-fix,clear-ports-stats,config-chassis-id,config-golden,config-slot-id,edit-iros,etcd,exec,mc-config,n2l-ndc-clear,n2l-ndc-set,ntp,rpc,rssh,secondary-admin-net,set-chassis-links-speed,set-ecmp-table-size,tunables,force-umount,upgrade-tasks}: invalid choice: 'fc-config' (choose from 'account-sync', 'array-config', 'chpass-fix', 'clear-ports-stats', 'config-chassis-id', 'config-golden', 'config-slot-id', 'edit-iros', 'etcd', 'exec', 'mc-config', 'n2l-ndc-clear', 'n2l-ndc-set', 'ntp', 'rpc', 'rssh', 'secondary-admin-net', 'set-chassis-links-speed', 'set-ecmp-table-size', 'tunables', 'force-umount', 'upgrade-tasks')
+root@irsled:/home/ir# fbadmin fc-config-config-configm-configc-config
+Entering configuration function conf_check_entry_point
+Checking if running on entry point: OK (MC, on XFM)
+Exiting configuration function conf_check_entry_point
+Entering configuration function conf_check_peer
+Checking peer XFM: OK
+Exiting configuration function conf_check_peer
+mc-config: Ethernet ports 1-20 should not be connected on xfm1 (exit code: 1)
+mc-config failed.
+root@irsled:/home/ir# fbadmin mc-config
+Entering configuration function conf_check_entry_point
+Checking if running on entry point: OK (MC, on XFM)
+Exiting configuration function conf_check_entry_point
+Entering configuration function conf_check_peer
+Checking peer XFM: OK
+Exiting configuration function conf_check_peer
+Choose chassis configuration
+  1) Flashblade with 5 chassis or less
+  2) Flashblade with 6 chassis or more
+  3) Flashblade //S using 100G cable
+  4) Flashblade //E using 100G cable
+  5) FlashBlade //S500+EX using 100G cable
+  6) Flashblade //S using 2x100G splitter cable
+  7) Flashblade //E using 2x100G splitter cable
+  8) FlashBlade //S500+EX using 2x100G splitter cable
+  9) Flashblade Pre First Gen to S mode
+Choose chassis configuration? 7
+The array chassis configuration is configured to Flashblade //E using 2x100G splitter cable for xfm1,xfm2
+Restarting peer switch manager on xfm2
+Waiting for switches up: 17 seconds
+Restarting local switch manager on xfm1
+Waiting for switches up: [ 1325.868835,003] bond0: (slave ir0): speed changed to 0 on port 1
+16 seconds
+Restarting congo_fiom on xfm1
+Restarting congo_fiom on xfm2
+root@irsled:/home/ir# 
+root@irsled:/home/ir# 
+root@irsled:/home/ir# (continue/EXIT):
+Exiting setup.
+CONFIG_TASK_COMPLETED:CONFIG_TASK_PURESETUP_EXITED
+puresetup@PCTFJ2440004E:~$ purepuresetup newarray --skip-connectivity-tests
+##########################################
+#   Welcome to the Purity Setup Wizard   #
+##########################################
+Aug 11 14:59:03.619 puresetup: PROGRESS: Starting new array setup
+CONFIG_TASKS:CONFIG_TASK_START_PURITY,CONFIG_TASK_CONFIG_FLASHARRAY,CONFIG_TASK_TEST_CONNECTIVITY,CONFIG_TASK_ALL_COMPLETE,CONFIG_TASK_PURESETUP_EXITED
+Aug 11 14:59:03.623 puresetup.py: PROGRESS: Checking if the current Purity version supports this controller model
+Controller hardware model is compatible with the controller purity version
+Aug 11 14:59:03.711 puresetup.py: PROGRESS: Detecting shelves connected to the array
+0 shelves connected to this controller.
+Aug 11 14:59:03.720 puresetup.py: PROGRESS: Verifying controller firmware is up to date. Controller may reboot if firmware is updated.
+                                                                               
+Broadcast message from root@PCTFJ2440004E (somewhere) (Mon Aug 11 14:59:55 2025
+                                                                               
+===================================================================            
+=                   UPDATE AND/OR CHECK COMPLETE                  =            
+=                                                                 =            
+=    The firmware checks/updates on this system are now complete. =            
+=    No further action is required, and the controller will       =            
+=    continue running as usual                                    =            
+=                                                                 =            
+===================================================================            
+                                                                               
+                                                                               
+                                                                               
+Broadcast message from root@PCTFJ2440004E (somewhere) (Mon Aug 11 14:59:55 2025
+                                                                               
+===================================================================            
+=                   UPDATE AND/OR CHECK COMPLETE                  =            
+=                                                                 =            
+=    The firmware checks/updates on this system are now complete. =            
+=    No further action is required, and the controller will       =            
+=    continue running as usual                                    =            
+=                                                                 =            
+===================================================================            
+                                                                               
+                                                                               
+fw_update_tool started.
+Starting Boot-Time Components Update.
+Skipping BOOT_DRIVE_M5400 update since current image: (D4MU002) matches latest image: (D4MU002)
+Skipping BIOS update since current image: (L11P1N15) matches latest image: (L11P1N15)
+Skipping BIOS_CFG update since current image: (363d69) matches latest image: (363d69)
+Skipping BIOS_STBY-0 update since current image: (L11P1N14) to latest image: (L11P1N15) is not supported.
+Skipping BMC update since current image: (v0.0e-0aad-r0010) matches latest image: (v0.0e-0aad-r0010)
+Skipping BMC_STBY-0 update since current image: (v0.09-0aad-r0010) to latest image: (v0.0e-0aad-r0010) is not supported.
+Skipping CPLD update since current image: (R126) matches latest image: (R126)
+Skipping ADD_IN_DCA-4 update since current image: (1.0.3) matches latest image: (1.0.3)
+Skipping PFX_68A0_IMG update since current image: (0x0390b762) matches latest image: (0x0390b762)
+Skipping PFX_68A0_CFG update since current image: (0x3249620c) matches latest image: (0x3249620c)
+Skipping PFX_68B0_IMG update since current image: (0x0390b762) matches latest image: (0x0390b762)
+Skipping PFX_68B0_CFG update since current image: (0x3249620c) matches latest image: (0x3249620c)
+Skipping LOM_ETH_MLX_CX6_100G update since current image: (22.37.1014) matches latest image: (22.37.1014)
+Skipping LOM_ETH_MLX_CX6_25G update since current image: (26.37.1014) matches latest image: (26.37.1014)
+Skipping ADD_IN_FC_ELX_G7PLUS-1 update since current image: (14.0.663.12) matches latest image: (14.0.663.12)
+Skipping ADD_IN_FC_ELX_G7PLUS-3 update since current image: (14.0.663.12) matches latest image: (14.0.663.12)
+All Boot-Time Components are up-to-date.
+
+Controller firmware is up to date.
+Aug 11 14:59:59.633 puresetup.py: PROGRESS: Verifying power supply firmware is up to date. If power supply firmware updates are needed, the update process can take a while.
+fw_update_tool started.
+Update PSU Devices
+ Policy: Update to latest but only if current version is below the specified minimum version allowed for the field, and don't downgrade.
+Skipping PSU_ARTESYN_1800-0 update since current image: (80.01.01) matches latest image: (80.01.01)
+Skipping PSU_ARTESYN_1800-1 update since current image: (80.01.01) matches latest image: (80.01.01)
+ Update PSU Complete
+Power supply firmware is up to date.
+Aug 11 15:00:04.006 puresetup.py: PROGRESS: Verifying WSSD firmware is up to date.
+fw_update_tool started.
+Checking for Purity activity on 40 wssd devices before attempting updates
+Beginning parallel fw version check/update for 20 WSSD Devices
+ Policy: Update to latest but only if current version is different than latest, and don't downgrade.
+Skipping WSSD-/dev/nvme24n1 update since current image: (4.1.29) matches latest image: (4.1.29)
+Skipping WSSD-/dev/nvme25n1 update since current image: (4.1.29) matches latest image: (4.1.29)
+Skipping WSSD-/dev/nvme26n1 update since current image: (4.1.29) matches latest image: (4.1.29)
+Skipping WSSD-/dev/nvme27n1 update since current image: (4.1.29) matches latest image: (4.1.29)
+Skipping WSSD-/dev/nvme28n1 update since current image: (4.1.29) matches latest image: (4.1.29)
+Skipping WSSD-/dev/nvme29n1 update since current image: (4.1.29) matches latest image: (4.1.29)
+Skipping WSSD-/dev/nvme30n1 update since current image: (4.1.29) matches latest image: (4.1.29)
+Skipping WSSD-/dev/nvme31n1 update since current image: (4.1.29) matches latest image: (4.1.29)
+Skipping WSSD-/dev/nvme32n1 update since current image: (4.1.29) matches latest image: (4.1.29)
+Skipping WSSD-/dev/nvme33n1 update since current image: (4.1.29) matches latest image: (4.1.29)
+Skipping WSSD-/dev/nvme34n1 update since current image: (4.1.29) matches latest image: (4.1.29)
+Skipping WSSD-/dev/nvme35n1 update since current image: (4.1.29) matches latest image: (4.1.29)
+Skipping WSSD-/dev/nvme36n1 update since current image: (4.1.29) matches latest image: (4.1.29)
+Skipping WSSD-/dev/nvme37n1 update since current image: (4.1.29) matches latest image: (4.1.29)
+Skipping WSSD-/dev/nvme38n1 update since current image: (4.1.29) matches latest image: (4.1.29)
+Skipping WSSD-/dev/nvme39n1 update since current image: (4.1.29) matches latest image: (4.1.29)
+Skipping WSSD-/dev/nvme40n1 update since current image: (4.1.29) matches latest image: (4.1.29)
+Skipping WSSD-/dev/nvme41n1 update since current image: (4.1.29) matches latest image: (4.1.29)
+Skipping WSSD-/dev/nvme42n1 update since current image: (4.1.29) matches latest image: (4.1.29)
+Skipping WSSD-/dev/nvme43n1 update since current image: (4.1.29) matches latest image: (4.1.29)
+Updated 0 WSSD Devices
+ Performing additional version check/update for 20 WSSD Devices
+Done! Completed additional check/update, which updated 0 WSSD devices
+WSSD firmware is up to date.
+FA-X90R4 supports multiple storage types, configuring...
+The controller will be rebooted when puresetup finishes
+Pre-configured storage type X was found on the controller, will proceed to overwrite
+Detected storage type X based on inventory of installed drives
+Successfully configured storage type X for controller
+Aug 11 15:01:20.227 puresetup.py: PROGRESS: Checking if apartment already exists
+Aug 11 15:01:23.170 puresetup.py: ERROR: unable to determine apartment. lsapt returned: Product Version 6.7.2 SVN Version 202501290440+0d1c24065579-67x Driver Version 532259904
+Name                                    Size            Type Device                                      Group                                       Apartment                                   Seq1Group1Seq2Group2
+NVRAM0111_00MA008GM02_PNVFJ2429005C     7516192768      NVRAM<0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+NVRAM0111_00MA008GM02_PNVFJ2432010B     7516192768      NVRAM<0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+NVRAM0111_00MA008GM02_PNVFJ2433000E     7516192768      NVRAM<0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+NVRAM0111_00MA008GM02_PNVFJ242901C6     7516192768      NVRAM<0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4705_04GRA009TSM308_dp_PFMUH24290FC08719209332736   SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4705_04GRA009TSM308_dp_PFMUH24290FDF8719209332736   SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4705_04GRA009TSM308_dp_PFMUH24341BD28719209332736   SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4705_04GRA009TSM308_dp_PFMUH24290FCA8719209332736   SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4705_04GRA009TSM308_dp_PFMUH243419EE8719209332736   SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4705_04GRA009TSM308_dp_PFMUH243419ED8719209332736   SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4705_04GRA009TSM308_dp_PFMUH24290FCF8719209332736   SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4705_04GRA009TSM308_dp_PFMUH242910568719209332736   SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4705_04GRA009TSM308_dp_PFMUH24290FA98719209332736   SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4705_04GRA009TSM308_dp_PFMUH24290FFB8719209332736   SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4705_04GRA009TSM308_dp_PFMUH243419EF8719209332736   SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4705_04GRA009TSM308_dp_PFMUH24341B988719209332736   SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4705_04GRA009TSM308_dp_PFMUH24290FCE8719209332736   SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4705_04GRA009TSM308_dp_PFMUH24341AFD8719209332736   SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4705_04GRA009TSM308_dp_PFMUH243419E88719209332736   SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4705_04GRA009TSM308_dp_PFMUH24341AE78719209332736   SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4705_04GRA009TSM308_dp_PFMUH24341B428719209332736   SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4705_04GRA009TSM308_dp_PFMUH242910838719209332736   SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4705_04GRA009TSM308_dp_PFMUH24341BA38719209332736   SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4705_04GRA009TSM308_dp_PFMUH24290FFA8719209332736   SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+
+
+Purity Apartment not found.
+Initial system setup is required which will remove everything from this array.
+If you believe the array may contain data, exit the puresetup procedure and 
+contact Pure Storage Support to determine the appropriate action.
+(continue/EXIT):continue(continue/EXIT): continue
+wait-for-state pureapp stop/waiting
+wait-for-state mariadb stop/waiting
+lio-drv disabling
+wait-for-state foed stop/waiting
+wait-for-state lio-drv stop/waiting
+wait-for-state purity_started stop/waiting
+wait-for-state pure_ems_fusiond stop/waiting
+Pure Storage is offline.
+Aug 11 15:01:56.651 puresetup: PROGRESS: Purity Apartment not found. Creating new apartment
+Configure Rapid Data Locking (y/N):nConfigure Rapid Data Locking (y/N): n
+Aug 11 15:02:11.754 puresetup.py: PROGRESS: Checking if apartment already exists
+Verifying interposer firmware is up to date.
+Beginning recycle of 0 bays...
+Recycle complete.
+Interposer firmware is up to date.
+Aug 11 15:02:15.172 puresetup.py: PROGRESS: Verifying all IO cards are supported
+Aug 11 15:02:15.172 puresetup.py: PROGRESS: Detecting shelves connected to the array
+Check io card pci id's........ OK
+purity.service stablized: done
+purity start/running
+platform: ..done
+foed: ...done
+gui: ...done
+rest: done
+platform_env: 0.done
+quorum: ....done
+foed_env: 771.771.487.202.0.done
+remote_patch: done
+driver: done
+san: ............done
+health: .done
+lio-drv: done
+middleware-db: done
+middleware: ...                                                                               
+Broadcast message from root@PCTFJ2440004E-ct0 (somewhere) (Mon Aug 11 15:02:56 
+                                                                               
+                                                                               
+Purity//FA Information System Status                                           
+====================================                                           
+Purity//FA has successfully started for                                        
+the first time after an install                                                
+or upgrade. Purity//FA 6.7.2 (202501290440+0d1c24065579-67x)                   
+is now set to be the default.                                                  
+                                                                               
+                                                                               
+Broadcast message from root@PCTFJ2440004E-ct0 (somewhere) (Mon Aug 11 15:02:56 
+                                                                               
+                                                                               
+Purity//FA Information System Status                                           
+====================================                                           
+Purity//FA has successfully started for                                        
+the first time after an install                                                
+or upgrade. Purity//FA 6.7.2 (202501290440+0d1c24065579-67x)                   
+is now set to be the default.                                                  
+                                                                               
+..........done
+vasa: done
+Pure Storage is online.
+
+CONFIG_TASK_ARRAY_ID: 1586448-19073602-2578398177029795799
+CONFIG_TASK_COMPLETED:CONFIG_TASK_START_PURITY
+Name       Created                  Expires
+puresetup  2025-08-11 15:03:07 UTC  2025-08-11 16:03:07 UTC
+Aug 11 15:03:08.823 puresetup: PROGRESS: Initialization complete. Starting array specific configuration
+Aug 11 15:03:08.823 puresetup: PROGRESS: Start user input configuration
+Start initial configuration for management and support connectivity.
+No changes are made until entire configuration is confirmed.
+Enter CTRL-C at any time to quit the puresetup procedure.
+Array Name:PURE-MCL-03Array Name: PURE-MCL-03
+Note: All IP addresses are entered as IPv4 address or IPv6 address,
+and netmask takes the format xxx.xxx.xxx.xxx for IPv4 or [0-128] for IPv6.
+The following management port configuration will be applied to ct0.eth0
+Physical IP Address:10.20.132.37Physical IP Address: 10.20.132.37
+Virtual IP Address:10.20.132.376Virtual IP Address: 10.20.132.36
+Netmask:255.255.255.0Netmask: 255.255.255.0
+Gateway:255.255.255.010.20.13.361Gateway: 10.20.132.1
+DNS Servers (1-3, comma-separated):10.20.100.53,10.20.200.53DNS Servers (1-3, comma-separated): 10.20.100.53,10.20.200.53
+DNS Domain Suffix (Optional):MITREmitre.orgDNS Domain Suffix (Optional): mitre.org
+NTP Server: time1.purestorage.com,time2.purestorage.com,time3.purestorage.com10.20.100.53,10.20.200.53NTP Server: 10.20.100.53,10.20.200.53
+Email Relay Server (Optional):mail.mitre.orgEmail Relay Server (Optional): mail.mitre.org
+Email Sender Domain:mitre.orgEmail Sender Domain: mitre.org
+Alert Email Recipients (Optional: 0-19, comma-separated):storageteam@mitre.orgAlert Email Recipients (Optional: 0-19, comma-separated): storageteam@mitre.org
+HTTP proxy for phonehome and remoteassist (optional):HTTP proxy for phonehome and remoteassist (optional):
+Confirm configuration.
+  Physical IP:           10.20.132.37
+  Virtual IP:            10.20.132.36
+  Netmask:               255.255.255.0
+  Gateway:               10.20.132.1
+  DNS Servers:           10.20.100.53,10.20.200.53
+  DNS Domain:            mitre.org
+  NTP Servers:           10.20.100.53,10.20.200.53
+  SMTP Relay Host:       mail.mitre.org
+  SMTP Sender Domain:    mitre.org
+  Alert Email Recipients:storageteam@mitre.org
+  HTTP proxy:            
+Type 'y' to apply configurations or 'n' to re-enter parameters:yType 'y' to apply configurations or 'n' to re-enter parameters: y
+Aug 11 15:05:02.907 puresetup.py: PROGRESS: Applying new array configuration
+Applying configuration to the array.
+Configuring array name.
+Configuring management port.
+Configuring network interfaces
+Configuring DNS.
+Configuring NTP server.
+Configuring HTTP proxy.
+Configuring SMTP sender domain and relay host.
+Configuring capacity limit.
+Configuring alert email.
+New configuration applied.
+CONFIG_TASK_COMPLETED:CONFIG_TASK_CONFIG_FLASHARRAY
+Skipping connectivity tests.
+CONFIG_TASK_COMPLETED:CONFIG_TASK_TEST_CONNECTIVITY
+passwd: password expiry information changed.
+Current time zone: Etc/UTC
+Change time zone [requires reboot] (y/n):yChange time zone [requires reboot] (y/n): y
+Configuring tzdata
+------------------
+
+Please select the geographic area in which you live. Subsequent configuration 
+questions will narrow this down by presenting a list of cities, representing the
+time zones in which they are located.
+
+  1. Africa      4. Australia     7. Atlantic Ocean  10. Pacific Ocean
+  2. America     5. Arctic Ocean  8. Europe          11. US
+  3. Antarctica  6. Asia          9. Indian Ocean    12. None of the above
+
+Geographic area: 2
+
+
+Please select the city or region corresponding to your time zone.
+
+  1. Adak                       80. Juneau
+  2. Anchorage                  81. Louisville (Kentucky)
+  3. Anguilla                   82. Monticello (Kentucky)
+  4. Antigua                    83. Kralendijk
+  5. Araguaina                  84. La Paz
+  6. Buenos Aires (Argentina)   85. Lima
+  7. Catamarca (Argentina)      86. Los Angeles
+  8. Cordoba (Argentina)        87. Lower Princes
+  9. Jujuy (Argentina)          88. Maceio
+  10. La Rioja (Argentina)      89. Managua
+  11. Mendoza (Argentina)       90. Manaus
+  12. Rio Gallegos (Argentina)  91. Marigot
+  13. Salta (Argentina)         92. Martinique
+  14. San Juan (Argentina)      93. Matamoros
+  15. San Luis (Argentina)      94. Mazatlan
+  16. Tucuman (Argentina)       95. Menominee
+  17. Ushuaia (Argentina)       96. Merida
+  18. Aruba                     97. Metlakatla
+[More] 
+
+  19. Asuncion                  98. Mexico City
+  20. Atikokan                  99. Miquelon
+  21. Atka                      100. Moncton
+  22. Bahia                     101. Monterrey
+  23. Bahia Banderas            102. Montevideo
+  24. Barbados                  103. Montreal
+  25. Belem                     104. Montserrat
+  26. Belize                    105. Nassau
+  27. Blanc-Sablon              106. New York
+  28. Boa Vista                 107. Nipigon
+  29. Bogota                    108. Nome
+  30. Boise                     109. Fernando de Noronha
+  31. Cambridge Bay             110. Beulah (North Dakota)
+  32. Campo Grande              111. Center (North Dakota)
+  33. Cancun                    112. New Salem (North Dakota)
+  34. Caracas                   113. Nuuk
+  35. Cayenne                   114. Ojinaga
+  36. Cayman                    115. Panama
+  37. Chicago                   116. Pangnirtung
+  38. Chihuahua                 117. Paramaribo
+  39. Ciudad_Juarez             118. Phoenix
+  40. Coral Harbour             119. Port-au-Prince
+[More] 
+
+  41. Costa Rica                120. Port of Spain
+  42. Creston                   121. Porto Acre
+  43. Cuiaba                    122. Porto Velho
+  44. Curaçao                  123. Puerto Rico
+  45. Danmarkshavn              124. Punta Arenas
+  46. Dawson                    125. Rainy River
+  47. Dawson Creek              126. Rankin Inlet
+  48. Denver                    127. Recife
+  49. Detroit                   128. Regina
+  50. Dominica                  129. Resolute
+  51. Edmonton                  130. Rio Branco
+  52. Eirunepe                  131. Santa Isabel
+  53. El Salvador               132. Santarém
+  54. Ensenada                  133. Santiago
+  55. Fort Nelson               134. Santo Domingo
+  56. Fortaleza                 135. São Paulo
+  57. Glace Bay                 136. Scoresbysund
+  58. Godthab                   137. Shiprock
+  59. Goose Bay                 138. Sitka
+  60. Grand Turk                139. St Barthelemy
+  61. Grenada                   140. St Johns
+  62. Guadeloupe                141. St Kitts
+[More] 
+
+  63. Guatemala                 142. St Lucia
+  64. Guayaquil                 143. St Thomas
+  65. Guyana                    144. St Vincent
+  66. Halifax                   145. Swift Current
+  67. Havana                    146. Tegucigalpa
+  68. Hermosillo                147. Thule
+  69. Indianapolis (Indiana)    148. Thunder Bay
+  70. Knox (Indiana)            149. Tijuana
+  71. Marengo (Indiana)         150. Toronto
+  72. Petersburg (Indiana)      151. Tortola
+  73. Tell City (Indiana)       152. Vancouver
+  74. Vevay (Indiana)           153. Virgin
+  75. Vincennes (Indiana)       154. Whitehorse
+  76. Winamac (Indiana)         155. Winnipeg
+  77. Inuvik                    156. Yakutat
+  78. Iqaluit                   157. Yellowknife
+  79. Jamaica
+
+Time zone: 106
+
+
+
+Current default time zone: 'America/New_York'
+Local time is now:      Mon Aug 11 11:06:08 EDT 2025.
+Universal Time is now:  Mon Aug 11 15:06:08 UTC 2025.
+
+'/cache/timezone/localtime' -> '/usr/share/zoneinfo/America/New_York'
+Confirm time zone change from Etc/UTC to America/New_York
+(y/N):y(y/N): y
+Aug 11 15:06:09.323 puresetup: PROGRESS: Timezone changed, nvme configured, or storage type updated, rebooting
+
+monitor stop/waiting
+wait-for-state pureapp stop/waiting
+wait-for-state mariadb stop/waiting
+lio-drv disabling
+platform stop/waiting
+wait-for-state foed stop/waiting
+iostat stop/waiting
+statistics stop/waiting
+wait-for-state lio-drv stop/waiting
+purity stop/waiting
+wait-for-state purity_started stop/waiting
+wait-for-state pure_ems_fusiond stop/waiting
+Pure Storage is offline.
+Aug 11 15:06:42.843 puresetup.py: PROGRESS: Set purity to start automatically in next boot
+Tunable parameter set: PURITY_START_ON_BOOT=1
+Press ENTER to reboot
+Array is ready to use after reboot. You can access the Purity GUI and CLI on 10.20.132.36
+[Errno 111] Connection refused
+ GNU GRUB  version 2.06
+
++----------------------------------------------------------------------------+||||||||||||||||||||||||+----------------------------------------------------------------------------+     Use the ^ and v keys to select which entry is highlighted.          
+      Press enter to boot the selected OS, `e' to edit the commands       
+      before booting or `c' for a command-line.                            *Purity 6.7.2 (202501290440+0d1c24065579) with kernel 5.15.123+ (2025011604> Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (2024031915>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         GNU GRUB  version 2.06
+
+/----------------------------------------------------------------------------\||||||||||||||||||||||||||\----------------------------------------------------------------------------/     Use the ^ and v keys to select which entry is highlighted.          
+      Press enter to boot the selected OS, `e' to edit the commands       
+      before booting or `c' for a command-line.                            *Purity 6.7.2 (202501290440+0d1c24065579) with kernel 5.15.123+ (2025011604>
+ Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (2024031915>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        The highlighted entry will be executed automatically in 3s.                    The highlighted entry will be executed automatically in 3s.                    The highlighted entry will be executed automatically in 2s.                    The highlighted entry will be executed automatically in 2s.                    The highlighted entry will be executed automatically in 1s.                    The highlighted entry will be executed automatically in 1s.                    The highlighted entry will be executed automatically in 0s.                    The highlighted entry will be executed automatically in 0s.                 
+BOOTING AT 2025-8-11 15:7:27 Purity 6.7.2 (202501290440+0d1c24065579) with
+kernel 5.15.123+ (202501160448+1cb33bf4bf4f) on second (/dev/sda4)
+
+BOOTING AT 2025-8-11 15:7:27 Purity 6.7.2 (202501290440+0d1c24065579) with
+kernel 5.15.123+ (202501160448+1cb33bf4bf4f) on second (/dev/sda4)
+
+
+
+PURE-MCL-03-ct0 login: 
+PCTFJ24400030 login: puresetup
+Password: 
+
+Login incorrect
+PCTFJ24400030 login: puresetup
+Password: 
+Last login: Mon Aug 11 14:12:03 UTC 2025 on ttyS0
+
+Mon Aug 11 15:06:28 2025
+Welcome puresetup. This is Purity Version 6.7.2 on FlashArray PCTFJ24400030
+http://www.purestorage.com/
+puresetup@PCTFJ24400030:~$ puresetup secondary --skip-connectivity-tests
+##########################################
+#   Welcome to the Purity Setup Wizard   #
+##########################################
+Aug 11 15:06:52.881 puresetup: PROGRESS: Starting secondary setup
+CONFIG_TASKS:CONFIG_TASK_START_PURITY,CONFIG_TASK_CONFIG_FLASHARRAY,CONFIG_TASK_TEST_CONNECTIVITY,CONFIG_TASK_ALL_COMPLETE,CONFIG_TASK_PURESETUP_EXITED
+Aug 11 15:06:54.964 puresetup.py: PROGRESS: Checking if the current Purity version supports this controller model
+Controller hardware model is compatible with the controller purity version
+Aug 11 15:06:55.063 puresetup.py: PROGRESS: Verifying controller firmware is up to date. Controller may reboot if firmware is updated.
+                                                                               
+Broadcast message from root@PCTFJ24400030 (somewhere) (Mon Aug 11 15:07:46 2025
+                                                                               
+===================================================================            
+=                   UPDATE AND/OR CHECK COMPLETE                  =            
+=                                                                 =            
+=    The firmware checks/updates on this system are now complete. =            
+=    No further action is required, and the controller will       =            
+=    continue running as usual                                    =            
+=                                                                 =            
+===================================================================            
+                                                                               
+                                                                               
+                                                                               
+Broadcast message from root@PCTFJ24400030 (somewhere) (Mon Aug 11 15:07:46 2025
+                                                                               
+===================================================================            
+=                   UPDATE AND/OR CHECK COMPLETE                  =            
+=                                                                 =            
+=    The firmware checks/updates on this system are now complete. =            
+=    No further action is required, and the controller will       =            
+=    continue running as usual                                    =            
+=                                                                 =            
+===================================================================            
+                                                                               
+                                                                               
+fw_update_tool started.
+Starting Boot-Time Components Update.
+Skipping BOOT_DRIVE_M5400 update since current image: (D4MU002) matches latest image: (D4MU002)
+Skipping BIOS update since current image: (L11P1N15) matches latest image: (L11P1N15)
+Skipping BIOS_CFG update since current image: (363d69) matches latest image: (363d69)
+Skipping BIOS_STBY-0 update since current image: (L11P1N14) to latest image: (L11P1N15) is not supported.
+Skipping BMC update since current image: (v0.0e-0aad-r0010) matches latest image: (v0.0e-0aad-r0010)
+Skipping BMC_STBY-0 update since current image: (v0.09-0aad-r0010) to latest image: (v0.0e-0aad-r0010) is not supported.
+Skipping CPLD update since current image: (R126) matches latest image: (R126)
+Skipping ADD_IN_DCA-4 update since current image: (1.0.3) matches latest image: (1.0.3)
+Skipping PFX_68A0_IMG update since current image: (0x0390b762) matches latest image: (0x0390b762)
+Skipping PFX_68A0_CFG update since current image: (0x3249620c) matches latest image: (0x3249620c)
+Skipping PFX_68B0_IMG update since current image: (0x0390b762) matches latest image: (0x0390b762)
+Skipping PFX_68B0_CFG update since current image: (0x3249620c) matches latest image: (0x3249620c)
+Skipping LOM_ETH_MLX_CX6_100G update since current image: (22.37.1014) matches latest image: (22.37.1014)
+Skipping LOM_ETH_MLX_CX6_25G update since current image: (26.37.1014) matches latest image: (26.37.1014)
+Skipping ADD_IN_FC_ELX_G7PLUS-1 update since current image: (14.0.663.12) matches latest image: (14.0.663.12)
+Skipping ADD_IN_FC_ELX_G7PLUS-3 update since current image: (14.0.663.12) matches latest image: (14.0.663.12)
+All Boot-Time Components are up-to-date.
+
+Controller firmware is up to date.
+Aug 11 15:07:51.076 puresetup.py: PROGRESS: Verifying power supply firmware is up to date. If power supply firmware updates are needed, the update process can take a while.
+fw_update_tool started.
+No updatable PSU's found, the psu may not be updatable, or the controller is not chassis master
+Power supply firmware is up to date.
+FA-X90R4 supports multiple storage types, configuring...
+The controller will be rebooted when puresetup finishes
+Pre-configured storage type X was found on the controller, will proceed to overwrite
+Detected storage type X from peer
+Successfully configured storage type X for controller
+Aug 11 15:07:54.662 puresetup.py: PROGRESS: Verifying all IO cards are supported
+Aug 11 15:07:54.662 puresetup.py: PROGRESS: Detecting shelves connected to the array
+Check io card pci id's........ OK
+purity.service stablized: done
+purity start/running
+platform: ..done
+foed: ....done
+gui: ..done
+rest: done
+platform_env: 0.done
+quorum: ....done
+foed_env: 0.done
+remote_patch: done
+driver: done
+san: ........done
+health: done
+lio-drv: done
+middleware-db: done
+middleware: done
+vasa: done
+Pure Storage is online.
+
+CONFIG_TASK_ARRAY_ID: 1586448-19073602-2578398177029795799
+CONFIG_TASK_COMPLETED:CONFIG_TASK_START_PURITY
+Name       Created                  Expires
+puresetup  2025-08-11 15:10:41 UTC  2025-08-11 16:10:41 UTC
+Aug 11 15:08:28.597 puresetup: PROGRESS: Initialization complete. Starting array specific configuration
+PROGRESS:puresetup:Initialization complete. Starting array specific configuration
+Aug 11 15:08:28.629 puresetup: PROGRESS: Start secondary input configuration
+PROGRESS:puresetup:Start secondary input configuration
+Start initial configuration for management and support connectivity.
+No changes are made until entire configuration is confirmed.
+Enter CTRL-C at any time to quit the puresetup procedure.
+INFO:puresetup:Start initial configuration for management and support connectivity.
+No changes are made until entire configuration is confirmed.
+Enter CTRL-C at any time to quit the puresetup procedure.
+Note: All IP addresses are entered as IPv4 address or IPv6 address,
+and netmask takes the format xxx.xxx.xxx.xxx for IPv4 or [0-128] for IPv6.
+The following management port configuration will be applied to ct1.eth0
+INFO:puresetup:Note: All IP addresses are entered as IPv4 address or IPv6 address,
+and netmask takes the format xxx.xxx.xxx.xxx for IPv4 or [0-128] for IPv6.
+The following management port configuration will be applied to ct1.eth0
+Physical IP Address:                                                                               
+Broadcast message from root@PURE-MCL-03-ct1 (somewhere) (Mon Aug 11 15:08:30 20
+                                                                               
+                                                                               
+Purity//FA Information System Status                                           
+====================================                                           
+Purity//FA has successfully started for                                        
+the first time after an install                                                
+or upgrade. Purity//FA 6.7.2 (202501290440+0d1c24065579-67x)                   
+is now set to be the default.                                                  
+                                                                               
+                                                                               
+Broadcast message from root@PURE-MCL-03-ct1 (somewhere) (Mon Aug 11 15:08:30 20
+                                                                               
+                                                                               
+Purity//FA Information System Status                                           
+====================================                                           
+Purity//FA has successfully started for                                        
+the first time after an install                                                
+or upgrade. Purity//FA 6.7.2 (202501290440+0d1c24065579-67x)                   
+is now set to be the default.                                                  
+                                                                               
+Physical IP Address:
+Physical IP Address:10.20.132.38Physical IP Address: 10.20.132.38
+DEBUG:puresetup:Prompt: Physical IP Address, Selected value: '10.20.132.38'
+Netmask:255.255.255.0Netmask: 255.255.255.0
+DEBUG:puresetup:Prompt: Netmask, Selected value: '255.255.255.0'
+Gateway:255.255.255.010.20.13.381Gateway: 10.20.132.1
+DEBUG:puresetup:Prompt: Gateway, Selected value: '10.20.132.1'
+DEBUG:puresetup:User input configuration: 
+DEBUG:puresetup:{
+    "management_port": {
+        "physical_ip": "10.20.132.38",
+        "netmask": "255.255.255.0",
+        "gateway": "10.20.132.1"
+    },
+    "alert_emails": "flasharray-alerts@purestorage.com,storageteam@mitre.org",
+    "ntp_server": "10.20.100.53,10.20.200.53"
+}
+  Physical IP:           10.20.132.38
+INFO:puresetup:  Physical IP:           10.20.132.38
+  Netmask:               255.255.255.0
+INFO:puresetup:  Netmask:               255.255.255.0
+  Gateway:               10.20.132.1
+INFO:puresetup:  Gateway:               10.20.132.1
+Type 'y' to apply configurations or 'n' to re-enter parameters:yType 'y' to apply configurations or 'n' to re-enter parameters: y
+DEBUG:puresetup:Prompt: Type 'y' to apply configurations or 'n' to re-enter parameters, Selected value: 'y'
+Aug 11 15:09:17.972 puresetup.py: PROGRESS: Applying secondary configuration
+PROGRESS:puresetup:Applying secondary configuration
+DEBUG:puresetup:{
+    "management_port": {
+        "physical_ip": "10.20.132.38",
+        "netmask": "255.255.255.0",
+        "gateway": "10.20.132.1"
+    },
+    "alert_emails": "flasharray-alerts@purestorage.com,storageteam@mitre.org",
+    "ntp_server": "10.20.100.53,10.20.200.53",
+    "interfaces": {}
+}
+Applying configuration to the array.
+INFO:puresetup:Applying configuration to the array.
+Configuring management port.
+INFO:puresetup:Configuring management port.
+DEBUG:puresetup:Applying management port to ct1.eth4: {
+    "physical_ip": "10.20.132.38",
+    "netmask": "255.255.255.0",
+    "gateway": "10.20.132.1"
+}
+Configuring network interfaces
+INFO:puresetup:Configuring network interfaces
+DEBUG:puresetup:Restarting networkconfigd
+DEBUG:puresetup:Restarted networkconfigd
+New configuration applied.
+INFO:puresetup:New configuration applied.
+CONFIG_TASK_COMPLETED:CONFIG_TASK_CONFIG_FLASHARRAY
+INFO:puresetup:CONFIG_TASK_COMPLETED:CONFIG_TASK_CONFIG_FLASHARRAY
+Skipping connectivity tests.
+INFO:puresetup:Skipping connectivity tests.
+CONFIG_TASK_COMPLETED:CONFIG_TASK_TEST_CONNECTIVITY
+INFO:puresetup:CONFIG_TASK_COMPLETED:CONFIG_TASK_TEST_CONNECTIVITY
+DEBUG:puresetup:Enabling pureuser
+passwd: password expiry information changed.
+DEBUG:puresetup:pureuser enabled
+Setting the new pureuser password.
+Type 'continue' to enter the new pureuser password:continueSetting the new pureuser password.
+Type 'continue' to enter the new pureuser password: continue
+DEBUG:puresetup:Prompt: Setting the new pureuser password. 
+Type 'continue' to enter the new pureuser password, Selected value: 'continue'
+DEBUG:puresetup:Requesting new pureuser password.
+Enter old password: 
+Enter new password: 
+Retype new password: 
+DEBUG:puresetup:Pureuser password successfully set.
+Current time zone: Etc/UTC
+INFO:puresetup:Current time zone: Etc/UTC
+Change time zone [requires reboot] (y/n):yChange time zone [requires reboot] (y/n): y
+DEBUG:puresetup:Prompt: Change time zone [requires reboot] (y/n), Selected value: 'y'
+DEBUG:puresetup:User is going to change timezone
+DEBUG:puresetup:Original time zone: Etc/UTC
+DEBUG:puresetup:Start set timezone program
+Configuring tzdata
+------------------
+
+Please select the geographic area in which you live. Subsequent configuration 
+questions will narrow this down by presenting a list of cities, representing the
+time zones in which they are located.
+
+  1. Africa      4. Australia     7. Atlantic Ocean  10. Pacific Ocean
+  2. America     5. Arctic Ocean  8. Europe          11. US
+  3. Antarctica  6. Asia          9. Indian Ocean    12. None of the above
+
+Geographic area: 2
+
+
+Please select the city or region corresponding to your time zone.
+
+  1. Adak                       80. Juneau
+  2. Anchorage                  81. Louisville (Kentucky)
+  3. Anguilla                   82. Monticello (Kentucky)
+  4. Antigua                    83. Kralendijk
+  5. Araguaina                  84. La Paz
+  6. Buenos Aires (Argentina)   85. Lima
+  7. Catamarca (Argentina)      86. Los Angeles
+  8. Cordoba (Argentina)        87. Lower Princes
+  9. Jujuy (Argentina)          88. Maceio
+  10. La Rioja (Argentina)      89. Managua
+  11. Mendoza (Argentina)       90. Manaus
+  12. Rio Gallegos (Argentina)  91. Marigot
+  13. Salta (Argentina)         92. Martinique
+  14. San Juan (Argentina)      93. Matamoros
+  15. San Luis (Argentina)      94. Mazatlan
+  16. Tucuman (Argentina)       95. Menominee
+  17. Ushuaia (Argentina)       96. Merida
+  18. Aruba                     97. Metlakatla
+[More] 
+
+  19. Asuncion                  98. Mexico City
+  20. Atikokan                  99. Miquelon
+  21. Atka                      100. Moncton
+  22. Bahia                     101. Monterrey
+  23. Bahia Banderas            102. Montevideo
+  24. Barbados                  103. Montreal
+  25. Belem                     104. Montserrat
+  26. Belize                    105. Nassau
+  27. Blanc-Sablon              106. New York
+  28. Boa Vista                 107. Nipigon
+  29. Bogota                    108. Nome
+  30. Boise                     109. Fernando de Noronha
+  31. Cambridge Bay             110. Beulah (North Dakota)
+  32. Campo Grande              111. Center (North Dakota)
+  33. Cancun                    112. New Salem (North Dakota)
+  34. Caracas                   113. Nuuk
+  35. Cayenne                   114. Ojinaga
+  36. Cayman                    115. Panama
+  37. Chicago                   116. Pangnirtung
+  38. Chihuahua                 117. Paramaribo
+  39. Ciudad_Juarez             118. Phoenix
+  40. Coral Harbour             119. Port-au-Prince
+[More] 
+
+  41. Costa Rica                120. Port of Spain
+  42. Creston                   121. Porto Acre
+  43. Cuiaba                    122. Porto Velho
+  44. Curaçao                  123. Puerto Rico
+  45. Danmarkshavn              124. Punta Arenas
+  46. Dawson                    125. Rainy River
+  47. Dawson Creek              126. Rankin Inlet
+  48. Denver                    127. Recife
+  49. Detroit                   128. Regina
+  50. Dominica                  129. Resolute
+  51. Edmonton                  130. Rio Branco
+  52. Eirunepe                  131. Santa Isabel
+  53. El Salvador               132. Santarém
+  54. Ensenada                  133. Santiago
+  55. Fort Nelson               134. Santo Domingo
+  56. Fortaleza                 135. São Paulo
+  57. Glace Bay                 136. Scoresbysund
+  58. Godthab                   137. Shiprock
+  59. Goose Bay                 138. Sitka
+  60. Grand Turk                139. St Barthelemy
+  61. Grenada                   140. St Johns
+  62. Guadeloupe                141. St Kitts
+[More] 
+
+  63. Guatemala                 142. St Lucia
+  64. Guayaquil                 143. St Thomas
+  65. Guyana                    144. St Vincent
+  66. Halifax                   145. Swift Current
+  67. Havana                    146. Tegucigalpa
+  68. Hermosillo                147. Thule
+  69. Indianapolis (Indiana)    148. Thunder Bay
+  70. Knox (Indiana)            149. Tijuana
+  71. Marengo (Indiana)         150. Toronto
+  72. Petersburg (Indiana)      151. Tortola
+  73. Tell City (Indiana)       152. Vancouver
+  74. Vevay (Indiana)           153. Virgin
+  75. Vincennes (Indiana)       154. Whitehorse
+  76. Winamac (Indiana)         155. Winnipeg
+  77. Inuvik                    156. Yakutat
+  78. Iqaluit                   157. Yellowknife
+  79. Jamaica
+
+Time zone: 106
+
+
+
+Current default time zone: 'America/New_York'
+Local time is now:      Mon Aug 11 11:09:45 EDT 2025.
+Universal Time is now:  Mon Aug 11 15:09:45 UTC 2025.
+
+'/cache/timezone/localtime' -> '/usr/share/zoneinfo/America/New_York'
+DEBUG:puresetup:User set timezone to America/New_York
+DEBUG:puresetup:New timezone: America/New_York
+Confirm time zone change from Etc/UTC to America/New_York
+INFO:puresetup:Confirm time zone change from Etc/UTC to America/New_York
+(y/N):y(y/N): y
+DEBUG:puresetup:Prompt: (y/N), Selected value: 'y'
+DEBUG:puresetup:User accepted the new time zone: America/New_York
+Aug 11 15:09:46.981 puresetup: PROGRESS: Timezone changed, nvme configured, or storage type updated, rebooting
+PROGRESS:puresetup:Timezone changed, nvme configured, or storage type updated, rebooting
+Press ENTER to reboot
+INFO:puresetup:Press ENTER to reboot
+
+Secondary controller will be ready to use after reboot.
+INFO:puresetup:Secondary controller will be ready to use after reboot.
+Aug 11 15:10:30.840 puresetup: PROGRESS: Setup complete
+PROGRESS:puresetup:Setup complete
+Secondary controller is ready to use.
+INFO:puresetup:Secondary controller is ready to use.
+CONFIG_TASK_COMPLETED:CONFIG_TASK_ALL_COMPLETE
+INFO:puresetup:CONFIG_TASK_COMPLETED:CONFIG_TASK_ALL_COMPLETE
+DEBUG:puresetup:Wizard ended >> puresetup secondary
+DEBUG:puresetup:###### Ending Program ######
+CONFIG_TASK_COMPLETED:CONFIG_TASK_PURESETUP_EXITED
+INFO:puresetup:CONFIG_TASK_COMPLETED:CONFIG_TASK_PURESETUP_EXITED
+puresetup@PCTFJ24400030:~$ 
+PURE-MCL-03-ct0 login: pureeng
+1) Authenticate via CloudAssist
+2) Authenticate via command line
+3) Restore challenge
+Type the number corresponding to the authentication method you want to use.
+
+Selection: 1
+
+An email for identity verification will be sent once email is entered.
+Please follow the authentication instructions provided there and return to this screen when finished or if email has not been received.
+
+
+Enter an email address: fharris@purestorage.com
+An error occurred with CloudAssist authentication!
+
+1) Authenticate via CloudAssist
+2) Authenticate via command line
+3) Restore challenge
+Type the number corresponding to the authentication method you want to use.
+
+Selection: 1
+
+An email for identity verification will be sent once email is entered.
+Please follow the authentication instructions provided there and return to this screen when finished or if email has not been received.
+
+
+Enter an email address: fharris@purestorage.com
+An error occurred with CloudAssist authentication!
+
+1) Authenticate via CloudAssist
+2) Authenticate via command line
+3) Restore challenge
+Type the number corresponding to the authentication method you want to use.
+
+Selection: 2
+Challenge: kid:1 notum arbor ruckle tilde 1586448-19073602-2578398177029795799
+
+Enter response or type 'save' to save challenge for later: 
+Log
+PURE-MCL-03-ct0 login: pureeng
+1) Authenticate via CloudAssist
+2) Authenticate via command line
+3) Restore challenge
+Type the number corresponding to the authentication method you want to use.
+
+Selection: 1
+
+An email for identity verification will be sent once email is entered.
+Please follow the authentication instructions provided there and return to this screen when finished or if email has not been received.
+
+
+Enter an email address: fharris@purestorage.com
+An error occurred with CloudAssist authentication!
+
+1) Authenticate via CloudAssist
+2) Authenticate via command line
+3) Restore challenge
+Type the number corresponding to the authentication method you want to use.
+
+Selection: 2
+Challenge: kid:1 tarrow worry easier divine 1586448-19073602-2578398177029795799
+
+Enter response or type 'save' to save challenge for later: c5b40-cf40c-d1e9c-5e74c-cfce2-4e9b0-f6e68-6dff5-55468-4fd49-4ff54-45c7a-5abf6-5e851-95f94-d6957-065d1-2177a-74e48-3e997-71467-5a9c6-6c7d9-b6761-1cb78-68b
+Successfully authenticated
+
+Mon Aug 11 11:25:28 2025
+Welcome pureeng. This is Purity Version 6.7.2 on FlashArray PURE-MCL-03
+http://www.purestorage.com/
+pureeng@PURE-MCL-03-ct0:~$ sudo su
+     root@PURE-MCL-03-ct0:/var/home/pureeng# puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    healthy  9.10T     -
+CH0.BAY1   SSD    healthy  9.10T     -
+CH0.BAY2   SSD    healthy  9.10T     -
+CH0.BAY3   SSD    healthy  9.10T     -
+CH0.BAY4   SSD    healthy  9.10T     -
+CH0.BAY5   SSD    healthy  9.10T     -
+CH0.BAY6   SSD    healthy  9.10T     -
+CH0.BAY7   SSD    healthy  9.10T     -
+CH0.BAY8   SSD    healthy  9.10T     -
+CH0.BAY9   SSD    healthy  9.10T     -
+CH0.BAY10  SSD    healthy  9.10T     -
+CH0.BAY11  SSD    healthy  9.10T     -
+CH0.BAY12  SSD    healthy  9.10T     -
+CH0.BAY13  SSD    healthy  9.10T     -
+CH0.BAY14  SSD    healthy  9.10T     -
+CH0.BAY15  SSD    healthy  9.10T     -
+CH0.BAY16  SSD    healthy  9.10T     -
+CH0.BAY17  SSD    healthy  9.10T     -
+CH0.BAY18  SSD    healthy  9.10T     -
+CH0.BAY19  SSD    healthy  9.10T     -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  healthy  7.52G     -
+CH0.NVB3   NVRAM  healthy  7.52G     -
+     root@PURE-MCL-03-ct0:/var/home/pureeng# purearray list --space
+Name         Capacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  Total
+PURE-MCL-03  120.52T   100%    0                 0.00     0%                 1.0 to 1        1.0 to 1         0.00    0.00       0.00    0.00    0.00         0.00 
+     root@PURE-MCL-03-ct0:/var/home/pureeng# puremessage lis t--t --open
+     root@PURE-MCL-03-ct0:/var/home/pureeng# ppuresetup show
+##########################################
+#   Welcome to the Purity Setup Wizard   #
+##########################################
+  Physical IP:           10.20.132.37
+  Virtual IP:            10.20.132.36
+  Netmask:               255.255.255.0
+  Gateway:               10.20.132.1
+  DNS Servers:           10.20.100.53,10.20.200.53
+  DNS Domain:            mitre.org
+  NTP Servers:           10.20.100.53,10.20.200.53
+  SMTP Relay Host:       mail.mitre.org
+  SMTP Sender Domain:    mitre.org
+  Alert Email Recipients:flasharray-alerts@purestorage.com,storageteam@mitre.org
+  HTTP proxy:            
+  Capacity Limit:        
+  Capacity Limit Target: 
+  Physical IP:           10.20.132.38
+  Netmask:               255.255.255.0
+  Gateway:               10.20.132.1
+CONFIG_TASK_COMPLETED:CONFIG_TASK_PURESETUP_EXITED
+     root@PURE-MCL-03-ct0:/var/home/pureeng# ping 10.20.132.1
+PING 10.20.132.1 (10.20.132.1) 56(84) bytes of data.
+^C
+--- 10.20.132.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2046ms
+
+     root@PURE-MCL-03-ct0:/var/home/pureeng# ssh peer
+Last login: Mon Oct 14 13:06:05 2024 from 10.125.0.1
+
+Mon Aug 11 11:23:53 2025
+Welcome root. This is Purity Version 6.7.2 on FlashArray PURE-MCL-03
+http://www.purestorage.com/
+     root@PURE-MCL-03-ct1:~# ping 10.20.132.1
+PING 10.20.132.1 (10.20.132.1) 56(84) bytes of data.
+^C
+--- 10.20.132.1 ping statistics ---
+2 packets transmitted, 0 received, 100% packet loss, time 1047ms
+
+     root@PURE-MCL-03-ct1:~# purerray list --controller
+-bash: purerray: command not found
+     root@PURE-MCL-03-ct1:~# purearray list --controller
+Name  Type              Mode       Model     Version  Status  Current Mode Since       Internal Details
+CT0   array_controller  primary    FA-X90R4  6.7.2    ready   2025-08-11 11:08:52 EDT  
+CT1   array_controller  secondary  FA-X90R4  6.7.2    ready   2025-08-11 11:12:37 EDT  
+     root@PURE-MCL-03-ct1:~# purehw list
+Name       Status  Identify  Slot  Index  Speed      Temperature  Voltage  Details
+CH0        ok      off       -     0      -          -            -        -
+CH0.BAY0   ok      off       -     0      -          -            -        -
+CH0.BAY1   ok      off       -     1      -          -            -        -
+CH0.BAY2   ok      off       -     2      -          -            -        -
+CH0.BAY3   ok      off       -     3      -          -            -        -
+CH0.BAY4   ok      off       -     4      -          -            -        -
+CH0.BAY5   ok      off       -     5      -          -            -        -
+CH0.BAY6   ok      off       -     6      -          -            -        -
+CH0.BAY7   ok      off       -     7      -          -            -        -
+CH0.BAY8   ok      off       -     8      -          -            -        -
+CH0.BAY9   ok      off       -     9      -          -            -        -
+CH0.BAY10  ok      off       -     10     -          -            -        -
+CH0.BAY11  ok      off       -     11     -          -            -        -
+CH0.BAY12  ok      off       -     12     -          -            -        -
+CH0.BAY13  ok      off       -     13     -          -            -        -
+CH0.BAY14  ok      off       -     14     -          -            -        -
+CH0.BAY15  ok      off       -     15     -          -            -        -
+CH0.BAY16  ok      off       -     16     -          -            -        -
+CH0.BAY17  ok      off       -     17     -          -            -        -
+CH0.BAY18  ok      off       -     18     -          -            -        -
+CH0.BAY19  ok      off       -     19     -          -            -        -
+CH0.NVB0   ok      off       -     0      -          -            -        -
+CH0.NVB1   ok      off       -     1      -          -            -        -
+CH0.NVB2   ok      off       -     2      -          -            -        -
+CH0.NVB3   ok      off       -     3      -          -            -        -
+CH0.PWR0   ok      -         -     0      -          -            204 V    -
+CH0.PWR1   ok      -         -     1      -          -            204 V    -
+CH0.TMP0   ok      -         -     0      -          21 C         -        -
+CT0        ok      off       -     0      -          -            -        -
+CT0.DCA4   ok      -         4     4      -          -            -        -
+CT0.ETH0   ok      -         -     0      0.00 b/s   -            -        -
+CT0.ETH1   ok      -         -     1      0.00 b/s   -            -        -
+CT0.ETH2   ok      -         -     2      0.00 b/s   -            -        -
+CT0.ETH3   ok      -         -     3      0.00 b/s   -            -        -
+CT0.ETH4   ok      -         -     4      1.00 Gb/s  -            -        -
+CT0.ETH5   ok      -         -     5      0.00 b/s   -            -        -
+CT0.FAN0   ok      -         -     0      -          -            -        -
+CT0.FAN1   ok      -         -     1      -          -            -        -
+CT0.FAN2   ok      -         -     2      -          -            -        -
+CT0.FAN3   ok      -         -     3      -          -            -        -
+CT0.FAN4   ok      -         -     4      -          -            -        -
+CT0.FAN5   ok      -         -     5      -          -            -        -
+CT0.FC4    ok      -         1     4      0.00 b/s   -            -        -
+CT0.FC5    ok      -         1     5      0.00 b/s   -            -        -
+CT0.FC6    ok      -         1     6      0.00 b/s   -            -        -
+CT0.FC7    ok      -         1     7      0.00 b/s   -            -        -
+CT0.FC12   ok      -         3     12     0.00 b/s   -            -        -
+CT0.FC13   ok      -         3     13     0.00 b/s   -            -        -
+CT0.TMP0   ok      -         -     0      -          37 C         -        -
+CT0.TMP1   ok      -         -     1      -          37 C         -        -
+CT0.TMP2   ok      -         -     2      -          58 C         -        -
+CT0.TMP3   ok      -         -     3      -          49 C         -        -
+CT0.TMP4   ok      -         -     4      -          47 C         -        -
+CT0.TMP5   ok      -         -     5      -          46 C         -        -
+CT0.TMP6   ok      -         -     6      -          27 C         -        -
+CT0.TMP7   ok      -         -     7      -          30 C         -        -
+CT0.TMP8   ok      -         -     8      -          52 C         -        -
+CT0.TMP9   ok      -         -     9      -          40 C         -        -
+CT0.TMP10  ok      -         -     10     -          39 C         -        -
+CT0.TMP11  ok      -         -     11     -          38 C         -        -
+CT0.TMP12  ok      -         -     12     -          36 C         -        -
+CT0.TMP13  ok      -         -     13     -          39 C         -        -
+CT0.TMP14  ok      -         -     14     -          38 C         -        -
+CT0.TMP15  ok      -         -     15     -          37 C         -        -
+CT0.TMP16  ok      -         -     16     -          37 C         -        -
+CT0.TMP17  ok      -         -     17     -          39 C         -        -
+CT0.TMP18  ok      -         -     18     -          38 C         -        -
+CT0.TMP19  ok      -         -     19     -          38 C         -        -
+CT0.TMP20  ok      -         -     20     -          38 C         -        -
+CT0.TMP21  ok      -         -     21     -          41 C         -        -
+CT0.TMP22  ok      -         -     22     -          41 C         -        -
+CT0.TMP23  ok      -         -     23     -          40 C         -        -
+CT0.TMP24  ok      -         -     24     -          40 C         -        -
+CT1        ok      off       -     1      -          -            -        -
+CT1.DCA4   ok      -         4     4      -          -            -        -
+CT1.ETH0   ok      -         -     0      0.00 b/s   -            -        -
+CT1.ETH1   ok      -         -     1      0.00 b/s   -            -        -
+CT1.ETH2   ok      -         -     2      0.00 b/s   -            -        -
+CT1.ETH3   ok      -         -     3      0.00 b/s   -            -        -
+CT1.ETH4   ok      -         -     4      1.00 Gb/s  -            -        -
+CT1.ETH5   ok      -         -     5      0.00 b/s   -            -        -
+CT1.FAN0   ok      -         -     0      -          -            -        -
+CT1.FAN1   ok      -         -     1      -          -            -        -
+CT1.FAN2   ok      -         -     2      -          -            -        -
+CT1.FAN3   ok      -         -     3      -          -            -        -
+CT1.FAN4   ok      -         -     4      -          -            -        -
+CT1.FAN5   ok      -         -     5      -          -            -        -
+CT1.FC4    ok      -         1     4      0.00 b/s   -            -        -
+CT1.FC5    ok      -         1     5      0.00 b/s   -            -        -
+CT1.FC6    ok      -         1     6      0.00 b/s   -            -        -
+CT1.FC7    ok      -         1     7      0.00 b/s   -            -        -
+CT1.FC12   ok      -         3     12     0.00 b/s   -            -        -
+CT1.FC13   ok      -         3     13     0.00 b/s   -            -        -
+CT1.TMP0   ok      -         -     0      -          37 C         -        -
+CT1.TMP1   ok      -         -     1      -          37 C         -        -
+CT1.TMP2   ok      -         -     2      -          56 C         -        -
+CT1.TMP3   ok      -         -     3      -          49 C         -        -
+CT1.TMP4   ok      -         -     4      -          46 C         -        -
+CT1.TMP5   ok      -         -     5      -          44 C         -        -
+CT1.TMP6   ok      -         -     6      -          27 C         -        -
+CT1.TMP7   ok      -         -     7      -          30 C         -        -
+CT1.TMP8   ok      -         -     8      -          53 C         -        -
+CT1.TMP9   ok      -         -     9      -          41 C         -        -
+CT1.TMP10  ok      -         -     10     -          40 C         -        -
+CT1.TMP11  ok      -         -     11     -          39 C         -        -
+CT1.TMP12  ok      -         -     12     -          37 C         -        -
+CT1.TMP13  ok      -         -     13     -          39 C         -        -
+CT1.TMP14  ok      -         -     14     -          38 C         -        -
+CT1.TMP15  ok      -         -     15     -          38 C           pure
+     root@PURE-MCL-03-ct1:~# purearray test pinghome
+^C
+     root@PURE-MCL-03-ct1:~# exit
+logout
+     root@PURE-MCL-03-ct0:/var/home/pureeng# exit
+exit
+pureeng@PURE-MCL-03-ct0:~$ exit
+logout
+
+PURE-MCL-03-ct0 login: 

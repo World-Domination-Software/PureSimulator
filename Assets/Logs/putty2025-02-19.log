@@ -1,0 +1,2296 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.02.19 11:19:31 =~=~=~=~=~=~=~=~=~=~=~=
+
+lynpure01-ct0 login: pureeng
+1) Authenticate via CloudAssist
+2) Authenticate via command line
+3) Restore challenge
+Type the number corresponding to the authentication method you want to use.
+
+Selection: 1
+
+An email for identity verification will be sent once email is entered.
+Please follow the authentication instructions provided there and return to this screen when finished or if email has not been received.
+
+
+Enter an email address: fharris# @purestorage.com
+Successfully authenticated
+Last login: Fri Jan 12 12:02:20 CST 2024 from 10.170.60.185 on pts/2
+
+Wed Feb 19 10:20:13 2025
+Welcome pureeng. This is Purity Version 6.5.8 on FlashArray lynpure01
+http://www.purestorage.com/
+pureeng@lynpure01-ct0:~$ 
+pureeng@lynpure01-ct0:~$ purealert tag --timeout 120m --maintenance   
+
+Name         Created                  Expires
+maintenance  2025-02-19 10:20:45 CST  2025-02-19 12:20:45 CST
+pureeng@lynpure01-ct0:~$ 
+pureeng@lynpure01-ct0:~$ sudo su
+     root@lynpure01-ct0:/var/home/pureeng# purearray list --controller
+Name     Type              Mode       Model     Version  Status  Internal Details
+CT0      array_controller  primary    FA-X70R3  6.5.8    ready   
+CT1      array_controller  secondary  FA-X70R3  6.5.8    ready   
+SH9.SC0  shelf_controller  -          DFSC1     2.2.1    -       -
+SH9.SC1  shelf_controller  -          DFSC1     2.2.1    -       -
+     root@lynpure01-ct0:/var/home/pureeng# puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    healthy  3.49T     -
+CH0.BAY1   SSD    healthy  3.49T     -
+CH0.BAY2   SSD    healthy  3.49T     -
+CH0.BAY3   SSD    healthy  3.49T     -
+CH0.BAY4   SSD    healthy  3.49T     -
+CH0.BAY5   SSD    healthy  3.49T     -
+CH0.BAY6   SSD    healthy  3.49T     -
+CH0.BAY7   SSD    healthy  3.49T     -
+CH0.BAY8   SSD    healthy  3.49T     -
+CH0.BAY9   SSD    healthy  3.49T     -
+CH0.BAY10  SSD    healthy  1.86T     -
+CH0.BAY11  SSD    healthy  1.86T     -
+CH0.BAY12  SSD    healthy  1.86T     -
+CH0.BAY13  SSD    healthy  1.86T     -
+CH0.BAY14  SSD    healthy  1.86T     -
+CH0.BAY15  SSD    healthy  1.86T     -
+CH0.BAY16  SSD    healthy  1.86T     -
+CH0.BAY17  SSD    healthy  1.86T     -
+CH0.BAY18  SSD    healthy  1.86T     -
+CH0.BAY19  SSD    healthy  1.86T     -
+CH0.NVB0   NVRAM  healthy  7.00G     -
+CH0.NVB1   NVRAM  healthy  7.00G     -
+CH0.NVB2   NVRAM  healthy  7.00G     -
+CH0.NVB3   NVRAM  healthy  7.00G     -
+SH0.BAY0   SSD    healthy  1.74T     -
+SH0.BAY1   SSD    healthy  1.74T     -
+SH0.BAY2   SSD    healthy  1.74T     -
+SH0.BAY3   SSD    healthy  1.74T     -
+SH0.BAY4   SSD    healthy  1.74T     -
+SH0.BAY5   SSD    healthy  1.74T     -
+SH0.BAY6   SSD    healthy  1.74T     -
+SH0.BAY7   SSD    healthy  1.74T     -
+SH0.BAY8   SSD    healthy  1.74T     -
+SH0.BAY9   SSD    healthy  1.74T     -
+SH0.BAY10  SSD    healthy  1.74T     -
+SH0.BAY11  SSD    healthy  1.74T     -
+SH0.BAY12  SSD    healthy  1.74T     -
+SH0.BAY13  SSD    healthy  1.74T     -
+SH0.BAY14  SSD    healthy  1.74T     -
+SH0.BAY15  SSD    healthy  1.74T     -
+SH0.BAY16  SSD    healthy  1.74T     -
+SH0.BAY17  SSD    healthy  1.74T     -
+SH0.BAY18  SSD    healthy  1.74T     -
+SH0.BAY19  SSD    healthy  1.74T     -
+SH0.BAY20  SSD    healthy  1.74T     -
+SH0.BAY21  SSD    healthy  1.74T     -
+SH0.BAY22  SSD    healthy  1.74T     -
+SH0.BAY23  SSD    healthy  1.74T     -
+SH1.BAY0   SSD    healthy  1.74T     -
+SH1.BAY1   SSD    healthy  1.74T     -
+SH1.BAY2   SSD    healthy  1.74T     -
+SH1.BAY3   SSD    healthy  1.74T     -
+SH1.BAY4   SSD    healthy  1.74T     -
+SH1.BAY5   SSD    healthy  1.74T     -
+SH1.BAY6   SSD    healthy  1.74T     -
+SH1.BAY7   SSD    healthy  1.74T     -
+SH1.BAY8   SSD    healthy  1.74T     -
+SH1.BAY9   SSD    healthy  1.74T     -
+SH1.BAY10  SSD    healthy  1.74T     -
+SH1.BAY11  SSD    healthy  1.74T     -
+SH1.BAY12  -      unused   0.00      -
+SH1.BAY13  -      unused   0.00      -
+SH1.BAY14  -      unused   0.00      -
+SH1.BAY15  -      unused   0.00      -
+SH1.BAY16  -      unused   0.00      -
+SH1.BAY17  -      unused   0.00      -
+SH1.BAY18  -      unused   0.00      -
+SH1.BAY19  -      unused   0.00      -
+SH1.BAY20  -      unused   0.00      -
+SH1.BAY21  -      unused   0.00      -
+SH1.BAY22  -      unused   0.00      -
+SH1.BAY23  -      unused   0.00      -
+SH9.BAY0   SSD    healthy  1.92T     -
+SH9.BAY1   SSD    healthy  1.92T     -
+SH9.BAY2   SSD    healthy  1.92T     -
+SH9.BAY3   SSD    healthy  1.92T     -
+SH9.BAY4   SSD    healthy  1.92T     -
+SH9.BAY5   SSD    healthy  1.92T     -
+SH9.BAY6   SSD    healthy  1.92T     -
+SH9.BAY7   SSD    healthy  1.92T     -
+SH9.BAY8   SSD    healthy  1.92T     -
+SH9.BAY9   SSD    healthy  1.92T     -
+SH9.BAY10  -      unused   0.00      -
+SH9.BAY11  -      unused   0.00      -
+SH9.BAY12  -      unused   0.00      -
+SH9.BAY13  -      unused   0.00      -
+SH9.BAY14  -      unused   0.00      -
+SH9.BAY15  -      unused   0.00      -
+SH9.BAY16  -      unused   0.00      -
+SH9.BAY17  -      unused   0.00      -
+SH9.BAY18  -      unused   0.00      -
+SH9.BAY19  -      unused   0.00      -
+SH9.BAY20  -      unused   0.00      -
+SH9.BAY21  -      unused   0.00      -
+SH9.BAY22  -      unused   0.00      -
+SH9.BAY23  -      unused   0.00      -
+SH9.BAY24  -      unused   0.00      -
+SH9.BAY25  -      unused   0.00      -
+SH9.BAY26  -      unused   0.00      -
+SH9.BAY27  -      unused   0.00      -
+     root@lynpure01-ct0:/var/home/pureeng# puremessage list --open
+     root@lynpure01-ct0:/var/home/pureeng# puremessage list --open --hidden
+ID        Time                     Severity  Category  Code  Component  Name          Event             Expected  Actual  Details
+10205939  2025-02-12 02:48:03 CST  hidden    array     68    host       TTCMS9018-2   misconfiguration  -         -       
+10205940  2025-02-12 02:48:03 CST  hidden    array     68    host       TTCMS9018-1   misconfiguration  -         -       
+10205941  2025-02-12 02:48:03 CST  hidden    array     68    host       TTCMS9018S-2  misconfiguration  -         -       
+10205942  2025-02-12 02:48:04 CST  hidden    array     68    host       TTCMS9018S-1  misconfiguration  -         -       
+10205943  2025-02-12 02:48:04 CST  hidden    array     68    host       LYNMS9013D-2  misconfiguration  -         -       
+10205944  2025-02-12 02:48:04 CST  hidden    array     68    host       LYNMS9013D-1  misconfiguration  -         -       
+10205945  2025-02-12 02:48:04 CST  hidden    array     68    host       LYNMS9012-2   misconfiguration  -         -       
+10205946  2025-02-12 02:48:04 CST  hidden    array     68    host       LYNMS9012-1   misconfiguration  -         -       
+10205947  2025-02-12 02:48:04 CST  hidden    array     68    host       LYNMS9012D-2  misconfiguration  -         -       
+10205948  2025-02-12 02:48:04 CST  hidden    array     68    host       LYNMS9012D-1  misconfiguration  -         -       
+10205949  2025-02-12 02:48:04 CST  hidden    array     68    host       ABIMS9001x-2  misconfiguration  -         -       
+10205950  2025-02-12 02:48:04 CST  hidden    array     68    host       LYNMS9662-2   misconfiguration  -         -       
+10205951  2025-02-12 02:48:04 CST  hidden    array     68    host       LYNMS9662-1   misconfiguration  -         -       
+10205952  2025-02-12 02:48:04 CST  hidden    array     68    host       LYNMS9663-2   misconfiguration  -         -       
+10205953  2025-02-12 02:48:04 CST  hidden    array     68    host       LYNMS9663-1   misconfiguration  -         -       
+10205954  2025-02-12 02:48:04 CST  hidden    array     68    host       LYNMS9661-2   misconfiguration  -         -       
+10205955  2025-02-12 02:48:04 CST  hidden    array     68    host       LYNMS9661-1   misconfiguration  -         -       
+10205956  2025-02-12 02:48:04 CST  hidden    array     68    host       LYNMS9660-2   misconfiguration  -         -       
+10205957  2025-02-12 02:48:05 CST  hidden    array     68    host       LYNMS9660-1   misconfiguration  -         -       
+10205958  2025-02-12 02:48:05 CST  hidden    array     68    host       TTCMS9585-2   misconfiguration  -         -       
+10205959  2025-02-12 02:48:05 CST  hidden    array     68    host       TTCMS9585-1   misconfiguration  -         -       
+10205960  2025-02-12 02:48:05 CST  hidden    array     68    host       TTCMS9585S-2  misconfiguration  -         -       
+10205961  2025-02-12 02:48:05 CST  hidden    array     68    host       TTCMS9585S-1  misconfiguration  -         -       
+10205962  2025-02-12 02:48:05 CST  hidden    array     68    host       TTCMS9257-2   misconfiguration  -         -       
+10205963  2025-02-12 02:48:05 CST  hidden    array     68    host       TTCMS9257-1   misconfiguration  -         -       
+10205964  2025-02-12 02:48:05 CST  hidden    array     68    host       TTCMS9256-2   misconfiguration  -         -       
+10205965  2025-02-12 02:48:05 CST  hidden    array     68    host       TTCMS9256-1   misconfiguration  -         -       
+10205966  2025-02-12 02:48:05 CST  hidden    array     68    host       TTCMS9257S-2  misconfiguration  -         -       
+10205967  2025-02-12 02:48:05 CST  hidden    array     68    host       TTCMS9257S-1  misconfiguration  -         -       
+10205968  2025-02-12 02:48:05 CST  hidden    array     68    host       TTCMS9256S-2  misconfiguration  -         -       
+10205969  2025-02-12 02:48:05 CST  hidden    array     68    host       TTCMS9256S-1  misconfiguration  -         -       
+10205970  2025-02-12 02:48:05 CST  hidden    array     68    host       LYNMS9205-2   misconfiguration  -         -       
+10205971  2025-02-12 02:48:05 CST  hidden    array     68    host       LYNMS9205-1   misconfiguration  -         -       
+10205972  2025-02-12 02:48:05 CST  hidden    array     68    host       LYNMS9205S-2  misconfiguration  -         -       
+10205973  2025-02-12 02:48:05 CST  hidden    array     68    host       TTCMS9484-1   misconfiguration  -         -       
+10205974  2025-02-12 02:48:05 CST  hidden    array     68    host       TTCMS9484S-2  misconfiguration  -         -       
+10205975  2025-02-12 02:48:06 CST  hidden    array     68    host       TTCMS9484S-1  misconfiguration  -         -       
+10205976  2025-02-12 02:48:06 CST  hidden    array     68    host       TTCMS9217-2   misconfiguration  -         -       
+10205977  2025-02-12 02:48:06 CST  hidden    array     68    host       TTCMS9217-1   misconfiguration  -         -       
+10205978  2025-02-12 02:48:06 CST  hidden    array     68    host       TTCMS9258-2   misconfiguration  -         -       
+10205979  2025-02-12 02:48:06 CST  hidden    array     68    host       TTCMS9258-1   misconfiguration  -         -       
+10205980  2025-02-12 02:48:06 CST  hidden    array     68    host       TTCMS9217S-2  misconfiguration  -         -       
+10205981  2025-02-12 02:48:06 CST  hidden    array     68    host       TTCMS9217S-1  misconfiguration  -         -       
+10205982  2025-02-12 02:48:06 CST  hidden    array     68    host       TTCMS9258S-2  misconfiguration  -         -       
+10205983  2025-02-12 02:48:06 CST  hidden    array     68    host       TTCMS9258S-1  misconfiguration  -         -       
+10205984  2025-02-12 02:48:06 CST  hidden    array     68    host       TTCMS929-2    misconfiguration  -         -       
+10205985  2025-02-12 02:48:06 CST  hidden    array     68    host       TTCMS929-1    misconfiguration  -         -       
+10205986  2025-02-12 02:48:06 CST  hidden    array     68    host       LYNMS9850S-2  misconfiguration  -         -       
+10205987  2025-02-12 02:48:06 CST  hidden    array     68    host       LYNMS9850S-1  misconfiguration  -         -       
+10205988  2025-02-12 02:48:06 CST  hidden    array     68    host       LYNMS9850-2   misconfiguration  -         -       
+10205989  2025-02-12 02:48:06 CST  hidden    array     68    host       LYNMS9850-1   misconfiguration  -         -       
+10205990  2025-02-12 02:48:07 CST  hidden    array     68    host       TTCMS931S-2   misconfiguration  -         -       
+10205991  2025-02-12 02:48:07 CST  hidden    array     68    host       TTCMS931S-1   misconfiguration  -         -       
+10205992  2025-02-12 02:48:07 CST  hidden    array     68    host       TTCMS931-2    misconfiguration  -         -       
+10205993  2025-02-12 02:48:07 CST  hidden    array     68    host       TTCMS931-1    misconfiguration  -         -       
+10205994  2025-02-12 02:48:07 CST  hidden    array     68    host       TTCMS928-2    misconfiguration  -         -       
+10205995  2025-02-12 02:48:07 CST  hidden    array     68    host       TTCMS928S-2   misconfiguration  -         -       
+10205996  2025-02-12 02:48:07 CST  hidden    array     68    host       TTCMS928S-1   misconfiguration  -         -       
+10205997  2025-02-12 02:48:07 CST  hidden    array     68    host       TTCMS928-1    misconfiguration  -         -       
+10205998  2025-02-12 02:48:07 CST  hidden    array     68    host       TTCMS9272-2   misconfiguration  -         -       
+10205999  2025-02-12 02:48:07 CST  hidden    array     68    host       TTCMS9272-1   misconfiguration  -         -       
+10206000  2025-02-12 02:48:07 CST  hidden    array     68    host       TTCMS9271-2   misconfiguration  -         -       
+10206001  2025-02-12 02:48:07 CST  hidden    array     68    host       TTCMS9271-1   misconfiguration  -         -       
+10206002  2025-02-12 02:48:07 CST  hidden    array     68    host       TTCMS9272S-2  misconfiguration  -         -       
+10206003  2025-02-12 02:48:07 CST  hidden    array     68    host       TTCMS9272S-1  misconfiguration  -         -       
+10206004  2025-02-12 02:48:07 CST  hidden    array     68    host       TTCMS9271S-2  misconfiguration  -         -       
+10206005  2025-02-12 02:48:07 CST  hidden    array     68    host       TTCMS9271S-1  misconfiguration  -         -       
+10206006  2025-02-12 02:48:07 CST  hidden    array     68    host       LYNMS9530S-1  misconfiguration  -         -       
+10206007  2025-02-12 02:48:07 CST  hidden    array     68    host       LYNMS9216S-1  misconfiguration  -         -       
+10206008  2025-02-12 02:48:08 CST  hidden    array     68    host       LYNMS9203S-2  misconfiguration  -         -       
+10206009  2025-02-12 02:48:08 CST  hidden    array     68    host       LYNMS9203S-1  misconfiguration  -         -       
+10206010  2025-02-12 02:48:08 CST  hidden    array     68    host       TTCMS9003S-2  misconfiguration  -         -       
+     root@lynpure01-ct0:/var/home/pureeng# puremessage list --open --hiddenstorage_view.py config && ssh peer storage_view.py config 
+Start time: 2025-02-19 10:22:00
+
+Command line: ['/opt/Purity/bin/storage_view.py', 'config']
+Version: 0.999.1
+Working at ct0 to look over cables between ct0 and shelves
+
+Slot listing:
+ CT    Slot#   Type     Vendor       Model        FW Rev       Tracer       Assembly    
+----------------------------------------------------------------------------------------
+ ct0     15     SAS   LSI Logic   SAS_HGA-24i  14.00.03.00  PPPCFJ221910  PSO400051003  
+ ct0    201     SAS   LSI Logic   SAS9305-16e  13.00.00.00   SP92917117  03-25704-02005 
+ ct0    eth6    ETH    Mellanox     MT27710    14.28.1002 (PST0020110036)                             
+ ct0    eth7    ETH    Mellanox     MT27710    14.28.1002 (PST0020110036)                             
+ ct0    eth8    ETH    Mellanox     MT27710    14.28.1002 (PST0020110036)                             
+ ct0    eth9    ETH    Mellanox     MT27710    14.28.1002 (PST0020110036)                             
+
+Slot summary information:
+-------------------------
+ct0.eth7. (eth7 )] *
+
+ct0.eth9. (eth9 )] *
+
+ct0.SAS6  ( 201 0)] <---> [SAS0 (A) SH00.0    B]*
+                              \        C]*
+
+ct0.SAS4  ( 201 2)] <---> [SAS3 (C) SH00.1    B]*
+                              \        A]*
+
+ct0.SAS5  ( 201 3)] <---> [SAS2 (C) SH01.0    B]*
+                              \        A]*
+
+ct0.SAS7  ( 201 1)] <---> [SAS5 (A) SH01.1    B]*
+                              \        C]*
+
+ct0.eth6. (eth6 )] <---> [0.eth0 (eth0) SH9 .0     ]
+
+ct0.eth8. (eth8 )] <---> [1.eth0 (eth0) SH9 .1     ]
+
+Configuration status
+--------------------
+Configuration check started for FA-X70R3
+
+SUCCESS: No errors detected.
+
+End time: 2025-02-19 10:23:44
+Start time: 2025-02-19 10:23:46
+
+Command line: ['/opt/Purity/bin/storage_view.py', 'config']
+Version: 0.999.1
+Working at ct1 to look over cables between ct1 and shelves
+
+Slot listing:
+ CT    Slot#   Type     Vendor       Model        FW Rev       Tracer       Assembly    
+----------------------------------------------------------------------------------------
+ ct1     15     SAS   LSI Logic   SAS_HGA-24i  14.00.03.00  PPPCFJ222000  PSO400051003  
+ ct1    201     SAS   LSI Logic   SAS9305-16e  13.00.00.00   SP92837642  03-25704-02005 
+ ct1    eth6    ETH    Mellanox     MT27710    14.28.1002 (PST0020110036)                             
+ ct1    eth7    ETH    Mellanox     MT27710    14.28.1002 (PST0020110036)                             
+ ct1    eth8    ETH    Mellanox     MT27710    14.28.1002 (PST0020110036)                             
+ ct1    eth9    ETH    Mellanox     MT27710    14.28.1002 (PST0020110036)                             
+
+Slot summary information:
+-------------------------
+ct1.eth7. (eth7 )] *
+
+ct1.eth9. (eth9 )] *
+
+ct1.SAS5  ( 201 3)] <---> [SAS2 (C) SH00.0    B]*
+                              \        A]*
+
+ct1.SAS7  ( 201 1)] <---> [SAS5 (A) SH00.1    B]*
+                              \        C]*
+
+ct1.SAS6  ( 201 0)] <---> [SAS0 (A) SH01.0    B]*
+                              \        C]*
+
+ct1.SAS4  ( 201 2)] <---> [SAS3 (C) SH01.1    B]*
+                              \        A]*
+
+ct1.eth6. (eth6 )] <---> [0.eth2 (eth2) SH9 .0     ]
+
+ct1.eth8. (eth8 )] <---> [1.eth2 (eth2) SH9 .1     ]
+
+Configuration status
+--------------------
+Configuration check started for FA-X70R3
+
+SUCCESS: No errors detected.
+
+End time: 2025-02-19 10:23:55
+     root@lynpure01-ct0:/var/home/pureeng# puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    healthy  3.49T     -
+CH0.BAY1   SSD    healthy  3.49T     -
+CH0.BAY2   SSD    healthy  3.49T     -
+CH0.BAY3   SSD    healthy  3.49T     -
+CH0.BAY4   SSD    healthy  3.49T     -
+CH0.BAY5   SSD    healthy  3.49T     -
+CH0.BAY6   SSD    healthy  3.49T     -
+CH0.BAY7   SSD    healthy  3.49T     -
+CH0.BAY8   SSD    healthy  3.49T     -
+CH0.BAY9   SSD    healthy  3.49T     -
+CH0.BAY10  SSD    healthy  1.86T     -
+CH0.BAY11  SSD    healthy  1.86T     -
+CH0.BAY12  SSD    healthy  1.86T     -
+CH0.BAY13  SSD    healthy  1.86T     -
+CH0.BAY14  SSD    healthy  1.86T     -
+CH0.BAY15  SSD    healthy  1.86T     -
+CH0.BAY16  SSD    healthy  1.86T     -
+CH0.BAY17  SSD    healthy  1.86T     -
+CH0.BAY18  SSD    healthy  1.86T     -
+CH0.BAY19  SSD    healthy  1.86T     -
+CH0.NVB0   NVRAM  healthy  7.00G     -
+CH0.NVB1   NVRAM  healthy  7.00G     -
+CH0.NVB2   NVRAM  healthy  7.00G     -
+CH0.NVB3   NVRAM  healthy  7.00G     -
+SH0.BAY0   SSD    healthy  1.74T     -
+SH0.BAY1   SSD    healthy  1.74T     -
+SH0.BAY2   SSD    healthy  1.74T     -
+SH0.BAY3   SSD    healthy  1.74T     -
+SH0.BAY4   SSD    healthy  1.74T     -
+SH0.BAY5   SSD    healthy  1.74T     -
+SH0.BAY6   SSD    healthy  1.74T     -
+SH0.BAY7   SSD    healthy  1.74T     -
+SH0.BAY8   SSD    healthy  1.74T     -
+SH0.BAY9   SSD    healthy  1.74T     -
+SH0.BAY10  SSD    healthy  1.74T     -
+SH0.BAY11  SSD    healthy  1.74T     -
+SH0.BAY12  SSD    healthy  1.74T     -
+SH0.BAY13  SSD    healthy  1.74T     -
+SH0.BAY14  SSD    healthy  1.74T     -
+SH0.BAY15  SSD    healthy  1.74T     -
+SH0.BAY16  SSD    healthy  1.74T     -
+SH0.BAY17  SSD    healthy  1.74T     -
+SH0.BAY18  SSD    healthy  1.74T     -
+SH0.BAY19  SSD    healthy  1.74T     -
+SH0.BAY20  SSD    healthy  1.74T     -
+SH0.BAY21  SSD    healthy  1.74T     -
+SH0.BAY22  SSD    healthy  1.74T     -
+SH0.BAY23  SSD    healthy  1.74T     -
+SH1.BAY0   SSD    healthy  1.74T     -
+SH1.BAY1   SSD    healthy  1.74T     -
+SH1.BAY2   SSD    healthy  1.74T     -
+SH1.BAY3   SSD    healthy  1.74T     -
+SH1.BAY4   SSD    healthy  1.74T     -
+SH1.BAY5   SSD    healthy  1.74T     -
+SH1.BAY6   SSD    healthy  1.74T     -
+SH1.BAY7   SSD    healthy  1.74T     -
+SH1.BAY8   SSD    healthy  1.74T     -
+SH1.BAY9   SSD    healthy  1.74T     -
+SH1.BAY10  SSD    healthy  1.74T     -
+SH1.BAY11  SSD    healthy  1.74T     -
+SH1.BAY12  -      unused   0.00      -
+SH1.BAY13  -      unused   0.00      -
+SH1.BAY14  -      unused   0.00      -
+SH1.BAY15  -      unused   0.00      -
+SH1.BAY16  -      unused   0.00      -
+SH1.BAY17  -      unused   0.00      -
+SH1.BAY18  -      unused   0.00      -
+SH1.BAY19  -      unused   0.00      -
+SH1.BAY20  -      unused   0.00      -
+SH1.BAY21  -      unused   0.00      -
+SH1.BAY22  -      unused   0.00      -
+SH1.BAY23  -      unused   0.00      -
+SH9.BAY0   SSD    healthy  1.92T     -
+SH9.BAY1   SSD    healthy  1.92T     -
+SH9.BAY2   SSD    healthy  1.92T     -
+SH9.BAY3   SSD    healthy  1.92T     -
+SH9.BAY4   SSD    healthy  1.92T     -
+SH9.BAY5   SSD    healthy  1.92T     -
+SH9.BAY6   SSD    healthy  1.92T     -
+SH9.BAY7   SSD    healthy  1.92T     -
+SH9.BAY8   SSD    healthy  1.92T     -
+SH9.BAY9   SSD    healthy  1.92T     -
+SH9.BAY10  -      unused   0.00      -
+SH9.BAY11  -      unused   0.00      -
+SH9.BAY12  -      unused   0.00      -
+SH9.BAY13  -      unused   0.00      -
+SH9.BAY14  -      unused   0.00      -
+SH9.BAY15  -      unused   0.00      -
+SH9.BAY16  -      unused   0.00      -
+SH9.BAY17  -      unused   0.00      -
+SH9.BAY18  -      unused   0.00      -
+SH9.BAY19  -      unused   0.00      -
+SH9.BAY20  -      unused   0.00      -
+SH9.BAY21  -      unused   0.00      -
+SH9.BAY22  -      unused   0.00      -
+SH9.BAY23  -      unused   0.00      -
+SH9.BAY24  -      unused   0.00      -
+SH9.BAY25  -      unused   0.00      -
+SH9.BAY26  -      unused   0.00      -
+SH9.BAY27  -      unused   0.00      -
+     root@lynpure01-ct0:/var/home/pureeng# purearray list --controller
+Name     Type              Mode       Model     Version  Status  Internal Details
+CT0      array_controller  primary    FA-X70R3  6.5.8    ready   
+CT1      array_controller  secondary  FA-X70R3  6.5.8    ready   
+SH9.SC0  shelf_controller  -          DFSC1     2.2.1    -       -
+SH9.SC1  shelf_controller  -          DFSC1     2.2.1    -       -
+     root@lynpure01-ct0:/var/home/pureeng# pupuredrive list -SH1.BAY10
+usage: puredrive [-h]
+                 {admit,disable,enable,erase,evac,global,list,reset,restart}
+                 ...
+puredrive: error: unrecognized arguments: -SH1.BAY10
+     root@lynpure01-ct0:/var/home/pureeng# puredrive list -SH1.BAY10-SH1.BAY10-SH1.BAY10P-SH1.BAY10A-SH1.BAY10C-SH1.BAY10K-SH1.BAY10-SH1.BAY10-SH1.BAY10-SH1.BAY10-SH1.BAY10p-SH1.BAY10a-SH1.BAY10c-SH1.BAY10k-SH1.BAY10 -SH1.BAY10SH1.BAY10
+Name       Type  Status   Capacity  Details
+SH1.BAY0   SSD   healthy  1.74T     -
+SH1.BAY1   SSD   healthy  1.74T     -
+SH1.BAY2   SSD   healthy  1.74T     -
+SH1.BAY3   SSD   healthy  1.74T     -
+SH1.BAY4   SSD   healthy  1.74T     -
+SH1.BAY5   SSD   healthy  1.74T     -
+SH1.BAY6   SSD   healthy  1.74T     -
+SH1.BAY7   SSD   healthy  1.74T     -
+SH1.BAY8   SSD   healthy  1.74T     -
+SH1.BAY9   SSD   healthy  1.74T     -
+SH1.BAY10  SSD   healthy  1.74T     -
+SH1.BAY11  SSD   healthy  1.74T     -
+     root@lynpure01-ct0:/var/home/pureeng# puredrive list --pack SH1.BAY102
+     root@lynpure01-ct0:/var/home/pureeng# puredrive list --pack SH1.BAY12
+Name       Type  Status   Capacity  Details
+CH0.BAY1   SSD   healthy  3.49T     -
+CH0.BAY2   SSD   healthy  3.49T     -
+CH0.BAY3   SSD   healthy  3.49T     -
+CH0.BAY4   SSD   healthy  3.49T     -
+CH0.BAY5   SSD   healthy  3.49T     -
+CH0.BAY6   SSD   healthy  3.49T     -
+CH0.BAY7   SSD   healthy  3.49T     -
+CH0.BAY8   SSD   healthy  3.49T     -
+CH0.BAY9   SSD   healthy  3.49T     -
+SH1.BAY12  SSD   failed   3.49T     -
+     root@lynpure01-ct0:/var/home/pureeng# puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    empty    0.00      -
+CH0.BAY1   SSD    healthy  3.49T     -
+CH0.BAY2   SSD    healthy  3.49T     -
+CH0.BAY3   SSD    healthy  3.49T     -
+CH0.BAY4   SSD    healthy  3.49T     -
+CH0.BAY5   SSD    healthy  3.49T     -
+CH0.BAY6   SSD    healthy  3.49T     -
+CH0.BAY7   SSD    healthy  3.49T     -
+CH0.BAY8   SSD    healthy  3.49T     -
+CH0.BAY9   SSD    healthy  3.49T     -
+CH0.BAY10  SSD    healthy  1.86T     -
+CH0.BAY11  SSD    healthy  1.86T     -
+CH0.BAY12  SSD    healthy  1.86T     -
+CH0.BAY13  SSD    healthy  1.86T     -
+CH0.BAY14  SSD    healthy  1.86T     -
+CH0.BAY15  SSD    healthy  1.86T     -
+CH0.BAY16  SSD    healthy  1.86T     -
+CH0.BAY17  SSD    healthy  1.86T     -
+CH0.BAY18  SSD    healthy  1.86T     -
+CH0.BAY19  SSD    healthy  1.86T     -
+CH0.NVB0   NVRAM  healthy  7.00G     -
+CH0.NVB1   NVRAM  healthy  7.00G     -
+CH0.NVB2   NVRAM  healthy  7.00G     -
+CH0.NVB3   NVRAM  healthy  7.00G     -
+SH0.BAY0   SSD    healthy  1.74T     -
+SH0.BAY1   SSD    healthy  1.74T     -
+SH0.BAY2   SSD    healthy  1.74T     -
+SH0.BAY3   SSD    healthy  1.74T     -
+SH0.BAY4   SSD    healthy  1.74T     -
+SH0.BAY5   SSD    healthy  1.74T     -
+SH0.BAY6   SSD    healthy  1.74T     -
+SH0.BAY7   SSD    healthy  1.74T     -
+SH0.BAY8   SSD    healthy  1.74T     -
+SH0.BAY9   SSD    healthy  1.74T     -
+SH0.BAY10  SSD    healthy  1.74T     -
+SH0.BAY11  SSD    healthy  1.74T     -
+SH0.BAY12  SSD    healthy  1.74T     -
+SH0.BAY13  SSD    healthy  1.74T     -
+SH0.BAY14  SSD    healthy  1.74T     -
+SH0.BAY15  SSD    healthy  1.74T     -
+SH0.BAY16  SSD    healthy  1.74T     -
+SH0.BAY17  SSD    healthy  1.74T     -
+SH0.BAY18  SSD    healthy  1.74T     -
+SH0.BAY19  SSD    healthy  1.74T     -
+SH0.BAY20  SSD    healthy  1.74T     -
+SH0.BAY21  SSD    healthy  1.74T     -
+SH0.BAY22  SSD    healthy  1.74T     -
+SH0.BAY23  SSD    healthy  1.74T     -
+SH1.BAY0   SSD    healthy  1.74T     -
+SH1.BAY1   SSD    healthy  1.74T     -
+SH1.BAY2   SSD    healthy  1.74T     -
+SH1.BAY3   SSD    healthy  1.74T     -
+SH1.BAY4   SSD    healthy  1.74T     -
+SH1.BAY5   SSD    healthy  1.74T     -
+SH1.BAY6   SSD    healthy  1.74T     -
+SH1.BAY7   SSD    healthy  1.74T     -
+SH1.BAY8   SSD    healthy  1.74T     -
+SH1.BAY9   SSD    healthy  1.74T     -
+SH1.BAY10  SSD    healthy  1.74T     -
+SH1.BAY11  SSD    healthy  1.74T     -
+SH1.BAY12  SSD    healthy  3.49T     -
+SH1.BAY13  SSD    empty    0.00      -
+SH1.BAY14  SSD    empty    0.00      -
+SH1.BAY15  SSD    empty    0.00      -
+SH1.BAY16  SSD    empty    0.00      -
+SH1.BAY17  SSD    empty    0.00      -
+SH1.BAY18  SSD    empty    0.00      -
+SH1.BAY19  SSD    empty    0.00      -
+SH1.BAY20  SSD    empty    0.00      -
+SH1.BAY21  SSD    empty    0.00      -
+SH1.BAY22  SSD    empty    0.00      -
+SH1.BAY23  SSD    empty    0.00      -
+SH9.BAY0   SSD    healthy  1.92T     -
+SH9.BAY1   SSD    healthy  1.92T     -
+SH9.BAY2   SSD    healthy  1.92T     -
+SH9.BAY3   SSD    healthy  1.92T     -
+SH9.BAY4   SSD    healthy  1.92T     -
+SH9.BAY5   SSD    healthy  1.92T     -
+SH9.BAY6   SSD    healthy  1.92T     -
+SH9.BAY7   SSD    healthy  1.92T     -
+SH9.BAY8   SSD    healthy  1.92T     -
+SH9.BAY9   SSD    healthy  1.92T     -
+SH9.BAY10  -      unused   0.00      -
+SH9.BAY11  -      unused   0.00      -
+SH9.BAY12  -      unused   0.00      -
+SH9.BAY13  -      unused   0.00      -
+SH9.BAY14  -      unused   0.00      -
+SH9.BAY15  -      unused   0.00      -
+SH9.BAY16  -      unused   0.00      -
+SH9.BAY17  -      unused   0.00      -
+SH9.BAY18  -      unused   0.00      -
+SH9.BAY19  -      unused   0.00      -
+SH9.BAY20  -      unused   0.00      -
+SH9.BAY21  -      unused   0.00      -
+SH9.BAY22  -      unused   0.00      -
+SH9.BAY23  -      unused   0.00      -
+SH9.BAY24  -      unused   0.00      -
+SH9.BAY25  -      unused   0.00      -
+SH9.BAY26  -      unused   0.00      -
+SH9.BAY27  -      unused   0.00      -
+     root@lynpure01-ct0:/var/home/pureeng# purearrwatch purearray list --space
+Every 2.0s: purearray list --spacelynpure01-ct0: Wed Feb 19 10:37:55 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  DataReduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  Totallynpure01  90.43T    78%     1693037G260.29T  84%3.8 to 124.2 to 155.25T  1.04T13.47T  0.00    0.0069.76T8:005913822631540495489:0261048236316426     root@lynpure01-ct0:/var/home/pureeng# purearray remoteassist --connect
+Name           Status      Opened                   Expires
+lynpure01-ct0  connecting  2025-02-19 10:40:05 CST  2025-02-21 10:40:05 CST
+     root@lynpure01-ct0:/var/home/pureeng# purearray remoteassist --connectwatch purearray list --space
+Every 2.0s: purearray list --spacelynpure01-ct0: Wed Feb 19 10:46:05 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  DataReduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  Totallynpure01  90.43T    100%    1693037G260.28T  84%3.8 to 124.2 to 155.23T  1.05T13.47T  0.00    0.0069.74T913722631599% 9448526
+     root@lynpure02-ct0:/var/home/pureeng# purearrdrivepuredrive list
+Name       Type   Status     Capacity  Details
+CH0.BAY0   SSD    healthy    7.93T     -
+CH0.BAY1   SSD    healthy    7.93T     -
+CH0.BAY2   SSD    healthy    7.93T     -
+CH0.BAY3   SSD    healthy    7.93T     -
+CH0.BAY4   SSD    healthy    7.93T     -
+CH0.BAY5   SSD    healthy    7.93T     -
+CH0.BAY6   SSD    healthy    7.93T     -
+CH0.BAY7   SSD    healthy    7.93T     -
+CH0.BAY8   SSD    healthy    7.93T     -
+CH0.BAY9   SSD    healthy    7.93T     -
+CH0.BAY10  SSD    healthy    7.93T     -
+CH0.BAY11  SSD    healthy    7.93T     -
+CH0.BAY12  SSD    healthy    7.93T     -
+CH0.BAY13  SSD    healthy    7.93T     -
+CH0.BAY14  SSD    healthy    7.93T     -
+CH0.BAY15  SSD    healthy    7.93T     -
+CH0.BAY16  -      unused     0.00      -
+CH0.BAY17  -      unused     0.00      -
+CH0.BAY18  -      unused     0.00      -
+CH0.BAY19  -      unused     0.00      -
+CH0.NVB0   NVRAM  healthy    7.00G     -
+CH0.NVB1   NVRAM  healthy    7.00G     -
+CH0.NVB2   NVRAM  healthy    7.00G     -
+CH0.NVB3   NVRAM  healthy    7.00G     -
+SH0.BAY0   SSD    evacuated  0.00      -
+SH0.BAY1   SSD    evacuated  0.00      -
+SH0.BAY2   SSD    evacuated  0.00      -
+SH0.BAY3   SSD    evacuated  0.00      -
+SH0.BAY4   SSD    evacuated  0.00      -
+SH0.BAY5   SSD    evacuated  0.00      -
+SH0.BAY6   SSD    evacuated  0.00      -
+SH0.BAY7   SSD    evacuated  0.00      -
+SH0.BAY8   SSD    evacuated  0.00      -
+SH0.BAY9   SSD    evacuated  0.00      -
+SH0.BAY10  SSD    evacuated  0.00      -
+SH0.BAY11  SSD    evacuated  0.00      -
+SH0.BAY12  SSD    evacuated  0.00      -
+SH0.BAY13  SSD    evacuated  0.00      -
+SH0.BAY14  SSD    evacuated  0.00      -
+SH0.BAY15  SSD    evacuated  0.00      -
+SH0.BAY16  SSD    evacuated  0.00      -
+SH0.BAY17  SSD    evacuated  0.00      -
+SH0.BAY18  SSD    evacuated  0.00      -
+SH0.BAY19  SSD    evacuated  0.00      -
+SH0.BAY20  SSD    evacuated  0.00      -
+SH0.BAY21  SSD    empty      0.00      -
+SH0.BAY22  SSD    empty      0.00      -
+SH0.BAY23  SSD    empty      0.00      -
+SH9.BAY0   SSD    healthy    1.92T     -
+SH9.BAY1   SSD    healthy    1.92T     -
+SH9.BAY2   SSD    healthy    1.92T     -
+SH9.BAY3   SSD    healthy    1.92T     -
+SH9.BAY4   SSD    healthy    1.92T     -
+SH9.BAY5   SSD    healthy    1.92T     -
+SH9.BAY6   SSD    healthy    1.92T     -
+SH9.BAY7   SSD    healthy    1.92T     -
+SH9.BAY8   SSD    healthy    1.92T     -
+SH9.BAY9   SSD    healthy    1.92T     -
+SH9.BAY10  SSD    healthy    1.92T     -
+SH9.BAY11  SSD    healthy    1.92T     -
+SH9.BAY12  SSD    healthy    1.92T     -
+SH9.BAY13  SSD    healthy    1.92T     -
+SH9.BAY14  SSD    healthy    3.90T     -
+SH9.BAY15  SSD    healthy    3.90T     -
+SH9.BAY16  SSD    healthy    3.90T     -
+SH9.BAY17  SSD    healthy    3.90T     -
+SH9.BAY18  SSD    healthy    3.90T     -
+SH9.BAY19  SSD    healthy    3.90T     -
+SH9.BAY20  SSD    healthy    3.90T     -
+SH9.BAY21  SSD    healthy    3.90T     -
+SH9.BAY22  SSD    healthy    3.90T     -
+SH9.BAY23  SSD    healthy    3.90T     -
+SH9.BAY24  -      unused     0.00      -
+SH9.BAY25  -      unused     0.00      -
+SH9.BAY26  -      unused     0.00      -
+SH9.BAY27  -      unused     0.00      -
+     root@lynpure02-ct0:/var/home/pureeng# purearray list - remoteassist --connect
+Name           Status      Opened                   Expires
+lynpure02-ct0  connecting  2025-02-19 10:47:57 CST  2025-02-21 10:47:57 CST
+     root@lynpure02-ct0:/var/home/pureeng# purealert tag --timeout 60m --maintenance   
+
+Name         Created                  Expires
+maintenance  2025-02-19 10:48:19 CST  2025-02-19 11:48:19 CST
+     root@lynpure02-ct0:/var/home/pureeng# 
+     root@lynpure02-ct0:/var/home/pureeng# purealert tag --timeout 60m --maintenance        root@lynpure02-ct0:/var/home/pureeng# rray remoteassist --connect
+status
+Name           Status     Opened                   Expires
+lynpure02-ct0  connected  2025-02-19 10:47:57 CST  2025-02-21 10:47:57 CST
+     root@lynpure02-ct0:/var/home/pureeng# purehw list
+Name          Status         Identify  Slot  Index  Speed       Temperature  Voltage  Details
+CH0           ok             off       -     0      -           -            -        -
+CH0.BAY0      ok             off       -     0      -           -            -        -
+CH0.BAY1      ok             off       -     1      -           -            -        -
+CH0.BAY2      ok             off       -     2      -           -            -        -
+CH0.BAY3      ok             off       -     3      -           -            -        -
+CH0.BAY4      ok             off       -     4      -           -            -        -
+CH0.BAY5      ok             off       -     5      -           -            -        -
+CH0.BAY6      ok             off       -     6      -           -            -        -
+CH0.BAY7      ok             off       -     7      -           -            -        -
+CH0.BAY8      ok             off       -     8      -           -            -        -
+CH0.BAY9      ok             off       -     9      -           -            -        -
+CH0.BAY10     ok             off       -     10     -           -            -        -
+CH0.BAY11     ok             off       -     11     -           -            -        -
+CH0.BAY12     ok             off       -     12     -           -            -        -
+CH0.BAY13     ok             off       -     13     -           -            -        -
+CH0.BAY14     ok             off       -     14     -           -            -        -
+CH0.BAY15     ok             off       -     15     -           -            -        -
+CH0.BAY16     not_installed  off       -     16     -           -            -        -
+CH0.BAY17     not_installed  off       -     17     -           -            -        -
+CH0.BAY18     not_installed  off       -     18     -           -            -        -
+CH0.BAY19     not_installed  off       -     19     -           -            -        -
+CH0.NVB0      ok             off       -     0      -           -            -        -
+CH0.NVB1      ok             off       -     1      -           -            -        -
+CH0.NVB2      ok             off       -     2      -           -            -        -
+CH0.NVB3      ok             off       -     3      -           -            -        -
+CH0.PWR0      ok             -         -     0      -           -            204 V    -
+CH0.PWR1      ok             -         -     1      -           -            206 V    -
+CH0.TMP0      ok             -         -     0      -           21 C         -        -
+CT0           ok             off       -     0      -           -            -        -
+CT0.ETH0      ok             -         -     0      1.00 Gb/s   -            -        -
+CT0.ETH1      ok             -         -     1      1.00 Gb/s   -            -        -
+CT0.ETH2      ok             -         -     2      10.00 Gb/s  -            -        -
+CT0.ETH3      ok             -         -     3      0.00 b/s    -            -        -
+CT0.ETH4      ok             -         -     4      0.00 b/s    -            -        -
+CT0.ETH5      ok             -         -     5      0.00 b/s    -            -        -
+CT0.ETH6      ok             -         -     6      50.00 Gb/s  -            -        -
+CT0.ETH7      ok             -         -     7      0.00 b/s    -            -        -
+CT0.ETH8      ok             -         -     8      50.00 Gb/s  -            -        -
+CT0.ETH9      ok             -         -     9      0.00 b/s    -            -        -
+CT0.FAN0      ok             -         -     0      -           -            -        -
+CT0.FAN1      ok             -         -     1      -           -            -        -
+CT0.FAN2      ok             -         -     2      -           -            -        -
+CT0.FAN3      ok             -         -     3      -           -            -        -
+CT0.FAN4      ok             -         -     4      -           -            -        -
+CT0.FAN5      ok             -         -     5      -           -            -        -
+CT0.FC0       ok             -         0     0      16.00 Gb/s  -            -        -
+CT0.FC1       ok             -         0     1      16.00 Gb/s  -            -        -
+CT0.FC2       ok             -         0     2      16.00 Gb/s  -            -        -
+CT0.FC3       ok             -         0     3      16.00 Gb/s  -            -        -
+CT0.FC8       ok             -         2     8      0.00 b/s    -            -        -
+CT0.FC9       ok             -         2     9      0.00 b/s    -            -        -
+CT0.SAS4      ok             -         1     4      48.00 Gb/s  -            -        -
+CT0.SAS5      ok             -         1     5      0.00 b/s    -            -        -
+CT0.SAS6      ok             -         1     6      48.00 Gb/s  -            -        -
+CT0.SAS7      ok             -         1     7      0.00 b/s    -            -        -
+CT0.TMP0      ok             -         -     0      -           41 C         -        -
+CT0.TMP1      ok             -         -     1      -             -     12     -           32 C         -        -
+CT0.TMP13     ok             -         -     13     -           38 C         -        -
+CT0.TMP14     ok             -         -     14     -           37 C         -        -
+CT0.TMP15     ok             -         -     15     -           37 C         -        -
+CT0.TMP16     ok             -         -     16     -           35 C         -        -
+CT0.TMP17     ok             -         -     17     -           36 C         -        -
+CT0.TMP18     ok             -         -     18     -           36 C         -        -
+CT0.TMP19     ok             -         -     19     -           35 C         -        -
+CT0.TMP20     ok             -         -     20     -           33 C         -        -
+CT0.TMP21     ok             -         -     21     -           43 C         -        -
+CT0.TMP22     ok             -         -     22     -           39 C         -        -
+CT0.TMP23     ok             -         -     23     -           43 C         -        -
+CT0.TMP24     ok             -         -     24     -           43 C         -        -
+CT0.TMP25     ok             -         -     25     -           48 C         -        -
+CT0.TMP26     ok             -         -     26     -           31 C         -        -
+CT1           ok             off       -     1      -           -            -        -
+CT1.ETH0      ok             -         -     0      1.00 Gb/s   -            -        -
+CT1.ETH1      ok             -         -     1      1.00 Gb/s   -            -        -
+CT1.ETH2      ok             -         -     2      10.00 Gb/s  -            -        -
+CT1.ETH3      ok             -         -     3      0.00 b/s    -            -        -
+CT1.ETH4      ok             -         -     4      0.00 b/s    -            -        -
+CT1.ETH5      ok             -         -     5      0.00 b/s    -            -        -
+CT1.ETH6      ok             -         -     6      50.00 Gb/s  -            -        -
+CT1.ETH7      ok             -         -     7      0.00 b/s    -            -        -
+CT1.ETH8      ok             -         -     8      50.00 Gb/s  -            -        -
+CT1.ETH9      ok             -         -     9      0.00 b/s    -            -        -
+CT1.FAN0      ok             -         -     0      -           -            -        -
+CT1.FAN1      ok             -         -     1      -           -            -        -
+CT1.FAN2      ok             -         -     2      -           -            -        -
+CT1.FAN3      ok             -         -     3      -           -            -        -
+CT1.FAN4      ok             -         -     4      -           -            -        -
+CT1.FAN5      ok             -         -     5      -           -            -        -
+CT1.FC0       ok             -         0     0      16.00 Gb/s  -            -        -
+CT1.FC1       ok             -         0     1      16.00 Gb/s  -            -        -
+CT1.FC2       ok             -         0     2      16.00 Gb/s  -            -        -
+CT1.FC3       ok             -         0     3      16.00 Gb/s  -            -        -
+CT1.FC8       ok             -         2     8      0.00 b/s    -            -        -
+CT1.FC9       ok             -         2     9      0.00 b/s    -            -        -
+CT1.SAS4      ok             -         1     4      0.00 b/s    -            -        -
+CT1.SAS5      ok             -         1     5      48.00 Gb/s  -            -        -
+CT1.SAS6      ok             -         1     6      0.00 b/s    -            -        -
+CT1.SAS7      ok             -         1     7      48.00 Gb/s  -            -        -
+CT1.TMP0      ok             -         -     0      -           36 C         -        -
+CT1.TMP1      ok             -         -     1      -           35 C         -        -
+CT1.TMP2      ok             -         -     2      -           31 C         -        -
+CT1.TMP3      ok             -         -     3      -           43 C         -        -
+CT1.TMP4      ok             -         -     4      -           41 C         -        -
+CT1.TMP5      ok             -         -     5      -           35 C         -        -
+CT1.TMP6      ok             -         -     6      -           41 C         -        -
+CT1.TMP7      ok             -         -     7      -           31 C         -        -
+CT1.TMP8      ok             -         -     8      -           31 C         -        -
+CT1.TMP9      ok             -         -     9      -           32 C         -        -
+CT1.TMP10     ok             -         -     10     -           32 C         -        -
+CT1.TMP11     ok             -         -     11     -           31 C         -        -
+CT1.TMP12     ok             -         -     12     -           31 C         -        -
+CT1.TMP13     ok             -         -     13     -           33 C         -        -
+CT1.TMP14     ok             -         -     14     -           33 C         -        -
+CT1.TMP15     ok             -         -     15     -           32 C         -        -
+CT1.TMP16     ok             -         -     16     -           32 C         -        -
+CT1.TMP17     ok             -         -     17     -           32 C         -        -
+CT1.TMP18     ok             -         -     18     -           32 C         -        -
+CT1.TMP19     ok             -         -     19     -           33 C         -        -
+CT1.TMP20     ok             -         -     20     -           31 C         -        -
+CT1.TMP21     ok             -         -     21     -           37 C         -        -
+CT1.TMP22     ok             -         -     22     -           38 C         -        -
+CT1.TMP23     ok             -         -     23     -           35 C         -        -
+CT1.TMP24     ok             -         -     24     -           37 C         -        -
+CT1.TMP25     ok             -         -     25     -           42 C         -        -
+CT1.TMP26     ok             -         -     26     -           31 C         -        -
+SH0           critical       off       -     0      -           -            -        Chassis alarm
+SH0.BAY0      ok             off       -     0      -           -            -        -
+SH0.BAY1      ok             off       -     1      -           -            -        -
+SH0.BAY2      ok             off       -     2      -           -            -        -
+SH0.BAY3      ok             off       -     3      -           -            -        -
+SH0.BAY4      ok             off       -     4      -           -            -        -
+SH0.BAY5      ok             off       -     5      -           -            -        -
+SH0.BAY6      ok             off       -     6      -           -            -        -
+SH0.BAY7      ok             off       -     7      -           -            -        -
+SH0.BAY8      ok             off       -     8      -           -            -        -
+SH0.BAY9      ok             off       -     9      -           -            -        -
+SH0.BAY10     ok             off       -     10     -           -            -        -
+SH0.BAY11     ok             off       -     11     -           -            -        -
+SH0.BAY12     ok             off       -     12     -           -            -        -
+SH0.BAY13     ok             off       -     13     -           -            -        -
+SH0.BAY14     ok             off       -     14     -           -            -        -
+SH0.BAY15     ok             off       -     15     -           -            -        -
+SH0.BAY16     ok             off       -     16     -           -            -        -
+SH0.BAY17     ok             off       -     17     -           -            -        -
+SH0.BAY18     ok             off       -     18     -           -            -        -
+SH0.BAY19     ok             off       -     19     -           -            -        -
+SH0.BAY20     ok             off       -     20     -           -            -        -
+SH0.BAY21     not_installed  off       -     21     -           -            -        -
+SH0.BAY22     not_installed  off       -     22     -           -            -        -
+SH0.BAY23     not_installed  off       -     23     -           -            -        -
+SH0.FAN0      ok             -         -     0      -           -            -        -
+SH0.FAN1      ok             -         -     1      -           -            -        -
+SH0.FAN2      ok             -         -     2      -           -            -        -
+SH0.FAN3      ok             -         -     3      -           -            -        -
+SH0.IOM0      ok             off       0     0      -           -            -        -
+SH0.IOM1      ok             off       1     1      -           -            -        -
+SH0.PWR0      critical       -         -     0      -           -            -        -
+SH0.PWR1      ok             -         -     1      -           -            -        -
+SH0.SAS0      ok             -         0     0      48.00 Gb/s  -            -        -
+SH0.SAS1      ok             -         0     1      0.00 b/s    -            -        -
+SH0.SAS2      ok             -         0     2      48.00 Gb/s  -            -        -
+SH0.SAS3      ok             -         1     3      48.00 Gb/s  -            -        -
+SH0.SAS4      ok             -         1     4      0.00 b/s    -            -        -
+SH0.SAS5      ok             -         1     5      48.00 Gb/s  -            -        -
+SH0.TMP0      ok             -         -     0      -           20 C         -        -
+SH0.TMP1      ok             -         -     1      -           24 C         -        -
+SH0.TMP2      ok             -         -     2      -           21 C         -        -
+SH0.TMP3      ok             -         -     3      -           25 C         -        -
+SH0.TMP4      ok             -         -     4      -           24 C         -        -
+SH0.TMP5      ok             -         -     5      -           27 C         -        -
+SH0.TMP6      ok             -         -     6      -           31 C         -        -
+SH0.TMP7      ok             -         -     7      -           29 C         -        -
+SH9           ok             off       -     9      -           22 C         -        -
+SH9.BAY0      ok             off       -     0      -           -            -        -
+SH9.BAY1      ok             off       -     1      -           -            -        -
+SH9.BAY2      ok             off       -     2      -           -            -        -
+SH9.BAY3      ok             off       -     3      -           -            -        -
+SH9.BAY4      ok             off       -     4      -           -            -        -
+SH9.BAY5      ok             off       -     5      -           -            -        -
+SH9.BAY6      ok             off       -     6      -           -            -        -
+SH9.BAY7      ok             off       -     7      -           -            -        -
+SH9.BAY8      ok             off       -     8      -           -            -        -
+SH9.BAY9      ok             off       -     9      -           -            -        -
+SH9.BAY10     ok             off       -     10     -           -            -        -
+SH9.BAY11     ok             off       -     11     -           -            -        -
+SH9.BAY12     ok             off       -     12     -           -            -        -
+SH9.BAY13     ok             off       -     13     -           -            -        -
+SH9.BAY14     ok             off       -     14     -           -            -        -
+SH9.BAY15     ok             off       -     15     -           -            -        -
+SH9.BAY16     ok             off       -     16     -           -            -        -
+SH9.BAY17     ok             off       -     17     -           -            -        -
+SH9.BAY18     ok             off       -     18     -           -            -        -
+SH9.BAY19     ok             off       -     19     -           -            -        -
+SH9.BAY20     ok             off       -     20     -           -            -        -
+SH9.BAY21     ok             off       -     21     -           -            -        -
+SH9.BAY22     ok             off       -     22     -           -            -        -
+SH9.BAY23     ok             off       -     23     -           -            -        -
+SH9.BAY24     not_installed  off       -     24     -           -            -        -
+SH9.BAY25     not_installed  off       -     25     -           -            -        -
+SH9.BAY26     not_installed  off       -     26     -           -            -        -
+SH9.BAY27     not_installed  off       -     27     -           -            -        -
+SH9.PWR0      ok             -         -     0      -           -            207 V    -
+SH9.PWR1      ok             -         -     1      -           -            206 V    -
+SH9.SC0       ok             off       -     0      -           28 C         -        -
+SH9.SC0.ETH0  ok             -         -     0      50.00 Gb/s  -            -        -
+SH9.SC0.ETH1  ok             -         -     1      0.00 b/s    -            -        -
+SH9.SC0.ETH2  ok             -         -     2      50.00 Gb/s  -            -        -
+SH9.SC0.ETH3  ok             -         -     3      0.00 b/s    -            -        -
+SH9.SC0.FAN0  ok             -         -     0      -           -            -        -
+SH9.SC0.FAN1  ok             -         -     1      -           -            -        -
+SH9.SC0.FAN2  ok             -         -     2      -           -            -        -
+SH9.SC0.FAN3  ok             -         -     3      -           -            -        -
+SH9.SC0.FAN4  ok             -         -     4      -           -            -        -
+SH9.SC0.FAN5  ok             -         -     5      -           -            -        -
+SH9.SC1       ok             off       -     1      -           28 C         -        -
+SH9.SC1.ETH0  ok             -         -     0      50.00 Gb/s  -            -        -
+SH9.SC1.ETH1  ok             -         -     1      0.00 b/s    -            -        -
+SH9.SC1.ETH2  ok             -         -     2      50.00 Gb/s  -            -        -
+SH9.SC1.ETH3  ok             -         -     3      0.00 b/s    -            -        -
+SH9.SC1.FAN0  ok             -         -     0      -           -            -        -
+SH9.SC1.FAN1  ok             -         -     1      -           -            -        -
+SH9.SC1.FAN2  ok             -         -     2      -           -            -        -
+SH9.SC1.FAN3  ok             -         -     3      -           -            -        -
+SH9.SC1.FAN4  ok             -         -     4      -           -            -        -
+SH9.SC1.FAN5  ok             -         -     5      -           -            -        -
+     root@lynpure02-ct0:/var/home/pureeng# purehw list
+Name          Status         Identify  Slot  Index  Speed       Temperature  Voltage  Details
+CH0           ok             off       -     0      -           -            -        -
+CH0.BAY0      ok             off       -     0      -           -            -        -
+CH0.BAY1      ok             off       -     1      -           -            -        -
+CH0.BAY2      ok             off       -     2      -           -            -        -
+CH0.BAY3      ok             off       -     3      -           -            -        -
+CH0.BAY4      ok             off       -     4      -           -            -        -
+CH0.BAY5      ok             off       -     5      -           -            -        -
+CH0.BAY6      ok             off       -     6      -           -            -        -
+CH0.BAY7      ok             off       -     7      -           -            -        -
+CH0.BAY8      ok             off       -     8      -           -            -        -
+CH0.BAY9      ok             off       -     9      -           -            -        -
+CH0.BAY10     ok             off       -     10     -           -            -        -
+CH0.BAY11     ok             off       -     11     -           -            -        -
+CH0.BAY12     ok             off       -     12     -           -            -        -
+CH0.BAY13     ok             off       -     13     -           -            -        -
+CH0.BAY14     ok             off       -     14     -           -            -        -
+CH0.BAY15     ok             off       -     15     -           -            -        -
+CH0.BAY16     not_installed  off       -     16     -           -            -        -
+CH0.BAY17     not_installed  off       -     17     -           -            -        -
+CH0.BAY18     not_installed  off       -     18     -           -            -        -
+CH0.BAY19     not_installed  off       -     19     -           -            -        -
+CH0.NVB0      ok             off       -     0      -           -            -        -
+CH0.NVB1      ok             off       -     1      -           -            -        -
+CH0.NVB2      ok             off       -     2      -           -            -        -
+CH0.NVB3      ok             off       -     3      -           -            -        -
+CH0.PWR0      ok             -         -     0      -           -            204 V    -
+CH0.PWR1      ok             -         -     1      -           -            206 V    -
+CH0.TMP0      ok             -         -     0      -           21 C         -        -
+CT0           ok             off       -     0      -           -            -        -
+CT0.ETH0      ok             -         -     0      1.00 Gb/s   -            -        -
+CT0.ETH1      ok             -         -     1      1.00 Gb/s   -            -        -
+CT0.ETH2      ok             -         -     2      10.00 Gb/s  -            -        -
+CT0.ETH3      ok             -         -     3      0.00 b/s    -            -        -
+CT0.ETH4      ok             -         -     4      0.00 b/s    -            -        -
+CT0.ETH5      ok             -         -     5      0.00 b/s    -            -        -
+CT0.ETH6      ok             -         -     6      50.00 Gb/s  -            -        -
+CT0.ETH7      ok             -         -     7      0.00 b/s    -            -        -
+CT0.ETH8      ok             -         -     8      50.00 Gb/s  -            -        -
+CT0.ETH9      ok             -         -     9      0.00 b/s    -            -        -
+CT0.FAN0      ok             -         -     0      -           -            -        -
+CT0.FAN1      ok             -         -     1      -           -            -        -
+CT0.FAN2      ok             -         -     2      -           -            -        -
+CT0.FAN3      ok             -         -     3      -           -            -        -
+CT0.FAN4      ok             -         -     4      -           -            -        -
+CT0.FAN5      ok             -         -     5      -           -            -        -
+CT0.FC0       ok             -         0     0      16.00 Gb/s  -            -        -
+CT0.FC1       ok             -         0     1      16.00 Gb/s  -            -        -
+CT0.FC2       ok             -         0     2      16.00 Gb/s  -            -        -
+CT0.FC3       ok             -         0     3      16.00 Gb/s  -            -        -
+CT0.FC8       ok             -         2     8      0.00 b/s    -            -        -
+CT0.FC9       ok             -         2     9      0.00 b/s    -            -        -
+CT0.SAS4      ok             -         1     4      0.00 b/s    -            -        -
+CT0.SAS5      ok             -         1     5      0.00 b/s    -            -        -
+CT0.SAS6      ok             -         1     6      0.00 b/s    -            -        -
+CT0.SAS7      ok             -         1     7      0.00 b/s    -            -        -
+CT0.TMP0      ok             -         -     0      -           41 C         -        -
+CT0.TMP1      ok             -         -     1      -           42 C         -        -
+CT0.TMP2      ok             -         -     2      -           31 C         -        -
+CT0.TMP3      ok             -         -     3      -           51 C         -        -
+CT0.TMP4      ok             -         -     4      -           52 C         -        -
+CT0.TMP5      ok             -         -     5      -           40 C         -        -
+CT0.TMP6      ok             -         -     6      -           48 C         -        -
+CT0.TMP7      ok             -         -     7      -           35 C         -        -
+CT0.TMP8      ok             -         -     8      -           34 C         -        -
+CT0.TMP9      ok             -         -     9      -           36 C         -        -
+CT0.TMP10     ok             -         -     10     -           34 C         -        -
+CT0.TMP11     ok             -         -     11     -           33 C         -        -
+CT0.TMP12     ok             -         -     12     -           32 C         -        -
+CT0.TMP13     ok             -         -     13     -           38 C         -        -
+CT0.TMP14     ok             -         -     14     -           37 C         -        -
+CT0.TMP15     ok             -         -     15     -           37 C         -        -
+CT0.TMP16     ok             -         -     16     -           35 C         -        -
+CT0.TMP17     ok             -         -     17     -           36 C         -        -
+CT0.TMP18     ok             -         -     18     -           36 C         -        -
+CT0.TMP19     ok             -         -     19     -           35 C         -        -
+CT0.TMP20     ok             -         -     20     -           33 C         -        -
+CT0.TMP21     ok             -         -     21     -           43 C         -        -
+CT0.TMP22     ok             -         -     22     -           39 C         -        -
+CT0.TMP23     ok             -         -     23     -           43 C         -        -
+CT0.TMP24     ok             -         -     24     -           43 C         -        -
+CT0.TMP25     ok             -         -     25     -           48 C         -        -
+CT0.TMP26     ok             -         -     26     -           31 C         -        -
+CT1           ok             off       -     1      -           -            -        -
+CT1.ETH0      ok             -         -     0      1.00 Gb/s   -            -        -
+CT1.ETH1      ok             -         -     1      1.00 Gb/s   -            -        -
+CT1.ETH2      ok             -         -     2      10.00 Gb/s  -            -        -
+CT1.ETH3      ok             -         -     3      0.00 b/s    -            -        -
+CT1.ETH4      ok             -         -     4      0.00 b/s    -            -        -
+CT1.ETH5      ok             -         -     5      0.00 b/s    -            -        -
+CT1.ETH6      ok             -         -     6      50.00 Gb/s  -            -        -
+CT1.ETH7      ok             -         -     7      0.00 b/s    -            -        -
+CT1.ETH8      ok             -         -     8      50.00 Gb/s  -            -        -
+CT1.ETH9      ok             -         -     9      0.00 b/s    -            -        -
+CT1.FAN0      ok             -         -     0      -           -            -        -
+CT1.FAN1      ok             -         -     1      -           -            -        -
+CT1.FAN2      ok             -         -     2      -           -            -        -
+CT1.FAN3      ok             -         -     3      -           -            -        -
+CT1.FAN4      ok             -         -     4      -           -            -        -
+CT1.FAN5      ok             -         -     5      -           -            -        -
+CT1.FC0       ok             -         0     0      16.00 Gb/s  -            -        -
+CT1.FC1       ok             -         0     1      16.00 Gb/s  -            -        -
+CT1.FC2       ok             -         0     2      16.00 Gb/s  -            -        -
+CT1.FC3       ok             -         0     3      16.00 Gb/s  -            -        -
+CT1.FC8       ok             -         2     8      0.00 b/s    -            -        -
+CT1.FC9       ok             -         2     9      0.00 b/s    -            -        -
+CT1.SAS4      ok             -         1     4      0.00 b/s    -            -        -
+CT1.SAS5      ok             -         1     5      0.00 b/s    -            -        -
+CT1.SAS6      ok             -         1     6      0.00 b/s    -            -        -
+CT1.SAS7      ok             -         1     7      0.00 b/s    -            -        -
+CT1.TMP0      ok             -         -     0      -           36 C         -        -
+CT1.TMP1      ok             -         -     1      -           35 C         -        -
+CT1.TMP2      ok             -         -     2      -           31 C         -        -
+CT1.TMP3      ok             -         -     3      -           43 C         -        -
+CT1.TMP4      ok             -         -     4      -           41 C         -        -
+CT1.TMP5      ok             -         -     5      -           35 C         -        -
+CT1.TMP6      ok             -         -     6      -           41 C         -        -
+CT1.TMP7      ok             -         -     7      -           31 C         -        -
+CT1.TMP8      ok             -         -     8      -           32 C         -        -
+CT1.TMP9      ok             -         -     9      -           32 C         -        -
+CT1.TMP10     ok             -         -     10     -           32 C         -        -
+CT1.TMP11     ok             -         -     11     -           31 C         -        -
+CT1.TMP12     ok             -         -     12     -           31 C         -        -
+CT1.TMP13     ok             -         -     13     -           33 C         -        -
+CT1.TMP14     ok             -         -     14     -           33 C         -        -
+CT1.TMP15     ok             -         -     15     -           32 C         -        -
+CT1.TMP16     ok             -         -     16     -           32 C         -        -
+CT1.TMP17     ok             -         -     17     -           32 C         -        -
+CT1.TMP18     ok             -         -     18     -           32 C         -        -
+CT1.TMP19     ok             -         -     19     -           33 C         -        -
+CT1.TMP20     ok             -         -     20     -           31 C         -        -
+CT1.TMP21     ok             -         -     21     -           37 C         -        -
+CT1.TMP22     ok             -         -     22     -           38 C         -        -
+CT1.TMP23     ok             -         -     23     -           35 C         -        -
+CT1.TMP24     ok             -         -     24     -           36 C         -        -
+CT1.TMP25     ok             -         -     25     -           42 C         -        -
+CT1.TMP26     ok             -         -     26     -           31 C         -        -
+SH9           ok             off       -     9      -           22 C         -        -
+SH9.BAY0      ok             off       -     0      -           -            -        -
+SH9.BAY1      ok             off       -     1      -           -            -        -
+SH9.BAY2      ok             off       -     2      -           -            -        -
+SH9.BAY3      ok             off       -     3      -           -            -        -
+SH9.BAY4      ok             off       -     4      -           -            -        -
+SH9.BAY5      ok             off       -     5      -           -            -        -
+SH9.BAY6      ok             off       -     6      -           -            -        -
+SH9.BAY7      ok             off       -     7      -           -            -        -
+SH9.BAY8      ok             off       -     8      -           -            -        -
+SH9.BAY9      ok             off       -     9      -           -            -        -
+SH9.BAY10     ok             off       -     10     -           -            -        -
+SH9.BAY11     ok             off       -     11     -           -            -        -
+SH9.BAY12     ok             off       -     12     -           -            -        -
+SH9.BAY13     ok             off       -     13     -           -            -        -
+SH9.BAY14     ok             off       -     14     -           -            -        -
+SH9.BAY15     ok             off       -     15     -           -            -        -
+SH9.BAY16     ok             off       -     16     -           -            -        -
+SH9.BAY17     ok             off       -     17     -           -            -        -
+SH9.BAY18     ok             off       -     18     -           -            -        -
+SH9.BAY19     ok             off       -     19     -           -            -        -
+SH9.BAY20     ok             off       -     20     -           -            -        -
+SH9.BAY21     ok             off       -     21     -           -            -        -
+SH9.BAY22     ok             off       -     22     -           -            -        -
+SH9.BAY23     ok             off       -     23     -           -            -        -
+SH9.BAY24     not_installed  off       -     24     -           -            -        -
+SH9.BAY25     not_installed  off       -     25     -           -            -        -
+SH9.BAY26     not_installed  off       -     26     -           -            -        -
+SH9.BAY27     not_installed  off       -     27     -           -            -        -
+SH9.PWR0      ok             -         -     0      -           -            207 V    -
+SH9.PWR1      ok             -         -     1      -           -            206 V    -
+SH9.SC0       ok             off       -     0      -           28 C         -        -
+SH9.SC0.ETH0  ok             -         -     0      50.00 Gb/s  -            -        -
+SH9.SC0.ETH1  ok             -         -     1      0.00 b/s    -            -        -
+SH9.SC0.ETH2  ok             -         -     2      50.00 Gb/s  -            -        -
+SH9.SC0.ETH3  ok             -         -     3      0.00 b/s    -            -        -
+SH9.SC0.FAN0  ok             -         -     0      -           -            -        -
+SH9.SC0.FAN1  ok             -         -     1      -           -            -        -
+SH9.SC0.FAN2  ok             -         -     2      -           -            -        -
+SH9.SC0.FAN3  ok             -         -     3      -           -            -        -
+SH9.SC0.FAN4  ok             -         -     4      -           -            -        -
+SH9.SC0.FAN5  ok             -         -     5      -           -            -        -
+SH9.SC1       ok             off       -     1      -           28 C         -        -
+SH9.SC1.ETH0  ok             -         -     0      50.00 Gb/s  -            -        -
+SH9.SC1.ETH1  ok             -         -     1      0.00 b/s    -            -        -
+SH9.SC1.ETH2  ok             -         -     2      50.00 Gb/s  -            -        -
+SH9.SC1.ETH3  ok             -         -     3      0.00 b/s    -            -        -
+SH9.SC1.FAN0  ok             -         -     0      -           -            -        -
+SH9.SC1.FAN1  ok             -         -     1      -           -            -        -
+SH9.SC1.FAN2  ok             -         -     2      -           -            -        -
+SH9.SC1.FAN3  ok             -         -     3      -           -            -        -
+SH9.SC1.FAN4  ok             -         -     4      -           -            -        -
+SH9.SC1.FAN5  ok             -         -     5      -           -            -        -
+     root@lynpure02-ct0:/var/home/pureeng# puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    healthy  7.93T     -
+CH0.BAY1   SSD    healthy  7.93T     -
+CH0.BAY2   SSD    healthy  7.93T     -
+CH0.BAY3   SSD    healthy  7.93T     -
+CH0.BAY4   SSD    healthy  7.93T     -
+CH0.BAY5   SSD    healthy  7.93T     -
+CH0.BAY6   SSD    healthy  7.93T     -
+CH0.BAY7   SSD    healthy  7.93T     -
+CH0.BAY8   SSD    healthy  7.93T     -
+CH0.BAY9   SSD    healthy  7.93T     -
+CH0.BAY10  SSD    healthy  7.93T     -
+CH0.BAY11  SSD    healthy  7.93T     -
+CH0.BAY12  SSD    healthy  7.93T     -
+CH0.BAY13  SSD    healthy  7.93T     -
+CH0.BAY14  SSD    healthy  7.93T     -
+CH0.BAY15  SSD    healthy  7.93T     -
+CH0.BAY16  -      unused   0.00      -
+CH0.BAY17  -      unused   0.00      -
+CH0.BAY18  -      unused   0.00      -
+CH0.BAY19  -      unused   0.00      -
+CH0.NVB0   NVRAM  healthy  7.00G     -
+CH0.NVB1   NVRAM  healthy  7.00G     -
+CH0.NVB2   NVRAM  healthy  7.00G     -
+CH0.NVB3   NVRAM  healthy  7.00G     -
+SH9.BAY0   SSD    healthy  1.92T     -
+SH9.BAY1   SSD    healthy  1.92T     -
+SH9.BAY2   SSD    healthy  1.92T     -
+SH9.BAY3   SSD    healthy  1.92T     -
+SH9.BAY4   SSD    healthy  1.92T     -
+SH9.BAY5   SSD    healthy  1.92T     -
+SH9.BAY6   SSD    healthy  1.92T     -
+SH9.BAY7   SSD    healthy  1.92T     -
+SH9.BAY8   SSD    healthy  1.92T     -
+SH9.BAY9   SSD    healthy  1.92T     -
+SH9.BAY10  SSD    healthy  1.92T     -
+SH9.BAY11  SSD    healthy  1.92T     -
+SH9.BAY12  SSD    healthy  1.92T     -
+SH9.BAY13  SSD    healthy  1.92T     -
+SH9.BAY14  SSD    healthy  3.90T     -
+SH9.BAY15  SSD    healthy  3.90T     -
+SH9.BAY16  SSD    healthy  3.90T     -
+SH9.BAY17  SSD    healthy  3.90T     -
+SH9.BAY18  SSD    healthy  3.90T     -
+SH9.BAY19  SSD    healthy  3.90T     -
+SH9.BAY20  SSD    healthy  3.90T     -
+SH9.BAY21  SSD    healthy  3.90T     -
+SH9.BAY22  SSD    healthy  3.90T     -
+SH9.BAY23  SSD    healthy  3.90T     -
+SH9.BAY24  -      unused   0.00      -
+SH9.BAY25  -      unused   0.00      -
+SH9.BAY26  -      unused   0.00      -
+SH9.BAY27  -      unused   0.00      -
+     root@lynpure02-ct0:/var/home/pureeng# 1059248332     root@lynpure01-ct0:/var/home/pureeng# 
+     root@lynpure01-ct0:/var/home/pureeng# watch purearray list --space
+Every 2.0s: purearray list --spacelynpure01-ct0: Wed Feb 19 10:52:47 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  DataReduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  Totallynpure01  90.43T    82%     1693037G260.28T  84%3.8 to 124.2 to 155.23T  1.05T13.47T  0.00    0.0069.75T51593:036712     root@lynpure01-ct0:/var/home/pureeng# puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    empty    0.00      -
+CH0.BAY1   SSD    empty    0.00      -
+CH0.BAY2   SSD    healthy  3.49T     -
+CH0.BAY3   SSD    healthy  3.49T     -
+CH0.BAY4   SSD    healthy  3.49T     -
+CH0.BAY5   SSD    healthy  3.49T     -
+CH0.BAY6   SSD    healthy  3.49T     -
+CH0.BAY7   SSD    healthy  3.49T     -
+CH0.BAY8   SSD    healthy  3.49T     -
+CH0.BAY9   SSD    healthy  3.49T     -
+CH0.BAY10  SSD    healthy  1.86T     -
+CH0.BAY11  SSD    healthy  1.86T     -
+CH0.BAY12  SSD    healthy  1.86T     -
+CH0.BAY13  SSD    healthy  1.86T     -
+CH0.BAY14  SSD    healthy  1.86T     -
+CH0.BAY15  SSD    healthy  1.86T     -
+CH0.BAY16  SSD    healthy  1.86T     -
+CH0.BAY17  SSD    healthy  1.86T     -
+CH0.BAY18  SSD    healthy  1.86T     -
+CH0.BAY19  SSD    healthy  1.86T     -
+CH0.NVB0   NVRAM  healthy  7.00G     -
+CH0.NVB1   NVRAM  healthy  7.00G     -
+CH0.NVB2   NVRAM  healthy  7.00G     -
+CH0.NVB3   NVRAM  healthy  7.00G     -
+SH0.BAY0   SSD    healthy  1.74T     -
+SH0.BAY1   SSD    healthy  1.74T     -
+SH0.BAY2   SSD    healthy  1.74T     -
+SH0.BAY3   SSD    healthy  1.74T     -
+SH0.BAY4   SSD    healthy  1.74T     -
+SH0.BAY5   SSD    healthy  1.74T     -
+SH0.BAY6   SSD    healthy  1.74T     -
+SH0.BAY7   SSD    healthy  1.74T     -
+SH0.BAY8   SSD    healthy  1.74T     -
+SH0.BAY9   SSD    healthy  1.74T     -
+SH0.BAY10  SSD    healthy  1.74T     -
+SH0.BAY11  SSD    healthy  1.74T     -
+SH0.BAY12  SSD    healthy  1.74T     -
+SH0.BAY13  SSD    healthy  1.74T     -
+SH0.BAY14  SSD    healthy  1.74T     -
+SH0.BAY15  SSD    healthy  1.74T     -
+SH0.BAY16  SSD    healthy  1.74T     -
+SH0.BAY17  SSD    healthy  1.74T     -
+SH0.BAY18  SSD    healthy  1.74T     -
+SH0.BAY19  SSD    healthy  1.74T     -
+SH0.BAY20  SSD    healthy  1.74T     -
+SH0.BAY21  SSD    healthy  1.74T     -
+SH0.BAY22  SSD    healthy  1.74T     -
+SH0.BAY23  SSD    healthy  1.74T     -
+SH1.BAY0   SSD    healthy  1.74T     -
+SH1.BAY1   SSD    healthy  1.74T     -
+SH1.BAY2   SSD    healthy  1.74T     -
+SH1.BAY3   SSD    healthy  1.74T     -
+SH1.BAY4   SSD    healthy  1.74T     -
+SH1.BAY5   SSD    healthy  1.74T     -
+SH1.BAY6   SSD    healthy  1.74T     -
+SH1.BAY7   SSD    healthy  1.74T     -
+SH1.BAY8   SSD    healthy  1.74T     -
+SH1.BAY9   SSD    healthy  1.74T     -
+SH1.BAY10  SSD    healthy  1.74T     -
+SH1.BAY11  SSD    healthy  1.74T     -
+SH1.BAY12  SSD    healthy  3.49T     -
+SH1.BAY13  SSD    healthy  3.49T     -
+SH1.BAY14  SSD    empty    0.00      -
+SH1.BAY15  SSD    empty    0.00      -
+SH1.BAY16  SSD    empty    0.00      -
+SH1.BAY17  SSD    empty    0.00      -
+SH1.BAY18  SSD    empty    0.00      -
+SH1.BAY19  SSD    empty    0.00      -
+SH1.BAY20  SSD    empty    0.00      -
+SH1.BAY21  SSD    empty    0.00      -
+SH1.BAY22  SSD    empty    0.00      -
+SH1.BAY23  SSD    empty    0.00      -
+SH9.BAY0   SSD    healthy  1.92T     -
+SH9.BAY1   SSD    healthy  1.92T     -
+SH9.BAY2   SSD    healthy  1.92T     -
+SH9.BAY3   SSD    healthy  1.92T     -
+SH9.BAY4   SSD    healthy  1.92T     -
+SH9.BAY5   SSD    healthy  1.92T     -
+SH9.BAY6   SSD    healthy  1.92T     -
+SH9.BAY7   SSD    healthy  1.92T     -
+SH9.BAY8   SSD    healthy  1.92T     -
+SH9.BAY9   SSD    healthy  1.92T     -
+SH9.BAY10  -      unused   0.00      -
+SH9.BAY11  -      unused   0.00      -
+SH9.BAY12  -      unused   0.00      -
+SH9.BAY13  -      unused   0.00      -
+SH9.BAY14  -      unused   0.00      -
+SH9.BAY15  -      unused   0.00      -
+SH9.BAY16  -      unused   0.00      -
+SH9.BAY17  -      unused   0.00      -
+SH9.BAY18  -      unused   0.00      -
+SH9.BAY19  -      unused   0.00      -
+SH9.BAY20  -      unused   0.00      -
+SH9.BAY21  -      unused   0.00      -
+SH9.BAY22  -      unused   0.00      -
+SH9.BAY23  -      unused   0.00      -
+SH9.BAY24  -      unused   0.00      -
+SH9.BAY25  -      unused   0.00      -
+SH9.BAY26  -      unused   0.00      -
+SH9.BAY27  -      unused   0.00      -
+     root@lynpure01-ct0:/var/home/pureeng# puredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV2   1        SSD    SAS       healthy  1.74T     0.00          510.10G   12118666440294351142:11556574547885843311  34/218         203419/228632
+CH0.DRV2   2        SSD    SAS       healthy  1.74T     0.00          607.55G   1364993709236897847:13558058895277019771   35/218         203218/228632
+CH0.DRV3   1        SSD    SAS       healthy  1.74T     0.00          521.91G   13139869107156832053:10283883282377053610  42/218         208998/228632
+CH0.DRV3   2        SSD    SAS       healthy  1.74T     0.00          614.96G   3653371166993305079:9691685398791238822    35/218         209099/228632
+CH0.DRV4   1        SSD    SAS       healthy  1.74T     0.00          521.33G   7975159856004286993:11548759301017184718   31/218         209208/228632
+CH0.DRV4   2        SSD    SAS       healthy  1.74T     0.00          617.81G   14939343743763104922:13516514726345527795  32/218         209345/228632
+CH0.DRV5   1        SSD    SAS       healthy  1.74T     0.00          617.20G   2445039484198667003:13597079570953579448   33/218         209435/228632
+CH0.DRV5   2        SSD    SAS       healthy  1.74T     0.00          523.55G   13045633555774391317:11344391509841783779  31/218         209173/228632
+CH0.DRV6   1        SSD    SAS       healthy  1.74T     0.00          521.45G   18275123805871621542:12478837447126850346  33/218         209060/228632
+CH0.DRV6   2        SSD    SAS       healthy  1.74T     0.00          618.50G   12539852595522259510:9962226515243831758   35/218         209308/228632
+CH0.DRV7   1        SSD    SAS       healthy  1.74T     0.00          523.62G   3974474615778197837:10005805358581060461   38/218         209174/228632
+CH0.DRV7   2        SSD    SAS       healthy  1.74T     0.00          616.87G   661570008968088551:12745279379324328406    33/218         209245/228632
+CH0.DRV8   1        SSD    SAS       healthy  1.74T     0.00          616.18G   4877645264476193849:13732786207759387769   36/218         209403/228632
+CH0.DRV8   2        SSD    SAS       healthy  1.74T     0.00          522.66G   5374467408768157811:10584640624757036579   39/218         209096/228632
+CH0.DRV9   1        SSD    SAS       healthy  1.74T     0.00          522.75G   12591160287599938154:10426520625898478396  36/218         208965/228632
+CH0.DRV9   2        SSD    SAS       healthy  1.74T     0.00          616.84G   9745472639172100211:13095114306984599927   37/218         209215/228632
+CH0.DRV10  1        SSD    SAS       healthy  952.91G   0.00          0.00      17077937079402187949:10510639664944308192  6/112          114006/121906
+CH0.DRV10  2        SSD    SAS       healthy  952.91G   0.00          0.00      2289809010690311366:11975360042324429554   18/112         114142/121906
+CH0.DRV11  1        SSD    SAS       healthy  952.91G   0.00          0.00      13685572194883028483:13130473177425004494  6/112          113878/121906
+CH0.DRV11  2        SSD    SAS       healthy  952.91G   0.00          0.00      18172791683316075091:12215840726526869917  4/112          114208/121906
+CH0.DRV12  1        SSD    SAS       healthy  952.91G   0.00          0.00      5559694974456842697:11736263423470836731   6/112          114258/121906
+CH0.DRV12  2        SSD    SAS       healthy  952.91G   0.00          0.00      8181502268837089234:11238877336655330574   19/112         113970/121906
+CH0.DRV13  1        SSD    SAS       healthy  952.91G   0.00          0.00      3359137749381629359:11013061401740290617   18/112         114242/121906
+CH0.DRV13  2        SSD    SAS       healthy  952.91G   0.00          0.00      15968933955005532508:13664382808747282067  10/112         113813/121906
+CH0.DRV14  1        SSD    SAS       healthy  952.91G   0.00          0.00      10888402558186572321:10344534038339416906  19/112         114159/121906
+CH0.DRV14  2        SSD    SAS       healthy  952.91G   0.00          0.00      4905440278773186991:11854134546660528693   7/112          114083/121906
+CH0.DRV15  1        SSD    SAS       healthy  952.91G   0.00          0.00      14404487813689527697:13551789569660529520  19/112         113833/121906
+CH0.DRV15  2        SSD    SAS       healthy  952.91G   0.00          0.00      7166865371289700575:12261688225471664533   18/112         114170/121906
+CH0.DRV16  1        SSD    SAS       healthy  952.91G   0.00          0.00      8068767633361027433:12588476443263147462   20/112         113929/121906
+CH0.DRV16  2        SSD    SAS       healthy  952.91G   0.00          0.00      3266330894799620242:11369744145816335294   12/112         114149/121906
+CH0.DRV17  1        SSD    SAS       healthy  952.91G   0.00          0.00      6494767906007498910:9810657143363040344    19/112         114228/121906
+CH0.DRV17  2        SSD    SAS       healthy  952.91G   0.00          0.00      12264358266018283718:10796897398852320494  21/112         113952/121906
+CH0.DRV18  1        SSD    SAS       healthy  952.91G   0.00          0.00      2541164218658016618:9342445559515543282    3/112          113973/121906
+CH0.DRV18  2        SSD    SAS       healthy  952.91G   0.00          0.00      16317994396877997046:10258290000818756877  5/112          114232/121906
+CH0.DRV19  1        SSD    SAS       healthy  952.91G   0.00          0.00      18049996803441708476:9500631014825559716   6/112          114107/121906
+CH0.DRV19  2        SSD    SAS       healthy  952.91G   0.00          0.00      561548917354480209:10953471927937955189    19/112         113829/121906
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.00G     -             0.00      15378562118053809022:10626188026765897835  -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.00G     -             0.00      5216880279327295954:11211146417042875023   -              -
+CH0.NVR2   0        NVRAM  NVMe      healthy  7.00G     -             0.00      14538746141890922814:13756651644453159060  -              -
+CH0.NVR3   0        NVRAM  NVMe      healthy  7.00G     -             0.00      4838263114957996505:11835415695279329020   -              -
+SH0.DRV0   1        SSD    SAS       healthy  893.35G   0.00          0.00      1428462644353714481:11582539198487047111   19/104         77233/114283
+SH0.DRV0   2        SSD    SAS       healthy  893.35G   0.00          0.00      15657004590999358529:13477815875729754626  7/104          77408/114283
+SH0.DRV1   1        SSD    SAS       healthy  893.35G   0.00          0.00      1470663785538667243:9983666446506768945    16/104         76814/114283
+SH0.DRV1   2        SSD    SAS       healthy  893.35G   0.00          0.00      13017211781364664468:11154204854028156723  7/104          77348/114283
+SH0.DRV2   1        SSD    SAS       healthy  893.35G   0.00          0.00      3460986669002280653:13152634902486587496   19/104         77402/114283
+SH0.DRV2   2        SSD    SAS       healthy  893.35G   0.00          0.00      16683480979893471190:11772320809565365823  25/104         77243/114283
+SH0.DRV3   1        SSD    SAS       healthy  893.35G   0.00          0.00      13173767613836117273:13261815508047430157  14/104         77343/114283
+SH0.DRV3   2        SSD    SAS       healthy  893.35G   0.00          0.00      8352059549909140639:11856457303754763297   9/104          77509/114283
+SH0.DRV4   1        SSD    SAS       healthy  893.35G   0.00          0.00      13574847331870851784:10608770573947456026  23/104         77487/114283
+SH0.DRV4   2        SSD    SAS       healthy  893.35G   0.00          0.00      9904699766947400364:12357311753985877270   8/104          76925/114283
+SH0.DRV5   1        SSD    SAS       healthy  893.35G   0.00          0.00      12809859708452028425:11811102965295270101  7/104          77500/114283
+SH0.DRV5   2        SSD    SAS       healthy  893.35G   0.00          0.00      10554092648452407306:13410422400947651490  17/104         77180/114283
+SH0.DRV6   1        SSD    SAS       healthy  893.35G   0.00          0.00      2807388398932871970:11625342126934481243   24/104         77623/114283
+SH0.DRV6   2        SSD    SAS       healthy  893.35G   0.00          0.00      13127575474678549085:10008727754705860477  15/104         77262/114283
+SH0.DRV7   1        SSD    SAS       healthy  893.35G   0.00          0.00      8715817059242821938:11051336526307207884   26/104         71736/114283
+SH0.DRV7   2        SSD    SAS       healthy  893.35G   0.00          0.00      9707680392946271637:9851852802423732899    18/104         71759/114283
+SH0.DRV8   1        SSD    SAS       healthy  893.35G   0.00          0.00      15420222174338174842:10894735093258861287  8/104          77515/114283
+SH0.DRV8   2        SSD    SAS       healthy  893.35G   0.00          0.00      17867156135665156134:10513991628785715094  17/104         77403/114283
+SH0.DRV9   1        SSD    SAS       healthy  893.35G   0.00          0.00      2089842555702878:13680366945013318856      27/104         76737/114283
+SH0.DRV9   2        SSD    SAS       healthy  893.35G   0.00          0.00      6812823862563783637:12869094831312258406   18/104         76795/114283
+SH0.DRV10  1        SSD    SAS       healthy  893.35G   0.00          0.00      10823509184424526697:10804258700671380191  23/104         77088/114283
+SH0.DRV10  2        SSD    SAS       healthy  893.35G   0.00          0.00      12545714413498810787:11641393932245895328  27/104         77003/114283
+SH0.DRV11  1        SSD    SAS       healthy  893.35G   0.00          0.00      9948641176410736074:11987015737967488788   16/104         76785/114283
+SH0.DRV11  2        SSD    SAS       healthy  893.35G   0.00          0.00      5592413375516918523:10133168092782351956   26/104         77315/114283
+SH0.DRV12  1        SSD    SAS       healthy  893.35G   0.00          0.00      12780739265663290759:9731536354299350418   34/104         105194/114283
+SH0.DRV12  2        SSD    SAS       healthy  893.35G   0.00          0.00      16105628498362779673:10592191923150165933  24/104         104974/114283
+SH0.DRV13  1        SSD    SAS       healthy  893.35G   0.00          0.00      9882194322960698894:11600461585154409817   18/104         105068/114283
+SH0.DRV13  2        SSD    SAS       healthy  893.35G   0.00          0.00      9830142078356113064:12292917115724972510   23/104         105253/114283
+SH0.DRV14  1        SSD    SAS       healthy  893.35G   0.00          0.00      4961033376973211354:11286420093986350297   22/104         104477/114283
+SH0.DRV14  2        SSD    SAS       healthy  893.35G   0.00          0.00      12698593328926969126:10209467166530741961  25/104         104284/114283
+SH0.DRV15  1        SSD    SAS       healthy  893.35G   0.00          0.00      17306269077780908751:13517851318070955394  8/104          105295/114283
+SH0.DRV15  2        SSD    SAS       healthy  893.35G   0.00          0.00      16148836206644709204:10566474917246558794  25/104         104993/114283
+SH0.DRV16  1        SSD    SAS       healthy  893.35G   0.00          0.00      15195615754657939473:13830427675191159075  5/104          105002/114283
+SH0.DRV16  2        SSD    SAS       healthy  893.35G   0.00          0.00      15519889505183352408:10328676029392217683  14/104         105330/114283
+SH0.DRV17  1        SSD    SAS       healthy  893.35G   0.00          0.00      7167161973183627670:11953039445083568748   13/104         104995/114283
+SH0.DRV17  2        SSD    SAS       healthy  893.35G   0.00          0.00      10163679220482719799:9268462096239433088   5/104          104983/114283
+SH0.DRV18  1        SSD    SAS       healthy  893.35G   0.00          0.00      16316017354788978762:13258506023732892546  10/104         104990/114283
+SH0.DRV18  2        SSD    SAS       healthy  893.35G   0.00          0.00      9707300615373604258:9960708622935836296    26/104         105203/114283
+SH0.DRV19  1        SSD    SAS       healthy  893.35G   0.00          0.00      16037534419064735941:13048519860508962342  17/104         105216/114283
+SH0.DRV19  2        SSD    SAS       healthy  893.35G   0.00          0.00      16132648072186382684:10563180006343376039  13/104         105039/114283
+SH0.DRV20  1        SSD    SAS       healthy  893.35G   0.00          0.00      11812769836959091645:12791469847677228032  8/104          104954/114283
+SH0.DRV20  2        SSD    SAS       healthy  893.35G   0.00          0.00      9723427448380738381:12653142991056096557   22/104         105236/114283
+SH0.DRV21  1        SSD    SAS       healthy  893.35G   0.00          0.00      10611987296291146241:12816711679502228566  22/104         105068/114283
+SH0.DRV21  2        SSD    SAS       healthy  893.35G   0.00          0.00      13551941704091388369:11301326868198340238  24/104         104936/114283
+SH0.DRV22  1        SSD    SAS       healthy  893.35G   0.00          0.00      2245220049116086559:9579785525567946635    26/104         105232/114283
+SH0.DRV22  2        SSD    SAS       healthy  893.35G   0.00          0.00      17361905415973718825:11025753154380487651  11/104         104971/114283
+SH0.DRV23  1        SSD    SAS       healthy  893.35G   0.00          0.00      3955717747873238529:12669910729423244259   25/104         105053/114283
+SH0.DRV23  2        SSD    SAS       healthy  893.35G   0.00          0.00      6432364507416513836:11406290126095506938   30/104         105241/114283
+SH1.DRV0   1        SSD    SAS       healthy  893.35G   0.00          0.00      15519506823323076331:9592759841038300131   18/104         106010/114283
+SH1.DRV0   2        SSD    SAS       healthy  893.35G   0.00          0.00      15302760027610562930:10795037573213199862  12/104         106491/114283
+SH1.DRV1   1        SSD    SAS       healthy  893.35G   0.00          0.00      3171071751838780954:10391865944846760851   22/104         106034/114283
+SH1.DRV1   2        SSD    SAS       healthy  893.35G   0.00          0.00      14960275474422058886:11497228205169441454  19/104         106432/114283
+SH1.DRV2   1        SSD    SAS       healthy  893.35G   0.00          0.00      12878997827458318540:10458339377930096692  7/104          106086/114283
+SH1.DRV2   2        SSD    SAS       healthy  893.35G   0.00          0.00      4827180805922570389:11191124377848377789   24/104         106293/114283
+SH1.DRV3   1        SSD    SAS       healthy  893.35G   0.00          0.00      4522211590016682026:10096202099707762968   6/104          106043/114283
+SH1.DRV3   2        SSD    SAS       healthy  893.35G   0.00          0.00      11352406937443124015:10438732465024023603  18/104         106340/114283
+SH1.DRV4   1        SSD    SAS       healthy  893.35G   0.00          0.00      7623155441867702580:11409806469735687246   18/104         106406/114283
+SH1.DRV4   2        SSD    SAS       healthy  893.35G   0.00          0.00      9144928412418852884:11895215589216231893   19/104         106005/114283
+SH1.DRV5   1        SSD    SAS       healthy  893.35G   0.00          0.00      14918751397360453543:12570026349587659879  21/104         106324/114283
+SH1.DRV5   2        SSD    SAS       healthy  893.35G   0.00          0.00      12656344096837092785:10520096115290564194  6/104          106227/114283
+SH1.DRV6   1        SSD    SAS       healthy  893.35G   0.00          0.00      12467953228958681346:9465947014580899883   23/104         106154/114283
+SH1.DRV6   2        SSD    SAS       healthy  893.35G   0.00          0.00      15419467057343906910:9974365759116158929   17/104         106357/114283
+SH1.DRV7   1        SSD    SAS       healthy  893.35G   0.00          0.00      4917157062923535300:13746677420856741496   13/104         106496/114283
+SH1.DRV7   2        SSD    SAS       healthy  893.35G   0.00          0.00      12760869553619616199:12650346497116023830  7/104          106030/114283
+SH1.DRV8   1        SSD    SAS       healthy  893.35G   0.00          0.00      2449649342710105867:13440511079365488151   22/104         106165/114283
+SH1.DRV8   2        SSD    SAS       healthy  893.35G   0.00          0.00      13894597739557110846:12501295645315731227  19/104         106541/114283
+SH1.DRV9   1        SSD    SAS       healthy  893.35G   0.00          0.00      9178712798782114866:10708306440116544053   7/104          106092/114283
+SH1.DRV9   2        SSD    SAS       healthy  893.35G   0.00          0.00      15830464946439998731:11599461683433127820  14/104         106434/114283
+SH1.DRV10  1        SSD    SAS       healthy  893.35G   0.00          0.00      7690937635918857220:12452989470846914207   24/104         106146/114283
+SH1.DRV10  2        SSD    SAS       healthy  893.35G   0.00          0.00      15240138898364188650:12361600298407979400  22/104         106375/114283
+SH1.DRV11  1        SSD    SAS       healthy  893.35G   0.00          0.00      17045478598641795300:10270801654401725546  10/104         106069/114283
+SH1.DRV11  2        SSD    SAS       healthy  893.35G   0.00          0.00      14723275337399288989:11234108208407395689  25/104         106349/114283
+SH1.DRV12  1        SSD    SAS       healthy  1.74T     0.00          616.48G   11456197935569651106:9388567418783773923   32/218         209019/228632
+SH1.DRV12  2        SSD    SAS       healthy  1.74T     0.00          522.43G   14939834058179429613:11822516253004331323  33/218         209043/228632
+SH1.DRV13  1        SSD    SAS       healthy  1.74T     0.00          688.09G   5662211489269826978:11955955687707630286   35/218         208828/228632
+SH1.DRV13  2        SSD    SAS       healthy  1.74T     0.00          814.16G   17035339901092774632:12938318087041870151  32/218         209230/228632
+SH9.DRV0   0        SSD    NVMe      healthy  1.92T     0.00          0.00      11513823941180934048:11636275470050309452  6/30           5368/34391
+SH9.DRV1   0        SSD    NVMe      healthy  1.92T     0.00          0.00      13275850015964152521:13607858400402481873  6/30           5344/34457
+SH9.DRV2   0        SSD    NVMe      healthy  1.92T     0.00          0.00      3246720483923412000:12350382505211736332   7/30           5377/34302
+SH9.DRV3   0        SSD    NVMe      healthy  1.92T     0.00          0.00      778248837313152169:11849614880168480737    7/30           5339/34402
+SH9.DRV4   0        SSD    NVMe      healthy  1.92T     0.00          0.00      5838373670386353344:12594584609997175492   5/30           5381/34339
+SH9.DRV5   0        SSD    NVMe      healthy  1.92T     0.00          0.00      1459848098770012172:13502394560168096081   8/30           5385/34268
+SH9.DRV6   0        SSD    NVMe      healthy  1.92T     0.00          0.00      9734762529930888116:10031155718084343977   8/30           5361/34387
+SH9.DRV7   0        SSD    NVMe      healthy  1.92T     0.00          0.00      16071990908500135456:11798901482279120889  5/30           5344/34398
+SH9.DRV8   0        SSD    NVMe      healthy  1.92T     0.00          0.00      5957264013156172373:10251337510912667500   6/30           5304/34419
+SH9.DRV9   0        SSD    NVMe      healthy  1.92T     0.00          0.00      5607577296968437153:10303255106951374624   6/30           5373/34420
+     root@lynpure01-ct0:/var/home/pureeng# puredb list drivesrive listwatch purearray list --space
+Every 2.0s: purearray list --spacelynpure01-ct0: Wed Feb 19 10:54:08 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  DataReduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  Totallynpure01  90.43T    92%     1693037G260.28T  84%3.8 to 124.2 to 155.23T  1.05T13.47T  0.00    0.0069.75T126204     root@lynpure01-ct0:/var/home/pureeng# purearray remoteassist --status
+Name           Status      Opened                   Expires
+lynpure01-ct0  connecting  2025-02-19 10:40:05 CST  2025-02-21 10:40:05 CST
+     root@lynpure01-ct0:/var/home/pureeng# purearray remoteassist --statusdisconnect
+Name           Status        Opened  Expires
+lynpure01-ct0  disconnected  -       -
+     root@lynpure01-ct0:/var/home/pureeng# purearray remoteassist --disconnectconnect
+Name           Status      Opened                   Expires
+lynpure01-ct0  connecting  2025-02-19 10:54:50 CST  2025-02-21 10:54:50 CST
+     root@lynpure01-ct0:/var/home/pureeng# purearray remoteassist --connectdisconnectstatus
+Name           Status      Opened                   Expires
+lynpure01-ct0  connecting  2025-02-19 10:54:50 CST  2025-02-21 10:54:50 CST
+     root@lynpure01-ct0:/var/home/pureeng# puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    empty    0.00      -
+CH0.BAY1   SSD    empty    0.00      -
+CH0.BAY2   SSD    healthy  3.49T     -
+CH0.BAY3   SSD    healthy  3.49T     -
+CH0.BAY4   SSD    healthy  3.49T     -
+CH0.BAY5   SSD    healthy  3.49T     -
+CH0.BAY6   SSD    healthy  3.49T     -
+CH0.BAY7   SSD    healthy  3.49T     -
+CH0.BAY8   SSD    healthy  3.49T     -
+CH0.BAY9   SSD    healthy  3.49T     -
+CH0.BAY10  SSD    healthy  1.86T     -
+CH0.BAY11  SSD    healthy  1.86T     -
+CH0.BAY12  SSD    healthy  1.86T     -
+CH0.BAY13  SSD    healthy  1.86T     -
+CH0.BAY14  SSD    healthy  1.86T     -
+CH0.BAY15  SSD    healthy  1.86T     -
+CH0.BAY16  SSD    healthy  1.86T     -
+CH0.BAY17  SSD    healthy  1.86T     -
+CH0.BAY18  SSD    healthy  1.86T     -
+CH0.BAY19  SSD    healthy  1.86T     -
+CH0.NVB0   NVRAM  healthy  7.00G     -
+CH0.NVB1   NVRAM  healthy  7.00G     -
+CH0.NVB2   NVRAM  healthy  7.00G     -
+CH0.NVB3   NVRAM  healthy  7.00G     -
+SH0.BAY0   SSD    healthy  1.74T     -
+SH0.BAY1   SSD    healthy  1.74T     -
+SH0.BAY2   SSD    healthy  1.74T     -
+SH0.BAY3   SSD    healthy  1.74T     -
+SH0.BAY4   SSD    healthy  1.74T     -
+SH0.BAY5   SSD    healthy  1.74T     -
+SH0.BAY6   SSD    healthy  1.74T     -
+SH0.BAY7   SSD    healthy  1.74T     -
+SH0.BAY8   SSD    healthy  1.74T     -
+SH0.BAY9   SSD    healthy  1.74T     -
+SH0.BAY10  SSD    healthy  1.74T     -
+SH0.BAY11  SSD    healthy  1.74T     -
+SH0.BAY12  SSD    healthy  1.74T     -
+SH0.BAY13  SSD    healthy  1.74T     -
+SH0.BAY14  SSD    healthy  1.74T     -
+SH0.BAY15  SSD    healthy  1.74T     -
+SH0.BAY16  SSD    healthy  1.74T     -
+SH0.BAY17  SSD    healthy  1.74T     -
+SH0.BAY18  SSD    healthy  1.74T     -
+SH0.BAY19  SSD    healthy  1.74T     -
+SH0.BAY20  SSD    healthy  1.74T     -
+SH0.BAY21  SSD    healthy  1.74T     -
+SH0.BAY22  SSD    healthy  1.74T     -
+SH0.BAY23  SSD    healthy  1.74T     -
+SH1.BAY0   SSD    healthy  1.74T     -
+SH1.BAY1   SSD    healthy  1.74T     -
+SH1.BAY2   SSD    healthy  1.74T     -
+SH1.BAY3   SSD    healthy  1.74T     -
+SH1.BAY4   SSD    healthy  1.74T     -
+SH1.BAY5   SSD    healthy  1.74T     -
+SH1.BAY6   SSD    healthy  1.74T     -
+SH1.BAY7   SSD    healthy  1.74T     -
+SH1.BAY8   SSD    healthy  1.74T     -
+SH1.BAY9   SSD    healthy  1.74T     -
+SH1.BAY10  SSD    healthy  1.74T     -
+SH1.BAY11  SSD    healthy  1.74T     -
+SH1.BAY12  SSD    healthy  3.49T     -
+SH1.BAY13  SSD    healthy  3.49T     -
+SH1.BAY14  SSD    empty    0.00      -
+SH1.BAY15  SSD    empty    0.00      -
+SH1.BAY16  SSD    empty    0.00      -
+SH1.BAY17  SSD    empty    0.00      -
+SH1.BAY18  SSD    empty    0.00      -
+SH1.BAY19  SSD    empty    0.00      -
+SH1.BAY20  SSD    empty    0.00      -
+SH1.BAY21  SSD    empty    0.00      -
+SH1.BAY22  SSD    empty    0.00      -
+SH1.BAY23  SSD    empty    0.00      -
+SH9.BAY0   SSD    healthy  1.92T     -
+SH9.BAY1   SSD    healthy  1.92T     -
+SH9.BAY2   SSD    healthy  1.92T     -
+SH9.BAY3   SSD    healthy  1.92T     -
+SH9.BAY4   SSD    healthy  1.92T     -
+SH9.BAY5   SSD    healthy  1.92T     -
+SH9.BAY6   SSD    healthy  1.92T     -
+SH9.BAY7   SSD    healthy  1.92T     -
+SH9.BAY8   SSD    healthy  1.92T     -
+SH9.BAY9   SSD    healthy  1.92T     -
+SH9.BAY10  -      unused   0.00      -
+SH9.BAY11  -      unused   0.00      -
+SH9.BAY12  -      unused   0.00      -
+SH9.BAY13  -      unused   0.00      -
+SH9.BAY14  -      unused   0.00      -
+SH9.BAY15  -      unused   0.00      -
+SH9.BAY16  -      unused   0.00      -
+SH9.BAY17  -      unused   0.00      -
+SH9.BAY18  -      unused   0.00      -
+SH9.BAY19  -      unused   0.00      -
+SH9.BAY20  -      unused   0.00      -
+SH9.BAY21  -      unused   0.00      -
+SH9.BAY22  -      unused   0.00      -
+SH9.BAY23  -      unused   0.00      -
+SH9.BAY24  -      unused   0.00      -
+SH9.BAY25  -      unused   0.00      -
+SH9.BAY26  -      unused   0.00      -
+SH9.BAY27  -      unused   0.00      -
+     root@lynpure01-ct0:/var/home/pureeng# purearray remoeteasisist --status
+Name           Status     Opened                   Expires
+lynpure01-ct0  connected  2025-02-19 10:54:50 CST  2025-02-21 10:54:50 CST
+     root@lynpure01-ct0:/var/home/pureeng# purearray remoteassist --statusdrive listarray remoteassist --statuspurearray list drives watch purearray list dripurearray remoteassist --statusdrive listarray remoteassist --statusconnectdisconnectstatuswatch purearray list --space
+Every 2.0s: purearray list --spacelynpure01-ct0: Wed Feb 19 10:56:14 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  DataReduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  Totallynpure01  90.43T    100%    1693037G260.28T  84%3.8 to 124.2 to 155.23T  1.05T13.48T  0.00    0.0069.75T82373164055077:02683% 1148227326794165058:0161059239338427559:00510492373374155051:00:00410621631540485371:01591372263264155152:0048091382163042842651593:035813923833784265164:005909138226315394385265:004668138227305994485276:004100%812721630540595487:02610492483185% 640495388:016781049237315404751599:037126205934404852610:00591372159349439531:004105215303842650482:0261052037315994375253:00482812592383256403851694:038712520383291640595365:005491052048326741595376:004100%9137216304842650497:04813721630488% 943751598:0378127216304843751599:0371259238326404852620:0043079137226305942650491:036105922731594375162:0151052038326940485263:015819137226304594385274:0258912721530491842650375:0155913720483269943751496:03100%7115203731594375157:005813722630488% 943751488:0377126204833741595399:03611592263154049537     root@lynpure01-ct0:/var/home/pureeng# stty columns 250;stty rows 40
+     root@lynpure01-ct0:/var/home/pureeng# stty columns 250;stty rows 40PUREDRIVE puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    empty    0.00      -
+CH0.BAY1   SSD    empty    0.00      -
+CH0.BAY2   SSD    empty    0.00      -
+CH0.BAY3   SSD    empty    0.00      -
+CH0.BAY4   SSD    empty    0.00      -
+CH0.BAY5   SSD    empty    0.00      -
+CH0.BAY6   SSD    healthy  3.49T     -
+CH0.BAY7   SSD    healthy  3.49T     -
+CH0.BAY8   SSD    healthy  3.49T     -
+CH0.BAY9   SSD    healthy  3.49T     -
+CH0.BAY10  SSD    healthy  1.86T     -
+CH0.BAY11  SSD    healthy  1.86T     -
+CH0.BAY12  SSD    healthy  1.86T     -
+CH0.BAY13  SSD    healthy  1.86T     -
+CH0.BAY14  SSD    healthy  1.86T     -
+CH0.BAY15  SSD    healthy  1.86T     -
+CH0.BAY16  SSD    healthy  1.86T     -
+CH0.BAY17  SSD    healthy  1.86T     -
+CH0.BAY18  SSD    healthy  1.86T     -
+CH0.BAY19  SSD    healthy  1.86T     -
+CH0.NVB0   NVRAM  healthy  7.00G     -
+CH0.NVB1   NVRAM  healthy  7.00G     -
+CH0.NVB2   NVRAM  healthy  7.00G     -
+CH0.NVB3   NVRAM  healthy  7.00G     -
+SH0.BAY0   SSD    healthy  1.74T     -
+SH0.BAY1   SSD    healthy  1.74T     -
+SH0.BAY2   SSD    healthy  1.74T     -
+SH0.BAY3   SSD    healthy  1.74T     -
+SH0.BAY4   SSD    healthy  1.74T     -
+SH0.BAY5   SSD    healthy  1.74T     -
+SH0.BAY6   SSD    healthy  1.74T     -
+SH0.BAY7   SSD    healthy  1.74T     -
+SH0.BAY8   SSD    healthy  1.74T     -
+SH0.BAY9   SSD    healthy  1.74T     -
+SH0.BAY10  SSD    healthy  1.74T     -
+SH0.BAY11  SSD    healthy  1.74T     -
+SH0.BAY12  SSD    healthy  1.74T     -
+SH0.BAY13  SSD    healthy  1.74T     -
+SH0.BAY14  SSD    healthy  1.74T     -
+SH0.BAY15  SSD    healthy  1.74T     -
+SH0.BAY16  SSD    healthy  1.74T     -
+SH0.BAY17  SSD    healthy  1.74T     -
+SH0.BAY18  SSD    healthy  1.74T     -
+SH0.BAY19  SSD    healthy  1.74T     -
+SH0.BAY20  SSD    healthy  1.74T     -
+SH0.BAY21  SSD    healthy  1.74T     -
+SH0.BAY22  SSD    healthy  1.74T     -
+SH0.BAY23  SSD    healthy  1.74T     -
+SH1.BAY0   SSD    healthy  1.74T     -
+SH1.BAY1   SSD    healthy  1.74T     -
+SH1.BAY2   SSD    healthy  1.74T     -
+SH1.BAY3   SSD    healthy  1.74T     -
+SH1.BAY4   SSD    healthy  1.74T     -
+SH1.BAY5   SSD    healthy  1.74T     -
+SH1.BAY6   SSD    healthy  1.74T     -
+SH1.BAY7   SSD    healthy  1.74T     -
+SH1.BAY8   SSD    healthy  1.74T     -
+SH1.BAY9   SSD    healthy  1.74T     -
+SH1.BAY10  SSD    healthy  1.74T     -
+SH1.BAY11  SSD    healthy  1.74T     -
+SH1.BAY12  SSD    healthy  3.49T     -
+SH1.BAY13  SSD    healthy  3.49T     -
+SH1.BAY14  SSD    healthy  3.49T     -
+SH1.BAY15  SSD    healthy  3.49T     -
+SH1.BAY16  SSD    healthy  3.49T     -
+SH1.BAY17  SSD    healthy  3.49T     -
+SH1.BAY18  SSD    empty    0.00      -
+SH1.BAY19  SSD    empty    0.00      -
+SH1.BAY20  SSD    empty    0.00      -
+SH1.BAY21  SSD    empty    0.00      -
+SH1.BAY22  SSD    empty    0.00      -
+SH1.BAY23  SSD    empty    0.00      -
+SH9.BAY0   SSD    healthy  1.92T     -
+SH9.BAY1   SSD    healthy  1.92T     -
+SH9.BAY2   SSD    healthy  1.92T     -
+SH9.BAY3   SSD    healthy  1.92T     -
+SH9.BAY4   SSD    healthy  1.92T     -
+SH9.BAY5   SSD    healthy  1.92T     -
+SH9.BAY6   SSD    healthy  1.92T     -
+SH9.BAY7   SSD    healthy  1.92T     -
+SH9.BAY8   SSD    healthy  1.92T     -
+SH9.BAY9   SSD    healthy  1.92T     -
+SH9.BAY10  -      unused   0.00      -
+SH9.BAY11  -      unused   0.00      -
+SH9.BAY12  -      unused   0.00      -
+SH9.BAY13  -      unused   0.00      -
+SH9.BAY14  -      unused   0.00      -
+SH9.BAY15  -      unused   0.00      -
+SH9.BAY16  -      unused   0.00      -
+SH9.BAY17  -      unused   0.00      -
+SH9.BAY18  -      unused   0.00      -
+SH9.BAY19  -      unused   0.00      -
+SH9.BAY20  -      unused   0.00      -
+SH9.BAY21  -      unused   0.00      -
+SH9.BAY22  -      unused   0.00      -
+SH9.BAY23  -      unused   0.00      -
+SH9.BAY24  -      unused   0.00      -
+SH9.BAY25  -      unused   0.00      -
+SH9.BAY26  -      unused   0.00      -
+SH9.BAY27  -      unused   0.00      -
+     root@lynpure01-ct0:/var/home/pureeng# puredrive liststty columns 250;stty rows 40200
+     root@lynpure01-ct0:/var/home/pureeng# stty columns 250;stty rows 200puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    empty    0.00      -
+CH0.BAY1   SSD    empty    0.00      -
+CH0.BAY2   SSD    empty    0.00      -
+CH0.BAY3   SSD    empty    0.00      -
+CH0.BAY4   SSD    empty    0.00      -
+CH0.BAY5   SSD    empty    0.00      -
+CH0.BAY6   SSD    healthy  3.49T     -
+CH0.BAY7   SSD    healthy  3.49T     -
+CH0.BAY8   SSD    healthy  3.49T     -
+CH0.BAY9   SSD    healthy  3.49T     -
+CH0.BAY10  SSD    healthy  1.86T     -
+CH0.BAY11  SSD    healthy  1.86T     -
+CH0.BAY12  SSD    healthy  1.86T     -
+CH0.BAY13  SSD    healthy  1.86T     -
+CH0.BAY14  SSD    healthy  1.86T     -
+CH0.BAY15  SSD    healthy  1.86T     -
+CH0.BAY16  SSD    healthy  1.86T     -
+CH0.BAY17  SSD    healthy  1.86T     -
+CH0.BAY18  SSD    healthy  1.86T     -
+CH0.BAY19  SSD    healthy  1.86T     -
+CH0.NVB0   NVRAM  healthy  7.00G     -
+CH0.NVB1   NVRAM  healthy  7.00G     -
+CH0.NVB2   NVRAM  healthy  7.00G     -
+CH0.NVB3   NVRAM  healthy  7.00G     -
+SH0.BAY0   SSD    healthy  1.74T     -
+SH0.BAY1   SSD    healthy  1.74T     -
+SH0.BAY2   SSD    healthy  1.74T     -
+SH0.BAY3   SSD    healthy  1.74T     -
+SH0.BAY4   SSD    healthy  1.74T     -
+SH0.BAY5   SSD    healthy  1.74T     -
+SH0.BAY6   SSD    healthy  1.74T     -
+SH0.BAY7   SSD    healthy  1.74T     -
+SH0.BAY8   SSD    healthy  1.74T     -
+SH0.BAY9   SSD    healthy  1.74T     -
+SH0.BAY10  SSD    healthy  1.74T     -
+SH0.BAY11  SSD    healthy  1.74T     -
+SH0.BAY12  SSD    healthy  1.74T     -
+SH0.BAY13  SSD    healthy  1.74T     -
+SH0.BAY14  SSD    healthy  1.74T     -
+SH0.BAY15  SSD    healthy  1.74T     -
+SH0.BAY16  SSD    healthy  1.74T     -
+SH0.BAY17  SSD    healthy  1.74T     -
+SH0.BAY18  SSD    healthy  1.74T     -
+SH0.BAY19  SSD    healthy  1.74T     -
+SH0.BAY20  SSD    healthy  1.74T     -
+SH0.BAY21  SSD    healthy  1.74T     -
+SH0.BAY22  SSD    healthy  1.74T     -
+SH0.BAY23  SSD    healthy  1.74T     -
+SH1.BAY0   SSD    healthy  1.74T     -
+SH1.BAY1   SSD    healthy  1.74T     -
+SH1.BAY2   SSD    healthy  1.74T     -
+SH1.BAY3   SSD    healthy  1.74T     -
+SH1.BAY4   SSD    healthy  1.74T     -
+SH1.BAY5   SSD    healthy  1.74T     -
+SH1.BAY6   SSD    healthy  1.74T     -
+SH1.BAY7   SSD    healthy  1.74T     -
+SH1.BAY8   SSD    healthy  1.74T     -
+SH1.BAY9   SSD    healthy  1.74T     -
+SH1.BAY10  SSD    healthy  1.74T     -
+SH1.BAY11  SSD    healthy  1.74T     -
+SH1.BAY12  SSD    healthy  3.49T     -
+SH1.BAY13  SSD    healthy  3.49T     -
+SH1.BAY14  SSD    healthy  3.49T     -
+SH1.BAY15  SSD    healthy  3.49T     -
+SH1.BAY16  SSD    healthy  3.49T     -
+SH1.BAY17  SSD    healthy  3.49T     -
+SH1.BAY18  SSD    empty    0.00      -
+SH1.BAY19  SSD    empty    0.00      -
+SH1.BAY20  SSD    empty    0.00      -
+SH1.BAY21  SSD    empty    0.00      -
+SH1.BAY22  SSD    empty    0.00      -
+SH1.BAY23  SSD    empty    0.00      -
+SH9.BAY0   SSD    healthy  1.92T     -
+SH9.BAY1   SSD    healthy  1.92T     -
+SH9.BAY2   SSD    healthy  1.92T     -
+SH9.BAY3   SSD    healthy  1.92T     -
+SH9.BAY4   SSD    healthy  1.92T     -
+SH9.BAY5   SSD    healthy  1.92T     -
+SH9.BAY6   SSD    healthy  1.92T     -
+SH9.BAY7   SSD    healthy  1.92T     -
+SH9.BAY8   SSD    healthy  1.92T     -
+SH9.BAY9   SSD    healthy  1.92T     -
+SH9.BAY10  -      unused   0.00      -
+SH9.BAY11  -      unused   0.00      -
+SH9.BAY12  -      unused   0.00      -
+SH9.BAY13  -      unused   0.00      -
+SH9.BAY14  -      unused   0.00      -
+SH9.BAY15  -      unused   0.00      -
+SH9.BAY16  -      unused   0.00      -
+SH9.BAY17  -      unused   0.00      -
+SH9.BAY18  -      unused   0.00      -
+SH9.BAY19  -      unused   0.00      -
+SH9.BAY20  -      unused   0.00      -
+SH9.BAY21  -      unused   0.00      -
+SH9.BAY22  -      unused   0.00      -
+SH9.BAY23  -      unused   0.00      -
+SH9.BAY24  -      unused   0.00      -
+SH9.BAY25  -      unused   0.00      -
+SH9.BAY26  -      unused   0.00      -
+SH9.BAY27  -      unused   0.00      -
+     root@lynpure01-ct0:/var/home/pureeng# puredrive liststty columns 250;stty rows 20040
+     root@lynpure01-ct0:/var/home/pureeng# stty columns 250;stty rows 40puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    empty    0.00      -
+CH0.BAY1   SSD    empty    0.00      -
+CH0.BAY2   SSD    empty    0.00      -
+CH0.BAY3   SSD    empty    0.00      -
+CH0.BAY4   SSD    empty    0.00      -
+CH0.BAY5   SSD    empty    0.00      -
+CH0.BAY6   SSD    healthy  3.49T     -
+CH0.BAY7   SSD    healthy  3.49T     -
+CH0.BAY8   SSD    healthy  3.49T     -
+CH0.BAY9   SSD    healthy  3.49T     -
+CH0.BAY10  SSD    healthy  1.86T     -
+CH0.BAY11  SSD    healthy  1.86T     -
+CH0.BAY12  SSD    healthy  1.86T     -
+CH0.BAY13  SSD    healthy  1.86T     -
+CH0.BAY14  SSD    healthy  1.86T     -
+CH0.BAY15  SSD    healthy  1.86T     -
+CH0.BAY16  SSD    healthy  1.86T     -
+CH0.BAY17  SSD    healthy  1.86T     -
+CH0.BAY18  SSD    healthy  1.86T     -
+CH0.BAY19  SSD    healthy  1.86T     -
+CH0.NVB0   NVRAM  healthy  7.00G     -
+CH0.NVB1   NVRAM  healthy  7.00G     -
+CH0.NVB2   NVRAM  healthy  7.00G     -
+CH0.NVB3   NVRAM  healthy  7.00G     -
+SH0.BAY0   SSD    healthy  1.74T     -
+SH0.BAY1   SSD    healthy  1.74T     -
+SH0.BAY2   SSD    healthy  1.74T     -
+SH0.BAY3   SSD    healthy  1.74T     -
+SH0.BAY4   SSD    healthy  1.74T     -
+SH0.BAY5   SSD    healthy  1.74T     -
+SH0.BAY6   SSD    healthy  1.74T     -
+SH0.BAY7   SSD    healthy  1.74T     -
+SH0.BAY8   SSD    healthy  1.74T     -
+SH0.BAY9   SSD    healthy  1.74T     -
+SH0.BAY10  SSD    healthy  1.74T     -
+SH0.BAY11  SSD    healthy  1.74T     -
+SH0.BAY12  SSD    healthy  1.74T     -
+SH0.BAY13  SSD    healthy  1.74T     -
+SH0.BAY14  SSD    healthy  1.74T     -
+SH0.BAY15  SSD    healthy  1.74T     -
+SH0.BAY16  SSD    healthy  1.74T     -
+SH0.BAY17  SSD    healthy  1.74T     -
+SH0.BAY18  SSD    healthy  1.74T     -
+SH0.BAY19  SSD    healthy  1.74T     -
+SH0.BAY20  SSD    healthy  1.74T     -
+SH0.BAY21  SSD    healthy  1.74T     -
+SH0.BAY22  SSD    healthy  1.74T     -
+SH0.BAY23  SSD    healthy  1.74T     -
+SH1.BAY0   SSD    healthy  1.74T     -
+SH1.BAY1   SSD    healthy  1.74T     -
+SH1.BAY2   SSD    healthy  1.74T     -
+SH1.BAY3   SSD    healthy  1.74T     -
+SH1.BAY4   SSD    healthy  1.74T     -
+SH1.BAY5   SSD    healthy  1.74T     -
+SH1.BAY6   SSD    healthy  1.74T     -
+SH1.BAY7   SSD    healthy  1.74T     -
+SH1.BAY8   SSD    healthy  1.74T     -
+SH1.BAY9   SSD    healthy  1.74T     -
+SH1.BAY10  SSD    healthy  1.74T     -
+SH1.BAY11  SSD    healthy  1.74T     -
+SH1.BAY12  SSD    healthy  3.49T     -
+SH1.BAY13  SSD    healthy  3.49T     -
+SH1.BAY14  SSD    healthy  3.49T     -
+SH1.BAY15  SSD    healthy  3.49T     -
+SH1.BAY16  SSD    healthy  3.49T     -
+SH1.BAY17  SSD    healthy  3.49T     -
+SH1.BAY18  SSD    empty    0.00      -
+SH1.BAY19  SSD    empty    0.00      -
+SH1.BAY20  SSD    empty    0.00      -
+SH1.BAY21  SSD    empty    0.00      -
+SH1.BAY22  SSD    empty    0.00      -
+SH1.BAY23  SSD    empty    0.00      -
+SH9.BAY0   SSD    healthy  1.92T     -
+SH9.BAY1   SSD    healthy  1.92T     -
+SH9.BAY2   SSD    healthy  1.92T     -
+SH9.BAY3   SSD    healthy  1.92T     -
+SH9.BAY4   SSD    healthy  1.92T     -
+SH9.BAY5   SSD    healthy  1.92T     -
+SH9.BAY6   SSD    healthy  1.92T     -
+SH9.BAY7   SSD    healthy  1.92T     -
+SH9.BAY8   SSD    healthy  1.92T     -
+SH9.BAY9   SSD    healthy  1.92T     -
+SH9.BAY10  -      unused   0.00      -
+SH9.BAY11  -      unused   0.00      -
+SH9.BAY12  -      unused   0.00      -
+SH9.BAY13  -      unused   0.00      -
+SH9.BAY14  -      unused   0.00      -
+SH9.BAY15  -      unused   0.00      -
+SH9.BAY16  -      unused   0.00      -
+SH9.BAY17  -      unused   0.00      -
+SH9.BAY18  -      unused   0.00      -
+SH9.BAY19  -      unused   0.00      -
+SH9.BAY20  -      unused   0.00      -
+SH9.BAY21  -      unused   0.00      -
+SH9.BAY22  -      unused   0.00      -
+SH9.BAY23  -      unused   0.00      -
+SH9.BAY24  -      unused   0.00      -
+SH9.BAY25  -      unused   0.00      -
+SH9.BAY26  -      unused   0.00      -
+SH9.BAY27  -      unused   0.00      -
+     root@lynpure01-ct0:/var/home/pureeng# puredrive liststty columns 250;stty rows 40puredrive liststty columns 250;stty rows 200puredrive liststty columns 250;stty rows 40watch purearray list --space
+Every 2.0s: purearray list --spacelynpure01-ct0: Wed Feb 19 11:30:58 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  Totallynpure01  90.43T    78%     1693037G260.30T  84%3.8 to 124.2 to 155.23T  1.05T13.49T  0.00    0.0069.78T1:027115923731594485272:01591482383269404751593:038261048237316440595484:0157     root@lynpure01-ct0:/var/home/pureeng# purehw ist list --aspec
+Name          Status         Identify  Slot  Index  Model            Part Number  Serial
+CH0           ok             off       -     0      M_SERIES         84-0004-04   PCHFL16340087
+CH0.BAY0      not_installed  off       -     0      -                -            -
+CH0.BAY1      not_installed  off       -     1      -                -            -
+CH0.BAY2      not_installed  off       -     2      -                -            -
+CH0.BAY3      not_installed  off       -     3      -                -            -
+CH0.BAY4      not_installed  off       -     4      -                -            -
+CH0.BAY5      not_installed  off       -     5      -                -            -
+CH0.BAY6      ok             off       -     6      -                83-0082-00   S1YKNXRH703433
+CH0.BAY7      ok             off       -     7      -                83-0082-00   S1YKNXRH703436
+CH0.BAY8      ok             off       -     8      -                83-0082-00   S1YKNXRH703434
+CH0.BAY9      ok             off       -     9      -                83-0082-00   S1YKNXRH702492
+CH0.BAY10     ok             off       -     10     -                83-0040-04   46CS104TTGUW
+CH0.BAY11     ok             off       -     11     -                83-0040-04   46ES10QQTGUW
+CH0.BAY12     ok             off       -     12     -                83-0040-04   46CS1048TGUW
+CH0.BAY13     ok             off       -     13     -                83-0040-04   46ES10QFTGUW
+CH0.BAY14     ok             off       -     14     -                83-0040-04   46ES10PVTGUW
+CH0.BAY15     ok             off       -     15     -                83-0040-04   46CS1069TGUW
+CH0.BAY16     ok             off       -     16     -                83-0040-04   46CS1078TGUW
+CH0.BAY17     ok             off       -     17     -                83-0040-04   46CS106GTGUW
+CH0.BAY18     ok             off       -     18     -                83-0040-04   46CS106LTGUW
+CH0.BAY19     ok             off       -     19     -                83-0040-04   46CS106ZTGUW
+CH0.NVB0      ok             off       -     0      -                -            -
+CH0.NVB1      ok             off       -     1      -                -            -
+CH0.NVB2      ok             off       -     2      -                -            -
+CH0.NVB3      ok             off       -     3      -                -            -
+CH0.PWR0      ok             -         -     0      DPS-1600AB-13 U  -            JKND2231008147
+CH0.PWR1      ok             -         -     1      DPS-1600AB-13 U  -            JKND2231008170
+CH0.TMP0      ok             -         -     0      -                -            -
+CT0           ok             off       -     0      FA-X70R3         83-0353-00   PCTFJ22200062
+CT0.ETH0      ok             -         -     0      -                -            -
+CT0.ETH1      ok             -         -     1      -                -            -
+CT0.ETH2      ok             -         -     2      -                -            -
+CT0.ETH3      ok             -         -     3      -                -            -
+CT0.ETH4      ok             -         -     4      -                -            -
+CT0.ETH5      ok             -         -     5      -                -            -
+CT0.ETH6      ok             -         -     6      -                -            -
+CT0.ETH7      ok             -         -     7      -                -            -
+CT0.ETH8      ok             -         -     8      -                -            -
+CT0.ETH9      ok             -         -     9      -                -            -
+CT0.FAN0      ok             -         -     0      -                -            -
+CT0.FAN1      ok             -         -     1      -                -            -
+CT0.FAN2      ok             -         -     2      -                -            -
+CT0.FAN3      ok             -         -     3      -                -            -
+CT0.FAN4      ok             -         -     4      -                -            -
+CT0.FAN5      ok             -         -     5      -                -            -
+CT0.FC0       ok             -         0     0      -                -            -
+CT0.FC1       ok             -         0     1      -                -            -
+CT0.FC2       ok             -         0     2      -                -            -
+CT0.FC3       ok             -         0     3      -                -            -
+CT0.FC8       ok             -         2     8      -                -            -
+CT0.FC9       ok             -         2     9      -                -            -
+CT0.SAS4      ok             -         1     4      -                -            -
+CT0.SAS5      ok             -         1     5      -                -            -
+CT0.SAS6      ok             -         1     6      -                -            -
+CT0.SAS7      ok             -         1     7      -                -            -
+CT0.TMP0      ok             -         -     0      -                -            -
+CT0.TMP1      ok             -         -     1      -                -            -
+CT0.TMP2      ok             -         -     2      -                -            -
+CT0.TMP3      ok             -         -     3      -                -            -
+CT0.TMP4      ok             -         -     4      -                -            -
+CT0.TMP5      ok             -         -     5      -                -            -
+CT0.TMP6      ok             -         -     6      -                -            -
+CT0.TMP7      ok             -         -     7      -                -            -
+CT0.TMP8      ok             -         -     8      -                -            -
+CT0.TMP9      ok             -         -     9      -                -            -
+CT0.TMP10     ok             -         -     10     -                -            -
+CT0.TMP11     ok             -         -     11     -                -            -
+CT0.TMP12     ok             -         -     12     -                -            -
+CT0.TMP13     ok             -         -     13     -                -            -
+CT0.TMP14     ok             -         -     14     -                -            -
+CT0.TMP15     ok             -         -     15     -                -            -
+CT0.TMP16     ok             -         -     16     -                -            -
+CT0.TMP17     ok             -         -     17     -                -            -
+CT0.TMP18     ok             -         -     18     -                -            -
+CT0.TMP19     ok             -         -     19     -                -            -
+CT0.TMP20     ok             -         -     20     -                -            -
+CT0.TMP21     ok             -         -     21     -                -            -
+CT0.TMP22     ok             -         -     22     -                -            -
+CT0.TMP23     ok             -         -     23     -                -            -
+CT0.TMP24     ok             -         -     24     -                -            -
+CT0.TMP25     ok             -         -     25     -                -            -
+CT0.TMP26     ok             -         -     26     -                -            -
+CT1           ok             off       -     1      FA-X70R3         83-0353-00   PCTFJ2220005D
+CT1.ETH0      ok             -         -     0      -                -            -
+CT1.ETH1      ok             -         -     1      -                -            -
+CT1.ETH2      ok             -         -     2      -                -            -
+CT1.ETH3      ok             -         -     3      -                -            -
+CT1.ETH4      ok             -         -     4      -                -            -
+CT1.ETH5      ok             -         -     5      -                -            -
+CT1.ETH6      ok             -         -     6      -                -            -
+CT1.ETH7      ok             -         -     7      -                -            -
+CT1.ETH8      ok             -         -     8      -                -            -
+CT1.ETH9      ok             -         -     9      -                -            -
+CT1.FAN0      ok             -         -     0      -                -            -
+CT1.FAN1      ok             -         -     1      -                -            -
+CT1.FAN2      ok             -         -     2      -                -            -
+CT1.FAN3      ok             -         -     3      -                -            -
+CT1.FAN4      ok             -         -     4      -                -            -
+CT1.FAN5      ok             -         -     5      -                -            -
+CT1.FC0       ok             -         0     0      -                -            -
+CT1.FC1       ok             -         0     1      -                -            -
+CT1.FC2       ok             -         0     2      -                -            -
+CT1.FC3       ok             -         0     3      -                -            -
+CT1.FC8       ok             -         2     8      -                -            -
+CT1.FC9       ok             -         2     9      -                -            -
+CT1.SAS4      ok             -         1     4      -                -            -
+CT1.SAS5      ok             -         1     5      -                -            -
+CT1.SAS6      ok             -         1     6      -                -            -
+CT1.SAS7      ok             -         1     7      -                -            -
+CT1.TMP0      ok             -         -     0      -                -            -
+CT1.TMP1      ok             -         -     1      -                -            -
+CT1.TMP2      ok             -         -     2      -                -            -
+CT1.TMP3      ok             -         -     3      -                -            -
+CT1.TMP4      ok             -         -     4      -                -            -
+CT1.TMP5      ok             -         -     5      -                -            -
+CT1.TMP6      ok             -         -     6      -                -            -
+CT1.TMP7      ok             -         -     7      -                -            -
+CT1.TMP8      ok             -         -     8      -                -            -
+CT1.TMP9      ok             -         -     9      -                -            -
+CT1.TMP10     ok             -         -     10     -                -            -
+CT1.TMP11     ok             -         -     11     -                -            -
+CT1.TMP12     ok             -         -     12     -                -            -
+CT1.TMP13     ok             -         -     13     -                -            -
+CT1.TMP14     ok             -         -     14     -                -            -
+CT1.TMP15     ok             -         -     15     -                -            -
+CT1.TMP16     ok             -         -     16     -                -            -
+CT1.TMP17     ok             -         -     17     -                -            -
+CT1.TMP18     ok             -         -     18     -                -            -
+CT1.TMP19     ok             -         -     19     -                -            -
+CT1.TMP20     ok             -         -     20     -                -            -
+CT1.TMP21     ok             -         -     21     -                -            -
+CT1.TMP22     ok             -         -     22     -                -            -
+CT1.TMP23     ok             -         -     23     -                -            -
+CT1.TMP24     ok             -         -     24     -                -            -
+CT1.TMP25     ok             -         -     25     -                -            -
+CT1.TMP26     ok             -         -     26     -                -            -
+SH0           ok             off       -     0      EB-2425-E12EBD   -            SHT1019220G4FXX
+SH0.BAY0      ok             off       -     0      -                83-0181-00   Y7US1120THXT
+SH0.BAY1      ok             off       -     1      -                83-0181-00   Y7JS1037THXT
+SH0.BAY2      ok             off       -     2      -                83-0181-00   Y7US112CTHXT
+SH0.BAY3      ok             off       -     3      -                83-0181-00   Y7JS101VTHXT
+SH0.BAY4      ok             off       -     4      -                83-0181-00   Y7JS100KTHXT
+SH0.BAY5      ok             off       -     5      -                83-0181-00   Y7ES1041THXT
+SH0.BAY6      ok             off       -     6      -                83-0181-00   Y7US110UTHXT
+SH0.BAY7      ok             off       -     7      -                83-0181-00   383S10J5THXT
+SH0.BAY8      ok             off       -     8      -                83-0181-00   Y7US112JTHXT
+SH0.BAY9      ok             off       -     9      -                83-0181-00   Y7US1122THXT
+SH0.BAY10     ok             off       -     10     -                83-0181-00   Z72S100XTHXT
+SH0.BAY11     ok             off       -     11     -                83-0181-00   Y7US110KTHXT
+SH0.BAY12     ok             off       -     12     -                83-0071-00   S1YHNXAG902897
+SH0.BAY13     ok             off       -     13     -                83-0181-00   18NS109UTHXT
+SH0.BAY14     ok             off       -     14     -                83-0071-00   S1YHNXAG920998
+SH0.BAY15     ok             off       -     15     -                83-0181-00   18LS103ITHXT
+SH0.BAY16     ok             off       -     16     -                83-0181-00   18MS105GTHXT
+SH0.BAY17     ok             off       -     17     -                83-0181-00   382S10T5THXT
+SH0.BAY18     ok             off       -     18     -                83-0181-00   18LS106BTHXT
+SH0.BAY19     ok             off       -     19     -                83-0181-00   185S100BTHXT
+SH0.BAY20     ok             off       -     20     -                83-0181-00   185S101OTHXT
+SH0.BAY21     ok             off       -     21     -                83-0181-00   284S10FQTHXT
+SH0.BAY22     ok             off       -     22     -                83-0181-00   183S104DTHXT
+SH0.BAY23     ok             off       -     23     -                83-0181-00   185S10E4THXT
+SH0.FAN0      ok             -         -     0      -                -            -
+SH0.FAN1      ok             -         -     1      -                -            -
+SH0.FAN2      ok             -         -     2      -                -            -
+SH0.FAN3      ok             -         -     3      -                -            -
+SH0.IOM0      ok             off       0     0      -                -            -
+SH0.IOM1      ok             off       1     1      -                -            -
+SH0.PWR0      ok             -         -     0      -                -            -
+SH0.PWR1      ok             -         -     1      -                -            -
+SH0.SAS0      ok             -         0     0      -                -            -
+SH0.SAS1      ok             -         0     1      -                -            -
+SH0.SAS2      ok             -         0     2      -                -            -
+SH0.SAS3      ok             -         1     3      -                -            -
+SH0.SAS4      ok             -         1     4      -                -            -
+SH0.SAS5      ok             -         1     5      -                -            -
+SH0.TMP0      ok             -         -     0      -                -            -
+SH0.TMP1      ok             -         -     1      -                -            -
+SH0.TMP2      ok             -         -     2      -                -            -
+SH0.TMP3      ok             -         -     3      -                -            -
+SH0.TMP4      ok             -         -     4      -                -            -
+SH0.TMP5      ok             -         -     5      -                -            -
+SH0.TMP6      ok             -         -     6      -                -            -
+SH0.TMP7      ok             -         -     7      -                -            -
+SH1           ok             off       -     1      EB-2425-E12EBD   -            SHT1019220GDYEF
+SH1.BAY0      ok             off       -     0      -                83-0313-00   19522826B6EC
+SH1.BAY1      ok             off       -     1      -                83-0313-00   195228269E1B
+SH1.BAY2      ok             off       -     2      -                83-0313-00   19522826B79B
+SH1.BAY3      ok             off       -     3      -                83-0313-00   19522825C49E
+SH1.BAY4      ok             off       -     4      -                83-0313-00   19522826B985
+SH1.BAY5      ok             off       -     5      -                83-0313-00   19522825C442
+SH1.BAY6      ok             off       -     6      -                83-0313-00   19522826B725
+SH1.BAY7      ok             off       -     7      -                83-0313-00   195228259581
+SH1.BAY8      ok             off       -     8      -                83-0313-00   19522826B832
+SH1.BAY9      ok             off       -     9      -                83-0313-00   19522825C48B
+SH1.BAY10     ok             off       -     10     -                83-0313-00   19522826B8DB
+SH1.BAY11     ok             off       -     11     -                83-0313-00   19522826B831
+SH1.BAY12     ok             off       -     12     -                83-0082-00   S1YKNXRH702670
+SH1.BAY13     ok             off       -     13     -                83-0082-00   S1YKNXRH702680
+SH1.BAY14     ok             off       -     14     -                83-0180-00   88GS10KPT6GQ
+SH1.BAY15     ok             off       -     15     -                83-0082-00   S1YKNXRH703425
+SH1.BAY16     ok             off       -     16     -                83-0082-00   S1YKNXRH702728
+SH1.BAY17     ok             off       -     17     -                83-0082-00   S1YKNXRH702685
+SH1.BAY18     not_installed  off       -     18     -                -            -
+SH1.BAY19     not_installed  off       -     19     -                -            -
+SH1.BAY20     not_installed  off       -     20     -                -            -
+SH1.BAY21     not_installed  off       -     21     -                -            -
+SH1.BAY22     not_installed  off       -     22     -                -            -
+SH1.BAY23     not_installed  off       -     23     -                -            -
+SH1.FAN0      ok             -         -     0      -                -            -
+SH1.FAN1      ok             -         -     1      -                -            -
+SH1.FAN2      ok             -         -     2      -                -            -
+SH1.FAN3      ok             -         -     3      -                -            -
+SH1.IOM0      ok             off       0     0      -                -            -
+SH1.IOM1      ok             off       1     1      -                -            -
+SH1.PWR0      ok             -         -     0      -                -            -
+SH1.PWR1      ok             -         -     1      -                -            -
+SH1.SAS0      ok             -         0     0      -                -            -
+SH1.SAS1      ok             -         0     1      -                -            -
+SH1.SAS2      ok             -         0     2      -                -            -
+SH1.SAS3      ok             -         1     3      -                -            -
+SH1.SAS4      ok             -         1     4      -                -            -
+SH1.SAS5      ok             -         1     5      -                -            -
+SH1.TMP0      ok             -         -     0      -                -            -
+SH1.TMP1      ok             -         -     1      -                -            -
+SH1.TMP2      ok             -         -     2      -                -            -
+SH1.TMP3      ok             -         -     3      -                -            -
+SH1.TMP4      ok             -         -     4      -                -            -
+SH1.TMP5      ok             -         -     5      -                -            -
+SH1.TMP6      ok             -         -     6      -                -            -
+SH1.TMP7      ok             -         -     7      -                -            -
+SH9           ok             off       -     9      DFS1             84-0058-02   PCHFJ2240011B
+SH9.BAY0      ok             off       -     0      -                83-0412-04   PFMUH2226110B
+SH9.BAY1      ok             off       -     1      -                83-0412-04   PFMUH2226113A
+SH9.BAY2      ok             off       -     2      -                83-0412-04   PFMUH2226113B
+SH9.BAY3      ok             off       -     3      -                83-0412-04   PFMUH2226115E
+SH9.BAY4      ok             off       -     4      -                83-0412-04   PFMUH22261138
+SH9.BAY5      ok             off       -     5      -                83-0412-04   PFMUH22261111
+SH9.BAY6      ok             off       -     6      -                83-0412-04   PFMUH22261276
+SH9.BAY7      ok             off       -     7      -                83-0412-04   PFMUH22261116
+SH9.BAY8      ok             off       -     8      -                83-0412-04   PFMUH22261224
+SH9.BAY9      ok             off       -     9      -                83-0412-04   PFMUH22261114
+SH9.BAY10     not_installed  off       -     10     -                -            -
+SH9.BAY11     not_installed  off       -     11     -                -            -
+SH9.BAY12     not_installed  off       -     12     -                -            -
+SH9.BAY13     not_installed  off       -     13     -                -            -
+SH9.BAY14     not_installed  off       -     14     -                -            -
+SH9.BAY15     not_installed  off       -     15     -                -            -
+SH9.BAY16     not_installed  off       -     16     -                -            -
+SH9.BAY17     not_installed  off       -     17     -                -            -
+SH9.BAY18     not_installed  off       -     18     -                -            -
+SH9.BAY19     not_installed  off       -     19     -                -            -
+SH9.BAY20     not_installed  off       -     20     -                -            -
+SH9.BAY21     not_installed  off       -     21     -                -            -
+SH9.BAY22     not_installed  off       -     22     -                -            -
+SH9.BAY23     not_installed  off       -     23     -                -            -
+SH9.BAY24     not_installed  off       -     24     -                -            -
+SH9.BAY25     not_installed  off       -     25     -                -            -
+SH9.BAY26     not_installed  off       -     26     -                -            -
+SH9.BAY27     not_installed  off       -     27     -                -            -
+SH9.PWR0      ok             -         -     0      DPS-1300AB-6 U   -            JKLD2240000633
+SH9.PWR1      ok             -         -     1      DPS-1300AB-6 U   -            JKLD2233002151
+SH9.SC0       ok             off       -     0      DFSC1            83-0250-00   PSMFJ22480044
+SH9.SC0.ETH0  ok             -         -     0      -                -            -
+SH9.SC0.ETH1  ok             -         -     1      -                -            -
+SH9.SC0.ETH2  ok             -         -     2      -                -            -
+SH9.SC0.ETH3  ok             -         -     3      -                -            -
+SH9.SC0.FAN0  ok             -         -     0      -                -            -
+SH9.SC0.FAN1  ok             -         -     1      -                -            -
+SH9.SC0.FAN2  ok             -         -     2      -                -            -
+SH9.SC0.FAN3  ok             -         -     3      -                -            -
+SH9.SC0.FAN4  ok             -         -     4      -                -            -
+SH9.SC0.FAN5  ok             -         -     5      -                -            -
+SH9.SC1       ok             off       -     1      DFSC1            83-0250-00   PSMFJ22480035
+SH9.SC1.ETH0  ok             -         -     0      -                -            -
+SH9.SC1.ETH1  ok             -         -     1      -                -            -
+SH9.SC1.ETH2  ok             -         -     2      -                -            -
+SH9.SC1.ETH3  ok             -         -     3      -                -            -
+SH9.SC1.FAN0  ok             -         -     0      -                -            -
+SH9.SC1.FAN1  ok             -         -     1      -                -            -
+SH9.SC1.FAN2  ok             -         -     2      -                -            -
+SH9.SC1.FAN3  ok             -         -     3      -                -            -
+SH9.SC1.FAN4  ok             -         -     4      -                -            -
+SH9.SC1.FAN5  ok             -         -     5      -                -            -
+     root@lynpure01-ct0:/var/home/pureeng# purehw list --specwatch purearray list --space
+Every 2.0s: purearray list --spacelynpure01-ct0: Wed Feb 19 11:40:57 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  Totallynpure01  90.43T    100%    1693037G260.30T  84%3.8 to 124.2 to 155.23T  1.02T13.50T  0.00    0.0069.75T1:016104923731585% 41485262:01578914923731594485253:00381272159337414851594:0369148225933741550385:0349461059237304842695376:01591382263049843751597:0382610482259335742595378:01488114822630392742695269:00457115822530599436504750:014100%81262047315841595361:00481269236304842650472:01481259236304841585363:0049136204831694475264:015913721593298% 640485265:004712812592273037415852696:03811592363037414851487:0261037204732694375268:00481262037315942751599:0371252038325943852592:00:04809149239332842752591:03571262048326840385272:026911162059334842650483:03761038226304100%841595264:01592% 9147226316784165155:004913721593384275276:0281482373154049557:00410621630540650488:048138226315942650489:015812692373038174047515910:0374115923630487415852591:0392711482363045843650362:004981159236303100%741585263:0048127216933842695384:01591372159326403750475:01581382259325842595266:00371159237314842695377:0151052048325943750478:01610372049325943650369:0037104822593269437504820:0159137215832640475261:00371048226304842650472:01592% 914821593378741585373:004812692263158425952594:03610472159337414851475:02523912582263036404750476:015812582269337404851597:02599126204731581842695378:0154913620483158943852699:039171158226304574148515830:03961048227304100%842595261:005912592363037414852692:02610372159325942695363:00591362037315942595364:00491362058326403750475:0159126922593269426953696:036103620363037404751487:0148115822583259426503698:03711482259336403695369:00481269236303     root@lynpure01-ct0:/var/home/pureeng# puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   -      unused   0.00      -
+CH0.BAY1   -      unused   0.00      -
+CH0.BAY2   -      unused   0.00      -
+CH0.BAY3   -      unused   0.00      -
+CH0.BAY4   -      unused   0.00      -
+CH0.BAY5   -      unused   0.00      -
+CH0.BAY6   -      unused   0.00      -
+CH0.BAY7   -      unused   0.00      -
+CH0.BAY8   -      unused   0.00      -
+CH0.BAY9   -      unused   0.00      -
+CH0.BAY10  SSD    healthy  1.86T     -
+CH0.BAY11  SSD    healthy  1.86T     -
+CH0.BAY12  SSD    healthy  1.86T     -
+CH0.BAY13  SSD    healthy  1.86T     -
+CH0.BAY14  SSD    healthy  1.86T     -
+CH0.BAY15  SSD    healthy  1.86T     -
+CH0.BAY16  SSD    healthy  1.86T     -
+CH0.BAY17  SSD    healthy  1.86T     -
+CH0.BAY18  SSD    healthy  1.86T     -
+CH0.BAY19  SSD    healthy  1.86T     -
+CH0.NVB0   NVRAM  healthy  7.00G     -
+CH0.NVB1   NVRAM  healthy  7.00G     -
+CH0.NVB2   NVRAM  healthy  7.00G     -
+CH0.NVB3   NVRAM  healthy  7.00G     -
+SH0.BAY0   SSD    healthy  1.74T     -
+SH0.BAY1   SSD    healthy  1.74T     -
+SH0.BAY2   SSD    healthy  1.74T     -
+SH0.BAY3   SSD    healthy  1.74T     -
+SH0.BAY4   SSD    healthy  1.74T     -
+SH0.BAY5   SSD    healthy  1.74T     -
+SH0.BAY6   SSD    healthy  1.74T     -
+SH0.BAY7   SSD    healthy  1.74T     -
+SH0.BAY8   SSD    healthy  1.74T     -
+SH0.BAY9   SSD    healthy  1.74T     -
+SH0.BAY10  SSD    healthy  1.74T     -
+SH0.BAY11  SSD    healthy  1.74T     -
+SH0.BAY12  SSD    healthy  1.74T     -
+SH0.BAY13  SSD    healthy  1.74T     -
+SH0.BAY14  SSD    healthy  1.74T     -
+SH0.BAY15  SSD    healthy  1.74T     -
+SH0.BAY16  SSD    healthy  1.74T     -
+SH0.BAY17  SSD    healthy  1.74T     -
+SH0.BAY18  SSD    healthy  1.74T     -
+SH0.BAY19  SSD    healthy  1.74T     -
+SH0.BAY20  SSD    healthy  1.74T     -
+SH0.BAY21  SSD    healthy  1.74T     -
+SH0.BAY22  SSD    healthy  1.74T     -
+SH0.BAY23  SSD    healthy  1.74T     -
+SH1.BAY0   SSD    healthy  1.74T     -
+SH1.BAY1   SSD    healthy  1.74T     -
+SH1.BAY2   SSD    healthy  1.74T     -
+SH1.BAY3   SSD    healthy  1.74T     -
+SH1.BAY4   SSD    healthy  1.74T     -
+SH1.BAY5   SSD    healthy  1.74T     -
+SH1.BAY6   SSD    healthy  1.74T     -
+SH1.BAY7   SSD    healthy  1.74T     -
+SH1.BAY8   SSD    healthy  1.74T     -
+SH1.BAY9   SSD    healthy  1.74T     -
+SH1.BAY10  SSD    healthy  1.74T     -
+SH1.BAY11  SSD    healthy  1.74T     -
+SH1.BAY12  SSD    healthy  3.49T     -
+SH1.BAY13  SSD    healthy  3.49T     -
+SH1.BAY14  SSD    healthy  3.49T     -
+SH1.BAY15  SSD    healthy  3.49T     -
+SH1.BAY16  SSD    healthy  3.49T     -
+SH1.BAY17  SSD    healthy  3.49T     -
+SH1.BAY18  SSD    healthy  3.49T     -
+SH1.BAY19  SSD    healthy  3.49T     -
+SH1.BAY20  SSD    healthy  3.49T     -
+SH1.BAY21  SSD    healthy  3.49T     -
+SH1.BAY22  SSD    empty    0.00      -
+SH1.BAY23  SSD    empty    0.00      -
+SH9.BAY0   SSD    healthy  1.92T     -
+SH9.BAY1   SSD    healthy  1.92T     -
+SH9.BAY2   SSD    healthy  1.92T     -
+SH9.BAY3   SSD    healthy  1.92T     -
+SH9.BAY4   SSD    healthy  1.92T     -
+SH9.BAY5   SSD    healthy  1.92T     -
+SH9.BAY6   SSD    healthy  1.92T     -
+SH9.BAY7   SSD    healthy  1.92T     -
+SH9.BAY8   SSD    healthy  1.92T     -
+SH9.BAY9   SSD    healthy  1.92T     -
+SH9.BAY10  -      unused   0.00      -
+SH9.BAY11  -      unused   0.00      -
+SH9.BAY12  -      unused   0.00      -
+SH9.BAY13  -      unused   0.00      -
+SH9.BAY14  -      unused   0.00      -
+SH9.BAY15  -      unused   0.00      -
+SH9.BAY16  -      unused   0.00      -
+SH9.BAY17  -      unused   0.00      -
+SH9.BAY18  -      unused   0.00      -
+SH9.BAY19  -      unused   0.00      -
+SH9.BAY20  -      unused   0.00      -
+SH9.BAY21  -      unused   0.00      -
+SH9.BAY22  -      unused   0.00      -
+SH9.BAY23  -      unused   0.00      -
+SH9.BAY24  -      unused   0.00      -
+SH9.BAY25  -      unused   0.00      -
+SH9.BAY26  -      unused   0.00      -
+SH9.BAY27  -      unused   0.00      -
+     root@lynpure01-ct0:/var/home/pureeng# puredrive list watch  - - p a c k  C H 0 . B A Y 0 
+Every 2.0s: puredrive list --pack CH0.BAY0lynpure01-ct0: Wed Feb 19 12:40:03 202571047214831NameType  Status     Capacity  DetailsCH0.BAY0  SSD   unhealthy  0.00Not accessible from CT0;58425pdating  0.00      -85261:0047failed12    Capacity  Detailsupdating  0.00      -5822593269Not accessible from CT0;4365047     Capacity  Details 0.00      -CH0.BAY1  SSD   unhealthy  0.00Not accessible from CT0;2:014711        Capacity  Details   0.00      Not accessible from CT0;recognized  0.00      -4ngrecovering  0.00      WSSD tuneup in progress (http://go/w2)821-48-31ngunhealthy  0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)59WSSD tuneup in progress (http://go/w2)42      Capacity  Detailsrecovering  0.00      WSSD tuneup in progress (http://go/w2)   0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)5CH0.BAY2  SSD   unhealthy   0.00Not accessible from CT0;952unadmittedwaiting for user6  Capacity  Details    0.00      waiting for user     0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)CH0.BAY2  SSD   unrecognized  0.00-9recovering3:03WSSD tuneup in progress (http://go/w2)69pdating CH0.BAY3  SSD   unhealthy   0.00Not accessible from CT0;13-6  Capacity  Details    0.00      waiting for user      0.00      -unrecognized  0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)     0.00      Not accessible from CT0;20healthy 37  Capacity  Details    0.00      waiting for userfailed        0.00      -     0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)CH0.BAY3  SSD   unrecognized  0.00-30updatingyrecovering4WSSD tuneup in progress (http://go/w2)74037  Capacity  Details    0.00      waiting for user      0.00      -     0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)unrecognized  0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)50yhealthy 474:00Not accessible from CT0;371036-203630Not accessible from CT0;36-4037503waiting for user7nadmitted5:004-8Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)1262048pdating [CT0] No paths to device [0/1] 31CH0.BAY4  SSD   unhealthy   0.00Not accessible from CT0;5-8436  Capacity  Details    0.00      waiting for user    0.00      waiting for user     0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)      0.00      -CH0.BAY4  SSD   unrecognized  0.00-503recovering  0.00      WSSD tuneup in progress (http://go/w2)76:01CH0.BAY5  SSD   unhealthy   0.00Not accessible from CT0;48unhealthy Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)1158  Capacity  Details    0.00      waiting for user    0.00      waiting for user     0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)      0.00      -     0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)recognized  0.00      -22Not accessible from CT0;WSSD tuneup in progress (http://go/w2)5yrecovering933-7-40unhealthy 4Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)751Not accessible from CT0;487:015-912  Capacity  Details    0.00      waiting for user    0.00      waiting for user     0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)nrecognized  0.00      -     0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)     0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)6admittyCH0.BAY6  SSD   unhealthy   0.00Not accessible from CT0;9waiting for user23--7Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)30  Capacity  Details    0.00      waiting for user    0.00      waiting for user     0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)    0.00      waiting for user     0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)     0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)CH0.BAY6  SSD   unrecognized  0.00-3741dpdating  4851CH0.BAY7  SSD   unhealthy   0.00Not accessible from CT0;48failed  8:01updating58  Capacity  Details    0.00      waiting for user    0.00      waiting for user     0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)    0.00      waiting for user     0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)     0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)      0.00      -CH0.BAY7  SSD   unrecognized  0.00-12WSSD tuneup in progress (http://go/w2)58drecovering2259Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)32Not accessible from CT0;unhealthy 5942-6953699:0271158215WSSD tuneup in progress (http://go/w2)8recovering3259-42unadmittedwaiting for user695269  Capacity  Details    0.00      waiting for user    0.00      waiting for user     0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)    0.00      waiting for userrecognized  0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)     0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)    0.00      waiting for user     0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)50:03dpdating    0.00      -d6CH0.BAY8  SSD   unhealthy   0.00Not accessible from CT0;1037  Capacity  Details    0.00      waiting for user    0.00      waiting for user     0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)    0.00      waiting for userfailed        0.00      -     0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)    0.00      waiting for user     0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)recognized  0.00      -204dupdatingydrecovering  0.00      WSSD tuneup in progress (http://go/w2)73047  Capacity  Details    0.00      waiting for user    0.00      waiting for user     0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)    0.00      waiting for user      0.00      -     0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)    0.00      waiting for user     0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)unrecognized  0.00      -CH0.BAY9  SSD   unhealthy     0.00Not accessible from CT0;40dydhealthy 3Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)7  Capacity  Details    0.00      waiting for user    0.00      waiting for user     0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)    0.00      waiting for user      0.00      -     0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)    0.00      waiting for user     0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)     0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)CH0.BAY9  SSD   unrecognized  0.00-504Not accessible from CT0;WSSD tuneup in progress (http://go/w2)8dydrecovering1:0148-Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)11unhealthy 48Not accessible from CT0;2158-3259  Capacity  Details    0.00      waiting for user    0.00      waiting for user     0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)    0.00      waiting for usernrecognized  0.00      -     0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)    0.00      waiting for user     0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)     0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)     0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)427dadmitted  0.00      waiting for userd514--7Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)2:0159pdating 12-62158326404852693:02Not accessible from CT0;6104-7216933Not accessible from CT0;6404--8-Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)5259waiting for user4:02nadmitted71048--22Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)6304pdating -7415952failed  6updating5:00481262048Not accessible from CT0;326403-85266:005--Not accessible from CT0;8Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)-1372048nadmittedwaiting for user32694375158pdating -7:0261148failed  225updating93474048526Not accessible from CT0;98:02-6104721     root@lynpure01-ct0:/var/home/pureeng# purealert tag --timeout 240m --maintenance
+Name         Created                  Expires
+maintenance  2025-02-19 12:58:27 CST  2025-02-19 16:58:27 CST
+     root@lynpure01-ct0:/var/home/pureeng# purealert tag --timeout 240m --maintenancewatch puredrive list --pack CH0.BAY0 
+Every 2.0s: puredrive list --pack CH0.BAY0lynpure01-ct0: Wed Feb 19 12:58:31 2025NameType  StatusCapacity  DetailsCH0.BAY0  SSD   unadmitted  0.00waiting for userCH0.BAY1  SSD   unadmitted  0.00waiting for userCH0.BAY2  SSD   unadmitted  0.00waiting for userCH0.BAY3  SSD   unadmitted  0.00waiting for userCH0.BAY4  SSD   unadmitted  0.00waiting for userCH0.BAY5  SSD   unhealthy   0.00Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)CH0.BAY6  SSD   unadmitted  0.00waiting for userCH0.BAY7  SSD   unhealthy   0.00Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)CH0.BAY8  SSD   unadmitted  0.00waiting for userCH0.BAY9  SSD   updating    0.00Not accessible from CT0;4-74048  Capacity  Details    0.00      waiting for user    0.00      waiting for user    0.00      waiting for user    0.00      waiting for user    0.00      waiting for user     0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)    0.00      waiting for user     0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)    0.00      waiting for usernrecognized  0.00      waiting for user52ddadmitt699:0371148pdating 21-69336403752583:00:026103Not accessible from CT0;8225-93269426Not accessible from CT0;95371:01-58  Capacity  Details    0.00      waiting for user    0.00      waiting for user    0.00      waiting for user    0.00      waiting for user    0.00      waiting for usernrecognized  0.00      waiting for user    0.00      waiting for user     0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)    0.00      waiting for user    0.00      waiting for user12admittedd69236304842-6pdating 50482:0259137     root@lynpure01-ct0:/var/home/pureeng# watch puredrive list --pack CH0.BAY0 
+Every 2.0s: puredrive list --pack CH0.BAY0lynpure01-ct0: Wed Feb 19 13:02:24 2025NameType  StatusCapacity  DetailsCH0.BAY0  SSD   unadmitted  0.00waiting for userCH0.BAY1  SSD   unadmitted  0.00waiting for userCH0.BAY2  SSD   unadmitted  0.00waiting for userCH0.BAY3  SSD   unadmitted  0.00waiting for userCH0.BAY4  SSD   unadmitted  0.00waiting for userCH0.BAY5  SSD   unadmitted  0.00waiting for userCH0.BAY6  SSD   unadmitted  0.00waiting for userCH0.BAY7  SSD   updating    0.00-CH0.BAY8  SSD   unadmitted  0.00waiting for userCH0.BAY9  SSD   unadmitted  0.00waiting for user8336Not accessible from CT0;404-95373:015914Not accessible from CT0;8-2373048nadmittedwaiting for user43751594:03710482269338425953     root@lynpure01-ct0:/var/home/pureeng# purearray list --space
+Name       Capacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  Total
+lynpure01  90.43T    100%    1693037G          260.32T  84%                3.8 to 1        24.2 to 1        55.22T  1.03T      13.49T  0.00    0.00         69.74T
+     root@lynpure01-ct0:/var/home/pureeng# puredrive list
+Name       Type   Status      Capacity  Details
+CH0.BAY0   SSD    unadmitted  0.00      waiting for user
+CH0.BAY1   SSD    unadmitted  0.00      waiting for user
+CH0.BAY2   SSD    unadmitted  0.00      waiting for user
+CH0.BAY3   SSD    unadmitted  0.00      waiting for user
+CH0.BAY4   SSD    unadmitted  0.00      waiting for user
+CH0.BAY5   SSD    unadmitted  0.00      waiting for user
+CH0.BAY6   SSD    unadmitted  0.00      waiting for user
+CH0.BAY7   SSD    unadmitted  0.00      waiting for user
+CH0.BAY8   SSD    unadmitted  0.00      waiting for user
+CH0.BAY9   SSD    unadmitted  0.00      waiting for user
+CH0.BAY10  SSD    healthy     1.86T     -
+CH0.BAY11  SSD    healthy     1.86T     -
+CH0.BAY12  SSD    healthy     1.86T     -
+CH0.BAY13  SSD    healthy     1.86T     -
+CH0.BAY14  SSD    healthy     1.86T     -
+CH0.BAY15  SSD    healthy     1.86T     -
+CH0.BAY16  SSD    healthy     1.86T     -
+CH0.BAY17  SSD    healthy     1.86T     -
+CH0.BAY18  SSD    healthy     1.86T     -
+CH0.BAY19  SSD    healthy     1.86T     -
+CH0.NVB0   NVRAM  healthy     7.00G     -
+CH0.NVB1   NVRAM  healthy     7.00G     -
+CH0.NVB2   NVRAM  healthy     7.00G     -
+CH0.NVB3   NVRAM  healthy     7.00G     -
+SH0.BAY0   SSD    healthy     1.74T     -
+SH0.BAY1   SSD    healthy     1.74T     -
+SH0.BAY2   SSD    healthy     1.74T     -
+SH0.BAY3   SSD    healthy     1.74T     -
+SH0.BAY4   SSD    healthy     1.74T     -
+SH0.BAY5   SSD    healthy     1.74T     -
+SH0.BAY6   SSD    healthy     1.74T     -
+SH0.BAY7   SSD    healthy     1.74T     -
+SH0.BAY8   SSD    healthy     1.74T     -
+SH0.BAY9   SSD    healthy     1.74T     -
+SH0.BAY10  SSD    healthy     1.74T     -
+SH0.BAY11  SSD    healthy     1.74T     -
+SH0.BAY12  SSD    healthy     1.74T     -
+SH0.BAY13  SSD    healthy     1.74T     -
+SH0.BAY14  SSD    healthy     1.74T     -
+SH0.BAY15  SSD    healthy     1.74T     -
+SH0.BAY16  SSD    healthy     1.74T     -
+SH0.BAY17  SSD    healthy     1.74T     -
+SH0.BAY18  SSD    healthy     1.74T     -
+SH0.BAY19  SSD    healthy     1.74T     -
+SH0.BAY20  SSD    healthy     1.74T     -
+SH0.BAY21  SSD    healthy     1.74T     -
+SH0.BAY22  SSD    healthy     1.74T     -
+SH0.BAY23  SSD    healthy     1.74T     -
+SH1.BAY0   SSD    healthy     1.74T     -
+SH1.BAY1   SSD    healthy     1.74T     -
+SH1.BAY2   SSD    healthy     1.74T     -
+SH1.BAY3   SSD    healthy     1.74T     -
+SH1.BAY4   SSD    healthy     1.74T     -
+SH1.BAY5   SSD    healthy     1.74T     -
+SH1.BAY6   SSD    healthy     1.74T     -
+SH1.BAY7   SSD    healthy     1.74T     -
+SH1.BAY8   SSD    healthy     1.74T     -
+SH1.BAY9   SSD    healthy     1.74T     -
+SH1.BAY10  SSD    healthy     1.74T     -
+SH1.BAY11  SSD    healthy     1.74T     -
+SH1.BAY12  SSD    healthy     3.49T     -
+SH1.BAY13  SSD    healthy     3.49T     -
+SH1.BAY14  SSD    healthy     3.49T     -
+SH1.BAY15  SSD    healthy     3.49T     -
+SH1.BAY16  SSD    healthy     3.49T     -
+SH1.BAY17  SSD    healthy     3.49T     -
+SH1.BAY18  SSD    healthy     3.49T     -
+SH1.BAY19  SSD    healthy     3.49T     -
+SH1.BAY20  SSD    healthy     3.49T     -
+SH1.BAY21  SSD    healthy     3.49T     -
+SH1.BAY22  SSD    empty       0.00      -
+SH1.BAY23  SSD    empty       0.00      -
+SH9.BAY0   SSD    healthy     1.92T     -
+SH9.BAY1   SSD    healthy     1.92T     -
+SH9.BAY2   SSD    healthy     1.92T     -
+SH9.BAY3   SSD    healthy     1.92T     -
+SH9.BAY4   SSD    healthy     1.92T     -
+SH9.BAY5   SSD    healthy     1.92T     -
+SH9.BAY6   SSD    healthy     1.92T     -
+SH9.BAY7   SSD    healthy     1.92T     -
+SH9.BAY8   SSD    healthy     1.92T     -
+SH9.BAY9   SSD    healthy     1.92T     -
+SH9.BAY10  -      unused      0.00      -
+SH9.BAY11  -      unused      0.00      -
+SH9.BAY12  -      unused      0.00      -
+SH9.BAY13  -      unused      0.00      -
+SH9.BAY14  -      unused      0.00      -
+SH9.BAY15  -      unused      0.00      -
+SH9.BAY16  -      unused      0.00      -
+SH9.BAY17  -      unused      0.00      -
+SH9.BAY18  -      unused      0.00      -
+SH9.BAY19  -      unused      0.00      -
+SH9.BAY20  -      unused      0.00      -
+SH9.BAY21  -      unused      0.00      -
+SH9.BAY22  -      unused      0.00      -
+SH9.BAY23  -      unused      0.00      -
+SH9.BAY24  -      unused      0.00      -
+SH9.BAY25  -      unused      0.00      -
+SH9.BAY26  -      unused      0.00      -
+SH9.BAY27  -      unused      0.00      -
+     root@lynpure01-ct0:/var/home/pureeng# puredrive admistt
+Name      Type  Status   Capacity  Details
+CH0.BAY0  SSD   healthy  16.00T    -
+CH0.BAY1  SSD   healthy  16.00T    -
+CH0.BAY2  SSD   healthy  16.00T    -
+CH0.BAY3  SSD   healthy  16.00T    -
+CH0.BAY4  SSD   healthy  16.00T    -
+CH0.BAY5  SSD   healthy  16.00T    -
+CH0.BAY6  SSD   healthy  16.00T    -
+CH0.BAY7  SSD   healthy  16.00T    -
+CH0.BAY8  SSD   healthy  16.00T    -
+CH0.BAY9  SSD   healthy  16.00T    -
+     root@lynpure01-ct0:/var/home/pureeng# purearray phonehome --send-today && ssh peer purearray phonehome --send-today
+Status   Action
+running  send_today
+phonehome is already running
+Status   Action
+running  send_today
+     root@lynpure01-ct0:/var/home/pureeng# exit
+exit
+pureeng@lynpure01-ct0:~$ purearray list --space
+Name       Capacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  Total
+lynpure01  90.43T    100%    1693037G          260.32T  84%                3.8 to 1        24.2 to 1        55.22T  1.03T      13.49T  0.00    0.00         69.74T
+pureeng@lynpure01-ct0:~$ 

@@ -1,0 +1,2040 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.09.11 10:36:23 =~=~=~=~=~=~=~=~=~=~=~=
+
+Tele-Pure-01-ct0 login: pureeng
+1) Authenticate via CloudAssist
+2) Authenticate via command line
+3) Restore challenge
+Type the number corresponding to the authentication method you want to use.
+
+Selection: 1
+
+An email for identity verification will be sent once email is entered.
+Please follow the authentication instructions provided there and return to this screen when finished or if email has not been received.
+
+
+Enter an email address: fharris@purestorage.com
+Successfully authenticated
+Last login: Thu Aug 21 09:53:25 EDT 2025 on ttyS0
+
+Thu Sep 11 10:38:10 2025
+Welcome pureeng. This is Purity Version 6.7.4 on FlashArray Tele-Pure-01
+http://www.purestorage.com/
+pureeng@Tele-Pure-01-ct0:~$ purearray remostasteasssistn --connect
+usage: purearray [-h]
+                 {activate,authorize,cloud-capacity,connect,connection,default-protection,diagnose,disable,disconnect,enable,encryption,eradication-config,erase,eula,factory-reset,factory-reset-token,list,monitor,phonehome,remoteassist,rename,replace,report,setattr,suspend,tag,test,throttle,untag}
+                 ...
+purearray: error: argument subcommand: invalid choice: 'remoteassistn' (choose from 'activate', 'cloud-capacity', 'connect', 'connection', 'default-protection', 'diagnose', 'disable', 'disconnect', 'enable', 'encryption', 'eradication-config', 'eula', 'list', 'monitor', 'phonehome', 'remoteassist', 'rename', 'replace', 'report', 'setattr', 'test', 'throttle', 'authorize', 'erase', 'factory-reset', 'factory-reset-token', 'suspend', 'tag', 'untag')
+pureeng@Tele-Pure-01-ct0:~$ sudo su
+     root@Tele-Pure-01-ct0:/var/home/pureeng# exitpurearray remoteassist --connect
+Name              Status      Opened                   Expires
+Tele-Pure-01-ct0  connecting  2025-09-11 10:38:50 EDT  2025-09-13 10:38:50 EDT
+     root@Tele-Pure-01-ct0:/var/home/pureeng# puredrive lst
+usage: puredrive [-h]
+                 {admit,capacity-limit,disable,enable,erase,evac,global,list,reset,restart}
+                 ...
+puredrive: error: argument subcommand: invalid choice: 'lst' (choose from 'list', 'evac', 'global', 'enable', 'disable', 'restart', 'erase', 'admit', 'capacity-limit', 'reset')
+     root@Tele-Pure-01-ct0:/var/home/pureeng# puredrive list
+Name       Type   Status     Capacity  Details
+CH0.BAY0   SSD    evacuated  0.00      -
+CH0.BAY1   SSD    evacuated  0.00      -
+CH0.BAY2   SSD    evacuated  0.00      -
+CH0.BAY3   SSD    evacuated  0.00      -
+CH0.BAY4   SSD    evacuated  0.00      -
+CH0.BAY5   SSD    evacuated  0.00      -
+CH0.BAY6   SSD    evacuated  0.00      -
+CH0.BAY7   SSD    evacuated  0.00      -
+CH0.BAY8   SSD    evacuated  0.00      -
+CH0.BAY9   SSD    evacuated  0.00      -
+CH0.BAY10  SSD    evacuated  0.00      -
+CH0.BAY11  SSD    evacuated  0.00      -
+CH0.BAY12  SSD    evacuated  0.00      -
+CH0.BAY13  SSD    evacuated  0.00      -
+CH0.BAY14  SSD    evacuated  0.00      -
+CH0.BAY15  SSD    evacuated  0.00      -
+CH0.BAY16  SSD    evacuated  0.00      -
+CH0.BAY17  SSD    evacuated  0.00      -
+CH0.BAY18  SSD    evacuated  0.00      -
+CH0.BAY19  SSD    evacuated  0.00      -
+CH0.NVB0   NVRAM  healthy    7.52G     -
+CH0.NVB1   NVRAM  healthy    7.52G     -
+CH0.NVB2   NVRAM  healthy    7.52G     -
+CH0.NVB3   NVRAM  healthy    7.52G     -
+SH0.BAY0   SSD    evacuated  0.00      -
+SH0.BAY1   SSD    evacuated  0.00      -
+SH0.BAY2   SSD    evacuated  0.00      -
+SH0.BAY3   SSD    evacuated  0.00      -
+SH0.BAY4   SSD    evacuated  0.00      -
+SH0.BAY5   SSD    evacuated  0.00      -
+SH0.BAY6   SSD    evacuated  0.00      -
+SH0.BAY7   SSD    evacuated  0.00      -
+SH0.BAY8   SSD    evacuated  0.00      -
+SH0.BAY9   SSD    evacuated  0.00      -
+SH0.BAY10  SSD    evacuated  0.00      -
+SH0.BAY11  SSD    evacuated  0.00      -
+SH0.BAY12  SSD    evacuated  0.00      -
+SH0.BAY13  SSD    evacuated  0.00      -
+SH0.BAY14  SSD    evacuated  0.00      -
+SH0.BAY15  SSD    evacuated  0.00      -
+SH0.BAY16  SSD    evacuated  0.00      -
+SH0.BAY17  SSD    evacuated  0.00      -
+SH0.BAY18  SSD    evacuated  0.00      -
+SH0.BAY19  SSD    evacuated  0.00      -
+SH0.BAY20  SSD    evacuated  0.00      -
+SH0.BAY21  SSD    evacuated  0.00      -
+SH0.BAY22  SSD    evacuated  0.00      -
+SH0.BAY23  SSD    evacuated  0.00      -
+SH1.BAY0   SSD    evacuated  0.00      -
+SH1.BAY1   SSD    evacuated  0.00      -
+SH1.BAY2   SSD    evacuated  0.00      -
+SH1.BAY3   SSD    evacuated  0.00      -
+SH1.BAY4   SSD    evacuated  0.00      -
+SH1.BAY5   SSD    evacuated  0.00      -
+SH1.BAY6   SSD    evacuated  0.00      -
+SH1.BAY7   SSD    evacuated  0.00      -
+SH1.BAY8   SSD    evacuated  0.00      -
+SH1.BAY9   SSD    evacuated  0.00      -
+SH1.BAY10  SSD    evacuated  0.00      -
+SH1.BAY11  SSD    evacuated  0.00      -
+SH1.BAY12  SSD    evacuated  0.00      -
+SH1.BAY13  SSD    evacuated  0.00      -
+SH1.BAY14  SSD    evacuated  0.00      -
+SH1.BAY15  SSD    evacuated  0.00      -
+SH1.BAY16  SSD    evacuated  0.00      -
+SH1.BAY17  SSD    evacuated  0.00      -
+SH1.BAY18  SSD    evacuated  0.00      -
+SH1.BAY19  SSD    evacuated  0.00      -
+SH1.BAY20  SSD    evacuated  0.00      -
+SH1.BAY21  SSD    evacuated  0.00      -
+SH1.BAY22  SSD    evacuated  0.00      -
+SH1.BAY23  SSD    evacuated  0.00      -
+SH9.BAY0   SSD    evacuated  0.00      -
+SH9.BAY1   SSD    evacuated  0.00      -
+SH9.BAY2   SSD    evacuated  0.00      -
+SH9.BAY3   SSD    evacuated  0.00      -
+SH9.BAY4   SSD    evacuated  0.00      -
+SH9.BAY5   SSD    evacuated  0.00      -
+SH9.BAY6   SSD    evacuated  0.00      -
+SH9.BAY7   SSD    evacuated  0.00      -
+SH9.BAY8   SSD    evacuated  0.00      -
+SH9.BAY9   SSD    evacuated  0.00      -
+SH9.BAY10  SSD    healthy    18.30T    -
+SH9.BAY11  SSD    healthy    18.30T    -
+SH9.BAY12  SSD    healthy    18.30T    -
+SH9.BAY13  SSD    healthy    18.30T    -
+SH9.BAY14  SSD    healthy    18.30T    -
+SH9.BAY15  SSD    healthy    18.30T    -
+SH9.BAY16  SSD    healthy    18.30T    -
+SH9.BAY17  SSD    healthy    18.30T    -
+SH9.BAY18  SSD    healthy    18.30T    -
+SH9.BAY19  SSD    healthy    18.30T    -
+SH9.BAY20  SSD    healthy    18.30T    -
+SH9.BAY21  SSD    healthy    18.30T    -
+SH9.BAY22  SSD    healthy    18.30T    -
+SH9.BAY23  SSD    healthy    18.30T    -
+SH9.BAY24  SSD    healthy    18.30T    -
+SH9.BAY25  SSD    healthy    18.30T    -
+SH9.BAY26  SSD    healthy    18.30T    -
+SH9.BAY27  SSD    healthy    18.30T    -
+     root@Tele-Pure-01-ct0:/var/home/pureeng# purealert tag --timeout 90m --main tenance
+Name         Created                  Expires
+maintenance  2025-09-11 10:39:28 EDT  2025-09-11 12:09:28 EDT
+     root@Tele-Pure-01-ct0:/var/home/pureeng# puremessage list --open
+     root@Tele-Pure-01-ct0:/var/home/pureeng# purehw list
+Name          Status  Identify  Slot  Index  Speed       Temperature  Voltage  Details
+CH0           ok      off       -     0      -           -            -        -
+CH0.BAY0      ok      off       -     0      -           -            -        -
+CH0.BAY1      ok      off       -     1      -           -            -        -
+CH0.BAY2      ok      off       -     2      -           -            -        -
+CH0.BAY3      ok      off       -     3      -           -            -        -
+CH0.BAY4      ok      off       -     4      -           -            -        -
+CH0.BAY5      ok      off       -     5      -           -            -        -
+CH0.BAY6      ok      off       -     6      -           -            -        -
+CH0.BAY7      ok      off       -     7      -           -            -        -
+CH0.BAY8      ok      off       -     8      -           -            -        -
+CH0.BAY9      ok      off       -     9      -           -            -        -
+CH0.BAY10     ok      off       -     10     -           -            -        -
+CH0.BAY11     ok      off       -     11     -           -            -        -
+CH0.BAY12     ok      off       -     12     -           -            -        -
+CH0.BAY13     ok      off       -     13     -           -            -        -
+CH0.BAY14     ok      off       -     14     -           -            -        -
+CH0.BAY15     ok      off       -     15     -           -            -        -
+CH0.BAY16     ok      off       -     16     -           -            -        -
+CH0.BAY17     ok      off       -     17     -           -            -        -
+CH0.BAY18     ok      off       -     18     -           -            -        -
+CH0.BAY19     ok      off       -     19     -           -            -        -
+CH0.NVB0      ok      off       -     0      -           -            -        -
+CH0.NVB1      ok      off       -     1      -           -            -        -
+CH0.NVB2      ok      off       -     2      -           -            -        -
+CH0.NVB3      ok      off       -     3      -           -            -        -
+CH0.PWR0      ok      -         -     0      -           -            206 V    -
+CH0.PWR1      ok      -         -     1      -           -            203 V    -
+CH0.TMP0      ok      -         -     0      -           18 C         -        -
+CT0           ok      off       -     0      -           -            -        -
+CT0.ETH0      ok      -         -     0      1.00 Gb/s   -            -        -
+CT0.ETH1      ok      -         -     1      0.00 b/s    -            -        -
+CT0.ETH2      ok      -         -     2      10.00 Gb/s  -            -        -
+CT0.ETH3      ok      -         -     3      10.00 Gb/s  -            -        -
+CT0.ETH4      ok      -         -     4      10.00 Gb/s  -            -        -
+CT0.ETH5      ok      -         -     5      10.00 Gb/s  -            -        -
+CT0.ETH14     ok      -         1     14     50.00 Gb/s  -            -        -
+CT0.ETH15     ok      -         1     15     50.00 Gb/s  -            -        -
+CT0.FAN0      ok      -         -     0      -           -            -        -
+CT0.FAN1      ok      -         -     1      -           -            -        -
+CT0.FAN2      ok      -         -     2      -           -            -        -
+CT0.FAN3      ok      -         -     3      -           -            -        -
+CT0.FAN4      ok      -         -     4      -           -            -        -
+CT0.FAN5      ok      -         -     5      -           -            -        -
+CT0.FC0       ok      -         0     0      0.00 b/s    -            -        -
+CT0.FC1       ok      -         0     1      0.00 b/s    -            -        -
+CT0.FC2       ok      -         0     2      0.00 b/s    -            -        -
+CT0.FC3       ok      -         0     3      0.00 b/s    -            -        -
+CT0.FC8       ok      -         2     8      16.00 Gb/s  -            -        -
+CT0.FC9       ok      -         2     9      16.00 Gb/s  -            -        -
+CT0.SAS0      ok      -         -     0      48.00 Gb/s  -            -        -
+CT0.SAS1      ok      -         -     1      48.00 Gb/s  -            -        -
+CT0.SAS2      ok      -         -     2      48.00 Gb/s  -            -        -
+CT0.SAS3      ok      -         -     3      48.00 Gb/s  -            -        -
+CT0.TMP0      ok      -         -     0      -           35 C         -        -
+CT0.TMP1      ok      -         -     1      -           35 C         -        -
+CT0.TMP2      ok      -         -     2      -           27 C         -        -
+CT0.TMP3      ok      -         -     3      -           41 C         -        -
+CT0.TMP4      ok      -         -     4      -           42 C         -        -
+CT0.TMP5      ok      -         -     5      -           33 C         -        -
+CT0.TMP6      ok      -         -     6      -           40 C         -        -
+CT0.TMP7      ok      -         -     7      -           29 C         -        -
+CT0.TMP8      ok      -         -     8      -           29 C         -        -
+CT0.TMP9      ok      -         -     9      -           30 C         -        -
+CT0.TMP10     ok      -         -     10     -           29 C         -        -
+CT0.TMP11     ok      -         -     11     -           28 C         -        -
+CT0.TMP12     ok      -         -     12     -           28 C         -        -
+CT0.TMP13     ok      -         -     13     -           33 C         -        -
+CT0.TMP14     ok      -         -     14     -           32 C         -        -
+CT0.TMP15     ok      -         -     15     -           32 C         -        -
+CT0.TMP16     ok      -         -     16     -           30 C         -        -
+CT0.TMP17     ok      -         -     17     -           30 C         -        -
+CT0.TMP18     ok      -         -     18     -           30 C         -        -
+CT0.TMP19     ok      -         -     19     -           33 C         -        -
+CT0.TMP20     ok      -         -     20     -           30 C         -        -
+CT0.TMP21     ok      -         -     21     -           35 C         -        -
+CT0.TMP22     ok      -         -     22     -           32 C         -        -
+CT0.TMP23     ok      -         -     23     -           36 C         -        -
+CT0.TMP24     ok      -         -     24     -           36 C         -        -
+CT0.TMP25     ok      -         -     25     -           39 C         -        -
+CT0.TMP26     ok      -         -     26     -           29 C         -        -
+CT1           ok      off       -     1      -           -            -        -
+CT1.ETH0      ok      -         -     0      1.00 Gb/s   -            -        -
+CT1.ETH1      ok      -         -     1      0.00 b/s    -            -        -
+CT1.ETH2      ok      -         -     2      10.00 Gb/s  -            -        -
+CT1.ETH3      ok      -         -     3      10.00 Gb/s  -            -        -
+CT1.ETH4      ok      -         -     4      10.00 Gb/s  -            -        -
+CT1.ETH5      ok      -         -     5      10.00 Gb/s  -            -        -
+CT1.ETH14     ok      -         1     14     50.00 Gb/s  -            -        -
+CT1.ETH15     ok      -         1     15     50.00 Gb/s  -            -        -
+CT1.FAN0      ok      -         -     0      -           -            -        -
+CT1.FAN1      ok      -         -     1      -           -            -        -
+CT1.FAN2      ok      -         -     2      -           -            -        -
+CT1.FAN3      ok      -         -     3      -           -            -        -
+CT1.FAN4      ok      -         -     4      -           -            -        -
+CT1.FAN5      ok      -         -     5      -           -            -        -
+CT1.FC0       ok      -         0     0      0.00 b/s    -            -        -
+CT1.FC1       ok      -         0     1      0.00 b/s    -            -        -
+CT1.FC2       ok      -         0     2      0.00 b/s    -            -        -
+CT1.FC3       ok      -         0     3      0.00 b/s    -            -        -
+CT1.FC8       ok      -         2     8      16.00 Gb/s  -            -        -
+CT1.FC9       ok      -         2     9      16.00 Gb/s  -            -        -
+CT1.SAS0      ok      -         -     0      48.00 Gb/s  -            -        -
+CT1.SAS1      ok      -         -     1      48.00 Gb/s  -            -        -
+CT1.SAS2      ok      -         -     2      48.00 Gb/s  -            -        -
+CT1.SAS3      ok      -         -     3      48.00 Gb/s  -            -        -
+CT1.TMP0      ok      -         -     0      -           40 C         -        -
+CT1.TMP1      ok      -         -     1      -           42 C         -        -
+CT1.TMP2      ok      -         -     2      -           31 C         -        -
+CT1.TMP3      ok      -         -     3      -           51 C         -        -
+CT1.TMP4      ok      -         -     4      -           52 C         -        -
+CT1.TMP5      ok      -         -     5      -           39 C         -        -
+CT1.TMP6      ok      -         -     6      -           48 C         -        -
+CT1.TMP7      ok      -         -     7      -           35 C         -        -
+CT1.TMP8      ok      -         -     8      -           34 C         -        -
+CT1.TMP9      ok      -         -     9      -           36 C         -        -
+CT1.TMP10     ok      -         -     10     -           33 C         -        -
+CT1.TMP11     ok      -         -     11     -           33 C         -        -
+CT1.TMP12     ok      -         -     12     -           32 C         -        -
+CT1.TMP13     ok      -         -     13     -           37 C         -        -
+CT1.TMP14     ok      -         -     14     -           36 C         -        -
+CT1.TMP15     ok      -         -     15     -           36 C         -        -
+CT1.TMP16     ok      -         -     16     -           35 C         -        -
+CT1.TMP17     ok      -         -     17     -           36 C         -        -
+CT1.TMP18     ok      -         -     18     -           36 C         -        -
+CT1.TMP19     ok      -         -     19     -           35 C         -        -
+CT1.TMP20     ok      -         -     20     -           32 C         -        -
+CT1.TMP21     ok      -         -     21     -           41 C         -        -
+CT1.TMP22     ok      -         -     22     -           36 C         -        -
+CT1.TMP23     ok      -         -     23     -           42 C         -        -
+CT1.TMP24     ok      -         -     24     -           42 C         -        -
+CT1.TMP25     ok      -         -     25     -           46 C         -        -
+CT1.TMP26     ok      -         -     26     -           33 C         -        -
+SH0           ok      off       -     0      -           -            -        -
+SH0.BAY0      ok      off       -     0      -           -            -        -
+SH0.BAY1      ok      off       -     1      -           -            -        -
+SH0.BAY2      ok      off       -     2      -           -            -        -
+SH0.BAY3      ok      off       -     3      -           -            -        -
+SH0.BAY4      ok      off       -     4      -           -            -        -
+SH0.BAY5      ok      off       -     5      -           -            -        -
+SH0.BAY6      ok      off       -     6      -           -            -        -
+SH0.BAY7      ok      off       -     7      -           -            -        -
+SH0.BAY8      ok      off       -     8      -           -            -        -
+SH0.BAY9      ok      off       -     9      -           -            -        -
+SH0.BAY10     ok      off       -     10     -           -            -        -
+SH0.BAY11     ok      off       -     11     -           -            -        -
+SH0.BAY12     ok      off       -     12     -           -            -        -
+SH0.BAY13     ok      off       -     13     -           -            -        -
+SH0.BAY14     ok      off       -     14     -           -            -        -
+SH0.BAY15     ok      off       -     15     -           -            -        -
+SH0.BAY16     ok      off       -     16     -           -            -        -
+SH0.BAY17     ok      off       -     17     -           -            -        -
+SH0.BAY18     ok      off       -     18     -           -            -        -
+SH0.BAY19     ok      off       -     19     -           -            -        -
+SH0.BAY20     ok      off       -     20     -           -            -        -
+SH0.BAY21     ok      off       -     21     -           -            -        -
+SH0.BAY22     ok      off       -     22     -           -            -        -
+SH0.BAY23     ok      off       -     23     -           -            -        -
+SH0.FAN0      ok      -         -     0      -           -            -        -
+SH0.FAN1      ok      -         -     1      -           -            -        -
+SH0.FAN2      ok      -         -     2      -           -            -        -
+SH0.FAN3      ok      -         -     3      -           -            -        -
+SH0.IOM0      ok      off       0     0      -           -            -        -
+SH0.IOM1      ok      off       1     1      -           -            -        -
+SH0.PWR0      ok      -         -     0      -           -            -        -
+SH0.PWR1      ok      -         -     1      -           -            -        -
+SH0.SAS0      ok      -         0     0      48.00 Gb/s  -            -        -
+SH0.SAS1      ok      -         0     1      0.00 b/s    -            -        -
+SH0.SAS2      ok      -         0     2      48.00 Gb/s  -            -        -
+SH0.SAS3      ok      -         1     3      48.00 Gb/s  -            -        -
+SH0.SAS4      ok      -         1     4      0.00 b/s    -            -        -
+SH0.SAS5      ok      -         1     5      48.00 Gb/s  -            -        -
+SH0.TMP0      ok      -         -     0      -           19 C         -        -
+SH0.TMP1      ok      -         -     1      -           22 C         -        -
+SH0.TMP2      ok      -         -     2      -           21 C         -        -
+SH0.TMP3      ok      -         -     3      -           27 C         -        -
+SH0.TMP4      ok      -         -     4      -           21 C         -        -
+SH0.TMP5      ok      -         -     5      -           26 C         -        -
+SH0.TMP6      ok      -         -     6      -           28 C         -        -
+SH0.TMP7      ok      -         -     7      -           26 C         -        -
+SH1           ok      off       -     1      -           -            -        -
+SH1.BAY0      ok      off       -     0      -           -            -        -
+SH1.BAY1      ok      off       -     1      -           -            -        -
+SH1.BAY2      ok      off       -     2      -           -            -        -
+SH1.BAY3      ok      off       -     3      -           -            -        -
+SH1.BAY4      ok      off       -     4      -           -            -        -
+SH1.BAY5      ok      off       -     5      -           -            -        -
+SH1.BAY6      ok      off       -     6      -           -            -        -
+SH1.BAY7      ok      off       -     7      -           -            -        -
+SH1.BAY8      ok      off       -     8      -           -            -        -
+SH1.BAY9      ok      off       -     9      -           -            -        -
+SH1.BAY10     ok      off       -     10     -           -            -        -
+SH1.BAY11     ok      off       -     11     -           -            -        -
+SH1.BAY12     ok      off       -     12     -           -            -        -
+SH1.BAY13     ok      off       -     13     -           -            -        -
+SH1.BAY14     ok      off       -     14     -           -            -        -
+SH1.BAY15     ok      off       -     15     -           -            -        -
+SH1.BAY16     ok      off       -     16     -           -            -        -
+SH1.BAY17     ok      off       -     17     -           -            -        -
+SH1.BAY18     ok      off       -     18     -           -            -        -
+SH1.BAY19     ok      off       -     19     -           -            -        -
+SH1.BAY20     ok      off       -     20     -           -            -        -
+SH1.BAY21     ok      off       -     21     -           -            -        -
+SH1.BAY22     ok      off       -     22     -           -            -        -
+SH1.BAY23     ok      off       -     23     -           -            -        -
+SH1.FAN0      ok      -         -     0      -           -            -        -
+SH1.FAN1      ok      -         -     1      -           -            -        -
+SH1.FAN2      ok      -         -     2      -           -            -        -
+SH1.FAN3      ok      -         -     3      -           -            -        -
+SH1.IOM0      ok      off       0     0      -           -            -        -
+SH1.IOM1      ok      off       1     1      -           -            -        -
+SH1.PWR0      ok      -         -     0      -           -            -        -
+SH1.PWR1      ok      -         -     1      -           -            -        -
+SH1.SAS0      ok      -         0     0      48.00 Gb/s  -            -        -
+SH1.SAS1      ok      -         0     1      0.00 b/s    -            -        -
+SH1.SAS2      ok      -         0     2      48.00 Gb/s  -            -        -
+SH1.SAS3      ok      -         1     3      48.00 Gb/s  -            -        -
+SH1.SAS4      ok      -         1     4      0.00 b/s    -            -        -
+SH1.SAS5      ok      -         1     5      48.00 Gb/s  -            -        -
+SH1.TMP0      ok      -         -     0      -           18 C         -        -
+SH1.TMP1      ok      -         -     1      -           22 C         -        -
+SH1.TMP2      ok      -         -     2      -           21 C         -        -
+SH1.TMP3      ok      -         -     3      -           25 C         -        -
+SH1.TMP4      ok      -         -     4      -           22 C         -        -
+SH1.TMP5      ok      -         -     5      -           24 C         -        -
+SH1.TMP6      ok      -         -     6      -           29 C         -        -
+SH1.TMP7      ok      -         -     7      -           27 C         -        -
+SH9           ok      off       -     9      -           17 C         -        -
+SH9.BAY0      ok      off       -     0      -           -            -        -
+SH9.BAY1      ok      off       -     1      -           -            -        -
+SH9.BAY2      ok      off       -     2      -           -            -        -
+SH9.BAY3      ok      off       -     3      -           -            -        -
+SH9.BAY4      ok      off       -     4      -           -            -        -
+SH9.BAY5      ok      off       -     5      -           -            -        -
+SH9.BAY6      ok      off       -     6      -           -            -        -
+SH9.BAY7      ok      off       -     7      -           -            -        -
+SH9.BAY8      ok      on        -     8      -           -            -        -
+SH9.BAY9      ok      off       -     9      -           -            -        -
+SH9.BAY10     ok      off       -     10     -           -            -        -
+SH9.BAY11     ok      off       -     11     -           -            -        -
+SH9.BAY12     ok      off       -     12     -           -            -        -
+SH9.BAY13     ok      off       -     13     -           -            -        -
+SH9.BAY14     ok      off       -     14     -           -            -        -
+SH9.BAY15     ok      off       -     15     -           -            -        -
+SH9.BAY16     ok      off       -     16     -           -            -        -
+SH9.BAY17     ok      off       -     17     -           -            -        -
+SH9.BAY18     ok      off       -     18     -           -            -        -
+SH9.BAY19     ok      off       -     19     -           -            -        -
+SH9.BAY20     ok      off       -     20     -           -            -        -
+SH9.BAY21     ok      off       -     21     -           -            -        -
+SH9.BAY22     ok      off       -     22     -           -            -        -
+SH9.BAY23     ok      off       -     23     -           -            -        -
+SH9.BAY24     ok      off       -     24     -           -            -        -
+SH9.BAY25     ok      off       -     25     -           -            -        -
+SH9.BAY26     ok      off       -     26     -           -            -        -
+SH9.BAY27     ok      off       -     27     -           -            -        -
+SH9.PWR0      ok      -         -     0      -           -            203 V    -
+SH9.PWR1      ok      -         -     1      -           -            203 V    -
+SH9.SC0       ok      off       -     0      -           25 C         -        -
+SH9.SC0.ETH0  ok      -         -     0      50.00 Gb/s  -            -        -
+SH9.SC0.ETH1  ok      -         -     1      0.00 b/s    -            -        -
+SH9.SC0.ETH2  ok      -         -     2      50.00 Gb/s  -            -        -
+SH9.SC0.ETH3  ok      -         -     3      0.00 b/s    -            -        -
+SH9.SC0.FAN0  ok      -         -     0      -           -            -        -
+SH9.SC0.FAN1  ok      -         -     1      -           -            -        -
+SH9.SC0.FAN2  ok      -         -     2      -           -            -        -
+SH9.SC0.FAN3  ok      -         -     3      -           -            -        -
+SH9.SC0.FAN4  ok      -         -     4      -           -            -        -
+SH9.SC0.FAN5  ok      -         -     5      -           -            -        -
+SH9.SC1       ok      off       -     1      -           24 C         -        -
+SH9.SC1.ETH0  ok      -         -     0      50.00 Gb/s  -            -        -
+SH9.SC1.ETH1  ok      -         -     1      0.00 b/s    -            -        -
+SH9.SC1.ETH2  ok      -         -     2      50.00 Gb/s  -            -        -
+SH9.SC1.ETH3  ok      -         -     3      0.00 b/s    -            -        -
+SH9.SC1.FAN0  ok      -         -     0      -           -            -        -
+SH9.SC1.FAN1  ok      -         -     1      -           -            -        -
+SH9.SC1.FAN2  ok      -         -     2      -           -            -        -
+SH9.SC1.FAN3  ok      -         -     3      -           -            -        -
+SH9.SC1.FAN4  ok      -         -     4      -           -            -        -
+SH9.SC1.FAN5  ok      -         -     5      -           -            -        -
+     root@Tele-Pure-01-ct0:/var/home/pureeng# purepureiopurearray list --apce
+usage: purearray [-h]
+                 {activate,authorize,cloud-capacity,connect,connection,default-protection,diagnose,disable,disconnect,enable,encryption,eradication-config,erase,eula,factory-reset,factory-reset-token,list,monitor,phonehome,remoteassist,rename,replace,report,setattr,suspend,tag,test,throttle,untag}
+                 ...
+purearray: error: unrecognized arguments: --apce
+     root@Tele-Pure-01-ct0:/var/home/pureeng# purearray list --space
+Name          Capacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique   Snapshots  Shared  System  Replication  Total
+Tele-Pure-01  222.44T   100%    -                 386.68T  33%                2.8 to 1        4.1 to 1         112.26T  24.13T     34.00T  0.00    0.00         170.39T
+     root@Tele-Pure-01-ct0:/var/home/pureeng# puredrive list
+Name       Type   Status     Capacity  Details
+CH0.BAY0   SSD    evacuated  0.00      -
+CH0.BAY1   SSD    evacuated  0.00      -
+CH0.BAY2   SSD    evacuated  0.00      -
+CH0.BAY3   SSD    evacuated  0.00      -
+CH0.BAY4   SSD    evacuated  0.00      -
+CH0.BAY5   SSD    evacuated  0.00      -
+CH0.BAY6   SSD    evacuated  0.00      -
+CH0.BAY7   SSD    evacuated  0.00      -
+CH0.BAY8   SSD    evacuated  0.00      -
+CH0.BAY9   SSD    evacuated  0.00      -
+CH0.BAY10  SSD    evacuated  0.00      -
+CH0.BAY11  SSD    evacuated  0.00      -
+CH0.BAY12  SSD    evacuated  0.00      -
+CH0.BAY13  SSD    evacuated  0.00      -
+CH0.BAY14  SSD    evacuated  0.00      -
+CH0.BAY15  SSD    evacuated  0.00      -
+CH0.BAY16  SSD    evacuated  0.00      -
+CH0.BAY17  SSD    evacuated  0.00      -
+CH0.BAY18  SSD    evacuated  0.00      -
+CH0.BAY19  SSD    evacuated  0.00      -
+CH0.NVB0   NVRAM  healthy    7.52G     -
+CH0.NVB1   NVRAM  healthy    7.52G     -
+CH0.NVB2   NVRAM  healthy    7.52G     -
+CH0.NVB3   NVRAM  healthy    7.52G     -
+SH0.BAY0   SSD    evacuated  0.00      -
+SH0.BAY1   SSD    evacuated  0.00      -
+SH0.BAY2   SSD    evacuated  0.00      -
+SH0.BAY3   SSD    evacuated  0.00      -
+SH0.BAY4   SSD    evacuated  0.00      -
+SH0.BAY5   SSD    evacuated  0.00      -
+SH0.BAY6   SSD    evacuated  0.00      -
+SH0.BAY7   SSD    evacuated  0.00      -
+SH0.BAY8   SSD    evacuated  0.00      -
+SH0.BAY9   SSD    evacuated  0.00      -
+SH0.BAY10  SSD    evacuated  0.00      -
+SH0.BAY11  SSD    evacuated  0.00      -
+SH0.BAY12  SSD    evacuated  0.00      -
+SH0.BAY13  SSD    evacuated  0.00      -
+SH0.BAY14  SSD    evacuated  0.00      -
+SH0.BAY15  SSD    evacuated  0.00      -
+SH0.BAY16  SSD    evacuated  0.00      -
+SH0.BAY17  SSD    evacuated  0.00      -
+SH0.BAY18  SSD    evacuated  0.00      -
+SH0.BAY19  SSD    evacuated  0.00      -
+SH0.BAY20  SSD    evacuated  0.00      -
+SH0.BAY21  SSD    evacuated  0.00      -
+SH0.BAY22  SSD    evacuated  0.00      -
+SH0.BAY23  SSD    evacuated  0.00      -
+SH1.BAY0   SSD    evacuated  0.00      -
+SH1.BAY1   SSD    evacuated  0.00      -
+SH1.BAY2   SSD    evacuated  0.00      -
+SH1.BAY3   SSD    evacuated  0.00      -
+SH1.BAY4   SSD    evacuated  0.00      -
+SH1.BAY5   SSD    evacuated  0.00      -
+SH1.BAY6   SSD    evacuated  0.00      -
+SH1.BAY7   SSD    evacuated  0.00      -
+SH1.BAY8   SSD    evacuated  0.00      -
+SH1.BAY9   SSD    evacuated  0.00      -
+SH1.BAY10  SSD    evacuated  0.00      -
+SH1.BAY11  SSD    evacuated  0.00      -
+SH1.BAY12  SSD    evacuated  0.00      -
+SH1.BAY13  SSD    evacuated  0.00      -
+SH1.BAY14  SSD    evacuated  0.00      -
+SH1.BAY15  SSD    evacuated  0.00      -
+SH1.BAY16  SSD    evacuated  0.00      -
+SH1.BAY17  SSD    evacuated  0.00      -
+SH1.BAY18  SSD    evacuated  0.00      -
+SH1.BAY19  SSD    evacuated  0.00      -
+SH1.BAY20  SSD    evacuated  0.00      -
+SH1.BAY21  SSD    evacuated  0.00      -
+SH1.BAY22  SSD    evacuated  0.00      -
+SH1.BAY23  SSD    evacuated  0.00      -
+SH9.BAY0   SSD    evacuated  0.00      -
+SH9.BAY1   SSD    evacuated  0.00      -
+SH9.BAY2   SSD    evacuated  0.00      -
+SH9.BAY3   SSD    evacuated  0.00      -
+SH9.BAY4   SSD    evacuated  0.00      -
+SH9.BAY5   SSD    evacuated  0.00      -
+SH9.BAY6   SSD    evacuated  0.00      -
+SH9.BAY7   SSD    evacuated  0.00      -
+SH9.BAY8   SSD    evacuated  0.00      -
+SH9.BAY9   SSD    evacuated  0.00      -
+SH9.BAY10  SSD    healthy    18.30T    -
+SH9.BAY11  SSD    healthy    18.30T    -
+SH9.BAY12  SSD    healthy    18.30T    -
+SH9.BAY13  SSD    healthy    18.30T    -
+SH9.BAY14  SSD    healthy    18.30T    -
+SH9.BAY15  SSD    healthy    18.30T    -
+SH9.BAY16  SSD    healthy    18.30T    -
+SH9.BAY17  SSD    healthy    18.30T    -
+SH9.BAY18  SSD    healthy    18.30T    -
+SH9.BAY19  SSD    healthy    18.30T    -
+SH9.BAY20  SSD    healthy    18.30T    -
+SH9.BAY21  SSD    healthy    18.30T    -
+SH9.BAY22  SSD    healthy    18.30T    -
+SH9.BAY23  SSD    healthy    18.30T    -
+SH9.BAY24  SSD    healthy    18.30T    -
+SH9.BAY25  SSD    healthy    18.30T    -
+SH9.BAY26  SSD    healthy    18.30T    -
+SH9.BAY27  SSD    healthy    18.30T    -
+     root@Tele-Pure-01-ct0:/var/home/pureeng# puredrive list
+Name       Type   Status     Capacity  Details
+CH0.BAY0   SSD    evacuated  0.00      -
+CH0.BAY1   SSD    evacuated  0.00      -
+CH0.BAY2   SSD    evacuated  0.00      -
+CH0.BAY3   SSD    evacuated  0.00      -
+CH0.BAY4   SSD    evacuated  0.00      -
+CH0.BAY5   SSD    evacuated  0.00      -
+CH0.BAY6   SSD    evacuated  0.00      -
+CH0.BAY7   SSD    evacuated  0.00      -
+CH0.BAY8   SSD    evacuated  0.00      -
+CH0.BAY9   SSD    evacuated  0.00      -
+CH0.BAY10  SSD    evacuated  0.00      -
+CH0.BAY11  SSD    evacuated  0.00      -
+CH0.BAY12  SSD    evacuated  0.00      -
+CH0.BAY13  SSD    evacuated  0.00      -
+CH0.BAY14  SSD    evacuated  0.00      -
+CH0.BAY15  SSD    evacuated  0.00      -
+CH0.BAY16  SSD    evacuated  0.00      -
+CH0.BAY17  SSD    evacuated  0.00      -
+CH0.BAY18  SSD    evacuated  0.00      -
+CH0.BAY19  SSD    evacuated  0.00      -
+CH0.NVB0   NVRAM  healthy    7.52G     -
+CH0.NVB1   NVRAM  healthy    7.52G     -
+CH0.NVB2   NVRAM  healthy    7.52G     -
+CH0.NVB3   NVRAM  healthy    7.52G     -
+SH0.BAY0   SSD    unhealthy  0.00      -
+SH0.BAY1   SSD    unhealthy  0.00      -
+SH0.BAY2   SSD    unhealthy  0.00      -
+SH0.BAY3   SSD    unhealthy  0.00      -
+SH0.BAY4   SSD    unhealthy  0.00      -
+SH0.BAY5   SSD    unhealthy  0.00      -
+SH0.BAY6   SSD    unhealthy  0.00      -
+SH0.BAY7   SSD    unhealthy  0.00      -
+SH0.BAY8   SSD    unhealthy  0.00      -
+SH0.BAY9   SSD    unhealthy  0.00      -
+SH0.BAY10  SSD    unhealthy  0.00      -
+SH0.BAY11  SSD    unhealthy  0.00      -
+SH0.BAY12  SSD    unhealthy  0.00      -
+SH0.BAY13  SSD    unhealthy  0.00      -
+SH0.BAY14  SSD    unhealthy  0.00      -
+SH0.BAY15  SSD    unhealthy  0.00      -
+SH0.BAY16  SSD    unhealthy  0.00      -
+SH0.BAY17  SSD    unhealthy  0.00      -
+SH0.BAY18  SSD    unhealthy  0.00      -
+SH0.BAY19  SSD    unhealthy  0.00      -
+SH0.BAY20  SSD    unhealthy  0.00      -
+SH0.BAY21  SSD    unhealthy  0.00      -
+SH0.BAY22  SSD    unhealthy  0.00      -
+SH0.BAY23  SSD    unhealthy  0.00      -
+SH1.BAY0   SSD    unhealthy  0.00      -
+SH1.BAY1   SSD    unhealthy  0.00      -
+SH1.BAY2   SSD    unhealthy  0.00      -
+SH1.BAY3   SSD    unhealthy  0.00      -
+SH1.BAY4   SSD    unhealthy  0.00      -
+SH1.BAY5   SSD    unhealthy  0.00      -
+SH1.BAY6   SSD    unhealthy  0.00      -
+SH1.BAY7   SSD    unhealthy  0.00      -
+SH1.BAY8   SSD    unhealthy  0.00      -
+SH1.BAY9   SSD    unhealthy  0.00      -
+SH1.BAY10  SSD    unhealthy  0.00      -
+SH1.BAY11  SSD    unhealthy  0.00      -
+SH1.BAY12  SSD    unhealthy  0.00      -
+SH1.BAY13  SSD    unhealthy  0.00      -
+SH1.BAY14  SSD    unhealthy  0.00      -
+SH1.BAY15  SSD    unhealthy  0.00      -
+SH1.BAY16  SSD    unhealthy  0.00      -
+SH1.BAY17  SSD    unhealthy  0.00      -
+SH1.BAY18  SSD    unhealthy  0.00      -
+SH1.BAY19  SSD    unhealthy  0.00      -
+SH1.BAY20  SSD    unhealthy  0.00      -
+SH1.BAY21  SSD    unhealthy  0.00      -
+SH1.BAY22  SSD    unhealthy  0.00      -
+SH1.BAY23  SSD    unhealthy  0.00      -
+SH9.BAY0   SSD    evacuated  0.00      -
+SH9.BAY1   SSD    evacuated  0.00      -
+SH9.BAY2   SSD    evacuated  0.00      -
+SH9.BAY3   SSD    evacuated  0.00      -
+SH9.BAY4   SSD    evacuated  0.00      -
+SH9.BAY5   SSD    evacuated  0.00      -
+SH9.BAY6   SSD    evacuated  0.00      -
+SH9.BAY7   SSD    evacuated  0.00      -
+SH9.BAY8   SSD    evacuated  0.00      -
+SH9.BAY9   SSD    evacuated  0.00      -
+SH9.BAY10  SSD    healthy    18.30T    -
+SH9.BAY11  SSD    healthy    18.30T    -
+SH9.BAY12  SSD    healthy    18.30T    -
+SH9.BAY13  SSD    healthy    18.30T    -
+SH9.BAY14  SSD    healthy    18.30T    -
+SH9.BAY15  SSD    healthy    18.30T    -
+SH9.BAY16  SSD    healthy    18.30T    -
+SH9.BAY17  SSD    healthy    18.30T    -
+SH9.BAY18  SSD    healthy    18.30T    -
+SH9.BAY19  SSD    healthy    18.30T    -
+SH9.BAY20  SSD    healthy    18.30T    -
+SH9.BAY21  SSD    healthy    18.30T    -
+SH9.BAY22  SSD    healthy    18.30T    -
+SH9.BAY23  SSD    healthy    18.30T    -
+SH9.BAY24  SSD    healthy    18.30T    -
+SH9.BAY25  SSD    healthy    18.30T    -
+SH9.BAY26  SSD    healthy    18.30T    -
+SH9.BAY27  SSD    healthy    18.30T    -
+     root@Tele-Pure-01-ct0:/var/home/pureeng# puredrive list
+Name       Type   Status        Capacity  Details
+CH0.BAY0   SSD    evacuated     0.00      -
+CH0.BAY1   SSD    evacuated     0.00      -
+CH0.BAY2   SSD    evacuated     0.00      -
+CH0.BAY3   SSD    evacuated     0.00      -
+CH0.BAY4   SSD    evacuated     0.00      -
+CH0.BAY5   SSD    evacuated     0.00      -
+CH0.BAY6   SSD    evacuated     0.00      -
+CH0.BAY7   SSD    evacuated     0.00      -
+CH0.BAY8   SSD    evacuated     0.00      -
+CH0.BAY9   SSD    evacuated     0.00      -
+CH0.BAY10  SSD    evacuated     0.00      -
+CH0.BAY11  SSD    evacuated     0.00      -
+CH0.BAY12  SSD    evacuated     0.00      -
+CH0.BAY13  SSD    evacuated     0.00      -
+CH0.BAY14  SSD    evacuated     0.00      -
+CH0.BAY15  SSD    evacuated     0.00      -
+CH0.BAY16  SSD    evacuated     0.00      -
+CH0.BAY17  SSD    evacuated     0.00      -
+CH0.BAY18  SSD    evacuated     0.00      -
+CH0.BAY19  SSD    evacuated     0.00      -
+CH0.NVB0   NVRAM  healthy       7.52G     -
+CH0.NVB1   NVRAM  healthy       7.52G     -
+CH0.NVB2   NVRAM  healthy       7.52G     -
+CH0.NVB3   NVRAM  healthy       7.52G     -
+SH0.BAY0   SSD    unrecognized  0.00      -
+SH0.BAY1   SSD    unrecognized  0.00      -
+SH0.BAY2   SSD    unrecognized  0.00      -
+SH0.BAY3   SSD    unrecognized  0.00      -
+SH0.BAY4   SSD    unrecognized  0.00      -
+SH0.BAY5   SSD    unrecognized  0.00      -
+SH0.BAY6   SSD    unrecognized  0.00      -
+SH0.BAY7   SSD    unrecognized  0.00      -
+SH0.BAY8   SSD    unrecognized  0.00      -
+SH0.BAY9   SSD    unrecognized  0.00      -
+SH0.BAY10  SSD    unrecognized  0.00      -
+SH0.BAY11  SSD    unrecognized  0.00      -
+SH0.BAY12  SSD    unrecognized  0.00      -
+SH0.BAY13  SSD    unrecognized  0.00      -
+SH0.BAY14  SSD    unrecognized  0.00      -
+SH0.BAY15  SSD    unrecognized  0.00      -
+SH0.BAY16  SSD    unrecognized  0.00      -
+SH0.BAY17  SSD    unrecognized  0.00      -
+SH0.BAY18  SSD    unrecognized  0.00      -
+SH0.BAY19  SSD    unrecognized  0.00      -
+SH0.BAY20  SSD    unrecognized  0.00      -
+SH0.BAY21  SSD    unrecognized  0.00      -
+SH0.BAY22  SSD    unrecognized  0.00      -
+SH0.BAY23  SSD    unrecognized  0.00      -
+SH1.BAY0   SSD    unrecognized  0.00      -
+SH1.BAY1   SSD    unrecognized  0.00      -
+SH1.BAY2   SSD    unrecognized  0.00      -
+SH1.BAY3   SSD    unrecognized  0.00      -
+SH1.BAY4   SSD    unrecognized  0.00      -
+SH1.BAY5   SSD    unrecognized  0.00      -
+SH1.BAY6   SSD    unrecognized  0.00      -
+SH1.BAY7   SSD    unrecognized  0.00      -
+SH1.BAY8   SSD    unrecognized  0.00      -
+SH1.BAY9   SSD    unrecognized  0.00      -
+SH1.BAY10  SSD    unhealthy     0.00      -
+SH1.BAY11  SSD    unhealthy     0.00      -
+SH1.BAY12  SSD    unhealthy     0.00      -
+SH1.BAY13  SSD    unhealthy     0.00      -
+SH1.BAY14  SSD    unhealthy     0.00      -
+SH1.BAY15  SSD    unhealthy     0.00      -
+SH1.BAY16  SSD    unrecognized  0.00      -
+SH1.BAY17  SSD    unrecognized  0.00      -
+SH1.BAY18  SSD    unrecognized  0.00      -
+SH1.BAY19  SSD    unrecognized  0.00      -
+SH1.BAY20  SSD    unrecognized  0.00      -
+SH1.BAY21  SSD    unrecognized  0.00      -
+SH1.BAY22  SSD    unrecognized  0.00      -
+SH1.BAY23  SSD    unrecognized  0.00      -
+SH9.BAY0   SSD    evacuated     0.00      -
+SH9.BAY1   SSD    evacuated     0.00      -
+SH9.BAY2   SSD    evacuated     0.00      -
+SH9.BAY3   SSD    evacuated     0.00      -
+SH9.BAY4   SSD    evacuated     0.00      -
+SH9.BAY5   SSD    evacuated     0.00      -
+SH9.BAY6   SSD    evacuated     0.00      -
+SH9.BAY7   SSD    evacuated     0.00      -
+SH9.BAY8   SSD    evacuated     0.00      -
+SH9.BAY9   SSD    evacuated     0.00      -
+SH9.BAY10  SSD    healthy       18.30T    -
+SH9.BAY11  SSD    healthy       18.30T    -
+SH9.BAY12  SSD    healthy       18.30T    -
+SH9.BAY13  SSD    healthy       18.30T    -
+SH9.BAY14  SSD    healthy       18.30T    -
+SH9.BAY15  SSD    healthy       18.30T    -
+SH9.BAY16  SSD    healthy       18.30T    -
+SH9.BAY17  SSD    healthy       18.30T    -
+SH9.BAY18  SSD    healthy       18.30T    -
+SH9.BAY19  SSD    healthy       18.30T    -
+SH9.BAY20  SSD    healthy       18.30T    -
+SH9.BAY21  SSD    healthy       18.30T    -
+SH9.BAY22  SSD    healthy       18.30T    -
+SH9.BAY23  SSD    healthy       18.30T    -
+SH9.BAY24  SSD    healthy       18.30T    -
+SH9.BAY25  SSD    healthy       18.30T    -
+SH9.BAY26  SSD    healthy       18.30T    -
+SH9.BAY27  SSD    healthy       18.30T    -
+     root@Tele-Pure-01-ct0:/var/home/pureeng# purearray list --controller
+Name     Type              Mode       Model     Version  Status  Current Mode Since       Internal Details
+CT0      array_controller  secondary  FA-X70R3  6.7.4    ready   2025-09-02 07:24:31 EDT  
+CT1      array_controller  primary    FA-X70R3  6.7.4    ready   2025-09-02 07:16:10 EDT  
+SH9.SC0  shelf_controller  -          DFSC1     2.2.4    -       -                        -
+SH9.SC1  shelf_controller  -          DFSC1     2.2.4    -       -                        -
+     root@Tele-Pure-01-ct0:/var/home/pureeng# puredrive list
+Name       Type   Status     Capacity  Details
+CH0.BAY0   SSD    evacuated  0.00      -
+CH0.BAY1   SSD    evacuated  0.00      -
+CH0.BAY2   SSD    evacuated  0.00      -
+CH0.BAY3   SSD    evacuated  0.00      -
+CH0.BAY4   SSD    evacuated  0.00      -
+CH0.BAY5   SSD    evacuated  0.00      -
+CH0.BAY6   SSD    evacuated  0.00      -
+CH0.BAY7   SSD    evacuated  0.00      -
+CH0.BAY8   SSD    evacuated  0.00      -
+CH0.BAY9   SSD    evacuated  0.00      -
+CH0.BAY10  SSD    evacuated  0.00      -
+CH0.BAY11  SSD    evacuated  0.00      -
+CH0.BAY12  SSD    evacuated  0.00      -
+CH0.BAY13  SSD    evacuated  0.00      -
+CH0.BAY14  SSD    evacuated  0.00      -
+CH0.BAY15  SSD    evacuated  0.00      -
+CH0.BAY16  SSD    evacuated  0.00      -
+CH0.BAY17  SSD    evacuated  0.00      -
+CH0.BAY18  SSD    evacuated  0.00      -
+CH0.BAY19  SSD    evacuated  0.00      -
+CH0.NVB0   NVRAM  healthy    7.52G     -
+CH0.NVB1   NVRAM  healthy    7.52G     -
+CH0.NVB2   NVRAM  healthy    7.52G     -
+CH0.NVB3   NVRAM  healthy    7.52G     -
+SH9.BAY0   SSD    evacuated  0.00      -
+SH9.BAY1   SSD    evacuated  0.00      -
+SH9.BAY2   SSD    evacuated  0.00      -
+SH9.BAY3   SSD    evacuated  0.00      -
+SH9.BAY4   SSD    evacuated  0.00      -
+SH9.BAY5   SSD    evacuated  0.00      -
+SH9.BAY6   SSD    evacuated  0.00      -
+SH9.BAY7   SSD    evacuated  0.00      -
+SH9.BAY8   SSD    evacuated  0.00      -
+SH9.BAY9   SSD    evacuated  0.00      -
+SH9.BAY10  SSD    healthy    18.30T    -
+SH9.BAY11  SSD    healthy    18.30T    -
+SH9.BAY12  SSD    healthy    18.30T    -
+SH9.BAY13  SSD    healthy    18.30T    -
+SH9.BAY14  SSD    healthy    18.30T    -
+SH9.BAY15  SSD    healthy    18.30T    -
+SH9.BAY16  SSD    healthy    18.30T    -
+SH9.BAY17  SSD    healthy    18.30T    -
+SH9.BAY18  SSD    healthy    18.30T    -
+SH9.BAY19  SSD    healthy    18.30T    -
+SH9.BAY20  SSD    healthy    18.30T    -
+SH9.BAY21  SSD    healthy    18.30T    -
+SH9.BAY22  SSD    healthy    18.30T    -
+SH9.BAY23  SSD    healthy    18.30T    -
+SH9.BAY24  SSD    healthy    18.30T    -
+SH9.BAY25  SSD    healthy    18.30T    -
+SH9.BAY26  SSD    healthy    18.30T    -
+SH9.BAY27  SSD    healthy    18.30T    -
+     root@Tele-Pure-01-ct0:/var/home/pureeng# puredrive list
+Name       Type   Status     Capacity  Details
+CH0.BAY0   SSD    empty      0.00      -
+CH0.BAY1   SSD    evacuated  0.00      -
+CH0.BAY2   SSD    evacuated  0.00      -
+CH0.BAY3   SSD    evacuated  0.00      -
+CH0.BAY4   SSD    evacuated  0.00      -
+CH0.BAY5   SSD    evacuated  0.00      -
+CH0.BAY6   SSD    evacuated  0.00      -
+CH0.BAY7   SSD    evacuated  0.00      -
+CH0.BAY8   SSD    evacuated  0.00      -
+CH0.BAY9   SSD    evacuated  0.00      -
+CH0.BAY10  SSD    evacuated  0.00      -
+CH0.BAY11  SSD    evacuated  0.00      -
+CH0.BAY12  SSD    evacuated  0.00      -
+CH0.BAY13  SSD    evacuated  0.00      -
+CH0.BAY14  SSD    evacuated  0.00      -
+CH0.BAY15  SSD    evacuated  0.00      -
+CH0.BAY16  SSD    evacuated  0.00      -
+CH0.BAY17  SSD    evacuated  0.00      -
+CH0.BAY18  SSD    evacuated  0.00      -
+CH0.BAY19  SSD    evacuated  0.00      -
+CH0.NVB0   NVRAM  healthy    7.52G     -
+CH0.NVB1   NVRAM  healthy    7.52G     -
+CH0.NVB2   NVRAM  healthy    7.52G     -
+CH0.NVB3   NVRAM  healthy    7.52G     -
+SH9.BAY0   SSD    evacuated  0.00      -
+SH9.BAY1   SSD    evacuated  0.00      -
+SH9.BAY2   SSD    evacuated  0.00      -
+SH9.BAY3   SSD    evacuated  0.00      -
+SH9.BAY4   SSD    evacuated  0.00      -
+SH9.BAY5   SSD    evacuated  0.00      -
+SH9.BAY6   SSD    evacuated  0.00      -
+SH9.BAY7   SSD    evacuated  0.00      -
+SH9.BAY8   SSD    evacuated  0.00      -
+SH9.BAY9   SSD    evacuated  0.00      -
+SH9.BAY10  SSD    healthy    18.30T    -
+SH9.BAY11  SSD    healthy    18.30T    -
+SH9.BAY12  SSD    healthy    18.30T    -
+SH9.BAY13  SSD    healthy    18.30T    -
+SH9.BAY14  SSD    healthy    18.30T    -
+SH9.BAY15  SSD    healthy    18.30T    -
+SH9.BAY16  SSD    healthy    18.30T    -
+SH9.BAY17  SSD    healthy    18.30T    -
+SH9.BAY18  SSD    healthy    18.30T    -
+SH9.BAY19  SSD    healthy    18.30T    -
+SH9.BAY20  SSD    healthy    18.30T    -
+SH9.BAY21  SSD    healthy    18.30T    -
+SH9.BAY22  SSD    healthy    18.30T    -
+SH9.BAY23  SSD    healthy    18.30T    -
+SH9.BAY24  SSD    healthy    18.30T    -
+SH9.BAY25  SSD    healthy    18.30T    -
+SH9.BAY26  SSD    healthy    18.30T    -
+SH9.BAY27  SSD    healthy    18.30T    -
+     root@Tele-Pure-01-ct0:/var/home/pureeng# puredrive list
+Name       Type   Status     Capacity  Details
+CH0.BAY0   -      unused     0.00      -
+CH0.BAY1   -      unused     0.00      -
+CH0.BAY2   -      unused     0.00      -
+CH0.BAY3   -      unused     0.00      -
+CH0.BAY4   -      unused     0.00      -
+CH0.BAY5   -      unused     0.00      -
+CH0.BAY6   -      unused     0.00      -
+CH0.BAY7   -      unused     0.00      -
+CH0.BAY8   -      unused     0.00      -
+CH0.BAY9   -      unused     0.00      -
+CH0.BAY10  -      unused     0.00      -
+CH0.BAY11  -      unused     0.00      -
+CH0.BAY12  -      unused     0.00      -
+CH0.BAY13  -      unused     0.00      -
+CH0.BAY14  -      unused     0.00      -
+CH0.BAY15  -      unused     0.00      -
+CH0.BAY16  -      unused     0.00      -
+CH0.BAY17  -      unused     0.00      -
+CH0.BAY18  -      unused     0.00      -
+CH0.BAY19  -      unused     0.00      -
+CH0.NVB0   NVRAM  healthy    7.52G     -
+CH0.NVB1   NVRAM  healthy    7.52G     -
+CH0.NVB2   NVRAM  healthy    7.52G     -
+CH0.NVB3   NVRAM  healthy    7.52G     -
+SH9.BAY0   -      unused     0.00      -
+SH9.BAY1   SSD    evacuated  0.00      -
+SH9.BAY2   SSD    evacuated  0.00      -
+SH9.BAY3   SSD    evacuated  0.00      -
+SH9.BAY4   SSD    evacuated  0.00      -
+SH9.BAY5   SSD    evacuated  0.00      -
+SH9.BAY6   SSD    evacuated  0.00      -
+SH9.BAY7   SSD    evacuated  0.00      -
+SH9.BAY8   SSD    evacuated  0.00      -
+SH9.BAY9   SSD    evacuated  0.00      -
+SH9.BAY10  SSD    healthy    18.30T    -
+SH9.BAY11  SSD    healthy    18.30T    -
+SH9.BAY12  SSD    healthy    18.30T    -
+SH9.BAY13  SSD    healthy    18.30T    -
+SH9.BAY14  SSD    healthy    18.30T    -
+SH9.BAY15  SSD    healthy    18.30T    -
+SH9.BAY16  SSD    healthy    18.30T    -
+SH9.BAY17  SSD    healthy    18.30T    -
+SH9.BAY18  SSD    healthy    18.30T    -
+SH9.BAY19  SSD    healthy    18.30T    -
+SH9.BAY20  SSD    healthy    18.30T    -
+SH9.BAY21  SSD    healthy    18.30T    -
+SH9.BAY22  SSD    healthy    18.30T    -
+SH9.BAY23  SSD    healthy    18.30T    -
+SH9.BAY24  SSD    healthy    18.30T    -
+SH9.BAY25  SSD    healthy    18.30T    -
+SH9.BAY26  SSD    healthy    18.30T    -
+SH9.BAY27  SSD    healthy    18.30T    -
+     root@Tele-Pure-01-ct0:/var/home/pureeng# puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   -      unused   0.00      -
+CH0.BAY1   -      unused   0.00      -
+CH0.BAY2   -      unused   0.00      -
+CH0.BAY3   -      unused   0.00      -
+CH0.BAY4   -      unused   0.00      -
+CH0.BAY5   -      unused   0.00      -
+CH0.BAY6   -      unused   0.00      -
+CH0.BAY7   -      unused   0.00      -
+CH0.BAY8   -      unused   0.00      -
+CH0.BAY9   -      unused   0.00      -
+CH0.BAY10  -      unused   0.00      -
+CH0.BAY11  -      unused   0.00      -
+CH0.BAY12  -      unused   0.00      -
+CH0.BAY13  -      unused   0.00      -
+CH0.BAY14  -      unused   0.00      -
+CH0.BAY15  -      unused   0.00      -
+CH0.BAY16  -      unused   0.00      -
+CH0.BAY17  -      unused   0.00      -
+CH0.BAY18  -      unused   0.00      -
+CH0.BAY19  -      unused   0.00      -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  healthy  7.52G     -
+CH0.NVB3   NVRAM  healthy  7.52G     -
+SH9.BAY0   -      unused   0.00      -
+SH9.BAY1   -      unused   0.00      -
+SH9.BAY2   -      unused   0.00      -
+SH9.BAY3   -      unused   0.00      -
+SH9.BAY4   -      unused   0.00      -
+SH9.BAY5   -      unused   0.00      -
+SH9.BAY6   -      unused   0.00      -
+SH9.BAY7   -      unused   0.00      -
+SH9.BAY8   -      unused   0.00      -
+SH9.BAY9   -      unused   0.00      -
+SH9.BAY10  SSD    healthy  18.30T    -
+SH9.BAY11  SSD    healthy  18.30T    -
+SH9.BAY12  SSD    healthy  18.30T    -
+SH9.BAY13  SSD    healthy  18.30T    -
+SH9.BAY14  SSD    healthy  18.30T    -
+SH9.BAY15  SSD    healthy  18.30T    -
+SH9.BAY16  SSD    healthy  18.30T    -
+SH9.BAY17  SSD    healthy  18.30T    -
+SH9.BAY18  SSD    healthy  18.30T    -
+SH9.BAY19  SSD    healthy  18.30T    -
+SH9.BAY20  SSD    healthy  18.30T    -
+SH9.BAY21  SSD    healthy  18.30T    -
+SH9.BAY22  SSD    healthy  18.30T    -
+SH9.BAY23  SSD    healthy  18.30T    -
+SH9.BAY24  SSD    healthy  18.30T    -
+SH9.BAY25  SSD    healthy  18.30T    -
+SH9.BAY26  SSD    healthy  18.30T    -
+SH9.BAY27  SSD    healthy  18.30T    -
+     root@Tele-Pure-01-ct0:/var/home/pureeng# puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   -      unused   0.00      -
+CH0.BAY1   -      unused   0.00      -
+CH0.BAY2   -      unused   0.00      -
+CH0.BAY3   -      unused   0.00      -
+CH0.BAY4   -      unused   0.00      -
+CH0.BAY5   -      unused   0.00      -
+CH0.BAY6   -      unused   0.00      -
+CH0.BAY7   -      unused   0.00      -
+CH0.BAY8   -      unused   0.00      -
+CH0.BAY9   -      unused   0.00      -
+CH0.BAY10  -      unused   0.00      -
+CH0.BAY11  -      unused   0.00      -
+CH0.BAY12  -      unused   0.00      -
+CH0.BAY13  -      unused   0.00      -
+CH0.BAY14  -      unused   0.00      -
+CH0.BAY15  -      unused   0.00      -
+CH0.BAY16  -      unused   0.00      -
+CH0.BAY17  -      unused   0.00      -
+CH0.BAY18  -      unused   0.00      -
+CH0.BAY19  -      unused   0.00      -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  healthy  7.52G     -
+CH0.NVB3   NVRAM  healthy  7.52G     -
+SH9.BAY0   -      unused   0.00      -
+SH9.BAY1   -      unused   0.00      -
+SH9.BAY2   -      unused   0.00      -
+SH9.BAY3   -      unused   0.00      -
+SH9.BAY4   -      unused   0.00      -
+SH9.BAY5   -      unused   0.00      -
+SH9.BAY6   -      unused   0.00      -
+SH9.BAY7   -      unused   0.00      -
+SH9.BAY8   -      unused   0.00      -
+SH9.BAY9   -      unused   0.00      -
+SH9.BAY10  SSD    healthy  18.30T    -
+SH9.BAY11  SSD    healthy  18.30T    -
+SH9.BAY12  SSD    healthy  18.30T    -
+SH9.BAY13  SSD    healthy  18.30T    -
+SH9.BAY14  SSD    healthy  18.30T    -
+SH9.BAY15  SSD    healthy  18.30T    -
+SH9.BAY16  SSD    healthy  18.30T    -
+SH9.BAY17  SSD    healthy  18.30T    -
+SH9.BAY18  SSD    healthy  18.30T    -
+SH9.BAY19  SSD    healthy  18.30T    -
+SH9.BAY20  SSD    healthy  18.30T    -
+SH9.BAY21  SSD    healthy  18.30T    -
+SH9.BAY22  SSD    healthy  18.30T    -
+SH9.BAY23  SSD    healthy  18.30T    -
+SH9.BAY24  SSD    healthy  18.30T    -
+SH9.BAY25  SSD    healthy  18.30T    -
+SH9.BAY26  SSD    healthy  18.30T    -
+SH9.BAY27  SSD    healthy  18.30T    -
+     root@Tele-Pure-01-ct0:/var/home/pureeng# purearray list --cont-space
+Name          Capacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique   Snapshots  Shared  System  Replication  Total
+Tele-Pure-01  222.44T   100%    -                 386.68T  33%                2.8 to 1        4.1 to 1         112.26T  24.13T     34.02T  0.00    0.00         170.42T
+     root@Tele-Pure-01-ct0:/var/home/pureeng# puredb list droves
+usage: puredb list [-h] [--csv] [--pretty] [--notitle]
+                   {apartment_mappings,appcpus,au_count,contexts,cpuutil,foed_unhibernated_io_threads,failpoints,job,drives,failovers,nvrams,memory,mode,peer,persist_seq,readonly,reservation,reservedarea,type,schemas,segment_range,segment_extent,segment_format,segment,uptick,services,snap,objects,pgroup_objects,space,pod_space,fe_space,effective_used,ssd_mapped,tunable,uptime,watchdog,nvram_throttle,traffic_shaping,supported_drives,write_group_evenness,wide_segments,evac_segment_count,logbook,frontier_tracker_health,au_fullness,evacs,drive_params,primary_ac_compression_format,secondary_rdma_compression_format,pod_debt_throttle}
+                   ...
+puredb list: error: argument {apartment_mappings,appcpus,au_count,contexts,cpuutil,foed_unhibernated_io_threads,failpoints,job,drives,failovers,nvrams,memory,mode,peer,persist_seq,readonly,reservation,reservedarea,type,schemas,segment_range,segment_extent,segment_format,segment,uptick,services,snap,objects,pgroup_objects,space,pod_space,fe_space,effective_used,ssd_mapped,tunable,uptime,watchdog,nvram_throttle,traffic_shaping,supported_drives,write_group_evenness,wide_segments,evac_segment_count,logbook,frontier_tracker_health,au_fullness,evacs,drive_params,primary_ac_compression_format,secondary_rdma_compression_format,pod_debt_throttle}: invalid choice: 'droves' (choose from 'apartment_mappings', 'appcpus', 'au_count', 'contexts', 'cpuutil', 'foed_unhibernated_io_threads', 'failpoints', 'job', 'drives', 'failovers', 'nvrams', 'memory', 'mode', 'peer', 'persist_seq', 'readonly', 'reservation', 'reservedarea', 'type', 'schemas', 'segment_range', 'segment_extent', 'segment_format', 'segment', 'uptick', 'services', 'snap', 'objects', 'pgroup_objects', 'space', 'pod_space', 'fe_space', 'effective_used', 'ssd_mapped', 'tunable', 'uptime', 'watchdog', 'nvram_throttle', 'traffic_shaping', 'supported_drives', 'write_group_evenness', 'wide_segments', 'evac_segment_count', 'logbook', 'frontier_tracker_health', 'au_fullness', 'evacs', 'drive_params', 'primary_ac_compression_format', 'secondary_rdma_compression_format', 'pod_debt_throttle')
+     root@Tele-Pure-01-ct0:/var/home/pureeng# purebdb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    NVMe      healthy  18.30T    0.00          0.00      4437333415287213109:12450047589662432096   52/269         197814/277660
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      17387743596597626609:10072965070149068486  -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      16797490600721138908:10851329451595031745  -              -
+CH0.NVR2   0        NVRAM  NVMe      healthy  7.52G     -             0.00      11297966308680550270:12065902722792189490  -              -
+CH0.NVR3   0        NVRAM  NVMe      healthy  7.52G     -             0.00      18167919591809633989:12760584973166344680  -              -
+SH9.DRV11  1        SSD    NVMe      healthy  18.30T    0.00          0.00      10880255374292959342:11202314089994154311  61/269         197694/277572
+SH9.DRV12  1        SSD    NVMe      healthy  18.30T    0.00          0.00      3402522389123450938:13688446784943458726   68/269         198223/277837
+SH9.DRV13  1        SSD    NVMe      healthy  18.30T    0.00          0.00      3282210712793990049:10744477063643795420   70/269         197778/277701
+SH9.DRV14  1        SSD    NVMe      healthy  18.30T    0.00          0.00      16932455266470087018:13004050925816920761  60/269         197986/277614
+SH9.DRV15  1        SSD    NVMe      healthy  18.30T    0.00          0.00      16457967674219841835:11438755912498377953  87/269         197713/277569
+SH9.DRV16  1        SSD    NVMe      healthy  18.30T    0.00          0.00      11538459319957474892:11014667027535622787  65/269         197816/277481
+SH9.DRV17  1        SSD    NVMe      healthy  18.30T    0.00          0.00      6215824297033941868:11740846779296444670   57/269         198024/277796
+SH9.DRV18  1        SSD    NVMe      healthy  18.30T    174.88G       0.00      16205325030147244652:10470832426085861157  127/429        311928/416336
+SH9.DRV19  1        SSD    NVMe      healthy  18.30T    177.60G       0.00      12625659929019762645:13005700653166500789  124/429        312212/415786
+SH9.DRV20  1        SSD    NVMe      healthy  18.30T    176.77G       0.00      17758470257353506880:13489011579102749383  116/429        312302/416218
+SH9.DRV21  1        SSD    NVMe      healthy  18.30T    176.84G       0.00      8134911724750979493:9589409693257880212    112/429        312405/416065
+SH9.DRV22  1        SSD    NVMe      healthy  18.30T    178.28G       0.00      13395619499819944934:9724962726743527190   115/429        312231/416140
+SH9.DRV23  1        SSD    NVMe      healthy  18.30T    177.48G       0.00      4191304270683915911:12968513302391677982   125/429        312021/416083
+SH9.DRV24  1        SSD    NVMe      healthy  18.30T    175.89G       0.00      4085459881005039940:13510394570277007350   114/429        312079/415802
+SH9.DRV25  1        SSD    NVMe      healthy  18.30T    176.48G       0.00      4059324400360049985:10190605294472401793   119/429        311633/416151
+SH9.DRV26  1        SSD    NVMe      healthy  18.30T    178.74G       0.00      2639249590658813324:13118699238947082661   129/429        312115/416006
+SH9.DRV27  1        SSD    NVMe      healthy  18.30T    177.08G       0.00      15737583536224486523:11958139433408639323  112/429        312311/416275
+     root@Tele-Pure-01-ct0:/var/home/pureeng# puredrvive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    healthy  18.30T    -
+CH0.BAY1   -      unused   0.00      -
+CH0.BAY2   -      unused   0.00      -
+CH0.BAY3   -      unused   0.00      -
+CH0.BAY4   -      unused   0.00      -
+CH0.BAY5   -      unused   0.00      -
+CH0.BAY6   -      unused   0.00      -
+CH0.BAY7   -      unused   0.00      -
+CH0.BAY8   -      unused   0.00      -
+CH0.BAY9   -      unused   0.00      -
+CH0.BAY10  -      unused   0.00      -
+CH0.BAY11  -      unused   0.00      -
+CH0.BAY12  -      unused   0.00      -
+CH0.BAY13  -      unused   0.00      -
+CH0.BAY14  -      unused   0.00      -
+CH0.BAY15  -      unused   0.00      -
+CH0.BAY16  -      unused   0.00      -
+CH0.BAY17  -      unused   0.00      -
+CH0.BAY18  -      unused   0.00      -
+CH0.BAY19  -      unused   0.00      -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  healthy  7.52G     -
+CH0.NVB3   NVRAM  healthy  7.52G     -
+SH9.BAY0   -      unused   0.00      -
+SH9.BAY1   -      unused   0.00      -
+SH9.BAY2   -      unused   0.00      -
+SH9.BAY3   -      unused   0.00      -
+SH9.BAY4   -      unused   0.00      -
+SH9.BAY5   -      unused   0.00      -
+SH9.BAY6   -      unused   0.00      -
+SH9.BAY7   -      unused   0.00      -
+SH9.BAY8   -      unused   0.00      -
+SH9.BAY9   -      unused   0.00      -
+SH9.BAY10  -      unused   0.00      -
+SH9.BAY11  SSD    healthy  18.30T    -
+SH9.BAY12  SSD    healthy  18.30T    -
+SH9.BAY13  SSD    healthy  18.30T    -
+SH9.BAY14  SSD    healthy  18.30T    -
+SH9.BAY15  SSD    healthy  18.30T    -
+SH9.BAY16  SSD    healthy  18.30T    -
+SH9.BAY17  SSD    healthy  18.30T    -
+SH9.BAY18  SSD    healthy  18.30T    -
+SH9.BAY19  SSD    healthy  18.30T    -
+SH9.BAY20  SSD    healthy  18.30T    -
+SH9.BAY21  SSD    healthy  18.30T    -
+SH9.BAY22  SSD    healthy  18.30T    -
+SH9.BAY23  SSD    healthy  18.30T    -
+SH9.BAY24  SSD    healthy  18.30T    -
+SH9.BAY25  SSD    healthy  18.30T    -
+SH9.BAY26  SSD    healthy  18.30T    -
+SH9.BAY27  SSD    healthy  18.30T    -
+     root@Tele-Pure-01-ct0:/var/home/pureeng# watch purearray list --space
+Every 2.0s: purearray list --space    Tele-Pure-01-ct0: Thu Sep 11 10:52:15 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique   Snapshots  Shared  System  ReplicationTotalTele-Pure-01  222.44T   62%     -386.68T  33%2.8 to 14.1 to 1112.26T  24.13T     34.02T  0.00    0.00170.42T821363183136941469514693:02479124     root@Tele-Pure-01-ct0:/var/home/pureeng# watch purearray list --spacepuredrive listb list drivesovesarray list --space
+Name          Capacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique   Snapshots  Shared  System  Replication  Total
+Tele-Pure-01  222.44T   31%     -                 386.68T  33%                2.8 to 1        4.1 to 1         112.26T  24.13T     34.02T  0.00    0.00         170.42T
+     root@Tele-Pure-01-ct0:/var/home/pureeng# puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    healthy  18.30T    -
+CH0.BAY1   SSD    healthy  18.30T    -
+CH0.BAY2   -      unused   0.00      -
+CH0.BAY3   -      unused   0.00      -
+CH0.BAY4   -      unused   0.00      -
+CH0.BAY5   -      unused   0.00      -
+CH0.BAY6   -      unused   0.00      -
+CH0.BAY7   -      unused   0.00      -
+CH0.BAY8   -      unused   0.00      -
+CH0.BAY9   -      unused   0.00      -
+CH0.BAY10  -      unused   0.00      -
+CH0.BAY11  -      unused   0.00      -
+CH0.BAY12  -      unused   0.00      -
+CH0.BAY13  -      unused   0.00      -
+CH0.BAY14  -      unused   0.00      -
+CH0.BAY15  -      unused   0.00      -
+CH0.BAY16  -      unused   0.00      -
+CH0.BAY17  -      unused   0.00      -
+CH0.BAY18  -      unused   0.00      -
+CH0.BAY19  -      unused   0.00      -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  healthy  7.52G     -
+CH0.NVB3   NVRAM  healthy  7.52G     -
+SH9.BAY0   -      unused   0.00      -
+SH9.BAY1   -      unused   0.00      -
+SH9.BAY2   -      unused   0.00      -
+SH9.BAY3   -      unused   0.00      -
+SH9.BAY4   -      unused   0.00      -
+SH9.BAY5   -      unused   0.00      -
+SH9.BAY6   -      unused   0.00      -
+SH9.BAY7   -      unused   0.00      -
+SH9.BAY8   -      unused   0.00      -
+SH9.BAY9   -      unused   0.00      -
+SH9.BAY10  -      unused   0.00      -
+SH9.BAY11  -      unused   0.00      -
+SH9.BAY12  SSD    healthy  18.30T    -
+SH9.BAY13  SSD    healthy  18.30T    -
+SH9.BAY14  SSD    healthy  18.30T    -
+SH9.BAY15  SSD    healthy  18.30T    -
+SH9.BAY16  SSD    healthy  18.30T    -
+SH9.BAY17  SSD    healthy  18.30T    -
+SH9.BAY18  SSD    healthy  18.30T    -
+SH9.BAY19  SSD    healthy  18.30T    -
+SH9.BAY20  SSD    healthy  18.30T    -
+SH9.BAY21  SSD    healthy  18.30T    -
+SH9.BAY22  SSD    healthy  18.30T    -
+SH9.BAY23  SSD    healthy  18.30T    -
+SH9.BAY24  SSD    healthy  18.30T    -
+SH9.BAY25  SSD    healthy  18.30T    -
+SH9.BAY26  SSD    healthy  18.30T    -
+SH9.BAY27  SSD    healthy  18.30T    -
+     root@Tele-Pure-01-ct0:/var/home/pureeng# puredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    NVMe      healthy  18.30T    0.00          8.33T     4437333415287213109:12450047589662432096   52/269         197942/277660
+CH0.DRV1   1        SSD    NVMe      healthy  18.30T    0.00          9.38T     10880255374292959342:11202314089994154311  57/269         197549/277572
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      17387743596597626609:10072965070149068486  -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      16797490600721138908:10851329451595031745  -              -
+CH0.NVR2   0        NVRAM  NVMe      healthy  7.52G     -             0.00      11297966308680550270:12065902722792189490  -              -
+CH0.NVR3   0        NVRAM  NVMe      healthy  7.52G     -             0.00      18167919591809633989:12760584973166344680  -              -
+SH9.DRV12  1        SSD    NVMe      healthy  18.30T    0.00          8.34T     3402522389123450938:13688446784943458726   69/269         198307/277837
+SH9.DRV13  1        SSD    NVMe      healthy  18.30T    0.00          8.33T     3282210712793990049:10744477063643795420   71/269         197868/277701
+SH9.DRV14  1        SSD    NVMe      healthy  18.30T    0.00          8.33T     16932455266470087018:13004050925816920761  60/269         198084/277614
+SH9.DRV15  1        SSD    NVMe      healthy  18.30T    0.00          8.32T     16457967674219841835:11438755912498377953  87/269         197807/277569
+SH9.DRV16  1        SSD    NVMe      healthy  18.30T    0.00          8.33T     11538459319957474892:11014667027535622787  66/269         197908/277481
+SH9.DRV17  1        SSD    NVMe      healthy  18.30T    0.00          8.32T     6215824297033941868:11740846779296444670   56/269         198130/277796
+SH9.DRV18  1        SSD    NVMe      healthy  18.30T    174.88G       10.48T    16205325030147244652:10470832426085861157  128/429        312103/416336
+SH9.DRV19  1        SSD    NVMe      healthy  18.30T    177.60G       10.48T    12625659929019762645:13005700653166500789  125/429        312404/415786
+SH9.DRV20  1        SSD    NVMe      healthy  18.30T    176.80G       10.50T    17758470257353506880:13489011579102749383  116/429        312498/416218
+SH9.DRV21  1        SSD    NVMe      healthy  18.30T    176.84G       10.49T    8134911724750979493:9589409693257880212    112/429        312591/416065
+SH9.DRV22  1        SSD    NVMe      healthy  18.30T    178.28G       10.48T    13395619499819944934:9724962726743527190   118/429        312413/416140
+SH9.DRV23  1        SSD    NVMe      healthy  18.30T    177.52G       10.49T    4191304270683915911:12968513302391677982   128/429        312206/416083
+SH9.DRV24  1        SSD    NVMe      healthy  18.30T    175.89G       10.49T    4085459881005039940:13510394570277007350   117/429        312254/415802
+SH9.DRV25  1        SSD    NVMe      healthy  18.30T    176.51G       10.47T    4059324400360049985:10190605294472401793   123/429        311839/416151
+SH9.DRV26  1        SSD    NVMe      healthy  18.30T    178.78G       10.47T    2639249590658813324:13118699238947082661   133/429        312315/416006
+SH9.DRV27  1        SSD    NVMe      healthy  18.30T    177.08G       10.50T    15737583536224486523:11958139433408639323  115/429        312485/416275
+     root@Tele-Pure-01-ct0:/var/home/pureeng# puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    healthy  18.30T    -
+CH0.BAY1   SSD    healthy  18.30T    -
+CH0.BAY2   -      unused   0.00      -
+CH0.BAY3   -      unused   0.00      -
+CH0.BAY4   -      unused   0.00      -
+CH0.BAY5   -      unused   0.00      -
+CH0.BAY6   -      unused   0.00      -
+CH0.BAY7   -      unused   0.00      -
+CH0.BAY8   -      unused   0.00      -
+CH0.BAY9   -      unused   0.00      -
+CH0.BAY10  -      unused   0.00      -
+CH0.BAY11  -      unused   0.00      -
+CH0.BAY12  -      unused   0.00      -
+CH0.BAY13  -      unused   0.00      -
+CH0.BAY14  -      unused   0.00      -
+CH0.BAY15  -      unused   0.00      -
+CH0.BAY16  -      unused   0.00      -
+CH0.BAY17  -      unused   0.00      -
+CH0.BAY18  -      unused   0.00      -
+CH0.BAY19  -      unused   0.00      -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  healthy  7.52G     -
+CH0.NVB3   NVRAM  healthy  7.52G     -
+SH9.BAY0   -      unused   0.00      -
+SH9.BAY1   -      unused   0.00      -
+SH9.BAY2   -      unused   0.00      -
+SH9.BAY3   -      unused   0.00      -
+SH9.BAY4   -      unused   0.00      -
+SH9.BAY5   -      unused   0.00      -
+SH9.BAY6   -      unused   0.00      -
+SH9.BAY7   -      unused   0.00      -
+SH9.BAY8   -      unused   0.00      -
+SH9.BAY9   -      unused   0.00      -
+SH9.BAY10  -      unused   0.00      -
+SH9.BAY11  -      unused   0.00      -
+SH9.BAY12  SSD    healthy  18.30T    -
+SH9.BAY13  SSD    healthy  18.30T    -
+SH9.BAY14  SSD    healthy  18.30T    -
+SH9.BAY15  SSD    healthy  18.30T    -
+SH9.BAY16  SSD    healthy  18.30T    -
+SH9.BAY17  SSD    healthy  18.30T    -
+SH9.BAY18  SSD    healthy  18.30T    -
+SH9.BAY19  SSD    healthy  18.30T    -
+SH9.BAY20  SSD    healthy  18.30T    -
+SH9.BAY21  SSD    healthy  18.30T    -
+SH9.BAY22  SSD    healthy  18.30T    -
+SH9.BAY23  SSD    healthy  18.30T    -
+SH9.BAY24  SSD    healthy  18.30T    -
+SH9.BAY25  SSD    healthy  18.30T    -
+SH9.BAY26  SSD    healthy  18.30T    -
+SH9.BAY27  SSD    healthy  18.30T    -
+     root@Tele-Pure-01-ct0:/var/home/pureeng# puredrive listb list drivesrive listarray list --space
+Name          Capacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique   Snapshots  Shared  System  Replication  Total
+Tele-Pure-01  222.44T   76%     -                 386.68T  33%                2.8 to 1        4.1 to 1         112.26T  24.13T     34.02T  0.00    0.00         170.42T
+     root@Tele-Pure-01-ct0:/var/home/pureeng# purearray list --spacedrive listb list drivesrive listarray list --spacewatch 
+Every 2.0s: purearray list --space    Tele-Pure-01-ct0: Thu Sep 11 10:54:08 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique   Snapshots  Shared  System  ReplicationTotalTele-Pure-01  222.44T   76%     -386.68T  33%2.8 to 14.1 to 1112.26T  24.13T     34.02T  0.00    0.00170.42T103682136100%83136941469514695:02479124     root@Tele-Pure-01-ct0:/var/home/pureeng# puredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    NVMe      healthy  18.30T    0.00          0.00      4437333415287213109:12450047589662432096   52/269         197930/277660
+CH0.DRV1   1        SSD    NVMe      healthy  18.30T    0.00          0.00      10880255374292959342:11202314089994154311  58/269         197496/277572
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      17387743596597626609:10072965070149068486  -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      16797490600721138908:10851329451595031745  -              -
+CH0.NVR2   0        NVRAM  NVMe      healthy  7.52G     -             0.00      11297966308680550270:12065902722792189490  -              -
+CH0.NVR3   0        NVRAM  NVMe      healthy  7.52G     -             0.00      18167919591809633989:12760584973166344680  -              -
+SH9.DRV12  1        SSD    NVMe      healthy  18.30T    0.00          0.00      3402522389123450938:13688446784943458726   69/269         198273/277837
+SH9.DRV13  1        SSD    NVMe      healthy  18.30T    0.00          0.00      3282210712793990049:10744477063643795420   73/269         197824/277701
+SH9.DRV14  1        SSD    NVMe      healthy  18.30T    0.00          0.00      16932455266470087018:13004050925816920761  60/269         198034/277614
+SH9.DRV15  1        SSD    NVMe      healthy  18.30T    0.00          0.00      16457967674219841835:11438755912498377953  89/269         197759/277569
+SH9.DRV16  1        SSD    NVMe      healthy  18.30T    0.00          0.00      11538459319957474892:11014667027535622787  68/269         197858/277481
+SH9.DRV17  1        SSD    NVMe      healthy  18.30T    0.00          0.00      6215824297033941868:11740846779296444670   58/269         198082/277796
+SH9.DRV18  1        SSD    NVMe      healthy  18.30T    174.88G       0.00      16205325030147244652:10470832426085861157  128/429        312042/416336
+SH9.DRV19  1        SSD    NVMe      healthy  18.30T    177.60G       0.00      12625659929019762645:13005700653166500789  129/429        312340/415786
+SH9.DRV20  1        SSD    NVMe      healthy  18.30T    176.80G       0.00      17758470257353506880:13489011579102749383  116/429        312413/416218
+SH9.DRV21  1        SSD    NVMe      healthy  18.30T    176.84G       0.00      8134911724750979493:9589409693257880212    112/429        312542/416065
+SH9.DRV22  1        SSD    NVMe      healthy  18.30T    178.28G       0.00      13395619499819944934:9724962726743527190   118/429        312347/416140
+SH9.DRV23  1        SSD    NVMe      healthy  18.30T    177.52G       0.00      4191304270683915911:12968513302391677982   128/429        312127/416083
+SH9.DRV24  1        SSD    NVMe      healthy  18.30T    175.89G       0.00      4085459881005039940:13510394570277007350   117/429        312186/415802
+SH9.DRV25  1        SSD    NVMe      healthy  18.30T    176.51G       0.00      4059324400360049985:10190605294472401793   123/429        311769/416151
+SH9.DRV26  1        SSD    NVMe      healthy  18.30T    178.78G       0.00      2639249590658813324:13118699238947082661   137/429        312234/416006
+SH9.DRV27  1        SSD    NVMe      healthy  18.30T    177.08G       0.00      15737583536224486523:11958139433408639323  115/429        312409/416275
+     root@Tele-Pure-01-ct0:/var/home/pureeng# puredb list driveswatch purearray list --space
+Every 2.0s: purearray list --space    Tele-Pure-01-ct0: Thu Sep 11 10:55:33 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique   Snapshots  Shared  System  ReplicationTotalTele-Pure-01  222.44T   100%    -386.68T  33%2.8 to 14.1 to 1112.26T  24.13T     34.02T  0.00    0.00170.42T5840358503630% 86:01368113692141693147942479525277:002571025820355783036841368514100%1698:014     root@Tele-Pure-01-ct0:/var/home/pureeng# watch purearray list --spacepuredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    NVMe      healthy  18.30T    0.00          0.00      4437333415287213109:12450047589662432096   53/269         198070/277660
+CH0.DRV1   1        SSD    NVMe      healthy  18.30T    0.00          0.00      10880255374292959342:11202314089994154311  58/269         197628/277572
+CH0.DRV2   1        SSD    NVMe      healthy  18.30T    0.00          0.00      3402522389123450938:13688446784943458726   68/269         198132/277837
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      17387743596597626609:10072965070149068486  -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      16797490600721138908:10851329451595031745  -              -
+CH0.NVR2   0        NVRAM  NVMe      healthy  7.52G     -             0.00      11297966308680550270:12065902722792189490  -              -
+CH0.NVR3   0        NVRAM  NVMe      healthy  7.52G     -             0.00      18167919591809633989:12760584973166344680  -              -
+SH9.DRV13  1        SSD    NVMe      healthy  18.30T    0.00          0.00      3282210712793990049:10744477063643795420   72/269         197928/277701
+SH9.DRV14  1        SSD    NVMe      healthy  18.30T    0.00          0.00      16932455266470087018:13004050925816920761  60/269         198154/277614
+SH9.DRV15  1        SSD    NVMe      healthy  18.30T    0.00          0.00      16457967674219841835:11438755912498377953  88/269         197861/277569
+SH9.DRV16  1        SSD    NVMe      healthy  18.30T    0.00          0.00      11538459319957474892:11014667027535622787  68/269         197959/277481
+SH9.DRV17  1        SSD    NVMe      healthy  18.30T    0.00          0.00      6215824297033941868:11740846779296444670   58/269         198176/277796
+SH9.DRV18  1        SSD    NVMe      healthy  18.30T    177.92G       0.00      16205325030147244652:10470832426085861157  128/429        312252/416336
+SH9.DRV19  1        SSD    NVMe      healthy  18.30T    180.64G       0.00      12625659929019762645:13005700653166500789  128/429        312546/415786
+SH9.DRV20  1        SSD    NVMe      healthy  18.30T    179.63G       0.00      17758470257353506880:13489011579102749383  116/429        312648/416218
+SH9.DRV21  1        SSD    NVMe      healthy  18.30T    179.98G       0.00      8134911724750979493:9589409693257880212    112/429        312756/416065
+SH9.DRV22  1        SSD    NVMe      healthy  18.30T    181.39G       0.00      13395619499819944934:9724962726743527190   119/429        312554/416140
+SH9.DRV23  1        SSD    NVMe      healthy  18.30T    180.60G       0.00      4191304270683915911:12968513302391677982   128/429        312327/416083
+SH9.DRV24  1        SSD    NVMe      healthy  18.30T    178.75G       0.00      4085459881005039940:13510394570277007350   117/429        312360/415802
+SH9.DRV25  1        SSD    NVMe      healthy  18.30T    179.79G       0.00      4059324400360049985:10190605294472401793   124/429        311981/416151
+SH9.DRV26  1        SSD    NVMe      healthy  18.30T    181.64G       0.00      2639249590658813324:13118699238947082661   137/429        312431/416006
+SH9.DRV27  1        SSD    NVMe      healthy  18.30T    180.21G       0.00      15737583536224486523:11958139433408639323  115/429        312625/416275
+     root@Tele-Pure-01-ct0:/var/home/pureeng# puredb list driveswatch purearray list --space
+Every 2.0s: purearray list --space    Tele-Pure-01-ct0: Thu Sep 11 10:58:12 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique   Snapshots  Shared  System  ReplicationTotalTele-Pure-01  222.44T   100%    -386.68T  33%2.8 to 14.1 to 1112.26T  24.13T     34.02T  0.00    0.00170.41T47922563% 7302574035850353189:003681136821469314694147952446791:00:02571025820359883035841368514100%691:0147912479     root@Tele-Pure-01-ct0:/var/home/pureeng# watch purearray list --spacepuredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    NVMe      healthy  18.30T    0.00          0.00      4437333415287213109:12450047589662432096   57/269         198250/277660
+CH0.DRV1   1        SSD    NVMe      healthy  18.30T    0.00          0.00      10880255374292959342:11202314089994154311  58/269         197818/277572
+CH0.DRV2   1        SSD    NVMe      healthy  18.30T    0.00          0.00      3402522389123450938:13688446784943458726   74/269         198314/277837
+CH0.DRV3   1        SSD    NVMe      healthy  18.30T    0.00          0.00      3282210712793990049:10744477063643795420   68/269         197804/277701
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      17387743596597626609:10072965070149068486  -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      16797490600721138908:10851329451595031745  -              -
+CH0.NVR2   0        NVRAM  NVMe      healthy  7.52G     -             0.00      11297966308680550270:12065902722792189490  -              -
+CH0.NVR3   0        NVRAM  NVMe      healthy  7.52G     -             0.00      18167919591809633989:12760584973166344680  -              -
+SH9.DRV14  1        SSD    NVMe      healthy  18.30T    0.00          0.00      16932455266470087018:13004050925816920761  60/269         198324/277614
+SH9.DRV15  1        SSD    NVMe      healthy  18.30T    0.00          0.00      16457967674219841835:11438755912498377953  89/269         198027/277569
+SH9.DRV16  1        SSD    NVMe      healthy  18.30T    0.00          0.00      11538459319957474892:11014667027535622787  69/269         198135/277481
+SH9.DRV17  1        SSD    NVMe      healthy  18.30T    0.00          0.00      6215824297033941868:11740846779296444670   58/269         198326/277796
+SH9.DRV18  1        SSD    NVMe      healthy  18.30T    177.92G       0.00      16205325030147244652:10470832426085861157  135/429        312584/416336
+SH9.DRV19  1        SSD    NVMe      healthy  18.30T    180.64G       0.00      12625659929019762645:13005700653166500789  132/429        312859/415786
+SH9.DRV20  1        SSD    NVMe      healthy  18.30T    179.63G       0.00      17758470257353506880:13489011579102749383  120/429        312965/416218
+SH9.DRV21  1        SSD    NVMe      healthy  18.30T    179.98G       0.00      8134911724750979493:9589409693257880212    112/429        313060/416065
+SH9.DRV22  1        SSD    NVMe      healthy  18.30T    181.39G       0.00      13395619499819944934:9724962726743527190   130/429        312864/416140
+SH9.DRV23  1        SSD    NVMe      healthy  18.30T    180.60G       0.00      4191304270683915911:12968513302391677982   129/429        312607/416083
+SH9.DRV24  1        SSD    NVMe      healthy  18.30T    178.75G       0.00      4085459881005039940:13510394570277007350   117/429        312668/415802
+SH9.DRV25  1        SSD    NVMe      healthy  18.30T    179.79G       0.00      4059324400360049985:10190605294472401793   127/429        312288/416151
+SH9.DRV26  1        SSD    NVMe      healthy  18.30T    181.64G       0.00      2639249590658813324:13118699238947082661   140/429        312758/416006
+SH9.DRV27  1        SSD    NVMe      healthy  18.30T    180.21G       0.00      15737583536224486523:11958139433408639323  116/429        312965/416275
+     root@Tele-Pure-01-ct0:/var/home/pureeng# puredb list driveswatch purearray list --space
+Every 2.0s: purearray list --space    Tele-Pure-01-ct0: Thu Sep 11 11:01:25 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique   Snapshots  Shared  System  ReplicationTotalTele-Pure-01  222.44T   100%    -386.68T  33%2.8 to 14.1 to 1112.26T  24.13T     34.02T  0.00    0.00170.41T8303684136851430% 692:0146912479224173025740358503583:013681136821472693247942475025100%74:002581035820     root@Tele-Pure-01-ct0:/var/home/pureeng# watch purearray list --spacepuredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    NVMe      healthy  18.30T    0.00          0.00      4437333415287213109:12450047589662432096   57/269         198312/277660
+CH0.DRV1   1        SSD    NVMe      healthy  18.30T    0.00          0.00      10880255374292959342:11202314089994154311  58/269         197892/277572
+CH0.DRV2   1        SSD    NVMe      healthy  18.30T    0.00          0.00      3402522389123450938:13688446784943458726   74/269         198386/277837
+CH0.DRV3   1        SSD    NVMe      healthy  18.30T    0.00          0.00      3282210712793990049:10744477063643795420   68/269         197866/277701
+CH0.DRV4   1        SSD    NVMe      healthy  18.30T    0.00          0.00      16932455266470087018:13004050925816920761  58/269         198082/277614
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      17387743596597626609:10072965070149068486  -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      16797490600721138908:10851329451595031745  -              -
+CH0.NVR2   0        NVRAM  NVMe      healthy  7.52G     -             0.00      11297966308680550270:12065902722792189490  -              -
+CH0.NVR3   0        NVRAM  NVMe      healthy  7.52G     -             0.00      18167919591809633989:12760584973166344680  -              -
+SH9.DRV15  1        SSD    NVMe      healthy  18.30T    0.00          0.00      16457967674219841835:11438755912498377953  89/269         198071/277569
+SH9.DRV16  1        SSD    NVMe      healthy  18.30T    0.00          0.00      11538459319957474892:11014667027535622787  69/269         198189/277481
+SH9.DRV17  1        SSD    NVMe      healthy  18.30T    0.00          0.00      6215824297033941868:11740846779296444670   58/269         198382/277796
+SH9.DRV18  1        SSD    NVMe      healthy  18.30T    179.94G       0.00      16205325030147244652:10470832426085861157  135/429        312699/416336
+SH9.DRV19  1        SSD    NVMe      healthy  18.30T    185.28G       0.00      12625659929019762645:13005700653166500789  132/429        312936/415786
+SH9.DRV20  1        SSD    NVMe      healthy  18.30T    183.92G       0.00      17758470257353506880:13489011579102749383  120/429        313079/416218
+SH9.DRV21  1        SSD    NVMe      healthy  18.30T    181.85G       0.00      8134911724750979493:9589409693257880212    112/429        313145/416065
+SH9.DRV22  1        SSD    NVMe      healthy  18.30T    183.22G       0.00      13395619499819944934:9724962726743527190   130/429        312956/416140
+SH9.DRV23  1        SSD    NVMe      healthy  18.30T    184.64G       0.00      4191304270683915911:12968513302391677982   129/429        312748/416083
+SH9.DRV24  1        SSD    NVMe      healthy  18.30T    182.85G       0.00      4085459881005039940:13510394570277007350   117/429        312777/415802
+SH9.DRV25  1        SSD    NVMe      healthy  18.30T    181.59G       0.00      4059324400360049985:10190605294472401793   127/429        312391/416151
+SH9.DRV26  1        SSD    NVMe      healthy  18.30T    185.92G       0.00      2639249590658813324:13118699238947082661   140/429        312896/416006
+SH9.DRV27  1        SSD    NVMe      healthy  18.30T    184.71G       0.00      15737583536224486523:11958139433408639323  116/429        313075/416275
+     root@Tele-Pure-01-ct0:/var/home/pureeng# puredb list driveswatch purearray list --space
+Every 2.0s: purearray list --space    Tele-Pure-01-ct0: Thu Sep 11 11:04:28 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique   Snapshots  Shared  System  ReplicationTotalTele-Pure-01  222.44T   100%    -386.68T  33%2.8 to 14.1 to 1112.26T  24.13T     34.02T  0.00    0.00170.41T313684136951430% 695:024791257202518303     root@Tele-Pure-01-ct0:/var/home/pureeng# watch purearray list --spacepuredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    NVMe      healthy  18.30T    0.00          11.06T    4437333415287213109:12450047589662432096   56/269         198226/277660
+CH0.DRV1   1        SSD    NVMe      healthy  18.30T    0.00          11.04T    10880255374292959342:11202314089994154311  61/269         197814/277572
+CH0.DRV2   1        SSD    NVMe      healthy  18.30T    0.00          11.07T    3402522389123450938:13688446784943458726   74/269         198290/277837
+CH0.DRV3   1        SSD    NVMe      healthy  18.30T    0.00          11.04T    3282210712793990049:10744477063643795420   68/269         197841/277701
+CH0.DRV4   1        SSD    NVMe      healthy  18.30T    0.00          11.05T    16932455266470087018:13004050925816920761  63/269         197982/277614
+CH0.DRV5   1        SSD    NVMe      healthy  18.30T    0.00          12.45T    16457967674219841835:11438755912498377953  85/269         197782/277569
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      17387743596597626609:10072965070149068486  -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      16797490600721138908:10851329451595031745  -              -
+CH0.NVR2   0        NVRAM  NVMe      healthy  7.52G     -             0.00      11297966308680550270:12065902722792189490  -              -
+CH0.NVR3   0        NVRAM  NVMe      healthy  7.52G     -             0.00      18167919591809633989:12760584973166344680  -              -
+SH9.DRV16  1        SSD    NVMe      healthy  18.30T    0.00          11.05T    11538459319957474892:11014667027535622787  68/269         198108/277481
+SH9.DRV17  1        SSD    NVMe      healthy  18.30T    0.00          11.07T    6215824297033941868:11740846779296444670   60/269         198280/277796
+SH9.DRV18  1        SSD    NVMe      healthy  18.30T    179.94G       13.91T    16205325030147244652:10470832426085861157  135/429        312566/416336
+SH9.DRV19  1        SSD    NVMe      healthy  18.30T    185.28G       13.92T    12625659929019762645:13005700653166500789  132/429        312810/415786
+SH9.DRV20  1        SSD    NVMe      healthy  18.30T    183.92G       13.93T    17758470257353506880:13489011579102749383  119/429        312935/416218
+SH9.DRV21  1        SSD    NVMe      healthy  18.30T    181.85G       13.93T    8134911724750979493:9589409693257880212    117/429        312995/416065
+SH9.DRV22  1        SSD    NVMe      healthy  18.30T    183.22G       13.92T    13395619499819944934:9724962726743527190   130/429        312809/416140
+SH9.DRV23  1        SSD    NVMe      healthy  18.30T    184.64G       13.92T    4191304270683915911:12968513302391677982   128/429        312603/416083
+SH9.DRV24  1        SSD    NVMe      healthy  18.30T    182.85G       13.92T    4085459881005039940:13510394570277007350   126/429        312637/415802
+SH9.DRV25  1        SSD    NVMe      healthy  18.30T    181.59G       13.90T    4059324400360049985:10190605294472401793   132/429        312261/416151
+SH9.DRV26  1        SSD    NVMe      healthy  18.30T    185.92G       13.92T    2639249590658813324:13118699238947082661   141/429        312755/416006
+SH9.DRV27  1        SSD    NVMe      healthy  18.30T    184.71G       13.93T    15737583536224486523:11958139433408639323  119/429        312940/416275
+     root@Tele-Pure-01-ct0:/var/home/pureeng# puredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    NVMe      healthy  18.30T    0.00          11.05T    4437333415287213109:12450047589662432096   56/269         198224/277660
+CH0.DRV1   1        SSD    NVMe      healthy  18.30T    0.00          11.02T    10880255374292959342:11202314089994154311  61/269         197812/277572
+CH0.DRV2   1        SSD    NVMe      healthy  18.30T    0.00          11.05T    3402522389123450938:13688446784943458726   74/269         198292/277837
+CH0.DRV3   1        SSD    NVMe      healthy  18.30T    0.00          11.03T    3282210712793990049:10744477063643795420   68/269         197837/277701
+CH0.DRV4   1        SSD    NVMe      healthy  18.30T    0.00          11.04T    16932455266470087018:13004050925816920761  63/269         198000/277614
+CH0.DRV5   1        SSD    NVMe      healthy  18.30T    0.00          12.43T    16457967674219841835:11438755912498377953  85/269         197766/277569
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      17387743596597626609:10072965070149068486  -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      16797490600721138908:10851329451595031745  -              -
+CH0.NVR2   0        NVRAM  NVMe      healthy  7.52G     -             0.00      11297966308680550270:12065902722792189490  -              -
+CH0.NVR3   0        NVRAM  NVMe      healthy  7.52G     -             0.00      18167919591809633989:12760584973166344680  -              -
+SH9.DRV16  1        SSD    NVMe      healthy  18.30T    0.00          11.04T    11538459319957474892:11014667027535622787  68/269         198108/277481
+SH9.DRV17  1        SSD    NVMe      healthy  18.30T    0.00          11.06T    6215824297033941868:11740846779296444670   60/269         198274/277796
+SH9.DRV18  1        SSD    NVMe      healthy  18.30T    179.94G       13.90T    16205325030147244652:10470832426085861157  135/429        312554/416336
+SH9.DRV19  1        SSD    NVMe      healthy  18.30T    185.28G       13.91T    12625659929019762645:13005700653166500789  132/429        312792/415786
+SH9.DRV20  1        SSD    NVMe      healthy  18.30T    183.92G       13.92T    17758470257353506880:13489011579102749383  119/429        312933/416218
+SH9.DRV21  1        SSD    NVMe      healthy  18.30T    181.85G       13.92T    8134911724750979493:9589409693257880212    117/429        313010/416065
+SH9.DRV22  1        SSD    NVMe      healthy  18.30T    183.22G       13.91T    13395619499819944934:9724962726743527190   130/429        312810/416140
+SH9.DRV23  1        SSD    NVMe      healthy  18.30T    184.64G       13.90T    4191304270683915911:12968513302391677982   128/429        312598/416083
+SH9.DRV24  1        SSD    NVMe      healthy  18.30T    182.85G       13.91T    4085459881005039940:13510394570277007350   130/429        312649/415802
+SH9.DRV25  1        SSD    NVMe      healthy  18.30T    181.59G       13.89T    4059324400360049985:10190605294472401793   132/429        312270/416151
+SH9.DRV26  1        SSD    NVMe      healthy  18.30T    185.92G       13.90T    2639249590658813324:13118699238947082661   141/429        312762/416006
+SH9.DRV27  1        SSD    NVMe      healthy  18.30T    184.71G       13.92T    15737583536224486523:11958139433408639323  119/429        312947/416275
+     root@Tele-Pure-01-ct0:/var/home/pureeng# puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    healthy  18.30T    -
+CH0.BAY1   SSD    healthy  18.30T    -
+CH0.BAY2   SSD    healthy  18.30T    -
+CH0.BAY3   SSD    healthy  18.30T    -
+CH0.BAY4   SSD    healthy  18.30T    -
+CH0.BAY5   SSD    healthy  18.30T    -
+CH0.BAY6   -      unused   0.00      -
+CH0.BAY7   -      unused   0.00      -
+CH0.BAY8   -      unused   0.00      -
+CH0.BAY9   -      unused   0.00      -
+CH0.BAY10  -      unused   0.00      -
+CH0.BAY11  -      unused   0.00      -
+CH0.BAY12  -      unused   0.00      -
+CH0.BAY13  -      unused   0.00      -
+CH0.BAY14  -      unused   0.00      -
+CH0.BAY15  -      unused   0.00      -
+CH0.BAY16  -      unused   0.00      -
+CH0.BAY17  -      unused   0.00      -
+CH0.BAY18  -      unused   0.00      -
+CH0.BAY19  -      unused   0.00      -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  healthy  7.52G     -
+CH0.NVB3   NVRAM  healthy  7.52G     -
+SH9.BAY0   -      unused   0.00      -
+SH9.BAY1   -      unused   0.00      -
+SH9.BAY2   -      unused   0.00      -
+SH9.BAY3   -      unused   0.00      -
+SH9.BAY4   -      unused   0.00      -
+SH9.BAY5   -      unused   0.00      -
+SH9.BAY6   -      unused   0.00      -
+SH9.BAY7   -      unused   0.00      -
+SH9.BAY8   -      unused   0.00      -
+SH9.BAY9   -      unused   0.00      -
+SH9.BAY10  -      unused   0.00      -
+SH9.BAY11  -      unused   0.00      -
+SH9.BAY12  -      unused   0.00      -
+SH9.BAY13  -      unused   0.00      -
+SH9.BAY14  -      unused   0.00      -
+SH9.BAY15  -      unused   0.00      -
+SH9.BAY16  SSD    healthy  18.30T    -
+SH9.BAY17  SSD    healthy  18.30T    -
+SH9.BAY18  SSD    healthy  18.30T    -
+SH9.BAY19  SSD    healthy  18.30T    -
+SH9.BAY20  SSD    healthy  18.30T    -
+SH9.BAY21  SSD    healthy  18.30T    -
+SH9.BAY22  SSD    healthy  18.30T    -
+SH9.BAY23  SSD    healthy  18.30T    -
+SH9.BAY24  SSD    healthy  18.30T    -
+SH9.BAY25  SSD    healthy  18.30T    -
+SH9.BAY26  SSD    healthy  18.30T    -
+SH9.BAY27  SSD    healthy  18.30T    -
+     root@Tele-Pure-01-ct0:/var/home/pureeng# puredrive listb list driveswatch purearray list --space
+Every 2.0s: purearray list --space    Tele-Pure-01-ct0: Thu Sep 11 11:06:55 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique   Snapshots  Shared  System  ReplicationTotalTele-Pure-01  222.44T   58%     -386.68T  33%2.8 to 14.1 to 1112.26T  24.13T     34.02T  0.00    0.00170.41T77:00258103582036100%831364035850     root@Tele-Pure-01-ct0:/var/home/pureeng# watch purearray list --spacepuredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    healthy  18.30T    -
+CH0.BAY1   SSD    healthy  18.30T    -
+CH0.BAY2   SSD    healthy  18.30T    -
+CH0.BAY3   SSD    healthy  18.30T    -
+CH0.BAY4   SSD    healthy  18.30T    -
+CH0.BAY5   SSD    healthy  18.30T    -
+CH0.BAY6   -      unused   0.00      -
+CH0.BAY7   -      unused   0.00      -
+CH0.BAY8   -      unused   0.00      -
+CH0.BAY9   -      unused   0.00      -
+CH0.BAY10  -      unused   0.00      -
+CH0.BAY11  -      unused   0.00      -
+CH0.BAY12  -      unused   0.00      -
+CH0.BAY13  -      unused   0.00      -
+CH0.BAY14  -      unused   0.00      -
+CH0.BAY15  -      unused   0.00      -
+CH0.BAY16  -      unused   0.00      -
+CH0.BAY17  -      unused   0.00      -
+CH0.BAY18  -      unused   0.00      -
+CH0.BAY19  -      unused   0.00      -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  healthy  7.52G     -
+CH0.NVB3   NVRAM  healthy  7.52G     -
+SH9.BAY0   -      unused   0.00      -
+SH9.BAY1   -      unused   0.00      -
+SH9.BAY2   -      unused   0.00      -
+SH9.BAY3   -      unused   0.00      -
+SH9.BAY4   -      unused   0.00      -
+SH9.BAY5   -      unused   0.00      -
+SH9.BAY6   -      unused   0.00      -
+SH9.BAY7   -      unused   0.00      -
+SH9.BAY8   -      unused   0.00      -
+SH9.BAY9   -      unused   0.00      -
+SH9.BAY10  -      unused   0.00      -
+SH9.BAY11  -      unused   0.00      -
+SH9.BAY12  -      unused   0.00      -
+SH9.BAY13  -      unused   0.00      -
+SH9.BAY14  -      unused   0.00      -
+SH9.BAY15  -      unused   0.00      -
+SH9.BAY16  SSD    healthy  18.30T    -
+SH9.BAY17  SSD    healthy  18.30T    -
+SH9.BAY18  SSD    healthy  18.30T    -
+SH9.BAY19  SSD    healthy  18.30T    -
+SH9.BAY20  SSD    healthy  18.30T    -
+SH9.BAY21  SSD    healthy  18.30T    -
+SH9.BAY22  SSD    healthy  18.30T    -
+SH9.BAY23  SSD    healthy  18.30T    -
+SH9.BAY24  SSD    healthy  18.30T    -
+SH9.BAY25  SSD    healthy  18.30T    -
+SH9.BAY26  SSD    healthy  18.30T    -
+SH9.BAY27  SSD    healthy  18.30T    -
+     root@Tele-Pure-01-ct0:/var/home/pureeng# puredrive listwatch purearray list --spacepuredrive listb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    NVMe      healthy  18.30T    0.00          0.00      4437333415287213109:12450047589662432096   56/269         198106/277660
+CH0.DRV1   1        SSD    NVMe      healthy  18.30T    0.00          0.00      10880255374292959342:11202314089994154311  61/269         197704/277572
+CH0.DRV2   1        SSD    NVMe      healthy  18.30T    0.00          0.00      3402522389123450938:13688446784943458726   74/269         198184/277837
+CH0.DRV3   1        SSD    NVMe      healthy  18.30T    0.00          0.00      3282210712793990049:10744477063643795420   68/269         197741/277701
+CH0.DRV4   1        SSD    NVMe      healthy  18.30T    0.00          0.00      16932455266470087018:13004050925816920761  63/269         197938/277614
+CH0.DRV5   1        SSD    NVMe      healthy  18.30T    0.00          0.00      16457967674219841835:11438755912498377953  85/269         197632/277569
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      17387743596597626609:10072965070149068486  -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      16797490600721138908:10851329451595031745  -              -
+CH0.NVR2   0        NVRAM  NVMe      healthy  7.52G     -             0.00      11297966308680550270:12065902722792189490  -              -
+CH0.NVR3   0        NVRAM  NVMe      healthy  7.52G     -             0.00      18167919591809633989:12760584973166344680  -              -
+SH9.DRV16  1        SSD    NVMe      healthy  18.30T    0.00          0.00      11538459319957474892:11014667027535622787  68/269         197996/277481
+SH9.DRV17  1        SSD    NVMe      healthy  18.30T    0.00          0.00      6215824297033941868:11740846779296444670   60/269         198166/277796
+SH9.DRV18  1        SSD    NVMe      healthy  18.30T    182.77G       0.00      16205325030147244652:10470832426085861157  135/429        312339/416336
+SH9.DRV19  1        SSD    NVMe      healthy  18.30T    185.40G       0.00      12625659929019762645:13005700653166500789  132/429        312585/415786
+SH9.DRV20  1        SSD    NVMe      healthy  18.30T    183.88G       0.00      17758470257353506880:13489011579102749383  119/429        312732/416218
+SH9.DRV21  1        SSD    NVMe      healthy  18.30T    184.62G       0.00      8134911724750979493:9589409693257880212    117/429        312826/416065
+SH9.DRV22  1        SSD    NVMe      healthy  18.30T    185.55G       0.00      13395619499819944934:9724962726743527190   130/429        312605/416140
+SH9.DRV23  1        SSD    NVMe      healthy  18.30T    184.89G       0.00      4191304270683915911:12968513302391677982   128/429        312384/416083
+SH9.DRV24  1        SSD    NVMe      healthy  18.30T    182.54G       0.00      4085459881005039940:13510394570277007350   130/429        312450/415802
+SH9.DRV25  1        SSD    NVMe      healthy  18.30T    183.80G       0.00      4059324400360049985:10190605294472401793   132/429        312068/416151
+SH9.DRV26  1        SSD    NVMe      healthy  18.30T    186.30G       0.00      2639249590658813324:13118699238947082661   141/429        312556/416006
+SH9.DRV27  1        SSD    NVMe      healthy  18.30T    184.83G       0.00      15737583536224486523:11958139433408639323  119/429        312731/416275
+     root@Tele-Pure-01-ct0:/var/home/pureeng# puredb list drivesrive listwatch purearray list --space
+Every 2.0s: purearray list --space    Tele-Pure-01-ct0: Thu Sep 11 11:08:16 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique   Snapshots  Shared  System  ReplicationTotalTele-Pure-01  222.44T   100%    -386.68T  33%2.8 to 14.1 to 1112.26T  24.13T     34.00T  0.00    0.00170.40T922479324740257502589:0035810358     root@Tele-Pure-01-ct0:/var/home/pureeng# watch purearray list --spacepuredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    NVMe      healthy  18.30T    0.00          0.00      4437333415287213109:12450047589662432096   56/269         198148/277660
+CH0.DRV1   1        SSD    NVMe      healthy  18.30T    0.00          0.00      10880255374292959342:11202314089994154311  61/269         197742/277572
+CH0.DRV2   1        SSD    NVMe      healthy  18.30T    0.00          0.00      3402522389123450938:13688446784943458726   74/269         198220/277837
+CH0.DRV3   1        SSD    NVMe      healthy  18.30T    0.00          0.00      3282210712793990049:10744477063643795420   68/269         197779/277701
+CH0.DRV4   1        SSD    NVMe      healthy  18.30T    0.00          0.00      16932455266470087018:13004050925816920761  63/269         197976/277614
+CH0.DRV5   1        SSD    NVMe      healthy  18.30T    0.00          0.00      16457967674219841835:11438755912498377953  84/269         197672/277569
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      17387743596597626609:10072965070149068486  -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      16797490600721138908:10851329451595031745  -              -
+CH0.NVR2   0        NVRAM  NVMe      healthy  7.52G     -             0.00      11297966308680550270:12065902722792189490  -              -
+CH0.NVR3   0        NVRAM  NVMe      healthy  7.52G     -             0.00      18167919591809633989:12760584973166344680  -              -
+SH9.DRV16  1        SSD    NVMe      healthy  18.30T    0.00          0.00      11538459319957474892:11014667027535622787  70/269         198032/277481
+SH9.DRV17  1        SSD    NVMe      healthy  18.30T    0.00          0.00      6215824297033941868:11740846779296444670   60/269         198202/277796
+SH9.DRV18  1        SSD    NVMe      healthy  18.30T    182.77G       0.00      16205325030147244652:10470832426085861157  135/429        312402/416336
+SH9.DRV19  1        SSD    NVMe      healthy  18.30T    185.40G       0.00      12625659929019762645:13005700653166500789  132/429        312651/415786
+SH9.DRV20  1        SSD    NVMe      healthy  18.30T    183.88G       0.00      17758470257353506880:13489011579102749383  123/429        312801/416218
+SH9.DRV21  1        SSD    NVMe      healthy  18.30T    184.62G       0.00      8134911724750979493:9589409693257880212    117/429        312887/416065
+SH9.DRV22  1        SSD    NVMe      healthy  18.30T    185.55G       0.00      13395619499819944934:9724962726743527190   130/429        312660/416140
+SH9.DRV23  1        SSD    NVMe      healthy  18.30T    184.89G       0.00      4191304270683915911:12968513302391677982   132/429        312452/416083
+SH9.DRV24  1        SSD    NVMe      healthy  18.30T    182.54G       0.00      4085459881005039940:13510394570277007350   134/429        312504/415802
+SH9.DRV25  1        SSD    NVMe      healthy  18.30T    183.80G       0.00      4059324400360049985:10190605294472401793   132/429        312126/416151
+SH9.DRV26  1        SSD    NVMe      healthy  18.30T    186.30G       0.00      2639249590658813324:13118699238947082661   145/429        312612/416006
+SH9.DRV27  1        SSD    NVMe      healthy  18.30T    184.83G       0.00      15737583536224486523:11958139433408639323  119/429        312781/416275
+     root@Tele-Pure-01-ct0:/var/home/pureeng# puredb list driveswatch purearray list --space
+Every 2.0s: purearray list --space    Tele-Pure-01-ct0: Thu Sep 11 11:10:46 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique   Snapshots  Shared  System  ReplicationTotalTele-Pure-01  222.44T   31%     -386.68T  33%2.8 to 14.1 to 1112.26T  24.13T     34.00T  0.00    0.00170.40T95146691:014791247202590730258403585036100%82:013     root@Tele-Pure-01-ct0:/var/home/pureeng# watch purearray list --space
+Every 2.0s: purearray list --space    Tele-Pure-01-ct0: Thu Sep 11 11:12:07 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique   Snapshots  Shared  System  ReplicationTotalTele-Pure-01  222.44T   100%    -386.68T  33%2.8 to 14.1 to 1112.26T  24.13T     34.00T  0.00    0.00170.40T10     root@Tele-Pure-01-ct0:/var/home/pureeng# watch purearray list --spacepuredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    NVMe      healthy  18.30T    0.00          0.00      4437333415287213109:12450047589662432096   60/269         198258/277660
+CH0.DRV1   1        SSD    NVMe      healthy  18.30T    0.00          0.00      10880255374292959342:11202314089994154311  65/269         197864/277572
+CH0.DRV2   1        SSD    NVMe      healthy  18.30T    0.00          0.00      3402522389123450938:13688446784943458726   76/269         198330/277837
+CH0.DRV3   1        SSD    NVMe      healthy  18.30T    0.00          0.00      3282210712793990049:10744477063643795420   72/269         197877/277701
+CH0.DRV4   1        SSD    NVMe      healthy  18.30T    0.00          0.00      16932455266470087018:13004050925816920761  65/269         198092/277614
+CH0.DRV5   1        SSD    NVMe      healthy  18.30T    0.00          0.00      16457967674219841835:11438755912498377953  84/269         197790/277569
+CH0.DRV6   1        SSD    NVMe      healthy  18.30T    0.00          0.00      11538459319957474892:11014667027535622787  66/269         197896/277481
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      17387743596597626609:10072965070149068486  -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      16797490600721138908:10851329451595031745  -              -
+CH0.NVR2   0        NVRAM  NVMe      healthy  7.52G     -             0.00      11297966308680550270:12065902722792189490  -              -
+CH0.NVR3   0        NVRAM  NVMe      healthy  7.52G     -             0.00      18167919591809633989:12760584973166344680  -              -
+SH9.DRV17  1        SSD    NVMe      healthy  18.30T    0.00          0.00      6215824297033941868:11740846779296444670   60/269         198306/277796
+SH9.DRV18  1        SSD    NVMe      healthy  18.30T    182.81G       0.00      16205325030147244652:10470832426085861157  139/429        312573/416336
+SH9.DRV19  1        SSD    NVMe      healthy  18.30T    185.43G       0.00      12625659929019762645:13005700653166500789  139/429        312842/415786
+SH9.DRV20  1        SSD    NVMe      healthy  18.30T    183.95G       0.00      17758470257353506880:13489011579102749383  123/429        313004/416218
+SH9.DRV21  1        SSD    NVMe      healthy  18.30T    184.65G       0.00      8134911724750979493:9589409693257880212    121/429        313096/416065
+SH9.DRV22  1        SSD    NVMe      healthy  18.30T    185.55G       0.00      13395619499819944934:9724962726743527190   130/429        312857/416140
+SH9.DRV23  1        SSD    NVMe      healthy  18.30T    184.95G       0.00      4191304270683915911:12968513302391677982   132/429        312623/416083
+SH9.DRV24  1        SSD    NVMe      healthy  18.30T    182.60G       0.00      4085459881005039940:13510394570277007350   134/429        312677/415802
+SH9.DRV25  1        SSD    NVMe      healthy  18.30T    183.87G       0.00      4059324400360049985:10190605294472401793   136/429        312309/416151
+SH9.DRV26  1        SSD    NVMe      healthy  18.30T    186.40G       0.00      2639249590658813324:13118699238947082661   149/429        312818/416006
+SH9.DRV27  1        SSD    NVMe      healthy  18.30T    184.86G       0.00      15737583536224486523:11958139433408639323  123/429        312948/416275
+     root@Tele-Pure-01-ct0:/var/home/pureeng# puredb list driveswatch purearray list --space
+Every 2.0s: purearray list --space    Tele-Pure-01-ct0: Thu Sep 11 11:12:17 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique   Snapshots  Shared  System  ReplicationTotalTele-Pure-01  222.44T   100%    -386.68T  33%2.8 to 14.1 to 1112.26T  24.13T     34.00T  0.00    0.00170.40T922489% 7302574025850350.32T   3083:00368113682141693146942479524374:002571025820356683036841369514100%695:014791247202573025840358     root@Tele-Pure-01-ct0:/var/home/pureeng# watch purearray list --spacepuredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    NVMe      healthy  18.30T    0.00          0.00      4437333415287213109:12450047589662432096   64/269         198362/277660
+CH0.DRV1   1        SSD    NVMe      healthy  18.30T    0.00          0.00      10880255374292959342:11202314089994154311  69/269         197964/277572
+CH0.DRV2   1        SSD    NVMe      healthy  18.30T    0.00          0.00      3402522389123450938:13688446784943458726   78/269         198442/277837
+CH0.DRV3   1        SSD    NVMe      healthy  18.30T    0.00          0.00      3282210712793990049:10744477063643795420   74/269         197991/277701
+CH0.DRV4   1        SSD    NVMe      healthy  18.30T    0.00          0.00      16932455266470087018:13004050925816920761  69/269         198196/277614
+CH0.DRV5   1        SSD    NVMe      healthy  18.30T    0.00          0.00      16457967674219841835:11438755912498377953  88/269         197894/277569
+CH0.DRV6   1        SSD    NVMe      healthy  18.30T    0.00          0.00      11538459319957474892:11014667027535622787  66/269         198012/277481
+CH0.DRV7   1        SSD    NVMe      healthy  18.30T    0.00          0.00      6215824297033941868:11740846779296444670   56/269         198208/277796
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      17387743596597626609:10072965070149068486  -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      16797490600721138908:10851329451595031745  -              -
+CH0.NVR2   0        NVRAM  NVMe      healthy  7.52G     -             0.00      11297966308680550270:12065902722792189490  -              -
+CH0.NVR3   0        NVRAM  NVMe      healthy  7.52G     -             0.00      18167919591809633989:12760584973166344680  -              -
+SH9.DRV18  1        SSD    NVMe      healthy  18.30T    184.42G       0.00      16205325030147244652:10470832426085861157  147/429        312748/416336
+SH9.DRV19  1        SSD    NVMe      healthy  18.30T    187.22G       0.00      12625659929019762645:13005700653166500789  139/429        313029/415786
+SH9.DRV20  1        SSD    NVMe      healthy  18.30T    186.08G       0.00      17758470257353506880:13489011579102749383  123/429        313190/416218
+SH9.DRV21  1        SSD    NVMe      healthy  18.30T    186.67G       0.00      8134911724750979493:9589409693257880212    133/429        313283/416065
+SH9.DRV22  1        SSD    NVMe      healthy  18.30T    187.40G       0.00      13395619499819944934:9724962726743527190   130/429        313039/416140
+SH9.DRV23  1        SSD    NVMe      healthy  18.30T    186.61G       0.00      4191304270683915911:12968513302391677982   132/429        312819/416083
+SH9.DRV24  1        SSD    NVMe      healthy  18.30T    185.11G       0.00      4085459881005039940:13510394570277007350   138/429        312880/415802
+SH9.DRV25  1        SSD    NVMe      healthy  18.30T    185.77G       0.00      4059324400360049985:10190605294472401793   140/429        312499/416151
+SH9.DRV26  1        SSD    NVMe      healthy  18.30T    188.29G       0.00      2639249590658813324:13118699238947082661   149/429        313009/416006
+SH9.DRV27  1        SSD    NVMe      healthy  18.30T    186.49G       0.00      15737583536224486523:11958139433408639323  131/429        313144/416275
+     root@Tele-Pure-01-ct0:/var/home/pureeng# puredb list driveswatch purearray list --space
+Every 2.0s: purearray list --space    Tele-Pure-01-ct0: Thu Sep 11 11:15:55 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique   Snapshots  Shared  System  ReplicationTotalTele-Pure-01  220.32T   100%    -386.68T  33%2.8 to 14.1 to 1112.26T  24.13T     34.00T  0.00    0.00170.40T76:0025810358213643% 8313694146952432797:0257102582035830368413685142.44T   51698:01479125720258883035840368513100%689:0146911479224730257402585035820:01     root@Tele-Pure-01-ct0:/var/home/pureeng# watch purearray list --spacepuredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    NVMe      healthy  18.30T    0.00          0.00      4437333415287213109:12450047589662432096   68/269         198427/277660
+CH0.DRV1   1        SSD    NVMe      healthy  18.30T    0.00          0.00      10880255374292959342:11202314089994154311  75/269         198030/277572
+CH0.DRV2   1        SSD    NVMe      healthy  18.30T    0.00          0.00      3402522389123450938:13688446784943458726   80/269         198534/277837
+CH0.DRV3   1        SSD    NVMe      healthy  18.30T    0.00          0.00      3282210712793990049:10744477063643795420   80/269         198055/277701
+CH0.DRV4   1        SSD    NVMe      healthy  18.30T    0.00          0.00      16932455266470087018:13004050925816920761  69/269         198279/277614
+CH0.DRV5   1        SSD    NVMe      healthy  18.30T    0.00          0.00      16457967674219841835:11438755912498377953  92/269         197979/277569
+CH0.DRV6   1        SSD    NVMe      healthy  18.30T    0.00          0.00      11538459319957474892:11014667027535622787  68/269         198082/277481
+CH0.DRV7   1        SSD    NVMe      healthy  18.30T    0.00          0.00      6215824297033941868:11740846779296444670   58/269         198277/277796
+CH0.DRV8   1        SSD    NVMe      healthy  18.30T    185.90G       0.00      16205325030147244652:10470832426085861157  120/429        312578/416336
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      17387743596597626609:10072965070149068486  -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      16797490600721138908:10851329451595031745  -              -
+CH0.NVR2   0        NVRAM  NVMe      healthy  7.52G     -             0.00      11297966308680550270:12065902722792189490  -              -
+CH0.NVR3   0        NVRAM  NVMe      healthy  7.52G     -             0.00      18167919591809633989:12760584973166344680  -              -
+SH9.DRV19  1        SSD    NVMe      healthy  18.30T    187.90G       0.00      12625659929019762645:13005700653166500789  155/429        313169/415786
+SH9.DRV20  1        SSD    NVMe      healthy  18.30T    186.75G       0.00      17758470257353506880:13489011579102749383  123/429        313320/416218
+SH9.DRV21  1        SSD    NVMe      healthy  18.30T    187.42G       0.00      8134911724750979493:9589409693257880212    137/429        313379/416065
+SH9.DRV22  1        SSD    NVMe      healthy  18.30T    188.26G       0.00      13395619499819944934:9724962726743527190   134/429        313157/416140
+SH9.DRV23  1        SSD    NVMe      healthy  18.30T    187.18G       0.00      4191304270683915911:12968513302391677982   140/429        312931/416083
+SH9.DRV24  1        SSD    NVMe      healthy  18.30T    185.81G       0.00      4085459881005039940:13510394570277007350   142/429        312989/415802
+SH9.DRV25  1        SSD    NVMe      healthy  18.30T    186.67G       0.00      4059324400360049985:10190605294472401793   140/429        312614/416151
+SH9.DRV26  1        SSD    NVMe      healthy  18.30T    188.92G       0.00      2639249590658813324:13118699238947082661   153/429        313136/416006
+SH9.DRV27  1        SSD    NVMe      healthy  18.30T    187.28G       0.00      15737583536224486523:11958139433408639323  139/429        313260/416275
+     root@Tele-Pure-01-ct0:/var/home/pureeng# puredb list driveswatch purearray list --space
+Every 2.0s: purearray list --space    Tele-Pure-01-ct0: Thu Sep 11 11:20:07 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique   Snapshots  Shared  System  ReplicationTotalTele-Pure-01  222.44T   100%    -386.68T  33%2.8 to 14.1 to 1112.26T  24.13T     34.00T  0.00    0.00170.40T10258203568% 8303684136951432691:02479125720258303584136851449692:01479124720258473035840368513100%39693:014691247922593% 7     root@Tele-Pure-01-ct0:/var/home/pureeng# watch purearray list --spacepuredb list driveswatch purearray list --space
+Every 2.0s: purearray list --space    Tele-Pure-01-ct0: Thu Sep 11 11:23:32 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique   Snapshots  Shared  System  ReplicationTotalTele-Pure-01  222.44T   93%     -386.68T  33%2.8 to 14.1 to 1112.26T  24.13T     34.00T  0.00    0.00170.39T474025750     root@Tele-Pure-01-ct0:/var/home/pureeng# watch purearray list --spacepuredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    NVMe      healthy  18.30T    0.00          10.99T    4437333415287213109:12450047589662432096   74/269         198643/277660
+CH0.DRV1   1        SSD    NVMe      healthy  18.30T    0.00          10.97T    10880255374292959342:11202314089994154311  79/269         198247/277572
+CH0.DRV2   1        SSD    NVMe      healthy  18.30T    0.00          11.00T    3402522389123450938:13688446784943458726   84/269         198752/277837
+CH0.DRV3   1        SSD    NVMe      healthy  18.30T    0.00          10.97T    3282210712793990049:10744477063643795420   84/269         198269/277701
+CH0.DRV4   1        SSD    NVMe      healthy  18.30T    0.00          10.98T    16932455266470087018:13004050925816920761  71/269         198489/277614
+CH0.DRV5   1        SSD    NVMe      healthy  18.30T    0.00          10.97T    16457967674219841835:11438755912498377953  100/269        198185/277569
+CH0.DRV6   1        SSD    NVMe      healthy  18.30T    0.00          10.97T    11538459319957474892:11014667027535622787  72/269         198298/277481
+CH0.DRV7   1        SSD    NVMe      healthy  18.30T    0.00          10.98T    6215824297033941868:11740846779296444670   64/269         198501/277796
+CH0.DRV8   1        SSD    NVMe      healthy  18.30T    185.70G       13.81T    16205325030147244652:10470832426085861157  132/429        312970/416336
+CH0.DRV9   1        SSD    NVMe      healthy  18.30T    188.00G       13.81T    12625659929019762645:13005700653166500789  124/429        313216/415786
+CH0.DRV10  1        SSD    NVMe      healthy  18.30T    186.75G       15.75T    17758470257353506880:13489011579102749383  119/429        313421/416218
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      17387743596597626609:10072965070149068486  -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      16797490600721138908:10851329451595031745  -              -
+CH0.NVR2   0        NVRAM  NVMe      healthy  7.52G     -             0.00      11297966308680550270:12065902722792189490  -              -
+CH0.NVR3   0        NVRAM  NVMe      healthy  7.52G     -             0.00      18167919591809633989:12760584973166344680  -              -
+SH9.DRV21  1        SSD    NVMe      healthy  18.30T    187.46G       13.84T    8134911724750979493:9589409693257880212    157/429        313721/416065
+SH9.DRV22  1        SSD    NVMe      healthy  18.30T    188.29G       13.83T    13395619499819944934:9724962726743527190   138/429        313557/416140
+SH9.DRV23  1        SSD    NVMe      healthy  18.30T    187.25G       13.83T    4191304270683915911:12968513302391677982   144/429        313333/416083
+SH9.DRV24  1        SSD    NVMe      healthy  18.30T    185.88G       13.82T    4085459881005039940:13510394570277007350   150/429        313344/415802
+SH9.DRV25  1        SSD    NVMe      healthy  18.30T    186.67G       13.81T    4059324400360049985:10190605294472401793   155/429        313011/416151
+SH9.DRV26  1        SSD    NVMe      healthy  18.30T    188.95G       13.83T    2639249590658813324:13118699238947082661   165/429        313494/416006
+SH9.DRV27  1        SSD    NVMe      healthy  18.30T    187.39G       13.84T    15737583536224486523:11958139433408639323  147/429        313623/416275
+     root@Tele-Pure-01-ct0:/var/home/pureeng# puredb list drivespuredb list driveswatch purearray list --space
+Every 2.0s: purearray list --space    Tele-Pure-01-ct0: Thu Sep 11 11:25:24 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique   Snapshots  Shared  System  ReplicationTotalTele-Pure-01  222.44T   32%     -386.68T  33%2.8 to 14.1 to 1112.26T  24.13T     34.00T  0.00    0.00170.39T793247402585035386:013681146921478793247402575035100%87:0036811369     root@Tele-Pure-01-ct0:/var/home/pureeng# watch purearray list --spacepuredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    NVMe      healthy  18.30T    0.00          0.00      4437333415287213109:12450047589662432096   74/269         198633/277660
+CH0.DRV1   1        SSD    NVMe      healthy  18.30T    0.00          0.00      10880255374292959342:11202314089994154311  79/269         198228/277572
+CH0.DRV2   1        SSD    NVMe      healthy  18.30T    0.00          0.00      3402522389123450938:13688446784943458726   84/269         198738/277837
+CH0.DRV3   1        SSD    NVMe      healthy  18.30T    0.00          0.00      3282210712793990049:10744477063643795420   84/269         198257/277701
+CH0.DRV4   1        SSD    NVMe      healthy  18.30T    0.00          0.00      16932455266470087018:13004050925816920761  71/269         198477/277614
+CH0.DRV5   1        SSD    NVMe      healthy  18.30T    0.00          0.00      16457967674219841835:11438755912498377953  100/269        198175/277569
+CH0.DRV6   1        SSD    NVMe      healthy  18.30T    0.00          0.00      11538459319957474892:11014667027535622787  72/269         198298/277481
+CH0.DRV7   1        SSD    NVMe      healthy  18.30T    0.00          0.00      6215824297033941868:11740846779296444670   64/269         198493/277796
+CH0.DRV8   1        SSD    NVMe      healthy  18.30T    187.45G       0.00      16205325030147244652:10470832426085861157  132/429        312956/416336
+CH0.DRV9   1        SSD    NVMe      healthy  18.30T    189.81G       0.00      12625659929019762645:13005700653166500789  124/429        313240/415786
+CH0.DRV10  1        SSD    NVMe      healthy  18.30T    189.56G       0.00      17758470257353506880:13489011579102749383  117/429        313255/416218
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      17387743596597626609:10072965070149068486  -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      16797490600721138908:10851329451595031745  -              -
+CH0.NVR2   0        NVRAM  NVMe      healthy  7.52G     -             0.00      11297966308680550270:12065902722792189490  -              -
+CH0.NVR3   0        NVRAM  NVMe      healthy  7.52G     -             0.00      18167919591809633989:12760584973166344680  -              -
+SH9.DRV21  1        SSD    NVMe      healthy  18.30T    189.70G       0.00      8134911724750979493:9589409693257880212    157/429        313686/416065
+SH9.DRV22  1        SSD    NVMe      healthy  18.30T    190.71G       0.00      13395619499819944934:9724962726743527190   142/429        313544/416140
+SH9.DRV23  1        SSD    NVMe      healthy  18.30T    189.54G       0.00      4191304270683915911:12968513302391677982   144/429        313296/416083
+SH9.DRV24  1        SSD    NVMe      healthy  18.30T    187.99G       0.00      4085459881005039940:13510394570277007350   150/429        313307/415802
+SH9.DRV25  1        SSD    NVMe      healthy  18.30T    189.06G       0.00      4059324400360049985:10190605294472401793   155/429        312972/416151
+SH9.DRV26  1        SSD    NVMe      healthy  18.30T    191.23G       0.00      2639249590658813324:13118699238947082661   165/429        313460/416006
+SH9.DRV27  1        SSD    NVMe      healthy  18.30T    189.60G       0.00      15737583536224486523:11958139433408639323  147/429        313612/416275
+     root@Tele-Pure-01-ct0:/var/home/pureeng# puredb list driveswatch purearray list --space
+Every 2.0s: purearray list --space    Tele-Pure-01-ct0: Thu Sep 11 11:27:25 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique   Snapshots  Shared  System  ReplicationTotalTele-Pure-01  222.44T   100%    -386.68T  33%2.8 to 14.1 to 1112.26T  24.13T     34.00T  0.00    0.00170.39T730358413695140.32T   44% 698:02479125720253283035841368514699:014691247922465730257403585136100%830:0136     root@Tele-Pure-01-ct0:/var/home/pureeng# watch purearray list --spacepuredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    NVMe      healthy  18.30T    0.00          0.00      4437333415287213109:12450047589662432096   76/269         198623/277660
+CH0.DRV1   1        SSD    NVMe      healthy  18.30T    0.00          0.00      10880255374292959342:11202314089994154311  85/269         198214/277572
+CH0.DRV2   1        SSD    NVMe      healthy  18.30T    0.00          0.00      3402522389123450938:13688446784943458726   88/269         198748/277837
+CH0.DRV3   1        SSD    NVMe      healthy  18.30T    0.00          0.00      3282210712793990049:10744477063643795420   87/269         198249/277701
+CH0.DRV4   1        SSD    NVMe      healthy  18.30T    0.00          0.00      16932455266470087018:13004050925816920761  78/269         198473/277614
+CH0.DRV5   1        SSD    NVMe      healthy  18.30T    0.00          0.00      16457967674219841835:11438755912498377953  100/269        198175/277569
+CH0.DRV6   1        SSD    NVMe      healthy  18.30T    0.00          0.00      11538459319957474892:11014667027535622787  74/269         198320/277481
+CH0.DRV7   1        SSD    NVMe      healthy  18.30T    0.00          0.00      6215824297033941868:11740846779296444670   66/269         198521/277796
+CH0.DRV8   1        SSD    NVMe      healthy  18.30T    187.29G       0.00      16205325030147244652:10470832426085861157  137/429        312993/416336
+CH0.DRV9   1        SSD    NVMe      healthy  18.30T    190.19G       0.00      12625659929019762645:13005700653166500789  128/429        313256/415786
+CH0.DRV10  1        SSD    NVMe      healthy  18.30T    188.47G       0.00      17758470257353506880:13489011579102749383  116/429        313273/416218
+CH0.DRV11  1        SSD    NVMe      healthy  18.30T    189.47G       0.00      8134911724750979493:9589409693257880212    126/429        313248/416065
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      17387743596597626609:10072965070149068486  -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      16797490600721138908:10851329451595031745  -              -
+CH0.NVR2   0        NVRAM  NVMe      healthy  7.52G     -             0.00      11297966308680550270:12065902722792189490  -              -
+CH0.NVR3   0        NVRAM  NVMe      healthy  7.52G     -             0.00      18167919591809633989:12760584973166344680  -              -
+SH9.DRV22  1        SSD    NVMe      healthy  18.30T    190.28G       0.00      13395619499819944934:9724962726743527190   142/429        313529/416140
+SH9.DRV23  1        SSD    NVMe      healthy  18.30T    189.34G       0.00      4191304270683915911:12968513302391677982   149/429        313271/416083
+SH9.DRV24  1        SSD    NVMe      healthy  18.30T    187.72G       0.00      4085459881005039940:13510394570277007350   153/429        313285/415802
+SH9.DRV25  1        SSD    NVMe      healthy  18.30T    188.68G       0.00      4059324400360049985:10190605294472401793   155/429        312929/416151
+SH9.DRV26  1        SSD    NVMe      healthy  18.30T    190.75G       0.00      2639249590658813324:13118699238947082661   164/429        313407/416006
+SH9.DRV27  1        SSD    NVMe      healthy  18.30T    189.52G       0.00      15737583536224486523:11958139433408639323  148/429        313595/416275
+     root@Tele-Pure-01-ct0:/var/home/pureeng# puredb list driveswatch purearray list --space
+Every 2.0s: purearray list --space    Tele-Pure-01-ct0: Thu Sep 11 11:30:12 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique   Snapshots  Shared  System  ReplicationTotalTele-Pure-01  220.32T   100%    -386.68T  33%2.8 to 14.1 to 1112.26T  24.13T     34.00T  0.00    0.00170.39T57202582% 830358413685143691:014691247922573035840368513682:0146911469224497932479425750252.44T   8373:0035810368213100%68313694146951479     root@Tele-Pure-01-ct0:/var/home/pureeng# watch purearray list --spacepuredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    NVMe      healthy  18.30T    0.00          0.00      4437333415287213109:12450047589662432096   76/269         198747/277660
+CH0.DRV1   1        SSD    NVMe      healthy  18.30T    0.00          0.00      10880255374292959342:11202314089994154311  85/269         198334/277572
+CH0.DRV2   1        SSD    NVMe      healthy  18.30T    0.00          0.00      3402522389123450938:13688446784943458726   94/269         198874/277837
+CH0.DRV3   1        SSD    NVMe      healthy  18.30T    0.00          0.00      3282210712793990049:10744477063643795420   89/269         198387/277701
+CH0.DRV4   1        SSD    NVMe      healthy  18.30T    0.00          0.00      16932455266470087018:13004050925816920761  82/269         198595/277614
+CH0.DRV5   1        SSD    NVMe      healthy  18.30T    0.00          0.00      16457967674219841835:11438755912498377953  104/269        198307/277569
+CH0.DRV6   1        SSD    NVMe      healthy  18.30T    0.00          0.00      11538459319957474892:11014667027535622787  74/269         198446/277481
+CH0.DRV7   1        SSD    NVMe      healthy  18.30T    0.00          0.00      6215824297033941868:11740846779296444670   68/269         198649/277796
+CH0.DRV8   1        SSD    NVMe      healthy  18.30T    187.37G       0.00      16205325030147244652:10470832426085861157  141/429        313217/416336
+CH0.DRV9   1        SSD    NVMe      healthy  18.30T    190.26G       0.00      12625659929019762645:13005700653166500789  132/429        313505/415786
+CH0.DRV10  1        SSD    NVMe      healthy  18.30T    188.47G       0.00      17758470257353506880:13489011579102749383  120/429        313512/416218
+CH0.DRV11  1        SSD    NVMe      healthy  18.30T    189.23G       0.00      8134911724750979493:9589409693257880212    125/429        313509/416065
+CH0.DRV12  1        SSD    NVMe      healthy  18.30T    190.00G       0.00      13395619499819944934:9724962726743527190   110/429        313286/416140
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      17387743596597626609:10072965070149068486  -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      16797490600721138908:10851329451595031745  -              -
+CH0.NVR2   0        NVRAM  NVMe      healthy  7.52G     -             0.00      11297966308680550270:12065902722792189490  -              -
+CH0.NVR3   0        NVRAM  NVMe      healthy  7.52G     -             0.00      18167919591809633989:12760584973166344680  -              -
+SH9.DRV23  1        SSD    NVMe      healthy  18.30T    189.34G       0.00      4191304270683915911:12968513302391677982   149/429        313504/416083
+SH9.DRV24  1        SSD    NVMe      healthy  18.30T    187.79G       0.00      4085459881005039940:13510394570277007350   157/429        313533/415802
+SH9.DRV25  1        SSD    NVMe      healthy  18.30T    188.68G       0.00      4059324400360049985:10190605294472401793   155/429        313163/416151
+SH9.DRV26  1        SSD    NVMe      healthy  18.30T    190.82G       0.00      2639249590658813324:13118699238947082661   172/429        313660/416006
+SH9.DRV27  1        SSD    NVMe      healthy  18.30T    189.55G       0.00      15737583536224486523:11958139433408639323  152/429        313835/416275
+     root@Tele-Pure-01-ct0:/var/home/pureeng# puredb list driveswatch purearray list --space
+Every 2.0s: purearray list --space    Tele-Pure-01-ct0: Thu Sep 11 11:34:05 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique   Snapshots  Shared  System  ReplicationTotalTele-Pure-01  222.44T   100%    -386.68T  33%2.8 to 14.1 to 1112.26T  24.13T     34.00T  0.00    0.00170.39T710257203565% 8303584136851332695:014691147922473025740258503586:0036811368214556932479424750258477:0035811368214100%69314     root@Tele-Pure-01-ct0:/var/home/pureeng# watch purearray list --spacepuredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    NVMe      healthy  18.30T    0.00          0.00      4437333415287213109:12450047589662432096   80/269         198883/277660
+CH0.DRV1   1        SSD    NVMe      healthy  18.30T    0.00          0.00      10880255374292959342:11202314089994154311  89/269         198478/277572
+CH0.DRV2   1        SSD    NVMe      healthy  18.30T    0.00          0.00      3402522389123450938:13688446784943458726   96/269         198992/277837
+CH0.DRV3   1        SSD    NVMe      healthy  18.30T    0.00          0.00      3282210712793990049:10744477063643795420   90/269         198500/277701
+CH0.DRV4   1        SSD    NVMe      healthy  18.30T    0.00          0.00      16932455266470087018:13004050925816920761  87/269         198722/277614
+CH0.DRV5   1        SSD    NVMe      healthy  18.30T    0.00          0.00      16457967674219841835:11438755912498377953  106/269        198424/277569
+CH0.DRV6   1        SSD    NVMe      healthy  18.30T    0.00          0.00      11538459319957474892:11014667027535622787  76/269         198587/277481
+CH0.DRV7   1        SSD    NVMe      healthy  18.30T    0.00          0.00      6215824297033941868:11740846779296444670   72/269         198774/277796
+CH0.DRV8   1        SSD    NVMe      healthy  18.30T    189.97G       0.00      16205325030147244652:10470832426085861157  144/429        313432/416336
+CH0.DRV9   1        SSD    NVMe      healthy  18.30T    192.84G       0.00      12625659929019762645:13005700653166500789  133/429        313739/415786
+CH0.DRV10  1        SSD    NVMe      healthy  18.30T    191.14G       0.00      17758470257353506880:13489011579102749383  128/429        313743/416218
+CH0.DRV11  1        SSD    NVMe      healthy  18.30T    191.21G       0.00      8134911724750979493:9589409693257880212    133/429        313755/416065
+CH0.DRV12  1        SSD    NVMe      healthy  18.30T    191.65G       0.00      13395619499819944934:9724962726743527190   127/429        313531/416140
+CH0.DRV13  1        SSD    NVMe      healthy  18.30T    192.12G       0.00      4191304270683915911:12968513302391677982   110/429        313361/416083
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      17387743596597626609:10072965070149068486  -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      16797490600721138908:10851329451595031745  -              -
+CH0.NVR2   0        NVRAM  NVMe      healthy  7.52G     -             0.00      11297966308680550270:12065902722792189490  -              -
+CH0.NVR3   0        NVRAM  NVMe      healthy  7.52G     -             0.00      18167919591809633989:12760584973166344680  -              -
+SH9.DRV24  1        SSD    NVMe      healthy  18.30T    190.32G       0.00      4085459881005039940:13510394570277007350   165/429        313752/415802
+SH9.DRV25  1        SSD    NVMe      healthy  18.30T    191.18G       0.00      4059324400360049985:10190605294472401793   155/429        313388/416151
+SH9.DRV26  1        SSD    NVMe      healthy  18.30T    193.40G       0.00      2639249590658813324:13118699238947082661   184/429        313877/416006
+SH9.DRV27  1        SSD    NVMe      healthy  18.30T    192.08G       0.00      15737583536224486523:11958139433408639323  160/429        314071/416275
+     root@Tele-Pure-01-ct0:/var/home/pureeng# ^C
+     root@Tele-Pure-01-ct0:/var/home/pureeng# puredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    NVMe      healthy  18.30T    0.00          0.00      4437333415287213109:12450047589662432096   80/269         198883/277660
+CH0.DRV1   1        SSD    NVMe      healthy  18.30T    0.00          0.00      10880255374292959342:11202314089994154311  89/269         198478/277572
+CH0.DRV2   1        SSD    NVMe      healthy  18.30T    0.00          0.00      3402522389123450938:13688446784943458726   96/269         198992/277837
+CH0.DRV3   1        SSD    NVMe      healthy  18.30T    0.00          0.00      3282210712793990049:10744477063643795420   90/269         198500/277701
+CH0.DRV4   1        SSD    NVMe      healthy  18.30T    0.00          0.00      16932455266470087018:13004050925816920761  87/269         198722/277614
+CH0.DRV5   1        SSD    NVMe      healthy  18.30T    0.00          0.00      16457967674219841835:11438755912498377953  106/269        198424/277569
+CH0.DRV6   1        SSD    NVMe      healthy  18.30T    0.00          0.00      11538459319957474892:11014667027535622787  76/269         198587/277481
+CH0.DRV7   1        SSD    NVMe      healthy  18.30T    0.00          0.00      6215824297033941868:11740846779296444670   72/269         198774/277796
+CH0.DRV8   1        SSD    NVMe      healthy  18.30T    189.97G       0.00      16205325030147244652:10470832426085861157  144/429        313432/416336
+CH0.DRV9   1        SSD    NVMe      healthy  18.30T    192.84G       0.00      12625659929019762645:13005700653166500789  133/429        313739/415786
+CH0.DRV10  1        SSD    NVMe      healthy  18.30T    191.14G       0.00      17758470257353506880:13489011579102749383  128/429        313743/416218
+CH0.DRV11  1        SSD    NVMe      healthy  18.30T    191.21G       0.00      8134911724750979493:9589409693257880212    133/429        313755/416065
+CH0.DRV12  1        SSD    NVMe      healthy  18.30T    191.65G       0.00      13395619499819944934:9724962726743527190   127/429        313531/416140
+CH0.DRV13  1        SSD    NVMe      healthy  18.30T    192.12G       0.00      4191304270683915911:12968513302391677982   110/429        313361/416083
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      17387743596597626609:10072965070149068486  -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      16797490600721138908:10851329451595031745  -              -
+CH0.NVR2   0        NVRAM  NVMe      healthy  7.52G     -             0.00      11297966308680550270:12065902722792189490  -              -
+CH0.NVR3   0        NVRAM  NVMe      healthy  7.52G     -             0.00      18167919591809633989:12760584973166344680  -              -
+SH9.DRV24  1        SSD    NVMe      healthy  18.30T    190.32G       0.00      4085459881005039940:13510394570277007350   165/429        313752/415802
+SH9.DRV25  1        SSD    NVMe      healthy  18.30T    191.18G       0.00      4059324400360049985:10190605294472401793   155/429        313388/416151
+SH9.DRV26  1        SSD    NVMe      healthy  18.30T    193.40G       0.00      2639249590658813324:13118699238947082661   184/429        313877/416006
+SH9.DRV27  1        SSD    NVMe      healthy  18.30T    192.08G       0.00      15737583536224486523:11958139433408639323  160/429        314071/416275
+     root@Tele-Pure-01-ct0:/var/home/pureeng# ^C
+     root@Tele-Pure-01-ct0:/var/home/pureeng# puredb list driveswatch purearray list --space
+Every 2.0s: purearray list --space    Tele-Pure-01-ct0: Thu Sep 11 11:37:42 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique   Snapshots  Shared  System  ReplicationTotalTele-Pure-01  222.44T   100%    -386.68T  33%2.8 to 14.1 to 1112.26T  24.13T     34.00T  0.00    0.00170.39T5850350.32T   87% 88:00368113682143269314694247952579:002581035821368313694146951467940:02479125720257883035840368513100%691:014     root@Tele-Pure-01-ct0:/var/home/pureeng# watch purearray list --spacepuredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    NVMe      healthy  18.30T    0.00          0.00      4437333415287213109:12450047589662432096   80/269         198997/277660
+CH0.DRV1   1        SSD    NVMe      healthy  18.30T    0.00          0.00      10880255374292959342:11202314089994154311  91/269         198588/277572
+CH0.DRV2   1        SSD    NVMe      healthy  18.30T    0.00          0.00      3402522389123450938:13688446784943458726   102/269        199112/277837
+CH0.DRV3   1        SSD    NVMe      healthy  18.30T    0.00          0.00      3282210712793990049:10744477063643795420   94/269         198630/277701
+CH0.DRV4   1        SSD    NVMe      healthy  18.30T    0.00          0.00      16932455266470087018:13004050925816920761  91/269         198836/277614
+CH0.DRV5   1        SSD    NVMe      healthy  18.30T    0.00          0.00      16457967674219841835:11438755912498377953  106/269        198546/277569
+CH0.DRV6   1        SSD    NVMe      healthy  18.30T    0.00          0.00      11538459319957474892:11014667027535622787  76/269         198705/277481
+CH0.DRV7   1        SSD    NVMe      healthy  18.30T    0.00          0.00      6215824297033941868:11740846779296444670   78/269         198904/277796
+CH0.DRV8   1        SSD    NVMe      healthy  18.30T    191.19G       0.00      16205325030147244652:10470832426085861157  152/429        313615/416336
+CH0.DRV9   1        SSD    NVMe      healthy  18.30T    193.99G       0.00      12625659929019762645:13005700653166500789  141/429        313948/415786
+CH0.DRV10  1        SSD    NVMe      healthy  18.30T    192.30G       0.00      17758470257353506880:13489011579102749383  136/429        313986/416218
+CH0.DRV11  1        SSD    NVMe      healthy  18.30T    192.67G       0.00      8134911724750979493:9589409693257880212    141/429        313964/416065
+CH0.DRV12  1        SSD    NVMe      healthy  18.30T    193.12G       0.00      13395619499819944934:9724962726743527190   139/429        313749/416140
+CH0.DRV13  1        SSD    NVMe      healthy  18.30T    193.19G       0.00      4191304270683915911:12968513302391677982   118/429        313586/416083
+CH0.DRV14  1        SSD    NVMe      healthy  18.30T    191.58G       0.00      4085459881005039940:13510394570277007350   122/429        313617/415802
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      17387743596597626609:10072965070149068486  -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      16797490600721138908:10851329451595031745  -              -
+CH0.NVR2   0        NVRAM  NVMe      healthy  7.52G     -             0.00      11297966308680550270:12065902722792189490  -              -
+CH0.NVR3   0        NVRAM  NVMe      healthy  7.52G     -             0.00      18167919591809633989:12760584973166344680  -              -
+SH9.DRV25  1        SSD    NVMe      healthy  18.30T    192.29G       0.00      4059324400360049985:10190605294472401793   159/429        313594/416151
+SH9.DRV26  1        SSD    NVMe      healthy  18.30T    194.51G       0.00      2639249590658813324:13118699238947082661   188/429        314081/416006
+SH9.DRV27  1        SSD    NVMe      healthy  18.30T    193.28G       0.00      15737583536224486523:11958139433408639323  168/429        314287/416275
+     root@Tele-Pure-01-ct0:/var/home/pureeng# puredb list driveswatch purearray list --space
+Every 2.0s: purearray list --space    Tele-Pure-01-ct0: Thu Sep 11 11:41:08 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique   Snapshots  Shared  System  ReplicationTotalTele-Pure-01  220.32T   100%    -386.68T  33%2.8 to 14.1 to 1112.26T  24.13T     34.00T  0.00    0.00170.39T1136821472% 693147942475025372:00258103582036831368414695142.44T   453.954693:024791247202596730258403585036884:0136811369214100%69314794247502575:002581035     root@Tele-Pure-01-ct0:/var/home/pureeng# watch purearray list --spacepuredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    NVMe      healthy  18.30T    0.00          0.00      4437333415287213109:12450047589662432096   86/269         198527/277660
+CH0.DRV1   1        SSD    NVMe      healthy  18.30T    0.00          0.00      10880255374292959342:11202314089994154311  93/269         198100/277572
+CH0.DRV2   1        SSD    NVMe      healthy  18.30T    0.00          0.00      3402522389123450938:13688446784943458726   106/269        198621/277837
+CH0.DRV3   1        SSD    NVMe      healthy  18.30T    0.00          0.00      3282210712793990049:10744477063643795420   96/269         198184/277701
+CH0.DRV4   1        SSD    NVMe      healthy  18.30T    0.00          0.00      16932455266470087018:13004050925816920761  95/269         198384/277614
+CH0.DRV5   1        SSD    NVMe      healthy  18.30T    0.00          0.00      16457967674219841835:11438755912498377953  108/269        198088/277569
+CH0.DRV6   1        SSD    NVMe      healthy  18.30T    0.00          0.00      11538459319957474892:11014667027535622787  81/269         198255/277481
+CH0.DRV7   1        SSD    NVMe      healthy  18.30T    0.00          0.00      6215824297033941868:11740846779296444670   80/269         198456/277796
+CH0.DRV8   1        SSD    NVMe      healthy  18.30T    191.26G       0.00      16205325030147244652:10470832426085861157  165/429        312891/416336
+CH0.DRV9   1        SSD    NVMe      healthy  18.30T    194.13G       0.00      12625659929019762645:13005700653166500789  153/429        313220/415786
+CH0.DRV10  1        SSD    NVMe      healthy  18.30T    192.34G       0.00      17758470257353506880:13489011579102749383  140/429        313286/416218
+CH0.DRV11  1        SSD    NVMe      healthy  18.30T    192.74G       0.00      8134911724750979493:9589409693257880212    146/429        313330/416065
+CH0.DRV12  1        SSD    NVMe      healthy  18.30T    193.22G       0.00      13395619499819944934:9724962726743527190   146/429        313124/416140
+CH0.DRV13  1        SSD    NVMe      healthy  18.30T    192.92G       0.00      4191304270683915911:12968513302391677982   118/429        312892/416083
+CH0.DRV14  1        SSD    NVMe      healthy  18.30T    191.17G       0.00      4085459881005039940:13510394570277007350   107/429        312955/415802
+CH0.DRV15  1        SSD    NVMe      healthy  18.30T    192.38G       0.00      4059324400360049985:10190605294472401793   120/429        312513/416151
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      17387743596597626609:10072965070149068486  -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      16797490600721138908:10851329451595031745  -              -
+CH0.NVR2   0        NVRAM  NVMe      healthy  7.52G     -             0.00      11297966308680550270:12065902722792189490  -              -
+CH0.NVR3   0        NVRAM  NVMe      healthy  7.52G     -             0.00      18167919591809633989:12760584973166344680  -              -
+SH9.DRV26  1        SSD    NVMe      healthy  18.30T    194.58G       0.00      2639249590658813324:13118699238947082661   192/429        313312/416006
+SH9.DRV27  1        SSD    NVMe      healthy  18.30T    193.42G       0.00      15737583536224486523:11958139433408639323  171/429        313552/416275
+     root@Tele-Pure-01-ct0:/var/home/pureeng# ^C
+     root@Tele-Pure-01-ct0:/var/home/pureeng# puredb list driveswatch purearray list --space
+Every 2.0s: purearray list --space    Tele-Pure-01-ct0: Thu Sep 11 11:45:20 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique   Snapshots  Shared  System  ReplicationTotalTele-Pure-01  222.44T   100%    -386.68T  33%2.8 to 14.1 to 1112.26T  24.13T     33.95T  0.00    0.00170.34T3598% 8303684136851446696:01479124792253273025840358503687:013681136921463693147942479524976578:00257102582035100%830358     root@Tele-Pure-01-ct0:/var/home/pureeng# watch purearray list --spacepuredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    NVMe      healthy  18.30T    0.00          0.00      4437333415287213109:12450047589662432096   88/269         198605/277660
+CH0.DRV1   1        SSD    NVMe      healthy  18.30T    0.00          0.00      10880255374292959342:11202314089994154311  101/269        198178/277572
+CH0.DRV2   1        SSD    NVMe      healthy  18.30T    0.00          0.00      3402522389123450938:13688446784943458726   110/269        198703/277837
+CH0.DRV3   1        SSD    NVMe      healthy  18.30T    0.00          0.00      3282210712793990049:10744477063643795420   100/269        198272/277701
+CH0.DRV4   1        SSD    NVMe      healthy  18.30T    0.00          0.00      16932455266470087018:13004050925816920761  99/269         198454/277614
+CH0.DRV5   1        SSD    NVMe      healthy  18.30T    0.00          0.00      16457967674219841835:11438755912498377953  120/269        198158/277569
+CH0.DRV6   1        SSD    NVMe      healthy  18.30T    0.00          0.00      11538459319957474892:11014667027535622787  81/269         198315/277481
+CH0.DRV7   1        SSD    NVMe      healthy  18.30T    0.00          0.00      6215824297033941868:11740846779296444670   86/269         198540/277796
+CH0.DRV8   1        SSD    NVMe      healthy  18.30T    190.77G       0.00      16205325030147244652:10470832426085861157  165/429        313025/416336
+CH0.DRV9   1        SSD    NVMe      healthy  18.30T    194.16G       0.00      12625659929019762645:13005700653166500789  161/429        313359/415786
+CH0.DRV10  1        SSD    NVMe      healthy  18.30T    192.28G       0.00      17758470257353506880:13489011579102749383  152/429        313418/416218
+CH0.DRV11  1        SSD    NVMe      healthy  18.30T    192.70G       0.00      8134911724750979493:9589409693257880212    150/429        313470/416065
+CH0.DRV12  1        SSD    NVMe      healthy  18.30T    193.03G       0.00      13395619499819944934:9724962726743527190   162/429        313266/416140
+CH0.DRV13  1        SSD    NVMe      healthy  18.30T    192.06G       0.00      4191304270683915911:12968513302391677982   126/429        313048/416083
+CH0.DRV14  1        SSD    NVMe      healthy  18.30T    190.45G       0.00      4085459881005039940:13510394570277007350   111/429        313103/415802
+CH0.DRV15  1        SSD    NVMe      healthy  18.30T    191.33G       0.00      4059324400360049985:10190605294472401793   113/429        312711/416151
+CH0.DRV16  1        SSD    NVMe      healthy  18.30T    193.83G       0.00      2639249590658813324:13118699238947082661   139/429        313115/416006
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      17387743596597626609:10072965070149068486  -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      16797490600721138908:10851329451595031745  -              -
+CH0.NVR2   0        NVRAM  NVMe      healthy  7.52G     -             0.00      11297966308680550270:12065902722792189490  -              -
+CH0.NVR3   0        NVRAM  NVMe      healthy  7.52G     -             0.00      18167919591809633989:12760584973166344680  -              -
+SH9.DRV27  1        SSD    NVMe      healthy  18.30T    193.33G       0.00      15737583536224486523:11958139433408639323  179/429        313676/416275
+     root@Tele-Pure-01-ct0:/var/home/pureeng# puredb list driveswatch purearray list --space
+Every 2.0s: purearray list --space    Tele-Pure-01-ct0: Thu Sep 11 11:48:43 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique   Snapshots  Shared  System  ReplicationTotalTele-Pure-01  222.44T   100%    -386.68T  33%2.8 to 14.1 to 1112.26T  24.13T     33.96T  0.00    0.00170.35T6851384% 689:014691146922432793247942575025750:0035810368213638313694146951465791:02479125720259873035840358503682:013681146921469314794247952505.63T   100%73:0025710358203583136841369514694:014791247202573035840358513685:013681146921469324794247502576:0025810358     root@Tele-Pure-01-ct0:/var/home/pureeng# PUREHpurehw list
+Name          Status         Identify  Slot  Index  Speed       Temperature  Voltage  Details
+CH0           ok             off       -     0      -           -            -        -
+CH0.BAY0      ok             off       -     0      -           -            -        -
+CH0.BAY1      ok             off       -     1      -           -            -        -
+CH0.BAY2      ok             off       -     2      -           -            -        -
+CH0.BAY3      ok             off       -     3      -           -            -        -
+CH0.BAY4      ok             off       -     4      -           -            -        -
+CH0.BAY5      ok             off       -     5      -           -            -        -
+CH0.BAY6      ok             off       -     6      -           -            -        -
+CH0.BAY7      ok             off       -     7      -           -            -        -
+CH0.BAY8      ok             off       -     8      -           -            -        -
+CH0.BAY9      ok             off       -     9      -           -            -        -
+CH0.BAY10     ok             off       -     10     -           -            -        -
+CH0.BAY11     ok             off       -     11     -           -            -        -
+CH0.BAY12     ok             off       -     12     -           -            -        -
+CH0.BAY13     ok             off       -     13     -           -            -        -
+CH0.BAY14     ok             off       -     14     -           -            -        -
+CH0.BAY15     ok             off       -     15     -           -            -        -
+CH0.BAY16     ok             off       -     16     -           -            -        -
+CH0.BAY17     ok             off       -     17     -           -            -        -
+CH0.BAY18     not_installed  off       -     18     -           -            -        -
+CH0.BAY19     not_installed  off       -     19     -           -            -        -
+CH0.NVB0      ok             off       -     0      -           -            -        -
+CH0.NVB1      ok             off       -     1      -           -            -        -
+CH0.NVB2      ok             off       -     2      -           -            -        -
+CH0.NVB3      ok             off       -     3      -           -            -        -
+CH0.PWR0      ok             -         -     0      -           -            206 V    -
+CH0.PWR1      ok             -         -     1      -           -            203 V    -
+CH0.TMP0      ok             -         -     0      -           14 C         -        -
+CT0           ok             off       -     0      -           -            -        -
+CT0.ETH0      ok             -         -     0      1.00 Gb/s   -            -        -
+CT0.ETH1      ok             -         -     1      0.00 b/s    -            -        -
+CT0.ETH2      ok             -         -     2      10.00 Gb/s  -            -        -
+CT0.ETH3      ok             -         -     3      10.00 Gb/s  -            -        -
+CT0.ETH4      ok             -         -     4      10.00 Gb/s  -            -        -
+CT0.ETH5      ok             -         -     5      10.00 Gb/s  -            -        -
+CT0.ETH14     ok             -         1     14     50.00 Gb/s  -            -        -
+CT0.ETH15     ok             -         1     15     50.00 Gb/s  -            -        -
+CT0.FAN0      ok             -         -     0      -           -            -        -
+CT0.FAN1      ok             -         -     1      -           -            -        -
+CT0.FAN2      ok             -         -     2      -           -            -        -
+CT0.FAN3      ok             -         -     3      -           -            -        -
+CT0.FAN4      ok             -         -     4      -           -            -        -
+CT0.FAN5      ok             -         -     5      -           -            -        -
+CT0.FC0       ok             -         0     0      0.00 b/s    -            -        -
+CT0.FC1       ok             -         0     1      0.00 b/s    -            -        -
+CT0.FC2       ok             -         0     2      0.00 b/s    -            -        -
+CT0.FC3       ok             -         0     3      0.00 b/s    -            -        -
+CT0.FC8       ok             -         2     8      16.00 Gb/s  -            -        -
+CT0.FC9       ok             -         2     9      16.00 Gb/s  -            -        -
+CT0.SAS0      ok             -         -     0      0.00 b/s    -            -        -
+CT0.SAS1      ok             -         -     1      0.00 b/s    -            -        -
+CT0.SAS2      ok             -         -     2      0.00 b/s    -            -        -
+CT0.SAS3      ok             -         -     3      0.00 b/s    -            -        -
+CT0.TMP0      ok             -         -     0      -           30 C         -        -
+CT0.TMP1      ok             -         -     1      -           29 C         -        -
+CT0.TMP2      ok             -         -     2      -           24 C         -        -
+CT0.TMP3      ok             -         -     3      -           36 C         -        -
+CT0.TMP4      ok             -         -     4      -           36 C         -        -
+CT0.TMP5      ok             -         -     5      -           30 C         -        -
+CT0.TMP6      ok             -         -     6      -           34 C         -        -
+CT0.TMP7      ok             -         -     7      -           24 C         -        -
+CT0.TMP8      ok             -         -     8      -           24 C         -        -
+CT0.TMP9      ok             -         -     9      -           25 C         -        -
+CT0.TMP10     ok             -         -     10     -           25 C         -        -
+CT0.TMP11     ok             -         -     11     -           24 C         -        -
+CT0.TMP12     ok             -         -     12     -           24 C         -        -
+CT0.TMP13     ok             -         -     13     -           27 C         -        -
+CT0.TMP14     ok             -         -     14     -           26 C         -        -
+CT0.TMP15     ok             -         -     15     -           26 C         -        -
+CT0.TMP16     ok             -         -     16     -           25 C         -        -
+CT0.TMP17     ok             -         -     17     -           25 C         -        -
+CT0.TMP18     ok             -         -     18     -           25 C         -        -
+CT0.TMP19     ok             -         -     19     -           27 C         -        -
+CT0.TMP20     ok             -         -     20     -           26 C         -        -
+CT0.TMP21     ok             -         -     21     -           30 C         -        -
+CT0.TMP22     ok             -         -     22     -           28 C         -        -
+CT0.TMP23     ok             -         -     23     -           30 C         -        -
+CT0.TMP24     ok             -         -     24     -           30 C         -        -
+CT0.TMP25     ok             -         -     25     -           34 C         -        -
+CT0.TMP26     ok             -         -     26     -           24 C         -        -
+CT1           ok             off       -     1      -           -            -        -
+CT1.ETH0      ok             -         -     0      1.00 Gb/s   -            -        -
+CT1.ETH1      ok             -         -     1      0.00 b/s    -            -        -
+CT1.ETH2      ok             -         -     2      10.00 Gb/s  -            -        -
+CT1.ETH3      ok             -         -     3      10.00 Gb/s  -            -        -
+CT1.ETH4      ok             -         -     4      10.00 Gb/s  -            -        -
+CT1.ETH5      ok             -         -     5      10.00 Gb/s  -            -        -
+CT1.ETH14     ok             -         1     14     50.00 Gb/s  -            -        -
+CT1.ETH15     ok             -         1     15     50.00 Gb/s  -            -        -
+CT1.FAN0      ok             -         -     0      -           -            -        -
+CT1.FAN1      ok             -         -     1      -           -            -        -
+CT1.FAN2      ok             -         -     2      -           -            -        -
+CT1.FAN3      ok             -         -     3      -           -            -        -
+CT1.FAN4      ok             -         -     4      -           -            -        -
+CT1.FAN5      ok             -         -     5      -           -            -        -
+CT1.FC0       ok             -         0     0      0.00 b/s    -            -        -
+CT1.FC1       ok             -         0     1      0.00 b/s    -            -        -
+CT1.FC2       ok             -         0     2      0.00 b/s    -            -        -
+CT1.FC3       ok             -         0     3      0.00 b/s    -            -        -
+CT1.FC8       ok             -         2     8      16.00 Gb/s  -            -        -
+CT1.FC9       ok             -         2     9      16.00 Gb/s  -            -        -
+CT1.SAS0      ok             -         -     0      0.00 b/s    -            -        -
+CT1.SAS1      ok             -         -     1      0.00 b/s    -            -        -
+CT1.SAS2      ok             -         -     2      0.00 b/s    -            -        -
+CT1.SAS3      ok             -         -     3      0.00 b/s    -            -        -
+CT1.TMP0      ok             -         -     0      -           35 C         -        -
+CT1.TMP1      ok             -         -     1      -           36 C         -        -
+CT1.TMP2      ok             -         -     2      -           27 C         -        -
+CT1.TMP3      ok             -         -     3      -           47 C         -        -
+CT1.TMP4      ok             -         -     4      -           46 C         -        -
+CT1.TMP5      ok             -         -     5      -           36 C         -        -
+CT1.TMP6      ok             -         -     6      -           42 C         -        -
+CT1.TMP7      ok             -         -     7      -           30 C         -        -
+CT1.TMP8      ok             -         -     8      -           30 C         -        -
+CT1.TMP9      ok             -         -     9      -           31 C         -        -
+CT1.TMP10     ok             -         -     10     -           29 C         -        -
+CT1.TMP11     ok             -         -     11     -           29 C         -        -
+CT1.TMP12     ok             -         -     12     -           28 C         -        -
+CT1.TMP13     ok             -         -     13     -           31 C         -        -
+CT1.TMP14     ok             -         -     14     -           30 C         -        -
+CT1.TMP15     ok             -         -     15     -           30 C         -        -
+CT1.TMP16     ok             -         -     16     -           30 C         -        -
+CT1.TMP17     ok             -         -     17     -           30 C         -        -
+CT1.TMP18     ok             -         -     18     -           31 C         -        -
+CT1.TMP19     ok             -         -     19     -           29 C         -        -
+CT1.TMP20     ok             -         -     20     -           29 C         -        -
+CT1.TMP21     ok             -         -     21     -           36 C         -        -
+CT1.TMP22     ok             -         -     22     -           32 C         -        -
+CT1.TMP23     ok             -         -     23     -           36 C         -        -
+CT1.TMP24     ok             -         -     24     -           37 C         -        -
+CT1.TMP25     ok             -         -     25     -           42 C         -        -
+CT1.TMP26     ok             -         -     26     -           28 C         -        -
+SH9           ok             off       -     9      -           15 C         -        -
+SH9.BAY0      not_installed  off       -     0      -           -            -        -
+SH9.BAY1      not_installed  off       -     1      -           -            -        -
+SH9.BAY2      not_installed  off       -     2      -           -            -        -
+SH9.BAY3      not_installed  off       -     3      -           -            -        -
+SH9.BAY4      not_installed  off       -     4      -           -            -        -
+SH9.BAY5      not_installed  off       -     5      -           -            -        -
+SH9.BAY6      not_installed  off       -     6      -           -            -        -
+SH9.BAY7      not_installed  off       -     7      -           -            -        -
+SH9.BAY8      not_installed  on        -     8      -           -            -        -
+SH9.BAY9      not_installed  off       -     9      -           -            -        -
+SH9.BAY10     not_installed  off       -     10     -           -            -        -
+SH9.BAY11     not_installed  off       -     11     -           -            -        -
+SH9.BAY12     not_installed  off       -     12     -           -            -        -
+SH9.BAY13     not_installed  off       -     13     -           -            -        -
+SH9.BAY14     not_installed  off       -     14     -           -            -        -
+SH9.BAY15     not_installed  off       -     15     -           -            -        -
+SH9.BAY16     not_installed  off       -     16     -           -            -        -
+SH9.BAY17     not_installed  off       -     17     -           -            -        -
+SH9.BAY18     not_installed  off       -     18     -           -            -        -
+SH9.BAY19     not_installed  off       -     19     -           -            -        -
+SH9.BAY20     not_installed  off       -     20     -           -            -        -
+SH9.BAY21     not_installed  off       -     21     -           -            -        -
+SH9.BAY22     not_installed  off       -     22     -           -            -        -
+SH9.BAY23     not_installed  off       -     23     -           -            -        -
+SH9.BAY24     not_installed  off       -     24     -           -            -        -
+SH9.BAY25     not_installed  off       -     25     -           -            -        -
+SH9.BAY26     not_installed  off       -     26     -           -            -        -
+SH9.BAY27     not_installed  off       -     27     -           -            -        -
+SH9.PWR0      ok             -         -     0      -           -            203 V    -
+SH9.PWR1      ok             -         -     1      -           -            203 V    -
+SH9.SC0       ok             off       -     0      -           19 C         -        -
+SH9.SC0.ETH0  ok             -         -     0      50.00 Gb/s  -            -        -
+SH9.SC0.ETH1  ok             -         -     1      0.00 b/s    -            -        -
+SH9.SC0.ETH2  ok             -         -     2      50.00 Gb/s  -            -        -
+SH9.SC0.ETH3  ok             -         -     3      0.00 b/s    -            -        -
+SH9.SC0.FAN0  ok             -         -     0      -           -            -        -
+SH9.SC0.FAN1  ok             -         -     1      -           -            -        -
+SH9.SC0.FAN2  ok             -         -     2      -           -            -        -
+SH9.SC0.FAN3  ok             -         -     3      -           -            -        -
+SH9.SC0.FAN4  ok             -         -     4      -           -            -        -
+SH9.SC0.FAN5  ok             -         -     5      -           -            -        -
+SH9.SC1       ok             off       -     1      -           19 C         -        -
+SH9.SC1.ETH0  ok             -         -     0      50.00 Gb/s  -            -        -
+SH9.SC1.ETH1  ok             -         -     1      0.00 b/s    -            -        -
+SH9.SC1.ETH2  ok             -         -     2      50.00 Gb/s  -            -        -
+SH9.SC1.ETH3  ok             -         -     3      0.00 b/s    -            -        -
+SH9.SC1.FAN0  ok             -         -     0      -           -            -        -
+SH9.SC1.FAN1  ok             -         -     1      -           -            -        -
+SH9.SC1.FAN2  ok             -         -     2      -           -            -        -
+SH9.SC1.FAN3  ok             -         -     3      -           -            -        -
+SH9.SC1.FAN4  ok             -         -     4      -           -            -        -
+SH9.SC1.FAN5  ok             -         -     5      -           -            -        -
+     root@Tele-Pure-01-ct0:/var/home/pureeng# puremessage list --open
+ID        Time                     Severity  Category  Code  Component  Name            Event             Expected  Actual  Details
+12938205  2025-09-11 11:53:48 EDT  info      array     25    storage    array.capacity  high utilization  -         82.84%  
+     root@Tele-Pure-01-ct0:/var/home/pureeng# 

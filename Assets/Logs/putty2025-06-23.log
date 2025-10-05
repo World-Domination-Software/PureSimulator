@@ -1,0 +1,618 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.06.23 09:47:43 =~=~=~=~=~=~=~=~=~=~=~=
+
+ASB-SAN1-ct0 login: pureeng
+1) Authenticate via CloudAssist
+2) Authenticate via command line
+3) Restore challenge
+Type the number corresponding to the authentication method you want to use.
+
+Selection: 1
+
+An email for identity verification will be sent once email is entered.
+Please follow the authentication instructions provided there and return to this screen when finished or if email has not been received.
+
+
+Enter an email address: fharria@pureatorage.com
+An error occurred with CloudAssist authentication!
+
+1) Authenticate via CloudAssist
+2) Authenticate via command line
+3) Restore challenge
+Type the number corresponding to the authentication method you want to use.
+
+Selection: 1
+
+An email for identity verification will be sent once email is entered.
+Please follow the authentication instructions provided there and return to this screen when finished or if email has not been received.
+
+
+Enter an email address: fharris@purestoragw.com
+An error occurred with CloudAssist authentication!
+
+1) Authenticate via CloudAssist
+2) Authenticate via command line
+3) Restore challenge
+Type the number corresponding to the authentication method you want to use.
+
+Selection: 1
+
+An email for identity verification will be sent once email is entered.
+Please follow the authentication instructions provided there and return to this screen when finished or if email has not been received.
+
+
+Enter an email address: fharris@purestr orage.com
+Successfully authenticated
+Last login: Tue Oct  8 10:49:59 EDT 2024 on ttyS0
+
+Mon Jun 23 09:49:23 2025
+Welcome pureeng. This is Purity Version 6.5.8 on FlashArray ASB-SAN1
+http://www.purestorage.com/
+pureeng@ASB-SAN1-ct0:~$ purehw list
+Name       Status         Identify  Slot  Index  Speed       Temperature  Voltage  Details
+CH0        ok             off       -     0      -           -            -        -
+CH0.BAY0   ok             off       -     0      -           -            -        -
+CH0.BAY1   ok             off       -     1      -           -            -        -
+CH0.BAY2   ok             off       -     2      -           -            -        -
+CH0.BAY3   ok             off       -     3      -           -            -        -
+CH0.BAY4   ok             off       -     4      -           -            -        -
+CH0.BAY5   ok             off       -     5      -           -            -        -
+CH0.BAY6   ok             off       -     6      -           -            -        -
+CH0.BAY7   ok             off       -     7      -           -            -        -
+CH0.BAY8   ok             off       -     8      -           -            -        -
+CH0.BAY9   ok             off       -     9      -           -            -        -
+CH0.BAY10  not_installed  off       -     10     -           -            -        -
+CH0.BAY11  not_installed  off       -     11     -           -            -        -
+CH0.BAY12  not_installed  off       -     12     -           -            -        -
+CH0.BAY13  not_installed  off       -     13     -           -            -        -
+CH0.BAY14  not_installed  off       -     14     -           -            -        -
+CH0.BAY15  not_installed  off       -     15     -           -            -        -
+CH0.BAY16  not_installed  off       -     16     -           -            -        -
+CH0.BAY17  not_installed  off       -     17     -           -            -        -
+CH0.BAY18  not_installed  off       -     18     -           -            -        -
+CH0.BAY19  not_installed  off       -     19     -           -            -        -
+CH0.NVB0   ok             off       -     0      -           -            -        -
+CH0.NVB1   ok             off       -     1      -           -            -        -
+CH0.NVB2   not_installed  off       -     2      -           -            -        -
+CH0.NVB3   not_installed  off       -     3      -           -            -        -
+CH0.PWR0   ok             -         -     0      -           -            206 V    -
+CH0.PWR1   ok             -         -     1      -           -            206 V    -
+CH0.TMP0   ok             -         -     0      -           24 C         -        -
+CT0        ok             off       -     0      -           -            -        -
+CT0.ETH0   ok             -         -     0      0.00 b/s    -            -        -
+CT0.ETH1   ok             -         -     1      0.00 b/s    -            -        -
+CT0.ETH2   ok             -         -     2      10.00 Gb/s  -            -        -
+CT0.ETH3   ok             -         -     3      10.00 Gb/s  -            -        -
+CT0.ETH4   ok             -         -     4      1.00 Gb/s   -            -        -
+CT0.ETH5   ok             -         -     5      0.00 b/s    -            -        -
+CT0.ETH18  ok             -         3     18     25.00 Gb/s  -            -        -
+CT0.ETH19  ok             -         3     19     25.00 Gb/s  -            -        -
+CT0.FAN0   ok             -         -     0      -           -            -        -
+CT0.FAN1   ok             -         -     1      -           -            -        -
+CT0.FAN2   ok             -         -     2      -           -            -        -
+CT0.FAN3   ok             -         -     3      -           -            -        -
+CT0.FAN4   ok             -         -     4      -           -            -        -
+CT0.FAN5   ok             -         -     5      -           -            -        -
+CT0.TMP0   ok             -         -     0      -           36 C         -        -
+CT0.TMP1   ok             -         -     1      -           38 C         -        -
+CT0.TMP2   ok             -         -     2      -           47 C         -        -
+CT0.TMP3   ok             -         -     3      -           47 C         -        -
+CT0.TMP4   ok             -         -     4      -           40 C         -        -
+CT0.TMP5   ok             -         -     5      -           41 C         -        -
+CT0.TMP6   ok             -         -     6      -           28 C         -        -
+CT0.TMP7   ok             -         -     7      -           28 C         -        -
+CT0.TMP8   ok             -         -     8      -           46 C         -        -
+CT0.TMP9   ok             -         -     9      -           33 C         -        -
+CT0.TMP11  ok             -         -     11     -           30 C         -        -
+CT0.TMP13  ok             -         -     13     -           34 C         -        -
+CT0.TMP15  ok             -         -     15     -           32 C         -        -
+CT0.TMP17  ok             -         -     17     -           34 C         -        -
+CT0.TMP19  ok             -         -     19     -           33 C         -        -
+CT0.TMP21  ok             -         -     21     -           36 C         -        -
+CT0.TMP23  ok             -         -     23     -           35 C         -        -
+CT1        ok             off       -     1      -           -            -        -
+CT1.ETH0   ok             -         -     0      0.00 b/s    -            -        -
+CT1.ETH1   ok             -         -     1      0.00 b/s    -            -        -
+CT1.ETH2   ok             -         -     2      10.00 Gb/s  -            -        -
+CT1.ETH3   ok             -         -     3      10.00 Gb/s  -            -        -
+CT1.ETH4   ok             -         -     4      1.00 Gb/s   -            -        -
+CT1.ETH5   ok             -         -     5      0.00 b/s    -            -        -
+CT1.ETH18  ok             -         3     18     25.00 Gb/s  -            -        -
+CT1.ETH19  ok             -         3     19     25.00 Gb/s  -            -        -
+CT1.FAN0   ok             -         -     0      -           -            -        -
+CT1.FAN1   ok             -         -     1      -           -            -        -
+CT1.FAN2   ok             -         -     2      -           -            -        -
+CT1.FAN3   ok             -         -     3      -           -            -        -
+CT1.FAN4   ok             -         -     4      -           -            -        -
+CT1.FAN5   ok             -         -     5      -           -            -        -
+CT1.TMP0   ok             -         -     0      -           37 C         -        -
+CT1.TMP1   ok             -         -     1      -           38 C         -        -
+CT1.TMP2   ok             -         -     2      -           49 C         -        -
+CT1.TMP3   ok             -         -     3      -           47 C         -        -
+CT1.TMP4   ok             -         -     4      -           41 C         -        -
+CT1.TMP5   ok             -         -     5      -           42 C         -        -
+CT1.TMP6   ok             -         -     6      -           28 C         -        -
+CT1.TMP7   ok             -         -     7      -           29 C         -        -
+CT1.TMP8   ok             -         -     8      -           50 C         -        -
+CT1.TMP9   ok             -         -     9      -           34 C         -        -
+CT1.TMP11  ok             -         -     11     -           33 C         -        -
+CT1.TMP13  ok             -         -     13     -           35 C         -        -
+CT1.TMP15  ok             -         -     15     -           33 C         -        -
+CT1.TMP17  ok             -         -     17     -           35 C         -        -
+CT1.TMP19  ok             -         -     19     -           34 C         -        -
+CT1.TMP21  ok             -         -     21     -           38 C         -        -
+CT1.TMP23  ok             -         -     23     -           36 C         -        -
+pureeng@ASB-SAN1-ct0:~$ puremessage list --open
+pureeng@ASB-SAN1-ct0:~$ purearray list --controller
+Name  Type              Mode       Model     Version  Status  Internal Details
+CT0   array_controller  secondary  FA-X20R4  6.5.8    ready   
+CT1   array_controller  primary    FA-X20R4  6.5.8    ready   
+pureeng@ASB-SAN1-ct0:~$ puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    healthy  1.92T     -
+CH0.BAY1   SSD    healthy  1.92T     -
+CH0.BAY2   SSD    healthy  1.92T     -
+CH0.BAY3   SSD    healthy  1.92T     -
+CH0.BAY4   SSD    healthy  1.92T     -
+CH0.BAY5   SSD    healthy  1.92T     -
+CH0.BAY6   SSD    healthy  1.92T     -
+CH0.BAY7   SSD    healthy  1.92T     -
+CH0.BAY8   SSD    healthy  1.92T     -
+CH0.BAY9   SSD    healthy  1.92T     -
+CH0.BAY10  -      unused   0.00      -
+CH0.BAY11  -      unused   0.00      -
+CH0.BAY12  -      unused   0.00      -
+CH0.BAY13  -      unused   0.00      -
+CH0.BAY14  -      unused   0.00      -
+CH0.BAY15  -      unused   0.00      -
+CH0.BAY16  -      unused   0.00      -
+CH0.BAY17  -      unused   0.00      -
+CH0.BAY18  -      unused   0.00      -
+CH0.BAY19  -      unused   0.00      -
+CH0.NVB0   NVRAM  healthy  7.00G     -
+CH0.NVB1   NVRAM  healthy  7.00G     -
+CH0.NVB2   NVRAM  unused   0.00      -
+CH0.NVB3   NVRAM  unused   0.00      -
+pureeng@ASB-SAN1-ct0:~$ puarewatch purearray list --spadrpack CH0.BAY10
+Every 2.0s: purearray list --pack CH0...  ASB-SAN1-ct0: Mon Jun 23 09:50:23 2025usage: purearray [-h]{activate,authorize,connect,default-protection,diagnose,disable,disconnect,enable,encryption,eradication-config,erase,eula,factory-reset-token,list,monitor,phonehome,remoteassist,rename,replace,report,setattr,suspend,tag,test,throttle,untag}...purearray: error: unrecognized arguments: --pack6830357402469513681:003571024pureeng@ASB-SAN1-ct0:~$ PUREDpuredrivelist
+-bash: puredrivelist: command not found
+pureeng@ASB-SAN1-ct0:~$ puredrive list
+Name       Type   Status    Capacity  Details
+CH0.BAY0   SSD    healthy   1.92T     -
+CH0.BAY1   SSD    healthy   1.92T     -
+CH0.BAY2   SSD    healthy   1.92T     -
+CH0.BAY3   SSD    healthy   1.92T     -
+CH0.BAY4   SSD    healthy   1.92T     -
+CH0.BAY5   SSD    healthy   1.92T     -
+CH0.BAY6   SSD    healthy   1.92T     -
+CH0.BAY7   SSD    healthy   1.92T     -
+CH0.BAY8   SSD    healthy   1.92T     -
+CH0.BAY9   SSD    healthy   1.92T     -
+CH0.BAY10  SSD    updating  0.00      -
+CH0.BAY11  -      unused    0.00      -
+CH0.BAY12  -      unused    0.00      -
+CH0.BAY13  -      unused    0.00      -
+CH0.BAY14  -      unused    0.00      -
+CH0.BAY15  -      unused    0.00      -
+CH0.BAY16  -      unused    0.00      -
+CH0.BAY17  -      unused    0.00      -
+CH0.BAY18  -      unused    0.00      -
+CH0.BAY19  -      unused    0.00      -
+CH0.NVB0   NVRAM  healthy   7.00G     -
+CH0.NVB1   NVRAM  healthy   7.00G     -
+CH0.NVB2   NVRAM  unused    0.00      -
+CH0.NVB3   NVRAM  unused    0.00      -
+pureeng@ASB-SAN1-ct0:~$ purealert tag --timeout 120m --maintenance   
+Name         Created                  Expires
+maintenance  2025-06-23 09:51:49 EDT  2025-06-23 11:51:49 EDT
+pureeng@ASB-SAN1-ct0:~$ puredrive list --total
+Name       Type   Status    Capacity  Details
+CH0.BAY0   SSD    healthy   1.92T     -
+CH0.BAY1   SSD    healthy   1.92T     -
+CH0.BAY2   SSD    healthy   1.92T     -
+CH0.BAY3   SSD    healthy   1.92T     -
+CH0.BAY4   SSD    healthy   1.92T     -
+CH0.BAY5   SSD    healthy   1.92T     -
+CH0.BAY6   SSD    healthy   1.92T     -
+CH0.BAY7   SSD    healthy   1.92T     -
+CH0.BAY8   SSD    healthy   1.92T     -
+CH0.BAY9   SSD    healthy   1.92T     -
+CH0.BAY10  SSD    updating  0.00      Not accessible from CT1; 
+CH0.BAY11  -      unused    0.00      -
+CH0.BAY12  -      unused    0.00      -
+CH0.BAY13  -      unused    0.00      -
+CH0.BAY14  -      unused    0.00      -
+CH0.BAY15  -      unused    0.00      -
+CH0.BAY16  -      unused    0.00      -
+CH0.BAY17  -      unused    0.00      -
+CH0.BAY18  -      unused    0.00      -
+CH0.BAY19  -      unused    0.00      -
+CH0.NVB0   NVRAM  healthy   7.00G     -
+CH0.NVB1   NVRAM  healthy   7.00G     -
+CH0.NVB2   NVRAM  unused    0.00      -
+CH0.NVB3   NVRAM  unused    0.00      -
+(total)    -      -         -         -
+pureeng@ASB-SAN1-ct0:~$ puredrive list --total
+Name       Type   Status    Capacity  Details
+CH0.BAY0   SSD    healthy   1.92T     -
+CH0.BAY1   SSD    healthy   1.92T     -
+CH0.BAY2   SSD    healthy   1.92T     -
+CH0.BAY3   SSD    healthy   1.92T     -
+CH0.BAY4   SSD    healthy   1.92T     -
+CH0.BAY5   SSD    healthy   1.92T     -
+CH0.BAY6   SSD    healthy   1.92T     -
+CH0.BAY7   SSD    healthy   1.92T     -
+CH0.BAY8   SSD    healthy   1.92T     -
+CH0.BAY9   SSD    healthy   1.92T     -
+CH0.BAY10  SSD    updating  0.00      Not accessible from CT1; 
+CH0.BAY11  -      unused    0.00      -
+CH0.BAY12  -      unused    0.00      -
+CH0.BAY13  -      unused    0.00      -
+CH0.BAY14  -      unused    0.00      -
+CH0.BAY15  -      unused    0.00      -
+CH0.BAY16  -      unused    0.00      -
+CH0.BAY17  -      unused    0.00      -
+CH0.BAY18  -      unused    0.00      -
+CH0.BAY19  -      unused    0.00      -
+CH0.NVB0   NVRAM  healthy   7.00G     -
+CH0.NVB1   NVRAM  healthy   7.00G     -
+CH0.NVB2   NVRAM  unused    0.00      -
+CH0.NVB3   NVRAM  unused    0.00      -
+(total)    -      -         -         -
+pureeng@ASB-SAN1-ct0:~$ purpuredrive list
+Name       Type   Status      Capacity  Details
+CH0.BAY0   SSD    healthy     1.92T     -
+CH0.BAY1   SSD    healthy     1.92T     -
+CH0.BAY2   SSD    healthy     1.92T     -
+CH0.BAY3   SSD    healthy     1.92T     -
+CH0.BAY4   SSD    healthy     1.92T     -
+CH0.BAY5   SSD    healthy     1.92T     -
+CH0.BAY6   SSD    healthy     1.92T     -
+CH0.BAY7   SSD    healthy     1.92T     -
+CH0.BAY8   SSD    healthy     1.92T     -
+CH0.BAY9   SSD    healthy     1.92T     -
+CH0.BAY10  SSD    unadmitted  0.00      waiting for user
+CH0.BAY11  SSD    unadmitted  0.00      waiting for user
+CH0.BAY12  SSD    unhealthy   0.00      Firmware upgrade in progress. Current firmware: 2.8.25(http://go/zh)
+CH0.BAY13  SSD    unadmitted  0.00      waiting for user
+CH0.BAY14  SSD    updating    0.00      -
+CH0.BAY15  SSD    unhealthy   0.00      Firmware upgrade in progress. Current firmware: 2.8.25(http://go/zh)
+CH0.BAY16  SSD    unhealthy   0.00      Firmware upgrade in progress. Current firmware: 2.8.25(http://go/zh)
+CH0.BAY17  SSD    unhealthy   0.00      Firmware upgrade in progress. Current firmware: 2.8.25(http://go/zh)
+CH0.BAY18  SSD    unadmitted  0.00      waiting for user
+CH0.BAY19  SSD    unadmitted  0.00      waiting for user
+CH0.NVB0   NVRAM  healthy     7.00G     -
+CH0.NVB1   NVRAM  healthy     7.00G     -
+CH0.NVB2   NVRAM  unused      0.00      -
+CH0.NVB3   NVRAM  unused      0.00      -
+pureeng@ASB-SAN1-ct0:~$ puredrive list
+Name       Type   Status      Capacity  Details
+CH0.BAY0   SSD    healthy     1.92T     -
+CH0.BAY1   SSD    healthy     1.92T     -
+CH0.BAY2   SSD    healthy     1.92T     -
+CH0.BAY3   SSD    healthy     1.92T     -
+CH0.BAY4   SSD    healthy     1.92T     -
+CH0.BAY5   SSD    healthy     1.92T     -
+CH0.BAY6   SSD    healthy     1.92T     -
+CH0.BAY7   SSD    healthy     1.92T     -
+CH0.BAY8   SSD    healthy     1.92T     -
+CH0.BAY9   SSD    healthy     1.92T     -
+CH0.BAY10  SSD    unadmitted  0.00      waiting for user
+CH0.BAY11  SSD    unadmitted  0.00      waiting for user
+CH0.BAY12  SSD    unadmitted  0.00      waiting for user
+CH0.BAY13  SSD    unadmitted  0.00      waiting for user
+CH0.BAY14  SSD    unadmitted  0.00      waiting for user
+CH0.BAY15  SSD    unhealthy   0.00      Firmware upgrade in progress. Current firmware: 2.8.25(http://go/zh)
+CH0.BAY16  SSD    unhealthy   0.00      Firmware upgrade in progress. Current firmware: 2.8.25(http://go/zh)
+CH0.BAY17  SSD    unadmitted  0.00      waiting for user
+CH0.BAY18  SSD    unadmitted  0.00      waiting for user
+CH0.BAY19  SSD    unadmitted  0.00      waiting for user
+CH0.NVB0   NVRAM  healthy     7.00G     -
+CH0.NVB1   NVRAM  healthy     7.00G     -
+CH0.NVB2   NVRAM  unused      0.00      -
+CH0.NVB3   NVRAM  unused      0.00      -
+pureeng@ASB-SAN1-ct0:~$ puredrive list
+Name       Type   Status      Capacity  Details
+CH0.BAY0   SSD    healthy     1.92T     -
+CH0.BAY1   SSD    healthy     1.92T     -
+CH0.BAY2   SSD    healthy     1.92T     -
+CH0.BAY3   SSD    healthy     1.92T     -
+CH0.BAY4   SSD    healthy     1.92T     -
+CH0.BAY5   SSD    healthy     1.92T     -
+CH0.BAY6   SSD    healthy     1.92T     -
+CH0.BAY7   SSD    healthy     1.92T     -
+CH0.BAY8   SSD    healthy     1.92T     -
+CH0.BAY9   SSD    healthy     1.92T     -
+CH0.BAY10  SSD    unadmitted  0.00      waiting for user
+CH0.BAY11  SSD    unadmitted  0.00      waiting for user
+CH0.BAY12  SSD    unadmitted  0.00      waiting for user
+CH0.BAY13  SSD    unadmitted  0.00      waiting for user
+CH0.BAY14  SSD    unadmitted  0.00      waiting for user
+CH0.BAY15  SSD    updating    0.00      -
+CH0.BAY16  SSD    unhealthy   0.00      Firmware upgrade in progress. Current firmware: 2.8.25(http://go/zh)
+CH0.BAY17  SSD    unadmitted  0.00      waiting for user
+CH0.BAY18  SSD    unadmitted  0.00      waiting for user
+CH0.BAY19  SSD    unadmitted  0.00      waiting for user
+CH0.NVB0   NVRAM  healthy     7.00G     -
+CH0.NVB1   NVRAM  healthy     7.00G     -
+CH0.NVB2   NVRAM  unused      0.00      -
+CH0.NVB3   NVRAM  unused      0.00      -
+pureeng@ASB-SAN1-ct0:~$ puredrive list
+Name       Type   Status      Capacity  Details
+CH0.BAY0   SSD    healthy     1.92T     -
+CH0.BAY1   SSD    healthy     1.92T     -
+CH0.BAY2   SSD    healthy     1.92T     -
+CH0.BAY3   SSD    healthy     1.92T     -
+CH0.BAY4   SSD    healthy     1.92T     -
+CH0.BAY5   SSD    healthy     1.92T     -
+CH0.BAY6   SSD    healthy     1.92T     -
+CH0.BAY7   SSD    healthy     1.92T     -
+CH0.BAY8   SSD    healthy     1.92T     -
+CH0.BAY9   SSD    healthy     1.92T     -
+CH0.BAY10  SSD    unadmitted  0.00      waiting for user
+CH0.BAY11  SSD    unadmitted  0.00      waiting for user
+CH0.BAY12  SSD    unadmitted  0.00      waiting for user
+CH0.BAY13  SSD    unadmitted  0.00      waiting for user
+CH0.BAY14  SSD    unadmitted  0.00      waiting for user
+CH0.BAY15  SSD    unadmitted  0.00      waiting for user
+CH0.BAY16  SSD    updating    0.00      -
+CH0.BAY17  SSD    unadmitted  0.00      waiting for user
+CH0.BAY18  SSD    unadmitted  0.00      waiting for user
+CH0.BAY19  SSD    unadmitted  0.00      waiting for user
+CH0.NVB0   NVRAM  healthy     7.00G     -
+CH0.NVB1   NVRAM  healthy     7.00G     -
+CH0.NVB2   NVRAM  unused      0.00      -
+CH0.NVB3   NVRAM  unused      0.00      -
+pureeng@ASB-SAN1-ct0:~$ puredrive list
+Name       Type   Status      Capacity  Details
+CH0.BAY0   SSD    healthy     1.92T     -
+CH0.BAY1   SSD    healthy     1.92T     -
+CH0.BAY2   SSD    healthy     1.92T     -
+CH0.BAY3   SSD    healthy     1.92T     -
+CH0.BAY4   SSD    healthy     1.92T     -
+CH0.BAY5   SSD    healthy     1.92T     -
+CH0.BAY6   SSD    healthy     1.92T     -
+CH0.BAY7   SSD    healthy     1.92T     -
+CH0.BAY8   SSD    healthy     1.92T     -
+CH0.BAY9   SSD    healthy     1.92T     -
+CH0.BAY10  SSD    unadmitted  0.00      waiting for user
+CH0.BAY11  SSD    unadmitted  0.00      waiting for user
+CH0.BAY12  SSD    unadmitted  0.00      waiting for user
+CH0.BAY13  SSD    unadmitted  0.00      waiting for user
+CH0.BAY14  SSD    unadmitted  0.00      waiting for user
+CH0.BAY15  SSD    unadmitted  0.00      waiting for user
+CH0.BAY16  SSD    updating    0.00      -
+CH0.BAY17  SSD    unadmitted  0.00      waiting for user
+CH0.BAY18  SSD    unadmitted  0.00      waiting for user
+CH0.BAY19  SSD    unadmitted  0.00      waiting for user
+CH0.NVB0   NVRAM  healthy     7.00G     -
+CH0.NVB1   NVRAM  healthy     7.00G     -
+CH0.NVB2   NVRAM  unused      0.00      -
+CH0.NVB3   NVRAM  unused      0.00      -
+pureeng@ASB-SAN1-ct0:~$ pruredrive list --ttotal
+Name       Type   Status      Capacity  Details
+CH0.BAY0   SSD    healthy     1.92T     -
+CH0.BAY1   SSD    healthy     1.92T     -
+CH0.BAY2   SSD    healthy     1.92T     -
+CH0.BAY3   SSD    healthy     1.92T     -
+CH0.BAY4   SSD    healthy     1.92T     -
+CH0.BAY5   SSD    healthy     1.92T     -
+CH0.BAY6   SSD    healthy     1.92T     -
+CH0.BAY7   SSD    healthy     1.92T     -
+CH0.BAY8   SSD    healthy     1.92T     -
+CH0.BAY9   SSD    healthy     1.92T     -
+CH0.BAY10  SSD    unadmitted  0.00      waiting for user
+CH0.BAY11  SSD    unadmitted  0.00      waiting for user
+CH0.BAY12  SSD    unadmitted  0.00      waiting for user
+CH0.BAY13  SSD    unadmitted  0.00      waiting for user
+CH0.BAY14  SSD    unadmitted  0.00      waiting for user
+CH0.BAY15  SSD    unadmitted  0.00      waiting for user
+CH0.BAY16  SSD    updating    0.00      -
+CH0.BAY17  SSD    unadmitted  0.00      waiting for user
+CH0.BAY18  SSD    unadmitted  0.00      waiting for user
+CH0.BAY19  SSD    unadmitted  0.00      waiting for user
+CH0.NVB0   NVRAM  healthy     7.00G     -
+CH0.NVB1   NVRAM  healthy     7.00G     -
+CH0.NVB2   NVRAM  unused      0.00      -
+CH0.NVB3   NVRAM  unused      0.00      -
+(total)    -      -           -         -
+pureeng@ASB-SAN1-ct0:~$ purearray list --space
+Name      Capacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared   System  Replication  Total
+ASB-SAN1  11.52T    100%    32770G            7.17T    78%                2.7 to 1        12.6 to 1        2.62T   200.38G    104.97G  0.00    0.00         2.92T
+pureeng@ASB-SAN1-ct0:~$ purearray list --spacedrive list --total
+Name       Type   Status      Capacity  Details
+CH0.BAY0   SSD    healthy     1.92T     -
+CH0.BAY1   SSD    healthy     1.92T     -
+CH0.BAY2   SSD    healthy     1.92T     -
+CH0.BAY3   SSD    healthy     1.92T     -
+CH0.BAY4   SSD    healthy     1.92T     -
+CH0.BAY5   SSD    healthy     1.92T     -
+CH0.BAY6   SSD    healthy     1.92T     -
+CH0.BAY7   SSD    healthy     1.92T     -
+CH0.BAY8   SSD    healthy     1.92T     -
+CH0.BAY9   SSD    healthy     1.92T     -
+CH0.BAY10  SSD    unadmitted  0.00      waiting for user
+CH0.BAY11  SSD    unadmitted  0.00      waiting for user
+CH0.BAY12  SSD    unadmitted  0.00      waiting for user
+CH0.BAY13  SSD    unadmitted  0.00      waiting for user
+CH0.BAY14  SSD    unadmitted  0.00      waiting for user
+CH0.BAY15  SSD    unadmitted  0.00      waiting for user
+CH0.BAY16  SSD    updating    0.00      Not accessible from CT1; 
+CH0.BAY17  SSD    unadmitted  0.00      waiting for user
+CH0.BAY18  SSD    unadmitted  0.00      waiting for user
+CH0.BAY19  SSD    unadmitted  0.00      waiting for user
+CH0.NVB0   NVRAM  healthy     7.00G     -
+CH0.NVB1   NVRAM  healthy     7.00G     -
+CH0.NVB2   NVRAM  unused      0.00      -
+CH0.NVB3   NVRAM  unused      0.00      -
+pureeng@ASB-SAN1-ct0:~$ puredrive list
+Name       Type   Status      Capacity  Details
+CH0.BAY0   SSD    healthy     1.92T     -
+CH0.BAY1   SSD    healthy     1.92T     -
+CH0.BAY2   SSD    healthy     1.92T     -
+CH0.BAY3   SSD    healthy     1.92T     -
+CH0.BAY4   SSD    healthy     1.92T     -
+CH0.BAY5   SSD    healthy     1.92T     -
+CH0.BAY6   SSD    healthy     1.92T     -
+CH0.BAY7   SSD    healthy     1.92T     -
+CH0.BAY8   SSD    healthy     1.92T     -
+CH0.BAY9   SSD    healthy     1.92T     -
+CH0.BAY10  SSD    unadmitted  0.00      waiting for user
+CH0.BAY11  SSD    unadmitted  0.00      waiting for user
+CH0.BAY12  SSD    unadmitted  0.00      waiting for user
+CH0.BAY13  SSD    unadmitted  0.00      waiting for user
+CH0.BAY14  SSD    unadmitted  0.00      waiting for user
+CH0.BAY15  SSD    unadmitted  0.00      waiting for user
+CH0.BAY16  SSD    updating    0.00      -
+CH0.BAY17  SSD    unadmitted  0.00      waiting for user
+CH0.BAY18  SSD    unadmitted  0.00      waiting for user
+CH0.BAY19  SSD    unadmitted  0.00      waiting for user
+CH0.NVB0   NVRAM  healthy     7.00G     -
+CH0.NVB1   NVRAM  healthy     7.00G     -
+CH0.NVB2   NVRAM  unused      0.00      -
+CH0.NVB3   NVRAM  unused      0.00      -
+pureeng@ASB-SAN1-ct0:~$ puredrive list
+Name       Type   Status      Capacity  Details
+CH0.BAY0   SSD    healthy     1.92T     -
+CH0.BAY1   SSD    healthy     1.92T     -
+CH0.BAY2   SSD    healthy     1.92T     -
+CH0.BAY3   SSD    healthy     1.92T     -
+CH0.BAY4   SSD    healthy     1.92T     -
+CH0.BAY5   SSD    healthy     1.92T     -
+CH0.BAY6   SSD    healthy     1.92T     -
+CH0.BAY7   SSD    healthy     1.92T     -
+CH0.BAY8   SSD    healthy     1.92T     -
+CH0.BAY9   SSD    healthy     1.92T     -
+CH0.BAY10  SSD    unadmitted  0.00      waiting for user
+CH0.BAY11  SSD    unadmitted  0.00      waiting for user
+CH0.BAY12  SSD    unadmitted  0.00      waiting for user
+CH0.BAY13  SSD    unadmitted  0.00      waiting for user
+CH0.BAY14  SSD    unadmitted  0.00      waiting for user
+CH0.BAY15  SSD    unadmitted  0.00      waiting for user
+CH0.BAY16  SSD    updating    0.00      -
+CH0.BAY17  SSD    unadmitted  0.00      waiting for user
+CH0.BAY18  SSD    unadmitted  0.00      waiting for user
+CH0.BAY19  SSD    unadmitted  0.00      waiting for user
+CH0.NVB0   NVRAM  healthy     7.00G     -
+CH0.NVB1   NVRAM  healthy     7.00G     -
+CH0.NVB2   NVRAM  unused      0.00      -
+CH0.NVB3   NVRAM  unused      0.00      -
+pureeng@ASB-SAN1-ct0:~$ puredrive list
+Name       Type   Status      Capacity  Details
+CH0.BAY0   SSD    healthy     1.92T     -
+CH0.BAY1   SSD    healthy     1.92T     -
+CH0.BAY2   SSD    healthy     1.92T     -
+CH0.BAY3   SSD    healthy     1.92T     -
+CH0.BAY4   SSD    healthy     1.92T     -
+CH0.BAY5   SSD    healthy     1.92T     -
+CH0.BAY6   SSD    healthy     1.92T     -
+CH0.BAY7   SSD    healthy     1.92T     -
+CH0.BAY8   SSD    healthy     1.92T     -
+CH0.BAY9   SSD    healthy     1.92T     -
+CH0.BAY10  SSD    unadmitted  0.00      waiting for user
+CH0.BAY11  SSD    unadmitted  0.00      waiting for user
+CH0.BAY12  SSD    unadmitted  0.00      waiting for user
+CH0.BAY13  SSD    unadmitted  0.00      waiting for user
+CH0.BAY14  SSD    unadmitted  0.00      waiting for user
+CH0.BAY15  SSD    unadmitted  0.00      waiting for user
+CH0.BAY16  SSD    unadmitted  0.00      waiting for user
+CH0.BAY17  SSD    unadmitted  0.00      waiting for user
+CH0.BAY18  SSD    unadmitted  0.00      waiting for user
+CH0.BAY19  SSD    unadmitted  0.00      waiting for user
+CH0.NVB0   NVRAM  healthy     7.00G     -
+CH0.NVB1   NVRAM  healthy     7.00G     -
+CH0.NVB2   NVRAM  unused      0.00      -
+CH0.NVB3   NVRAM  unused      0.00      -
+pureeng@ASB-SAN1-ct0:~$ puredrive listarray list --spacedrive list --totalarray list --space
+Name      Capacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared   System  Replication  Total
+ASB-SAN1  11.52T    100%    32770G            7.16T    78%                2.7 to 1        12.6 to 1        2.62T   200.89G    105.21G  0.00    0.00         2.92T
+pureeng@ASB-SAN1-ct0:~$ purearray list --spacedrive list
+Name       Type   Status      Capacity  Details
+CH0.BAY0   SSD    healthy     1.92T     -
+CH0.BAY1   SSD    healthy     1.92T     -
+CH0.BAY2   SSD    healthy     1.92T     -
+CH0.BAY3   SSD    healthy     1.92T     -
+CH0.BAY4   SSD    healthy     1.92T     -
+CH0.BAY5   SSD    healthy     1.92T     -
+CH0.BAY6   SSD    healthy     1.92T     -
+CH0.BAY7   SSD    healthy     1.92T     -
+CH0.BAY8   SSD    healthy     1.92T     -
+CH0.BAY9   SSD    healthy     1.92T     -
+CH0.BAY10  SSD    unadmitted  0.00      waiting for user
+CH0.BAY11  SSD    unadmitted  0.00      waiting for user
+CH0.BAY12  SSD    unadmitted  0.00      waiting for user
+CH0.BAY13  SSD    unadmitted  0.00      waiting for user
+CH0.BAY14  SSD    unadmitted  0.00      waiting for user
+CH0.BAY15  SSD    unadmitted  0.00      waiting for user
+CH0.BAY16  SSD    unadmitted  0.00      waiting for user
+CH0.BAY17  SSD    unadmitted  0.00      waiting for user
+CH0.BAY18  SSD    unadmitted  0.00      waiting for user
+CH0.BAY19  SSD    unadmitted  0.00      waiting for user
+CH0.NVB0   NVRAM  healthy     7.00G     -
+CH0.NVB1   NVRAM  healthy     7.00G     -
+CH0.NVB2   NVRAM  unused      0.00      -
+CH0.NVB3   NVRAM  unused      0.00      -
+pureeng@ASB-SAN1-ct0:~$ puredrive listarray list --space
+Name      Capacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared   System  Replication  Total
+ASB-SAN1  11.52T    100%    32770G            7.16T    78%                2.7 to 1        12.6 to 1        2.62T   200.89G    105.21G  0.00    0.00         2.92T
+pureeng@ASB-SAN1-ct0:~$ puredrive admistt
+Name       Type  Status   Capacity  Details
+CH0.BAY10  SSD   healthy  1.92T     -
+CH0.BAY11  SSD   healthy  1.92T     -
+CH0.BAY12  SSD   healthy  1.92T     -
+CH0.BAY13  SSD   healthy  1.92T     -
+CH0.BAY14  SSD   healthy  1.92T     -
+CH0.BAY15  SSD   healthy  1.92T     -
+CH0.BAY16  SSD   healthy  1.92T     -
+CH0.BAY17  SSD   healthy  1.92T     -
+CH0.BAY18  SSD   healthy  1.92T     -
+CH0.BAY19  SSD   healthy  1.92T     -
+pureeng@ASB-SAN1-ct0:~$ puredrive admitarray list --space
+Name      Capacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared   System  Replication  Total
+ASB-SAN1  11.52T    100%    32770G            7.16T    78%                2.7 to 1        12.6 to 1        2.62T   200.89G    105.21G  0.00    0.00         2.92T
+pureeng@ASB-SAN1-ct0:~$ pureapurearray list --spacedrive admitarray list --space
+Name      Capacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared   System  Replication  Total
+ASB-SAN1  26.87T    100%    32770G            7.17T    78%                2.7 to 1        12.6 to 1        2.62T   201.39G    105.54G  0.00    0.00         2.92T
+pureeng@ASB-SAN1-ct0:~$ puremessGEAGEage list --=open
+pureeng@ASB-SAN1-ct0:~$ puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    healthy  1.92T     -
+CH0.BAY1   SSD    healthy  1.92T     -
+CH0.BAY2   SSD    healthy  1.92T     -
+CH0.BAY3   SSD    healthy  1.92T     -
+CH0.BAY4   SSD    healthy  1.92T     -
+CH0.BAY5   SSD    healthy  1.92T     -
+CH0.BAY6   SSD    healthy  1.92T     -
+CH0.BAY7   SSD    healthy  1.92T     -
+CH0.BAY8   SSD    healthy  1.92T     -
+CH0.BAY9   SSD    healthy  1.92T     -
+CH0.BAY10  SSD    healthy  1.92T     -
+CH0.BAY11  SSD    healthy  1.92T     -
+CH0.BAY12  SSD    healthy  1.92T     -
+CH0.BAY13  SSD    healthy  1.92T     -
+CH0.BAY14  SSD    healthy  1.92T     -
+CH0.BAY15  SSD    healthy  1.92T     -
+CH0.BAY16  SSD    healthy  1.92T     -
+CH0.BAY17  SSD    healthy  1.92T     -
+CH0.BAY18  SSD    healthy  1.92T     -
+CH0.BAY19  SSD    healthy  1.92T     -
+CH0.NVB0   NVRAM  healthy  7.00G     -
+CH0.NVB1   NVRAM  healthy  7.00G     -
+CH0.NVB2   NVRAM  unused   0.00      -
+CH0.NVB3   NVRAM  unused   0.00      -
+pureeng@ASB-SAN1-ct0:~$ purealert untag --maintenance
+Name
+maintenance
+pureeng@ASB-SAN1-ct0:~$ sudo su
+     root@ASB-SAN1-ct0:/var/home/pureeng# purearray phonehome --send-today && ssh peer purearray phonehome --send-today
+
+Status   Action
+running  send_today
+phonehome is already running
+Status   Action
+running  send_today
+     root@ASB-SAN1-ct0:/var/home/pureeng# exit
+exit
+pureeng@ASB-SAN1-ct0:~$ exit
+logout
+
+ASB-SAN1-ct0 login: 

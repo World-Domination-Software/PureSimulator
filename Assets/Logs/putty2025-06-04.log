@@ -1,0 +1,983 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.06.04 09:04:57 =~=~=~=~=~=~=~=~=~=~=~=
+
+oitpurex01imp-ct0 login: pureeng
+1) Authenticate via CloudAssist
+2) Authenticate via command line
+3) Restore challenge
+Type the number corresponding to the authentication method you want to use.
+
+Selection: 1
+
+An email for identity verification will be sent once email is entered.
+Please follow the authentication instructions provided there and return to this screen when finished or if email has not been received.
+
+
+Enter an email address: fharris@purestorage.com
+Successfully authenticated
+Last login: Wed Oct 23 09:04:58 EDT 2024 from 127.0.0.1 on pts/0
+
+Wed Jun 04 09:05:30 2025
+Welcome pureeng. This is Purity Version 6.6.11 on FlashArray oitpurex01imp
+http://www.purestorage.com/
+pureeng@oitpurex01imp-ct0:~$ purearray list --space
+Name           Capacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared   System   Replication  Total
+oitpurex01imp  26.83T    100%    117790G           47.61T   59%                1.5 to 1        3.6 to 1         31.38T  0.00       498.73G  381.17G  0.00         32.24T
+pureeng@oitpurex01imp-ct0:~$ sudo su
+     root@oitpurex01imp-ct0:/var/home/pureeng# puremessage list --open
+     root@oitpurex01imp-ct0:/var/home/pureeng# puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    healthy  2.25T     -
+CH0.BAY1   SSD    healthy  2.25T     -
+CH0.BAY2   SSD    healthy  2.25T     -
+CH0.BAY3   SSD    healthy  2.25T     -
+CH0.BAY4   SSD    healthy  2.25T     -
+CH0.BAY5   SSD    healthy  2.25T     -
+CH0.BAY6   SSD    healthy  2.25T     -
+CH0.BAY7   SSD    healthy  2.25T     -
+CH0.BAY8   SSD    healthy  2.25T     -
+CH0.BAY9   SSD    healthy  2.25T     -
+CH0.BAY10  SSD    healthy  2.25T     -
+CH0.BAY11  SSD    healthy  2.25T     -
+CH0.BAY12  SSD    healthy  2.25T     -
+CH0.BAY13  SSD    healthy  2.25T     -
+CH0.BAY14  SSD    healthy  2.25T     -
+CH0.BAY15  SSD    healthy  2.25T     -
+CH0.BAY16  SSD    healthy  2.25T     -
+CH0.BAY17  SSD    healthy  2.25T     -
+CH0.BAY18  SSD    healthy  2.25T     -
+CH0.BAY19  SSD    healthy  2.25T     -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  unused   0.00      -
+CH0.NVB3   NVRAM  unused   0.00      -
+     root@oitpurex01imp-ct0:/var/home/pureeng# purehw list
+Name       Status         Identify  Slot  Index  Speed       Temperature  Voltage  Details
+CH0        ok             off       -     0      -           -            -        -
+CH0.BAY0   ok             off       -     0      -           -            -        -
+CH0.BAY1   ok             off       -     1      -           -            -        -
+CH0.BAY2   ok             off       -     2      -           -            -        -
+CH0.BAY3   ok             off       -     3      -           -            -        -
+CH0.BAY4   ok             off       -     4      -           -            -        -
+CH0.BAY5   ok             off       -     5      -           -            -        -
+CH0.BAY6   ok             off       -     6      -           -            -        -
+CH0.BAY7   ok             off       -     7      -           -            -        -
+CH0.BAY8   ok             off       -     8      -           -            -        -
+CH0.BAY9   ok             off       -     9      -           -            -        -
+CH0.BAY10  ok             off       -     10     -           -            -        -
+CH0.BAY11  ok             off       -     11     -           -            -        -
+CH0.BAY12  ok             off       -     12     -           -            -        -
+CH0.BAY13  ok             off       -     13     -           -            -        -
+CH0.BAY14  ok             off       -     14     -           -            -        -
+CH0.BAY15  ok             off       -     15     -           -            -        -
+CH0.BAY16  ok             off       -     16     -           -            -        -
+CH0.BAY17  ok             off       -     17     -           -            -        -
+CH0.BAY18  ok             off       -     18     -           -            -        -
+CH0.BAY19  ok             off       -     19     -           -            -        -
+CH0.NVB0   ok             off       -     0      -           -            -        -
+CH0.NVB1   ok             off       -     1      -           -            -        -
+CH0.NVB2   not_installed  off       -     2      -           -            -        -
+CH0.NVB3   not_installed  off       -     3      -           -            -        -
+CH0.PWR0   ok             -         -     0      -           -            204 V    -
+CH0.PWR1   ok             -         -     1      -           -            204 V    -
+CH0.TMP0   ok             -         -     0      -           22 C         -        -
+CT0        ok             off       -     0      -           -            -        -
+CT0.ETH0   ok             -         -     0      1.00 Gb/s   -            -        -
+CT0.ETH1   ok             -         -     1      0.00 b/s    -            -        -
+CT0.ETH2   ok             -         -     2      25.00 Gb/s  -            -        -
+CT0.ETH3   ok             -         -     3      25.00 Gb/s  -            -        -
+CT0.ETH4   ok             -         -     4      25.00 Gb/s  -            -        -
+CT0.ETH5   ok             -         -     5      25.00 Gb/s  -            -        -
+CT0.ETH6   ok             -         -     6      0.00 b/s    -            -        -
+CT0.ETH7   ok             -         -     7      0.00 b/s    -            -        -
+CT0.ETH8   ok             -         -     8      0.00 b/s    -            -        -
+CT0.ETH9   ok             -         -     9      0.00 b/s    -            -        -
+CT0.FAN0   ok             -         -     0      -           -            -        -
+CT0.FAN1   ok             -         -     1      -           -            -        -
+CT0.FAN2   ok             -         -     2      -           -            -        -
+CT0.FAN3   ok             -         -     3      -           -            -        -
+CT0.FAN4   ok             -         -     4      -           -            -        -
+CT0.FAN5   ok             -         -     5      -           -            -        -
+CT0.FC0    ok             -         0     0      16.00 Gb/s  -            -        -
+CT0.FC1    ok             -         0     1      16.00 Gb/s  -            -        -
+CT0.FC2    ok             -         0     2      0.00 b/s    -            -        -
+CT0.FC3    ok             -         0     3      0.00 b/s    -            -        -
+CT0.TMP0   ok             -         -     0      -           35 C         -        -
+CT0.TMP1   ok             -         -     1      -           35 C         -        -
+CT0.TMP2   ok             -         -     2      -           31 C         -        -
+CT0.TMP3   ok             -         -     3      -           34 C         -        -
+CT0.TMP4   ok             -         -     4      -           34 C         -        -
+CT0.TMP5   ok             -         -     5      -           37 C         -        -
+CT0.TMP6   ok             -         -     6      -           38 C         -        -
+CT0.TMP7   ok             -         -     7      -           30 C         -        -
+CT0.TMP8   ok             -         -     8      -           30 C         -        -
+CT0.TMP9   ok             -         -     9      -           30 C         -        -
+CT0.TMP10  ok             -         -     10     -           30 C         -        -
+CT0.TMP11  ok             -         -     11     -           30 C         -        -
+CT0.TMP12  ok             -         -     12     -           30 C         -        -
+CT0.TMP13  ok             -         -     13     -           33 C         -        -
+CT0.TMP14  ok             -         -     14     -           33 C         -        -
+CT0.TMP15  ok             -         -     15     -           32 C         -        -
+CT0.TMP16  ok             -         -     16     -           31 C         -        -
+CT0.TMP17  ok             -         -     17     -           31 C         -        -
+CT0.TMP18  ok             -         -     18     -           31 C         -        -
+CT0.TMP19  ok             -         -     19     -           32 C         -        -
+CT0.TMP20  ok             -         -     20     -           29 C         -        -
+CT0.TMP21  ok             -         -     21     -           36 C         -        -
+CT0.TMP22  ok             -         -     22     -           33 C         -        -
+CT0.TMP23  ok             -         -     23     -           36 C         -        -
+CT0.TMP24  ok             -         -     24     -           37 C         -        -
+CT0.TMP25  ok             -         -     25     -           37 C         -        -
+CT0.TMP26  ok             -         -     26     -           31 C         -        -
+CT1        ok             off       -     1      -           -            -        -
+CT1.ETH0   ok             -         -     0      1.00 Gb/s   -            -        -
+CT1.ETH1   ok             -         -     1      0.00 b/s    -            -        -
+CT1.ETH2   ok             -         -     2      25.00 Gb/s  -            -        -
+CT1.ETH3   ok             -         -     3      25.00 Gb/s  -            -        -
+CT1.ETH4   ok             -         -     4      25.00 Gb/s  -            -        -
+CT1.ETH5   ok             -         -     5      25.00 Gb/s  -            -        -
+CT1.ETH6   ok             -         -     6      0.00 b/s    -            -        -
+CT1.ETH7   ok             -         -     7      0.00 b/s    -            -        -
+CT1.ETH8   ok             -         -     8      0.00 b/s    -            -        -
+CT1.ETH9   ok             -         -     9      0.00 b/s    -            -        -
+CT1.FAN0   ok             -         -     0      -           -            -        -
+CT1.FAN1   ok             -         -     1      -           -            -        -
+CT1.FAN2   ok             -         -     2      -           -            -        -
+CT1.FAN3   ok             -         -     3      -           -            -        -
+CT1.FAN4   ok             -         -     4      -           -            -        -
+CT1.FAN5   ok             -         -     5      -           -            -        -
+CT1.FC0    ok             -         0     0      16.00 Gb/s  -            -        -
+CT1.FC1    ok             -         0     1      16.00 Gb/s  -            -        -
+CT1.FC2    ok             -         0     2      0.00 b/s    -            -        -
+CT1.FC3    ok             -         0     3      0.00 b/s    -            -        -
+CT1.TMP0   ok             -         -     0      -           40 C         -        -
+CT1.TMP1   ok             -         -     1      -           39 C         -        -
+CT1.TMP2   ok             -         -     2      -           34 C         -        -
+CT1.TMP3   ok             -         -     3      -           45 C         -        -
+CT1.TMP4   ok             -         -     4      -           44 C         -        -
+CT1.TMP5   ok             -         -     5      -           41 C         -        -
+CT1.TMP6   ok             -         -     6      -           44 C         -        -
+CT1.TMP7   ok             -         -     7      -           34 C         -        -
+CT1.TMP8   ok             -         -     8      -           34 C         -        -
+CT1.TMP9   ok             -         -     9      -           34 C         -        -
+CT1.TMP10  ok             -         -     10     -           34 C         -        -
+CT1.TMP11  ok             -         -     11     -           34 C         -        -
+CT1.TMP12  ok             -         -     12     -           33 C         -        -
+CT1.TMP13  ok             -         -     13     -           35 C         -        -
+CT1.TMP14  ok             -         -     14     -           35 C         -        -
+CT1.TMP15  ok             -         -     15     -           34 C         -        -
+CT1.TMP16  ok             -         -     16     -           34 C         -        -
+CT1.TMP17  ok             -         -     17     -           34 C         -        -
+CT1.TMP18  ok             -         -     18     -           34 C         -        -
+CT1.TMP19  ok             -         -     19     -           34 C         -        -
+CT1.TMP20  ok             -         -     20     -           34 C         -        -
+CT1.TMP21  ok             -         -     21     -           39 C         -        -
+CT1.TMP22  ok             -         -     22     -           38 C         -        -
+CT1.TMP23  ok             -         -     23     -           39 C         -        -
+CT1.TMP24  ok             -         -     24     -           40 C         -        -
+CT1.TMP25  ok             -         -     25     -           45 C         -        -
+CT1.TMP26  ok             -         -     26     -           34 C         -        -
+     root@oitpurex01imp-ct0:/var/home/pureeng# purealert tag --timeout 120m --maintenance   
+Name         Created                  Expires
+maintenance  2025-06-04 09:11:21 EDT  2025-06-04 11:11:21 EDT
+     root@oitpurex01imp-ct0:/var/home/pureeng# puredrive list --total
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    healthy  2.25T     -
+CH0.BAY1   SSD    healthy  2.25T     -
+CH0.BAY2   SSD    healthy  2.25T     -
+CH0.BAY3   SSD    healthy  2.25T     -
+CH0.BAY4   SSD    healthy  2.25T     -
+CH0.BAY5   SSD    healthy  2.25T     -
+CH0.BAY6   SSD    healthy  2.25T     -
+CH0.BAY7   SSD    healthy  2.25T     -
+CH0.BAY8   SSD    healthy  2.25T     -
+CH0.BAY9   SSD    healthy  2.25T     -
+CH0.BAY10  SSD    healthy  2.25T     -
+CH0.BAY11  SSD    healthy  2.25T     -
+CH0.BAY12  SSD    healthy  2.25T     -
+CH0.BAY13  SSD    healthy  2.25T     -
+CH0.BAY14  SSD    healthy  2.25T     -
+CH0.BAY15  SSD    healthy  2.25T     -
+CH0.BAY16  SSD    healthy  2.25T     -
+CH0.BAY17  SSD    healthy  2.25T     -
+CH0.BAY18  SSD    healthy  2.25T     -
+CH0.BAY19  SSD    healthy  2.25T     -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  unused   0.00      -
+CH0.NVB3   NVRAM  unused   0.00      -
+(total)    -      -        -         -
+     root@oitpurex01imp-ct0:/var/home/pureeng# 
+Purity
+
+PSMFJ21100002 login: puresetup
+Password required for puresetup.
+Password: 
+
+Login incorrect
+PSMFJ21100002 login: puresetup
+Password required for puresetup.
+Password: 
+
+Wed Jun 04 13:12:37 2025
+Welcome puresetup. This is Purity Version 1.1.3 on FlashArray PSMFJ21100002
+http://www.purestorage.com/
+puresetup@PSMFJ21100002:~$ ount      mount /dev/sdb1 /mnt
+sudo: unable to resolve host PSMFJ21100002: Connection refused
+puresetup@PSMFJ21100002:~$ t cp /mnt/DFS/2.0.0/    2.1/* .
+puresetup@PSMFJ21100002:~$ puresintallp  purity_2.2.1_202408061923+b873ee041494.dfss.ppkg
+-bash: puresintall: command not found
+puresetup@PSMFJ21100002:~$ pureinstall purity_2.2.1_202408061923+b873ee041494.dfss.ppkg
+sudo: unable to resolve host PSMFJ21100002: Connection refused
+Verifying package...
+Installing Purity on alternate partition labeled second.
+Erasing Purity software image from alternate partition second to prepare for installation.
+WARNING: Do not interrupt this process!!
+Unpacking new Purity software.
+...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Finalizing installation. This may take several minutes.
+Executing /altroot/opt/purextras/bin/finish-install.fix-dpkg.sh
+Executing /altroot/opt/purextras/bin/finish-install.azure-propagate.sh
+Executing /altroot/opt/purextras/bin/finish-install.sh
+Executing /altroot/opt/purextras/bin/finish-install.cdu-pureinstall-lib.sh
+Executing /altroot/opt/purextras/bin/finish-install.cbs.sh
+Purity installed.
+Installation complete. The new Purity version will load at next reboot.
+
+Important!
+The first boot of a new Purity version may take longer if the new version includes controller firmware updates.
+DO NOT REBOOT THE CONTROLLER DURING THE FIRMWARE UPDATE.
+
+Refer to http://community.purestorage.com for more information about the Purity upgrade process and firmware updates.
+puresetup@PSMFJ21100002:~$ prueboo      urep boot reboot --offline
+sudo: unable to resolve host PSMFJ21100002: Connection refused
+
+Broadcast message from puresetup@PSMFJ21100002
+(/dev/ttyS0) at 13:19 ...
+
+The system is going down for reboot NOW!
+
+Purity
+
+PSMFJ2110000D login: puresetup
+Password required for puresetup.
+Password: 
+
+Wed Jun 04 13:19:25 2025
+Welcome puresetup. This is Purity Version 1.1.3 on FlashArray PSMFJ2110000D
+http://www.purestorage.com/
+puresetup@PSMFJ2110000D:~$ mount /dev/sdb1 /mnt
+sudo: unable to resolve host PSMFJ2110000D: Connection refused
+puresetup@PSMFJ2110000D:~$ cp /mnt/DFS/2.2.1/* .
+puresetup@PSMFJ2110000D:~$ pureinstall purity_2.2.1_202408061923+b873ee041494.dfss.ppkg
+sudo: unable to resolve host PSMFJ2110000D: Connection refused
+Verifying package...
+Installing Purity on alternate partition labeled second.
+Erasing Purity software image from alternate partition second to prepare for installation.
+WARNING: Do not interrupt this process!!
+Unpacking new Purity software.
+...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Finalizing installation. This may take several minutes.
+Executing /altroot/opt/purextras/bin/finish-install.azure-propagate.sh
+Executing /altroot/opt/purextras/bin/finish-install.fix-dpkg.sh
+Executing /altroot/opt/purextras/bin/finish-install.cbs.sh
+Executing /altroot/opt/purextras/bin/finish-install.cdu-pureinstall-lib.sh
+Executing /altroot/opt/purextras/bin/finish-install.sh
+Purity installed.
+Installation complete. The new Purity version will load at next reboot.
+
+Important!
+The first boot of a new Purity version may take longer if the new version includes controller firmware updates.
+DO NOT REBOOT THE CONTROLLER DURING THE FIRMWARE UPDATE.
+
+Refer to http://community.purestorage.com for more information about the Purity upgrade process and firmware updates.
+puresetup@PSMFJ2110000D:~$ pureboot reboot --offline    line
+sudo: unable to resolve host PSMFJ2110000D: Connection refused
+
+Broadcast message from puresetup@PSMFJ2110000D
+(/dev/ttyS0) at 13:26 ...
+
+The system is going down for reboot NOW!
+ GNU GRUB  version 2.02~beta2-36ubuntu3.23
+
+/----------------------------------------------------------------------------\||||||||||||||||||||||||\----------------------------------------------------------------------------/     Use the ^ and v keys to select which entry is highlighted.          
+      Press enter to boot the selected OS, `e' to edit the commands       
+      before booting or `c' for a command-line. ESC to return previous    
+      menu.                                                                 Purity SC 1.1.3 (202008122332+8092f4b) with kernel 4.4.182+ (202008112307+>
+*Purity SC 2.2.1 (202408061923+b873ee041494) with kernel 5.15.123+ (2024071>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            The highlighted entry will be executed automatically in 3s.                    The highlighted entry will be executed automatically in 2s.                    The highlighted entry will be executed automatically in 1s.                    The highlighted entry will be executed automatically in 0s.                 
+Purity
+
+PSMFJ2110000D login: 
+     root@oitpurex01imp-ct0:/var/home/pureeng# storage_view.py config
+Start time: 2025-06-04 09:31:38
+
+Command line: ['/opt/Purity/bin/storage_view.py', 'config']
+Version: 0.999.1
+Working at ct0 to look over cables between ct0 and shelves
+
+Slot listing:
+ CT    Slot#   Type     Vendor           Model                     FW Rev                Tracer       Assembly    
+------------------------------------------------------------------------------------------------------------------
+ ct0     15     SAS   LSI Logic       SAS_HGA-24i               14.00.03.00           PPPCFL18490F  PSO400029006  
+ ct0    eth6    ETH    Mellanox         MT27710          14.28.1002 (PST0020110036)                               
+ ct0    eth7    ETH    Mellanox         MT27710          14.28.1002 (PST0020110036)                               
+ ct0    eth8    ETH    Mellanox         MT27710          14.28.1002 (PST0020110036)                               
+ ct0    eth9    ETH    Mellanox         MT27710          14.28.1002 (PST0020110036)                               
+
+Slot summary information:
+-------------------------
+ct0.eth7. (eth7 )] *
+
+ct0.eth9. (eth9 )] *
+
+ct0.eth6. (eth6 )] <---> [0.eth0 (eth0) SH9 .0     ]
+
+ct0.eth8. (eth8 )] <---> [1.eth0 (eth0) SH9 .1     ]
+
+Configuration status
+--------------------
+Configuration check started for FA-X50R2
+
+SUCCESS: No errors detected.
+
+End time: 2025-06-04 09:31:42
+     root@oitpurex01imp-ct0:/var/home/pureeng# pureadm status
+Process status:
+purity start/running
+lio-drv start/running
+foed start/running, process 125883
+platform start/running, process 21782
+gui start/running, process 21761
+rest start/running, process 22830
+monitor start/running, process 21773
+iostat start/running, process 164650
+statistics start/running, process 21840
+middleware start/running, process 126602
+vasa start/running, process 126520
+platform working
+foed working
+gui working
+platform_env working
+quorum working
+foed_env working
+remote_patch working
+driver working
+san working
+health working
+lio-drv working
+middleware-db working
+middleware working
+vasa working
+     root@oitpurex01imp-ct0:/var/home/pureeng# ssh peer
+Last login: Wed Jan 22 05:45:22 2025 from fe80::26a9:37ff:fe06:e58b%haeth0
+
+Wed Jun 04 09:32:13 2025
+Welcome root. This is Purity Version 6.6.11 on FlashArray oitpurex01imp
+http://www.purestorage.com/
+     root@oitpurex01imp-ct1:~# pureadm status
+Process status:
+purity start/running
+lio-drv start/running
+foed start/running, process 42611
+platform start/running, process 22169
+gui start/running, process 22149
+rest start/running, process 22948
+monitor start/running, process 22161
+iostat start/running, process 18887
+statistics start/running, process 22179
+middleware start/running, process 43486
+vasa start/running, process 43170
+platform working
+foed working
+gui working
+platform_env working
+quorum working
+foed_env working
+remote_patch working
+driver working
+san working
+health working
+lio-drv working
+middleware-db working
+middleware working
+vasa working
+     root@oitpurex01imp-ct1:~# sotorage_view.py config
+Start time: 2025-06-04 09:32:33
+
+Command line: ['/opt/Purity/bin/storage_view.py', 'config']
+Version: 0.999.1
+Working at ct1 to look over cables between ct1 and shelves
+
+Slot listing:
+ CT    Slot#   Type     Vendor           Model                     FW Rev                Tracer       Assembly    
+------------------------------------------------------------------------------------------------------------------
+ ct1     15     SAS   LSI Logic       SAS_HGA-24i               14.00.03.00           PPPCFL184910  PSO400029006  
+ ct1    eth6    ETH    Mellanox         MT27710          14.28.1002 (PST0020110036)                               
+ ct1    eth7    ETH    Mellanox         MT27710          14.28.1002 (PST0020110036)                               
+ ct1    eth8    ETH    Mellanox         MT27710          14.28.1002 (PST0020110036)                               
+ ct1    eth9    ETH    Mellanox         MT27710          14.28.1002 (PST0020110036)                               
+
+Slot summary information:
+-------------------------
+ct1.eth7. (eth7 )] *
+
+ct1.eth9. (eth9 )] *
+
+ct1.eth6. (eth6 )] <---> [0.eth2 (eth2) SH9 .0     ]
+
+ct1.eth8. (eth8 )] <---> [1.eth2 (eth2) SH9 .1     ]
+
+Configuration status
+--------------------
+Configuration check started for FA-X50R2
+
+SUCCESS: No errors detected.
+
+End time: 2025-06-04 09:32:44
+     root@oitpurex01imp-ct1:~# preurehw lsist
+Name          Status         Identify  Slot  Index  Speed       Temperature  Voltage  Details
+CH0           ok             off       -     0      -           -            -        -
+CH0.BAY0      ok             off       -     0      -           -            -        -
+CH0.BAY1      ok             off       -     1      -           -            -        -
+CH0.BAY2      ok             off       -     2      -           -            -        -
+CH0.BAY3      ok             off       -     3      -           -            -        -
+CH0.BAY4      ok             off       -     4      -           -            -        -
+CH0.BAY5      ok             off       -     5      -           -            -        -
+CH0.BAY6      ok             off       -     6      -           -            -        -
+CH0.BAY7      ok             off       -     7      -           -            -        -
+CH0.BAY8      ok             off       -     8      -           -            -        -
+CH0.BAY9      ok             off       -     9      -           -            -        -
+CH0.BAY10     ok             off       -     10     -           -            -        -
+CH0.BAY11     ok             off       -     11     -           -            -        -
+CH0.BAY12     ok             off       -     12     -           -            -        -
+CH0.BAY13     ok             off       -     13     -           -            -        -
+CH0.BAY14     ok             off       -     14     -           -            -        -
+CH0.BAY15     ok             off       -     15     -           -            -        -
+CH0.BAY16     ok             off       -     16     -           -            -        -
+CH0.BAY17     ok             off       -     17     -           -            -        -
+CH0.BAY18     ok             off       -     18     -           -            -        -
+CH0.BAY19     ok             off       -     19     -           -            -        -
+CH0.NVB0      ok             off       -     0      -           -            -        -
+CH0.NVB1      ok             off       -     1      -           -            -        -
+CH0.NVB2      not_installed  off       -     2      -           -            -        -
+CH0.NVB3      not_installed  off       -     3      -           -            -        -
+CH0.PWR0      ok             -         -     0      -           -            204 V    -
+CH0.PWR1      ok             -         -     1      -           -            206 V    -
+CH0.TMP0      ok             -         -     0      -           22 C         -        -
+CT0           ok             off       -     0      -           -            -        -
+CT0.ETH0      ok             -         -     0      1.00 Gb/s   -            -        -
+CT0.ETH1      ok             -         -     1      0.00 b/s    -            -        -
+CT0.ETH2      ok             -         -     2      25.00 Gb/s  -            -        -
+CT0.ETH3      ok             -         -     3      25.00 Gb/s  -            -        -
+CT0.ETH4      ok             -         -     4      25.00 Gb/s  -            -        -
+CT0.ETH5      ok             -         -     5      25.00 Gb/s  -            -        -
+CT0.ETH6      ok             -         -     6      50.00 Gb/s  -            -        -
+CT0.ETH7      ok             -         -     7      0.00 b/s    -            -        -
+CT0.ETH8      ok             -         -     8      50.00 Gb/s  -            -        -
+CT0.ETH9      ok             -         -     9      0.00 b/s    -            -        -
+CT0.FAN0      ok             -         -     0      -           -            -        -
+CT0.FAN1      ok             -         -     1      -           -            -        -
+CT0.FAN2      ok             -         -     2      -           -            -        -
+CT0.FAN3      ok             -         -     3      -           -            -        -
+CT0.FAN4      ok             -         -     4      -           -            -        -
+CT0.FAN5      ok             -         -     5      -           -            -        -
+CT0.FC0       ok             -         0     0      16.00 Gb/s  -            -        -
+CT0.FC1       ok             -         0     1      16.00 Gb/s  -            -        -
+CT0.FC2       ok             -         0     2      0.00 b/s    -            -        -
+CT0.FC3       ok             -         0     3      0.00 b/s    -            -        -
+CT0.TMP0      ok             -         -     0      -           35 C         -        -
+CT0.TMP1      ok             -         -     1      -           35 C         -        -
+CT0.TMP2      ok             -         -     2      -           31 C         -        -
+CT0.TMP3      ok             -         -     3      -           36 C         -        -
+CT0.TMP4      ok             -         -     4      -           37 C         -        -
+CT0.TMP5      ok             -         -     5      -           36 C         -        -
+CT0.TMP6      ok             -         -     6      -           39 C         -        -
+CT0.TMP7      ok             -         -     7      -           30 C         -        -
+CT0.TMP8      ok             -         -     8      -           30 C         -        -
+CT0.TMP9      ok             -         -     9      -           31 C         -        -
+CT0.TMP10     ok             -         -     10     -           30 C         -        -
+CT0.TMP11     ok             -         -     11     -           30 C         -        -
+CT0.TMP12     ok             -         -     12     -           30 C         -        -
+CT0.TMP13     ok             -         -     13     -           33 C         -        -
+CT0.TMP14     ok             -         -     14     -           33 C         -        -
+CT0.TMP15     ok             -         -     15     -           33 C         -        -
+CT0.TMP16     ok             -         -     16     -           31 C         -        -
+CT0.TMP17     ok             -         -     17     -           31 C         -        -
+CT0.TMP18     ok             -         -     18     -           31 C         -        -
+CT0.TMP19     ok             -         -     19     -           32 C         -        -
+CT0.TMP20     ok             -         -     20     -           29 C         -        -
+CT0.TMP21     ok             -         -     21     -           36 C         -        -
+CT0.TMP22     ok             -         -     22     -           33 C         -        -
+CT0.TMP23     ok             -         -     23     -           36 C         -        -
+CT0.TMP24     ok             -         -     24     -           37 C         -        -
+CT0.TMP25     ok             -         -     25     -           37 C         -        -
+CT0.TMP26     ok             -         -     26     -           31 C         -        -
+CT1           ok             off       -     1      -           -            -        -
+CT1.ETH0      ok             -         -     0      1.00 Gb/s   -            -        -
+CT1.ETH1      ok             -         -     1      0.00 b/s    -            -        -
+CT1.ETH2      ok             -         -     2      25.00 Gb/s  -            -        -
+CT1.ETH3      ok             -         -     3      25.00 Gb/s  -            -        -
+CT1.ETH4      ok             -         -     4      25.00 Gb/s  -            -        -
+CT1.ETH5      ok             -         -     5      25.00 Gb/s  -            -        -
+CT1.ETH6      ok             -         -     6      50.00 Gb/s  -            -        -
+CT1.ETH7      ok             -         -     7      0.00 b/s    -            -        -
+CT1.ETH8      ok             -         -     8      50.00 Gb/s  -            -        -
+CT1.ETH9      ok             -         -     9      0.00 b/s    -            -        -
+CT1.FAN0      ok             -         -     0      -           -            -        -
+CT1.FAN1      ok             -         -     1      -           -            -        -
+CT1.FAN2      ok             -         -     2      -           -            -        -
+CT1.FAN3      ok             -         -     3      -           -            -        -
+CT1.FAN4      ok             -         -     4      -           -            -        -
+CT1.FAN5      ok             -         -     5      -           -            -        -
+CT1.FC0       ok             -         0     0      16.00 Gb/s  -            -        -
+CT1.FC1       ok             -         0     1      16.00 Gb/s  -            -        -
+CT1.FC2       ok             -         0     2      0.00 b/s    -            -        -
+CT1.FC3       ok             -         0     3      0.00 b/s    -            -        -
+CT1.TMP0      ok             -         -     0      -           40 C         -        -
+CT1.TMP1      ok             -         -     1      -           39 C         -        -
+CT1.TMP2      ok             -         -     2      -           34 C         -        -
+CT1.TMP3      ok             -         -     3      -           44 C         -        -
+CT1.TMP4      ok             -         -     4      -           44 C         -        -
+CT1.TMP5      ok             -         -     5      -           39 C         -        -
+CT1.TMP6      ok             -         -     6      -           44 C         -        -
+CT1.TMP7      ok             -         -     7      -           34 C         -        -
+CT1.TMP8      ok             -         -     8      -           34 C         -        -
+CT1.TMP9      ok             -         -     9      -           34 C         -        -
+CT1.TMP10     ok             -         -     10     -           34 C         -        -
+CT1.TMP11     ok             -         -     11     -           33 C         -        -
+CT1.TMP12     ok             -         -     12     -           33 C         -        -
+CT1.TMP13     ok             -         -     13     -           35 C         -        -
+CT1.TMP14     ok             -         -     14     -           35 C         -        -
+CT1.TMP15     ok             -         -     15     -           34 C         -        -
+CT1.TMP16     ok             -         -     16     -           34 C         -        -
+CT1.TMP17     ok             -         -     17     -           34 C         -        -
+CT1.TMP18     ok             -         -     18     -           34 C         -        -
+CT1.TMP19     ok            1      -           -            -        -
+SH9.BAY2      not_installed  off       -     2      -           -            -        -
+SH9.BAY3      not_installed  off       -     3      -           -            -        -
+SH9.BAY4      not_installed  off       -     4      -           -            -        -
+SH9.BAY5      not_installed  off       -     5      -           -            -        -
+SH9.BAY6      not_installed  off       -     6      -           -            -        -
+SH9.BAY7      not_installed  off       -     7      -           -            -        -
+SH9.BAY8      not_installed  off       -     8      -           -            -        -
+SH9.BAY9      not_installed  off       -     9      -           -            -        -
+SH9.BAY10     not_installed  off       -     10     -           -            -        -
+SH9.BAY11     not_installed  off       -     11     -           -            -        -
+SH9.BAY12     not_installed  off       -     12     -           -            -        -
+SH9.BAY13     not_installed  off       -     13     -           -            -        -
+SH9.BAY14     not_installed  off       -     14     -           -            -        -
+SH9.BAY15     not_installed  off       -     15     -           -            -        -
+SH9.BAY16     not_installed  off       -     16     -           -            -        -
+SH9.BAY17     not_installed  off       -     17     -           -            -        -
+SH9.BAY18     not_installed  off       -     18     -           -            -        -
+SH9.BAY19     not_installed  off       -     19     -           -            -        -
+SH9.BAY20     not_installed  off       -     20     -           -            -        -
+SH9.BAY21     not_installed  off       -     21     -           -            -        -
+SH9.BAY22     not_installed  off       -     22     -           -            -        -
+SH9.BAY23     not_installed  off       -     23     -           -            -        -
+SH9.BAY24     not_installed  off       -     24     -           -            -        -
+SH9.BAY25     not_installed  off       -     25     -           -            -        -
+SH9.BAY26     not_installed  off       -     26     -           -            -        -
+SH9.BAY27     not_installed  off       -     27     -           -            -        -
+SH9.PWR0      ok             -         -     0      -           -            206 V    -
+SH9.PWR1      ok             -         -     1      -           -            206 V    -
+SH9.SC0       ok             off       -     0      -           27 C         -        -
+SH9.SC0.ETH0  ok             -         -     0      50.00 Gb/s  -            -        -
+SH9.SC0.ETH1  ok             -         -     1      0.00 b/s    -            -        -
+SH9.SC0.ETH2  ok             -         -     2      50.00 Gb/s  -            -        -
+SH9.SC0.ETH3  ok             -         -     3      0.00 b/s    -            -        -
+SH9.SC0.FAN0  ok             -         -     0      -           -            -        -
+SH9.SC0.FAN1  ok             -         -     1      -           -            -        -
+SH9.SC0.FAN2  ok             -         -     2      -           -            -        -
+SH9.SC0.FAN3  ok             -         -     3      -           -            -        -
+SH9.SC0.FAN4  ok             -         -     4      -           -            -        -
+SH9.SC0.FAN5  ok             -         -     5      -           -            -        -
+SH9.SC1       ok             off       -     1      -           27 C         -        -
+SH9.SC1.ETH0  ok             -         -     0      50.00 Gb/s  -            -        -
+SH9.SC1.ETH1  ok             -         -     1      0.00 b/s    -            -        -
+SH9.SC1.ETH2  ok             -         -     2      50.00 Gb/s  -            -        -
+SH9.SC1.ETH3  ok             -         -     3      0.00 b/s    -            -        -
+SH9.SC1.FAN0  ok             -         -     0      -           -            -        -
+SH9.SC1.FAN1  ok             -         -     1      -           -            -        -
+SH9.SC1.FAN2  ok             -         -     2      -           -            -        -
+SH9.SC1.FAN3  ok             -         -     3      -           -            -        -
+SH9.SC1.FAN4  ok             -         -     4      -           -            -        -
+SH9.SC1.FAN5  ok             -         -     5      -           -            -        -
+     root@oitpurex01imp-ct1:~# puredrive list
+Name       Type   Status    Capacity  Details
+CH0.BAY0   SSD    healthy   2.25T     -
+CH0.BAY1   SSD    healthy   2.25T     -
+CH0.BAY2   SSD    healthy   2.25T     -
+CH0.BAY3   SSD    healthy   2.25T     -
+CH0.BAY4   SSD    healthy   2.25T     -
+CH0.BAY5   SSD    healthy   2.25T     -
+CH0.BAY6   SSD    healthy   2.25T     -
+CH0.BAY7   SSD    healthy   2.25T     -
+CH0.BAY8   SSD    healthy   2.25T     -
+CH0.BAY9   SSD    healthy   2.25T     -
+CH0.BAY10  SSD    healthy   2.25T     -
+CH0.BAY11  SSD    healthy   2.25T     -
+CH0.BAY12  SSD    healthy   2.25T     -
+CH0.BAY13  SSD    healthy   2.25T     -
+CH0.BAY14  SSD    healthy   2.25T     -
+CH0.BAY15  SSD    healthy   2.25T     -
+CH0.BAY16  SSD    healthy   2.25T     -
+CH0.BAY17  SSD    healthy   2.25T     -
+CH0.BAY18  SSD    healthy   2.25T     -
+CH0.BAY19  SSD    healthy   2.25T     -
+CH0.NVB0   NVRAM  healthy   7.52G     -
+CH0.NVB1   NVRAM  healthy   7.52G     -
+CH0.NVB2   NVRAM  unused    0.00      -
+CH0.NVB3   NVRAM  unused    0.00      -
+SH9.BAY0   SSD    updating  0.00      -
+SH9.BAY1   -      unused    0.00      -
+SH9.BAY2   -      unused    0.00      -
+SH9.BAY3   -      unused    0.00      -
+SH9.BAY4   -      unused    0.00      -
+SH9.BAY5   -      unused    0.00      -
+SH9.BAY6   -      unused    0.00      -
+SH9.BAY7   -      unused    0.00      -
+SH9.BAY8   -      unused    0.00      -
+SH9.BAY9   -      unused    0.00      -
+SH9.BAY10  -      unused    0.00      -
+SH9.BAY11  -      unused    0.00      -
+SH9.BAY12  -      unused    0.00      -
+SH9.BAY13  -      unused    0.00      -
+SH9.BAY14  -      unused    0.00      -
+SH9.BAY15  -      unused    0.00      -
+SH9.BAY16  -      unused    0.00      -
+SH9.BAY17  -      unused    0.00      -
+SH9.BAY18  -      unused    0.00      -
+SH9.BAY19  -      unused    0.00      -
+SH9.BAY20  -      unused    0.00      -
+SH9.BAY21  -      unused    0.00      -
+SH9.BAY22  -      unused    0.00      -
+SH9.BAY23  -      unused    0.00      -
+SH9.BAY24  -      unused    0.00      -
+SH9.BAY25  -      unused    0.00      -
+SH9.BAY26  -      unused    0.00      -
+SH9.BAY27  -      unused    0.00      -
+     root@oitpurex01imp-ct1:~# puredrive list
+Name       Type   Status      Capacity  Details
+CH0.BAY0   SSD    healthy     2.25T     -
+CH0.BAY1   SSD    healthy     2.25T     -
+CH0.BAY2   SSD    healthy     2.25T     -
+CH0.BAY3   SSD    healthy     2.25T     -
+CH0.BAY4   SSD    healthy     2.25T     -
+CH0.BAY5   SSD    healthy     2.25T     -
+CH0.BAY6   SSD    healthy     2.25T     -
+CH0.BAY7   SSD    healthy     2.25T     -
+CH0.BAY8   SSD    healthy     2.25T     -
+CH0.BAY9   SSD    healthy     2.25T     -
+CH0.BAY10  SSD    healthy     2.25T     -
+CH0.BAY11  SSD    healthy     2.25T     -
+CH0.BAY12  SSD    healthy     2.25T     -
+CH0.BAY13  SSD    healthy     2.25T     -
+CH0.BAY14  SSD    healthy     2.25T     -
+CH0.BAY15  SSD    healthy     2.25T     -
+CH0.BAY16  SSD    healthy     2.25T     -
+CH0.BAY17  SSD    healthy     2.25T     -
+CH0.BAY18  SSD    healthy     2.25T     -
+CH0.BAY19  SSD    healthy     2.25T     -
+CH0.NVB0   NVRAM  healthy     7.52G     -
+CH0.NVB1   NVRAM  healthy     7.52G     -
+CH0.NVB2   NVRAM  unused      0.00      -
+CH0.NVB3   NVRAM  unused      0.00      -
+SH9.BAY0   SSD    unadmitted  0.00      waiting for user
+SH9.BAY1   SSD    updating    0.00      -
+SH9.BAY2   SSD    unadmitted  0.00      waiting for user
+SH9.BAY3   SSD    updating    0.00      WSSD tuneup in progress (http://go/w2)
+SH9.BAY4   SSD    unhealthy   0.00      Firmware upgrade in progress. Current firmware: 2.8.30(http://go/zh)
+SH9.BAY5   -      unused      0.00      -
+SH9.BAY6   -      unused      0.00      -
+SH9.BAY7   -      unused      0.00      -
+SH9.BAY8   -      unused      0.00      -
+SH9.BAY9   -      unused      0.00      -
+SH9.BAY10  -      unused      0.00      -
+SH9.BAY11  -      unused      0.00      -
+SH9.BAY12  -      unused      0.00      -
+SH9.BAY13  -      unused      0.00      -
+SH9.BAY14  -      unused      0.00      -
+SH9.BAY15  -      unused      0.00      -
+SH9.BAY16  -      unused      0.00      -
+SH9.BAY17  -      unused      0.00      -
+SH9.BAY18  -      unused      0.00      -
+SH9.BAY19  -      unused      0.00      -
+SH9.BAY20  -      unused      0.00      -
+SH9.BAY21  -      unused      0.00      -
+SH9.BAY22  -      unused      0.00      -
+SH9.BAY23  -      unused      0.00      -
+SH9.BAY24  -      unused      0.00      -
+SH9.BAY25  -      unused      0.00      -
+SH9.BAY26  -      unused      0.00      -
+SH9.BAY27  -      unused      0.00      -
+     root@oitpurex01imp-ct1:~# wpuredrive list
+Name       Type   Status      Capacity  Details
+CH0.BAY0   SSD    healthy     2.25T     -
+CH0.BAY1   SSD    healthy     2.25T     -
+CH0.BAY2   SSD    healthy     2.25T     -
+CH0.BAY3   SSD    healthy     2.25T     -
+CH0.BAY4   SSD    healthy     2.25T     -
+CH0.BAY5   SSD    healthy     2.25T     -
+CH0.BAY6   SSD    healthy     2.25T     -
+CH0.BAY7   SSD    healthy     2.25T     -
+CH0.BAY8   SSD    healthy     2.25T     -
+CH0.BAY9   SSD    healthy     2.25T     -
+CH0.BAY10  SSD    healthy     2.25T     -
+CH0.BAY11  SSD    healthy     2.25T     -
+CH0.BAY12  SSD    healthy     2.25T     -
+CH0.BAY13  SSD    healthy     2.25T     -
+CH0.BAY14  SSD    healthy     2.25T     -
+CH0.BAY15  SSD    healthy     2.25T     -
+CH0.BAY16  SSD    healthy     2.25T     -
+CH0.BAY17  SSD    healthy     2.25T     -
+CH0.BAY18  SSD    healthy     2.25T     -
+CH0.BAY19  SSD    healthy     2.25T     -
+CH0.NVB0   NVRAM  healthy     7.52G     -
+CH0.NVB1   NVRAM  healthy     7.52G     -
+CH0.NVB2   NVRAM  unused      0.00      -
+CH0.NVB3   NVRAM  unused      0.00      -
+SH9.BAY0   SSD    unadmitted  0.00      waiting for user
+SH9.BAY1   SSD    unadmitted  0.00      waiting for user
+SH9.BAY2   SSD    unadmitted  0.00      waiting for user
+SH9.BAY3   SSD    unadmitted  0.00      waiting for user
+SH9.BAY4   SSD    unadmitted  0.00      waiting for user
+SH9.BAY5   SSD    unadmitted  0.00      waiting for user
+SH9.BAY6   SSD    unadmitted  0.00      waiting for user
+SH9.BAY7   SSD    unadmitted  0.00      waiting for user
+SH9.BAY8   SSD    unadmitted  0.00      waiting for user
+SH9.BAY9   SSD    updating    0.00      -
+SH9.BAY10  -      unused      0.00      -
+SH9.BAY11  -      unused      0.00      -
+SH9.BAY12  -      unused      0.00      -
+SH9.BAY13  -      unused      0.00      -
+SH9.BAY14  -      unused      0.00      -
+SH9.BAY15  -      unused      0.00      -
+SH9.BAY16  -      unused      0.00      -
+SH9.BAY17  -      unused      0.00      -
+SH9.BAY18  -      unused      0.00      -
+SH9.BAY19  -      unused      0.00      -
+SH9.BAY20  -      unused      0.00      -
+SH9.BAY21  -      unused      0.00      -
+SH9.BAY22  -      unused      0.00      -
+SH9.BAY23  -      unused      0.00      -
+SH9.BAY24  -      unused      0.00      -
+SH9.BAY25  -      unused      0.00      -
+SH9.BAY26  -      unused      0.00      -
+SH9.BAY27  -      unused      0.00      -
+     root@oitpurex01imp-ct1:~# puredrive list
+Name       Type   Status      Capacity  Details
+CH0.BAY0   SSD    healthy     2.25T     -
+CH0.BAY1   SSD    healthy     2.25T     -
+CH0.BAY2   SSD    healthy     2.25T     -
+CH0.BAY3   SSD    healthy     2.25T     -
+CH0.BAY4   SSD    healthy     2.25T     -
+CH0.BAY5   SSD    healthy     2.25T     -
+CH0.BAY6   SSD    healthy     2.25T     -
+CH0.BAY7   SSD    healthy     2.25T     -
+CH0.BAY8   SSD    healthy     2.25T     -
+CH0.BAY9   SSD    healthy     2.25T     -
+CH0.BAY10  SSD    healthy     2.25T     -
+CH0.BAY11  SSD    healthy     2.25T     -
+CH0.BAY12  SSD    healthy     2.25T     -
+CH0.BAY13  SSD    healthy     2.25T     -
+CH0.BAY14  SSD    healthy     2.25T     -
+CH0.BAY15  SSD    healthy     2.25T     -
+CH0.BAY16  SSD    healthy     2.25T     -
+CH0.BAY17  SSD    healthy     2.25T     -
+CH0.BAY18  SSD    healthy     2.25T     -
+CH0.BAY19  SSD    healthy     2.25T     -
+CH0.NVB0   NVRAM  healthy     7.52G     -
+CH0.NVB1   NVRAM  healthy     7.52G     -
+CH0.NVB2   NVRAM  unused      0.00      -
+CH0.NVB3   NVRAM  unused      0.00      -
+SH9.BAY0   SSD    unadmitted  0.00      waiting for user
+SH9.BAY1   SSD    unadmitted  0.00      waiting for user
+SH9.BAY2   SSD    unadmitted  0.00      waiting for user
+SH9.BAY3   SSD    unadmitted  0.00      waiting for user
+SH9.BAY4   SSD    unadmitted  0.00      waiting for user
+SH9.BAY5   SSD    unadmitted  0.00      waiting for user
+SH9.BAY6   SSD    unadmitted  0.00      waiting for user
+SH9.BAY7   SSD    unadmitted  0.00      waiting for user
+SH9.BAY8   SSD    unadmitted  0.00      waiting for user
+SH9.BAY9   SSD    unadmitted  0.00      waiting for user
+SH9.BAY10  -      unused      0.00      -
+SH9.BAY11  -      unused      0.00      -
+SH9.BAY12  -      unused      0.00      -
+SH9.BAY13  -      unused      0.00      -
+SH9.BAY14  -      unused      0.00      -
+SH9.BAY15  -      unused      0.00      -
+SH9.BAY16  -      unused      0.00      -
+SH9.BAY17  -      unused      0.00      -
+SH9.BAY18  -      unused      0.00      -
+SH9.BAY19  -      unused      0.00      -
+SH9.BAY20  -      unused      0.00      -
+SH9.BAY21  -      unused      0.00      -
+SH9.BAY22  -      unused      0.00      -
+SH9.BAY23  -      unused      0.00      -
+SH9.BAY24  -      unused      0.00      -
+SH9.BAY25  -      unused      0.00      -
+SH9.BAY26  -      unused      0.00      -
+SH9.BAY27  -      unused      0.00      -
+     root@oitpurex01imp-ct1:~# puremesasage list --open
+     root@oitpurex01imp-ct1:~# purearray list --controller
+Name     Type              Mode       Model     Version  Status  Current Mode Since       Internal Details
+CT0      array_controller  secondary  FA-X50R2  6.6.11   ready   2025-05-31 13:13:07 EDT  
+CT1      array_controller  primary    FA-X50R2  6.6.11   ready   2025-05-31 13:12:43 EDT  
+SH9.SC1  shelf_controller  -          DFSC1     2.2.1    -       -                        -
+SH9.SC0  shelf_controller  -          DFSC1     2.2.1    -       -                        -
+     root@oitpurex01imp-ct1:~# puredrive admit
+Name      Type  Status   Capacity  Installed Capacity  Details
+SH9.BAY0  SSD   healthy  -         -                   -
+SH9.BAY1  SSD   healthy  -         -                   -
+SH9.BAY2  SSD   healthy  -         -                   -
+SH9.BAY3  SSD   healthy  -         -                   -
+SH9.BAY4  SSD   healthy  -         -                   -
+SH9.BAY5  SSD   healthy  -         -                   -
+SH9.BAY6  SSD   healthy  -         -                   -
+SH9.BAY7  SSD   healthy  -         -                   -
+SH9.BAY8  SSD   healthy  -         -                   -
+SH9.BAY9  SSD   healthy  -         -                   -
+     root@oitpurex01imp-ct1:~# purearray list --space
+Name           Capacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared   System   Replication  Total
+oitpurex01imp  26.83T    100%    117790G           47.61T   59%                1.5 to 1        3.6 to 1         31.37T  0.00       505.13G  415.34G  0.00         32.27T
+     root@oitpurex01imp-ct1:~# purearray phonehome --send-today && ssh peer pure array phonehome --send-today
+Status   Action
+running  send_today
+phonehome is already running
+Status   Action
+running  send_today
+     root@oitpurex01imp-ct1:~# purearray remoteassist --connect
+Name               Status      Opened                   Expires
+oitpurex01imp-ct1  connecting  2025-05-20 06:07:27 EDT  2025-05-21 06:07:27 EDT
+     root@oitpurex01imp-ct1:~# purearray remoteassist --connectstatus
+Name               Status      Opened                   Expires
+oitpurex01imp-ct1  connecting  2025-05-20 06:07:27 EDT  2025-05-21 06:07:27 EDT
+     root@oitpurex01imp-ct1:~# purearray remoteassist --status
+Name               Status      Opened                   Expires
+oitpurex01imp-ct1  connecting  2025-05-20 06:07:27 EDT  2025-05-21 06:07:27 EDT
+     root@oitpurex01imp-ct1:~# purearray remoteassist --status
+Name               Status      Opened                   Expires
+oitpurex01imp-ct1  connecting  2025-05-20 06:07:27 EDT  2025-05-21 06:07:27 EDT
+     root@oitpurex01imp-ct1:~# purearray remoteassist --status
+Name               Status      Opened                   Expires
+oitpurex01imp-ct1  connecting  2025-05-20 06:07:27 EDT  2025-05-21 06:07:27 EDT
+     root@oitpurex01imp-ct1:~# purearray remoteassist --status
+Name               Status      Opened                   Expires
+oitpurex01imp-ct1  connecting  2025-05-20 06:07:27 EDT  2025-05-21 06:07:27 EDT
+     root@oitpurex01imp-ct1:~# purearray remoteassist --status
+Name               Status      Opened                   Expires
+oitpurex01imp-ct1  connecting  2025-05-20 06:07:27 EDT  2025-05-21 06:07:27 EDT
+     root@oitpurex01imp-ct1:~# purearray remoteassist --status
+Name               Status      Opened                   Expires
+oitpurex01imp-ct1  connecting  2025-05-20 06:07:27 EDT  2025-05-21 06:07:27 EDT
+     root@oitpurex01imp-ct1:~# purearray remoteassist --statusconnectdisconnect
+Name               Status        Opened  Expires
+oitpurex01imp-ct1  disconnected  -       -
+     root@oitpurex01imp-ct1:~# purearray remoteassist --disconnectstatusconnect
+Name               Status      Opened                   Expires
+oitpurex01imp-ct1  connecting  2025-06-04 10:13:30 EDT  2025-06-06 10:13:30 EDT
+     root@oitpurex01imp-ct1:~# purearray remoteassist --connectdisconnectstatus
+Name               Status      Opened                   Expires
+oitpurex01imp-ct1  connecting  2025-06-04 10:13:30 EDT  2025-06-06 10:13:30 EDT
+     root@oitpurex01imp-ct1:~# purearray remoteassist --status
+Name               Status      Opened                   Expires
+oitpurex01imp-ct1  connecting  2025-06-04 10:13:30 EDT  2025-06-06 10:13:30 EDT
+     root@oitpurex01imp-ct1:~# purearray remoteassist --status
+Name               Status      Opened                   Expires
+oitpurex01imp-ct1  connecting  2025-06-04 10:13:30 EDT  2025-06-06 10:13:30 EDT
+     root@oitpurex01imp-ct1:~# exit
+logout
+     root@oitpurex01imp-ct0:/var/home/pureeng# purearray remoteassist --connect
+Name               Status      Opened                   Expires
+oitpurex01imp-ct0  connecting  2025-06-04 10:13:50 EDT  2025-06-06 10:13:50 EDT
+     root@oitpurex01imp-ct0:/var/home/pureeng# purearray remoteassist --connectstatus
+Name               Status      Opened                   Expires
+oitpurex01imp-ct0  connecting  2025-06-04 10:13:50 EDT  2025-06-06 10:13:50 EDT
+     root@oitpurex01imp-ct0:/var/home/pureeng# purearray remoteassist --status
+Name               Status     Opened                   Expires
+oitpurex01imp-ct0  connected  2025-06-04 10:13:50 EDT  2025-06-06 10:13:50 EDT
+     root@oitpurex01imp-ct0:/var/home/pureeng# ssh peer
+Last login: Wed Jun  4 09:32:12 2025 from fe80::26a9:37ff:fe06:e58b%haeth0
+
+Wed Jun 04 10:14:04 2025
+Welcome root. This is Purity Version 6.6.11 on FlashArray oitpurex01imp
+http://www.purestorage.com/
+     root@oitpurex01imp-ct1:~# exitpurearray remoteassist --status
+Name               Status      Opened                   Expires
+oitpurex01imp-ct1  connecting  2025-06-04 10:13:30 EDT  2025-06-06 10:13:30 EDT
+     root@oitpurex01imp-ct1:~# purearray remoteassist --statusexitpurearray remoteassist --statusconnectdisconnect
+Name               Status        Opened  Expires
+oitpurex01imp-ct1  disconnected  -       -
+     root@oitpurex01imp-ct1:~# purearray phonehome --status
+Status   Action
+running  send_today
+     root@oitpurex01imp-ct1:~# purearray phonehome --statusremoteassist --disconnectstatusexitpurearray remoteassist --statusconnect
+Name               Status      Opened                   Expires
+oitpurex01imp-ct1  connecting  2025-06-04 10:14:35 EDT  2025-06-06 10:14:35 EDT
+     root@oitpurex01imp-ct1:~# purearray remoteassist --connectphonehome --status
+Status   Action
+running  send_today
+     root@oitpurex01imp-ct1:~# purearray phonehome --statusremoteassist --connectphonehome --statusremoteassist --disconnectstatus
+Name               Status      Opened                   Expires
+oitpurex01imp-ct1  connecting  2025-06-04 10:14:35 EDT  2025-06-06 10:14:35 EDT
+     root@oitpurex01imp-ct1:~# exit
+logout
+     root@oitpurex01imp-ct0:/var/home/pureeng# ssh peerpurearray remoteassist --status
+Name               Status     Opened                   Expires
+oitpurex01imp-ct0  connected  2025-06-04 10:13:50 EDT  2025-06-06 10:13:50 EDT
+     root@oitpurex01imp-ct0:/var/home/pureeng# puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    healthy  2.25T     -
+CH0.BAY1   SSD    healthy  2.25T     -
+CH0.BAY2   SSD    healthy  2.25T     -
+CH0.BAY3   SSD    healthy  2.25T     -
+CH0.BAY4   SSD    healthy  2.25T     -
+CH0.BAY5   SSD    healthy  2.25T     -
+CH0.BAY6   SSD    healthy  2.25T     -
+CH0.BAY7   SSD    healthy  2.25T     -
+CH0.BAY8   SSD    healthy  2.25T     -
+CH0.BAY9   SSD    healthy  2.25T     -
+CH0.BAY10  SSD    healthy  2.25T     -
+CH0.BAY11  SSD    healthy  2.25T     -
+CH0.BAY12  SSD    healthy  2.25T     -
+CH0.BAY13  SSD    healthy  2.25T     -
+CH0.BAY14  SSD    healthy  2.25T     -
+CH0.BAY15  SSD    healthy  2.25T     -
+CH0.BAY16  SSD    healthy  2.25T     -
+CH0.BAY17  SSD    healthy  2.25T     -
+CH0.BAY18  SSD    healthy  2.25T     -
+CH0.BAY19  SSD    healthy  2.25T     -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  unused   0.00      -
+CH0.NVB3   NVRAM  unused   0.00      -
+SH9.BAY0   SSD    healthy  9.10T     -
+SH9.BAY1   SSD    healthy  9.10T     -
+SH9.BAY2   SSD    healthy  9.10T     -
+SH9.BAY3   SSD    healthy  9.10T     -
+SH9.BAY4   SSD    healthy  9.10T     -
+SH9.BAY5   SSD    healthy  9.10T     -
+SH9.BAY6   SSD    healthy  9.10T     -
+SH9.BAY7   SSD    healthy  9.10T     -
+SH9.BAY8   SSD    healthy  9.10T     -
+SH9.BAY9   SSD    healthy  9.10T     -
+SH9.BAY10  -      unused   0.00      -
+SH9.BAY11  -      unused   0.00      -
+SH9.BAY12  -      unused   0.00      -
+SH9.BAY13  -      unused   0.00      -
+SH9.BAY14  -      unused   0.00      -
+SH9.BAY15  -      unused   0.00      -
+SH9.BAY16  -      unused   0.00      -
+SH9.BAY17  -      unused   0.00      -
+SH9.BAY18  -      unused   0.00      -
+SH9.BAY19  -      unused   0.00      -
+SH9.BAY20  -      unused   0.00      -
+SH9.BAY21  -      unused   0.00      -
+SH9.BAY22  -      unused   0.00      -
+SH9.BAY23  -      unused   0.00      -
+SH9.BAY24  -      unused   0.00      -
+SH9.BAY25  -      unused   0.00      -
+SH9.BAY26  -      unused   0.00      -
+SH9.BAY27  -      unused   0.00      -
+     root@oitpurex01imp-ct0:/var/home/pureeng# 

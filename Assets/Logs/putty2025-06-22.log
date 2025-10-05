@@ -1,0 +1,2642 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.06.22 08:11:07 =~=~=~=~=~=~=~=~=~=~=~=
+
+p-pure01-ct0 login: pureeng
+1) Authenticate via CloudAssist
+2) Authenticate via command line
+3) Restore challenge
+Type the number corresponding to the authentication method you want to use.
+
+Selection: 1
+
+An email for identity verification will be sent once email is entered.
+Please follow the authentication instructions provided there and return to this screen when finished or if email has not been received.
+
+
+Enter an email address: fharris@purestorage.com
+Successfully authenticated
+Last login: Sun Oct 31 04:59:57 EDT 2021 from 127.0.0.1 on pts/1
+
+Sun Jun 22 08:11:47 2025
+Welcome pureeng. This is Purity Version 6.5.8 on FlashArray p-pure01
+http://www.purestorage.com/
+pureeng@p-pure01-ct0:~$ sudo su
+     root@p-pure01-ct0:/var/home/pureeng# purealert tag --timeout 240m --maintenance
+Name         Created                  Expires
+maintenance  2025-06-22 08:14:13 EDT  2025-06-22 12:14:13 EDT
+     root@p-pure01-ct0:/var/home/pureeng# purehw list
+Name       Status  Identify  Slot  Index  Speed       Temperature  Voltage  Details
+CH0        ok      off       -     0      -           -            -        -
+CH0.BAY0   ok      off       -     0      -           -            -        -
+CH0.BAY1   ok      off       -     1      -           -            -        -
+CH0.BAY2   ok      off       -     2      -           -            -        -
+CH0.BAY3   ok      off       -     3      -           -            -        -
+CH0.BAY4   ok      off       -     4      -           -            -        -
+CH0.BAY5   ok      off       -     5      -           -            -        -
+CH0.BAY6   ok      off       -     6      -           -            -        -
+CH0.BAY7   ok      off       -     7      -           -            -        -
+CH0.BAY8   ok      off       -     8      -           -            -        -
+CH0.BAY9   ok      off       -     9      -           -            -        -
+CH0.BAY10  ok      off       -     10     -           -            -        -
+CH0.BAY11  ok      off       -     11     -           -            -        -
+CH0.BAY12  ok      off       -     12     -           -            -        -
+CH0.BAY13  ok      off       -     13     -           -            -        -
+CH0.BAY14  ok      off       -     14     -           -            -        -
+CH0.BAY15  ok      off       -     15     -           -            -        -
+CH0.BAY16  ok      off       -     16     -           -            -        -
+CH0.BAY17  ok      off       -     17     -           -            -        -
+CH0.BAY18  ok      off       -     18     -           -            -        -
+CH0.BAY19  ok      off       -     19     -           -            -        -
+CH0.NVB0   ok      off       -     0      -           -            -        -
+CH0.NVB1   ok      off       -     1      -           -            -        -
+CH0.NVB2   ok      off       -     2      -           -            -        -
+CH0.NVB3   ok      off       -     3      -           -            -        -
+CH0.PWR0   ok      -         -     0      -           -            207 V    -
+CH0.PWR1   ok      -         -     1      -           -            207 V    -
+CH0.TMP0   ok      -         -     0      -           25 C         -        -
+CT0        ok      off       -     0      -           -            -        -
+CT0.ETH0   ok      -         -     0      1.00 Gb/s   -            -        -
+CT0.ETH1   ok      -         -     1      1.00 Gb/s   -            -        -
+CT0.ETH2   ok      -         -     2      25.00 Gb/s  -            -        -
+CT0.ETH3   ok      -         -     3      25.00 Gb/s  -            -        -
+CT0.ETH4   ok      -         -     4      25.00 Gb/s  -            -        -
+CT0.ETH5   ok      -         -     5      25.00 Gb/s  -            -        -
+CT0.ETH6   ok      -         -     6      0.00 b/s    -            -        -
+CT0.ETH7   ok      -         -     7      0.00 b/s    -            -        -
+CT0.ETH8   ok      -         -     8      0.00 b/s    -            -        -
+CT0.ETH9   ok      -         -     9      0.00 b/s    -            -        -
+CT0.ETH20  ok      -         3     20     25.00 Gb/s  -            -        -
+CT0.ETH21  ok      -         3     21     25.00 Gb/s  -            -        -
+CT0.FAN0   ok      -         -     0      -           -            -        -
+CT0.FAN1   ok      -         -     1      -           -            -        -
+CT0.FAN2   ok      -         -     2      -           -            -        -
+CT0.FAN3   ok      -         -     3      -           -            -        -
+CT0.FAN4   ok      -         -     4      -           -            -        -
+CT0.FAN5   ok      -         -     5      -           -            -        -
+CT0.FC0    ok      -         0     0      0.00 b/s    -            -        -
+CT0.FC1    ok      -         0     1      0.00 b/s    -            -        -
+CT0.FC2    ok      -         0     2      0.00 b/s    -            -        -
+CT0.FC3    ok      -         0     3      0.00 b/s    -            -        -
+CT0.FC8    ok      -         2     8      0.00 b/s    -            -        -
+CT0.FC9    ok      -         2     9      0.00 b/s    -            -        -
+CT0.TMP0   ok      -         -     0      -           42 C         -        -
+CT0.TMP1   ok      -         -     1      -           44 C         -        -
+CT0.TMP2   ok      -         -     2      -           36 C         -        -
+CT0.TMP3   ok      -         -     3      -           47 C         -        -
+CT0.TMP4   ok      -         -     4      -           48 C         -        -
+CT0.TMP5   ok      -         -     5      -           42 C         -        -
+CT0.TMP6   ok      -         -     6      -           48 C         -        -
+CT0.TMP7   ok      -         -     7      -           36 C         -        -
+CT0.TMP8   ok      -         -     8      -           36 C         -        -
+CT0.TMP9   ok      -         -     9      -           37 C         -        -
+CT0.TMP10  ok      -         -     10     -           36 C         -        -
+CT0.TMP11  ok      -         -     11     -           35 C         -        -
+CT0.TMP12  ok      -         -     12     -           35 C         -        -
+CT0.TMP13  ok      -         -     13     -           39 C         -        -
+CT0.TMP14  ok      -         -     14     -           39 C         -        -
+CT0.TMP15  ok      -         -     15     -           39 C         -        -
+CT0.TMP16  ok      -         -     16     -           37 C         -        -
+CT0.TMP17  ok      -         -     17     -           37 C         -        -
+CT0.TMP18  ok      -         -     18     -           37 C         -        -
+CT0.TMP19  ok      -         -     19     -           39 C         -        -
+CT0.TMP20  ok      -         -     20     -           37 C         -        -
+CT0.TMP21  ok      -         -     21     -           43 C         -        -
+CT0.TMP22  ok      -         -     22     -           42 C         -        -
+CT0.TMP23  ok      -         -     23     -           43 C         -        -
+CT0.TMP24  ok      -         -     24     -           45 C         -        -
+CT0.TMP25  ok      -         -     25     -           47 C         -        -
+CT0.TMP26  ok      -         -     26     -           35 C         -        -
+CT1        ok      off       -     1      -           -            -        -
+CT1.ETH0   ok      -         -     0      1.00 Gb/s   -            -        -
+CT1.ETH1   ok      -         -     1      1.00 Gb/s   -            -        -
+CT1.ETH2   ok      -         -     2      25.00 Gb/s  -            -        -
+CT1.ETH3   ok      -         -     3      25.00 Gb/s  -            -        -
+CT1.ETH4   ok      -         -     4      25.00 Gb/s  -            -        -
+CT1.ETH5   ok      -         -     5      25.00 Gb/s  -            -        -
+CT1.ETH6   ok      -         -     6      0.00 b/s    -            -        -
+CT1.ETH7   ok      -         -     7      0.00 b/s    -            -        -
+CT1.ETH8   ok      -         -     8      0.00 b/s    -            -        -
+CT1.ETH9   ok      -         -     9      0.00 b/s    -            -        -
+CT1.ETH20  ok      -         3     20     25.00 Gb/s  -            -        -
+CT1.ETH21  ok      -         3     21     25.00 Gb/s  -            -        -
+CT1.FAN0   ok      -         -     0      -           -            -        -
+CT1.FAN1   ok      -         -     1      -           -            -        -
+CT1.FAN2   ok      -         -     2      -           -            -        -
+CT1.FAN3   ok      -         -     3      -           -            -        -
+CT1.FAN4   ok      -         -     4      -           -            -        -
+CT1.FAN5   ok      -         -     5      -           -            -        -
+CT1.FC0    ok      -         0     0      0.00 b/s    -            -        -
+CT1.FC1    ok      -         0     1      0.00 b/s    -            -        -
+CT1.FC2    ok      -         0     2      0.00 b/s    -            -        -
+CT1.FC3    ok      -         0     3      0.00 b/s    -            -        -
+CT1.FC8    ok      -         2     8      0.00 b/s    -            -        -
+CT1.FC9    ok      -         2     9      0.00 b/s    -            -        -
+CT1.TMP0   ok      -         -     0      -           48 C         -        -
+CT1.TMP1   ok      -         -     1      -           50 C         -        -
+CT1.TMP2   ok      -         -     2      -           40 C         -        -
+CT1.TMP3   ok      -         -     3      -           58 C         -        -
+CT1.TMP4   ok      -         -     4      -           58 C         -        -
+CT1.TMP5   ok      -         -     5      -           48 C         -        -
+CT1.TMP6   ok      -         -     6      -           57 C         -        -
+CT1.TMP7   ok      -         -     7      -           42 C         -        -
+CT1.TMP8   ok      -         -     8      -           42 C         -        -
+CT1.TMP9   ok      -         -     9      -           43 C         -        -
+CT1.TMP10  ok      -         -     10     -           42 C         -        -
+CT1.TMP11  ok      -         -     11     -           41 C         -        -
+CT1.TMP12  ok      -         -     12     -           41 C         -        -
+CT1.TMP13  ok      -         -     13     -           44 C         -        -
+CT1.TMP14  ok      -         -     14     -           43 C         -        -
+CT1.TMP15  ok      -         -     15     -           43 C         -        -
+CT1.TMP16  ok      -         -     16     -           42 C         -        -
+CT1.TMP17  ok      -         -     17     -           43 C         -        -
+CT1.TMP18  ok      -         -     18     -           43 C         -        -
+CT1.TMP19  ok      -         -     19     -           42 C         -        -
+CT1.TMP20  ok      -         -     20     -           38 C         -        -
+CT1.TMP21  ok      -         -     21     -           50 C         -        -
+CT1.TMP22  ok      -         -     22     -           47 C         -        -
+CT1.TMP23  ok      -         -     23     -           50 C         -        -
+CT1.TMP24  ok      -         -     24     -           53 C         -        -
+CT1.TMP25  ok      -         -     25     -           55 C         -        -
+CT1.TMP26  ok      -         -     26     -           39 C         -        -
+     root@p-pure01-ct0:/var/home/pureeng# puremessage list --open
+     root@p-pure01-ct0:/var/home/pureeng# iobalance --sampletime 15
+sampling host I/O for 15 seconds...
+                Host  CT0 I/O Count  CT1 I/O Count  
+          p-erp-db01       34.00       48.00  
+          p-erp-db02       86.00       96.00  
+          p-erp-db03       96.00       97.00  
+          p-gap-db01       22.00       24.00  
+          p-gap-db02       26.00       80.00  ! unbalanced I/O
+          p-gap-db03       28.00       71.00  ! unbalanced I/O
+           p-k8s-w01       91.00       98.00  
+           p-k8s-w02       12.00        8.00  
+           p-k8s-w04        8.00       12.00  
+           p-k8s-w05        8.00       12.00  
+           p-k8s-w06       71.00       55.00  
+           p-k8s-w07      101.00       97.00  
+           p-k8s-w08       76.00       93.00  
+          p-ksmart01      117.00      121.00  
+           p-mssql22        0.00        0.00  ? Host is idle
+           p-mssql23        0.00        0.00  ? Host is idle
+           p-mssql33       7.66K       7.24K  
+           p-mssql34        0.00       4.18K  ! no I/O to CT0
+           p-mssql35       42.00       43.00  
+           p-mssql36        0.00        0.00  ? Host is idle
+           p-mssql37       96.00       96.00  
+           p-mssql38       85.00       85.00  
+          p-oem-db01       16.00       14.00  
+          p-vcp-db01       14.00       14.00  
+           q-mssql03        0.00        0.00  ? Host is idle
+           q-mssql04        0.00        0.00  ? Host is idle
+           q-mssql06        5.00        5.00  
+           q-mssql07       15.00        7.00  
+           t-mssql10        0.00        0.00  ? Host is idle
+           zs-esxi50       6.55K       3.76K  ! unbalanced I/O
+           zs-esxi51       3.39K       2.05K  ! unbalanced I/O
+           zs-esxi52      15.83K      17.86K  
+           zs-esxi53       3.60K       1.83K  ! unbalanced I/O
+           zs-esxi54       4.40K       1.82K  ! unbalanced I/O
+           zs-esxi55       1.69K       2.15K  
+           zs-esxi56      26.95K       9.48K  ! unbalanced I/O
+           zs-esxi57       5.80K       3.06K  ! unbalanced I/O
+           zs-esxi58      10.54K       5.22K  ! unbalanced I/O
+           zs-esxi59       3.34K       1.22K  ! unbalanced I/O
+           zs-esxi60       3.89K       2.93K  
+           zs-esxi61      43.40K      17.50K  ! unbalanced I/O
+           zs-esxi62      49.91K      53.06K  
+           zs-esxi63      92.86K      96.15K  
+           zs-esxi64      218.00       89.00  ! unbalanced I/O
+           zs-esxi65      256.00      121.00  ! unbalanced I/O
+           zs-esxi66      707.00      526.00  
+           zs-esxi67       22.00       71.00  ! unbalanced I/O
+           zs-esxi68       56.00       70.00  
+           zs-esxi69      284.00       89.00  ! unbalanced I/O
+           zs-esxi70      112.00       89.00  
+           zs-esxi71       56.00        7.00  ! unbalanced I/O
+           zs-esxi72      110.00       30.00  ! unbalanced I/O
+           zs-esxi73       48.00       41.00  
+           zs-esxi75       1.73K       2.84K  ! unbalanced I/O
+           zs-esxi76     122.59K     153.67K  
+           zs-esxi80       9.81K       5.69K  ! unbalanced I/O
+           zs-esxi81       2.37K       2.00K  
+           zs-esxi82       3.28K       1.88K  ! unbalanced I/O
+           zs-esxi83       2.61K       1.21K  ! unbalanced I/O
+           zs-esxi84        0.00        0.00  ? Host is idle
+            zs-kvm01        6.00        4.00  
+            zs-kvm02        6.00        4.00  
+            zs-kvm03        6.00        7.00  
+     root@p-pure01-ct0:/var/home/pureeng# list=`pureport list --initiator`; echo; for i in {0..1}; do for j in {0..9}; do cnt=`echo "$list"|grep CT$i.FC$j|wc -l`;echo CT$i.FC$j $cnt; done; echo; done
+
+CT0.FC0 0
+CT0.FC1 0
+CT0.FC2 0
+CT0.FC3 0
+CT0.FC4 0
+CT0.FC5 0
+CT0.FC6 0
+CT0.FC7 0
+CT0.FC8 0
+CT0.FC9 0
+
+CT1.FC0 0
+CT1.FC1 0
+CT1.FC2 0
+CT1.FC3 0
+CT1.FC4 0
+CT1.FC5 0
+CT1.FC6 0
+CT1.FC7 0
+CT1.FC8 0
+CT1.FC9 0
+
+     root@p-pure01-ct0:/var/home/pureeng# iscsipureportlist=`pureport list --initiator | grep -v FC | awk -F' CT' '{print "CT"$2,$8}' | grep -v 'CT ' | awk -F '.ETH' '{print $1, $2}' | awk '{print $1, $5, $6}' | sort | uniq -c; echo`; iscsi pureportlistcount=`echo "$iscsipureportlist" | awk '{total += $1} END {print total}'`; echo -e "$iscsipureportlist\n\n"; echo -e "\tTotal iSCSI connections: $iscsipureportlistcount\n\n";
+    136 CT0 iqn.2010-06.com.purestorage:flasharray.3b2c203c3575cb5a -
+    135 CT1 iqn.2010-06.com.purestorage:flasharray.3b2c203c3575cb5a -
+
+
+Total iSCSI connections: 271
+
+
+     root@p-pure01-ct0:/var/home/pureeng# pureport list
+Name      WWN                      Portal            IQN                                                      NQN  Failover
+CT0.ETH4  -                        10.64.28.50:3260  iqn.2010-06.com.purestorage:flasharray.3b2c203c3575cb5a  -    -
+CT0.ETH5  -                        10.64.28.51:3260  iqn.2010-06.com.purestorage:flasharray.3b2c203c3575cb5a  -    -
+CT0.FC0   52:4A:93:76:72:2F:9B:00  -                 -                                                        -    -
+CT0.FC1   52:4A:93:76:72:2F:9B:01  -                 -                                                        -    -
+CT0.FC2   52:4A:93:76:72:2F:9B:02  -                 -                                                        -    -
+CT0.FC3   52:4A:93:76:72:2F:9B:03  -                 -                                                        -    -
+CT0.FC8   52:4A:93:76:72:2F:9B:08  -                 -                                                        -    -
+CT0.FC9   52:4A:93:76:72:2F:9B:09  -                 -                                                        -    -
+CT1.ETH4  -                        10.64.28.52:3260  iqn.2010-06.com.purestorage:flasharray.3b2c203c3575cb5a  -    -
+CT1.ETH5  -                        10.64.28.53:3260  iqn.2010-06.com.purestorage:flasharray.3b2c203c3575cb5a  -    -
+CT1.FC0   52:4A:93:76:72:2F:9B:10  -                 -                                                        -    -
+CT1.FC1   52:4A:93:76:72:2F:9B:11  -                 -                                                        -    -
+CT1.FC2   52:4A:93:76:72:2F:9B:12  -                 -                                                        -    -
+CT1.FC3   52:4A:93:76:72:2F:9B:13  -                 -                                                        -    -
+CT1.FC8   52:4A:93:76:72:2F:9B:18  -                 -                                                        -    -
+CT1.FC9   52:4A:93:76:72:2F:9B:19  -                 -                                                        -    -
+     root@p-pure01-ct0:/var/home/pureeng# purenetwork eth list
+Name       Enabled  Type      Subnet  Address      Mask           Gateway     MTU   MAC                Speed       Services     Subinterfaces
+ct0.eth0   True     physical  -       10.160.2.86  255.255.254.0  10.160.2.1  1500  24:a9:37:43:5a:7f  1.00 Gb/s   management   -
+ct0.eth1   False    physical  -       -            -              -           1500  24:a9:37:43:5a:80  1.00 Gb/s   management   -
+ct0.eth2   True     physical  -       10.64.1.105  255.255.255.0  10.64.1.1   1500  24:a9:37:43:5a:82  25.00 Gb/s  replication  -
+ct0.eth3   True     physical  -       10.64.1.106  255.255.255.0  10.64.1.1   1500  24:a9:37:43:5a:81  25.00 Gb/s  replication  -
+ct0.eth4   True     physical  -       10.64.28.50  255.255.255.0  10.64.28.1  9000  24:a9:37:43:5a:84  25.00 Gb/s  iscsi        -
+ct0.eth5   True     physical  -       10.64.28.51  255.255.255.0  10.64.28.1  9000  24:a9:37:43:5a:83  25.00 Gb/s  iscsi        -
+ct0.eth6   False    physical  -       -            -              -           4200  24:a9:37:43:88:91  50.00 Gb/s  -            -
+ct0.eth7   False    physical  -       -            -              -           4200  24:a9:37:43:88:90  50.00 Gb/s  -            -
+ct0.eth8   False    physical  -       -            -              -           4200  24:a9:37:43:88:93  50.00 Gb/s  -            -
+ct0.eth9   False    physical  -       -            -              -           4200  24:a9:37:43:88:92  50.00 Gb/s  -            -
+ct0.eth20  True     physical  -       -            -              -           1500  34:80:0d:e3:e2:5a  25.00 Gb/s  iscsi        -
+ct0.eth21  True     physical  -       -            -              -           1500  34:80:0d:e3:e2:5b  25.00 Gb/s  iscsi        -
+ct1.eth0   True     physical  -       10.160.2.87  255.255.254.0  10.160.2.1  1500  24:a9:37:43:5e:5e  1.00 Gb/s   management   -
+ct1.eth1   False    physical  -       -            -              -           1500  24:a9:37:43:5e:5f  1.00 Gb/s   management   -
+ct1.eth2   True     physical  -       10.64.1.107  255.255.255.0  10.64.1.1   1500  24:a9:37:43:5e:61  25.00 Gb/s  replication  -
+ct1.eth3   True     physical  -       10.64.1.108  255.255.255.0  10.64.1.1   1500  24:a9:37:43:5e:60  25.00 Gb/s  replication  -
+ct1.eth4   True     physical  -       10.64.28.52  255.255.255.0  10.64.28.1  9000  24:a9:37:43:5e:63  25.00 Gb/s  iscsi        -
+ct1.eth5   True     physical  -       10.64.28.53  255.255.255.0  10.64.28.1  9000  24:a9:37:43:5e:62  25.00 Gb/s  iscsi        -
+ct1.eth6   False    physical  -       -            -              -           4200  24:a9:37:43:88:ed  50.00 Gb/s  -            -
+ct1.eth7   False    physical  -       -            -              -           4200  24:a9:37:43:88:ec  50.00 Gb/s  -            -
+ct1.eth8   False    physical  -       -            -              -           4200  24:a9:37:43:88:ef  50.00 Gb/s  -            -
+ct1.eth9   False    physical  -       -            -              -           4200  24:a9:37:43:88:ee  50.00 Gb/s  -            -
+ct1.eth20  True     physical  -       -            -              -           1500  34:80:0d:e3:da:7a  25.00 Gb/s  iscsi        -
+ct1.eth21  True     physical  -       -            -              -           1500  34:80:0d:e3:da:7b  25.00 Gb/s  iscsi        -
+filevip    True     vif       -       10.64.30.14  255.255.254.0  10.64.30.1  1500  f2:e3:94:c5:13:5a  25.00 Gb/s  file         ct1.eth20
+                                                                                                                                ct0.eth20
+                                                                                                                                ct1.eth21
+                                                                                                                                ct0.eth21
+replbond   False    bond      -       -            -              -           1500  be:fa:dd:bf:ff:29  0.00 b/s    replication  -
+vir0       True     vif       -       10.160.2.85  255.255.254.0  10.160.2.1  1500  1e:cb:4d:12:52:f0  1.00 Gb/s   management   -
+vir1       False    vif       -       -            -              -           1500  a2:80:8c:46:aa:2b  1.00 Gb/s   management   -
+     root@p-pure01-ct0:/var/home/pureeng# purearray list --controller
+Name  Type              Mode       Model     Version  Status  Internal Details
+CT0   array_controller  secondary  FA-X70R3  6.5.8    ready   
+CT1   array_controller  primary    FA-X70R3  6.5.8    ready   
+     root@p-pure01-ct0:/var/home/pureeng# purehw list --type pwr
+Name      Status  Identify  Slot  Index  Speed  Temperature  Voltage  Details
+CH0.PWR0  ok      -         -     0      -      -            207 V    -
+CH0.PWR1  ok      -         -     1      -      -            207 V    -
+     root@p-pure01-ct0:/var/home/pureeng# pureadm status; ssh peer pureadm status
+Process status:
+purity start/running
+lio-drv start/running
+foed start/running, process 23891
+platform start/running, process 23835
+gui start/running, process 23809
+rest start/running, process 25358
+monitor start/running, process 23821
+iostat start/running, process 155439
+statistics start/running, process 23854
+middleware start/running, process 27291
+vasa start/running, process 27217
+platform working
+foed working
+gui working
+platform_env working
+quorum working
+foed_env working
+foed_ready working
+remote_patch working
+driver working
+san working
+health working
+lio-drv working
+middleware-db working
+middleware working
+vasa working
+middleware-file working
+Process status:
+purity start/running
+lio-drv start/running
+foed start/running, process 24412
+platform start/running, process 24364
+gui start/running, process 24338
+rest start/running, process 25778
+monitor start/running, process 24350
+iostat start/running, process 53060
+statistics start/running, process 24383
+middleware start/running, process 27389
+vasa start/running, process 27353
+filegw start/running, process 77989
+platform working
+foed working
+gui working
+platform_env working
+quorum working
+foed_env working
+foed_ready working
+remote_patch working
+driver working
+san working
+health working
+lio-drv working
+middleware-db working
+middleware working
+vasa working
+middleware-file working
+     root@p-pure01-ct0:/var/home/pureeng# purearray list --space
+Name      Capacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique   Snapshots  Shared  System  Replication  Total
+p-pure01  247.60T   100%    1244262000228K    519.24T  55%                3.5 to 1        7.9 to 1         132.74T  29.08T     20.66T  0.00    0.00         182.47T
+     root@p-pure01-ct0:/var/home/pureeng# puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    healthy  16.00T    -
+CH0.BAY1   SSD    healthy  16.00T    -
+CH0.BAY2   SSD    healthy  16.00T    -
+CH0.BAY3   SSD    healthy  16.00T    -
+CH0.BAY4   SSD    healthy  16.00T    -
+CH0.BAY5   SSD    healthy  16.00T    -
+CH0.BAY6   SSD    healthy  16.00T    -
+CH0.BAY7   SSD    healthy  16.00T    -
+CH0.BAY8   SSD    healthy  16.00T    -
+CH0.BAY9   SSD    healthy  16.00T    -
+CH0.BAY10  SSD    healthy  16.00T    -
+CH0.BAY11  SSD    healthy  16.00T    -
+CH0.BAY12  SSD    healthy  16.00T    -
+CH0.BAY13  SSD    healthy  16.00T    -
+CH0.BAY14  SSD    healthy  16.00T    -
+CH0.BAY15  SSD    healthy  16.00T    -
+CH0.BAY16  SSD    healthy  16.00T    -
+CH0.BAY17  SSD    healthy  16.00T    -
+CH0.BAY18  SSD    healthy  16.00T    -
+CH0.BAY19  SSD    healthy  16.00T    -
+CH0.NVB0   NVRAM  healthy  7.00G     -
+CH0.NVB1   NVRAM  healthy  7.00G     -
+CH0.NVB2   NVRAM  healthy  7.00G     -
+CH0.NVB3   NVRAM  healthy  7.00G     -
+     root@p-pure01-ct0:/var/home/pureeng# puresetup whoshow
+##########################################
+#   Welcome to the Purity Setup Wizard   #
+##########################################
+  Physical IP:             10.160.2.86
+  Virtual IP:              10.160.2.85
+  Netmask:                 255.255.254.0
+  Gateway:                 10.160.2.1
+  DNS Servers:             10.16.16.10,10.16.16.11
+  DNS Domain:              gentex.com
+  NTP Servers:             ntp01.gentex.com,ntp02.gentex.com,ntp03.gentex.com
+  SMTP Relay Host:         outgoingmail.gentex.com
+  SMTP Sender Domain:      gentex.com
+  Alert Email Recipients:  brandt.freidank@gentex.com,flasharray-alerts@purestorage.com,jeff.pike@gentex.com,jesse.byker@gentex.com,justin.wildeboer@gentex.com,nick.szkodyn@gentex.com
+  HTTP proxy:              
+  Physical IP:             10.160.2.87
+  Netmask:                 255.255.254.0
+  Gateway:                 10.160.2.1
+CONFIG_TASK_COMPLETED:CONFIG_TASK_PURESETUP_EXITED
+     root@p-pure01-ct0:/var/home/pureeng# purevol list --connect | grep "protocol-endpoint"
+     root@p-pure01-ct0:/var/home/pureeng# puretune --list 
+Consistently set tunables:
+PS_FILE_GATEWAY_ENABLED : 1 ('01177349')
+Inconsistently or unnecessarily set tunables:
+PURITY_START_ON_BOOT:
+local pureadm             - 1 
+peer pureadm              - 1  (\'\')
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+PS_FILEGW_ALLOW_GLOBAL_CATALOG:
+local pureadm             - 0  (Set during upgrade to 6.3.4 - CLOUD-72304)
+peer pureadm              - 0  (Set during upgrade to 6.3.4 - CLOUD-72304)
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+PS_FILEGW_SMB_HIDE_DOT_SNAPSHOT:
+local pureadm             - 1  (Set during upgrade to 6.3.4 - CLOUD-75192)
+peer pureadm              - 1  (Set during upgrade to 6.3.4 - CLOUD-75192)
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+ATOM_PUREAPP_MONITOR_MEM_LEAK:
+local pureadm             - PCTFJ21230097,PCTFJ2124004C,6.3.4  (PURE-295339 set by cdu)
+peer pureadm              - PCTFJ21230097,PCTFJ2124004C,6.3.4  (PURE-295339 set by cdu)
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+ATOM_5206:
+local pureadm             - 1 
+peer pureadm              - 1 
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+PS_FILEGW_ALLOW_NTLM_KERBEROS_MEMBERSHIP:
+local pureadm             - 0  (Set during upgrade to 6.5.1 - CLOUD-91245)
+peer pureadm              - 0  (Set during upgrade to 6.5.1 - CLOUD-91245)
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+     root@p-pure01-ct0:/var/home/pureeng# purearray list --connect --path
+Name      Local Port  Local Address  Remote Port  Remote Address  Status     Transport
+p-pure02  ct1.eth2    10.64.1.107    ct0.eth2     10.201.108.10   connected  ip
+p-pure02  ct1.eth2    10.64.1.107    ct1.eth2     10.201.108.11   connected  ip
+p-pure02  ct1.eth2    10.64.1.107    ct0.eth3     10.201.108.12   connected  ip
+p-pure02  ct1.eth2    10.64.1.107    ct1.eth3     10.201.108.13   connected  ip
+p-pure02  ct1.eth3    10.64.1.108    ct0.eth2     10.201.108.10   connected  ip
+p-pure02  ct1.eth3    10.64.1.108    ct1.eth2     10.201.108.11   connected  ip
+p-pure02  ct1.eth3    10.64.1.108    ct0.eth3     10.201.108.12   connected  ip
+p-pure02  ct1.eth3    10.64.1.108    ct1.eth3     10.201.108.13   connected  ip
+     root@p-pure01-ct0:/var/home/pureeng# ssh peer
+Last login: Thu Nov 30 07:35:56 2023 from fe80::26a9:37ff:fe43:5a7e%haeth0
+
+Sun Jun 22 08:17:53 2025
+Welcome root. This is Purity Version 6.5.8 on FlashArray p-pure01
+http://www.purestorage.com/
+     root@p-pure01-ct1:~# purearray list --connect --path
+Name      Local Port  Local Address  Remote Port  Remote Address  Status     Transport
+p-pure02  ct1.eth2    10.64.1.107    ct0.eth2     10.201.108.10   connected  ip
+p-pure02  ct1.eth2    10.64.1.107    ct1.eth2     10.201.108.11   connected  ip
+p-pure02  ct1.eth2    10.64.1.107    ct0.eth3     10.201.108.12   connected  ip
+p-pure02  ct1.eth2    10.64.1.107    ct1.eth3     10.201.108.13   connected  ip
+p-pure02  ct1.eth3    10.64.1.108    ct0.eth2     10.201.108.10   connected  ip
+p-pure02  ct1.eth3    10.64.1.108    ct1.eth2     10.201.108.11   connected  ip
+p-pure02  ct1.eth3    10.64.1.108    ct0.eth3     10.201.108.12   connected  ip
+p-pure02  ct1.eth3    10.64.1.108    ct1.eth3     10.201.108.13   connected  ip
+     root@p-pure01-ct1:~# exit
+logout
+     root@p-pure01-ct0:/var/home/pureeng# cat /etc/timezone 
+America/Detroit     root@p-pure01-ct0:/var/home/pureeng# purenetowrk list
+bash: purenetowrk: command not found
+     root@p-pure01-ct0:/var/home/pureeng# pureenetwork list
+Name       Enabled  Speed       Services
+CT0.FC0    True     16.00 Gb/s  scsi-fc
+CT0.FC1    True     16.00 Gb/s  scsi-fc
+CT0.FC2    True     16.00 Gb/s  scsi-fc
+CT0.FC3    True     16.00 Gb/s  scsi-fc
+CT0.FC8    True     16.00 Gb/s  scsi-fc
+CT0.FC9    True     16.00 Gb/s  scsi-fc
+CT1.FC0    True     16.00 Gb/s  scsi-fc
+CT1.FC1    True     16.00 Gb/s  scsi-fc
+CT1.FC2    True     16.00 Gb/s  scsi-fc
+CT1.FC3    True     16.00 Gb/s  scsi-fc
+CT1.FC8    True     16.00 Gb/s  scsi-fc
+CT1.FC9    True     16.00 Gb/s  scsi-fc
+ct0.eth0   True     1.00 Gb/s   management
+ct0.eth1   False    1.00 Gb/s   management
+ct0.eth2   True     25.00 Gb/s  replication
+ct0.eth3   True     25.00 Gb/s  replication
+ct0.eth4   True     25.00 Gb/s  iscsi
+ct0.eth5   True     25.00 Gb/s  iscsi
+ct0.eth6   False    50.00 Gb/s  -
+ct0.eth7   False    50.00 Gb/s  -
+ct0.eth8   False    50.00 Gb/s  -
+ct0.eth9   False    50.00 Gb/s  -
+ct0.eth20  True     25.00 Gb/s  iscsi
+ct0.eth21  True     25.00 Gb/s  iscsi
+ct1.eth0   True     1.00 Gb/s   management
+ct1.eth1   False    1.00 Gb/s   management
+ct1.eth2   True     25.00 Gb/s  replication
+ct1.eth3   True     25.00 Gb/s  replication
+ct1.eth4   True     25.00 Gb/s  iscsi
+ct1.eth5   True     25.00 Gb/s  iscsi
+ct1.eth6   False    50.00 Gb/s  -
+ct1.eth7   False    50.00 Gb/s  -
+ct1.eth8   False    50.00 Gb/s  -
+ct1.eth9   False    50.00 Gb/s  -
+ct1.eth20  True     25.00 Gb/s  iscsi
+ct1.eth21  True     25.00 Gb/s  iscsi
+filevip    True     25.00 Gb/s  file
+replbond   False    0.00 b/s    replication
+vir0       True     1.00 Gb/s   management
+vir1       False    1.00 Gb/s   management
+     root@p-pure01-ct0:/var/home/pureeng# purenetowwork eth list
+Name       Enabled  Type      Subnet  Address      Mask           Gateway     MTU   MAC                Speed       Services     Subinterfaces
+ct0.eth0   True     physical  -       10.160.2.86  255.255.254.0  10.160.2.1  1500  24:a9:37:43:5a:7f  1.00 Gb/s   management   -
+ct0.eth1   False    physical  -       -            -              -           1500  24:a9:37:43:5a:80  1.00 Gb/s   management   -
+ct0.eth2   True     physical  -       10.64.1.105  255.255.255.0  10.64.1.1   1500  24:a9:37:43:5a:82  25.00 Gb/s  replication  -
+ct0.eth3   True     physical  -       10.64.1.106  255.255.255.0  10.64.1.1   1500  24:a9:37:43:5a:81  25.00 Gb/s  replication  -
+ct0.eth4   True     physical  -       10.64.28.50  255.255.255.0  10.64.28.1  9000  24:a9:37:43:5a:84  25.00 Gb/s  iscsi        -
+ct0.eth5   True     physical  -       10.64.28.51  255.255.255.0  10.64.28.1  9000  24:a9:37:43:5a:83  25.00 Gb/s  iscsi        -
+ct0.eth6   False    physical  -       -            -              -           4200  24:a9:37:43:88:91  50.00 Gb/s  -            -
+ct0.eth7   False    physical  -       -            -              -           4200  24:a9:37:43:88:90  50.00 Gb/s  -            -
+ct0.eth8   False    physical  -       -            -              -           4200  24:a9:37:43:88:93  50.00 Gb/s  -            -
+ct0.eth9   False    physical  -       -            -              -           4200  24:a9:37:43:88:92  50.00 Gb/s  -            -
+ct0.eth20  True     physical  -       -            -              -           1500  34:80:0d:e3:e2:5a  25.00 Gb/s  iscsi        -
+ct0.eth21  True     physical  -       -            -              -           1500  34:80:0d:e3:e2:5b  25.00 Gb/s  iscsi        -
+ct1.eth0   True     physical  -       10.160.2.87  255.255.254.0  10.160.2.1  1500  24:a9:37:43:5e:5e  1.00 Gb/s   management   -
+ct1.eth1   False    physical  -       -            -              -           1500  24:a9:37:43:5e:5f  1.00 Gb/s   management   -
+ct1.eth2   True     physical  -       10.64.1.107  255.255.255.0  10.64.1.1   1500  24:a9:37:43:5e:61  25.00 Gb/s  replication  -
+ct1.eth3   True     physical  -       10.64.1.108  255.255.255.0  10.64.1.1   1500  24:a9:37:43:5e:60  25.00 Gb/s  replication  -
+ct1.eth4   True     physical  -       10.64.28.52  255.255.255.0  10.64.28.1  9000  24:a9:37:43:5e:63  25.00 Gb/s  iscsi        -
+ct1.eth5   True     physical  -       10.64.28.53  255.255.255.0  10.64.28.1  9000  24:a9:37:43:5e:62  25.00 Gb/s  iscsi        -
+ct1.eth6   False    physical  -       -            -              -           4200  24:a9:37:43:88:ed  50.00 Gb/s  -            -
+ct1.eth7   False    physical  -       -            -              -           4200  24:a9:37:43:88:ec  50.00 Gb/s  -            -
+ct1.eth8   False    physical  -       -            -              -           4200  24:a9:37:43:88:ef  50.00 Gb/s  -            -
+ct1.eth9   False    physical  -       -            -              -           4200  24:a9:37:43:88:ee  50.00 Gb/s  -            -
+ct1.eth20  True     physical  -       -            -              -           1500  34:80:0d:e3:da:7a  25.00 Gb/s  iscsi        -
+ct1.eth21  True     physical  -       -            -              -           1500  34:80:0d:e3:da:7b  25.00 Gb/s  iscsi        -
+filevip    True     vif       -       10.64.30.14  255.255.254.0  10.64.30.1  1500  f2:e3:94:c5:13:5a  25.00 Gb/s  file         ct1.eth20
+                                                                                                                                ct0.eth20
+                                                                                                                                ct1.eth21
+                                                                                                                                ct0.eth21
+replbond   False    bond      -       -            -              -           1500  be:fa:dd:bf:ff:29  0.00 b/s    replication  -
+vir0       True     vif       -       10.160.2.85  255.255.254.0  10.160.2.1  1500  1e:cb:4d:12:52:f0  1.00 Gb/s   management   -
+vir1       False    vif       -       -            -  purenetwork fc list
+Name     Enabled  WWN                      Speed       Services
+CT0.FC0  True     52:4A:93:76:72:2F:9B:00  16.00 Gb/s  scsi-fc
+CT0.FC1  True     52:4A:93:76:72:2F:9B:01  16.00 Gb/s  scsi-fc
+CT0.FC2  True     52:4A:93:76:72:2F:9B:02  16.00 Gb/s  scsi-fc
+CT0.FC3  True     52:4A:93:76:72:2F:9B:03  16.00 Gb/s  scsi-fc
+CT0.FC8  True     52:4A:93:76:72:2F:9B:08  16.00 Gb/s  scsi-fc
+CT0.FC9  True     52:4A:93:76:72:2F:9B:09  16.00 Gb/s  scsi-fc
+CT1.FC0  True     52:4A:93:76:72:2F:9B:10  16.00 Gb/s  scsi-fc
+CT1.FC1  True     52:4A:93:76:72:2F:9B:11  16.00 Gb/s  scsi-fc
+CT1.FC2  True     52:4A:93:76:72:2F:9B:12  16.00 Gb/s  scsi-fc
+CT1.FC3  True     52:4A:93:76:72:2F:9B:13  16.00 Gb/s  scsi-fc
+CT1.FC8  True     52:4A:93:76:72:2F:9B:18  16.00 Gb/s  scsi-fc
+CT1.FC9  True     52:4A:93:76:72:2F:9B:19  16.00 Gb/s  scsi-fc
+     root@p-pure01-ct0:/var/home/pureeng# fcpureportlist=`pureport list --initiator | awk '/Target/,0' | cut -d. -f1 | awk '{print $1,$5}' | grep -v '-' | grep -v "Initiator" | uniq -c; echo`; fcpureportlistcount=`echo "$fcpureportlist" | a wk '{total += $1} END {print total}'`; echo -e "$fcpureportlist\n\n"; echo -e "\tTotal FC connections: $fcpureportlistcount\n\n";
+
+
+
+Total FC connections: 0
+
+
+     root@p-pure01-ct0:/var/home/pureeng# purearray list --controller
+Name  Type              Mode       Model     Version  Status  Internal Details
+CT0   array_controller  secondary  FA-X70R3  6.5.8    ready   
+CT1   array_controller  primary    FA-X70R3  6.5.8    ready   
+     root@p-pure01-ct0:/var/home/pureeng# purealert list --tag
+Name         Created                  Expires
+maintenance  2025-06-22 08:14:13 EDT  2025-06-22 12:14:13 EDT
+     root@p-pure01-ct0:/var/home/pureeng# =~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.06.22 08:27:25 =~=~=~=~=~=~=~=~=~=~=~=
+
+PCTFJ2422016F login: puresetup
+Password: 
+<fw_update_tool>
+===================================================================
+=                            NOTICE                               =
+===================================================================
+=                                                                 =
+=    Firmware is currently being checked and/or updated           =
+=    on this controller.                                          =
+=                                                                 =
+=    If updates are necessary they will be applied automatically, =
+=    and one or more automatic reboots may occur as a result.     =
+=    A completion notice will be provided when done.              =
+=                                                                 =
+=    DO NOT RESTART OR REMOVE POWER WHILE UPDATE IS IN PROGRESS   =
+=                                                                 =
+===================================================================
+<fw_update_tool>
+
+Sun Jun 22 12:29:40 2025
+Welcome puresetup. This is Purity Version 6.5.5 on FlashArray PCTFJ2422016F
+http://www.purestorage.com/
+puresetup@PCTFJ2422016F:~$ mount /dev/sdb1 /mnt
+puresetup@PCTFJ2422016F:~$ cp /mnt/6.5.8/* .
+puresetup@PCTFJ2422016F:~$ pureboot list
+===================================================================
+=                            NOTICE                               =
+===================================================================
+=                                                                 =
+=    Firmware is currently being checked and/or updated           =
+=    on this controller.                                          =
+=                                                                 =
+=    If updates are necessary they will be applied automatically, =
+=    and one or more automatic reboots may occur as a result.     =
+=    A completion notice will be provided when done.              =
+=                                                                 =
+=    DO NOT RESTART OR REMOVE POWER WHILE UPDATE IS IN PROGRESS   =
+=                                                                 =
+===================================================================
+
+
+Marked entry (*) is currently running
+Marked entry (-->) will run at next reboot
+*-->0. Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (202403191505+d9f0e688c788) on first (/dev/sda3)
+    1. Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (202403191505+d9f0e688c788) on second (/dev/sda4)
+puresetup@PCTFJ2422016F:~$ pureboot list
+===================================================================
+=                            NOTICE                               =
+===================================================================
+=                                                                 =
+=    Firmware is currently being checked and/or updated           =
+=    on this controller.                                          =
+=                                                                 =
+=    If updates are necessary they will be applied automatically, =
+=    and one or more automatic reboots may occur as a result.     =
+=    A completion notice will be provided when done.              =
+=                                                                 =
+=    DO NOT RESTART OR REMOVE POWER WHILE UPDATE IS IN PROGRESS   =
+=                                                                 =
+===================================================================
+
+
+Marked entry (*) is currently running
+Marked entry (-->) will run at next reboot
+*-->0. Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (202403191505+d9f0e688c788) on first (/dev/sda3)
+    1. Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (202403191505+d9f0e688c788) on second (/dev/sda4)
+puresetup@PCTFJ2422016F:~$  GNU GRUB  version 2.06
+
+/----------------------------------------------------------------------------\||||||||||||||||||||||||||\----------------------------------------------------------------------------/     Use the ^ and v keys to select which entry is highlighted.          
+      Press enter to boot the selected OS, `e' to edit the commands       
+      before booting or `c' for a command-line.                            *Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (2024031915>
+ Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (2024031915>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        The highlighted entry will be executed automatically in 3s.                    The highlighted entry will be executed automatically in 2s.                    The highlighted entry will be executed automatically in 1s.                    The highlighted entry will be executed automatically in 0s.                 
+Purity
+
+PCTFJ2422016F login: puresetup
+Password: 
+
+Login incorrect
+PCTFJ2422016F login: puresetup
+Password: 
+<fw_update_tool>
+===================================================================
+=                            NOTICE                               =
+===================================================================
+=                                                                 =
+=    Firmware is currently being checked and/or updated           =
+=    on this controller.                                          =
+=                                                                 =
+=    If updates are necessary they will be applied automatically, =
+=    and one or more automatic reboots may occur as a result.     =
+=    A completion notice will be provided when done.              =
+=                                                                 =
+=    DO NOT RESTART OR REMOVE POWER WHILE UPDATE IS IN PROGRESS   =
+=                                                                 =
+===================================================================
+<fw_update_tool>
+Last login: Sun Jun 22 12:29:39 UTC 2025 on ttyS0
+
+Sun Jun 22 12:35:24 2025
+Welcome puresetup. This is Purity Version 6.5.5 on FlashArray PCTFJ2422016F
+http://www.purestorage.com/
+puresetup@PCTFJ2422016F:~$ ls
+purity_6.5.8_202408090136+b967c2f84655.ppkg
+purity_6.5.8_202408090136+b967c2f84655.ppkg.sha1
+puresetup@PCTFJ2422016F:~$                                                                                
+Broadcast message from root@PCTFJ2422016F (somewhere) (Sun Jun 22 12:36:03 2025
+                                                                               
+===================================================================            
+=                   UPDATE AND/OR CHECK COMPLETE                  =            
+=                                                                 =            
+=    The firmware checks/updates on this system are now complete. =            
+=    No further action is required, and the controller will       =            
+=    continue running as usual                                    =            
+=                                                                 =            
+===================================================================            
+                                                                               
+                                                                               
+
+puresetup@PCTFJ2422016F:~$ pureinstall purity_6.5.8_202408090136+b967c2f84655.ppkg
+Installing Purity on alternate partition labeled second.
+Erasing Purity software image from alternate partition second to prepare for installation.
+WARNING: Do not interrupt this process!!
+Unpacking new Purity software.
+................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Verifying package...
+
+Finalizing installation. This may take several minutes.
+Executing /altroot/opt/purextras/bin/finish-install.sh
+Executing /altroot/opt/purextras/bin/finish-install.azure-propagate.sh
+Executing /altroot/opt/purextras/bin/finish-install.cbs.sh
+Executing /altroot/opt/purextras/bin/finish-install.cdu-pureinstall-lib.sh
+Executing /altroot/opt/purextras/bin/finish-install.fix-dpkg.sh
+Purity installed.
+Installation complete. The new Purity version will load at next reboot.
+
+Important!
+The first boot of a new Purity version may take longer if the new version includes controller firmware updates.
+DO NOT REBOOT THE CONTROLLER DURING THE FIRMWARE UPDATE.
+
+Refer to http://community.purestorage.com for more information about the Purity upgrade process and firmware updates.
+puresetup@PCTFJ2422016F:~$ cat /etc/timezone 
+Etc/UTC
+puresetup@PCTFJ2422016F:~$ pureboot reboot --offline
+[Errno 111] Connection refused
+ GNU GRUB  version 2.06
+
+/----------------------------------------------------------------------------\||||||||||||||||||||||||||\----------------------------------------------------------------------------/     Use the ^ and v keys to select which entry is highlighted.          
+      Press enter to boot the selected OS, `e' to edit the commands       
+      before booting or `c' for a command-line.                             Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (2024031915>
+*Purity 6.5.8 (202408090136+b967c2f84655) with kernel 5.15.123+ (2024071402>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        The highlighted entry will be executed automatically in 3s.                    The highlighted entry will be executed automatically in 2s.                    The highlighted entry will be executed automatically in 1s.                    The highlighted entry will be executed automatically in 0s.                 
+Purity
+
+PCTFJ2422016F login: pureseutp   tup
+Password: 
+<fw_update_tool>
+===================================================================
+=                            NOTICE                               =
+===================================================================
+=                                                                 =
+=    Firmware is currently being checked and/or updated           =
+=    on this controller.                                          =
+=                                                                 =
+=    If updates are necessary they will be applied automatically, =
+=    and one or more automatic reboots may occur as a result.     =
+=    A completion notice will be provided when done.              =
+=                                                                 =
+=    DO NOT RESTART OR REMOVE POWER WHILE UPDATE IS IN PROGRESS   =
+=                                                                 =
+===================================================================
+<fw_update_tool>
+Last login: Sun Jun 22 12:35:24 UTC 2025 on ttyS0
+
+Sun Jun 22 12:41:28 2025
+Welcome puresetup. This is Purity Version 6.5.8 on FlashArray PCTFJ2422016F
+http://www.purestorage.com/
+puresetup@PCTFJ2422016F:~$ pureboot list
+===================================================================
+=                            NOTICE                               =
+===================================================================
+=                                                                 =
+=    Firmware is currently being checked and/or updated           =
+=    on this controller.                                          =
+=                                                                 =
+=    If updates are necessary they will be applied automatically, =
+=    and one or more automatic reboots may occur as a result.     =
+=    A completion notice will be provided when done.              =
+=                                                                 =
+=    DO NOT RESTART OR REMOVE POWER WHILE UPDATE IS IN PROGRESS   =
+=                                                                 =
+===================================================================
+
+
+Marked entry (*) is currently running
+Marked entry (-->) will run at next reboot
+    0. Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (202403191505+d9f0e688c788) on first (/dev/sda3)
+*-->1. Purity 6.5.8 (202408090136+b967c2f84655) with kernel 5.15.123+ (202407140227+e4052619b975) on second (/dev/sda4)
+puresetup@PCTFJ2422016F:~$ 
+puresetup@PCTFJ2422016F:~$  GNU GRUB  version 2.06
+
+/----------------------------------------------------------------------------\||||||||||||||||||||||||||\----------------------------------------------------------------------------/     Use the ^ and v keys to select which entry is highlighted.          
+      Press enter to boot the selected OS, `e' to edit the commands       
+      before booting or `c' for a command-line.                             Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (2024031915>
+*Purity 6.5.8 (202408090136+b967c2f84655) with kernel 5.15.123+ (2024071402>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        The highlighted entry will be executed automatically in 3s.                    The highlighted entry will be executed automatically in 2s.                    The highlighted entry will be executed automatically in 1s.                    The highlighted entry will be executed automatically in 0s.                 
+Purity
+
+PCTFJ2422016F login: puresetup
+Password: 
+Last login: Sun Jun 22 12:41:28 UTC 2025 on ttyS0
+
+Sun Jun 22 12:49:55 2025
+Welcome puresetup. This is Purity Version 6.5.8 on FlashArray PCTFJ2422016F
+http://www.purestorage.com/
+puresetup@PCTFJ2422016F:~$ pureboot list
+
+Marked entry (*) is currently running
+Marked entry (-->) will run at next reboot
+    0. Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (202403191505+d9f0e688c788) on first (/dev/sda3)
+*-->1. Purity 6.5.8 (202408090136+b967c2f84655) with kernel 5.15.123+ (202407140227+e4052619b975) on second (/dev/sda4)
+puresetup@PCTFJ2422016F:~$ puresetup npuresetup replace --from-controller FA-X70R3 
+##########################################
+#   Welcome to the Purity Setup Wizard   #
+##########################################
+Controller hardware model is compatible with the controller purity version
+[Errno 111] Connection refused
+Local controller model is FA-X70R4.
+Drive detected storage type is X.
+FA-X70R3 found to be replaced by FA-X70R4 has storage type X.
+Controller type supports multiple storage types, detecting type of storage installed...
+Detected storage type X
+Pre-existing storage type X was found on the device
+Successfully configured storage type X for array controller
+Check Cobalt NDU controllers.. OK
+Check RDL..................... OK
+Check shelf cabling........... OK
+Check controller link......... OK
+Check power supply............ OK
+Check PCIE AER errors......... OK
+Check io card pci id's........ OK
+Check LOM MAC addresses....... OK
+Getting local controller type. Local controller type is cobalt_a.
+Getting local controller variant. Not a generic controller, Exiting.
+Checking peer controller for tunables
+
+Apply PS_FILE_GATEWAY_ENABLED = 1 # 01177349
+ (y/n):y
+Apply PS_FILE_GATEWAY_ENABLED = 1 # 01177349
+ (y/n): y
+Tunable parameter set: PS_FILE_GATEWAY_ENABLED=1
+
+Apply PS_FILEGW_ALLOW_GLOBAL_CATALOG = 0 # Set during upgrade to 6.3.4 - CLOUD-7
+ (y/n):y
+Apply PS_FILEGW_ALLOW_GLOBAL_CATALOG = 0 # Set during upgrade to 6.3.4 - CLOUD-7
+ (y/n): y
+Tunable parameter set: PS_FILEGW_ALLOW_GLOBAL_CATALOG=0
+
+Apply PS_FILEGW_SMB_HIDE_DOT_SNAPSHOT = 1 # Set during upgrade to 6.3.4 - CLOUD-
+ (y/n):y
+Apply PS_FILEGW_SMB_HIDE_DOT_SNAPSHOT = 1 # Set during upgrade to 6.3.4 - CLOUD-
+ (y/n): y
+Tunable parameter set: PS_FILEGW_SMB_HIDE_DOT_SNAPSHOT=1
+
+Apply ATOM_PUREAPP_MONITOR_MEM_LEAK = PCTFJ21230097,PCTFJ2124004C,6.3.4 # PURE-2
+ (y/n):y
+Apply ATOM_PUREAPP_MONITOR_MEM_LEAK = PCTFJ21230097,PCTFJ2124004C,6.3.4 # PURE-2
+ (y/n): y
+Tunable parameter set: ATOM_PUREAPP_MONITOR_MEM_LEAK=PCTFJ21230097,PCTFJ2124004C,6.3.4
+
+Apply ATOM_5206 = 1 #
+ (y/n):y
+Apply ATOM_5206 = 1 #
+ (y/n): y
+Tunable parameter set: ATOM_5206=1
+
+Apply PS_FILEGW_ALLOW_NTLM_KERBEROS_MEMBERSHIP = 0 # Set during upgrade to 6.5.1
+ (y/n):y
+Apply PS_FILEGW_ALLOW_NTLM_KERBEROS_MEMBERSHIP = 0 # Set during upgrade to 6.5.1
+ (y/n): y
+Tunable parameter set: PS_FILEGW_ALLOW_NTLM_KERBEROS_MEMBERSHIP=0
+Stopping purity to ensure tunables are properly loaded.
+Press ENTER to reboot
+
+Please run puresetup again after reboot.
+[Errno 111] Connection refused
+ GNU GRUB  version 2.06
+
+/----------------------------------------------------------------------------\||||||||||||||||||||||||||\----------------------------------------------------------------------------/     Use the ^ and v keys to select which entry is highlighted.          
+      Press enter to boot the selected OS, `e' to edit the commands       
+      before booting or `c' for a command-line.                             Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (2024031915>
+*Purity 6.5.8 (202408090136+b967c2f84655) with kernel 5.15.123+ (2024071402>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        The highlighted entry will be executed automatically in 3s.                    The highlighted entry will be executed automatically in 2s.                    The highlighted entry will be executed automatically in 1s.                    The highlighted entry will be executed automatically in 0s.                 
+Purity
+
+PCTFJ2422016F login: puresetup
+Password: 
+Last login: Sun Jun 22 12:49:55 UTC 2025 on ttyS0
+
+Sun Jun 22 12:53:33 2025
+Welcome puresetup. This is Purity Version 6.5.8 on FlashArray PCTFJ2422016F
+http://www.purestorage.com/
+puresetup@PCTFJ2422016F:~$ puresetup replace --from-controller FA-X70R3
+##########################################
+#   Welcome to the Purity Setup Wizard   #
+##########################################
+Controller hardware model is compatible with the controller purity version
+[Errno 111] Connection refused
+Local controller model is FA-X70R4.
+Drive detected storage type is X.
+FA-X70R3 found to be replaced by FA-X70R4 has storage type X.
+Controller type supports multiple storage types, detecting type of storage installed...
+Detected storage type X
+Pre-existing storage type X was found on the device
+Successfully configured storage type X for array controller
+Check Cobalt NDU controllers.. OK
+Check RDL..................... OK
+Check shelf cabling........... OK
+Check controller link......... OK
+Check power supply............ OK
+Check PCIE AER errors......... OK
+Check io card pci id's........ OK
+Check LOM MAC addresses....... OK
+Getting local controller type. Local controller type is cobalt_a.
+Getting local controller variant. Not a generic controller, Exiting.
+Checking peer controller for tunables
+purity.service stablized: done
+purity start/running
+platform: ..done
+foed: ..done
+gui: ...done
+rest: done
+platform_env: 0.done
+quorum: ......done
+foed_env: 1.1.1.1.1.1.1.1.0.done
+foed_ready: done
+remote_patch: done
+driver: done
+san: Skip waiting for san during HW NDU
+[FA-X70R3.CT0.ETH1] does not need to be migrated since it has no configuration and is not a subinterface.
+[FA-X70R3.CT0.ETH6] does not need to be migrated since it has no configuration and is not a subinterface.
+[FA-X70R3.CT0.ETH7] does not need to be migrated since it has no configuration and is not a subinterface.
+[FA-X70R3.CT0.ETH8] does not need to be migrated since it has no configuration and is not a subinterface.
+[FA-X70R3.CT0.ETH9] does not need to be migrated since it has no configuration and is not a subinterface.
+Please move ports as shown below:
+[FA-X70R3.CT0.ETH0] ====>> [FA-X70R4.CT0.ETH4](Slot: LOM)
+[FA-X70R3.CT0.ETH2] ====>> [FA-X70R4.CT0.ETH2](Slot: LOM)
+[FA-X70R3.CT0.ETH3] ====>> [FA-X70R4.CT0.ETH3](Slot: LOM)
+[FA-X70R3.CT0.ETH4] ====>> [FA-X70R4.CT0.ETH10](Slot:1)
+Press Enter to show more lines...
+[FA-X70R3.CT0.ETH5] ====>> [FA-X70R4.CT0.ETH11](Slot:1)
+Exit the upgrade process: 
+Error: Unable to migrate ports configuration:
+[FA-X70R3.CT0.FC0, FA-X70R3.CT0.FC1, FA-X70R3.CT0.FC2, FA-X70R3.CT0.FC3, FA-X70R3.CT0.FC8, FA-X70R3.CT0.FC9]
+because target ports are missing.
+The following ports cannot migrate from old controller to new controller: {}
+To discard the network port configuration for all missing ports, run the puresetup replace command with the option '--allow-lose-netconfig'
+CONFIG_TASK_COMPLETED:CONFIG_TASK_PURESETUP_EXITED
+puresetup@PCTFJ2422016F:~$ puresetup replace --allow-lose-netconfig --from-controller FA-X70R3
+##########################################
+#   Welcome to the Purity Setup Wizard   #
+##########################################
+Controller hardware model is compatible with the controller purity version
+Name       Created                  Expires
+puresetup  2025-06-22 12:57:51 UTC  2025-06-22 13:57:51 UTC
+Local controller model is FA-X70R4.
+Drive detected storage type is X.
+FA-X70R3 found to be replaced by FA-X70R4 has storage type X.
+Controller type supports multiple storage types, detecting type of storage installed...
+Detected storage type X
+Pre-existing storage type X was found on the device
+Successfully configured storage type X for array controller
+Check Cobalt NDU controllers.. OK
+Check RDL..................... OK
+Check shelf cabling........... OK
+Check controller link......... OK
+Check power supply............ OK
+Check PCIE AER errors......... OK
+Check io card pci id's........ OK
+Check LOM MAC addresses....... OK
+Getting local controller type. Local controller type is cobalt_a.
+Getting local controller variant. Not a generic controller, Exiting.
+Checking peer controller for tunables
+purity.service stablized: done
+platform: done
+foed: done
+gui: done
+rest: done
+platform_env: 0.done
+quorum: done
+foed_env: 0.done
+foed_ready: done
+remote_patch: done
+driver: done
+san: Skip waiting for san during HW NDU
+[FA-X70R3.CT0.ETH1] does not need to be migrated since it has no configuration and is not a subinterface.
+[FA-X70R3.CT0.ETH6] does not need to be migrated since it has no configuration and is not a subinterface.
+[FA-X70R3.CT0.ETH7] does not need to be migrated since it has no configuration and is not a subinterface.
+[FA-X70R3.CT0.ETH8] does not need to be migrated since it has no configuration and is not a subinterface.
+[FA-X70R3.CT0.ETH9] does not need to be migrated since it has no configuration and is not a subinterface.
+Please move ports as shown below:
+[FA-X70R3.CT0.ETH0] ====>> [FA-X70R4.CT0.ETH4](Slot: LOM)
+[FA-X70R3.CT0.ETH2] ====>> [FA-X70R4.CT0.ETH2](Slot: LOM)
+[FA-X70R3.CT0.ETH3] ====>> [FA-X70R4.CT0.ETH3](Slot: LOM)
+[FA-X70R3.CT0.ETH4] ====>> [FA-X70R4.CT0.ETH10](Slot:1)
+Press Enter to show more lines...
+[FA-X70R3.CT0.ETH5] ====>> [FA-X70R4.CT0.ETH11](Slot:1)
+Error: Unable to migrate ports configuration:
+[FA-X70R3.CT0.FC0, FA-X70R3.CT0.FC1, FA-X70R3.CT0.FC2, FA-X70R3.CT0.FC3, FA-X70R3.CT0.FC8, FA-X70R3.CT0.FC9]
+because target ports are missing.
+The following ports cannot migrate from old controller to new controller: {}
+Are you sure you want to discard the network port configurations
+for all missing ports? (y/n):yAre you sure you want to discard the network port configurations
+for all missing ports? (y/n): y
+
+After the cables have been moved, type "CONTINUE": continue
+Configuring network ports...
+Perform ping test on port ETH10 ....... OK
+Perform ping test on port ETH11 ....... OK
+Perform ping test on port ETH4 ....... OK
+ping: Warning: source address might be selected on device other than: eth2
+Perform ping test on port ETH2 ....... FAIL
+ping: Warning: source address might be selected on device other than: eth3
+Perform ping test on port ETH3 ....... FAIL
+Ping test FAILED on ['eth2', 'eth3']
+Ethernet port verification failed, please check port status.
+Retry ping test? (y/n):yRetry ping test? (y/n): y
+Perform ping test on port ETH10 ....... OK
+Perform ping test on port ETH11 ....... OK
+Perform ping test on port ETH4 ....... OK
+Perform ping test on port ETH2 ....... FAIL
+ping: Warning: source address might be selected on device other than: eth3
+Perform ping test on port ETH3 ....... FAIL
+Ping test FAILED on ['eth2', 'eth3']
+Ethernet port verification failed, please check port status.
+Retry ping test? (y/n):yRetry ping test? (y/n): y
+Perform ping test on port ETH10 ....... OK
+Perform ping test on port ETH11 ....... OK
+Perform ping test on port ETH4 ....... OK
+Perform ping test on port ETH2 ....... OK
+Perform ping test on port ETH3 ....... FAIL
+Ping test FAILED on ['eth3']
+Ethernet port verification failed, please check port status.
+Retry ping test? (y/n):nRetry ping test? (y/n): n
+Continue puresetup without ethernet port verification? (y/n):yContinue puresetup without ethernet port verification? (y/n): y
+Checking SAN connectivity
+SAN is ready.
+                                                                               
+Broadcast message from root@p-pure01-ct0 (somewhere) (Sun Jun 22 13:00:47 2025)
+                                                                               
+                                                                               
+Purity//FA Information System Status                                           
+====================================                                           
+Purity//FA has successfully started for                                        
+the first time after an install                                                
+or upgrade. Purity//FA 6.5.8 (202408090136+b967c2f84655-65x)                   
+is now set to be the default.                                                  
+                                                                               
+                                                                               
+Broadcast message from root@p-pure01-ct0 (somewhere) (Sun Jun 22 13:00:47 2025)
+                                                                               
+                                                                               
+Purity//FA Information System Status                                           
+====================================                                           
+Purity//FA has successfully started for                                        
+the first time after an install                                                
+or upgrade. Purity//FA 6.5.8 (202408090136+b967c2f84655-65x)                   
+is now set to be the default.                                                  
+                                                                               
+Waiting for Software Check:.Checking iobalance before proceeding, sampling for 30 seconds, retrying 1 times, adding 30 seconds with each retry
+Try 1/2: Sampling I/O for 30 seconds
+^C
+Exit without saving changes.
+CONFIG_TASK_COMPLETED:CONFIG_TASK_PURESETUP_EXITED
+puresetup@PCTFJ2422016F:~$ iscsipureportlist=`pureport list --initiator | grep -v FC | awk -F' CT' '{print "CT"$2,$8}' | grep -v 'CT ' | awk -F '.ETH' '{print $1, $2}' | awk '{print $1, $5, $6}' | sort | uniq -c; echo`; iscsipureportlistcount=`echo "$iscsipureportlist" | awk '{total += $1} END {print total}'`; echo -e "$iscsipureportlist\n\n"; echo -e "\tTotal iSCSI connections: $iscsipureportlistcount\n\n";
+    130 CT0 iqn.2010-06.com.purestorage:flasharray.3b2c203c3575cb5a -
+    135 CT1 iqn.2010-06.com.purestorage:flasharray.3b2c203c3575cb5a -
+
+
+Total iSCSI connections: 265
+
+
+puresetup@PCTFJ2422016F:~$ iscsipureportlist=`pureport list --initiator | grep -v FC | awk -F' CT' '{print "CT"$2,$8}' | grep -v 'CT ' | awk -F '.ETH' '{print $1, $2}' | awk '{print $1, $5, $6}' | sort | uniq -c; echo`; iscsipureportlistcount=`echo "$iscsipureportlist" | awk '{total += $1} END {print total}'`; echo -e "$iscsipureportlist\n\n"; echo -e "\tTotal iSCSI connections: $iscsipureportlistcount\n\n";
+    130 CT0 iqn.2010-06.com.purestorage:flasharray.3b2c203c3575cb5a -
+    135 CT1 iqn.2010-06.com.purestorage:flasharray.3b2c203c3575cb5a -
+
+
+Total iSCSI connections: 265
+
+
+puresetup@PCTFJ2422016F:~$ iscsipureportlist=`pureport list --initiator | grep -v FC | awk -F' CT' '{print "CT"$2,$8}' | grep -v 'CT ' | awk -F '.ETH' '{print $1, $2}' | awk '{print $1, $5, $6}' | sort | uniq -c; echo`; iscsipureportlistcount=`echo "$iscsipureportlist" | awk '{total += $1} END {print total}'`; echo -e "$iscsipureportlist\n\n"; echo -e "\tTotal iSCSI connections: $iscsipureportlistcount\n\n";puresetup replace --allow-lose-netconfig --from-controller FA-X70R3
+
+
+
+iscsipureportlist=`pureport list --initiator | grep -v FC | awk -F' CT' '{print "CT"$2,$8}' | grep -v 'CT ' | awk -F '.ETH' '{print $1, $2}' | awk '{print $1, $5, $6}' | sort | uniq -c; echo`; iscsipureportlistcount=`echo "$iscsipureportlist" | awk '{total += $1} END {print total}'`; echo -e "$iscsipureportlist\n\n"; echo -e "\tTotal iSCSI connections: $iscsipureportlistcount\n\n";
+    130 CT0 iqn.2010-06.com.purestorage:flasharray.3b2c203c3575cb5a -
+    135 CT1 iqn.2010-06.com.purestorage:flasharray.3b2c203c3575cb5a -
+
+
+Total iSCSI connections: 265
+
+
+puresetup@PCTFJ2422016F:~$ puresetup timezone
+##########################################
+#   Welcome to the Purity Setup Wizard   #
+##########################################
+Name       Created                  Expires
+puresetup  2025-06-22 13:02:37 UTC  2025-06-22 14:02:37 UTC
+Changing the time zone will require a reboot on this controller.
+Current time zone: Etc/UTC
+Change time zone [requires reboot] (y/n):yChange time zone [requires reboot] (y/n): y
+Configuring tzdata
+------------------
+
+Please select the geographic area in which you live. Subsequent configuration 
+questions will narrow this down by presenting a list of cities, representing the
+time zones in which they are located.
+
+  1. Africa      4. Australia     7. Atlantic Ocean  10. Pacific Ocean
+  2. America     5. Arctic Ocean  8. Europe          11. US
+  3. Antarctica  6. Asia          9. Indian Ocean    12. None of the above
+
+Geographic area: 2
+
+
+Please select the city or region corresponding to your time zone.
+
+  1. Adak                       80. Juneau
+  2. Anchorage                  81. Louisville (Kentucky)
+  3. Anguilla                   82. Monticello (Kentucky)
+  4. Antigua                    83. Kralendijk
+  5. Araguaina                  84. La Paz
+  6. Buenos Aires (Argentina)   85. Lima
+  7. Catamarca (Argentina)      86. Los Angeles
+  8. Cordoba (Argentina)        87. Lower Princes
+  9. Jujuy (Argentina)          88. Maceio
+  10. La Rioja (Argentina)      89. Managua
+  11. Mendoza (Argentina)       90. Manaus
+  12. Rio Gallegos (Argentina)  91. Marigot
+  13. Salta (Argentina)         92. Martinique
+  14. San Juan (Argentina)      93. Matamoros
+  15. San Luis (Argentina)      94. Mazatlan
+  16. Tucuman (Argentina)       95. Menominee
+  17. Ushuaia (Argentina)       96. Merida
+  18. Aruba                     97. Metlakatla
+[More] 
+
+  19. Asuncion                  98. Mexico City
+  20. Atikokan                  99. Miquelon
+  21. Atka                      100. Moncton
+  22. Bahia                     101. Monterrey
+  23. Bahia Banderas            102. Montevideo
+  24. Barbados                  103. Montreal
+  25. Belem                     104. Montserrat
+  26. Belize                    105. Nassau
+  27. Blanc-Sablon              106. New York
+  28. Boa Vista                 107. Nipigon
+  29. Bogota                    108. Nome
+  30. Boise                     109. Fernando de Noronha
+  31. Cambridge Bay             110. Beulah (North Dakota)
+  32. Campo Grande              111. Center (North Dakota)
+  33. Cancun                    112. New Salem (North Dakota)
+  34. Caracas                   113. Nuuk
+  35. Cayenne                   114. Ojinaga
+  36. Cayman                    115. Panama
+  37. Chicago                   116. Pangnirtung
+  38. Chihuahua                 117. Paramaribo
+  39. Ciudad_Juarez             118. Phoenix
+  40. Coral Harbour             119. Port-au-Prince
+[More] 
+
+  41. Costa Rica                120. Port of Spain
+  42. Creston                   121. Porto Acre
+  43. Cuiaba                    122. Porto Velho
+  44. Curaçao                  123. Puerto Rico
+  45. Danmarkshavn              124. Punta Arenas
+  46. Dawson                    125. Rainy River
+  47. Dawson Creek              126. Rankin Inlet
+  48. Denver                    127. Recife
+  49. Detroit                   128. Regina
+  50. Dominica                  129. Resolute
+  51. Edmonton                  130. Rio Branco
+  52. Eirunepe                  131. Santa Isabel
+  53. El Salvador               132. Santarém
+  54. Ensenada                  133. Santiago
+  55. Fort Nelson               134. Santo Domingo
+  56. Fortaleza                 135. São Paulo
+  57. Glace Bay                 136. Scoresbysund
+  58. Godthab                   137. Shiprock
+  59. Goose Bay                 138. Sitka
+  60. Grand Turk                139. St Barthelemy
+  61. Grenada                   140. St Johns
+  62. Guadeloupe                141. St Kitts
+[More] 
+
+  63. Guatemala                 142. St Lucia
+  64. Guayaquil                 143. St Thomas
+  65. Guyana                    144. St Vincent
+  66. Halifax                   145. Swift Current
+  67. Havana                    146. Tegucigalpa
+  68. Hermosillo                147. Thule
+  69. Indianapolis (Indiana)    148. Thunder Bay
+  70. Knox (Indiana)            149. Tijuana
+  71. Marengo (Indiana)         150. Toronto
+  72. Petersburg (Indiana)      151. Tortola
+  73. Tell City (Indiana)       152. Vancouver
+  74. Vevay (Indiana)           153. Virgin
+  75. Vincennes (Indiana)       154. Whitehorse
+  76. Winamac (Indiana)         155. Winnipeg
+  77. Inuvik                    156. Yakutat
+  78. Iqaluit                   157. Yellowknife
+  79. Jamaica
+
+Time zone: 49
+
+
+
+Current default time zone: 'America/Detroit'
+Local time is now:      Sun Jun 22 09:02:54 EDT 2025.
+Universal Time is now:  Sun Jun 22 13:02:54 UTC 2025.
+
+'/cache/timezone/localtime' -> '/usr/share/zoneinfo/America/Detroit'
+Confirm time zone change from Etc/UTC to America/Detroit
+(y/N):y(y/N): y
+Press ENTER to reboot
+
+This controller will be online after reboot.
+CONFIG_TASK_COMPLETED:CONFIG_TASK_PURESETUP_EXITED
+puresetup@PCTFJ2422016F:~$  GNU GRUB  version 2.06
+
+/----------------------------------------------------------------------------\||||||||||||||||||||||||||\----------------------------------------------------------------------------/     Use the ^ and v keys to select which entry is highlighted.          
+      Press enter to boot the selected OS, `e' to edit the commands       
+      before booting or `c' for a command-line.                            *Purity 6.5.8 (202408090136+b967c2f84655) with kernel 5.15.123+ (2024071402>
+ Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (2024031915>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        The highlighted entry will be executed automatically in 3s.                    The highlighted entry will be executed automatically in 2s.                    The highlighted entry will be executed automatically in 1s.                    The highlighted entry will be executed automatically in 0s.                 
+p-pure01-ct0 login: pures eng
+1) Authenticate via CloudAssist
+2) Authenticate via command line
+3) Restore challenge
+Type the number corresponding to the authentication method you want to use.
+
+Selection: 1
+
+An email for identity verification will be sent once email is entered.
+Please follow the authentication instructions provided there and return to this screen when finished or if email has not been received.
+
+
+Enter an email address: fharris@purestorage.com
+Successfully authenticated
+
+Sun Jun 22 09:06:03 2025
+Welcome pureeng. This is Purity Version 6.5.8 on FlashArray p-pure01
+http://www.purestorage.com/
+pureeng@p-pure01-ct0:~$ puresarray list --controller
+Name  Type              Mode       Model     Version  Status     Internal Details
+CT0   array_controller  secondary  FA-X70R4  6.5.8    not ready  SAN unready at process start; portal is not open
+CT1   array_controller  primary    FA-X70R3  6.5.8    ready      
+pureeng@p-pure01-ct0:~$ purearray list --controller
+Name  Type              Mode       Model     Version  Status  Internal Details
+CT0   array_controller  secondary  FA-X70R4  6.5.8    ready   
+CT1   array_controller  primary    FA-X70R3  6.5.8    ready   
+pureeng@p-pure01-ct0:~$ purenetowrk eth listwork list
+Name       Enabled  Speed        Services
+CT1.FC0    True     16.00 Gb/s   scsi-fc
+CT1.FC1    True     16.00 Gb/s   scsi-fc
+CT1.FC2    True     16.00 Gb/s   scsi-fc
+CT1.FC3    True     16.00 Gb/s   scsi-fc
+CT1.FC8    True     16.00 Gb/s   scsi-fc
+CT1.FC9    True     16.00 Gb/s   scsi-fc
+ct0.eth0   False    100.00 Gb/s  -
+ct0.eth1   False    100.00 Gb/s  -
+ct0.eth2   True     25.00 Gb/s   replication
+ct0.eth3   True     25.00 Gb/s   replication
+ct0.eth4   True     1.00 Gb/s    management
+ct0.eth5   False    1.00 Gb/s    management
+ct0.eth10  True     25.00 Gb/s   iscsi
+ct0.eth11  True     25.00 Gb/s   iscsi
+ct0.eth18  False    25.00 Gb/s   iscsi
+ct0.eth19  False    25.00 Gb/s   iscsi
+ct0.eth20  False    25.00 Gb/s   iscsi
+ct0.eth21  False    25.00 Gb/s   iscsi
+ct1.eth0   True     1.00 Gb/s    management
+ct1.eth1   False    1.00 Gb/s    management
+ct1.eth2   True     25.00 Gb/s   replication
+ct1.eth3   True     25.00 Gb/s   replication
+ct1.eth4   True     25.00 Gb/s   iscsi
+ct1.eth5   True     25.00 Gb/s   iscsi
+ct1.eth6   False    50.00 Gb/s   -
+ct1.eth7   False    50.00 Gb/s   -
+ct1.eth8   False    50.00 Gb/s   -
+ct1.eth9   False    50.00 Gb/s   -
+ct1.eth20  True     25.00 Gb/s   iscsi
+ct1.eth21  True     25.00 Gb/s   iscsi
+filevip    True     25.00 Gb/s   file
+replbond   False    0.00 b/s     replication
+vir0       True     1.00 Gb/s    management
+vir1       False    1.00 Gb/s    management
+pureeng@p-pure01-ct0:~$ purenetwork eth enable ct0.eth18
+Name       Enabled  Type      Subnet  Address  Mask  Gateway  MTU   MAC                Speed       Services  Subinterfaces
+ct0.eth18  True     physical  -       -        -     -        1500  a0:88:c2:7e:8b:d9  25.00 Gb/s  iscsi     -
+pureeng@p-pure01-ct0:~$ purenetwork eth enable ct0.eth189
+Name       Enabled  Type      Subnet  Address  Mask  Gateway  MTU   MAC                Speed       Services  Subinterfaces
+ct0.eth19  True     physical  -       -        -     -        1500  a0:88:c2:7e:8b:d8  25.00 Gb/s  iscsi     -
+pureeng@p-pure01-ct0:~$ purehw list
+Name       Status  Identify  Slot  Index  Speed       Temperature  Voltage  Details
+CH0        ok      off       -     0      -           -            -        -
+CH0.BAY0   ok      off       -     0      -           -            -        -
+CH0.BAY1   ok      off       -     1      -           -            -        -
+CH0.BAY2   ok      off       -     2      -           -            -        -
+CH0.BAY3   ok      off       -     3      -           -            -        -
+CH0.BAY4   ok      off       -     4      -           -            -        -
+CH0.BAY5   ok      off       -     5      -           -            -        -
+CH0.BAY6   ok      off       -     6      -           -            -        -
+CH0.BAY7   ok      off       -     7      -           -            -        -
+CH0.BAY8   ok      off       -     8      -           -            -        -
+CH0.BAY9   ok      off       -     9      -           -            -        -
+CH0.BAY10  ok      off       -     10     -           -            -        -
+CH0.BAY11  ok      off       -     11     -           -            -        -
+CH0.BAY12  ok      off       -     12     -           -            -        -
+CH0.BAY13  ok      off       -     13     -           -            -        -
+CH0.BAY14  ok      off       -     14     -           -            -        -
+CH0.BAY15  ok      off       -     15     -           -            -        -
+CH0.BAY16  ok      off       -     16     -           -            -        -
+CH0.BAY17  ok      off       -     17     -           -            -        -
+CH0.BAY18  ok      off       -     18     -           -            -        -
+CH0.BAY19  ok      off       -     19     -           -            -        -
+CH0.NVB0   ok      off       -     0      -           -            -        -
+CH0.NVB1   ok      off       -     1      -           -            -        -
+CH0.NVB2   ok      off       -     2      -           -            -        -
+CH0.NVB3   ok      off       -     3      -           -            -        -
+CH0.PWR0   ok      -         -     0      -           -            207 V    -
+CH0.PWR1   ok      -         -     1      -           -            206 V    -
+CH0.TMP0   ok      -         -     0      -           24 C         -        -
+CT0        ok      off       -     0      -           -            -        -
+CT0.ETH0   ok      -         -     0      0.00 b/s    -            -        -
+CT0.ETH1   ok      -         -     1      0.00 b/s    -            -        -
+CT0.ETH2   ok      -         -     2      25.00 Gb/s  -            -        -
+CT0.ETH3   ok      -         -     3      25.00 Gb/s  -            -        -
+CT0.ETH4   ok      -         -     4      1.00 Gb/s   -            -        -
+CT0.ETH5   ok      -         -     5      1.00 Gb/s   -            -        -
+CT0.ETH10  ok      -         1     10     25.00 Gb/s  -            -        -
+CT0.ETH11  ok      -         1     11     25.00 Gb/s  -            -        -
+CT0.ETH18  ok      -         3     18     25.00 Gb/s  -            -        -
+CT0.ETH19  ok      -         3     19     0.00 b/s    -            -        -
+CT0.ETH20  ok      -         3     20     0.00 b/s    -            -        -
+CT0.ETH21  ok      -         3     21     0.00 b/s    -            -        -
+CT0.FAN0   ok      -         -     0      -           -            -        -
+CT0.FAN1   ok      -         -     1      -           -            -        -
+CT0.FAN2   ok      -         -     2      -           -            -        -
+CT0.FAN3   ok      -         -     3      -           -            -        -
+CT0.FAN4   ok      -         -     4      -           -            -        -
+CT0.FAN5   ok      -         -     5      -           -            -        -
+CT0.TMP0   ok      -         -     0      -           39 C         -        -
+CT0.TMP1   ok      -         -     1      -           43 C         -        -
+CT0.TMP2   ok      -         -     2      -           60 C         -        -
+CT0.TMP3   ok      -         -     3      -           54 C         -        -
+CT0.TMP4   ok      -         -     4      -           45 C         -        -
+CT0.TMP5   ok      -         -     5      -           45 C         -        -
+CT0.TMP6   ok      -         -     6      -           29 C         -        -
+CT0.TMP7   ok      -         -     7      -           31 C         -        -
+CT0.TMP8   ok      -         -     8      -           50 C         -        -
+CT0.TMP9   ok      -         -     9      -           41 C         -        -
+CT0.TMP10  ok      -         -     10     -           39 C         -        -
+CT0.TMP11  ok      -         -     11     -           38 C         -        -
+CT0.TMP12  ok      -         -     12     -           37 C         -        -
+CT0.TMP13  ok      -         -     13     -           39 C         -        -
+CT0.TMP14  ok      -         -     14     -           38 C         -        -
+CT0.TMP15  ok      -         -     15     -           38 C         -        -
+CT0.TMP16  ok      -         -     16     -           37 C         -        -
+CT0.TMP17  ok      -         -     17     -           38 C         -        -
+CT0.TMP18  ok      -         -     18     -           37 C         -        -
+CT0.TMP19  ok      -         -     19     -           37 C         -        -
+CT0.TMP20  ok      -         -     20     -           36 C         -        -
+CT0.TMP21  ok      -         -     21     -           41 C         -        -
+CT0.TMP22  ok      -         -     22     -           40 C         -        -
+CT0.TMP23  ok      -         -     23     -           40 C         -        -
+CT0.TMP24  ok      -         -     24     -           39 C         -        -
+CT1        ok      off       -     1      -           -            -        -
+CT1.ETH0   ok      -         -     0      1.00 Gb/s   -            -        -
+CT1.ETH1   ok      -         -     1      1.00 Gb/s   -            -        -
+CT1.ETH2   ok      -         -     2      25.00 Gb/s  -            -        -
+CT1.ETH3   ok      -         -     3      25.00 Gb/s  -            -        -
+CT1.ETH4   ok      -         -     4      25.00 Gb/s  -            -        -
+CT1.ETH5   ok      -         -     5      25.00 Gb/s  -            -        -
+CT1.ETH6   ok      -         -     6      0.00 b/s    -            -        -
+CT1.ETH7   ok      -         -     7      0.00 b/s    -            -        -
+CT1.ETH8   ok      -         -     8      0.00 b/s    -            -        -
+CT1.ETH9   ok      -         -     9      0.00 b/s    -            -        -
+CT1.ETH20  ok      -         3     20     25.00 Gb/s  -            -        -
+CT1.ETH21  ok      -         3     21     25.00 Gb/s  -            -        -
+CT1.FAN0   ok      -         -     0      -           -            -        -
+CT1.FAN1   ok      -         -     1      -           -            -        -
+CT1.FAN2   ok      -         -     2      -           -            -        -
+CT1.FAN3   ok      -         -     3      -           -            -        -
+CT1.FAN4   ok      -         -     4      -           -            -        -
+CT1.FAN5   ok      -         -     5      -           -            -        -
+CT1.FC0    ok      -         0     0      0.00 b/s    -            -        -
+CT1.FC1    ok      -         0     1      0.00 b/s    -            -        -
+CT1.FC2    ok      -         0     2      0.00 b/s    -            -        -
+CT1.FC3    ok      -         0     3      0.00 b/s    -            -        -
+CT1.FC8    ok      -         2     8      0.00 b/s    -            -        -
+CT1.FC9    ok      -         2     9      0.00 b/s    -            -        -
+CT1.TMP0   ok      -         -     0      -           48 C         -        -
+CT1.TMP1   ok      -         -     1      -           50 C         -        -
+CT1.TMP2   ok      -         -     2      -           40 C         -        -
+CT1.TMP3   ok      -         -     3      -           58 C         -        -
+CT1.TMP4   ok      -         -     4      -           57 C         -        -
+CT1.TMP5   ok      -         -     5      -           46 C         -        -
+CT1.TMP6   ok      -         -     6      -           56 C         -        -
+CT1.TMP7   ok      -         -     7      -           41 C         -        -
+CT1.TMP8   ok      -         -     8      -           41 C         -        -
+CT1.TMP9   ok      -         -     9      -           43 C         -        -
+CT1.TMP10  ok      -         -     10     -           41 C         -        -
+CT1.TMP11  ok      -         -     11     -           40 C         -        -
+CT1.TMP12  ok      -         -     12     -           40 C         -        -
+CT1.TMP13  ok      -         -     13     -           44 C         -        -
+CT1.TMP14  ok      -         -     14     -           43 C         -        -
+CT1.TMP15  ok      -         -     15     -           43 C         -        -
+CT1.TMP16  ok      -         -     16     -           42 C         -        -
+CT1.TMP17  ok      -         -     17     -           42 C         -        -
+CT1.TMP18  ok      -         -     18     -           43 C         -        -
+CT1.TMP19  ok      -         -     19     -           42 C         -        -
+CT1.TMP20  ok      -         -     20     -           37 C         -        -
+CT1.TMP21  ok      -         -     21     -           50 C         -        -
+CT1.TMP22  ok      -         -     22     -           46 C         -        -
+CT1.TMP23  ok      -         -     23     -           50 C         -        -
+CT1.TMP24  ok      -         -     24     -           52 C         -        -
+CT1.TMP25  ok      -         -     25     -           55 C         -        -
+CT1.TMP26  ok      -         -     26     -           39 C         -        -
+pureeng@p-pure01-ct0:~$ puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    healthy  16.00T    -
+CH0.BAY1   SSD    healthy  16.00T    -
+CH0.BAY2   SSD    healthy  16.00T    -
+CH0.BAY3   SSD    healthy  16.00T    -
+CH0.BAY4   SSD    healthy  16.00T    -
+CH0.BAY5   SSD    healthy  16.00T    -
+CH0.BAY6   SSD    healthy  16.00T    -
+CH0.BAY7   SSD    healthy  16.00T    -
+CH0.BAY8   SSD    healthy  16.00T    -
+CH0.BAY9   SSD    healthy  16.00T    -
+CH0.BAY10  SSD    healthy  16.00T    -
+CH0.BAY11  SSD    healthy  16.00T    -
+CH0.BAY12  SSD    healthy  16.00T    -
+CH0.BAY13  SSD    healthy  16.00T    -
+CH0.BAY14  SSD    healthy  16.00T    -
+CH0.BAY15  SSD    healthy  16.00T    -
+CH0.BAY16  SSD    healthy  16.00T    -
+CH0.BAY17  SSD    healthy  16.00T    -
+CH0.BAY18  SSD    healthy  16.00T    -
+CH0.BAY19  SSD    healthy  16.00T    -
+CH0.NVB0   NVRAM  healthy  7.00G     -
+CH0.NVB1   NVRAM  healthy  7.00G     -
+CH0.NVB2   NVRAM  healthy  7.00G     -
+CH0.NVB3   NVRAM  healthy  7.00G     -
+pureeng@p-pure01-ct0:~$ puremessage list --open
+pureeng@p-pure01-ct0:~$ iscsipureportlist=`pureport list --initiator | grep -v FC | awk -F' CT' '{print "CT"$2,$8}' | grep -v 'CT ' | awk -F '.ETH' '{print $1,  $2}' | awk '{print $1, $5, $6}' | sort | uniq -c; echo`; iscsipureportlistcount=`echo "$iscsipureportlist" | awk '{total += $1} END {print total}'`; echo -e "$iscsipureportlist\n\n"; echo -e "\tTotal iSCSI connections: $iscsipureportlistcount\n\n";
+    130 CT0 iqn.2010-06.com.purestorage:flasharray.3b2c203c3575cb5a -
+    135 CT1 iqn.2010-06.com.purestorage:flasharray.3b2c203c3575cb5a -
+
+
+Total iSCSI connections: 265
+
+
+pureeng@p-pure01-ct0:~$ iobalance --sampletime 15
+sampling host I/O for 15 seconds...
+                Host  CT0 I/O Count  CT1 I/O Count  
+          p-erp-db01       60.00       40.00  
+          p-erp-db02      111.00      140.00  
+          p-erp-db03      143.00      129.00  
+          p-gap-db01       36.00       30.00  
+          p-gap-db02       36.00       82.00  ! unbalanced I/O
+          p-gap-db03       36.00       73.00  ! unbalanced I/O
+           p-k8s-w01       65.00       58.00  
+           p-k8s-w02       16.00       10.00  
+           p-k8s-w04       16.00       12.00  
+           p-k8s-w05       16.00       12.00  
+           p-k8s-w06       76.00       80.00  
+           p-k8s-w07      113.00       98.00  
+           p-k8s-w08       74.00       72.00  
+          p-ksmart01        4.00        9.00  
+           p-mssql22        0.00        0.00  ? Host is idle
+           p-mssql23        0.00        0.00  ? Host is idle
+           p-mssql33     194.48K     209.11K  
+           p-mssql34        0.00      25.18K  ! no I/O to CT0
+           p-mssql35       45.00       48.00  
+           p-mssql36        0.00        0.00  ? Host is idle
+           p-mssql37       35.00       31.00  
+           p-mssql38       33.00       37.00  
+          p-oem-db01       24.00       20.00  
+          p-vcp-db01       16.00       14.00  
+           q-mssql03        0.00        0.00  ? Host is idle
+           q-mssql04        0.00        0.00  ? Host is idle
+           q-mssql06        0.00        1.00  ! no I/O to CT0
+           q-mssql07       18.00       10.00  
+           t-mssql10        0.00        0.00  ? Host is idle
+           zs-esxi50       2.85K       1.86K  ! unbalanced I/O
+           zs-esxi51       4.30K       1.89K  ! unbalanced I/O
+           zs-esxi52      35.76K      55.90K  ! unbalanced I/O
+           zs-esxi53      10.17K       4.23K  ! unbalanced I/O
+           zs-esxi54       4.06K       2.67K  ! unbalanced I/O
+           zs-esxi55       1.26K      515.00  ! unbalanced I/O
+           zs-esxi56      16.26K      10.04K  ! unbalanced I/O
+           zs-esxi57       2.35K      136.00  ! unbalanced I/O
+           zs-esxi58       5.27K      837.00  ! unbalanced I/O
+           zs-esxi59      10.99K      692.00  ! unbalanced I/O
+           zs-esxi60      10.73K       3.11K  ! unbalanced I/O
+           zs-esxi61      34.50K      31.39K  
+           zs-esxi62     108.19K      62.29K  ! unbalanced I/O
+           zs-esxi63     192.76K     114.29K  ! unbalanced I/O
+           zs-esxi64      233.00       12.00  ! unbalanced I/O
+           zs-esxi65       44.00      136.00  ! unbalanced I/O
+           zs-esxi66      257.00      180.00  
+           zs-esxi67       80.00       13.00  ! unbalanced I/O
+           zs-esxi68      132.00       82.00  ! unbalanced I/O
+           zs-esxi69      236.00       95.00  ! unbalanced I/O
+           zs-esxi70      118.00       28.00  ! unbalanced I/O
+           zs-esxi71       52.00        4.00  ! unbalanced I/O
+           zs-esxi72      111.00       43.00  ! unbalanced I/O
+           zs-esxi73       44.00        0.00  ! no I/O to CT1
+           zs-esxi75       2.87K       2.71K  
+           zs-esxi76      46.06K      37.37K  
+           zs-esxi80       5.21K       2.24K  ! unbalanced I/O
+           zs-esxi81       2.31K      442.00  ! unbalanced I/O
+           zs-esxi82       2.68K      866.00  ! unbalanced I/O
+           zs-esxi83      11.84K       1.94K  ! unbalanced I/O
+           zs-esxi84       10.00        0.00  ! no I/O to CT1
+            zs-kvm01        6.00        6.00  
+            zs-kvm02        7.00        6.00  
+            zs-kvm03        5.00        5.00  
+pureeng@p-pure01-ct0:~$ purearray list --connect --path
+Name      Local Port  Local Address  Remote Port  Remote Address  Status     Transport
+p-pure02  ct1.eth2    10.64.1.107    ct0.eth2     10.201.108.10   connected  ip
+p-pure02  ct1.eth2    10.64.1.107    ct1.eth2     10.201.108.11   connected  ip
+p-pure02  ct1.eth2    10.64.1.107    ct0.eth3     10.201.108.12   connected  ip
+p-pure02  ct1.eth2    10.64.1.107    ct1.eth3     10.201.108.13   connected  ip
+p-pure02  ct1.eth3    10.64.1.108    ct0.eth2     10.201.108.10   connected  ip
+p-pure02  ct1.eth3    10.64.1.108    ct1.eth2     10.201.108.11   connected  ip
+p-pure02  ct1.eth3    10.64.1.108    ct0.eth3     10.201.108.12   connected  ip
+p-pure02  ct1.eth3    10.64.1.108    ct1.eth3     10.201.108.13   connected  ip
+pureeng@p-pure01-ct0:~$ purearray list --connect --pathiobalance --sampletime 15scsipureportlist=`pureport list --initiator | grep -v FC | awk -F' CT' '{print "CT"$2,$8}' | grep -v 'CT ' | awk -F '.ETH' '{print $1, $2}' | awk '{print $1, $5, $6}' | sort | uniq -c; echo`; iscsipureportlistcount=`echo "$iscsipureportlist" | awk '{total += $1} END {print total}'`; echo -e "$iscsipureportlist\n\n"; echo -e "\tTotal iSCSI connections: $iscsipureportlistcount\n\n";
+    130 CT0 iqn.2010-06.com.purestorage:flasharray.3b2c203c3575cb5a -
+    135 CT1 iqn.2010-06.com.purestorage:flasharray.3b2c203c3575cb5a -
+
+
+Total iSCSI connections: 265
+
+
+pureeng@p-pure01-ct0:~$ purenetwork list
+Name       Enabled  Speed        Services
+CT1.FC0    True     16.00 Gb/s   scsi-fc
+CT1.FC1    True     16.00 Gb/s   scsi-fc
+CT1.FC2    True     16.00 Gb/s   scsi-fc
+CT1.FC3    True     16.00 Gb/s   scsi-fc
+CT1.FC8    True     16.00 Gb/s   scsi-fc
+CT1.FC9    True     16.00 Gb/s   scsi-fc
+ct0.eth0   False    100.00 Gb/s  -
+ct0.eth1   False    100.00 Gb/s  -
+ct0.eth2   True     25.00 Gb/s   replication
+ct0.eth3   True     25.00 Gb/s   replication
+ct0.eth4   True     1.00 Gb/s    management
+ct0.eth5   False    1.00 Gb/s    management
+ct0.eth10  True     25.00 Gb/s   iscsi
+ct0.eth11  True     25.00 Gb/s   iscsi
+ct0.eth18  True     25.00 Gb/s   iscsi
+ct0.eth19  True     25.00 Gb/s   iscsi
+ct0.eth20  False    25.00 Gb/s   iscsi
+ct0.eth21  False    25.00 Gb/s   iscsi
+ct1.eth0   True     1.00 Gb/s    management
+ct1.eth1   False    1.00 Gb/s    management
+ct1.eth2   True     25.00 Gb/s   replication
+ct1.eth3   True     25.00 Gb/s   replication
+ct1.eth4   True     25.00 Gb/s   iscsi
+ct1.eth5   True     25.00 Gb/s   iscsi
+ct1.eth6   False    50.00 Gb/s   -
+ct1.eth7   False    50.00 Gb/s   -
+ct1.eth8   False    50.00 Gb/s   -
+ct1.eth9   False    50.00 Gb/s   -
+ct1.eth20  True     25.00 Gb/s   iscsi
+ct1.eth21  True     25.00 Gb/s   iscsi
+filevip    True     25.00 Gb/s   file
+replbond   False    0.00 b/s     replication
+vir0       True     1.00 Gb/s    management
+vir1       False    1.00 Gb/s    management
+pureeng@p-pure01-ct0:~$ purenetowrk enable cto.0.eth5
+-bash: purenetowrk: command not found
+pureeng@p-pure01-ct0:~$ purenetorwork enable ct0.eth5
+usage: purenetwork [-h] {eth,fc,list} ...
+purenetwork: error: argument subcommand: invalid choice: 'enable' (choose from 'eth', 'fc', 'list')
+pureeng@p-pure01-ct0:~$ purenetwork enable ct0.eth5eth 
+Name      Enabled  Type      Subnet  Address  Mask  Gateway  MTU   MAC                Speed      Services    Subinterfaces
+ct0.eth5  True     physical  -       -        -     -        1500  24:a9:37:5d:ce:64  1.00 Gb/s  management  -
+pureeng@p-pure01-ct0:~$ list=`pureport list --initiator`; echo; for i in {0..1}; do for j in {0..9}; do cnt=`echo "$list"|grep CT$i.FC$j|wc -l`;echo CT$i.FC$j $ cnt; done; echo; done
+
+CT0.FC0 0
+CT0.FC1 0
+CT0.FC2 0
+CT0.FC3 0
+CT0.FC4 0
+CT0.FC5 0
+CT0.FC6 0
+CT0.FC7 0
+CT0.FC8 0
+CT0.FC9 0
+
+CT1.FC0 0
+CT1.FC1 0
+CT1.FC2 0
+CT1.FC3 0
+CT1.FC4 0
+CT1.FC5 0
+CT1.FC6 0
+CT1.FC7 0
+CT1.FC8 0
+CT1.FC9 0
+
+pureeng@p-pure01-ct0:~$ list=`pureport list --initiator`; echo; for i in {0..1}; do for j in {0..21}; do cnt=`echo "$list"|grep CT$i.FC$j|wc -l`;echo CT$i.FC$j $cnt; done; echo; done
+
+CT0.FC0 0
+CT0.FC1 0
+CT0.FC2 0
+CT0.FC3 0
+CT0.FC4 0
+CT0.FC5 0
+CT0.FC6 0
+CT0.FC7 0
+CT0.FC8 0
+CT0.FC9 0
+CT0.FC10 0
+CT0.FC11 0
+CT0.FC12 0
+CT0.FC13 0
+CT0.FC14 0
+CT0.FC15 0
+CT0.FC16 0
+CT0.FC17 0
+CT0.FC18 0
+CT0.FC19 0
+CT0.FC20 0
+CT0.FC21 0
+
+CT1.FC0 0
+CT1.FC1 0
+CT1.FC2 0
+CT1.FC3 0
+CT1.FC4 0
+CT1.FC5 0
+CT1.FC6 0
+CT1.FC7 0
+CT1.FC8 0
+CT1.FC9 0
+CT1.FC10 0
+CT1.FC11 0
+CT1.FC12 0
+CT1.FC13 0
+CT1.FC14 0
+CT1.FC15 0
+CT1.FC16 0
+CT1.FC17 0
+CT1.FC18 0
+CT1.FC19 0
+CT1.FC20 0
+CT1.FC21 0
+
+pureeng@p-pure01-ct0:~$ list=`pureport list --initiator`; echo; for i in {0..1}; do for j in {0..21}; do cnt=`echo "$list"|grep CT$i.FC$j|wc -l`;echo CT$i.FC$j $cnt; done; echo; done9}; do cnt=`echo "$list"|grep CT$i.FC$j|wc -l`;echo CT$i.FC$j $cpurenetwork eth enable ct0.eth5
+
+owwork listiscsipureportlist=`pureport list --initiator | grep -v FC | awk -F' CT' '{print "CT"$2,$8}' | grep -v 'CT ' | awk -F '.ETH' '{print $1, $2}' | awk '{print $1, $5, $6}' | sort | uniq -c; echo`; iscsipureportlistcount=`echo "$iscsipureportlist" | awk '{total += $1} END {print total}'`; echo -e "$iscsipureportlist\n\n"; echo -e "\tTotal iSCSI connections: $iscsipureportlistcount\n\n";
+    136 CT0 iqn.2010-06.com.purestorage:flasharray.3b2c203c3575cb5a -
+    135 CT1 iqn.2010-06.com.purestorage:flasharray.3b2c203c3575cb5a -
+
+
+Total iSCSI connections: 271
+
+
+pureeng@p-pure01-ct0:~$ 
+Display all 2517 possibilities? (y or n)
+!
+./
+:
+[
+[[
+]]
+{
+}
+accessdb
+aclinkcheck.py
+aclocal
+aclocal-1.16
+acpid
+acpidbg
+acpi_listen
+activate-global-python-argcomplete3
+addgnupghome
+addgroup
+add_in_cards_fingerprint
+addpart
+addr2line
+addr2name
+add-shell
+--More--pureeng@p-pure01-ct0:~$ troller setattr --verify-array p-pure01 ct1 --mode secondary;date
+-bash: troller: command not found
+Sun Jun 22 09:15:28 AM EDT 2025
+pureeng@p-pure01-ct0:~$ purewes controller setattr --verify-array p-pure01 ct1 --mode secondary;date
+Error: local array information does not match user input
+Sun Jun 22 09:15:40 AM EDT 2025
+pureeng@p-pure01-ct0:~$ ssh peer
+ssh: Could not resolve hostname peer: Temporary failure in name resolution
+pureeng@p-pure01-ct0:~$ sudo su
+     root@p-pure01-ct0:/var/home/pureeng# ssh peer
+Last login: Sun Jun 22 08:17:51 2025 from fe80::26a9:37ff:fe43:5a7e%haeth0
+
+Sun Jun 22 09:15:56 2025
+Welcome root. This is Purity Version 6.5.8 on FlashArray p-pure01
+http://www.purestorage.com/
+     root@p-pure01-ct1:~# purewes controller setattr --verify-array p-pure01 ct1 --mode secondary;date
+Run checks before making changes ...
+Check peer purity status...... SUCCESS
+Check pureport list........... The pureport list check failed with ERROR: Port {'target.name': None, 'target.wwn': None, 'target.nqn': None, 'target.iqn': None, 'target.portal': None, 'target.failover': None, 'target': {'name': None, 'wwn': None, 'nqn': None, 'iqn': None, 'portal': None, 'failover': None}, 'initiator.wwn': None, 'initiator.nqn': None, 'initiator.iqn': 'iqn.1998-01.com.vmware:localhost:229326095:66', 'initiator.portal': None, 'initiator': {'wwn': None, 'nqn': None, 'iqn': 'iqn.1998-01.com.vmware:localhost:229326095:66', 'portal': None}} doesn't contain field target.name or target.name is None!
+Would you like to ignore this check? (y/n): y
+Overriding pureport list check based on user input
+SUCCESS
+Check IO balance.............. Checking iobalance before proceeding, sampling for 30 seconds, retrying 3 times, adding 30 seconds with each retry
+Try 1/4: Sampling I/O for 30 seconds
+Sampling finished, I/O is not yet balanced
+Try 2/4: Sampling I/O for 60 seconds
+Sampling finished, I/O is not yet balanced
+Try 3/4: Sampling I/O for 90 seconds
+Sampling finished, I/O is not yet balanced
+Try 4/4: Sampling I/O for 120 seconds
+Sampling finished, I/O is not yet balanced
+I/O is not balanced after 4 run(s).
+iobalance reports the following: 
+sampling host I/O for 120 seconds...
+                Host  CT0 I/O Count  CT1 I/O Count  
+          p-erp-db01      360.00      360.00  
+          p-erp-db02      765.00      766.00  
+          p-erp-db03      725.00      725.00  
+          p-gap-db01      216.00      216.00  
+          p-gap-db02      216.00      625.00  ! unbalanced I/O
+          p-gap-db03      216.00      613.00  ! unbalanced I/O
+           p-k8s-w01      465.00      477.00  
+           p-k8s-w02       96.00       72.00  
+           p-k8s-w04       96.00       96.00  
+           p-k8s-w05       96.00       96.00  
+           p-k8s-w06      818.00      799.00  
+           p-k8s-w07       1.14K       1.14K  
+           p-k8s-w08      714.00      746.00  
+          p-ksmart01      390.00      380.00  
+           p-mssql22        0.00        0.00  ? Host is idle
+           p-mssql23        0.00        0.00  ? Host is idle
+           p-mssql33     100.23K      93.11K  
+           p-mssql34      36.81K      37.38K  
+           p-mssql35      376.00      377.00  
+           p-mssql36        1.00        0.00  ! no I/O to CT1
+           p-mssql37      275.00      279.00  
+           p-mssql38      258.00      256.00  
+          p-oem-db01      144.00      144.00  
+          p-vcp-db01       96.00       96.00  
+           q-mssql03        0.00        0.00  ? Host is idle
+           q-mssql04        0.00        0.00  ? Host is idle
+           q-mssql06       15.00       15.00  
+           q-mssql07       43.00       20.00  ! unbalanced I/O
+           t-mssql10        0.00        0.00  ? Host is idle
+           zs-esxi50      28.71K      23.14K  
+           zs-esxi51      29.83K      17.05K  ! unbalanced I/O
+           zs-esxi52     264.25K     251.63K  
+           zs-esxi53      28.95K      15.08K  ! unbalanced I/O
+           zs-esxi54      37.09K      13.19K  ! unbalanced I/O
+           zs-esxi55      17.67K       5.06K  ! unbalanced I/O
+           zs-esxi56     142.69K      85.69K  ! unbalanced I/O
+           zs-esxi57      38.57K       8.13K  ! unbalanced I/O
+           zs-esxi58      44.79K      11.74K  ! unbalanced I/O
+           zs-esxi59      42.46K       7.18K  ! unbalanced I/O
+           zs-esxi60     289.75K     244.09K  
+           zs-esxi61     243.23K     221.92K  
+           zs-esxi62     738.53K     631.62K  
+           zs-esxi63     535.94K     587.71K  
+           zs-esxi64       1.58K      262.00  ! unbalanced I/O
+           zs-esxi65       1.05K      723.00  
+           zs-esxi66      17.56K      12.92K  
+           zs-esxi67      576.00      647.00  
+           zs-esxi68      547.00      383.00  
+           zs-esxi69       1.30K       1.24K  
+           zs-esxi70      612.00      387.00  ! unbalanced I/O
+           zs-esxi71      496.00      340.00  
+           zs-esxi72       4.74K       4.30K  
+           zs-esxi73      308.00      551.00  ! unbalanced I/O
+           zs-esxi75      35.48K      29.71K  
+           zs-esxi76     570.15K     237.22K  ! unbalanced I/O
+           zs-esxi80      51.09K      23.56K  ! unbalanced I/O
+           zs-esxi81      20.45K      10.13K  ! unbalanced I/O
+           zs-esxi82      20.75K      12.06K  ! unbalanced I/O
+           zs-esxi83      20.16K      10.75K  ! unbalanced I/O
+           zs-esxi84      555.00       52.00  ! unbalanced I/O
+            zs-kvm01       36.00       36.00  
+            zs-kvm02      103.00      102.00  
+            zs-kvm03       43.00       44.00  
+
+Would you like to ignore this check?
+WARNING: Unless the workload you are running is known to be imbalanced, ignoring this check could result in an outage and is NOT recommended.
+Ignore anyway? (y/n): y
+Overriding iobalance check based on user input
+SUCCESS
+Sun Jun 22 09:23:53 AM EDT 2025
+     root@p-pure01-ct1:~# purearexit
+logout
+     root@p-pure01-ct0:/var/home/pureeng# purearray list --controller
+Name  Type              Mode       Model     Version  Status     Internal Details
+CT0   array_controller  primary    FA-X70R4  6.5.8    ready      
+CT1   array_controller  secondary  FA-X70R3  6.5.8    not ready  SAN disabled; portal is not open
+     root@p-pure01-ct0:/var/home/pureeng# purearray list --controllerssh peerpurearray list --controlleriscsipureportlist=`pureport list --ini tiator | grep -v FC | awk -F' CT' '{print "CT"$2,$8}' | grep -v 'CT ' | awk -F '.ETH' '{print $1, $2}' | awk '{print $1, $5, $6}' | sort | uniq -c; echo`; iscsipureportlistcount=`echo "$iscsipureportlist" | awk '{total += $1} END {print total}'`; echo -e "$iscsipureportlist\n\n"; echo -e "\tTotal iSCSI connections: $iscsipureportlistcount\n\n";
+    137 CT0 iqn.2010-06.com.purestorage:flasharray.3b2c203c3575cb5a -
+    134 CT1 iqn.2010-06.com.purestorage:flasharray.3b2c203c3575cb5a -
+
+
+Total iSCSI connections: 271
+
+
+     root@p-pure01-ct0:/var/home/pureeng# purearray list --controller
+Name  Type              Mode       Model     Version  Status  Internal Details
+CT0   array_controller  primary    FA-X70R4  6.5.8    ready   
+CT1   array_controller  secondary  FA-X70R3  6.5.8    ready   
+     root@p-pure01-ct0:/var/home/pureeng# 
+Purity
+
+PCTFJ24220164 login: 
+PCTFJ24220164 login: puresetup
+Password: 
+<fw_update_tool>
+===================================================================
+=                            NOTICE                               =
+===================================================================
+=                                                                 =
+=    Firmware is currently being checked and/or updated           =
+=    on this controller.                                          =
+=                                                                 =
+=    If updates are necessary they will be applied automatically, =
+=    and one or more automatic reboots may occur as a result.     =
+=    A completion notice will be provided when done.              =
+=                                                                 =
+=    DO NOT RESTART OR REMOVE POWER WHILE UPDATE IS IN PROGRESS   =
+=                                                                 =
+===================================================================
+<fw_update_tool>
+
+Sun Jun 22 13:33:48 2025
+Welcome puresetup. This is Purity Version 6.5.5 on FlashArray PCTFJ24220164
+http://www.purestorage.com/
+puresetup@PCTFJ24220164:~$ mount /dev/sdb1 /mnt
+puresetup@PCTFJ24220164:~$ cp /mnt/6.5.8/* .
+puresetup@PCTFJ24220164:~$  GNU GRUB  version 2.06
+
+/----------------------------------------------------------------------------\||||||||||||||||||||||||||\----------------------------------------------------------------------------/     Use the ^ and v keys to select which entry is highlighted.          
+      Press enter to boot the selected OS, `e' to edit the commands       
+      before booting or `c' for a command-line.                            *Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (2024031915>
+ Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (2024031915>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        The highlighted entry will be executed automatically in 3s.                    The highlighted entry will be executed automatically in 2s.                    The highlighted entry will be executed automatically in 1s.                    The highlighted entry will be executed automatically in 0s.                 
+Purity
+
+PCTFJ24220164 login: puresetup
+Password: 
+
+Login incorrect
+PCTFJ24220164 login: puresetup
+Password: 
+Last login: Sun Jun 22 13:33:48 UTC 2025 on ttyS0
+
+Sun Jun 22 13:41:50 2025
+Welcome puresetup. This is Purity Version 6.5.5 on FlashArray PCTFJ24220164
+http://www.purestorage.com/
+puresetup@PCTFJ24220164:~$ pureboot list
+
+Marked entry (*) is currently running
+Marked entry (-->) will run at next reboot
+*-->0. Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (202403191505+d9f0e688c788) on first (/dev/sda3)
+    1. Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (202403191505+d9f0e688c788) on second (/dev/sda4)
+puresetup@PCTFJ24220164:~$ pureisntall nstall purity_6.5.8_202408090136+b967c2f84655.ppkg
+Installing Purity on alternate partition labeled second.
+Erasing Purity software image from alternate partition second to prepare for installation.
+WARNING: Do not interrupt this process!!
+Unpacking new Purity software.
+................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Verifying package...
+
+Finalizing installation. This may take several minutes.
+Executing /altroot/opt/purextras/bin/finish-install.sh
+Executing /altroot/opt/purextras/bin/finish-install.azure-propagate.sh
+Executing /altroot/opt/purextras/bin/finish-install.cbs.sh
+Executing /altroot/opt/purextras/bin/finish-install.cdu-pureinstall-lib.sh
+Executing /altroot/opt/purextras/bin/finish-install.fix-dpkg.sh
+Purity installed.
+Installation complete. The new Purity version will load at next reboot.
+
+Important!
+The first boot of a new Purity version may take longer if the new version includes controller firmware updates.
+DO NOT REBOOT THE CONTROLLER DURING THE FIRMWARE UPDATE.
+
+Refer to http://community.purestorage.com for more information about the Purity upgrade process and firmware updates.
+puresetup@PCTFJ24220164:~$ pureboot reboot --offline
+[Errno 111] Connection refused
+ GNU GRUB  version 2.06
+
+/----------------------------------------------------------------------------\||||||||||||||||||||||||||\----------------------------------------------------------------------------/     Use the ^ and v keys to select which entry is highlighted.          
+      Press enter to boot the selected OS, `e' to edit the commands       
+      before booting or `c' for a command-line.                             Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (2024031915>
+*Purity 6.5.8 (202408090136+b967c2f84655) with kernel 5.15.123+ (2024071402>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        The highlighted entry will be executed automatically in 3s.                    The highlighted entry will be executed automatically in 2s.                    The highlighted entry will be executed automatically in 1s.                    The highlighted entry will be executed automatically in 0s.                 
+Purity
+
+PCTFJ24220164 login: puresetup
+Password: 
+<fw_update_tool>
+===================================================================
+=                            NOTICE                               =
+===================================================================
+=                                                                 =
+=    Firmware is currently being checked and/or updated           =
+=    on this controller.                                          =
+=                                                                 =
+=    If updates are necessary they will be applied automatically, =
+=    and one or more automatic reboots may occur as a result.     =
+=    A completion notice will be provided when done.              =
+=                                                                 =
+=    DO NOT RESTART OR REMOVE POWER WHILE UPDATE IS IN PROGRESS   =
+=                                                                 =
+===================================================================
+<fw_update_tool>
+Last login: Sun Jun 22 13:41:50 UTC 2025 on ttyS0
+
+Sun Jun 22 13:47:29 2025
+Welcome puresetup. This is Purity Version 6.5.8 on FlashArray PCTFJ24220164
+http://www.purestorage.com/
+puresetup@PCTFJ24220164:~$ pureboot list
+===================================================================
+=                            NOTICE                               =
+===================================================================
+=                                                                 =
+=    Firmware is currently being checked and/or updated           =
+=    on this controller.                                          =
+=                                                                 =
+=    If updates are necessary they will be applied automatically, =
+=    and one or more automatic reboots may occur as a result.     =
+=    A completion notice will be provided when done.              =
+=                                                                 =
+=    DO NOT RESTART OR REMOVE POWER WHILE UPDATE IS IN PROGRESS   =
+=                                                                 =
+===================================================================
+
+
+Marked entry (*) is currently running
+Marked entry (-->) will run at next reboot
+    0. Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (202403191505+d9f0e688c788) on first (/dev/sda3)
+*-->1. Purity 6.5.8 (202408090136+b967c2f84655) with kernel 5.15.123+ (202407140227+e4052619b975) on second (/dev/sda4)
+puresetup@PCTFJ24220164:~$  GNU GRUB  version 2.06
+
+/----------------------------------------------------------------------------\||||||||||||||||||||||||||\----------------------------------------------------------------------------/     Use the ^ and v keys to select which entry is highlighted.          
+      Press enter to boot the selected OS, `e' to edit the commands       
+      before booting or `c' for a command-line.                             Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (2024031915>
+*Purity 6.5.8 (202408090136+b967c2f84655) with kernel 5.15.123+ (2024071402>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        The highlighted entry will be executed automatically in 3s.                    The highlighted entry will be executed automatically in 2s.                    The highlighted entry will be executed automatically in 1s.                    The highlighted entry will be executed automatically in 0s.                 
+Purity
+
+PCTFJ24220164 login: puresetup
+Password: 
+Last login: Sun Jun 22 13:47:28 UTC 2025 on ttyS0
+
+Sun Jun 22 13:55:23 2025
+Welcome puresetup. This is Purity Version 6.5.8 on FlashArray PCTFJ24220164
+http://www.purestorage.com/
+puresetup@PCTFJ24220164:~$ pureboot list
+
+Marked entry (*) is currently running
+Marked entry (-->) will run at next reboot
+    0. Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (202403191505+d9f0e688c788) on first (/dev/sda3)
+*-->1. Purity 6.5.8 (202408090136+b967c2f84655) with kernel 5.15.123+ (202407140227+e4052619b975) on second (/dev/sda4)
+puresetup@PCTFJ24220164:~$ puresetup replace --from-controller FA-X70R3
+##########################################
+#   Welcome to the Purity Setup Wizard   #
+##########################################
+Controller hardware model is compatible with the controller purity version
+[Errno 111] Connection refused
+Local controller model is FA-X70R4.
+Drive detected storage type is X.
+FA-X70R3 found to be replaced by FA-X70R4 has storage type X.
+Controller type supports multiple storage types, detecting type of storage installed...
+Detected storage type X
+Pre-existing storage type X was found on the device
+Successfully configured storage type X for array controller
+Check Cobalt NDU controllers.. OK
+Check RDL..................... OK
+Check shelf cabling........... OK
+Check controller link......... OK
+Check power supply............ OK
+Check PCIE AER errors......... OK
+Check io card pci id's........ OK
+Check LOM MAC addresses....... OK
+Getting local controller type. Local controller type is cobalt_a.
+Getting local controller variant. Not a generic controller, Exiting.
+Checking peer controller for tunables
+
+Apply PS_FILE_GATEWAY_ENABLED = 1 # 01177349
+ (y/n):y
+Apply PS_FILE_GATEWAY_ENABLED = 1 # 01177349
+ (y/n): y
+Tunable parameter set: PS_FILE_GATEWAY_ENABLED=1
+
+Apply PS_FILEGW_ALLOW_GLOBAL_CATALOG = 0 # Set during upgrade to 6.3.4 - CLOUD-7
+ (y/n):y
+Apply PS_FILEGW_ALLOW_GLOBAL_CATALOG = 0 # Set during upgrade to 6.3.4 - CLOUD-7
+ (y/n): y
+Tunable parameter set: PS_FILEGW_ALLOW_GLOBAL_CATALOG=0
+
+Apply PS_FILEGW_SMB_HIDE_DOT_SNAPSHOT = 1 # Set during upgrade to 6.3.4 - CLOUD-
+ (y/n):y
+Apply PS_FILEGW_SMB_HIDE_DOT_SNAPSHOT = 1 # Set during upgrade to 6.3.4 - CLOUD-
+ (y/n): y
+Tunable parameter set: PS_FILEGW_SMB_HIDE_DOT_SNAPSHOT=1
+
+Apply ATOM_PUREAPP_MONITOR_MEM_LEAK = PCTFJ21230097,PCTFJ2124004C,6.3.4 # PURE-2
+ (y/n):y
+Apply ATOM_PUREAPP_MONITOR_MEM_LEAK = PCTFJ21230097,PCTFJ2124004C,6.3.4 # PURE-2
+ (y/n): y
+Tunable parameter set: ATOM_PUREAPP_MONITOR_MEM_LEAK=PCTFJ21230097,PCTFJ2124004C,6.3.4
+
+Apply ATOM_5206 = 1 #
+ (y/n):y
+Apply ATOM_5206 = 1 #
+ (y/n): y
+Tunable parameter set: ATOM_5206=1
+
+Apply PS_FILEGW_ALLOW_NTLM_KERBEROS_MEMBERSHIP = 0 # Set during upgrade to 6.5.1
+ (y/n):y
+Apply PS_FILEGW_ALLOW_NTLM_KERBEROS_MEMBERSHIP = 0 # Set during upgrade to 6.5.1
+ (y/n): y
+Tunable parameter set: PS_FILEGW_ALLOW_NTLM_KERBEROS_MEMBERSHIP=0
+Stopping purity to ensure tunables are properly loaded.
+Press ENTER to reboot
+
+Please run puresetup again after reboot.
+[Errno 111] Connection refused
+ GNU GRUB  version 2.06
+
+/----------------------------------------------------------------------------\||||||||||||||||||||||||||\----------------------------------------------------------------------------/     Use the ^ and v keys to select which entry is highlighted.          
+      Press enter to boot the selected OS, `e' to edit the commands       
+      before booting or `c' for a command-line.                             Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (2024031915>
+*Purity 6.5.8 (202408090136+b967c2f84655) with kernel 5.15.123+ (2024071402>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        The highlighted entry will be executed automatically in 3s.                    The highlighted entry will be executed automatically in 2s.                    The highlighted entry will be executed automatically in 1s.                    The highlighted entry will be executed automatically in 0s.                 
+Purity
+
+PCTFJ24220164 login: pureseutp   tup
+Password: 
+Last login: Sun Jun 22 13:55:22 UTC 2025 on ttyS0
+
+Sun Jun 22 14:00:13 2025
+Welcome puresetup. This is Purity Version 6.5.8 on FlashArray PCTFJ24220164
+http://www.purestorage.com/
+puresetup@PCTFJ24220164:~$ puresetup replace --allow-lose-netconfig --from-controller FA-X70R3
+##########################################
+#   Welcome to the Purity Setup Wizard   #
+##########################################
+Controller hardware model is compatible with the controller purity version
+[Errno 111] Connection refused
+Local controller model is FA-X70R4.
+Drive detected storage type is X.
+FA-X70R3 found to be replaced by FA-X70R4 has storage type X.
+Controller type supports multiple storage types, detecting type of storage installed...
+Detected storage type X
+Pre-existing storage type X was found on the device
+Successfully configured storage type X for array controller
+Check Cobalt NDU controllers.. OK
+Check RDL..................... OK
+Check shelf cabling........... OK
+Check controller link......... OK
+Check power supply............ OK
+Check PCIE AER errors......... OK
+Check io card pci id's........ OK
+Check LOM MAC addresses....... OK
+Getting local controller type. Local controller type is cobalt_a.
+Getting local controller variant. Not a generic controller, Exiting.
+Checking peer controller for tunables
+purity.service stablized: done
+purity start/running
+platform: ..done
+foed: ..done
+gui: ....done
+rest: done
+platform_env: 0.done
+quorum: .....done
+foed_env: 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.0.done
+foed_ready: done
+remote_patch: done
+driver: done
+san: Skip waiting for san during HW NDU
+[FA-X70R3.CT1.ETH1] does not need to be migrated since it has no configuration and is not a subinterface.
+[FA-X70R3.CT1.ETH6] does not need to be migrated since it has no configuration and is not a subinterface.
+[FA-X70R3.CT1.ETH7] does not need to be migrated since it has no configuration and is not a subinterface.
+[FA-X70R3.CT1.ETH8] does not need to be migrated since it has no configuration and is not a subinterface.
+[FA-X70R3.CT1.ETH9] does not need to be migrated since it has no configuration and is not a subinterface.
+Please move ports as shown below:
+[FA-X70R3.CT1.ETH0] ====>> [FA-X70R4.CT1.ETH4](Slot: LOM)
+[FA-X70R3.CT1.ETH2] ====>> [FA-X70R4.CT1.ETH2](Slot: LOM)
+[FA-X70R3.CT1.ETH3] ====>> [FA-X70R4.CT1.ETH3](Slot: LOM)
+[FA-X70R3.CT1.ETH4] ====>> [FA-X70R4.CT1.ETH10](Slot:1)
+Press Enter to show more lines...
+[FA-X70R3.CT1.ETH5] ====>> [FA-X70R4.CT1.ETH11](Slot:1)
+Error: Unable to migrate ports configuration:
+[FA-X70R3.CT1.FC0, FA-X70R3.CT1.FC1, FA-X70R3.CT1.FC2, FA-X70R3.CT1.FC3, FA-X70R3.CT1.FC8, FA-X70R3.CT1.FC9]
+because target ports are missing.
+The following ports cannot migrate from old controller to new controller: {}
+Are you sure you want to discard the network port configurations
+for all missing ports? (y/n):yAre you sure you want to discard the network port configurations
+for all missing ports? (y/n): y
+
+After the cables have been moved, type "CONTINUE": continue
+Configuring network ports...
+Perform ping test on port ETH10 ....... OK
+Perform ping test on port ETH11 ....... OK
+Perform ping test on port ETH4 ....... OK
+Perform ping test on port ETH2 ....... OK
+Perform ping test on port ETH3 ....... OK
+Checking SAN connectivity
+SAN is ready.
+                                                                               
+Broadcast message from root@p-pure01-ct1 (somewhere) (Sun Jun 22 14:03:33 2025)
+                                                                               
+                                                                               
+Purity//FA Information System Status                                           
+====================================                                           
+Purity//FA has successfully started for                                        
+the first time after an install                                                
+or upgrade. Purity//FA 6.5.8 (202408090136+b967c2f84655-65x)                   
+is now set to be the default.                                                  
+                                                                               
+                                                                               
+Broadcast message from root@p-pure01-ct1 (somewhere) (Sun Jun 22 14:03:33 2025)
+                                                                               
+                                                                               
+Purity//FA Information System Status                                           
+====================================                                           
+Purity//FA has successfully started for                                        
+the first time after an install                                                
+or upgrade. Purity//FA 6.5.8 (202408090136+b967c2f84655-65x)                   
+is now set to be the default.                                                  
+                                                                               
+
+Waiting for Software Check:.Checking iobalance before proceeding, sampling for 30 seconds, retrying 1 times, adding 30 seconds with each retry
+Try 1/2: Sampling I/O for 30 seconds
+^C
+Exit without saving changes.
+CONFIG_TASK_COMPLETED:CONFIG_TASK_PURESETUP_EXITED
+puresetup@PCTFJ24220164:~$ iscsipureportlist=`pureport list --initiator | grep -v FC | awk -F' CT' '{print "CT"$2,$8}' | grep -v 'CT ' | awk -F '.ETH' '{print $1, $2}' | awk '{print $1, $5, $6}' | sort | uniq -c; echo`; iscsipureportlistcount=`echo "$iscsipureportlist" | awk '{total += $1} END {print total}'`; echo -e "$iscsipureportlist\n\n"; echo -e "\tTotal iSCSI connections: $iscsipureportlistcount\n\n";
+    137 CT0 iqn.2010-06.com.purestorage:flasharray.3b2c203c3575cb5a -
+    134 CT1 iqn.2010-06.com.purestorage:flasharray.3b2c203c3575cb5a -
+
+
+Total iSCSI connections: 271
+
+
+puresetup@PCTFJ24220164:~$ ppurenetwork eth enable ct1.eth5
+Name      Enabled  Type      Subnet  Address  Mask  Gateway  MTU   MAC                Speed      Services    Subinterfaces
+ct1.eth5  True     physical  -       -        -     -        1500  24:a9:37:5d:d1:b4  1.00 Gb/s  management  -
+puresetup@PCTFJ24220164:~$ purenetowwroork list
+Name       Enabled  Speed        Services
+ct0.eth0   False    100.00 Gb/s  -
+ct0.eth1   False    100.00 Gb/s  -
+ct0.eth2   True     25.00 Gb/s   replication
+ct0.eth3   True     25.00 Gb/s   replication
+ct0.eth4   True     1.00 Gb/s    management
+ct0.eth5   True     1.00 Gb/s    management
+ct0.eth10  True     25.00 Gb/s   iscsi
+ct0.eth11  True     25.00 Gb/s   iscsi
+ct0.eth18  True     25.00 Gb/s   iscsi
+ct0.eth19  True     25.00 Gb/s   iscsi
+ct0.eth20  False    25.00 Gb/s   iscsi
+ct0.eth21  False    25.00 Gb/s   iscsi
+ct1.eth0   False    100.00 Gb/s  -
+ct1.eth1   False    100.00 Gb/s  -
+ct1.eth2   True     25.00 Gb/s   replication
+ct1.eth3   True     25.00 Gb/s   replication
+ct1.eth4   True     1.00 Gb/s    management
+ct1.eth5   True     1.00 Gb/s    management
+ct1.eth10  True     25.00 Gb/s   iscsi
+ct1.eth11  True     25.00 Gb/s   iscsi
+ct1.eth18  False    25.00 Gb/s   iscsi
+ct1.eth19  False    25.00 Gb/s   iscsi
+ct1.eth20  False    25.00 Gb/s   iscsi
+ct1.eth21  False    25.00 Gb/s   iscsi
+filevip    True     25.00 Gb/s   file
+replbond   False    0.00 b/s     replication
+vir4       True     1.00 Gb/s    management
+vir5       False    1.00 Gb/s    management
+puresetup@PCTFJ24220164:~$ purenetwork eth enable ct1.eth18
+Name       Enabled  Type      Subnet  Address  Mask  Gateway  MTU   MAC                Speed       Services  Subinterfaces
+ct1.eth18  True     physical  -       -        -     -        1500  a0:88:c2:7e:82:51  25.00 Gb/s  iscsi     -
+puresetup@PCTFJ24220164:~$ purenetwork eth enable ct1.eth189
+Name       Enabled  Type      Subnet  Address  Mask  Gateway  MTU   MAC                Speed       Services  Subinterfaces
+ct1.eth19  True     physical  -       -        -     -        1500  a0:88:c2:7e:82:50  25.00 Gb/s  iscsi     -
+puresetup@PCTFJ24220164:~$ puresetup timezone
+##########################################
+#   Welcome to the Purity Setup Wizard   #
+##########################################
+Name       Created                  Expires
+puresetup  2025-06-22 14:05:01 UTC  2025-06-22 15:05:01 UTC
+Changing the time zone will require a reboot on this controller.
+Current time zone: Etc/UTC
+Change time zone [requires reboot] (y/n):yChange time zone [requires reboot] (y/n): y
+Configuring tzdata
+------------------
+
+Please select the geographic area in which you live. Subsequent configuration 
+questions will narrow this down by presenting a list of cities, representing the
+time zones in which they are located.
+
+  1. Africa      4. Australia     7. Atlantic Ocean  10. Pacific Ocean
+  2. America     5. Arctic Ocean  8. Europe          11. US
+  3. Antarctica  6. Asia          9. Indian Ocean    12. None of the above
+
+Geographic area: 2
+
+
+Please select the city or region corresponding to your time zone.
+
+  1. Adak                       80. Juneau
+  2. Anchorage                  81. Louisville (Kentucky)
+  3. Anguilla                   82. Monticello (Kentucky)
+  4. Antigua                    83. Kralendijk
+  5. Araguaina                  84. La Paz
+  6. Buenos Aires (Argentina)   85. Lima
+  7. Catamarca (Argentina)      86. Los Angeles
+  8. Cordoba (Argentina)        87. Lower Princes
+  9. Jujuy (Argentina)          88. Maceio
+  10. La Rioja (Argentina)      89. Managua
+  11. Mendoza (Argentina)       90. Manaus
+  12. Rio Gallegos (Argentina)  91. Marigot
+  13. Salta (Argentina)         92. Martinique
+  14. San Juan (Argentina)      93. Matamoros
+  15. San Luis (Argentina)      94. Mazatlan
+  16. Tucuman (Argentina)       95. Menominee
+  17. Ushuaia (Argentina)       96. Merida
+  18. Aruba                     97. Metlakatla
+[More] 
+
+  19. Asuncion                  98. Mexico City
+  20. Atikokan                  99. Miquelon
+  21. Atka                      100. Moncton
+  22. Bahia                     101. Monterrey
+  23. Bahia Banderas            102. Montevideo
+  24. Barbados                  103. Montreal
+  25. Belem                     104. Montserrat
+  26. Belize                    105. Nassau
+  27. Blanc-Sablon              106. New York
+  28. Boa Vista                 107. Nipigon
+  29. Bogota                    108. Nome
+  30. Boise                     109. Fernando de Noronha
+  31. Cambridge Bay             110. Beulah (North Dakota)
+  32. Campo Grande              111. Center (North Dakota)
+  33. Cancun                    112. New Salem (North Dakota)
+  34. Caracas                   113. Nuuk
+  35. Cayenne                   114. Ojinaga
+  36. Cayman                    115. Panama
+  37. Chicago                   116. Pangnirtung
+  38. Chihuahua                 117. Paramaribo
+  39. Ciudad_Juarez             118. Phoenix
+  40. Coral Harbour             119. Port-au-Prince
+[More] 
+
+  41. Costa Rica                120. Port of Spain
+  42. Creston                   121. Porto Acre
+  43. Cuiaba                    122. Porto Velho
+  44. Curaçao                  123. Puerto Rico
+  45. Danmarkshavn              124. Punta Arenas
+  46. Dawson                    125. Rainy River
+  47. Dawson Creek              126. Rankin Inlet
+  48. Denver                    127. Recife
+  49. Detroit                   128. Regina
+  50. Dominica                  129. Resolute
+  51. Edmonton                  130. Rio Branco
+  52. Eirunepe                  131. Santa Isabel
+  53. El Salvador               132. Santarém
+  54. Ensenada                  133. Santiago
+  55. Fort Nelson               134. Santo Domingo
+  56. Fortaleza                 135. São Paulo
+  57. Glace Bay                 136. Scoresbysund
+  58. Godthab                   137. Shiprock
+  59. Goose Bay                 138. Sitka
+  60. Grand Turk                139. St Barthelemy
+  61. Grenada                   140. St Johns
+  62. Guadeloupe                141. St Kitts
+[More] 
+
+  63. Guatemala                 142. St Lucia
+  64. Guayaquil                 143. St Thomas
+  65. Guyana                    144. St Vincent
+  66. Halifax                   145. Swift Current
+  67. Havana                    146. Tegucigalpa
+  68. Hermosillo                147. Thule
+  69. Indianapolis (Indiana)    148. Thunder Bay
+  70. Knox (Indiana)            149. Tijuana
+  71. Marengo (Indiana)         150. Toronto
+  72. Petersburg (Indiana)      151. Tortola
+  73. Tell City (Indiana)       152. Vancouver
+  74. Vevay (Indiana)           153. Virgin
+  75. Vincennes (Indiana)       154. Whitehorse
+  76. Winamac (Indiana)         155. Winnipeg
+  77. Inuvik                    156. Yakutat
+  78. Iqaluit                   157. Yellowknife
+  79. Jamaica
+
+Time zone: 49
+
+
+
+Current default time zone: 'America/Detroit'
+Local time is now:      Sun Jun 22 10:05:11 EDT 2025.
+Universal Time is now:  Sun Jun 22 14:05:11 UTC 2025.
+
+'/cache/timezone/localtime' -> '/usr/share/zoneinfo/America/Detroit'
+Confirm time zone change from Etc/UTC to America/Detroit
+(y/N):y(y/N): y
+Press ENTER to reboot
+
+This controller will be online after reboot.
+CONFIG_TASK_COMPLETED:CONFIG_TASK_PURESETUP_EXITED
+puresetup@PCTFJ24220164:~$ 
+     root@p-pure01-ct0:/var/home/pureeng# pureharray list --contrtroller
+Name  Type              Mode       Model     Version  Status  Internal Details
+CT0   array_controller  primary    FA-X70R4  6.5.8    ready   
+CT1   array_controller  secondary  FA-X70R4  6.5.8    ready   
+     root@p-pure01-ct0:/var/home/pureeng# purehw list
+Name       Status  Identify  Slot  Index  Speed       Temperature  Voltage  Details
+CH0        ok      off       -     0      -           -            -        -
+CH0.BAY0   ok      off       -     0      -           -            -        -
+CH0.BAY1   ok      off       -     1      -           -            -        -
+CH0.BAY2   ok      off       -     2      -           -            -        -
+CH0.BAY3   ok      off       -     3      -           -            -        -
+CH0.BAY4   ok      off       -     4      -           -            -        -
+CH0.BAY5   ok      off       -     5      -           -            -        -
+CH0.BAY6   ok      off       -     6      -           -            -        -
+CH0.BAY7   ok      off       -     7      -           -            -        -
+CH0.BAY8   ok      off       -     8      -           -            -        -
+CH0.BAY9   ok      off       -     9      -           -            -        -
+CH0.BAY10  ok      off       -     10     -           -            -        -
+CH0.BAY11  ok      off       -     11     -           -            -        -
+CH0.BAY12  ok      off       -     12     -           -            -        -
+CH0.BAY13  ok      off       -     13     -           -            -        -
+CH0.BAY14  ok      off       -     14     -           -            -        -
+CH0.BAY15  ok      off       -     15     -           -            -        -
+CH0.BAY16  ok      off       -     16     -           -            -        -
+CH0.BAY17  ok      off       -     17     -           -            -        -
+CH0.BAY18  ok      off       -     18     -           -            -        -
+CH0.BAY19  ok      off       -     19     -           -            -        -
+CH0.NVB0   ok      off       -     0      -           -            -        -
+CH0.NVB1   ok      off       -     1      -           -            -        -
+CH0.NVB2   ok      off       -     2      -           -            -        -
+CH0.NVB3   ok      off       -     3      -           -            -        -
+CH0.PWR0   ok      -         -     0      -           -            207 V    -
+CH0.PWR1   ok      -         -     1      -           -            206 V    -
+CH0.TMP0   ok      -         -     0      -           26 C         -        -
+CT0        ok      off       -     0      -           -            -        -
+CT0.ETH0   ok      -         -     0      0.00 b/s    -            -        -
+CT0.ETH1   ok      -         -     1      0.00 b/s    -            -        -
+CT0.ETH2   ok      -         -     2      25.00 Gb/s  -            -        -
+CT0.ETH3   ok      -         -     3      25.00 Gb/s  -            -        -
+CT0.ETH4   ok      -         -     4      1.00 Gb/s   -            -        -
+CT0.ETH5   ok      -         -     5      1.00 Gb/s   -            -        -
+CT0.ETH10  ok      -         1     10     25.00 Gb/s  -            -        -
+CT0.ETH11  ok      -         1     11     25.00 Gb/s  -            -        -
+CT0.ETH18  ok      -         3     18     25.00 Gb/s  -            -        -
+CT0.ETH19  ok      -         3     19     25.00 Gb/s  -            -        -
+CT0.ETH20  ok      -         3     20     0.00 b/s    -            -        -
+CT0.ETH21  ok      -         3     21     0.00 b/s    -            -        -
+CT0.FAN0   ok      -         -     0      -           -            -        -
+CT0.FAN1   ok      -         -     1      -           -            -        -
+CT0.FAN2   ok      -         -     2      -           -            -        -
+CT0.FAN3   ok      -         -     3      -           -            -        -
+CT0.FAN4   ok      -         -     4      -           -            -        -
+CT0.FAN5   ok      -         -     5      -           -            -        -
+CT0.TMP0   ok      -         -     0      -           40 C         -        -
+CT0.TMP1   ok      -         -     1      -           45 C         -        -
+CT0.TMP2   ok      -         -     2      -           64 C         -        -
+CT0.TMP3   ok      -         -     3      -           59 C         -        -
+CT0.TMP4   ok      -         -     4      -           49 C         -        -
+CT0.TMP5   ok      -         -     5      -           49 C         -        -
+CT0.TMP6   ok      -         -     6      -           31 C         -        -
+CT0.TMP7   ok      -         -     7      -           34 C         -        -
+CT0.TMP8   ok      -         -     8      -           51 C         -        -
+CT0.TMP9   ok      -         -     9      -           46 C         -        -
+CT0.TMP10  ok      -         -     10     -           46 C         -        -
+CT0.TMP11  ok      -         -     11     -           45 C         -        -
+CT0.TMP12  ok      -         -     12     -           43 C         -        -
+CT0.TMP13  ok      -         -     13     -           45 C         -        -
+CT0.TMP14  ok      -         -     14     -           44 C         -        -
+CT0.TMP15  ok      -         -     15     -           44 C         -        -
+CT0.TMP16  ok      -         -     16     -           43 C         -        -
+CT0.TMP17  ok      -         -     17     -           44 C         -        -
+CT0.TMP18  ok      -         -     18     -           43 C         -        -
+CT0.TMP19  ok      -         -     19     -           42 C         -        -
+CT0.TMP20  ok      -         -     20     -           42 C         -        -
+CT0.TMP21  ok      -         -     21     -           46 C         -        -
+CT0.TMP22  ok      -         -     22     -           46 C         -        -
+CT0.TMP23  ok      -         -     23     -           46 C         -        -
+CT0.TMP24  ok      -         -     24     -           45 C         -        -
+CT1        ok      off       -     1      -           -            -        -
+CT1.DCA4   ok      -         4     4      -           -            -        -
+CT1.ETH0   ok      -         -     0      0.00 b/s    -            -        -
+CT1.ETH1   ok      -         -     1      0.00 b/s    -            -        -
+CT1.ETH2   ok      -         -     2      25.00 Gb/s  -            -        -
+CT1.ETH3   ok      -         -     3      25.00 Gb/s  -            -        -
+CT1.ETH4   ok      -         -     4      1.00 Gb/s   -            -        -
+CT1.ETH5   ok      -         -     5      1.00 Gb/s   -            -        -
+CT1.ETH10  ok      -         1     10     25.00 Gb/s  -            -        -
+CT1.ETH11  ok      -         1     11     25.00 Gb/s  -            -        -
+CT1.ETH18  ok      -         3     18     25.00 Gb/s  -            -        -
+CT1.ETH19  ok      -         3     19     25.00 Gb/s  -            -        -
+CT1.ETH20  ok      -         3     20     0.00 b/s    -            -        -
+CT1.ETH21  ok      -         3     21     0.00 b/s    -            -        -
+CT1.FAN0   ok      -         -     0      -           -            -        -
+CT1.FAN1   ok      -         -     1      -           -            -        -
+CT1.FAN2   ok      -         -     2      -           -            -        -
+CT1.FAN3   ok      -         -     3      -           -            -        -
+CT1.FAN4   ok      -         -     4      -           -            -        -
+CT1.FAN5   ok      -         -     5      -           -            -        -
+CT1.TMP0   ok      -         -     0      -           41 C         -        -
+CT1.TMP1   ok      -         -     1      -           42 C         -        -
+CT1.TMP2   ok      -         -     2      -           56 C         -        -
+CT1.TMP3   ok      -         -     3      -           55 C         -        -
+CT1.TMP4   ok      -         -     4      -           48 C         -        -
+CT1.TMP5   ok      -         -     5      -           48 C         -        -
+CT1.TMP6   ok      -         -     6      -           31 C         -        -
+CT1.TMP7   ok      -         -     7      -           34 C         -        -
+CT1.TMP8   ok      -         -     8      -           52 C         -        -
+CT1.TMP9   ok      -         -     9      -           42 C         -        -
+CT1.TMP10  ok      -         -     10     -           41 C         -        -
+CT1.TMP11  ok      -         -     11     -           40 C         -        -
+CT1.TMP12  ok      -         -     12     -           38 C         -        -
+CT1.TMP13  ok      -         -     13     -           40 C         -        -
+CT1.TMP14  ok      -         -     14     -           39 C         -        -
+CT1.TMP15  ok      -         -     15     -           38 C         -        -
+C 1puremessage list --open
+     root@p-pure01-ct0:/var/home/pureeng# purenetwork eth list
+Name       Enabled  Type      Subnet  Address      Mask           Gateway     MTU   MAC                Speed        Services     Subinterfaces
+ct0.eth0   False    physical  -       -            -              -           4200  24:a9:37:5d:ce:5f  100.00 Gb/s  -            -
+ct0.eth1   False    physical  -       -            -              -           4200  24:a9:37:5d:ce:60  100.00 Gb/s  -            -
+ct0.eth2   True     physical  -       10.64.1.105  255.255.255.0  10.64.1.1   1500  24:a9:37:5d:ce:61  25.00 Gb/s   replication  -
+ct0.eth3   True     physical  -       10.64.1.106  255.255.255.0  10.64.1.1   1500  24:a9:37:5d:ce:62  25.00 Gb/s   replication  -
+ct0.eth4   True     physical  -       10.160.2.86  255.255.254.0  10.160.2.1  1500  24:a9:37:5d:ce:63  1.00 Gb/s    management   -
+ct0.eth5   True     physical  -       -            -              -           1500  24:a9:37:5d:ce:64  1.00 Gb/s    management   -
+ct0.eth10  True     physical  -       10.64.28.50  255.255.255.0  10.64.28.1  9000  9c:63:c0:7a:e0:39  25.00 Gb/s   iscsi        -
+ct0.eth11  True     physical  -       10.64.28.51  255.255.255.0  10.64.28.1  9000  9c:63:c0:7a:e0:38  25.00 Gb/s   iscsi        -
+ct0.eth18  True     physical  -       -            -              -           1500  a0:88:c2:7e:8b:d9  25.00 Gb/s   iscsi        -
+ct0.eth19  True     physical  -       -            -              -           1500  a0:88:c2:7e:8b:d8  25.00 Gb/s   iscsi        -
+ct0.eth20  False    physical  -       -            -              -           1500  a0:88:c2:7e:8b:d7  25.00 Gb/s   iscsi        -
+ct0.eth21  False    physical  -       -            -              -           1500  a0:88:c2:7e:8b:d6  25.00 Gb/s   iscsi        -
+ct1.eth0   False    physical  -       -            -              -           4200  24:a9:37:5d:d1:af  100.00 Gb/s  -            -
+ct1.eth1   False    physical  -       -            -              -           4200  24:a9:37:5d:d1:b0  100.00 Gb/s  -            -
+ct1.eth2   True     physical  -       10.64.1.107  255.255.255.0  10.64.1.1   1500  24:a9:37:5d:d1:b1  25.00 Gb/s   replication  -
+ct1.eth3   True     physical  -       10.64.1.108  255.255.255.0  10.64.1.1   1500  24:a9:37:5d:d1:b2  25.00 Gb/s   replication  -
+ct1.eth4   True     physical  -       10.160.2.87  255.255.254.0  10.160.2.1  1500  24:a9:37:5d:d1:b3  1.00 Gb/s    management   -
+ct1.eth5   True     physical  -       -            -              -           1500  24:a9:37:5d:d1:b4  1.00 Gb/s    management   -
+ct1.eth10  True     physical  -       10.64.28.52  255.255.255.0  10.64.28.1  9000  9c:63:c0:7a:e1:d5  25.00 Gb/s   iscsi        -
+ct1.eth11  True     physical  -       10.64.28.53  255.255.255.0  10.64.28.1  9000  9c:63:c0:7a:e1:d4  25.00 Gb/s   iscsi        -
+ct1.eth18  True     physical  -       -            -              -           1500  a0:88:c2:7e:82:51  25.00 Gb/s   iscsi        -
+ct1.eth19  True     physical  -       -            -              -           1500  a0:88:c2:7e:82:50  25.00 Gb/s   iscsi        -
+ct1.eth20  False    physical  -       -            -              -           1500  a0:88:c2:7e:82:4f  25.00 Gb/s   iscsi        -
+ct1.eth21  False    physical  -       -            -              -           1500  a0:88:c2:7e:82:4e  25.00 Gb/s   iscsi        -
+filevip    True     vif       -       10.64.30.14  255.255.254.0  10.64.30.1  1500  f2:e3:94:c5:13:5a  25.00 Gb/s   file         -
+replbond   False    bond      -       -            -              -           1500  be:fa:dd:bf:ff:29  0.00 b/s     replication  -
+vir4       True     vif       -       10.160.2.85  255.255.254.0  10.160.2.1  1500  1e:cb:4d:12:52:f0  1.00 Gb/s    management   -
+vir5       False    vif       -       -            -              -           1500  a2:80:8c:46:aa:2b  1.00 Gb/s    management   -
+     root@p-pure01-ct0:/var/home/pureeng# purenetwwork list
+Name       Enabled  Speed        Services
+ct0.eth0   False    100.00 Gb/s  -
+ct0.eth1   False    100.00 Gb/s  -
+ct0.eth2   True     25.00 Gb/s   replication
+ct0.eth3   True     25.00 Gb/s   replication
+ct0.eth4   True     1.00 Gb/s    management
+ct0.eth5   True     1.00 Gb/s    management
+ct0.eth10  True     25.00 Gb/s   iscsi
+ct0.eth11  True     25.00 Gb/s   iscsi
+ct0.eth18  True     25.00 Gb/s   iscsi
+ct0.eth19  True     25.00 Gb/s   iscsi
+ct0.eth20  False    25.00 Gb/s   iscsi
+ct0.eth21  False    25.00 Gb/s   iscsi
+ct1.eth0   False    100.00 Gb/s  -
+ct1.eth1   False    100.00 Gb/s  -
+ct1.eth2   True     25.00 Gb/s   replication
+ct1.eth3   True     25.00 Gb/s   replication
+ct1.eth4   True     1.00 Gb/s    management
+ct1.eth5   True     1.00 Gb/s    management
+ct1.eth10  True     25.00 Gb/s   iscsi
+ct1.eth11  True     25.00 Gb/s   iscsi
+ct1.eth18  True     25.00 Gb/s   iscsi
+ct1.eth19  True     25.00 Gb/s   iscsi
+ct1.eth20  False    25.00 Gb/s   iscsi
+ct1.eth21  False    25.00 Gb/s   iscsi
+filevip    True     25.00 Gb/s   file
+replbond   False    0.00 b/s     replication
+vir4       True     1.00 Gb/s    management
+vir5       False    1.00 Gb/s    management
+     root@p-pure01-ct0:/var/home/pureeng# 
+     root@p-pure01-ct0:/var/home/pureeng# purearararray list --connect
+Name      ID                                    Version  Management Address  Replication Address  Status     Throttled  Type               Transport
+p-pure02  3101d2a2-9dd4-4a51-8e71-ad70a2a29b0b  6.5.8    10.201.15.168       10.201.108.10        connected  False      async-replication  ip
+                                                                             10.201.108.11                                                 
+                                                                             10.201.108.12                                                 
+                                                                             10.201.108.13                                                 
+     root@p-pure01-ct0:/var/home/pureeng# purearray list --connect --path
+Name      Local Port  Local Address  Remote Port  Remote Address  Status     Transport
+p-pure02  ct0.eth2    10.64.1.105    ct0.eth2     10.201.108.10   connected  ip
+p-pure02  ct0.eth2    10.64.1.105    ct1.eth2     10.201.108.11   connected  ip
+p-pure02  ct0.eth2    10.64.1.105    ct0.eth3     10.201.108.12   connected  ip
+p-pure02  ct0.eth2    10.64.1.105    ct1.eth3     10.201.108.13   connected  ip
+p-pure02  ct0.eth3    10.64.1.106    ct0.eth2     10.201.108.10   connected  ip
+p-pure02  ct0.eth3    10.64.1.106    ct1.eth2     10.201.108.11   connected  ip
+p-pure02  ct0.eth3    10.64.1.106    ct0.eth3     10.201.108.12   connected  ip
+p-pure02  ct0.eth3    10.64.1.106    ct1.eth3     10.201.108.13   connected  ip
+     root@p-pure01-ct0:/var/home/pureeng# ssh peer
+Last login: Wed Jun 12 16:18:06 2024 from 10.125.0.1
+
+Sun Jun 22 10:13:15 2025
+Welcome root. This is Purity Version 6.5.8 on FlashArray p-pure01
+http://www.purestorage.com/
+     root@p-pure01-ct1:~# purearray list --connect [[--path
+Name      Local Port  Local Address  Remote Port  Remote Address  Status     Transport
+p-pure02  ct0.eth2    10.64.1.105    ct0.eth2     10.201.108.10   connected  ip
+p-pure02  ct0.eth2    10.64.1.105    ct1.eth2     10.201.108.11   connected  ip
+p-pure02  ct0.eth2    10.64.1.105    ct0.eth3     10.201.108.12   connected  ip
+p-pure02  ct0.eth2    10.64.1.105    ct1.eth3     10.201.108.13   connected  ip
+p-pure02  ct0.eth3    10.64.1.106    ct0.eth2     10.201.108.10   connected  ip
+p-pure02  ct0.eth3    10.64.1.106    ct1.eth2     10.201.108.11   connected  ip
+p-pure02  ct0.eth3    10.64.1.106    ct0.eth3     10.201.108.12   connected  ip
+p-pure02  ct0.eth3    10.64.1.106    ct1.eth3     10.201.108.13   connected  ip
+     root@p-pure01-ct1:~# iobalance -so-sampeltime 1letime 15
+sampling host I/O for 15 seconds...
+                Host  CT0 I/O Count  CT1 I/O Count  
+          p-erp-db01       54.00       48.00  
+          p-erp-db02      108.00      110.00  
+          p-erp-db03      106.00      108.00  
+          p-gap-db01       16.00       22.00  
+          p-gap-db02       28.00       90.00  ! unbalanced I/O
+          p-gap-db03       24.00       73.00  ! unbalanced I/O
+           p-k8s-w01       98.00       93.00  
+           p-k8s-w02       16.00        0.00  ! no I/O to CT1
+           p-k8s-w04       16.00        4.00  
+           p-k8s-w05        8.00        8.00  
+           p-k8s-w06       74.00       80.00  
+           p-k8s-w07      138.00      101.00  
+           p-k8s-w08       81.00       88.00  
+          p-ksmart01       40.00       37.00  
+           p-mssql22        0.00        0.00  ? Host is idle
+           p-mssql23        0.00        0.00  ? Host is idle
+           p-mssql33      18.57K      17.82K  
+           p-mssql34       2.13K       1.79K  
+           p-mssql35       50.00       51.00  
+           p-mssql36        0.00        0.00  ? Host is idle
+           p-mssql37       31.00       33.00  
+           p-mssql38       30.00       32.00  
+          p-oem-db01       14.00       20.00  
+          p-vcp-db01       12.00        2.00  
+           q-mssql03        0.00        0.00  ? Host is idle
+           q-mssql04        0.00        0.00  ? Host is idle
+           q-mssql06        2.00        2.00  
+           q-mssql07        9.00        5.00  
+           t-mssql10        0.00        0.00  ? Host is idle
+           zs-esxi50       1.59K       3.19K  ! unbalanced I/O
+           zs-esxi51       3.07K       2.29K  
+           zs-esxi52      16.22K      17.54K  
+           zs-esxi53       2.03K       2.45K  
+           zs-esxi54       3.92K       8.05K  ! unbalanced I/O
+           zs-esxi55       3.60K       2.11K  ! unbalanced I/O
+           zs-esxi56      28.22K       4.53K  ! unbalanced I/O
+           zs-esxi57       3.27K       1.48K  ! unbalanced I/O
+           zs-esxi58      15.28K       2.07K  ! unbalanced I/O
+           zs-esxi59       4.13K       3.47K  
+           zs-esxi60      59.01K      73.03K  
+           zs-esxi61      22.25K      20.04K  
+           zs-esxi62     352.80K     351.87K  
+           zs-esxi63       1.64K       6.50K  ! unbalanced I/O
+           zs-esxi64      193.00        1.00  ! unbalanced I/O
+           zs-esxi65       87.00      103.00  
+           zs-esxi66       4.78K       1.88K  ! unbalanced I/O
+           zs-esxi67       70.00       92.00  
+           zs-esxi68      106.00       30.00  ! unbalanced I/O
+           zs-esxi69      314.00      189.00  ! unbalanced I/O
+           zs-esxi70       41.00       68.00  ! unbalanced I/O
+           zs-esxi71       22.00       52.00  ! unbalanced I/O
+           zs-esxi72      115.00       71.00  ! unbalanced I/O
+           zs-esxi73      127.00       94.00  
+           zs-esxi75       1.97K       2.22K  
+           zs-esxi76      69.28K      63.21K  
+           zs-esxi80      15.45K      14.65K  
+           zs-esxi81       2.18K       1.16K  ! unbalanced I/O
+           zs-esxi82       2.55K       2.14K  
+           zs-esxi83       1.50K       1.29K  
+           zs-esxi84        4.00      157.00  ! unbalanced I/O
+            zs-kvm01        5.00        4.00  
+            zs-kvm02        8.00       11.00  
+            zs-kvm03        3.00        4.00  
+     root@p-pure01-ct1:~# 
+     root@p-pure01-ct1:~# ^C
+     root@p-pure01-ct1:~# iscsipureportlist=`pureport list --initiator | grep -v FC | awk -F' CT' '{print "CT"$2,$8}' | grep -v 'CT ' | awk -F '.ETH' '{print $1, $2}' | awk '{print $1, $5, $6}' | sort | uniq -c; echo`; iscsipureportlistcount=`echo "$iscsipureportlist" | awk '{total += $1} END {print total}'`; echo -e "$iscsipureportlist\n\n"; echo -e "\tTotal iSCSI connections: $iscsipureportlistcount\n\n";
+    137 CT0 iqn.2010-06.com.purestorage:flasharray.3b2c203c3575cb5a -
+    134 CT1 iqn.2010-06.com.purestorage:flasharray.3b2c203c3575cb5a -
+
+
+Total iSCSI connections: 271
+
+
+     root@p-pure01-ct1:~# purealert untag --maintenance
+Name
+maintenance
+     root@p-pure01-ct1:~# purearray phonehome --send-today && ssh peer purearray phonehome --send-today
+Status   Action
+running  send_today
+Status   Action
+running  send_today
+phonehome is already running
+     root@p-pure01-ct1:~# exit
+logout
+     root@p-pure01-ct0:/var/home/pureeng# exit
+exit
+pureeng@p-pure01-ct0:~$ exit
+logout
+
+p-pure01-ct0 login: 

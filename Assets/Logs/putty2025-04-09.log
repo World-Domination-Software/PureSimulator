@@ -1,0 +1,805 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.04.09 09:17:39 =~=~=~=~=~=~=~=~=~=~=~=
+
+purestorage1-cmi-lan-ct0 login: pureeng
+1) Authenticate via CloudAssist
+2) Authenticate via command line
+3) Restore challenge
+Type the number corresponding to the authentication method you want to use.
+
+Selection: 1
+
+An email for identity verification will be sent once email is entered.
+Please follow the authentication instructions provided there and return to this screen when finished or if email has not been received.
+
+
+Enter an email address: fharris@purestorage.com
+Successfully authenticated
+Last login: Tue Feb 11 15:47:11 EST 2025 on ttyS0
+
+Wed Apr 09 09:18:36 2025
+Welcome pureeng. This is Purity Version 6.7.1 on FlashArray purestorage1-cmi-lan
+http://www.purestorage.com/
+pureeng@purestorage1-cmi-lan-ct0:~$ purehw list
+Name       Status         Identify  Slot  Index  Speed       Temperature  Voltage  Details
+CH0        ok             off       -     0      -           -            -        -
+CH0.BAY0   ok             off       -     0      -           -            -        -
+CH0.BAY1   ok             off       -     1      -           -            -        -
+CH0.BAY2   ok             off       -     2      -           -            -        -
+CH0.BAY3   ok             off       -     3      -           -            -        -
+CH0.BAY4   ok             off       -     4      -           -            -        -
+CH0.BAY5   ok             off       -     5      -           -            -        -
+CH0.BAY6   ok             off       -     6      -           -            -        -
+CH0.BAY7   ok             off       -     7      -           -            -        -
+CH0.BAY8   ok             off       -     8      -           -            -        -
+CH0.BAY9   ok             off       -     9      -           -            -        -
+CH0.BAY10  ok             off       -     10     -           -            -        -
+CH0.BAY11  ok             off       -     11     -           -            -        -
+CH0.BAY12  not_installed  off       -     12     -           -            -        -
+CH0.BAY13  not_installed  off       -     13     -           -            -        -
+CH0.BAY14  not_installed  off       -     14     -           -            -        -
+CH0.BAY15  not_installed  off       -     15     -           -            -        -
+CH0.BAY16  not_installed  off       -     16     -           -            -        -
+CH0.BAY17  not_installed  off       -     17     -           -            -        -
+CH0.BAY18  not_installed  off       -     18     -           -            -        -
+CH0.BAY19  not_installed  off       -     19     -           -            -        -
+CH0.NVB0   ok             off       -     0      -           -            -        -
+CH0.NVB1   ok             off       -     1      -           -            -        -
+CH0.NVB2   not_installed  off       -     2      -           -            -        -
+CH0.NVB3   not_installed  off       -     3      -           -            -        -
+CH0.PWR0   ok             -         -     0      -           -            206 V    -
+CH0.PWR1   ok             -         -     1      -           -            206 V    -
+CH0.TMP0   ok             -         -     0      -           24 C         -        -
+CT0        ok             off       -     0      -           -            -        -
+CT0.ETH0   ok             -         -     0      0.00 b/s    -            -        -
+CT0.ETH1   ok             -         -     1      0.00 b/s    -            -        -
+CT0.ETH2   ok             -         -     2      0.00 b/s    -            -        -
+CT0.ETH3   ok             -         -     3      0.00 b/s    -            -        -
+CT0.ETH4   ok             -         -     4      1.00 Gb/s   -            -        -
+CT0.ETH5   ok             -         -     5      0.00 b/s    -            -        -
+CT0.ETH18  ok             -         3     18     0.00 b/s    -            -        -
+CT0.ETH19  ok             -         3     19     25.00 Gb/s  -            -        -
+CT0.ETH20  ok             -         3     20     0.00 b/s    -            -        -
+CT0.ETH21  ok             -         3     21     0.00 b/s    -            -        -
+CT0.FAN0   ok             -         -     0      -           -            -        -
+CT0.FAN1   ok             -         -     1      -           -            -        -
+CT0.FAN2   ok             -         -     2      -           -            -        -
+CT0.FAN3   ok             -         -     3      -           -            -        -
+CT0.FAN4   ok             -         -     4      -           -            -        -
+CT0.FAN5   ok             -         -     5      -           -            -        -
+CT0.TMP0   ok             -         -     0      -           37 C         -        -
+CT0.TMP1   ok             -         -     1      -           40 C         -        -
+CT0.TMP2   ok             -         -     2      -           47 C         -        -
+CT0.TMP3   ok             -         -     3      -           48 C         -        -
+CT0.TMP4   ok             -         -     4      -           42 C         -        -
+CT0.TMP5   ok             -         -     5      -           44 C         -        -
+CT0.TMP6   ok             -         -     6      -           28 C         -        -
+CT0.TMP7   ok             -         -     7      -           29 C         -        -
+CT0.TMP8   ok             -         -     8      -           50 C         -        -
+CT0.TMP9   ok             -         -     9      -           34 C         -        -
+CT0.TMP11  ok             -         -     11     -           33 C         -        -
+CT0.TMP12  ok             -         -     12     -           31 C         -        -
+CT0.TMP13  ok             -         -     13     -           34 C         -        -
+CT0.TMP14  ok             -         -     14     -           33 C         -        -
+CT0.TMP15  ok             -         -     15     -           33 C         -        -
+CT0.TMP17  ok             -         -     17     -           34 C         -        -
+CT0.TMP19  ok             -         -     19     -           33 C         -        -
+CT0.TMP20  ok             -         -     20     -           33 C         -        -
+CT0.TMP21  ok             -         -     21     -           38 C         -        -
+CT0.TMP22  ok             -         -     22     -           37 C         -        -
+CT0.TMP23  ok             -         -     23     -           36 C         -        -
+CT1        ok             off       -     1      -           -            -        -
+CT1.ETH0   ok             -         -     0      0.00 b/s    -            -        -
+CT1.ETH1   ok             -         -     1      0.00 b/s    -            -        -
+CT1.ETH2   ok             -         -     2      0.00 b/s    -            -        -
+CT1.ETH3   ok             -         -     3      0.00 b/s    -            -        -
+CT1.ETH4   ok             -         -     4      1.00 Gb/s   -            -        -
+CT1.ETH5   ok             -         -     5      0.00 b/s    -            -        -
+CT1.ETH18  ok             -         3     18     0.00 b/s    -            -        -
+CT1.ETH19  ok             -         3     19     0.00 b/s    -            -        -
+CT1.ETH20  ok             -         3     20     25.00 Gb/s  -            -        -
+CT1.ETH21  ok             -         3     21     0.00 b/s    -            -        -
+CT1.FAN0   ok             -         -     0      -           -            -        -
+CT1.FAN1   ok             -         -     1      -           -            -        -
+CT1.FAN2   ok             -         -     2      -           -            -        -
+CT1.FAN3   ok             -         -     3      -           -            -        -
+CT1.FAN4   ok             -         -     4      -           -            -        -
+CT1.FAN5   ok             -         -     5      -           -            -        -
+CT1.TMP0   ok             -         -     0      -           36 C         -        -
+CT1.TMP1   ok             -         -     1      -           39 C         -        -
+CT1.TMP2   ok             -         -     2      -           44 C         -        -
+CT1.TMP3   ok             -         -     3      -           45 C         -        -
+CT1.TMP4   ok             -         -     4      -           41 C         -        -
+CT1.TMP5   ok             -         -     5      -           43 C         -        -
+CT1.TMP6   ok             -         -     6      -           29 C         -        -
+CT1.TMP7   ok             -         -     7      -           31 C         -        -
+CT1.TMP8   ok             -         -     8      -           49 C         -        -
+CT1.TMP9   ok             -         -     9      -           34 C         -        -
+CT1.TMP11  ok             -         -     11     -           32 C         -        -
+CT1.TMP12  ok             -         -     12     -           32 C         -        -
+CT1.TMP13  ok             -         -     13     -           34 C         -        -
+CT1.TMP14  ok             -         -     14     -           33 C         -        -
+CT1.TMP15  ok             -         -     15     -           33 C         -        -
+CT1.TMP17  ok             -         -     17     -           34 C         -        -
+CT1.TMP19  ok             -         -     19     -           33 C         -        -
+CT1.TMP20  ok             -         -     20     -           33 C         -        -
+CT1.TMP21  ok             -         -     21     -           37 C         -        -
+CT1.TMP22  ok             -         -     22     -           36 C         -        -
+CT1.TMP23  ok             -         -     23     -           36 C         -        -
+pureeng@purestorage1-cmi-lan-ct0:~$ purenetwork eth list
+Name       Enabled  Type      Subnet  Address        Mask           Gateway       MTU   MAC                Speed        Services     Subinterfaces
+ct0.eth0   False    physical  -       -              -              -             1500  24:a9:37:63:c7:54  100.00 Gb/s  -            -
+ct0.eth1   False    physical  -       -              -              -             1500  24:a9:37:63:c7:55  100.00 Gb/s  -            -
+ct0.eth2   False    physical  -       -              -              -             1500  24:a9:37:63:c7:56  25.00 Gb/s   replication  -
+ct0.eth3   False    physical  -       -              -              -             1500  24:a9:37:63:c7:57  25.00 Gb/s   replication  -
+ct0.eth4   True     physical  -       192.168.20.61  255.255.255.0  192.168.20.1  1500  24:a9:37:63:c7:58  1.00 Gb/s    management   -
+ct0.eth5   False    physical  -       -              -              -             1500  24:a9:37:63:c7:59  1.00 Gb/s    management   -
+ct0.eth18  False    physical  -       -              -              -             1500  94:6d:ae:fb:83:a3  25.00 Gb/s   iscsi        -
+ct0.eth19  True     physical  -       172.20.10.21   255.255.255.0  -             9000  94:6d:ae:fb:83:a2  25.00 Gb/s   iscsi        -
+ct0.eth20  False    physical  -       -              -              -             1500  94:6d:ae:fb:83:a1  25.00 Gb/s   iscsi        -
+ct0.eth21  False    physical  -       -              -              -             1500  94:6d:ae:fb:83:a0  25.00 Gb/s   iscsi        -
+ct1.eth0   False    physical  -       -              -              -             1500  24:a9:37:63:76:38  100.00 Gb/s  -            -
+ct1.eth1   False    physical  -       -              -              -             1500  24:a9:37:63:76:39  100.00 Gb/s  -            -
+ct1.eth2   False    physical  -       -              -              -             1500  24:a9:37:63:76:3a  25.00 Gb/s   replication  -
+ct1.eth3   False    physical  -       -              -              -             1500  24:a9:37:63:76:3b  25.00 Gb/s   replication  -
+ct1.eth4   True     physical  -       192.168.20.62  255.255.255.0  192.168.20.1  1500  24:a9:37:63:76:3c  1.00 Gb/s    management   -
+ct1.eth5   False    physical  -       -              -              -             1500  24:a9:37:63:76:3d  1.00 Gb/s    management   -
+ct1.eth18  False    physical  -       -              -              -             1500  a0:88:c2:74:52:69  25.00 Gb/s   iscsi        -
+ct1.eth19  False    physical  -       -              -              -             1500  a0:88:c2:74:52:68  25.00 Gb/s   iscsi        -
+ct1.eth20  True     physical  -       172.20.11.21   255.255.255.0  -             9000  a0:88:c2:74:52:67  25.00 Gb/s   iscsi        -
+ct1.eth21  False    physical  -       -              -              -             1500  a0:88:c2:74:52:66  25.00 Gb/s   iscsi        -
+replbond   False    bond      -       -              -              -             1500  8e:84:9e:d6:95:a5  0.00 b/s     replication  -
+vir4       True     vif       -       192.168.20.60  255.255.255.0  192.168.20.1  1500  a6:b9:04:e5:02:14  1.00 Gb/s    management   -
+vir5       False    vif       -       -              -              -             1500  aa:b4:a0:d4:96:81  1.00 Gb/s    management   -
+pureeng@purestorage1-cmi-lan-ct0:~$ purenetwork list
+Name       Enabled  Speed        Services
+ct0.eth0   False    100.00 Gb/s  -
+ct0.eth1   False    100.00 Gb/s  -
+ct0.eth2   False    25.00 Gb/s   replication
+ct0.eth3   False    25.00 Gb/s   replication
+ct0.eth4   True     1.00 Gb/s    management
+ct0.eth5   False    1.00 Gb/s    management
+ct0.eth18  False    25.00 Gb/s   iscsi
+ct0.eth19  True     25.00 Gb/s   iscsi
+ct0.eth20  False    25.00 Gb/s   iscsi
+ct0.eth21  False    25.00 Gb/s   iscsi
+ct1.eth0   False    100.00 Gb/s  -
+ct1.eth1   False    100.00 Gb/s  -
+ct1.eth2   False    25.00 Gb/s   replication
+ct1.eth3   False    25.00 Gb/s   replication
+ct1.eth4   True     1.00 Gb/s    management
+ct1.eth5   False    1.00 Gb/s    management
+ct1.eth18  False    25.00 Gb/s   iscsi
+ct1.eth19  False    25.00 Gb/s   iscsi
+ct1.eth20  True     25.00 Gb/s   iscsi
+ct1.eth21  False    25.00 Gb/s   iscsi
+replbond   False    0.00 b/s     replication
+vir4       True     1.00 Gb/s    management
+vir5       False    1.00 Gb/s    management
+pureeng@purestorage1-cmi-lan-ct0:~$ puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    healthy  37.50T    -
+CH0.BAY1   SSD    healthy  37.50T    -
+CH0.BAY2   SSD    healthy  37.50T    -
+CH0.BAY3   SSD    healthy  37.50T    -
+CH0.BAY4   SSD    healthy  37.50T    -
+CH0.BAY5   SSD    healthy  37.50T    -
+CH0.BAY6   SSD    healthy  37.50T    -
+CH0.BAY7   SSD    healthy  37.50T    -
+CH0.BAY8   SSD    healthy  37.50T    -
+CH0.BAY9   SSD    healthy  37.50T    -
+CH0.BAY10  SSD    healthy  37.50T    -
+CH0.BAY11  SSD    healthy  37.50T    -
+CH0.BAY12  -      unused   0.00      -
+CH0.BAY13  -      unused   0.00      -
+CH0.BAY14  -      unused   0.00      -
+CH0.BAY15  -      unused   0.00      -
+CH0.BAY16  -      unused   0.00      -
+CH0.BAY17  -      unused   0.00      -
+CH0.BAY18  -      unused   0.00      -
+CH0.BAY19  -      unused   0.00      -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  unused   0.00      -
+CH0.NVB3   NVRAM  unused   0.00      -
+pureeng@purestorage1-cmi-lan-ct0:~$ purearray list --controller
+Name  Type              Mode       Model     Version  Status  Current Mode Since       Internal Details
+CT0   array_controller  primary    FA-C50R4  6.7.1    ready   2025-02-11 11:20:49 EST  
+CT1   array_controller  secondary  FA-C50R4  6.7.1    ready   2025-02-11 11:43:18 EST  
+pureeng@purestorage1-cmi-lan-ct0:~$ purealert tag --timeout 240m --maintenance
+Name         Created                  Expires
+maintenance  2025-04-09 09:20:58 EDT  2025-04-09 13:20:58 EDT
+pureeng@purestorage1-cmi-lan-ct0:~$ pureadm status; ssh peer pureadm status
+usage: pureadm [-h]
+               {debug-foe,dump-bdag,dump-volumes,firewall,remote-rpc,force-gc,force-triage,list-tunable,get-tunable-value,lo-mem,mem-track,prepare-shutdown,profile-foe,release-foe,restart,start,status,stop,tune,multitune,wait}
+               ...
+
+positional arguments:
+  {debug-foe,dump-bdag,dump-volumes,firewall,remote-rpc,force-gc,force-triage,list-tunable,get-tunable-value,lo-mem,mem-track,prepare-shutdown,profile-foe,release-foe,restart,start,status,stop,tune,multitune,wait}
+    debug-foe           run Purity in debug mode on next restart
+    dump-bdag           dump medium bdag table to a csv file
+    dump-volumes        dump volumes table data to a csv file
+    firewall            configure the firewall
+    remote-rpc          configure the remote-rpc
+    force-gc            force gc to start/stop or query status
+    force-triage        force triage to start
+    list-tunable        list set tunables
+    get-tunable-value   get the value of a tunable, if set
+    lo-mem              configure tunables to control memory usage; pureadm
+                        stop / rmmod ps_bdrv / pureadm start required
+    mem-track           configure memory tracking
+    prepare-shutdown    prepare for shutdown
+    profile-foe         run Purity in profile mode on next restart
+    release-foe         run Purity in release mode on next restart
+    restart             restart Purity
+    start               start Purity
+    status              status Purity
+    stop                stop Purity
+    tune                set or clear tunables
+    multitune           set or clear multiple tunables
+    wait                wait for Purity services to become ready
+
+options:
+  -h, --help            show this help message and exit
+(must be run as root)
+
+sudo su
+^C
+pureeng@purestorage1-cmi-lan-ct0:~$ sudo su
+     root@purestorage1-cmi-lan-ct0:/var/home/pureeng# pureadm status
+Process status:
+purity start/running
+lio-drv start/running
+foed start/running, process 7576
+platform start/running, process 7530
+gui start/running, process 7468
+rest start/running, process 9204
+monitor start/running, process 7508
+iostat start/running, process 100292
+statistics start/running, process 7555
+middleware start/running, process 10115
+vasa start/running, process 10117
+platform working
+foed working
+gui working
+platform_env working
+quorum working
+foed_env working
+remote_patch working
+driver working
+san working
+health working
+lio-drv working
+middleware-db working
+middleware working
+vasa working
+     root@purestorage1-cmi-lan-ct0:/var/home/pureeng# purearray list --space
+Name                  Capacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared   System  Replication  Total
+purestorage1-cmi-lan  286.78T   100%    75T               64.77G   100%               1.3 to 1        >100 to 1        50.09G  128.96G    383.94K  0.00    0.00         179.05G
+     root@purestorage1-cmi-lan-ct0:/var/home/pureeng# iscsipureportlist=`purepor t list --initiator | grep -v FC | awk -F' CT' '{print "CT"$2,$8}' | grep -v 'CT ' | awk -F '.ETH' '{print $1, $2}' | awk '{print $1, $5, $6}' | sort | uniq -c; echo`; iscsipureportlistcount=`echo "$iscsipureportlist" | awk '{total += $1} END {print total}'`; echo -e "$iscsipureportlist\n\n"; echo -e "\tTotal iSCSI conn ections: $iscsipureportlistcount\n\n";
+      4 CT0 iqn.2010-06.com.purestorage:flasharray.178f7185e18e2b1a -
+      5 CT1 iqn.2010-06.com.purestorage:flasharray.178f7185e18e2b1a -
+
+
+Total iSCSI connections: 9
+
+
+     root@purestorage1-cmi-lan-ct0:/var/home/pureeng# iobalance --sampletime 10
+sampling host I/O for 10 seconds...
+                Host  CT0 I/O Count  CT1 I/O Count  
+            CMIDATA1        0.00        0.00  ? Host is idle
+          HVCMIHOST1        0.00        0.00  ? Host is idle
+          HVCMIHOST2        0.00        0.00  ? Host is idle
+          HVCMIHOST3       47.00       79.00  ! unbalanced I/O
+     root@purestorage1-cmi-lan-ct0:/var/home/pureeng# purearray list --controlle r
+Name  Type              Mode       Model     Version  Status  Current Mode Since       Internal Details
+CT0   array_controller  primary    FA-C50R4  6.7.1    ready   2025-02-11 11:20:49 EST  
+CT1   array_controller  secondary  FA-C50R4  6.7.1    ready   2025-02-11 11:43:18 EST  
+     root@purestorage1-cmi-lan-ct0:/var/home/pureeng# 
+     root@purestorage1-cmi-lan-ct0:/var/home/pureeng# purearray list --controllcontrolle r
+Name  Type              Mode     Model     Version  Status   Current Mode Since       Internal Details
+CT0   array_controller  primary  FA-C50R4  6.7.1    ready    2025-02-11 11:20:49 EST  
+CT1   array_controller  offline  -         -        unknown  -                        
+     root@purestorage1-cmi-lan-ct0:/var/home/pureeng# purearray list --controller
+Name  Type              Mode       Model     Version  Status  Current Mode Since       Internal Details
+CT0   array_controller  primary    FA-C50R4  6.7.1    ready   2025-02-11 11:20:49 EST  
+CT1   array_controller  secondary  FA-C50R4  6.7.1    ready   2025-04-09 09:28:20 EDT  
+     root@purestorage1-cmi-lan-ct0:/var/home/pureeng#      4 CT0 iqn.2010-06.com .purestorage:flasharray.178f7185e18e2b1a -
+T1 iqn.2010-06.com.purestorabash: 4: command not found
+     root@purestorage1-cmi-lan-ct0:/var/home/pureeng#       5 CT1 iqn.2010-06.com.purestorage:flasharray.178f7185e18e2b1a -
+   Total iSCSI connections: bash: 5: command not found
+     root@purestorage1-cmi-lan-ct0:/var/home/pureeng# 
+     root@purestorage1-cmi-lan-ct0:/var/home/pureeng# 
+     root@purestorage1-cmi-lan-ct0:/var/home/pureeng#         Total iSCSI connections: 9
+bash: Total: command not found
+     root@purestorage1-cmi-lan-ct0:/var/home/pureeng# iscsipureportlist=`purepor t list --initiator | grep -v FC | awk -F' CT' '{print "CT"$2,$8}' | grep -v 'CT ' | awk -F '.ETH' '{print $1, $2}' | awk '{print $1, $5, $6}' | sort | uniq -c; echo`; iscsipureportlistcount=`echo "$iscsipureportlist" | awk '{total += $1} END {print total}'`; echo -e "$iscsipureportlist\n\n"; echo -e "\tTotal iSCSI conn ections: $iscsipureportlistcount\n\n";
+      4 CT0 iqn.2010-06.com.purestorage:flasharray.178f7185e18e2b1a -
+      5 CT1 iqn.2010-06.com.purestorage:flasharray.178f7185e18e2b1a -
+
+
+Total iSCSI connections: 9
+
+
+     root@purestorage1-cmi-lan-ct0:/var/home/pureeng# puarearearray list --controlle r
+Name  Type              Mode       Model     Version  Status  Current Mode Since       Internal Details
+CT0   array_controller  primary    FA-C50R4  6.7.1    ready   2025-02-11 11:20:49 EST  
+CT1   array_controller  secondary  FA-C50R4  6.7.1    ready   2025-04-09 09:28:20 EDT  
+     root@purestorage1-cmi-lan-ct0:/var/home/pureeng# iobalance -s0-sampletime 10
+sampling host I/O for 10 seconds...
+                Host  CT0 I/O Count  CT1 I/O Count  
+            CMIDATA1        0.00        0.00  ? Host is idle
+          HVCMIHOST1        2.00        2.00  
+          HVCMIHOST2        2.00        2.00  
+          HVCMIHOST3       48.00       91.00  ! unbalanced I/O
+     root@purestorage1-cmi-lan-ct0:/var/home/pureeng# purewes controller setattr  --verify-array cmi-lan ct0 --mode secondary
+Error: local array information does not match user input
+     root@purestorage1-cmi-lan-ct0:/var/home/pureeng# purewes controller setattr  --verify-array purestorage1-cmi-lan --mode secondary
+usage: purewes controller setattr [-h] --verify-array ARRAY_NAME CT_NODE
+                                  [--peer-polling-timeout TIMEOUT]
+                                  [--non-interactive] --mode CONTROLLER_MODE
+purewes controller setattr: error: argument --verify-array: expected 2 arguments
+     root@purestorage1-cmi-lan-ct0:/var/home/pureeng# purewes controller setattr --verify-array purestorage1-cmi-lan ct0 --mode secondary
+Run checks before making changes ...
+Check peer purity status...... SUCCESS
+Check pureport list........... 
+==========    FC connections    ==========
+
+CT     NumOfPort  PortId                                  
+
+Total FC connections: 0
+
+==========    iSCSI connections    ==========
+
+CT      NumOfPort  PortId                                                     
+CT1     5          iqn.2010-06.com.purestorage:flasharray.178f7185e18e2b1a    
+CT0     4          iqn.2010-06.com.purestorage:flasharray.178f7185e18e2b1a    
+
+Total iSCSI connections: 9
+
+==========    NVMe-RoCE connections    ==========
+
+CT     NumOfPort  PortId                                  
+
+Total NVMe-RoCE connections: 0
+
+SUCCESS
+Check IO balance.............. Checking iobalance before proceeding, sampling for 30 seconds, retrying 3 times, adding 30 seconds with each retry
+Try 1/4: Sampling I/O for 30 seconds
+Sampling finished, I/O is not yet balanced
+Try 2/4: Sampling I/O for 60 seconds
+Sampling finished, I/O is not yet balanced
+Try 3/4: Sampling I/O for 90 seconds
+Sampling finished, I/O is not yet balanced
+Try 4/4: Sampling I/O for 120 seconds
+Sampling finished, I/O is not yet balanced
+I/O is not balanced after 4 run(s).
+iobalance reports the following: 
+sampling host I/O for 120 seconds...
+                Host  CT0 I/O Count  CT1 I/O Count  
+            CMIDATA1        0.00        0.00  ? Host is idle
+          HVCMIHOST1        8.00        8.00  
+          HVCMIHOST2        8.00        8.00  
+          HVCMIHOST3      435.00      905.00  ! unbalanced I/O
+
+Would you like to ignore this check?
+WARNING: Unless the workload you are running is known to be imbalanced, ignoring this check could result in an outage and is NOT recommended.
+Ignore anyway? (y/n): y
+Overriding iobalance check based on user input
+SUCCESS
+     root@purestorage1-cmi-lan-ct0:/var/home/pureeng# purearray list --controlle r
+Name  Type              Mode       Model     Version  Status  Current Mode Since       Internal Details
+CT0   array_controller  secondary  FA-C50R4  6.7.1    ready   2025-04-09 09:39:37 EDT  
+CT1   array_controller  primary    FA-C50R4  6.7.1    ready   2025-04-09 09:39:32 EDT  
+     root@purestorage1-cmi-lan-ct0:/var/home/pureeng#  GNU GRUB  version 2.06
+
++----------------------------------------------------------------------------+||||||||||||||||||||||||+----------------------------------------------------------------------------+     Use the ^ and v keys to select which entry is highlighted.          
+      Press enter to boot the selected OS, `e' to edit the commands       
+      before booting or `c' for a command-line.                            *Purity 6.7.1 (202412110952+5343330bfe9f) with kernel 5.15.123+ (2024120212> Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (2024031915>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         GNU GRUB  version 2.06
+
+/----------------------------------------------------------------------------\||||||||||||||||||||||||||\----------------------------------------------------------------------------/     Use the ^ and v keys to select which entry is highlighted.          
+      Press enter to boot the selected OS, `e' to edit the commands       
+      before booting or `c' for a command-line.                            *Purity 6.7.1 (202412110952+5343330bfe9f) with kernel 5.15.123+ (2024120212>
+ Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (2024031915>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        The highlighted entry will be executed automatically in 3s.                    The highlighted entry will be executed automatically in 3s.                    The highlighted entry will be executed automatically in 2s.                    The highlighted entry will be executed automatically in 2s.                    The highlighted entry will be executed automatically in 1s.                    The highlighted entry will be executed automatically in 1s.                    The highlighted entry will be executed automatically in 0s.                    The highlighted entry will be executed automatically in 0s.                 
+BOOTING AT 2025-4-9 13:45:7 Purity 6.7.1 (202412110952+5343330bfe9f) with
+kernel 5.15.123+ (202412021236+8e7eb66c000f) on second (/dev/sda4)
+
+BOOTING AT 2025-4-9 13:45:7 Purity 6.7.1 (202412110952+5343330bfe9f) with
+kernel 5.15.123+ (202412021236+8e7eb66c000f) on second (/dev/sda4)
+
+
+
+purestorage1-cmi-lan-ct0 login: pureeng
+1) Authenticate via CloudAssist
+2) Authenticate via command line
+3) Restore challenge
+Type the number corresponding to the authentication method you want to use.
+
+Selection: 1
+
+An email for identity verification will be sent once email is entered.
+Please follow the authentication instructions provided there and return to this screen when finished or if email has not been received.
+
+
+Enter an email address: fharris@purestorage.com
+An error occurred with CloudAssist authentication!
+
+1) Authenticate via CloudAssist
+2) Authenticate via command line
+3) Restore challenge
+Type the number corresponding to the authentication method you want to use.
+
+Selection: 1
+
+An email for identity verification will be sent once email is entered.
+Please follow the authentication instructions provided there and return to this screen when finished or if email has not been received.
+
+
+Enter an email address: fharris@purestorage.com
+Successfully authenticated
+Last login: Wed Apr  9 09:18:36 EDT 2025 on ttyS0
+
+Wed Apr 09 09:48:10 2025
+Welcome pureeng. This is Purity Version 6.7.1 on FlashArray purestorage1-cmi-lan
+http://www.purestorage.com/
+pureeng@purestorage1-cmi-lan-ct0:~$ purearray list --controller
+Name  Type              Mode       Model     Version  Status  Current Mode Since       Internal Details
+CT0   array_controller  secondary  FA-C50R4  6.7.1    ready   2025-04-09 09:46:49 EDT  
+CT1   array_controller  primary    FA-C50R4  6.7.1    ready   2025-04-09 09:39:32 EDT  
+pureeng@purestorage1-cmi-lan-ct0:~$ purewes controller setattr --verify-array purestorage1-cmi-lan ct0 --mode secondary
+No change, controller is already secondary
+pureeng@purestorage1-cmi-lan-ct0:~$ iscsipureportlist=`pureport list --initiator | grep -v FC | awk -F' CT' '{print "CT"$2,$8}' | grep -v 'CT ' | awk -F '.ETH' '{print $1, $2}' | awk '{print $1, $5, $6}' | sort | uniq -c; echo`; iscsipureportlistcount=`echo "$iscsipureportlist" | awk '{total += $1} END {print total}'`; echo -e "$iscsipureportlist\n\n"; echo -e "\tTotal iSCSI connections: $iscsipureportlistcount\n\n";
+      4 CT0 iqn.2010-06.com.purestorage:flasharray.178f7185e18e2b1a -
+      5 CT1 iqn.2010-06.com.purestorage:flasharray.178f7185e18e2b1a -
+
+
+Total iSCSI connections: 9
+
+
+pureeng@purestorage1-cmi-lan-ct0:~$ iobalance --sampletime 10
+sampling host I/O for 10 seconds...
+                Host  CT0 I/O Count  CT1 I/O Count  
+            CMIDATA1        0.00        0.00  ? Host is idle
+          HVCMIHOST1        0.00        0.00  ? Host is idle
+          HVCMIHOST2        0.00        0.00  ? Host is idle
+          HVCMIHOST3       16.00       88.00  ! unbalanced I/O
+pureeng@purestorage1-cmi-lan-ct0:~$ purehw list
+Name       Status         Identify  Slot  Index  Speed       Temperature  Voltage  Details
+CH0        ok             off       -     0      -           -            -        -
+CH0.BAY0   ok             off       -     0      -           -            -        -
+CH0.BAY1   ok             off       -     1      -           -            -        -
+CH0.BAY2   ok             off       -     2      -           -            -        -
+CH0.BAY3   ok             off       -     3      -           -            -        -
+CH0.BAY4   ok             off       -     4      -           -            -        -
+CH0.BAY5   ok             off       -     5      -           -            -        -
+CH0.BAY6   ok             off       -     6      -           -            -        -
+CH0.BAY7   ok             off       -     7      -           -            -        -
+CH0.BAY8   ok             off       -     8      -           -            -        -
+CH0.BAY9   ok             off       -     9      -           -            -        -
+CH0.BAY10  ok             off       -     10     -           -            -        -
+CH0.BAY11  ok             off       -     11     -           -            -        -
+CH0.BAY12  not_installed  off       -     12     -           -            -        -
+CH0.BAY13  not_installed  off       -     13     -           -            -        -
+CH0.BAY14  not_installed  off       -     14     -           -            -        -
+CH0.BAY15  not_installed  off       -     15     -           -            -        -
+CH0.BAY16  not_installed  off       -     16     -           -            -        -
+CH0.BAY17  not_installed  off       -     17     -           -            -        -
+CH0.BAY18  not_installed  off       -     18     -           -            -        -
+CH0.BAY19  not_installed  off       -     19     -           -            -        -
+CH0.NVB0   ok             off       -     0      -           -            -        -
+CH0.NVB1   ok             off       -     1      -           -            -        -
+CH0.NVB2   not_installed  off       -     2      -           -            -        -
+CH0.NVB3   not_installed  off       -     3      -           -            -        -
+CH0.PWR0   ok             -         -     0      -           -            206 V    -
+CH0.PWR1   ok             -         -     1      -           -            206 V    -
+CH0.TMP0   ok             -         -     0      -           23 C         -        -
+CT0        ok             off       -     0      -           -            -        -
+CT0.ETH0   ok             -         -     0      0.00 b/s    -            -        -
+CT0.ETH1   ok             -         -     1      0.00 b/s    -            -        -
+CT0.ETH2   ok             -         -     2      0.00 b/s    -            -        -
+CT0.ETH3   ok             -         -     3      0.00 b/s    -            -        -
+CT0.ETH4   ok             -         -     4      1.00 Gb/s   -            -        -
+CT0.ETH5   ok             -         -     5      0.00 b/s    -            -        -
+CT0.ETH10  ok             -         1     10     0.00 b/s    -            -        -
+CT0.ETH11  ok             -         1     11     0.00 b/s    -            -        -
+CT0.ETH18  ok             -         3     18     0.00 b/s    -            -        -
+CT0.ETH19  ok             -         3     19     25.00 Gb/s  -            -        -
+CT0.ETH20  ok             -         3     20     0.00 b/s    -            -        -
+CT0.ETH21  ok             -         3     21     0.00 b/s    -            -        -
+CT0.FAN0   ok             -         -     0      -           -            -        -
+CT0.FAN1   ok             -         -     1      -           -            -        -
+CT0.FAN2   ok             -         -     2      -           -            -        -
+CT0.FAN3   ok             -         -     3      -           -            -        -
+CT0.FAN4   ok             -         -     4      -           -            -        -
+CT0.FAN5   ok             -         -     5      -           -            -        -
+CT0.TMP0   ok             -         -     0      -           37 C         -        -
+CT0.TMP1   ok             -         -     1      -           39 C         -        -
+CT0.TMP2   ok             -         -     2      -           51 C         -        -
+CT0.TMP3   ok             -         -     3      -           51 C         -        -
+CT0.TMP4   ok             -         -     4      -           41 C         -        -
+CT0.TMP5   ok             -         -     5      -           42 C         -        -
+CT0.TMP6   ok             -         -     6      -           27 C         -        -
+CT0.TMP7   ok             -         -     7      -           28 C         -        -
+CT0.TMP8   ok             -         -     8      -           49 C         -        -
+CT0.TMP9   ok             -         -     9      -           34 C         -        -
+CT0.TMP11  ok             -         -     11     -           33 C         -        -
+CT0.TMP12  ok             -         -     12     -           31 C         -        -
+CT0.TMP13  ok             -         -     13     -           35 C         -        -
+CT0.TMP14  ok             -         -     14     -           34 C         -        -
+CT0.TMP15  ok             -         -     15     -           33 C         -        -
+CT0.TMP17  ok             -         -     17     -           34 C         -        -
+CT0.TMP19  ok             -         -     19     -           33 C         -        -
+CT0.TMP20  ok             -         -     20     -           33 C         -        -
+CT0.TMP21  ok             -         -     21     -           37 C         -        -
+CT0.TMP22  ok             -         -     22     -           37 C         -        -
+CT0.TMP23  ok             -         -     23     -           35 C         -        -
+CT1        ok             off       -     1      -           -            -        -
+CT1.ETH0   ok             -         -     0      0.00 b/s    -            -        -
+CT1.ETH1   ok             -         -     1      0.00 b/s    -            -        -
+CT1.ETH2   ok             -         -     2      0.00 b/s    -            -        -
+CT1.ETH3   ok             -         -     3      0.00 b/s    -            -        -
+CT1.ETH4   ok             -         -     4      1.00 Gb/s   -            -        -
+CT1.ETH5   ok             -         -     5      0.00 b/s    -            -        -
+CT1.ETH10  ok             -         1     10     0.00 b/s    -            -        -
+CT1.ETH11  ok             -         1     11     0.00 b/s    -            -        -
+CT1.ETH18  ok             -         3     18     0.00 b/s    -            -        -
+CT1.ETH19  ok             -         3     19     0.00 b/s    -            -        -
+CT1.ETH20  ok             -         3     20     25.00 Gb/s  -            -        -
+CT1.ETH21  ok             -         3     21     0.00 b/s    -            -        -
+CT1.FAN0   ok             -         -     0      -           -            -        -
+CT1.FAN1   ok             -         -     1      -           -            -        -
+CT1.FAN2   ok             -         -     2      -           -            -        -
+CT1.FAN3   ok             -         -     3      -           -            -        -
+CT1.FAN4   ok             -         -     4      -           -            -        -
+CT1.FAN5   ok             -         -     5      -           -            -        -
+CT1.TMP0   ok             -         -     0      -           36 C         -        -
+CT1.TMP1   ok             -         -     1      -           39 C         -        -
+CT1.TMP2   ok             -         -     2      -           44 C         -        -
+CT1.TMP3   ok             -         -     3      -           45 C         -        -
+CT1.TMP4   ok             -         -     4      -           40 C         -        -
+CT1.TMP5   ok             -         -     5      -           42 C         -        -
+CT1.TMP6   ok             -         -     6      -           29 C         -        -
+CT1.TMP7   ok             -         -     7      -           30 C         -        -
+CT1.TMP8   ok             -         -     8      -           48 C         -        -
+CT1.TMP9   ok             -         -     9      -           33 C         -        -
+CT1.TMP11  ok             -         -     11     -           32 C         -        -
+CT1.TMP12  ok             -         -     12     -           31 C         -        -
+CT1.TMP13  ok             -         -     13     -           34 C         -        -
+CT1.TMP14  ok             -         -     14     -           33 C         -        -
+CT1.TMP15  ok             -         -     15     -           33 C         -        -
+CT1.TMP17  ok             -         -     17     -           33 C         -        -
+CT1.TMP19  ok             -         -     19     -           32 C         -        -
+CT1.TMP20  ok             -         -     20     -           32 C         -        -
+CT1.TMP21  ok             -         -     21     -           36 C         -        -
+CT1.TMP22  ok             -         -     22     -           36 C         -        -
+CT1.TMP23  ok             -         -     23     -           35 C         -        -
+pureeng@purestorage1-cmi-lan-ct0:~$ iscsipureportlist=`pureport list --initiator | grep -v FC | awk -F' CT' '{print "CT"$2,$8}' | grep -v 'CT ' | awk -F '.ETH' '{print $1, $2}' | awk '{print $1, $5, $6}' | sort | uniq -c; echo`; iscsipureportlistcount=`echo "$iscsipureportlist" | awk '{total += $1} END {print total}'`;  echo -e "$iscsipureportlist\n\n"; echo -e "\tTotal iSCSI connections: $iscsipureportlistcount\n\n";
+      4 CT0 iqn.2010-06.com.purestorage:flasharray.178f7185e18e2b1a -
+      5 CT1 iqn.2010-06.com.purestorage:flasharray.178f7185e18e2b1a -
+
+
+Total iSCSI connections: 9
+
+
+pureeng@purestorage1-cmi-lan-ct0:~$ purenetwork list
+Name       Enabled  Speed        Services
+ct0.eth0   False    100.00 Gb/s  -
+ct0.eth1   False    100.00 Gb/s  -
+ct0.eth2   False    25.00 Gb/s   replication
+ct0.eth3   False    25.00 Gb/s   replication
+ct0.eth4   True     1.00 Gb/s    management
+ct0.eth5   False    1.00 Gb/s    management
+ct0.eth10  False    100.00 Gb/s  iscsi
+ct0.eth11  False    100.00 Gb/s  iscsi
+ct0.eth18  False    25.00 Gb/s   iscsi
+ct0.eth19  True     25.00 Gb/s   iscsi
+ct0.eth20  False    25.00 Gb/s   iscsi
+ct0.eth21  False    25.00 Gb/s   iscsi
+ct1.eth0   False    100.00 Gb/s  -
+ct1.eth1   False    100.00 Gb/s  -
+ct1.eth2   False    25.00 Gb/s   replication
+ct1.eth3   False    25.00 Gb/s   replication
+ct1.eth4   True     1.00 Gb/s    management
+ct1.eth5   False    1.00 Gb/s    management
+ct1.eth10  True     100.00 Gb/s  iscsi
+ct1.eth11  True     100.00 Gb/s  iscsi
+ct1.eth18  False    25.00 Gb/s   iscsi
+ct1.eth19  False    25.00 Gb/s   iscsi
+ct1.eth20  True     25.00 Gb/s   iscsi
+ct1.eth21  False    25.00 Gb/s   iscsi
+replbond   False    0.00 b/s     replication
+vir4       True     1.00 Gb/s    management
+vir5       False    1.00 Gb/s    management
+pureeng@purestorage1-cmi-lan-ct0:~$ purenetowwork eth list
+Name       Enabled  Type      Subnet  Address        Mask           Gateway       MTU   MAC                Speed        Services     Subinterfaces
+ct0.eth0   False    physical  -       -              -              -             1500  24:a9:37:63:c7:54  100.00 Gb/s  -            -
+ct0.eth1   False    physical  -       -              -              -             1500  24:a9:37:63:c7:55  100.00 Gb/s  -            -
+ct0.eth2   False    physical  -       -              -              -             1500  24:a9:37:63:c7:56  25.00 Gb/s   replication  -
+ct0.eth3   False    physical  -       -              -              -             1500  24:a9:37:63:c7:57  25.00 Gb/s   replication  -
+ct0.eth4   True     physical  -       192.168.20.61  255.255.255.0  192.168.20.1  1500  24:a9:37:63:c7:58  1.00 Gb/s    management   -
+ct0.eth5   False    physical  -       -              -              -             1500  24:a9:37:63:c7:59  1.00 Gb/s    management   -
+ct0.eth10  False    physical  -       172.20.10.23   255.255.255.0  -             9000  6c:92:cf:2c:72:01  100.00 Gb/s  iscsi        -
+ct0.eth11  False    physical  -       172.20.11.23   255.255.255.0  -             9000  6c:92:cf:2c:72:00  100.00 Gb/s  iscsi        -
+ct0.eth18  False    physical  -       -              -              -             1500  94:6d:ae:fb:83:a3  25.00 Gb/s   iscsi        -
+ct0.eth19  True     physical  -       172.20.10.21   255.255.255.0  -             9000  94:6d:ae:fb:83:a2  25.00 Gb/s   iscsi        -
+ct0.eth20  False    physical  -       -              -              -             1500  94:6d:ae:fb:83:a1  25.00 Gb/s   iscsi        -
+ct0.eth21  False    physical  -       -              -              -             1500  94:6d:ae:fb:83:a0  25.00 Gb/s   iscsi        -
+ct1.eth0   False    physical  -       -              -              -             1500  24:a9:37:63:76:38  100.00 Gb/s  -            -
+ct1.eth1   False    physical  -       -              -              -             1500  24:a9:37:63:76:39  100.00 Gb/s  -            -
+ct1.eth2   False    physical  -       -              -              -             1500  24:a9:37:63:76:3a  25.00 Gb/s   replication  -
+ct1.eth3   False    physical  -       -              -              -             1500  24:a9:37:63:76:3b  25.00 Gb/s   replication  -
+ct1.eth4   True     physical  -       192.168.20.62  255.255.255.0  192.168.20.1  1500  24:a9:37:63:76:3c  1.00 Gb/s    management   -
+ct1.eth5   False    physical  -       -              -              -             1500  24:a9:37:63:76:3d  1.00 Gb/s    management   -
+ct1.eth10  True     physical  -       172.20.10.22   255.255.255.0  -             9000  6c:92:cf:19:f2:a1  100.00 Gb/s  iscsi        -
+ct1.eth11  True     physical  -       172.20.11.22   255.255.255.0  -             9000  6c:92:cf:19:f2:a0  100.00 Gb/s  iscsi        -
+ct1.eth18  False    physical  -       -              -              -             1500  a0:88:c2:74:52:69  25.00 Gb/s   iscsi        -
+ct1.eth19  False    physical  -       -              -              -             1500  a0:88:c2:74:52:68  25.00 Gb/s   iscsi        -
+ct1.eth20  True     physical  -       172.20.11.21   255.255.255.0  -             9000  a0:88:c2:74:52:67  25.00 Gb/s   iscsi        -
+ct1.eth21  False    physical  -       -              -              -             1500  a0:88:c2:74:52:66  25.00 Gb/s   iscsi        -
+replbond   False    bond      -       -              -              -             1500  8e:84:9e:d6:95:a5  0.00 b/s     replication  -
+vir4       True     vif       -       192.168.20.60  255.255.255.0  192.168.20.1  1500  a6:b9:04:e5:02:14  1.00 Gb/s    management   -
+vir5       False    vif       -       -              -              -             1500  aa:b4:a0:d4:96:81  1.00 Gb/s    management   -
+pureeng@purestorage1-cmi-lan-ct0:~$ puremessage list --open
+pureeng@purestorage1-cmi-lan-ct0:~$ puremessage list --open --hidden
+ID   Time                     Severity  Category  Code  Component  Name       Event    Expected  Actual  Details
+818  2025-04-09 09:40:13 EDT  hidden    array     42    hardware   ct1.eth10  failure  -         -       
+821  2025-04-09 09:40:43 EDT  hidden    array     42    hardware   ct1.eth11  failure  -         -       
+836  2025-04-09 09:49:48 EDT  hidden    array     42    hardware   ct0.eth11  failure  -         -       
+837  2025-04-09 09:49:48 EDT  hidden    array     42    hardware   ct0.eth10  failure  -         -       
+pureeng@purestorage1-cmi-lan-ct0:~$ purepurearray phonehome --send-today && ssh peer purearray phonehome --send-today
+^C
+pureeng@purestorage1-cmi-lan-ct0:~$ sudo su
+     root@purestorage1-cmi-lan-ct0:/var/home/pureeng# purearray phonehome --send-today && ssh peer purearray phonehome --send-today
+
+Status   Action
+running  send_today
+phonehome is already running
+Status   Action
+running  send_today
+     root@purestorage1-cmi-lan-ct0:/var/home/pureeng# purearray remoteassist --c onnect
+Name                      Status      Opened                   Expires
+purestorage1-cmi-lan-ct0  connecting  2025-04-09 10:05:23 EDT  2025-04-11 10:05:23 EDT
+     root@purestorage1-cmi-lan-ct0:/var/home/pureeng# purenetwork list
+Name       Enabled  Speed        Services
+ct0.eth0   False    100.00 Gb/s  -
+ct0.eth1   False    100.00 Gb/s  -
+ct0.eth2   False    25.00 Gb/s   replication
+ct0.eth3   False    25.00 Gb/s   replication
+ct0.eth4   True     1.00 Gb/s    management
+ct0.eth5   False    1.00 Gb/s    management
+ct0.eth10  True     100.00 Gb/s  iscsi
+ct0.eth11  True     100.00 Gb/s  iscsi
+ct0.eth18  False    25.00 Gb/s   iscsi
+ct0.eth19  True     25.00 Gb/s   iscsi
+ct0.eth20  False    25.00 Gb/s   iscsi
+ct0.eth21  False    25.00 Gb/s   iscsi
+ct1.eth0   False    100.00 Gb/s  -
+ct1.eth1   False    100.00 Gb/s  -
+ct1.eth2   False    25.00 Gb/s   replication
+ct1.eth3   False    25.00 Gb/s   replication
+ct1.eth4   True     1.00 Gb/s    management
+ct1.eth5   False    1.00 Gb/s    management
+ct1.eth10  True     100.00 Gb/s  iscsi
+ct1.eth11  True     100.00 Gb/s  iscsi
+ct1.eth18  False    25.00 Gb/s   iscsi
+ct1.eth19  False    25.00 Gb/s   iscsi
+ct1.eth20  True     25.00 Gb/s   iscsi
+ct1.eth21  False    25.00 Gb/s   iscsi
+replbond   False    0.00 b/s     replication
+vir4       True     1.00 Gb/s    management
+vir5       False    1.00 Gb/s    management
+     root@purestorage1-cmi-lan-ct0:/var/home/pureeng# =~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.04.09 11:26:46 =~=~=~=~=~=~=~=~=~=~=~=
+
+purestorage1-cmi-lan-ct0 login: pure    pureeng
+1) Authenticate via CloudAssist
+2) Authenticate via command line
+3) Restore challenge
+Type the number corresponding to the authentication method you want to use.
+
+Selection: 1
+
+An email for identity verification will be sent once email is entered.
+Please follow the authentication instructions provided there and return to this screen when finished or if email has not been received.
+
+
+Enter an email address: fharris@purestorage.com
+Successfully authenticated
+Last login: Wed Apr  9 09:48:10 EDT 2025 on ttyS0
+
+Wed Apr 09 11:30:16 2025
+Welcome pureeng. This is Purity Version 6.7.1 on FlashArray purestorage1-cmi-lan
+http://www.purestorage.com/
+pureeng@purestorage1-cmi-lan-ct0:~$ purenetowrk ethwork eth list
+Name       Enabled  Type      Subnet  Address        Mask           Gateway       MTU   MAC                Speed        Services     Subinterfaces
+ct0.eth0   True     physical  -       172.20.10.24   255.255.255.0  -             9000  24:a9:37:63:c7:54  100.00 Gb/s  -            -
+ct0.eth1   True     physical  -       172.20.11.24   255.255.255.0  -             9000  24:a9:37:63:c7:55  100.00 Gb/s  -            -
+ct0.eth2   False    physical  -       -              -              -             1500  24:a9:37:63:c7:56  25.00 Gb/s   replication  -
+ct0.eth3   False    physical  -       -              -              -             1500  24:a9:37:63:c7:57  25.00 Gb/s   replication  -
+ct0.eth4   True     physical  -       192.168.20.61  255.255.255.0  192.168.20.1  1500  24:a9:37:63:c7:58  1.00 Gb/s    management   -
+ct0.eth5   False    physical  -       -              -              -             1500  24:a9:37:63:c7:59  1.00 Gb/s    management   -
+ct0.eth10  True     physical  -       172.20.10.23   255.255.255.0  -             9000  6c:92:cf:2c:72:01  100.00 Gb/s  iscsi        -
+ct0.eth11  True     physical  -       172.20.11.23   255.255.255.0  -             9000  6c:92:cf:2c:72:00  100.00 Gb/s  iscsi        -
+ct0.eth18  False    physical  -       -              -              -             1500  94:6d:ae:fb:83:a3  25.00 Gb/s   iscsi        -
+ct0.eth19  True     physical  -       172.20.10.21   255.255.255.0  -             9000  94:6d:ae:fb:83:a2  25.00 Gb/s   iscsi        -
+ct0.eth20  False    physical  -       -              -              -             1500  94:6d:ae:fb:83:a1  25.00 Gb/s   iscsi        -
+ct0.eth21  False    physical  -       -              -              -             1500  94:6d:ae:fb:83:a0  25.00 Gb/s   iscsi        -
+ct1.eth0   False    physical  -       -              -              -             1500  24:a9:37:63:76:38  100.00 Gb/s  -            -
+ct1.eth1   False    physical  -       -              -              -             1500  24:a9:37:63:76:39  100.00 Gb/s  -            -
+ct1.eth2   False    physical  -       -              -              -             1500  24:a9:37:63:76:3a  25.00 Gb/s   replication  -
+ct1.eth3   False    physical  -       -              -              -             1500  24:a9:37:63:76:3b  25.00 Gb/s   replication  -
+ct1.eth4   True     physical  -       192.168.20.62  255.255.255.0  192.168.20.1  1500  24:a9:37:63:76:3c  1.00 Gb/s    management   -
+ct1.eth5   False    physical  -       -              -              -             1500  24:a9:37:63:76:3d  1.00 Gb/s    management   -
+ct1.eth10  True     physical  -       172.20.10.22   255.255.255.0  -             9000  6c:92:cf:19:f2:a1  100.00 Gb/s  iscsi        -
+ct1.eth11  True     physical  -       172.20.11.22   255.255.255.0  -             9000  6c:92:cf:19:f2:a0  100.00 Gb/s  iscsi        -
+ct1.eth18  False    physical  -       -              -              -             1500  a0:88:c2:74:52:69  25.00 Gb/s   iscsi        -
+ct1.eth19  False    physical  -       -              -              -             1500  a0:88:c2:74:52:68  25.00 Gb/s   iscsi        -
+ct1.eth20  True     physical  -       172.20.11.21   255.255.255.0  -             9000  a0:88:c2:74:52:67  25.00 Gb/s   iscsi        -
+ct1.eth21  False    physical  -       -              -              -             1500  a0:88:c2:74:52:66  25.00 Gb/s   iscsi        -
+replbond   False    bond      -       -              -              -             1500  8e:84:9e:d6:95:a5  0.00 b/s     replication  -
+vir4       True     vif       -       192.168.20.60  255.255.255.0  192.168.20.1  1500  a6:b9:04:e5:02:14  1.00 Gb/s    management   -
+vir5       False    vif       -       -              -              -             1500  aa:b4:a0:d4:96:81  1.00 Gb/s    management   -
+pureeng@purestorage1-cmi-lan-ct0:~$ purenetwork eth list
+Name       Enabled  Type      Subnet  Address        Mask           Gateway       MTU   MAC                Speed        Services     Subinterfaces
+ct0.eth0   True     physical  -       172.20.10.24   255.255.255.0  -             9000  24:a9:37:63:c7:54  100.00 Gb/s  -            -
+ct0.eth1   True     physical  -       172.20.11.24   255.255.255.0  -             9000  24:a9:37:63:c7:55  100.00 Gb/s  -            -
+ct0.eth2   False    physical  -       -              -              -             1500  24:a9:37:63:c7:56  25.00 Gb/s   replication  -
+ct0.eth3   False    physical  -       -              -              -             1500  24:a9:37:63:c7:57  25.00 Gb/s   replication  -
+ct0.eth4   True     physical  -       192.168.20.61  255.255.255.0  192.168.20.1  1500  24:a9:37:63:c7:58  1.00 Gb/s    management   -
+ct0.eth5   False    physical  -       -              -              -             1500  24:a9:37:63:c7:59  1.00 Gb/s    management   -
+ct0.eth10  True     physical  -       172.20.10.23   255.255.255.0  -             9000  6c:92:cf:2c:72:01  100.00 Gb/s  iscsi        -
+ct0.eth11  True     physical  -       172.20.11.23   255.255.255.0  -             9000  6c:92:cf:2c:72:00  100.00 Gb/s  iscsi        -
+ct0.eth18  False    physical  -       -              -              -             1500  94:6d:ae:fb:83:a3  25.00 Gb/s   iscsi        -
+ct0.eth19  True     physical  -       172.20.10.21   255.255.255.0  -             9000  94:6d:ae:fb:83:a2  25.00 Gb/s   iscsi        -
+ct0.eth20  False    physical  -       -              -              -             1500  94:6d:ae:fb:83:a1  25.00 Gb/s   iscsi        -
+ct0.eth21  False    physical  -       -              -              -             1500  94:6d:ae:fb:83:a0  25.00 Gb/s   iscsi        -
+ct1.eth0   False    physical  -       -              -              -             1500  24:a9:37:63:76:38  100.00 Gb/s  -            -
+ct1.eth1   False    physical  -       -              -              -             1500  24:a9:37:63:76:39  100.00 Gb/s  -            -
+ct1.eth2   False    physical  -       -              -              -             1500  24:a9:37:63:76:3a  25.00 Gb/s   replication  -
+ct1.eth3   False    physical  -       -              -              -             1500  24:a9:37:63:76:3b  25.00 Gb/s   replication  -
+ct1.eth4   True     physical  -       192.168.20.62  255.255.255.0  192.168.20.1  1500  24:a9:37:63:76:3c  1.00 Gb/s    management   -
+ct1.eth5   False    physical  -       -              -              -             1500  24:a9:37:63:76:3d  1.00 Gb/s    management   -
+ct1.eth10  True     physical  -       172.20.10.22   255.255.255.0  -             9000  6c:92:cf:19:f2:a1  100.00 Gb/s  iscsi        -
+ct1.eth11  True     physical  -       172.20.11.22   255.255.255.0  -             9000  6c:92:cf:19:f2:a0  100.00 Gb/s  iscsi        -
+ct1.eth18  False    physical  -       -              -              -             1500  a0:88:c2:74:52:69  25.00 Gb/s   iscsi        -
+ct1.eth19  False    physical  -       -              -              -             1500  a0:88:c2:74:52:68  25.00 Gb/s   iscsi        -
+ct1.eth20  True     physical  -       172.20.11.21   255.255.255.0  -             9000  a0:88:c2:74:52:67  25.00 Gb/s   iscsi        -
+ct1.eth21  False    physical  -       -              -              -             1500  a0:88:c2:74:52:66  25.00 Gb/s   iscsi        -
+replbond   False    bond      -       -              -              -             1500  8e:84:9e:d6:95:a5  0.00 b/s     replication  -
+vir4       True     vif       -       192.168.20.60  255.255.255.0  192.168.20.1  1500  a6:b9:04:e5:02:14  1.00 Gb/s    management   -
+vir5       False    vif       -       -              -              -             1500  aa:b4:a0:d4:96:81  1.00 Gb/s    management   -
+pureeng@purestorage1-cmi-lan-ct0:~$ purentetwork list --all
+usage: purenetwork [-h] {eth,fc,list} ...
+purenetwork: error: unrecognized arguments: --all
+pureeng@purestorage1-cmi-lan-ct0:~$ purenetwork list --alleth 
+Name       Enabled  Type      Subnet  Method  Address        Mask           Gateway       MTU   MAC                Speed        Services     Subinterfaces
+ct0.eth0   True     physical  -       static  172.20.10.24   255.255.255.0  -             9000  24:a9:37:63:c7:54  100.00 Gb/s  -            -
+ct0.eth1   True     physical  -       static  172.20.11.24   255.255.255.0  -             9000  24:a9:37:63:c7:55  100.00 Gb/s  -            -
+ct0.eth2   False    physical  -       static  -              -              -             1500  24:a9:37:63:c7:56  25.00 Gb/s   replication  -
+ct0.eth3   False    physical  -       static  -              -              -             1500  24:a9:37:63:c7:57  25.00 Gb/s   replication  -
+ct0.eth4   True     physical  -       static  192.168.20.61  255.255.255.0  192.168.20.1  1500  24:a9:37:63:c7:58  1.00 Gb/s    management   -
+ct0.eth5   False    physical  -       static  -              -              -             1500  24:a9:37:63:c7:59  1.00 Gb/s    management   -
+ct0.eth10  True     physical  -       static  172.20.10.23   255.255.255.0  -             9000  6c:92:cf:2c:72:01  100.00 Gb/s  iscsi        -
+ct0.eth11  True     physical  -       static  172.20.11.23   255.255.255.0  -             9000  6c:92:cf:2c:72:00  100.00 Gb/s  iscsi        -
+ct0.eth18  False    physical  -       static  -              -              -             1500  94:6d:ae:fb:83:a3  25.00 Gb/s   iscsi        -
+ct0.eth19  True     physical  -       static  172.20.10.21   255.255.255.0  -             9000  94:6d:ae:fb:83:a2  25.00 Gb/s   iscsi        -
+ct0.eth20  False    physical  -       static  -              -              -             1500  94:6d:ae:fb:83:a1  25.00 Gb/s   iscsi        -
+ct0.eth21  False    physical  -       static  -              -              -             1500  94:6d:ae:fb:83:a0  25.00 Gb/s   iscsi        -
+ct1.eth0   False    physical  -       static  -              -              -             1500  24:a9:37:63:76:38  100.00 Gb/s  -            -
+ct1.eth1   False    physical  -       static  -              -              -             1500  24:a9:37:63:76:39  100.00 Gb/s  -            -
+ct1.eth2   False    physical  -       static  -              -              -             1500  24:a9:37:63:76:3a  25.00 Gb/s   replication  -
+ct1.eth3   False    physical  -       static  -              -              -             1500  24:a9:37:63:76:3b  25.00 Gb/s   replication  -
+ct1.eth4   True     physical  -       static  192.168.20.62  255.255.255.0  192.168.20.1  1500  24:a9:37:63:76:3c  1.00 Gb/s    management   -
+ct1.eth5   False    physical  -       static  -              -              -             1500  24:a9:37:63:76:3d  1.00 Gb/s    management   -
+ct1.eth10  True     physical  -       static  172.20.10.22   255.255.255.0  -             9000  6c:92:cf:19:f2:a1  100.00 Gb/s  iscsi        -
+ct1.eth11  True     physical  -       static  172.20.11.22   255.255.255.0  -             9000  6c:92:cf:19:f2:a0  100.00 Gb/s  iscsi        -
+ct1.eth18  False    physical  -       static  -              -              -             1500  a0:88:c2:74:52:69  25.00 Gb/s   iscsi        -
+ct1.eth19  False    physical  -       static  -              -              -             1500  a0:88:c2:74:52:68  25.00 Gb/s   iscsi        -
+ct1.eth20  True     physical  -       static  172.20.11.21   255.255.255.0  -             9000  a0:88:c2:74:52:67  25.00 Gb/s   iscsi        -
+ct1.eth21  False    physical  -       static  -              -              -             1500  a0:88:c2:74:52:66  25.00 Gb/s   iscsi        -
+replbond   False    bond      -       static  -              -              -             1500  8e:84:9e:d6:95:a5  0.00 b/s     replication  -
+vir4       True     vif       -       static  192.168.20.60  255.255.255.0  192.168.20.1  1500  a6:b9:04:e5:02:14  1.00 Gb/s    management   -
+vir5       False    vif       -       static  -              -              -             1500  aa:b4:a0:d4:96:81  1.00 Gb/s    management   -
+pureeng@purestorage1-cmi-lan-ct0:~$ 
+pureeng@purestorage1-cmi-lan-ct0:~$ exit
+logout
+
+purestorage1-cmi-lan-ct0 login: 

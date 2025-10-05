@@ -1,0 +1,446 @@
+
+purefa05-cs-ct0 login: p purese eng
+
+Password: 
+
+Login incorrect
+purefa05-cs-ct0 login: pureeng
+1) Authenticate via CloudAssist
+2) Authenticate via command line
+3) Restore challenge
+Type the number corresponding to the authentication method you want to use.
+
+Selection: 1
+
+An email for identity verification will be sent once email is entered.
+Please follow the authentication instructions provided there and return to this screen when finished or if email has not been received.
+
+
+Enter an email address: fharris@purestorage.com
+Successfully authenticated
+
+Sat May 03 15:36:15 2025
+Welcome pureeng. This is Purity Version 6.5.5 on FlashArray purefa05-cs
+http://www.purestorage.com/
+pureeng@purefa05-cs-ct0:~$ purearray list --controller
+Name  Type              Mode       Model     Version  Status  Internal Details
+CT0   array_controller  primary    FA-X20R4  6.5.5    ready   
+CT1   array_controller  secondary  FA-X20R4  6.5.5    ready   
+pureeng@purefa05-cs-ct0:~$ purealert tag --timeout 40m --maintenance
+Name         Created                  Expires
+maintenance  2025-05-03 15:37:09 EDT  2025-05-03 16:17:09 EDT
+pureeng@purefa05-cs-ct0:~$ iobalance --sampletime 5
+sampling host I/O for 5 seconds...
+                Host  CT0 I/O Count  CT1 I/O Count  
+   POC-MXQ1300C2V-CS       20.00        3.00  
+   POC-MXQ1300C2Z-CS       16.00        8.00  
+   POC-MXQ1300C30-CS       14.00        3.00  
+pureeng@purefa05-cs-ct0:~$ 
+pureeng@purefa05-cs-ct0:~$ purearray list --controller
+Name  Type              Mode     Model     Version  Status   Internal Details
+CT0   array_controller  primary  FA-X20R4  6.5.5    ready    
+CT1   array_controller  offline  -         -        unknown  
+pureeng@purefa05-cs-ct0:~$ purearray list --controller
+Name  Type              Mode       Model     Version  Status  Internal Details
+CT0   array_controller  primary    FA-X20R4  6.5.5    ready   
+CT1   array_controller  secondary  FA-X20R4  6.5.5    ready   
+pureeng@purefa05-cs-ct0:~$ puredb run purehw list
+Name       Status         Identify  Slot  Index  Speed       Temperature  Voltage  Details
+CH0        ok             off       -     0      -           -            -        -
+CH0.BAY0   ok             off       -     0      -           -            -        -
+CH0.BAY1   ok             off       -     1      -           -            -        -
+CH0.BAY2   ok             off       -     2      -           -            -        -
+CH0.BAY3   ok             off       -     3      -           -            -        -
+CH0.BAY4   ok             off       -     4      -           -            -        -
+CH0.BAY5   ok             off       -     5      -           -            -        -
+CH0.BAY6   ok             off       -     6      -           -            -        -
+CH0.BAY7   ok             off       -     7      -           -            -        -
+CH0.BAY8   ok             off       -     8      -           -            -        -
+CH0.BAY9   ok             off       -     9      -           -            -        -
+CH0.BAY10  not_installed  off       -     10     -           -            -        -
+CH0.BAY11  not_installed  off       -     11     -           -            -        -
+CH0.BAY12  not_installed  off       -     12     -           -            -        -
+CH0.BAY13  not_installed  off       -     13     -           -            -        -
+CH0.BAY14  not_installed  off       -     14     -           -            -        -
+CH0.BAY15  not_installed  off       -     15     -           -            -        -
+CH0.BAY16  not_installed  off       -     16     -           -            -        -
+CH0.BAY17  not_installed  off       -     17     -           -            -        -
+CH0.BAY18  not_installed  off       -     18     -           -            -        -
+CH0.BAY19  not_installed  off       -     19     -           -            -        -
+CH0.NVB0   ok             off       -     0      -           -            -        -
+CH0.NVB1   ok             off       -     1      -           -            -        -
+CH0.NVB2   not_installed  off       -     2      -           -            -        -
+CH0.NVB3   not_installed  off       -     3      -           -            -        -
+CH0.PWR0   ok             -         -     0      -           -            204 V    -
+CH0.PWR1   ok             -         -     1      -           -            205 V    -
+CH0.TMP0   ok             -         -     0      -           22 C         -        -
+CT0        ok             off       -     0      -           -            -        -
+CT0.ETH0   ok             -         -     0      0.00 b/s    -            -        -
+CT0.ETH1   ok             -         -     1      0.00 b/s    -            -        -
+CT0.ETH2   ok             -         -     2      0.00 b/s    -            -        -
+CT0.ETH3   ok             -         -     3      0.00 b/s    -            -        -
+CT0.ETH4   ok             -         -     4      1.00 Gb/s   -            -        -
+CT0.ETH5   ok             -         -     5      0.00 b/s    -            -        -
+CT0.FAN0   ok             -         -     0      -           -            -        -
+CT0.FAN1   ok             -         -     1      -           -            -        -
+CT0.FAN2   ok             -         -     2      -           -            -        -
+CT0.FAN3   ok             -         -     3      -           -            -        -
+CT0.FAN4   ok             -         -     4      -           -            -        -
+CT0.FAN5   ok             -         -     5      -           -            -        -
+CT0.FC12   ok             -         3     12     16.00 Gb/s  -            -        -
+CT0.FC13   ok             -         3     13     16.00 Gb/s  -            -        -
+CT0.TMP0   ok             -         -     0      -           35 C         -        -
+CT0.TMP1   ok             -         -     1      -           39 C         -        -
+CT0.TMP2   ok             -         -     2      -           47 C         -        -
+CT0.TMP3   ok             -         -     3      -           44 C         -        -
+CT0.TMP4   ok             -         -     4      -           40 C         -        -
+CT0.TMP5   ok             -         -     5      -           42 C         -        -
+CT0.TMP6   ok             -         -     6      -           27 C         -        -
+CT0.TMP7   ok             -         -     7      -           27 C         -        -
+CT0.TMP8   ok             -         -     8      -           51 C         -        -
+CT0.TMP9   ok             -         -     9      -           32 C         -        -
+CT0.TMP11  ok             -         -     11     -           30 C         -        -
+CT0.TMP13  ok             -         -     13     -           32 C         -        -
+CT0.TMP15  ok             -         -     15     -           31 C         -        -
+CT0.TMP17  ok             -         -     17     -           33 C         -        -
+CT0.TMP19  ok             -         -     19     -           32 C         -        -
+CT0.TMP21  ok             -         -     21     -           36 C         -        -
+CT0.TMP23  ok             -         -     23     -           35 C         -        -
+CT1        ok             off       -     1      -           -            -        -
+CT1.ETH0   ok             -         -     0      0.00 b/s    -            -        -
+CT1.ETH1   ok             -         -     1      0.00 b/s    -            -        -
+CT1.ETH2   ok             -         -     2      0.00 b/s    -            -        -
+CT1.ETH3   ok             -         -     3      0.00 b/s    -            -        -
+CT1.ETH4   ok             -         -     4      1.00 Gb/s   -            -        -
+CT1.ETH5   ok             -         -     5      0.00 b/s    -            -        -
+CT1.ETH10  ok             -         1     10     0.00 b/s    -            -        -
+CT1.ETH11  ok             -         1     11     0.00 b/s    -            -        -
+CT1.ETH12  ok             -         1     12     0.00 b/s    -            -        -
+CT1.ETH13  ok             -         1     13     0.00 b/s    -            -        -
+CT1.FAN0   ok             -         -     0      -           -            -        -
+CT1.FAN1   ok             -         -     1      -           -            -        -
+CT1.FAN2   ok             -         -     2      -           -            -        -
+CT1.FAN3   ok             -         -     3      -           -            -        -
+CT1.FAN4   ok             -         -     4      -           -            -        -
+CT1.FAN5   ok             -         -     5      -           -            -        -
+CT1.FC12   ok             -         3     12     16.00 Gb/s  -            -        -
+CT1.FC13   ok             -         3     13     16.00 Gb/s  -            -        -
+CT1.TMP0   ok             -         -     0      -           36 C         -        -
+CT1.TMP1   ok             -         -     1      -           39 C         -        -
+CT1.TMP2   ok             -         -     2      -           50 C         -        -
+CT1.TMP3   ok             -         -     3      -           53 C         -        -
+CT1.TMP4   ok             -         -     4      -           39 C         -        -
+CT1.TMP5   ok             -         -     5      -           40 C         -        -
+CT1.TMP6   ok             -         -     6      -           27 C         -        -
+CT1.TMP7   ok             -         -     7      -           28 C         -        -
+CT1.TMP8   ok             -         -     8      -           46 C         -        -
+CT1.TMP9   ok             -         -     9      -           33 C         -        -
+CT1.TMP11  ok             -         -     11     -           31 C         -        -
+CT1.TMP13  ok             -         -     13     -           33 C         -        -
+CT1.TMP15  ok             -         -     15     -           32 C         -        -
+CT1.TMP17  ok             -         -     17     -           34 C         -        -
+CT1.TMP19  ok             -         -     19     -           32 C         -        -
+CT1.TMP21  ok             -         -     21     -           36 C         -        -
+CT1.TMP23  ok             -         -     23     -           35 C         -        -
+pureeng@purefa05-cs-ct0:~$ purealert tag --timeout 40m --maintenance
+Name         Created                  Expires
+maintenance  2025-05-03 15:50:12 EDT  2025-05-03 16:30:12 EDT
+pureeng@purefa05-cs-ct0:~$ purenetwork eth list
+Name       Enabled  Type      Subnet  Address        Mask           Gateway      MTU   MAC                Speed        Services     Subinterfaces
+ct0.eth0   False    physical  -       -              -              -            1500  24:a9:37:62:38:a0  100.00 Gb/s  -            -
+ct0.eth1   False    physical  -       -              -              -            1500  24:a9:37:62:38:a1  100.00 Gb/s  -            -
+ct0.eth2   False    physical  -       172.24.10.211  255.255.255.0  172.24.10.1  1500  24:a9:37:62:38:a2  25.00 Gb/s   replication  -
+ct0.eth3   False    physical  -       -              -              -            1500  24:a9:37:62:38:a3  25.00 Gb/s   replication  -
+ct0.eth4   True     physical  -       172.24.50.211  255.255.255.0  172.24.50.1  1500  24:a9:37:62:38:a4  1.00 Gb/s    management   -
+ct0.eth5   False    physical  -       -              -              -            1500  24:a9:37:62:38:a5  1.00 Gb/s    management   -
+ct1.eth0   False    physical  -       -              -              -            1500  24:a9:37:62:38:88  100.00 Gb/s  -            -
+ct1.eth1   False    physical  -       -              -              -            1500  24:a9:37:62:38:89  100.00 Gb/s  -            -
+ct1.eth2   False    physical  -       172.24.10.212  255.255.255.0  172.24.10.1  1500  24:a9:37:62:38:8a  25.00 Gb/s   replication  -
+ct1.eth3   False    physical  -       -              -              -            1500  24:a9:37:62:38:8b  25.00 Gb/s   replication  -
+ct1.eth4   True     physical  -       172.24.50.212  255.255.255.0  172.24.50.1  1500  24:a9:37:62:38:8c  1.00 Gb/s    management   -
+ct1.eth5   False    physical  -       -              -              -            1500  24:a9:37:62:38:8d  1.00 Gb/s    management   -
+ct1.eth10  False    physical  -       -              -              -            1500  58:a2:e1:94:58:39  50.00 Gb/s   iscsi        -
+ct1.eth11  False    physical  -       -              -              -            1500  58:a2:e1:94:58:38  50.00 Gb/s   iscsi        -
+ct1.eth12  False    physical  -       -              -              -            1500  58:a2:e1:94:58:37  50.00 Gb/s   iscsi        -
+ct1.eth13  False    physical  -       -              -              -            1500  58:a2:e1:94:58:36  50.00 Gb/s   iscsi        -
+replbond   False    bond      -       -              -              -            1500  ba:56:b1:f8:ec:99  0.00 b/s     replication  -
+vir4       True     vif       -       172.24.50.210  255.255.255.0  172.24.50.1  1500  da:96:df:dc:a8:b3  1.00 Gb/s    management   -
+vir5       False    vif       -       -              -              -            1500  2a:4a:14:1a:c1:17  1.00 Gb/s    management   -
+pureeng@purefa05-cs-ct0:~$ puredb run giveback --safe
+pureeng@purefa05-cs-ct0:~$ puredb run giveback --safenetwork eth listalert tag --timeout 40m --maintenance
+network eth listdb run giveback --safepurearray list --controller
+Name  Type              Mode       Model     Version  Status  Internal Details
+CT0   array_controller  secondary  FA-X20R4  6.5.5    ready   
+CT1   array_controller  primary    FA-X20R4  6.5.5    ready   
+pureeng@purefa05-cs-ct0:~$ 
+
+purefa05-cs-ct1 login: pureeng
+
+1) Authenticate via CloudAssist
+2) Authenticate via command line
+3) Restore challenge
+Type the number corresponding to the authentication method you want to use.
+
+Selection: 1
+
+An email for identity verification will be sent once email is entered.
+Please follow the authentication instructions provided there and return to this screen when finished or if email has not been received.
+
+
+Enter an email address: h fharris@purestorage.com
+Successfully authenticated
+
+Sat May 03 15:55:02 2025
+Welcome pureeng. This is Purity Version 6.5.5 on FlashArray purefa05-cs
+http://www.purestorage.com/
+pureeng@purefa05-cs-ct1:~$ puremepuremessage lis t--opent --open
+pureeng@purefa05-cs-ct1:~$ purehw list
+Name       Status         Identify  Slot  Index  Speed       Temperature  Voltage  Details
+CH0        ok             off       -     0      -           -            -        -
+CH0.BAY0   ok             off       -     0      -           -            -        -
+CH0.BAY1   ok             off       -     1      -           -            -        -
+CH0.BAY2   ok             off       -     2      -           -            -        -
+CH0.BAY3   ok             off       -     3      -           -            -        -
+CH0.BAY4   ok             off       -     4      -           -            -        -
+CH0.BAY5   ok             off       -     5      -           -            -        -
+CH0.BAY6   ok             off       -     6      -           -            -        -
+CH0.BAY7   ok             off       -     7      -           -            -        -
+CH0.BAY8   ok             off       -     8      -           -            -        -
+CH0.BAY9   ok             off       -     9      -           -            -        -
+CH0.BAY10  not_installed  off       -     10     -           -            -        -
+CH0.BAY11  not_installed  off       -     11     -           -            -        -
+CH0.BAY12  not_installed  off       -     12     -           -            -        -
+CH0.BAY13  not_installed  off       -     13     -           -            -        -
+CH0.BAY14  not_installed  off       -     14     -           -            -        -
+CH0.BAY15  not_installed  off       -     15     -           -            -        -
+CH0.BAY16  not_installed  off       -     16     -           -            -        -
+CH0.BAY17  not_installed  off       -     17     -           -            -        -
+CH0.BAY18  not_installed  off       -     18     -           -            -        -
+CH0.BAY19  not_installed  off       -     19     -           -            -        -
+CH0.NVB0   ok             off       -     0      -           -            -        -
+CH0.NVB1   ok             off       -     1      -           -            -        -
+CH0.NVB2   not_installed  off       -     2      -           -            -        -
+CH0.NVB3   not_installed  off       -     3      -           -            -        -
+CH0.PWR0   ok             -         -     0      -           -            204 V    -
+CH0.PWR1   ok             -         -     1      -           -            205 V    -
+CH0.TMP0   ok             -         -     0      -           22 C         -        -
+CT1        degraded       off       -     1      -           -            -        cross-controller link down
+CT1.ETH0   ok             -         -     0      0.00 b/s    -            -        -
+CT1.ETH1   ok             -         -     1      0.00 b/s    -            -        -
+CT1.ETH2   ok             -         -     2      0.00 b/s    -            -        -
+CT1.ETH3   ok             -         -     3      0.00 b/s    -            -        -
+CT1.ETH4   ok             -         -     4      1.00 Gb/s   -            -        -
+CT1.ETH5   ok             -         -     5      0.00 b/s    -            -        -
+CT1.ETH10  ok             -         1     10     0.00 b/s    -            -        -
+CT1.ETH11  ok             -         1     11     0.00 b/s    -            -        -
+CT1.ETH12  ok             -         1     12     0.00 b/s    -            -        -
+CT1.ETH13  ok             -         1     13     0.00 b/s    -            -        -
+CT1.FAN0   ok             -         -     0      -           -            -        -
+CT1.FAN1   ok             -         -     1      -           -            -        -
+CT1.FAN2   ok             -         -     2      -           -            -        -
+CT1.FAN3   ok             -         -     3      -           -            -        -
+CT1.FAN4   ok             -         -     4      -           -            -        -
+CT1.FAN5   ok             -         -     5      -           -            -        -
+CT1.FC12   ok             -         3     12     16.00 Gb/s  -            -        -
+CT1.FC13   ok             -         3     13     16.00 Gb/s  -            -        -
+CT1.TMP0   ok             -         -     0      -           37 C         -        -
+CT1.TMP1   ok             -         -     1      -           40 C         -        -
+CT1.TMP2   ok             -         -     2      -           51 C         -        -
+CT1.TMP3   ok             -         -     3      -           53 C         -        -
+CT1.TMP4   ok             -         -     4      -           44 C         -        -
+CT1.TMP5   ok             -         -     5      -           45 C         -        -
+CT1.TMP6   ok             -         -     6      -           28 C         -        -
+CT1.TMP7   ok             -         -     7      -           29 C         -        -
+CT1.TMP8   ok             -         -     8      -           50 C         -        -
+CT1.TMP9   ok             -         -     9      -           35 C         -        -
+CT1.TMP11  ok             -         -     11     -           32 C         -        -
+CT1.TMP13  ok             -         -     13     -           35 C         -        -
+CT1.TMP15  ok             -         -     15     -           33 C         -        -
+CT1.TMP17  ok             -         -     17     -           36 C         -        -
+CT1.TMP19  ok             -         -     19     -           34 C         -        -
+CT1.TMP21  ok             -         -     21     -           39 C         -        -
+CT1.TMP23  ok             -         -     23     -           37 C         -        -
+pureeng@purefa05-cs-ct1:~$ purearray list --controller
+Name  Type              Mode     Model     Version  Status   Internal Details
+CT0   array_controller  offline  -         -        unknown  
+CT1   array_controller  primary  FA-X20R4  6.5.5    ready    
+pureeng@purefa05-cs-ct1:~$ purenetowrk eth list
+-bash: purenetowrk: command not found
+pureeng@purefa05-cs-ct1:~$ purenetwork eth list
+Name       Enabled  Type      Subnet  Address        Mask           Gateway      MTU   MAC                Speed        Services     Subinterfaces
+ct0.eth0   False    physical  -       -              -              -            1500  24:a9:37:62:38:a0  100.00 Gb/s  -            -
+ct0.eth1   False    physical  -       -              -              -            1500  24:a9:37:62:38:a1  100.00 Gb/s  -            -
+ct0.eth2   False    physical  -       172.24.10.211  255.255.255.0  172.24.10.1  1500  24:a9:37:62:38:a2  25.00 Gb/s   replication  -
+ct0.eth3   False    physical  -       -              -              -            1500  24:a9:37:62:38:a3  25.00 Gb/s   replication  -
+ct0.eth4   True     physical  -       172.24.50.211  255.255.255.0  172.24.50.1  1500  24:a9:37:62:38:a4  1.00 Gb/s    management   -
+ct0.eth5   False    physical  -       -              -              -            1500  24:a9:37:62:38:a5  1.00 Gb/s    management   -
+ct1.eth0   False    physical  -       -              -              -            1500  24:a9:37:62:38:88  100.00 Gb/s  -            -
+ct1.eth1   False    physical  -       -              -              -            1500  24:a9:37:62:38:89  100.00 Gb/s  -            -
+ct1.eth2   False    physical  -       172.24.10.212  255.255.255.0  172.24.10.1  1500  24:a9:37:62:38:8a  25.00 Gb/s   replication  -
+ct1.eth3   False    physical  -       -              -              -            1500  24:a9:37:62:38:8b  25.00 Gb/s   replication  -
+ct1.eth4   True     physical  -       172.24.50.212  255.255.255.0  172.24.50.1  1500  24:a9:37:62:38:8c  1.00 Gb/s    management   -
+ct1.eth5   False    physical  -       -              -              -            1500  24:a9:37:62:38:8d  1.00 Gb/s    management   -
+ct1.eth10  False    physical  -       -              -              -            1500  58:a2:e1:94:58:39  50.00 Gb/s   iscsi        -
+ct1.eth11  False    physical  -       -              -              -            1500  58:a2:e1:94:58:38  50.00 Gb/s   iscsi        -
+ct1.eth12  False    physical  -       -              -              -            1500  58:a2:e1:94:58:37  50.00 Gb/s   iscsi        -
+ct1.eth13  False    physical  -       -              -              -            1500  58:a2:e1:94:58:36  50.00 Gb/s   iscsi        -
+replbond   False    bond      -       -              -              -            1500  ba:56:b1:f8:ec:99  0.00 b/s     replication  -
+vir4       True     vif       -       172.24.50.210  255.255.255.0  172.24.50.1  1500  da:96:df:dc:a8:b3  1.00 Gb/s    management   -
+vir5       False    vif       -       -              -              -            1500  2a:4a:14:1a:c1:17  1.00 Gb/s    management   -
+pureeng@purefa05-cs-ct1:~$ purenetwork eth listowarray list --controller
+Name  Type              Mode     Model     Version  Status   Internal Details
+CT0   array_controller  offline  -         -        unknown  
+CT1   array_controller  primary  FA-X20R4  6.5.5    ready    
+pureeng@purefa05-cs-ct1:~$ purearray list --controller
+Name  Type              Mode       Model     Version  Status  Internal Details
+CT0   array_controller  secondary  FA-X20R4  6.5.5    ready   
+CT1   array_controller  primary    FA-X20R4  6.5.5    ready   
+pureeng@purefa05-cs-ct1:~$ purearray list --controllernetwork eth list
+Name       Enabled  Type      Subnet  Address        Mask           Gateway      MTU   MAC                Speed        Services     Subinterfaces
+ct0.eth0   False    physical  -       -              -              -            1500  24:a9:37:62:38:a0  100.00 Gb/s  -            -
+ct0.eth1   False    physical  -       -              -              -            1500  24:a9:37:62:38:a1  100.00 Gb/s  -            -
+ct0.eth2   False    physical  -       172.24.10.211  255.255.255.0  172.24.10.1  1500  24:a9:37:62:38:a2  25.00 Gb/s   replication  -
+ct0.eth3   False    physical  -       -              -              -            1500  24:a9:37:62:38:a3  25.00 Gb/s   replication  -
+ct0.eth4   True     physical  -       172.24.50.211  255.255.255.0  172.24.50.1  1500  24:a9:37:62:38:a4  1.00 Gb/s    management   -
+ct0.eth5   False    physical  -       -              -              -            1500  24:a9:37:62:38:a5  1.00 Gb/s    management   -
+ct0.eth10  False    physical  -       -              -              -            1500  58:a2:e1:94:55:71  50.00 Gb/s   iscsi        -
+ct0.eth11  False    physical  -       -              -              -            1500  58:a2:e1:94:55:70  50.00 Gb/s   iscsi        -
+ct0.eth12  False    physical  -       -              -              -            1500  58:a2:e1:94:55:6f  50.00 Gb/s   iscsi        -
+ct0.eth13  False    physical  -       -              -              -            1500  58:a2:e1:94:55:6e  50.00 Gb/s   iscsi        -
+ct1.eth0   False    physical  -       -              -              -            1500  24:a9:37:62:38:88  100.00 Gb/s  -            -
+ct1.eth1   False    physical  -       -              -              -            1500  24:a9:37:62:38:89  100.00 Gb/s  -            -
+ct1.eth2   False    physical  -       172.24.10.212  255.255.255.0  172.24.10.1  1500  24:a9:37:62:38:8a  25.00 Gb/s   replication  -
+ct1.eth3   False    physical  -       -              -              -            1500  24:a9:37:62:38:8b  25.00 Gb/s   replication  -
+ct1.eth4   True     physical  -       172.24.50.212  255.255.255.0  172.24.50.1  1500  24:a9:37:62:38:8c  1.00 Gb/s    management   -
+ct1.eth5   False    physical  -       -              -              -            1500  24:a9:37:62:38:8d  1.00 Gb/s    management   -
+ct1.eth10  False    physical  -       -              -              -            1500  58:a2:e1:94:58:39  50.00 Gb/s   iscsi        -
+ct1.eth11  False    physical  -       -              -              -            1500  58:a2:e1:94:58:38  50.00 Gb/s   iscsi        -
+ct1.eth12  False    physical  -       -              -              -            1500  58:a2:e1:94:58:37  50.00 Gb/s   iscsi        -
+ct1.eth13  False    physical  -       -              -              -            1500  58:a2:e1:94:58:36  50.00 Gb/s   iscsi        -
+replbond   False    bond      -       -              -              -            1500  ba:56:b1:f8:ec:99  0.00 b/s     replication  -
+vir4       True     vif       -       172.24.50.210  255.255.255.0  172.24.50.1  1500  da:96:df:dc:a8:b3  1.00 Gb/s    management   -
+vir5       False    vif       -       -              -              -            1500  2a:4a:14:1a:c1:17  1.00 Gb/s    management   -
+pureeng@purefa05-cs-ct1:~$ purehw list
+Name       Status         Identify  Slot  Index  Speed       Temperature  Voltage  Details
+CH0        ok             off       -     0      -           -            -        -
+CH0.BAY0   ok             off       -     0      -           -            -        -
+CH0.BAY1   ok             off       -     1      -           -            -        -
+CH0.BAY2   ok             off       -     2      -           -            -        -
+CH0.BAY3   ok             off       -     3      -           -            -        -
+CH0.BAY4   ok             off       -     4      -           -            -        -
+CH0.BAY5   ok             off       -     5      -           -            -        -
+CH0.BAY6   ok             off       -     6      -           -            -        -
+CH0.BAY7   ok             off       -     7      -           -            -        -
+CH0.BAY8   ok             off       -     8      -           -            -        -
+CH0.BAY9   ok             off       -     9      -           -            -        -
+CH0.BAY10  not_installed  off       -     10     -           -            -        -
+CH0.BAY11  not_installed  off       -     11     -           -            -        -
+CH0.BAY12  not_installed  off       -     12     -           -            -        -
+CH0.BAY13  not_installed  off       -     13     -           -            -        -
+CH0.BAY14  not_installed  off       -     14     -           -            -        -
+CH0.BAY15  not_installed  off       -     15     -           -            -        -
+CH0.BAY16  not_installed  off       -     16     -           -            -        -
+CH0.BAY17  not_installed  off       -     17     -           -            -        -
+CH0.BAY18  not_installed  off       -     18     -           -            -        -
+CH0.BAY19  not_installed  off       -     19     -           -            -        -
+CH0.NVB0   ok             off       -     0      -           -            -        -
+CH0.NVB1   ok             off       -     1      -           -            -        -
+CH0.NVB2   not_installed  off       -     2      -           -            -        -
+CH0.NVB3   not_installed  off       -     3      -           -            -        -
+CH0.PWR0   ok             -         -     0      -           -            204 V    -
+CH0.PWR1   ok             -         -     1      -           -            204 V    -
+CH0.TMP0   ok             -         -     0      -           22 C         -        -
+CT0        ok             off       -     0      -           -            -        -
+CT0.ETH0   ok             -         -     0      0.00 b/s    -            -        -
+CT0.ETH1   ok             -         -     1      0.00 b/s    -            -        -
+CT0.ETH2   ok             -         -     2      0.00 b/s    -            -        -
+CT0.ETH3   ok             -         -     3      0.00 b/s    -            -        -
+CT0.ETH4   ok             -         -     4      1.00 Gb/s   -            -        -
+CT0.ETH5   ok             -         -     5      0.00 b/s    -            -        -
+CT0.ETH10  ok             -         1     10     0.00 b/s    -            -        -
+CT0.ETH11  ok             -         1     11     0.00 b/s    -            -        -
+CT0.ETH12  ok             -         1     12     0.00 b/s    -            -        -
+CT0.ETH13  ok             -         1     13     0.00 b/s    -            -        -
+CT0.FAN0   ok             -         -     0      -           -            -        -
+CT0.FAN1   ok             -         -     1      -           -            -        -
+CT0.FAN2   ok             -         -     2      -           -            -        -
+CT0.FAN3   ok             -         -     3      -           -            -        -
+CT0.FAN4   ok             -         -     4      -           -            -        -
+CT0.FAN5   ok             -         -     5      -           -            -        -
+CT0.FC12   ok             -         3     12     16.00 Gb/s  -            -        -
+CT0.FC13   ok             -         3     13     16.00 Gb/s  -            -        -
+CT0.TMP0   ok             -         -     0      -           36 C         -        -
+CT0.TMP1   ok             -         -     1      -           39 C         -        -
+CT0.TMP2   ok             -         -     2      -           52 C         -        -
+CT0.TMP3   ok             -         -     3      -           50 C         -        -
+CT0.TMP4   ok             -         -     4      -           38 C         -        -
+CT0.TMP5   ok             -         -     5      -           40 C         -        -
+CT0.TMP6   ok             -         -     6      -           27 C         -        -
+CT0.TMP7   ok             -         -     7      -           27 C         -        -
+CT0.TMP8   ok             -         -     8      -           48 C         -        -
+CT0.TMP9   ok             -         -     9      -           33 C         -        -
+CT0.TMP11  ok             -         -     11     -           30 C         -        -
+CT0.TMP13  ok             -         -     13     -           33 C         -        -
+CT0.TMP15  ok             -         -     15     -           31 C         -        -
+CT0.TMP17  ok             -         -     17     -           33 C         -        -
+CT0.TMP19  ok             -         -     19     -           32 C         -        -
+CT0.TMP21  ok             -         -     21     -           36 C         -        -
+CT0.TMP23  ok             -         -     23     -           35 C         -        -
+CT1        ok             off       -     1      -           -            -        -
+CT1.ETH0   ok             -         -     0      0.00 b/s    -            -        -
+CT1.ETH1   ok             -         -     1      0.00 b/s    -            -        -
+CT1.ETH2   ok             -         -     2      0.00 b/s    -            -        -
+CT1.ETH3   ok             -         -     3      0.00 b/s    -            -        -
+CT1.ETH4   ok             -         -     4      1.00 Gb/s   -            -        -
+CT1.ETH5   ok             -         -     5      0.00 b/s    -            -        -
+CT1.ETH10  ok             -         1     10     0.00 b/s    -            -        -
+CT1.ETH11  ok             -         1     11     0.00 b/s    -            -        -
+CT1.ETH12  ok             -         1     12     0.00 b/s    -            -        -
+CT1.ETH13  ok             -         1     13     0.00 b/s    -            -        -
+CT1.FAN0   ok             -         -     0      -           -            -        -
+CT1.FAN1   ok             -         -     1      -           -            -        -
+CT1.FAN2   ok             -         -     2      -           -            -        -
+CT1.FAN3   ok             -         -     3      -           -            -        -
+CT1.FAN4   ok             -         -     4      -           -            -        -
+CT1.FAN5   ok             -         -     5      -           -            -        -
+CT1.FC12   ok             -         3     12     16.00 Gb/s  -            -        -
+CT1.FC13   ok             -         3     13     16.00 Gb/s  -            -        -
+CT1.TMP0   ok             -         -     0      -           37 C         -        -
+CT1.TMP1   ok             -         -     1      -           40 C         -        -
+CT1.TMP2   ok             -         -     2      -           52 C         -        -
+CT1.TMP3   ok             -         -     3      -           51 C         -        -
+CT1.TMP4   ok             -         -     4      -           44 C         -        -
+CT1.TMP5   ok             -         -     5      -           45 C         -        -
+CT1.TMP6   ok             -         -     6      -           28 C         -        -
+CT1.TMP7   ok             -         -     7      -           29 C         -        -
+CT1.TMP8   ok             -         -     8      -           49 C         -        -
+CT1.TMP9   ok             -         -     9      -           35 C         -        -
+CT1.TMP11  ok             -         -     11     -           32 C         -        -
+CT1.TMP13  ok             -         -     13     -           35 C         -        -
+CT1.TMP15  ok             -         -     15     -           33 C         -        -
+CT1.TMP17  ok             -         -     17     -           36 C         -        -
+CT1.TMP19  ok             -         -     19     -           34 C         -        -
+CT1.TMP21  ok             -         -     21     -           39 C         -        -
+CT1.TMP23  ok             -         -     23     -           37 C         -        -
+pureeng@purefa05-cs-ct1:~$ puremesssage list --open
+-bash: puremesssage: command not found
+pureeng@purefa05-cs-ct1:~$ puremessage list --open
+pureeng@purefa05-cs-ct1:~$ exit
+logout
+
+
+******************************************************************************
+*                            WARNING                                         *
+******************************************************************************
+*                                                                            *
+* This computer system is to be used for authorized business purposes only.  *
+*  Unauthorized access or use of this system may subject violators to        *
+* criminal, civil and/or administrative action.                              *
+*  All activity on this system is subject to monitoring and may be           *
+* intercepted and disclosed to authorized personnel for official purposes,   *
+* including criminal investigations.                                         *
+*  Access or use of this computer system by any person, whether authorized   *
+* or unauthorized, constitutes consent to these terms.                       *
+*                                                                            *
+******************************************************************************
+purefa05-cs-ct1 login: 

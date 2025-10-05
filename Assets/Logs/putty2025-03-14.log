@@ -1,0 +1,1000 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.03.14 11:06:59 =~=~=~=~=~=~=~=~=~=~=~=
+
+PCTFJ2426004D login: puresetup
+Password: 
+
+Fri Mar 14 15:07:24 2025
+Welcome puresetup. This is Purity Version 6.6.6 on FlashArray PCTFJ2426004D
+http://www.purestorage.com/
+puresetup@PCTFJ2426004D:~$ 
+puresetup@PCTFJ2426004D:~$ 
+puresetup@PCTFJ2426004D:~$ ls /dev/sd*1
+/dev/sda1  /dev/sdb1
+puresetup@PCTFJ2426004D:~$ mount d/dev/sd&b1 /mnt
+The disk contains an unclean file system (0, 0).
+The file system wasn't safely closed on Windows. Fixing.
+puresetup@PCTFJ2426004D:~$ cp /mnt/6.7.32/* .
+puresetup@PCTFJ2426004D:~$ pureinstall purity_6.7.2_202501290440+0d1c24065579.ppkg
+Installing Purity on alternate partition labeled second.
+Erasing Purity software image from alternate partition second to prepare for installation.
+WARNING: Do not interrupt this process!!
+Unpacking new Purity software.
+............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Verifying package...
+
+Finalizing installation. This may take several minutes.
+Executing /altroot/opt/purextras/bin/finish-install.sh
+Executing /altroot/opt/purextras/bin/finish-install.azure-propagate.sh
+Executing /altroot/opt/purextras/bin/finish-install.cbs.sh
+Executing /altroot/opt/purextras/bin/finish-install.fix-dpkg.sh
+Purity installed.
+Installation complete. The new Purity version will load at next reboot.
+
+Important!
+The first boot of a new Purity version may take longer if the new version includes controller firmware updates.
+DO NOT REBOOT THE CONTROLLER DURING THE FIRMWARE UPDATE.
+
+Refer to http://community.purestorage.com for more information about the Purity upgrade process and firmware updates.
+puresetup@PCTFJ2426004D:~$ pureinstall purity_6.7.2_202501290440+0d1c24065579.ppkg
+pureboot reboot --offline
+[Errno 111] Connection refused
+
+PCTFJ24510122 login: puresetup
+Password: 
+
+Fri Mar 14 15:30:23 2025
+Welcome puresetup. This is Purity Version 6.6.6 on FlashArray PCTFJ24510122
+http://www.purestorage.com/
+puresetup@PCTFJ24510122:~$ ls /dev/sd&1
+[1] 153083
+ls: cannot access '/dev/sd': No such file or directory
+[1]+  Exit 2                  ls --color=auto /dev/sd
+-bash: 1: command not found
+puresetup@PCTFJ24510122:~$ ls /dev/sd*1
+/dev/sda1  /dev/sdb1
+puresetup@PCTFJ24510122:~$ mount /dev/sdb1 /mnt
+puresetup@PCTFJ24510122:~$ cp /mnt/6.7.2/* .
+puresetup@PCTFJ24510122:~$ pureinstall purity_6.7.2_202501290440+0d1c24065579.ppkg
+Installing Purity on alternate partition labeled second.
+Erasing Purity software image from alternate partition second to prepare for installation.
+WARNING: Do not interrupt this process!!
+Unpacking new Purity software.
+............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Verifying package...
+
+Finalizing installation. This may take several minutes.
+Executing /altroot/opt/purextras/bin/finish-install.sh
+Executing /altroot/opt/purextras/bin/finish-install.azure-propagate.sh
+Executing /altroot/opt/purextras/bin/finish-install.cbs.sh
+Executing /altroot/opt/purextras/bin/finish-install.fix-dpkg.sh
+Purity installed.
+Installation complete. The new Purity version will load at next reboot.
+
+Important!
+The first boot of a new Purity version may take longer if the new version includes controller firmware updates.
+DO NOT REBOOT THE CONTROLLER DURING THE FIRMWARE UPDATE.
+
+Refer to http://community.purestorage.com for more information about the Purity upgrade process and firmware updates.
+puresetup@PCTFJ24510122:~$ pureboot reboot --offline
+[Errno 111] Connection refused
+
+PCTFJ2426004D login: puresetup
+Password: 
+<fw_update_tool>
+===================================================================
+=                            NOTICE                               =
+===================================================================
+=                                                                 =
+=    Firmware is currently being checked and/or updated           =
+=    on this controller.                                          =
+=                                                                 =
+=    If updates are necessary they will be applied automatically, =
+=    and one or more automatic reboots may occur as a result.     =
+=    A completion notice will be provided when done.              =
+=                                                                 =
+=    DO NOT RESTART OR REMOVE POWER WHILE UPDATE IS IN PROGRESS   =
+=                                                                 =
+===================================================================
+<fw_update_tool>
+Last login: Fri Mar 14 15:07:24 UTC 2025 on ttyS0
+
+Fri Mar 14 15:33:38 2025
+Welcome puresetup. This is Purity Version 6.7.2 on FlashArray PCTFJ2426004D
+http://www.purestorage.com/
+puresetup@PCTFJ2426004D:~$ 
+puresetup@PCTFJ2426004D:~$ pureboot list
+===================================================================
+=                            NOTICE                               =
+===================================================================
+=                                                                 =
+=    Firmware is currently being checked and/or updated           =
+=    on this controller.                                          =
+=                                                                 =
+=    If updates are necessary they will be applied automatically, =
+=    and one or more automatic reboots may occur as a result.     =
+=    A completion notice will be provided when done.              =
+=                                                                 =
+=    DO NOT RESTART OR REMOVE POWER WHILE UPDATE IS IN PROGRESS   =
+=                                                                 =
+===================================================================
+
+
+Marked entry (*) is currently running
+Marked entry (-->) will run at next reboot
+    0. Purity 6.6.6 (202404151806+496c423a7b60) with kernel 5.15.123+ (202404091855+6eed2ced5086) on first (/dev/sda3)
+*-->1. Purity 6.7.2 (202501290440+0d1c24065579) with kernel 5.15.123+ (202501160448+1cb33bf4bf4f) on second (/dev/sda4)
+puresetup@PCTFJ2426004D:~$  GNU GRUB  version 2.06
+
++----------------------------------------------------------------------------+||||||||||||||||||||||||+----------------------------------------------------------------------------+     Use the ^ and v keys to select which entry is highlighted.          
+      Press enter to boot the selected OS, `e' to edit the commands       
+      before booting or `c' for a command-line.                             Purity 6.6.6 (202404151806+496c423a7b60) with kernel 5.15.123+ (2024040918>*Purity 6.7.2 (202501290440+0d1c24065579) with kernel 5.15.123+ (2025011604>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         GNU GRUB  version 2.06
+
+/----------------------------------------------------------------------------\||||||||||||||||||||||||||\----------------------------------------------------------------------------/     Use the ^ and v keys to select which entry is highlighted.          
+      Press enter to boot the selected OS, `e' to edit the commands       
+      before booting or `c' for a command-line.                             Purity 6.6.6 (202404151806+496c423a7b60) with kernel 5.15.123+ (2024040918>
+*Purity 6.7.2 (202501290440+0d1c24065579) with kernel 5.15.123+ (2025011604>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        The highlighted entry will be executed automatically in 3s.                    The highlighted entry will be executed automatically in 3s.                    The highlighted entry will be executed automatically in 2s.                    The highlighted entry will be executed automatically in 2s.                    The highlighted entry will be executed automatically in 1s.                    The highlighted entry will be executed automatically in 1s.                    The highlighted entry will be executed automatically in 0s.                    The highlighted entry will be executed automatically in 0s.                 
+BOOTING AT 2025-3-14 15:40:31 Purity 6.7.2 (202501290440+0d1c24065579) with
+kernel 5.15.123+ (202501160448+1cb33bf4bf4f) on second (/dev/sda4)
+
+BOOTING AT 2025-3-14 15:40:31 Purity 6.7.2 (202501290440+0d1c24065579) with
+kernel 5.15.123+ (202501160448+1cb33bf4bf4f) on second (/dev/sda4)
+
+
+
+Purity
+
+PCTFJ2426004D login: pureseutp
+Password: 
+
+Login incorrect
+PCTFJ2426004D login: puresetup
+Password: 
+
+Login incorrect
+PCTFJ2426004D login: puresetup
+Password: 
+Last login: Fri Mar 14 15:33:38 UTC 2025 on ttyS0
+
+Fri Mar 14 15:47:23 2025
+Welcome puresetup. This is Purity Version 6.7.2 on FlashArray PCTFJ2426004D
+http://www.purestorage.com/
+puresetup@PCTFJ2426004D:~$ puresetup newarray --skip-connectivity-tests
+##########################################
+#   Welcome to the Purity Setup Wizard   #
+##########################################
+Mar 14 15:47:34.186 puresetup: PROGRESS: Starting new array setup
+CONFIG_TASKS:CONFIG_TASK_START_PURITY,CONFIG_TASK_CONFIG_FLASHARRAY,CONFIG_TASK_TEST_CONNECTIVITY,CONFIG_TASK_ALL_COMPLETE,CONFIG_TASK_PURESETUP_EXITED
+Mar 14 15:47:36.242 puresetup.py: PROGRESS: Checking if the current Purity version supports this controller model
+Controller hardware model is compatible with the controller purity version
+Mar 14 15:47:36.318 puresetup.py: PROGRESS: Detecting shelves connected to the array
+0 shelves connected to this controller.
+Mar 14 15:47:36.326 puresetup.py: PROGRESS: Verifying controller firmware is up to date. Controller may reboot if firmware is updated.
+                                                                               
+Broadcast message from root@PCTFJ2426004D (somewhere) (Fri Mar 14 15:48:05 2025
+                                                                               
+===================================================================            
+=                   UPDATE AND/OR CHECK COMPLETE                  =            
+=                                                                 =            
+=    The firmware checks/updates on this system are now complete. =            
+=    No further action is required, and the controller will       =            
+=    continue running as usual                                    =            
+=                                                                 =            
+===================================================================            
+                                                                               
+                                                                               
+                                                                               
+Broadcast message from root@PCTFJ2426004D (somewhere) (Fri Mar 14 15:48:05 2025
+                                                                               
+===================================================================            
+=                   UPDATE AND/OR CHECK COMPLETE                  =            
+=                                                                 =            
+=    The firmware checks/updates on this system are now complete. =            
+=    No further action is required, and the controller will       =            
+=    continue running as usual                                    =            
+=                                                                 =            
+===================================================================            
+                                                                               
+                                                                               
+fw_update_tool started.
+Starting Boot-Time Components Update.
+Skipping BOOT_DRIVE_S4520 update since current image: (7CV10100) matches latest image: (7CV10100)
+Skipping BIOS update since current image: (L11P1N15) matches latest image: (L11P1N15)
+Skipping BIOS_STBY-1 update since current image: (L11P1N15) matches latest image: (L11P1N15)
+Skipping BMC update since current image: (v0.0e-0aad-r0010) matches latest image: (v0.0e-0aad-r0010)
+Skipping BMC_STBY-0 update since current image: (v0.09-0aad-r0010) to latest image: (v0.0e-0aad-r0010) is not supported.
+Skipping CPLD update since current image: (R126) matches latest image: (R126)
+Skipping ADD_IN_ETH_MLX_CX6_25G_AS-3 update since current image: (26.35.2000) matches latest image: (26.35.2000)
+Skipping PFX_68A0_IMG update since current image: (0x0390b762) matches latest image: (0x0390b762)
+Skipping PFX_68A0_CFG update since current image: (0x3249620c) matches latest image: (0x3249620c)
+Skipping PFX_68B0_IMG update since current image: (0x0390b762) matches latest image: (0x0390b762)
+Skipping PFX_68B0_CFG update since current image: (0x3249620c) matches latest image: (0x3249620c)
+Skipping LOM_ETH_MLX_CX6_100G update since current image: (22.37.1014) matches latest image: (22.37.1014)
+Skipping LOM_ETH_MLX_CX6_25G update since current image: (26.37.1014) matches latest image: (26.37.1014)
+Skipping ADD_IN_FC_ELX_G7PLUS-1 update since current image: (14.0.663.12) matches latest image: (14.0.663.12)
+All Boot-Time Components are up-to-date.
+
+Controller firmware is up to date.
+Mar 14 15:48:07.505 puresetup.py: PROGRESS: Verifying power supply firmware is up to date. If power supply firmware updates are needed, the update process can take a while.
+fw_update_tool started.
+Update PSU Devices
+ Policy: Update to latest but only if current version is below the specified minimum version allowed for the field, and don't downgrade.
+Skipping PSU_DELTA_TI_2000-0 update since current image: (00.28.33) matches latest image: (00.28.33)
+Skipping PSU_DELTA_TI_2000-1 update since current image: (00.28.33) matches latest image: (00.28.33)
+ Update PSU Complete
+Power supply firmware is up to date.
+Mar 14 15:48:11.577 puresetup.py: PROGRESS: Verifying WSSD firmware is up to date.
+fw_update_tool started.
+Checking for Purity activity on 20 wssd devices before attempting updates
+Beginning parallel fw version check/update for 10 WSSD Devices
+ Policy: Update to latest but only if current version is different than latest, and don't downgrade.
+ Successful parallel update of WSSD /dev/nvme0n1 From:4.1.12 To:4.1.29
+ Successful parallel update of WSSD /dev/nvme1n1 From:4.1.12 To:4.1.29
+ Successful parallel update of WSSD /dev/nvme2n1 From:4.1.12 To:4.1.29
+ Successful parallel update of WSSD /dev/nvme3n1 From:4.1.12 To:4.1.29
+ Successful parallel update of WSSD /dev/nvme4n1 From:4.1.12 To:4.1.29
+ Successful parallel update of WSSD /dev/nvme5n1 From:4.1.12 To:4.1.29
+ Successful parallel update of WSSD /dev/nvme7n1 From:4.1.12 To:4.1.29
+ Successful parallel update of WSSD /dev/nvme6n1 From:4.1.12 To:4.1.29
+ Successful parallel update of WSSD /dev/nvme9n1 From:4.1.12 To:4.1.29
+ Successful parallel update of WSSD /dev/nvme8n1 From:4.1.12 To:4.1.29
+Updated 10 WSSD Devices
+ Performing additional version check/update for 10 WSSD Devices
+Done! Completed additional check/update, which updated 0 WSSD devices
+WSSD firmware is up to date.
+Detected storage type E based on inventory of installed drives
+The detected storage type E is supported on FA-E
+Mar 14 15:52:36.623 puresetup.py: PROGRESS: Checking if apartment already exists
+Mar 14 15:52:40.135 puresetup.py: ERROR: unable to determine apartment. lsapt returned: Product Version 6.7.2 SVN Version 202501290440+0d1c24065579-67x Driver Version 532259904
+Name                                    Size            Type Device                                      Group                                       Apartment                                   Seq1Group1Seq2Group2
+WSSD4888_04HPA075TQK413_dp_PFMUH24520584_NVR1572864000      NVRAM<0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4888_04HPA075TQK413_dp_PFMUH2452025D_NVR1572864000      NVRAM<0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4888_04HPA075TQK413_dp_PFMUH24520156_NVR1572864000      NVRAM<0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4888_04HPA075TQK413_dp_PFMUH245202D5_NVR1572864000      NVRAM<0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4888_04HPA075TQK413_dp_PFMUH245202C0_NVR1572864000      NVRAM<0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4888_04HPA075TQK413_dp_PFMUH2452020A_NVR1572864000      NVRAM<0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4888_04HPA075TQK413_dp_PFMUH24520582_NVR1572864000      NVRAM<0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4888_04HPA075TQK413_dp_PFMUH24520210_NVR1572864000      NVRAM<0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4888_04HPA075TQK413_dp_PFMUH24520259_NVR1572864000      NVRAM<0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4888_04HPA075TQK413_dp_PFMUH24520264_NVR1572864000      NVRAM<0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4888_04HPA075TQK413_dp_PFMUH245202C073700321787904  SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4888_04HPA075TQK413_dp_PFMUH2452025973700321787904  SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4888_04HPA075TQK413_dp_PFMUH2452058473700321787904  SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4888_04HPA075TQK413_dp_PFMUH2452021073700321787904  SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4888_04HPA075TQK413_dp_PFMUH2452058273700321787904  SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4888_04HPA075TQK413_dp_PFMUH2452020A73700321787904  SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4888_04HPA075TQK413_dp_PFMUH245202D573700321787904  SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4888_04HPA075TQK413_dp_PFMUH2452015673700321787904  SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4888_04HPA075TQK413_dp_PFMUH2452026473700321787904  SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+WSSD4888_04HPA075TQK413_dp_PFMUH2452025D73700321787904  SSD  <0:0>                                       <0:0>                                       <0:0>                                       0<0:0>0<0:0>SEC    
+
+
+Purity Apartment not found.
+Initial system setup is required which will remove everything from this array.
+If you believe the array may contain data, exit the puresetup procedure and 
+contact Pure Storage Support to determine the appropriate action.
+(continue/EXIT):continue(continue/EXIT): continue
+wait-for-state pureapp stop/waiting
+wait-for-state mariadb stop/waiting
+lio-drv disabling
+wait-for-state foed stop/waiting
+wait-for-state lio-drv stop/waiting
+wait-for-state purity_started stop/waiting
+wait-for-state pure_ems_fusiond stop/waiting
+Pure Storage is offline.
+Mar 14 15:53:41.317 puresetup: PROGRESS: Purity Apartment not found. Creating new apartment
+Configure Rapid Data Locking (y/N):nConfigure Rapid Data Locking (y/N): n
+Mar 14 15:54:13.585 puresetup.py: PROGRESS: Checking if apartment already exists
+Mar 14 15:54:17.344 puresetup.py: PROGRESS: Verifying all IO cards are supported
+Mar 14 15:54:17.344 puresetup.py: PROGRESS: Detecting shelves connected to the array
+Check io card pci id's........ OK
+purity.service stablized: done
+purity start/running
+platform: ..done
+foed: ..done
+gui: .....done
+rest: done
+platform_env: 0.done
+quorum: .....done
+foed_env: 771.771.771.771.153.0.done
+remote_patch: done
+driver: done
+san: ........done
+health: .done
+lio-drv: done
+middleware-db: done
+middleware: ......                                                                               
+Broadcast message from root@PCTFJ2426004D-ct0 (somewhere) (Fri Mar 14 15:54:59 
+                                                                               
+                                                                               
+Purity//FA Information System Status                                           
+====================================                                           
+Purity//FA has successfully started for                                        
+the first time after an install                                                
+or upgrade. Purity//FA 6.7.2 (202501290440+0d1c24065579-67x)                   
+is now set to be the default.                                                  
+                                                                               
+                                                                               
+Broadcast message from root@PCTFJ2426004D-ct0 (somewhere) (Fri Mar 14 15:54:59 
+                                                                               
+                                                                               
+Purity//FA Information System Status                                           
+====================================                                           
+Purity//FA has successfully started for                                        
+the first time after an install                                                
+or upgrade. Purity//FA 6.7.2 (202501290440+0d1c24065579-67x)                   
+is now set to be the default.                                                  
+                                                                               
+.............done
+vasa: done
+Pure Storage is online.
+
+CONFIG_TASK_ARRAY_ID: 2004991-124151264-2740835934981001536
+CONFIG_TASK_COMPLETED:CONFIG_TASK_START_PURITY
+Name       Created                  Expires
+puresetup  2025-03-14 15:55:14 UTC  2025-03-14 16:55:14 UTC
+Mar 14 15:55:15.596 puresetup: PROGRESS: Initialization complete. Starting array specific configuration
+Mar 14 15:55:15.596 puresetup: PROGRESS: Start user input configuration
+Start initial configuration for management and support connectivity.
+No changes are made until entire configuration is confirmed.
+Enter CTRL-C at any time to quit the puresetup procedure.
+Array Name:Tunable parameter set: PURESETUP_COMPLETED=1
+Array Name:
+Array Name:cvgprodpurCVGPRODPUR02Array Name: CVGPRODPUR02
+Note: All IP addresses are entered as IPv4 address or IPv6 address,
+and netmask takes the format xxx.xxx.xxx.xxx for IPv4 or [0-128] for IPv6.
+The following management port configuration will be applied to ct0.eth0
+Physical IP Address:10.1.220.30Physical IP Address: 10.1.220.30
+Virtual IP Address:10.1.220.301Virtual IP Address: 10.1.220.31
+Netmask:255.255.255.0Netmask: 255.255.255.0
+Gateway:255.255.255.010.1.220.311Gateway: 10.1.220.1
+DNS Servers (1-3, comma-separated):10.7.0.10,10.7.0.11DNS Servers (1-3, comma-separated): 10.7.0.10,10.7.0.11
+DNS Domain Suffix (Optional):PROD.QUEST.prod.quest.corpDNS Domain Suffix (Optional): prod.quest.corp
+NTP Server: time1.purestorage.com,time2.purestorage.com,time3.purestorage.com10.1.1.1NTP Server: 10.1.1.1
+Email Relay Server (Optional):relay.prod.quest.corpEmail Relay Server (Optional): relay.prod.quest.corp
+Email Sender Domain:quest.comEmail Sender Domain: quest.com
+Alert Email Recipients (Optional: 0-19, comma-separated):Alert Email Recipients (Optional: 0-19, comma-separated): martyn.cooper@quest.co
+m, brian.ramirez@quest.com, tomas.dominguez@quest.comAlert Email Recipients (Optional: 0-19, comma-separated): martyn.cooper@quest.co
+m, brian.ramirez@quest.com, tomas.dominguez@quest.com
+HTTP proxy for phonehome and remoteassist (optional):HTTP proxy for phonehome and remoteassist (optional):
+Confirm configuration.
+  Physical IP:           10.1.220.30
+  Virtual IP:            10.1.220.31
+  Netmask:               255.255.255.0
+  Gateway:               10.1.220.1
+  DNS Servers:           10.7.0.10,10.7.0.11
+  DNS Domain:            prod.quest.corp
+  NTP Servers:           10.1.1.1
+  SMTP Relay Host:       relay.prod.quest.corp
+  SMTP Sender Domain:    quest.com
+  Alert Email Recipients:martyn.cooper@quest.com, brian.ramirez@quest.com, tomas.dominguez@quest.com
+  HTTP proxy:            
+Type 'y' to apply configurations or 'n' to re-enter parameters:yType 'y' to apply configurations or 'n' to re-enter parameters: y
+Mar 14 16:23:54.347 puresetup.py: PROGRESS: Applying new array configuration
+Applying configuration to the array.
+Configuring array name.
+Configuring management port.
+Configuring network interfaces
+Configuring DNS.
+Configuring NTP server.
+Configuring HTTP proxy.
+Configuring SMTP sender domain and relay host.
+Configuring capacity limit.
+Configuring alert email.
+New configuration applied.
+CONFIG_TASK_COMPLETED:CONFIG_TASK_CONFIG_FLASHARRAY
+Skipping connectivity tests.
+CONFIG_TASK_COMPLETED:CONFIG_TASK_TEST_CONNECTIVITY
+passwd: password expiry information changed.
+Current time zone: Etc/UTC
+Change time zone [requires reboot] (y/n):yChange time zone [requires reboot] (y/n): y
+Configuring tzdata
+------------------
+
+Please select the geographic area in which you live. Subsequent configuration 
+questions will narrow this down by presenting a list of cities, representing the
+time zones in which they are located.
+
+  1. Africa      4. Australia     7. Atlantic Ocean  10. Pacific Ocean
+  2. America     5. Arctic Ocean  8. Europe          11. US
+  3. Antarctica  6. Asia          9. Indian Ocean    12. None of the above
+
+Geographic area: 2
+
+
+Please select the city or region corresponding to your time zone.
+
+  1. Adak                       80. Juneau
+  2. Anchorage                  81. Louisville (Kentucky)
+  3. Anguilla                   82. Monticello (Kentucky)
+  4. Antigua                    83. Kralendijk
+  5. Araguaina                  84. La Paz
+  6. Buenos Aires (Argentina)   85. Lima
+  7. Catamarca (Argentina)      86. Los Angeles
+  8. Cordoba (Argentina)        87. Lower Princes
+  9. Jujuy (Argentina)          88. Maceio
+  10. La Rioja (Argentina)      89. Managua
+  11. Mendoza (Argentina)       90. Manaus
+  12. Rio Gallegos (Argentina)  91. Marigot
+  13. Salta (Argentina)         92. Martinique
+  14. San Juan (Argentina)      93. Matamoros
+  15. San Luis (Argentina)      94. Mazatlan
+  16. Tucuman (Argentina)       95. Menominee
+  17. Ushuaia (Argentina)       96. Merida
+  18. Aruba                     97. Metlakatla
+[More] 
+
+  19. Asuncion                  98. Mexico City
+  20. Atikokan                  99. Miquelon
+  21. Atka                      100. Moncton
+  22. Bahia                     101. Monterrey
+  23. Bahia Banderas            102. Montevideo
+  24. Barbados                  103. Montreal
+  25. Belem                     104. Montserrat
+  26. Belize                    105. Nassau
+  27. Blanc-Sablon              106. New York
+  28. Boa Vista                 107. Nipigon
+  29. Bogota                    108. Nome
+  30. Boise                     109. Fernando de Noronha
+  31. Cambridge Bay             110. Beulah (North Dakota)
+  32. Campo Grande              111. Center (North Dakota)
+  33. Cancun                    112. New Salem (North Dakota)
+  34. Caracas                   113. Nuuk
+  35. Cayenne                   114. Ojinaga
+  36. Cayman                    115. Panama
+  37. Chicago                   116. Pangnirtung
+  38. Chihuahua                 117. Paramaribo
+  39. Ciudad_Juarez             118. Phoenix
+  40. Coral Harbour             119. Port-au-Prince
+[More] 
+
+  41. Costa Rica                120. Port of Spain
+  42. Creston                   121. Porto Acre
+  43. Cuiaba                    122. Porto Velho
+  44. Curaçao                  123. Puerto Rico
+  45. Danmarkshavn              124. Punta Arenas
+  46. Dawson                    125. Rainy River
+  47. Dawson Creek              126. Rankin Inlet
+  48. Denver                    127. Recife
+  49. Detroit                   128. Regina
+  50. Dominica                  129. Resolute
+  51. Edmonton                  130. Rio Branco
+  52. Eirunepe                  131. Santa Isabel
+  53. El Salvador               132. Santarém
+  54. Ensenada                  133. Santiago
+  55. Fort Nelson               134. Santo Domingo
+  56. Fortaleza                 135. São Paulo
+  57. Glace Bay                 136. Scoresbysund
+  58. Godthab                   137. Shiprock
+  59. Goose Bay                 138. Sitka
+  60. Grand Turk                139. St Barthelemy
+  61. Grenada                   140. St Johns
+  62. Guadeloupe                141. St Kitts
+[More] 
+
+  63. Guatemala                 142. St Lucia
+  64. Guayaquil                 143. St Thomas
+  65. Guyana                    144. St Vincent
+  66. Halifax                   145. Swift Current
+  67. Havana                    146. Tegucigalpa
+  68. Hermosillo                147. Thule
+  69. Indianapolis (Indiana)    148. Thunder Bay
+  70. Knox (Indiana)            149. Tijuana
+  71. Marengo (Indiana)         150. Toronto
+  72. Petersburg (Indiana)      151. Tortola
+  73. Tell City (Indiana)       152. Vancouver
+  74. Vevay (Indiana)           153. Virgin
+  75. Vincennes (Indiana)       154. Whitehorse
+  76. Winamac (Indiana)         155. Winnipeg
+  77. Inuvik                    156. Yakutat
+  78. Iqaluit                   157. Yellowknife
+  79. Jamaica
+
+Time zone: 106
+
+
+
+Current default time zone: 'America/New_York'
+Local time is now:      Fri Mar 14 12:29:48 EDT 2025.
+Universal Time is now:  Fri Mar 14 16:29:48 UTC 2025.
+
+'/cache/timezone/localtime' -> '/usr/share/zoneinfo/America/New_York'
+Confirm time zone change from Etc/UTC to America/New_York
+(y/N):y(y/N): y
+Mar 14 16:29:49.540 puresetup: PROGRESS: Timezone changed, nvme configured, or storage type updated, rebooting
+monitor stop/waiting
+wait-for-state pureapp stop/waiting
+wait-for-state mariadb stop/waiting
+lio-drv disabling
+platform stop/waiting
+wait-for-state foed stop/waiting
+iostat stop/waiting
+statistics stop/waiting
+wait-for-state lio-drv stop/waiting
+purity stop/waiting
+wait-for-state purity_started stop/waiting
+wait-for-state pure_ems_fusiond stop/waiting
+Pure Storage is offline.
+Mar 14 16:30:20.993 puresetup.py: PROGRESS: Set purity to start automatically in next boot
+Tunable parameter set: PURITY_START_ON_BOOT=1
+Press ENTER to reboot
+
+Array is ready to use after reboot. You can access the Purity GUI and CLI on 10.1.220.31
+[Errno 111] Connection refused
+
+PCTFJ24510122 login: puresetup
+Password: 
+Last login: Fri Mar 14 15:30:23 UTC 2025 on ttyS0
+
+Fri Mar 14 16:35:07 2025
+Welcome puresetup. This is Purity Version 6.7.2 on FlashArray PCTFJ24510122
+http://www.purestorage.com/
+puresetup@PCTFJ24510122:~$ puresetup secondary --skip-connectivity-tests
+##########################################
+#   Welcome to the Purity Setup Wizard   #
+##########################################
+Mar 14 16:35:19.663 puresetup: PROGRESS: Starting secondary setup
+CONFIG_TASKS:CONFIG_TASK_START_PURITY,CONFIG_TASK_CONFIG_FLASHARRAY,CONFIG_TASK_TEST_CONNECTIVITY,CONFIG_TASK_ALL_COMPLETE,CONFIG_TASK_PURESETUP_EXITED
+Mar 14 16:35:21.725 puresetup.py: PROGRESS: Checking if the current Purity version supports this controller model
+Controller hardware model is compatible with the controller purity version
+Mar 14 16:35:21.802 puresetup.py: PROGRESS: Verifying controller firmware is up to date. Controller may reboot if firmware is updated.
+                                                                               
+Broadcast message from root@PCTFJ24510122 (somewhere) (Fri Mar 14 16:35:50 2025
+                                                                               
+===================================================================            
+=                   UPDATE AND/OR CHECK COMPLETE                  =            
+=                                                                 =            
+=    The firmware checks/updates on this system are now complete. =            
+=    No further action is required, and the controller will       =            
+=    continue running as usual                                    =            
+=                                                                 =            
+===================================================================            
+                                                                               
+                                                                               
+                                                                               
+Broadcast message from root@PCTFJ24510122 (somewhere) (Fri Mar 14 16:35:50 2025
+                                                                               
+===================================================================            
+=                   UPDATE AND/OR CHECK COMPLETE                  =            
+=                                                                 =            
+=    The firmware checks/updates on this system are now complete. =            
+=    No further action is required, and the controller will       =            
+=    continue running as usual                                    =            
+=                                                                 =            
+===================================================================            
+                                                                               
+                                                                               
+fw_update_tool started.
+Starting Boot-Time Components Update.
+Skipping BOOT_DRIVE_M5400 update since current image: (D4MU002) matches latest image: (D4MU002)
+Skipping BIOS update since current image: (L11P1N15) matches latest image: (L11P1N15)
+Skipping BIOS_STBY-1 update since current image: (L11P1N15) matches latest image: (L11P1N15)
+Skipping BMC update since current image: (v0.0e-0aad-r0010) matches latest image: (v0.0e-0aad-r0010)
+Skipping BMC_STBY-0 update since current image: (v0.09-0aad-r0010) to latest image: (v0.0e-0aad-r0010) is not supported.
+Skipping CPLD update since current image: (R126) matches latest image: (R126)
+Skipping ADD_IN_ETH_MLX_CX6_25G_AS-3 update since current image: (26.35.2000) matches latest image: (26.35.2000)
+Skipping PFX_68A0_IMG update since current image: (0x0390b762) matches latest image: (0x0390b762)
+Skipping PFX_68A0_CFG update since current image: (0x3249620c) matches latest image: (0x3249620c)
+Skipping PFX_68B0_IMG update since current image: (0x0390b762) matches latest image: (0x0390b762)
+Skipping PFX_68B0_CFG update since current image: (0x3249620c) matches latest image: (0x3249620c)
+Skipping LOM_ETH_MLX_CX6_100G update since current image: (22.37.1014) matches latest image: (22.37.1014)
+Skipping LOM_ETH_MLX_CX6_25G update since current image: (26.37.1014) matches latest image: (26.37.1014)
+Skipping ADD_IN_FC_ELX_G7PLUS-1 update since current image: (14.0.663.12) matches latest image: (14.0.663.12)
+All Boot-Time Components are up-to-date.
+
+Controller firmware is up to date.
+Mar 14 16:35:51.988 puresetup.py: PROGRESS: Verifying power supply firmware is up to date. If power supply firmware updates are needed, the update process can take a while.
+fw_update_tool started.
+Update PSU Devices
+ Policy: Update to latest but only if current version is below the specified minimum version allowed for the field, and don't downgrade.
+Skipping PSU_DELTA_TI_2000-0 update since current image: (00.28.33) matches latest image: (00.28.33)
+Skipping PSU_DELTA_TI_2000-1 update since current image: (00.28.33) matches latest image: (00.28.33)
+ Update PSU Complete
+Power supply firmware is up to date.
+Detected storage type E based on inventory of installed drives
+The detected storage type E is supported on FA-E
+Mar 14 16:35:56.258 puresetup.py: PROGRESS: Verifying all IO cards are supported
+Mar 14 16:35:56.258 puresetup.py: PROGRESS: Detecting shelves connected to the array
+Check io card pci id's........ OK
+purity.service stablized: done
+purity start/running
+platform: ..done
+foed: .done
+gui: ......done
+rest: done
+platform_env: 0.done
+quorum: ....done
+foed_env: 771.771.771.771.192.143.0.done
+remote_patch: done
+driver: done
+san: ...........done
+health: done
+lio-drv: done
+middleware-db: done
+middleware: done
+vasa: done
+Pure Storage is online.
+
+CONFIG_TASK_ARRAY_ID: 2004991-124151264-2740835934981001536
+CONFIG_TASK_COMPLETED:CONFIG_TASK_START_PURITY
+Name       Created                  Expires
+puresetup  2025-03-14 16:36:40 UTC  2025-03-14 17:36:40 UTC
+Mar 14 16:36:40.653 puresetup: PROGRESS: Initialization complete. Starting array specific configuration
+PROGRESS:puresetup:Initialization complete. Starting array specific configuration
+Mar 14 16:36:40.695 puresetup: PROGRESS: Start secondary input configuration
+PROGRESS:puresetup:Start secondary input configuration
+Start initial configuration for management and support connectivity.
+No changes are made until entire configuration is confirmed.
+Enter CTRL-C at any time to quit the puresetup procedure.
+INFO:puresetup:Start initial configuration for management and support connectivity.
+No changes are made until entire configuration is confirmed.
+Enter CTRL-C at any time to quit the puresetup procedure.
+Note: All IP addresses are entered as IPv4 address or IPv6 address,
+and netmask takes the format xxx.xxx.xxx.xxx for IPv4 or [0-128] for IPv6.
+The following management port configuration will be applied to ct1.eth0
+INFO:puresetup:Note: All IP addresses are entered as IPv4 address or IPv6 address,
+and netmask takes the format xxx.xxx.xxx.xxx for IPv4 or [0-128] for IPv6.
+The following management port configuration will be applied to ct1.eth0
+Physical IP Address:                                                                               
+Broadcast message from root@CVGPRODPUR02-ct1 (somewhere) (Fri Mar 14 16:36:43 2
+                                                                               
+                                                                               
+Purity//FA Information System Status                                           
+====================================                                           
+Purity//FA has successfully started for                                        
+the first time after an install                                                
+or upgrade. Purity//FA 6.7.2 (202501290440+0d1c24065579-67x)                   
+is now set to be the default.                                                  
+                                                                               
+                                                                               
+Broadcast message from root@CVGPRODPUR02-ct1 (somewhere) (Fri Mar 14 16:36:43 2
+                                                                               
+                                                                               
+Purity//FA Information System Status                                           
+====================================                                           
+Purity//FA has successfully started for                                        
+the first time after an install                                                
+or upgrade. Purity//FA 6.7.2 (202501290440+0d1c24065579-67x)                   
+is now set to be the default.                                                  
+                                                                               
+Physical IP Address:
+Physical IP Address:10.1.220.30Physical IP Address: 10.1.220.30
+DEBUG:puresetup:Prompt: Physical IP Address, Selected value: '10.1.220.30'
+Netmask:255.255.255.0Netmask: 255.255.255.0
+DEBUG:puresetup:Prompt: Netmask, Selected value: '255.255.255.0'
+Gateway:255.255.255.010.1.220.301Gateway: 10.1.220.1
+DEBUG:puresetup:Prompt: Gateway, Selected value: '10.1.220.1'
+DEBUG:puresetup:User input configuration: 
+DEBUG:puresetup:{
+    "management_port": {
+        "physical_ip": "10.1.220.30",
+        "netmask": "255.255.255.0",
+        "gateway": "10.1.220.1"
+    },
+    "alert_emails": "brian.ramirez@quest.com,flasharray-alerts@purestorage.com,martyn.cooper@quest.com,tomas.dominguez@quest.com",
+    "ntp_server": "10.1.1.1"
+}
+  Physical IP:           10.1.220.30
+INFO:puresetup:  Physical IP:           10.1.220.30
+  Netmask:               255.255.255.0
+INFO:puresetup:  Netmask:               255.255.255.0
+  Gateway:               10.1.220.1
+INFO:puresetup:  Gateway:               10.1.220.1
+Type 'y' to apply configurations or 'n' to re-enter parameters:yType 'y' to apply configurations or 'n' to re-enter parameters: y
+DEBUG:puresetup:Prompt: Type 'y' to apply configurations or 'n' to re-enter parameters, Selected value: 'y'
+Mar 14 16:38:11.968 puresetup.py: PROGRESS: Applying secondary configuration
+PROGRESS:puresetup:Applying secondary configuration
+DEBUG:puresetup:{
+    "management_port": {
+        "physical_ip": "10.1.220.30",
+        "netmask": "255.255.255.0",
+        "gateway": "10.1.220.1"
+    },
+    "alert_emails": "brian.ramirez@quest.com,flasharray-alerts@purestorage.com,martyn.cooper@quest.com,tomas.dominguez@quest.com",
+    "ntp_server": "10.1.1.1",
+    "interfaces": {}
+}
+Applying configuration to the array.
+INFO:puresetup:Applying configuration to the array.
+Configuring management port.
+INFO:puresetup:Configuring management port.
+DEBUG:puresetup:Applying management port to ct1.eth4: {
+    "physical_ip": "10.1.220.30",
+    "netmask": "255.255.255.0",
+    "gateway": "10.1.220.1"
+}
+Mar 14 16:38:12.361 puresetup.py: ERROR: Error on 10.1.220.30: Specified network address is already in use.
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/pure/wizard/puresetup.py", line 1395, in set_secondary_management_port
+    subprocess.check_output(
+  File "/usr/lib/python3/dist-packages/pure/lib/subprocess2.py", line 60, in check_output
+    ret = subprocess.check_output(*args, **kwargs)
+  File "/usr/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/usr/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/opt/Purity/sbin/purenetwork', 'eth', 'setattr', '--mode', 'static', '--address', '10.1.220.30', '--netmask', '255.255.255.0', '--gateway', '10.1.220.1', 'ct1.eth4']' returned non-zero exit status 1.
+ERROR:puresetup:Error on 10.1.220.30: Specified network address is already in use.
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/pure/wizard/puresetup.py", line 1395, in set_secondary_management_port
+    subprocess.check_output(
+  File "/usr/lib/python3/dist-packages/pure/lib/subprocess2.py", line 60, in check_output
+    ret = subprocess.check_output(*args, **kwargs)
+  File "/usr/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/usr/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/opt/Purity/sbin/purenetwork', 'eth', 'setattr', '--mode', 'static', '--address', '10.1.220.30', '--netmask', '255.255.255.0', '--gateway', '10.1.220.1', 'ct1.eth4']' returned non-zero exit status 1.
+Configuring management port.
+INFO:puresetup:Configuring management port.
+DEBUG:puresetup:Applying management port to ct1.eth4: {
+    "physical_ip": "10.1.220.30",
+    "netmask": "255.255.255.0",
+    "gateway": "10.1.220.1"
+}
+Mar 14 16:38:17.751 puresetup.py: ERROR: Error on 10.1.220.30: Specified network address is already in use.
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/pure/wizard/puresetup.py", line 1395, in set_secondary_management_port
+    subprocess.check_output(
+  File "/usr/lib/python3/dist-packages/pure/lib/subprocess2.py", line 60, in check_output
+    ret = subprocess.check_output(*args, **kwargs)
+  File "/usr/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/usr/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/opt/Purity/sbin/purenetwork', 'eth', 'setattr', '--mode', 'static', '--address', '10.1.220.30', '--netmask', '255.255.255.0', '--gateway', '10.1.220.1', 'ct1.eth4']' returned non-zero exit status 1.
+ERROR:puresetup:Error on 10.1.220.30: Specified network address is already in use.
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/pure/wizard/puresetup.py", line 1395, in set_secondary_management_port
+    subprocess.check_output(
+  File "/usr/lib/python3/dist-packages/pure/lib/subprocess2.py", line 60, in check_output
+    ret = subprocess.check_output(*args, **kwargs)
+  File "/usr/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/usr/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/opt/Purity/sbin/purenetwork', 'eth', 'setattr', '--mode', 'static', '--address', '10.1.220.30', '--netmask', '255.255.255.0', '--gateway', '10.1.220.1', 'ct1.eth4']' returned non-zero exit status 1.
+Press ENTER to reconfigure and test:Press ENTER to reconfigure and test:
+DEBUG:puresetup:Prompt: Press ENTER to reconfigure and test, Selected value: ''
+Mar 14 16:38:24.088 puresetup: PROGRESS: Start secondary input configuration
+PROGRESS:puresetup:Start secondary input configuration
+Start initial configuration for management and support connectivity.
+No changes are made until entire configuration is confirmed.
+Enter CTRL-C at any time to quit the puresetup procedure.
+INFO:puresetup:Start initial configuration for management and support connectivity.
+No changes are made until entire configuration is confirmed.
+Enter CTRL-C at any time to quit the puresetup procedure.
+Note: All IP addresses are entered as IPv4 address or IPv6 address,
+and netmask takes the format xxx.xxx.xxx.xxx for IPv4 or [0-128] for IPv6.
+The following management port configuration will be applied to ct1.eth0
+INFO:puresetup:Note: All IP addresses are entered as IPv4 address or IPv6 address,
+and netmask takes the format xxx.xxx.xxx.xxx for IPv4 or [0-128] for IPv6.
+The following management port configuration will be applied to ct1.eth0
+Physical IP Address: 10.1.220.3029Physical IP Address: 10.1.220.29
+DEBUG:puresetup:Prompt: Physical IP Address, Selected value: '10.1.220.29'
+Netmask: 255.255.255.0Netmask: 255.255.255.0
+DEBUG:puresetup:Prompt: Netmask, Selected value: '255.255.255.0'
+Gateway: 10.1.220.1Gateway: 10.1.220.1
+DEBUG:puresetup:Prompt: Gateway, Selected value: '10.1.220.1'
+DEBUG:puresetup:User input configuration: 
+DEBUG:puresetup:{
+    "management_port": {
+        "physical_ip": "10.1.220.29",
+        "netmask": "255.255.255.0",
+        "gateway": "10.1.220.1"
+    },
+    "alert_emails": "brian.ramirez@quest.com,flasharray-alerts@purestorage.com,martyn.cooper@quest.com,tomas.dominguez@quest.com",
+    "ntp_server": "10.1.1.1",
+    "interfaces": {}
+}
+  Physical IP:           10.1.220.29
+INFO:puresetup:  Physical IP:           10.1.220.29
+  Netmask:               255.255.255.0
+INFO:puresetup:  Netmask:               255.255.255.0
+  Gateway:               10.1.220.1
+INFO:puresetup:  Gateway:               10.1.220.1
+Type 'y' to apply configurations or 'n' to re-enter parameters:yyType 'y' to apply configurations or 'n' to re-enter parameters: y
+DEBUG:puresetup:Prompt: Type 'y' to apply configurations or 'n' to re-enter parameters, Selected value: 'y'
+Mar 14 16:38:53.112 puresetup.py: PROGRESS: Applying secondary configuration
+PROGRESS:puresetup:Applying secondary configuration
+DEBUG:puresetup:{
+    "management_port": {
+        "physical_ip": "10.1.220.29",
+        "netmask": "255.255.255.0",
+        "gateway": "10.1.220.1"
+    },
+    "alert_emails": "brian.ramirez@quest.com,flasharray-alerts@purestorage.com,martyn.cooper@quest.com,tomas.dominguez@quest.com",
+    "ntp_server": "10.1.1.1",
+    "interfaces": {}
+}
+Applying configuration to the array.
+INFO:puresetup:Applying configuration to the array.
+Configuring management port.
+INFO:puresetup:Configuring management port.
+DEBUG:puresetup:Applying management port to ct1.eth4: {
+    "physical_ip": "10.1.220.29",
+    "netmask": "255.255.255.0",
+    "gateway": "10.1.220.1"
+}
+Configuring network interfaces
+INFO:puresetup:Configuring network interfaces
+DEBUG:puresetup:Restarting networkconfigd
+DEBUG:puresetup:Restarted networkconfigd
+New configuration applied.
+INFO:puresetup:New configuration applied.
+CONFIG_TASK_COMPLETED:CONFIG_TASK_CONFIG_FLASHARRAY
+INFO:puresetup:CONFIG_TASK_COMPLETED:CONFIG_TASK_CONFIG_FLASHARRAY
+Skipping connectivity tests.
+INFO:puresetup:Skipping connectivity tests.
+CONFIG_TASK_COMPLETED:CONFIG_TASK_TEST_CONNECTIVITY
+INFO:puresetup:CONFIG_TASK_COMPLETED:CONFIG_TASK_TEST_CONNECTIVITY
+DEBUG:puresetup:Enabling pureuser
+passwd: password expiry information changed.
+DEBUG:puresetup:pureuser enabled
+Setting the new pureuser password.
+Type 'continue' to enter the new pureuser password:Setting the new pureuser password.                                              
+Type 'continue' to enter the new pureuser password:                             
+
+Exit without saving changes.
+INFO:puresetup:
+Exit without saving changes.
+CONFIG_TASK_COMPLETED:CONFIG_TASK_PURESETUP_EXITED
+INFO:puresetup:CONFIG_TASK_COMPLETED:CONFIG_TASK_PURESETUP_EXITED
+puresetup@PCTFJ24510122:~$ puresetup timeoznzone
+##########################################
+#   Welcome to the Purity Setup Wizard   #
+##########################################
+Name       Created                  Expires
+puresetup  2025-03-14 16:39:10 UTC  2025-03-14 17:39:10 UTC
+Changing the time zone will require a reboot on this controller.
+Current time zone: Etc/UTC
+Change time zone [requires reboot] (y/n):yChange time zone [requires reboot] (y/n): y
+Configuring tzdata
+------------------
+
+Please select the geographic area in which you live. Subsequent configuration 
+questions will narrow this down by presenting a list of cities, representing the
+time zones in which they are located.
+
+  1. Africa      4. Australia     7. Atlantic Ocean  10. Pacific Ocean
+  2. America     5. Arctic Ocean  8. Europe          11. US
+  3. Antarctica  6. Asia          9. Indian Ocean    12. None of the above
+
+Geographic area: 2
+
+
+Please select the city or region corresponding to your time zone.
+
+  1. Adak                       80. Juneau
+  2. Anchorage                  81. Louisville (Kentucky)
+  3. Anguilla                   82. Monticello (Kentucky)
+  4. Antigua                    83. Kralendijk
+  5. Araguaina                  84. La Paz
+  6. Buenos Aires (Argentina)   85. Lima
+  7. Catamarca (Argentina)      86. Los Angeles
+  8. Cordoba (Argentina)        87. Lower Princes
+  9. Jujuy (Argentina)          88. Maceio
+  10. La Rioja (Argentina)      89. Managua
+  11. Mendoza (Argentina)       90. Manaus
+  12. Rio Gallegos (Argentina)  91. Marigot
+  13. Salta (Argentina)         92. Martinique
+  14. San Juan (Argentina)      93. Matamoros
+  15. San Luis (Argentina)      94. Mazatlan
+  16. Tucuman (Argentina)       95. Menominee
+  17. Ushuaia (Argentina)       96. Merida
+  18. Aruba                     97. Metlakatla
+[More] 
+
+  19. Asuncion                  98. Mexico City
+  20. Atikokan                  99. Miquelon
+  21. Atka                      100. Moncton
+  22. Bahia                     101. Monterrey
+  23. Bahia Banderas            102. Montevideo
+  24. Barbados                  103. Montreal
+  25. Belem                     104. Montserrat
+  26. Belize                    105. Nassau
+  27. Blanc-Sablon              106. New York
+  28. Boa Vista                 107. Nipigon
+  29. Bogota                    108. Nome
+  30. Boise                     109. Fernando de Noronha
+  31. Cambridge Bay             110. Beulah (North Dakota)
+  32. Campo Grande              111. Center (North Dakota)
+  33. Cancun                    112. New Salem (North Dakota)
+  34. Caracas                   113. Nuuk
+  35. Cayenne                   114. Ojinaga
+  36. Cayman                    115. Panama
+  37. Chicago                   116. Pangnirtung
+  38. Chihuahua                 117. Paramaribo
+  39. Ciudad_Juarez             118. Phoenix
+  40. Coral Harbour             119. Port-au-Prince
+[More] 
+
+  41. Costa Rica                120. Port of Spain
+  42. Creston                   121. Porto Acre
+  43. Cuiaba                    122. Porto Velho
+  44. Curaçao                  123. Puerto Rico
+  45. Danmarkshavn              124. Punta Arenas
+  46. Dawson                    125. Rainy River
+  47. Dawson Creek              126. Rankin Inlet
+  48. Denver                    127. Recife
+  49. Detroit                   128. Regina
+  50. Dominica                  129. Resolute
+  51. Edmonton                  130. Rio Branco
+  52. Eirunepe                  131. Santa Isabel
+  53. El Salvador               132. Santarém
+  54. Ensenada                  133. Santiago
+  55. Fort Nelson               134. Santo Domingo
+  56. Fortaleza                 135. São Paulo
+  57. Glace Bay                 136. Scoresbysund
+  58. Godthab                   137. Shiprock
+  59. Goose Bay                 138. Sitka
+  60. Grand Turk                139. St Barthelemy
+  61. Grenada                   140. St Johns
+  62. Guadeloupe                141. St Kitts
+[More] 
+
+  63. Guatemala                 142. St Lucia
+  64. Guayaquil                 143. St Thomas
+  65. Guyana                    144. St Vincent
+  66. Halifax                   145. Swift Current
+  67. Havana                    146. Tegucigalpa
+  68. Hermosillo                147. Thule
+  69. Indianapolis (Indiana)    148. Thunder Bay
+  70. Knox (Indiana)            149. Tijuana
+  71. Marengo (Indiana)         150. Toronto
+  72. Petersburg (Indiana)      151. Tortola
+  73. Tell City (Indiana)       152. Vancouver
+  74. Vevay (Indiana)           153. Virgin
+  75. Vincennes (Indiana)       154. Whitehorse
+  76. Winamac (Indiana)         155. Winnipeg
+  77. Inuvik                    156. Yakutat
+  78. Iqaluit                   157. Yellowknife
+  79. Jamaica
+
+Time zone: 106
+
+
+
+Current default time zone: 'America/New_York'
+Local time is now:      Fri Mar 14 12:39:20 EDT 2025.
+Universal Time is now:  Fri Mar 14 16:39:20 UTC 2025.
+
+'/cache/timezone/localtime' -> '/usr/share/zoneinfo/America/New_York'
+Confirm time zone change from Etc/UTC to America/New_York
+(y/N):y(y/N): y
+Press ENTER to reboot
+
+This controller will be online after reboot.
+
+CVGPRODPUR02-ct0 login: puresetup     eng
+1) Authenticate via CloudAssist
+2) Authenticate via command line
+3) Restore challenge
+Type the number corresponding to the authentication method you want to use.
+
+Selection: 2
+Challenge: kid:1 chinar outbid baft hami 2004991-124151264-2740835934981001536
+
+Enter response or type 'save' to save challenge for later: fhar    
+Log
+CVGPRODPUR02-ct0 login: 1 pureeng
+1) Authenticate via CloudAssist
+2) Authenticate via command line
+3) Restore challenge
+Type the number corresponding to the authentication method you want to use.
+
+Selection: 1
+
+An email for identity verification will be sent once email is entered.
+Please follow the authentication instructions provided there and return to this screen when finished or if email has not been received.
+
+
+Enter an email address: fharris@purestorage.com
+An error occurred with CloudAssist authentication!
+
+1) Authenticate via CloudAssist
+2) Authenticate via command line
+3) Restore challenge
+Type the number corresponding to the authentication method you want to use.
+
+Selection: 

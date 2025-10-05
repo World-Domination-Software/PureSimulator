@@ -1,0 +1,766 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.09.19 18:57:20 =~=~=~=~=~=~=~=~=~=~=~=
+
+ZVLPR001-ct0 login: pureeng
+1) Authenticate via CloudAssist
+2) Authenticate via command line
+3) Restore challenge
+Type the number corresponding to the authentication method you want to use.
+
+Selection: 1
+
+An email for identity verification will be sent once email is entered.
+Please follow the authentication instructions provided there and return to this screen when finished or if email has not been received.
+
+
+Enter an email address: fharris@purestorage.com
+Successfully authenticated
+Last login: Sat Jun 26 15:20:58 EDT 2021 on ttyS0
+
+Fri Sep 19 18:58:32 2025
+Welcome pureeng. This is Purity Version 6.7.5 on FlashArray ZVLPR001
+http://www.purestorage.com/
+pureeng@ZVLPR001-ct0:~$ purehw list
+Name       Status         Identify  Slot  Index  Speed       Temperature  Voltage  Details
+CH0        ok             off       -     0      -           -            -        -
+CH0.BAY0   ok             off       -     0      -           -            -        -
+CH0.BAY1   ok             off       -     1      -           -            -        -
+CH0.BAY2   ok             off       -     2      -           -            -        -
+CH0.BAY3   ok             off       -     3      -           -            -        -
+CH0.BAY4   ok             off       -     4      -           -            -        -
+CH0.BAY5   ok             off       -     5      -           -            -        -
+CH0.BAY6   ok             off       -     6      -           -            -        -
+CH0.BAY7   ok             off       -     7      -           -            -        -
+CH0.BAY8   ok             off       -     8      -           -            -        -
+CH0.BAY9   ok             off       -     9      -           -            -        -
+CH0.BAY10  ok             off       -     10     -           -            -        -
+CH0.BAY11  ok             off       -     11     -           -            -        -
+CH0.BAY12  ok             off       -     12     -           -            -        -
+CH0.BAY13  ok             off       -     13     -           -            -        -
+CH0.BAY14  ok             off       -     14     -           -            -        -
+CH0.BAY15  ok             off       -     15     -           -            -        -
+CH0.BAY16  ok             off       -     16     -           -            -        -
+CH0.BAY17  ok             off       -     17     -           -            -        -
+CH0.BAY18  ok             off       -     18     -           -            -        -
+CH0.BAY19  ok             off       -     19     -           -            -        -
+CH0.NVB0   ok             off       -     0      -           -            -        -
+CH0.NVB1   ok             off       -     1      -           -            -        -
+CH0.NVB2   not_installed  off       -     2      -           -            -        -
+CH0.NVB3   not_installed  off       -     3      -           -            -        -
+CH0.PWR0   ok             -         -     0      -           -            204 V    -
+CH0.PWR1   ok             -         -     1      -           -            206 V    -
+CH0.TMP0   ok             -         -     0      -           22 C         -        -
+CT0        ok             off       -     0      -           -            -        -
+CT0.ETH0   ok             -         -     0      1.00 Gb/s   -            -        -
+CT0.ETH1   ok             -         -     1      0.00 b/s    -            -        -
+CT0.ETH2   ok             -         -     2      0.00 b/s    -            -        -
+CT0.ETH3   ok             -         -     3      0.00 b/s    -            -        -
+CT0.ETH4   ok             -         -     4      0.00 b/s    -            -        -
+CT0.ETH5   ok             -         -     5      0.00 b/s    -            -        -
+CT0.ETH6   ok             -         -     6      0.00 b/s    -            -        -
+CT0.ETH7   ok             -         -     7      0.00 b/s    -            -        -
+CT0.ETH8   ok             -         -     8      0.00 b/s    -            -        -
+CT0.ETH9   ok             -         -     9      0.00 b/s    -            -        -
+CT0.FAN0   ok             -         -     0      -           -            -        -
+CT0.FAN1   ok             -         -     1      -           -            -        -
+CT0.FAN2   ok             -         -     2      -           -            -        -
+CT0.FAN3   ok             -         -     3      -           -            -        -
+CT0.FAN4   ok             -         -     4      -           -            -        -
+CT0.FAN5   ok             -         -     5      -           -            -        -
+CT0.FC0    ok             -         0     0      16.00 Gb/s  -            -        -
+CT0.FC1    ok             -         0     1      16.00 Gb/s  -            -        -
+CT0.FC8    ok             -         2     8      0.00 b/s    -            -        -
+CT0.FC9    ok             -         2     9      0.00 b/s    -            -        -
+CT0.TMP0   ok             -         -     0      -           34 C         -        -
+CT0.TMP1   ok             -         -     1      -           35 C         -        -
+CT0.TMP2   ok             -         -     2      -           30 C         -        -
+CT0.TMP3   ok             -         -     3      -           42 C         -        -
+CT0.TMP4   ok             -         -     4      -           39 C         -        -
+CT0.TMP5   ok             -         -     5      -           35 C         -        -
+CT0.TMP6   ok             -         -     6      -           39 C         -        -
+CT0.TMP7   ok             -         -     7      -           29 C         -        -
+CT0.TMP8   ok             -         -     8      -           29 C         -        -
+CT0.TMP9   ok             -         -     9      -           30 C         -        -
+CT0.TMP10  ok             -         -     10     -           29 C         -        -
+CT0.TMP11  ok             -         -     11     -           29 C         -        -
+CT0.TMP12  ok             -         -     12     -           29 C         -        -
+CT0.TMP13  ok             -         -     13     -           33 C         -        -
+CT0.TMP14  ok             -         -     14     -           32 C         -        -
+CT0.TMP15  ok             -         -     15     -           32 C         -        -
+CT0.TMP16  ok             -         -     16     -           30 C         -        -
+CT0.TMP17  ok             -         -     17     -           31 C         -        -
+CT0.TMP18  ok             -         -     18     -           30 C         -        -
+CT0.TMP19  ok             -         -     19     -           32 C         -        -
+CT0.TMP20  ok             -         -     20     -           27 C         -        -
+CT0.TMP21  ok             -         -     21     -           35 C         -        -
+CT0.TMP22  ok             -         -     22     -           33 C         -        -
+CT0.TMP23  ok             -         -     23     -           35 C         -        -
+CT0.TMP24  ok             -         -     24     -           35 C         -        -
+CT0.TMP25  ok             -         -     25     -           39 C         -        -
+CT0.TMP26  ok             -         -     26     -           32 C         -        -
+CT1        ok             off       -     1      -           -            -        -
+CT1.ETH0   ok             -         -     0      1.00 Gb/s   -            -        -
+CT1.ETH1   ok             -         -     1      0.00 b/s    -            -        -
+CT1.ETH2   ok             -         -     2      0.00 b/s    -            -        -
+CT1.ETH3   ok             -         -     3      0.00 b/s    -            -        -
+CT1.ETH4   ok             -         -     4      0.00 b/s    -            -        -
+CT1.ETH5   ok             -         -     5      0.00 b/s    -            -        -
+CT1.ETH6   ok             -         -     6      0.00 b/s    -            -        -
+CT1.ETH7   ok             -         -     7      0.00 b/s    -            -        -
+CT1.ETH8   ok             -         -     8      0.00 b/s    -            -        -
+CT1.ETH9   ok             -         -     9      0.00 b/s    -            -        -
+CT1.FAN0   ok             -         -     0      -           -            -        -
+CT1.FAN1   ok             -         -     1      -           -            -        -
+CT1.FAN2   ok             -         -     2      -           -            -        -
+CT1.FAN3   ok             -         -     3      -           -            -        -
+CT1.FAN4   ok             -         -     4      -           -            -        -
+CT1.FAN5   ok             -         -     5      -           -            -        -
+CT1.FC0    ok             -         0     0      16.00 Gb/s  -            -        -
+CT1.FC1    ok             -         0     1      16.00 Gb/s  -            -        -
+CT1.FC8    ok             -         2     8      0.00 b/s    -            -        -
+CT1.FC9    ok             -         2     9      0.00 b/s    -            -        -
+CT1.TMP0   ok             -         -     0      -           34 C         -        -
+CT1.TMP1   ok             -         -     1      -           35 C         -        -
+CT1.TMP2   ok             -         -     2      -           32 C         -        -
+CT1.TMP3   ok             -         -     3      -           37 C         -        -
+CT1.TMP4   ok             -         -     4      -           41 C         -        -
+CT1.TMP5   ok             -         -     5      -           35 C         -        -
+CT1.TMP6   ok             -         -     6      -           38 C         -        -
+CT1.TMP7   ok             -         -     7      -           30 C         -        -
+CT1.TMP8   ok             -         -     8      -           31 C         -        -
+CT1.TMP9   ok             -         -     9      -           31 C         -        -
+CT1.TMP10  ok             -         -     10     -           30 C         -        -
+CT1.TMP11  ok             -         -     11     -           30 C         -        -
+CT1.TMP12  ok             -         -     12     -           30 C         -        -
+CT1.TMP13  ok             -         -     13     -           32 C         -        -
+CT1.TMP14  ok             -         -     14     -           33 C         -        -
+CT1.TMP15  ok             -         -     15     -           32 C         -        -
+CT1.TMP16  ok             -         -     16     -           31 C         -        -
+CT1.TMP17  ok             -         -     17     -           31 C         -        -
+CT1.TMP18  ok             -         -     18     -           31 C         -        -
+CT1.TMP19  ok             -         -     19     -           32 C         -        -
+CT1.TMP20  ok             -         -     20     -           29 C         -        -
+CT1.TMP21  ok             -         -     21     -           37 C         -        -
+CT1.TMP22  ok             -         -     22     -           33 C         -        -
+CT1.TMP23  ok             -         -     23     -           36 C         -        -
+CT1.TMP24  ok             -         -     24     -           36 C         -        -
+CT1.TMP25  ok             -         -     25     -           36 C         -        -
+CT1.TMP26  ok             -         -     26     -           34 C         -        -
+pureeng@ZVLPR001-ct0:~$ purearray list --controller
+Name  Type              Mode       Model     Version  Status  Current Mode Since       Internal Details
+CT0   array_controller  primary    FA-X20R3  6.7.5    ready   2025-08-08 19:31:28 EDT  
+CT1   array_controller  secondary  FA-X20R3  6.7.5    ready   2025-08-08 19:46:31 EDT  
+pureeng@ZVLPR001-ct0:~$ sudo su
+     root@ZVLPR001-ct0:/var/home/pureeng# purearray iobalance --smapletime 15
+usage: iobalance [-h] [--sampletime SAMPLETIME]
+iobalance: error: unrecognized arguments: --smapletime 15
+     root@ZVLPR001-ct0:/var/home/pureeng# iobalance --sampletime 15
+sampling host I/O for 15 seconds...
+                Host  CT0 I/O Count  CT1 I/O Count  
+         zvfrfr1vio1       26.00       27.00  
+         zvfrfr1vio2        4.00        4.00  
+         zvfrfr2vio1       41.00        8.00  ! unbalanced I/O
+         zvfrfr2vio2        8.00        8.00  
+            zvfrwms1      336.00      351.00  
+          zvlfr3vio1       13.00        9.00  
+          zvlfr3vio2        9.00        8.00  
+          zvlfr4vio1        4.00        4.00  
+          zvlfr4vio2        4.00        4.00  
+            zvlvc001       11.00        8.00  
+             zvlwms1       3.13K       3.20K  
+     root@ZVLPR001-ct0:/var/home/pureeng# fcpureportlist=`pureport list --initiator | awk '/Target/,0' | cut -d. -f1 | awk '{print $1,$5}' | grep -v '-' | grep -v "Initiator" | uniq -c; echo`; fcpureportlistcount=`echo "$fcpureportlist" | awk '{total += $1} END {print total}'`; echo -e "$fcpureportlist\n\n"; echo -e "\tTotal FC connections: $fcpureportlistcount\n\n";
+      2 10:00:00:10:9B:A3:13:30 CT0
+      2 10:00:00:10:9B:A3:13:31 CT1
+      2 10:00:00:10:9B:A7:42:18 CT0
+      2 10:00:00:10:9B:A7:42:19 CT1
+      2 10:00:00:10:9B:A7:42:21 CT0
+      2 10:00:00:10:9B:A7:42:22 CT1
+      2 10:00:00:10:9B:A7:D3:1B CT0
+      2 10:00:00:10:9B:A7:D3:1C CT1
+      2 10:00:00:10:9B:D4:64:4E CT0
+      2 10:00:00:10:9B:D4:64:4F CT1
+      2 10:00:00:10:9B:D4:64:66 CT0
+      2 10:00:00:10:9B:D4:64:67 CT1
+      2 10:00:00:10:9B:D8:C5:D2 CT0
+      2 10:00:00:10:9B:D8:C5:D3 CT1
+      2 10:00:00:10:9B:DA:CF:66 CT0
+      2 10:00:00:10:9B:DA:CF:67 CT1
+      2 C0:50:76:0B:8C:02:00:04 CT0
+      2 C0:50:76:0B:8C:02:00:06 CT1
+      2 C0:50:76:0B:8C:02:00:08 CT0
+      2 C0:50:76:0B:8C:02:00:0A CT1
+      2 C0:50:76:0B:FD:A4:00:04 CT1
+      2 C0:50:76:0B:FD:A4:00:06 CT0
+      2 C0:50:76:0B:FD:A4:00:08 CT0
+      2 C0:50:76:0B:FD:A4:00:0A CT1
+      2 C0:50:76:0B:FD:A4:00:0C CT1
+      2 C0:50:76:0B:FD:A4:00:0E CT0
+
+
+Total FC connections: 52
+
+
+     root@ZVLPR001-ct0:/var/home/pureeng# puremessage list --open
+     root@ZVLPR001-ct0:/var/home/pureeng# puretun ne --llist
+usage: puretune [-h]
+                (--set tunable value JIRA | --unset tunable | --list [LIST ...])
+                [--app NAME | --local | --cloud-store | --virtual-drives]
+                [--csv] [--ignore-puredb] [--ignore-fe-fsck] [--verbose]
+                [--verbose-debug]
+puretune: error: one of the arguments --set --unset --list is required
+     root@ZVLPR001-ct0:/var/home/pureeng# puretune --list
+Warning: failed to retrieve some tunable status (local puredb, peer puredb, local puredb-platform, peer puredb-platform, local puredb-chastity, peer puredb-chastity)
+Inconsistently or unnecessarily set tunables:
+PS_FILEGW_SMB_HIDE_DOT_SNAPSHOT:
+local pureadm             - 0  (Set during upgrade to 6.3.9 - CLOUD-75192)
+peer pureadm              - 0  (Set during upgrade to 6.3.9 - CLOUD-75192)
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+PURITY_START_ON_BOOT:
+local pureadm             - 1 
+peer pureadm              - 1 
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+ATOM_5206:
+local pureadm             - 1 
+peer pureadm              - 1 
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+ATOM_5177:
+local pureadm             - DEF  (CLOUD-113977)
+peer pureadm              - DEF  (CLOUD-113977)
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+ATOM_SECURITY_BUNDLE_FA_2024_01_15:
+local pureadm             - PCTFJ21050023,PCTFJ210900D6,6.3.9  (CLOUD-113977 set by atom)
+peer pureadm              - PCTFJ21050023,PCTFJ210900D6,6.3.9  (CLOUD-113977 set by atom)
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+ATOM_PUREAPP_MONITOR_MEM_LEAK:
+local pureadm             - PCTFJ21050023,PCTFJ210900D6,6.3.9  (PURE-295339 set by cdu)
+peer pureadm              - PCTFJ21050023,PCTFJ210900D6,6.3.9  (PURE-295339 set by cdu)
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+ATOM_10072:
+local pureadm             - GH  (CLOUD-152371)
+peer pureadm              - GH  (CLOUD-152371)
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+ATOM_SECURITY_PATCH_FA_2025_A:
+local pureadm             - PCTFJ21050023,PCTFJ210900D6,6.5.6  (CLOUD-152371 set by atom-vats)
+peer pureadm              - PCTFJ21050023,PCTFJ210900D6,6.5.6  (CLOUD-152371 set by atom-vats)
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+ATOM_10052:
+local pureadm             - 1  (PURE-357200)
+peer pureadm              - 1  (PURE-357200)
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+ATOM_REFRESH_STALE_CONFIG:
+local pureadm             - PCTFJ21050023,PCTFJ210900D6,6.5.6  (PURE-357200 set by manual)
+peer pureadm              - PCTFJ21050023,PCTFJ210900D6,6.5.6  (PURE-357200 set by manual)
+local puredb              - <unset> 
+peer puredb               - <unset> 
+local puredb --platform   - <unset> 
+peer puredb --platform    - <unset> 
+local puredb --chastity   - <unset> 
+peer puredb --chastity    - <unset> 
+     root@ZVLPR001-ct0:/var/home/pureeng# pureadm status && ssh peer pureadm status
+Process status:
+purity start/running
+lio-drv start/running
+foed start/running, process 18905
+platform start/running, process 18852
+gui start/running, process 18830
+rest start/running, process 21446
+monitor start/running, process 18842
+iostat start/running, process 28103
+statistics start/running, process 18872
+middleware start/running, process 23345
+vasa start/running, process 23305
+platform working
+foed working
+gui working
+platform_env working
+quorum working
+foed_env working
+remote_patch working
+driver working
+san working
+health working
+lio-drv working
+middleware-db working
+middleware working
+vasa working
+Process status:
+purity start/running
+lio-drv start/running
+foed start/running, process 17126
+platform start/running, process 17053
+gui start/running, process 17031
+rest start/running, process 20251
+monitor start/running, process 17042
+iostat start/running, process 27142
+statistics start/running, process 17101
+middleware start/running, process 21092
+vasa start/running, process 21041
+platform working
+foed working
+gui working
+platform_env working
+quorum working
+foed_env working
+remote_patch working
+driver working
+san working
+health working
+lio-drv working
+middleware-db working
+middleware working
+vasa working
+     root@ZVLPR001-ct0:/var/home/pureeng# puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    healthy  512.09G   -
+CH0.BAY1   SSD    healthy  512.09G   -
+CH0.BAY2   SSD    healthy  512.09G   -
+CH0.BAY3   SSD    healthy  512.09G   -
+CH0.BAY4   SSD    healthy  512.09G   -
+CH0.BAY5   SSD    healthy  512.09G   -
+CH0.BAY6   SSD    healthy  512.09G   -
+CH0.BAY7   SSD    healthy  512.09G   -
+CH0.BAY8   SSD    healthy  512.09G   -
+CH0.BAY9   SSD    healthy  512.09G   -
+CH0.BAY10  SSD    healthy  512.09G   -
+CH0.BAY11  SSD    healthy  512.09G   -
+CH0.BAY12  SSD    healthy  512.09G   -
+CH0.BAY13  SSD    healthy  512.09G   -
+CH0.BAY14  SSD    healthy  512.09G   -
+CH0.BAY15  SSD    healthy  512.09G   -
+CH0.BAY16  SSD    healthy  512.09G   -
+CH0.BAY17  SSD    healthy  512.09G   -
+CH0.BAY18  SSD    healthy  512.09G   -
+CH0.BAY19  SSD    healthy  512.09G   -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  unused   0.00      -
+CH0.NVB3   NVRAM  unused   0.00      -
+     root@ZVLPR001-ct0:/var/home/pureeng# puredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    SAS       healthy  255.79G   0.00          0.00      13615694928404104802:10166401771289188337  3/20           10772/30427
+CH0.DRV0   2        SSD    SAS       healthy  255.79G   0.00          0.00      5515594958734905306:13155299935748548245   3/20           10892/30427
+CH0.DRV1   1        SSD    SAS       healthy  255.79G   0.00          0.00      1185727995970273292:9586079817751309135    4/20           10963/30427
+CH0.DRV1   2        SSD    SAS       healthy  255.79G   0.00          0.00      1161001911388817124:12798119742626069510   3/20           10755/30427
+CH0.DRV2   1        SSD    SAS       healthy  255.79G   0.00          0.00      12999583860082560812:13519240566701741772  4/20           10811/30427
+CH0.DRV2   2        SSD    SAS       healthy  255.79G   0.00          0.00      5141003224488166398:9907976367849554384    3/20           10922/30427
+CH0.DRV3   1        SSD    SAS       healthy  255.79G   0.00          0.00      8279007230206889355:11248878040228938047   4/20           10949/30427
+CH0.DRV3   2        SSD    SAS       healthy  255.79G   0.00          0.00      2019206503884672892:13270412778617320751   3/20           10747/30427
+CH0.DRV4   1        SSD    SAS       healthy  255.79G   0.00          0.00      16308867176000276561:10558320652510099600  2/20           10887/30427
+CH0.DRV4   2        SSD    SAS       healthy  255.79G   0.00          0.00      13203301274326289854:11839979579726804533  1/20           10842/30427
+CH0.DRV5   1        SSD    SAS       healthy  255.79G   0.00          0.00      1137524421033217060:12960014397535241959   3/20           10820/30427
+CH0.DRV5   2        SSD    SAS       healthy  255.79G   0.00          0.00      16469056466311725705:10203893406071619835  3/20           10936/30427
+CH0.DRV6   1        SSD    SAS       healthy  255.79G   0.00          0.00      3281365136895264641:9259853098567822533    3/20           10880/30427
+CH0.DRV6   2        SSD    SAS       healthy  255.79G   0.00          0.00      7632964769017384028:13662021625944984186   2/20           10757/30427
+CH0.DRV7   1        SSD    SAS       healthy  255.79G   0.00          0.00      5748642345151581835:10428578003712241694   2/20           10875/30427
+CH0.DRV7   2        SSD    SAS       healthy  255.79G   0.00          0.00      12921463002406670166:10519455600937392416  3/20           10876/30427
+CH0.DRV8   1        SSD    SAS       healthy  255.79G   0.00          0.00      5935216836879142533:12165708619248376495   3/20           10717/30427
+CH0.DRV8   2        SSD    SAS       healthy  255.79G   0.00          0.00      5642150088756776576:12416706187834686589   3/20           10974/30427
+CH0.DRV9   1        SSD    SAS       healthy  255.79G   0.00          0.00      16814850237839526951:11257110335819903402  2/20           10714/30427
+CH0.DRV9   2        SSD    SAS       healthy  255.79G   0.00          0.00      12857844370355407676:9722325955682051222   6/20           10909/30427
+CH0.DRV10  1        SSD    SAS       healthy  255.79G   0.00          0.00      13931321653452163353:9845478709330474136   4/20           10970/30427
+CH0.DRV10  2        SSD    SAS       healthy  255.79G   0.00          0.00      9423281677037355564:9609814846837539373    2/20           10774/30427
+CH0.DRV11  1        SSD    SAS       healthy  255.79G   0.00          0.00      17924042337094683531:10346441352184983883  1/20           10931/30427
+CH0.DRV11  2        SSD    SAS       healthy  255.79G   0.00          0.00      3027770780743387546:10603610798751480847   5/20           10962/30427
+CH0.DRV12  1        SSD    SAS       healthy  255.79G   0.00          0.00      9614942912205441198:10040198960677761026   5/20           10845/30427
+CH0.DRV12  2        SSD    SAS       healthy  255.79G   0.00          0.00      8444709885350725940:10449393115729769477   2/20           10875/30427
+CH0.DRV13  1        SSD    SAS       healthy  255.79G   0.00          0.00      1786313576672806095:9529311325894081585    4/20           10879/30427
+CH0.DRV13  2        SSD    SAS       healthy  255.79G   0.00          0.00      6832546421220461439:9295882624860930425    2/20           10725/30427
+CH0.DRV14  1        SSD    SAS       healthy  255.79G   0.00          0.00      711642315443489231:11892928304323165886    3/20           10940/30427
+CH0.DRV14  2        SSD    SAS       healthy  255.79G   0.00          0.00      13530997540101832970:9835464351698973750   3/20           10837/30427
+CH0.DRV15  1        SSD    SAS       healthy  255.79G   0.00          0.00      735891525299293904:12451016523516914450    5/20           10846/30427
+CH0.DRV15  2        SSD    SAS       healthy  255.79G   0.00          0.00      13464536439199580993:11788381959471187417  4/20           10739/30427
+CH0.DRV16  1        SSD    SAS       healthy  255.79G   0.00          0.00      7460767738525466824:10708056937845248843   2/20           10882/30427
+CH0.DRV16  2        SSD    SAS       healthy  255.79G   0.00          0.00      14931251039856642578:10403224225449240085  3/20           10703/30427
+CH0.DRV17  1        SSD    SAS       healthy  255.79G   0.00          0.00      17500554833385115338:12465809401114271189  3/20           10732/30427
+CH0.DRV17  2        SSD    SAS       healthy  255.79G   0.00          0.00      8124989040152759764:9967711479653749276    1/20           10891/30427
+CH0.DRV18  1        SSD    SAS       healthy  255.79G   0.00          0.00      13290951055710242848:10698524153784265150  3/20           10895/30427
+CH0.DRV18  2        SSD    SAS       healthy  255.79G   0.00          0.00      5519009896359545497:9972572462182698149    4/20           10850/30427
+CH0.DRV19  1        SSD    SAS       healthy  255.79G   0.00          0.00      14421294095278818392:10690437034435014003  5/20           10858/30427
+CH0.DRV19  2        SSD    SAS       healthy  255.79G   0.00          0.00      4695015232517129909:11770385903492942593   3/20           10688/30427
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      13804935079130055454:11403911775816960188  -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      3696432239896444959:11492134791681485567   -              -
+     root@ZVLPR001-ct0:/var/home/pureeng# purearray list --space
+Name      Capacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique   Snapshots  Shared   System  Replication  Total
+ZVLPR001  5.58T     100%    17948G            7.37T    58%                7.4 to 1        17.5 to 1        675.62G  720.66G    624.41G  0.00    0.00         1.97T
+     root@ZVLPR001-ct0:/var/home/pureeng# cat /etc/timezone
+America/Indiana/Indianapolis     root@ZVLPR001-ct0:/var/home/pureeng# purenetwork list
+Name      Enabled  Speed       Services
+CT0.FC0   True     16.00 Gb/s  scsi-fc
+CT0.FC1   True     16.00 Gb/s  scsi-fc
+CT0.FC8   True     16.00 Gb/s  scsi-fc
+CT0.FC9   True     16.00 Gb/s  scsi-fc
+CT1.FC0   True     16.00 Gb/s  scsi-fc
+CT1.FC1   True     16.00 Gb/s  scsi-fc
+CT1.FC8   True     16.00 Gb/s  scsi-fc
+CT1.FC9   True     16.00 Gb/s  scsi-fc
+ct0.eth0  True     1.00 Gb/s   management
+ct0.eth1  False    1.00 Gb/s   management
+ct0.eth4  False    25.00 Gb/s  iscsi
+ct0.eth5  False    25.00 Gb/s  iscsi
+ct0.eth6  False    50.00 Gb/s  -
+ct0.eth7  False    50.00 Gb/s  -
+ct0.eth8  False    50.00 Gb/s  -
+ct0.eth9  False    50.00 Gb/s  -
+ct1.eth0  True     1.00 Gb/s   management
+ct1.eth1  False    1.00 Gb/s   management
+ct1.eth4  False    25.00 Gb/s  iscsi
+ct1.eth5  False    25.00 Gb/s  iscsi
+ct1.eth6  False    50.00 Gb/s  -
+ct1.eth7  False    50.00 Gb/s  -
+ct1.eth8  False    50.00 Gb/s  -
+ct1.eth9  False    50.00 Gb/s  -
+replbond  False    25.00 Gb/s  replication
+vir0      True     1.00 Gb/s   management
+vir1      False    1.00 Gb/s   management
+     root@ZVLPR001-ct0:/var/home/pureeng# pureport list
+Name     WWN                      Portal  IQN  NQN  Failover
+CT0.FC0  52:4A:93:7E:BA:A0:32:00  -       -    -    -
+CT0.FC1  52:4A:93:7E:BA:A0:32:01  -       -    -    -
+CT0.FC8  52:4A:93:7E:BA:A0:32:08  -       -    -    -
+CT0.FC9  52:4A:93:7E:BA:A0:32:09  -       -    -    -
+CT1.FC0  52:4A:93:7E:BA:A0:32:10  -       -    -    -
+CT1.FC1  52:4A:93:7E:BA:A0:32:11  -       -    -    -
+CT1.FC8  52:4A:93:7E:BA:A0:32:18  -       -    -    -
+CT1.FC9  52:4A:93:7E:BA:A0:32:19  -       -    -    -
+     root@ZVLPR001-ct0:/var/home/pureeng# puresetup show
+##########################################
+#   Welcome to the Purity Setup Wizard   #
+##########################################
+  Physical IP:           10.1.228.26
+  Virtual IP:            10.1.228.25
+  Netmask:               255.255.252.0
+  Gateway:               10.1.228.1
+  DNS Servers:           10.1.230.10,10.1.230.11,172.23.0.6
+  DNS Domain:            dolgen.net
+  NTP Servers:           tick.dolgen.net,tock.dolgen.net
+  SMTP Relay Host:       mxmr.dolgen.net
+  SMTP Sender Domain:    dollargeneral.com
+  Alert Email Recipients:flasharray-alerts@purestorage.com,sanalert@dollargeneral.com
+  HTTP proxy:            
+  Capacity Limit:        
+  Capacity Limit Target: 
+  Physical IP:           10.1.228.27
+  Netmask:               255.255.252.0
+  Gateway:               10.1.228.1
+CONFIG_TASK_COMPLETED:CONFIG_TASK_PURESETUP_EXITED
+     root@ZVLPR001-ct0:/var/home/pureeng# purearray list --cotrollernntrollertroller
+Name  Type              Mode       Model     Version  Status  Current Mode Since       Internal Details
+CT0   array_controller  primary    FA-X20R3  6.7.5    ready   2025-08-08 19:31:28 EDT  
+CT1   array_controller  secondary  FA-X20R3  6.7.5    ready   2025-08-08 19:46:31 EDT  
+     root@ZVLPR001-ct0:/var/home/pureeng# date;purewes controller setattr --verify-array ZVLPR001 ct0 --mode secondary
+Fri Sep 19 07:08:29 PM EDT 2025
+Run checks before making changes ...
+Check peer purity status...... SUCCESS
+Check pureport list........... The pureport list check failed with ERROR: Port {'target.name': None, 'target.iqn': None, 'target.wwn': None, 'target.nqn': None, 'target.portal': None, 'target.failover': None, 'target': {'name': None, 'iqn': None, 'wwn': None, 'nqn': None, 'portal': None, 'failover': None}, 'initiator.wwn': 'C0:50:76:0B:FD:CA:00:07', 'initiator.iqn': None, 'initiator.nqn': None, 'initiator.portal': None, 'initiator': {'wwn': 'C0:50:76:0B:FD:CA:00:07', 'iqn': None, 'nqn': None, 'portal': None}} doesn't contain field target.name or target.name is None!
+Would you like to ignore this check? (y/n): y
+Overriding pureport list check based on user input
+SUCCESS
+Check IO balance.............. Checking iobalance before proceeding, sampling for 30 seconds, retrying 3 times, adding 30 seconds with each retry
+Try 1/4: Sampling I/O for 30 seconds
+I/O is balanced
+SUCCESS
+     root@ZVLPR001-ct0:/var/home/pureeng# purealert tag --timeout 240m --maintenance
+Name         Created                  Expires
+maintenance  2025-09-19 19:10:17 EDT  2025-09-19 23:10:17 EDT
+     root@ZVLPR001-ct0:/var/home/pureeng# purearray list --controller
+Name  Type              Mode       Model     Version  Status  Current Mode Since       Internal Details
+CT0   array_controller  secondary  FA-X20R3  6.7.5    ready   2025-09-19 19:09:14 EDT  
+CT1   array_controller  primary    FA-X20R3  6.7.5    ready   2025-09-19 19:09:10 EDT  
+     root@ZVLPR001-ct0:/var/home/pureeng# purearray list --controllerlert tag --timeout 240m --maintenance     root@ZVLPR001-ct0:/var/home/pureeng# date;purewes controller setattr --verify-array ZVLPR001 ct0 --mode secondary     root@ZVLPR001-ct0:/var/home/pureeng# purearray list --controller
+setup showport listnetworkcat /etc/timezonepurearray list --spacedb list drivesrive listadm status && ssh peer pureadm status     root@ZVLPR001-ct0:/var/home/pureeng# tune --list
+listmessage list --openfcpureportlist=`pureport list --initiator | awk '/Target/,0' | cut -d. -f1 | awk '{print $1,$5}' | grep -v '-' | grep -v "Initiator" | uniq -c; echo`; fcpureportlistcount=`echo "$fcpureportlist" | awk '{total += $1} END {print total}'`; echo -e "$fcpureportlist\n\n"; echo -e "\tTotal FC connections: $fcpureportlistcount\n\n";
+      2 10:00:00:10:9B:A3:13:30 CT0
+      2 10:00:00:10:9B:A3:13:31 CT1
+      2 10:00:00:10:9B:A7:42:18 CT0
+      2 10:00:00:10:9B:A7:42:19 CT1
+      2 10:00:00:10:9B:A7:42:21 CT0
+      2 10:00:00:10:9B:A7:42:22 CT1
+      2 10:00:00:10:9B:A7:D3:1B CT0
+      2 10:00:00:10:9B:A7:D3:1C CT1
+      2 10:00:00:10:9B:D4:64:4E CT0
+      2 10:00:00:10:9B:D4:64:4F CT1
+      2 10:00:00:10:9B:D4:64:66 CT0
+      2 10:00:00:10:9B:D4:64:67 CT1
+      2 10:00:00:10:9B:D8:C5:D2 CT0
+      2 10:00:00:10:9B:D8:C5:D3 CT1
+      2 10:00:00:10:9B:DA:CF:66 CT0
+      2 10:00:00:10:9B:DA:CF:67 CT1
+      2 C0:50:76:0B:8C:02:00:04 CT0
+      2 C0:50:76:0B:8C:02:00:06 CT1
+      2 C0:50:76:0B:8C:02:00:08 CT0
+      2 C0:50:76:0B:8C:02:00:0A CT1
+      2 C0:50:76:0B:FD:A4:00:04 CT1
+      2 C0:50:76:0B:FD:A4:00:06 CT0
+      2 C0:50:76:0B:FD:A4:00:08 CT0
+      2 C0:50:76:0B:FD:A4:00:0A CT1
+      2 C0:50:76:0B:FD:A4:00:0C CT1
+      2 C0:50:76:0B:FD:A4:00:0E CT0
+
+
+Total FC connections: 52
+
+
+     root@ZVLPR001-ct0:/var/home/pureeng# purelalert list --tag
+Name         Created                  Expires
+maintenance  2025-09-19 19:10:17 EDT  2025-09-19 23:10:17 EDT
+     root@ZVLPR001-ct0:/var/home/pureeng# purearray list --controller
+Name  Type              Mode       Model     Version  Status  Current Mode Since       Internal Details
+CT0   array_controller  secondary  FA-X20R3  6.7.5    ready   2025-09-19 19:09:14 EDT  
+CT1   array_controller  primary    FA-X20R3  6.7.5    ready   2025-09-19 19:09:10 EDT  
+     root@ZVLPR001-ct0:/var/home/pureeng# =~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.09.19 19:24:19 =~=~=~=~=~=~=~=~=~=~=~=
+
+Purity
+
+PCTFJ2511009F login: puresetup
+Password: 
+<fw_update_tool>
+===================================================================
+=                            NOTICE                               =
+===================================================================
+=                                                                 =
+=    Firmware is currently being checked and/or updated           =
+=    on this controller.                                          =
+=                                                                 =
+=    If updates are necessary they will be applied automatically, =
+=    and one or more automatic reboots may occur as a result.     =
+=    A completion notice will be provided when done.              =
+=                                                                 =
+=    DO NOT RESTART OR REMOVE POWER WHILE UPDATE IS IN PROGRESS   =
+=                                                                 =
+===================================================================
+<fw_update_tool>
+
+Fri Sep 19 23:18:10 2025
+Welcome puresetup. This is Purity Version 6.5.5 on FlashArray PCTFJ2511009F
+http://www.purestorage.com/
+puresetup@PCTFJ2511009F:~$ puremount /dev/sdb1 /mnt
+puresetup@PCTFJ2511009F:~$ cp /mnt/6.7.5/* .
+puresetup@PCTFJ2511009F:~$ pureboot list
+===================================================================
+=                            NOTICE                               =
+===================================================================
+=                                                                 =
+=    Firmware is currently being checked and/or updated           =
+=    on this controller.                                          =
+=                                                                 =
+=    If updates are necessary they will be applied automatically, =
+=    and one or more automatic reboots may occur as a result.     =
+=    A completion notice will be provided when done.              =
+=                                                                 =
+=    DO NOT RESTART OR REMOVE POWER WHILE UPDATE IS IN PROGRESS   =
+=                                                                 =
+===================================================================
+
+
+Marked entry (*) is currently running
+Marked entry (-->) will run at next reboot
+*-->0. Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (202403191505+d9f0e688c788) on first (/dev/sda3)
+    1. Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (202403191505+d9f0e688c788) on second (/dev/sda4)
+puresetup@PCTFJ2511009F:~$  GNU GRUB  version 2.06
+
+/----------------------------------------------------------------------------\||||||||||||||||||||||||||\----------------------------------------------------------------------------/     Use the ^ and v keys to select which entry is highlighted.          
+      Press enter to boot the selected OS, `e' to edit the commands       
+      before booting or `c' for a command-line.                            *Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (2024031915>
+ Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (2024031915>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        The highlighted entry will be executed automatically in 3s.                    The highlighted entry will be executed automatically in 2s.                    The highlighted entry will be executed automatically in 1s.                    The highlighted entry will be executed automatically in 0s.                 
+Purity
+
+PCTFJ2511009F login: puresetup
+Password: 
+
+Login incorrect
+PCTFJ2511009F login: puresetup
+Password: 
+
+
+Login incorrect
+PCTFJ2511009F login: puresetup
+Password: 
+<fw_update_tool>
+===================================================================
+=                            NOTICE                               =
+===================================================================
+=                                                                 =
+=    Firmware is currently being checked and/or updated           =
+=    on this controller.                                          =
+=                                                                 =
+=    If updates are necessary they will be applied automatically, =
+=    and one or more automatic reboots may occur as a result.     =
+=    A completion notice will be provided when done.              =
+=                                                                 =
+=    DO NOT RESTART OR REMOVE POWER WHILE UPDATE IS IN PROGRESS   =
+=                                                                 =
+===================================================================
+<fw_update_tool>
+Last login: Fri Sep 19 23:18:10 UTC 2025 on ttyS0
+
+Fri Sep 19 23:24:15 2025
+Welcome puresetup. This is Purity Version 6.5.5 on FlashArray PCTFJ2511009F
+http://www.purestorage.com/
+puresetup@PCTFJ2511009F:~$                                                                                
+Broadcast message from root@PCTFJ2511009F (somewhere) (Fri Sep 19 23:24:47 2025
+                                                                               
+===================================================================            
+=                   UPDATE AND/OR CHECK COMPLETE                  =            
+=                                                                 =            
+=    The firmware checks/updates on this system are now complete. =            
+=    No further action is required, and the controller will       =            
+=    continue running as usual                                    =            
+=                                                                 =            
+===================================================================            
+                                                                               
+                                                                               
+
+puresetup@PCTFJ2511009F:~$ pureinstall purity_6.7.5_202507101114+cee438d02700.ppkg
+Installing Purity on alternate partition labeled second.
+Erasing Purity software image from alternate partition second to prepare for installation.
+WARNING: Do not interrupt this process!!
+Unpacking new Purity software.
+...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Verifying package...
+
+Finalizing installation. This may take several minutes.
+Executing /altroot/opt/purextras/bin/finish-install.sh
+Executing /altroot/opt/purextras/bin/finish-install.azure-propagate.sh
+Executing /altroot/opt/purextras/bin/finish-install.cbs.sh
+Executing /altroot/opt/purextras/bin/finish-install.fix-dpkg.sh
+Purity installed.
+Installation complete. The new Purity version will load at next reboot.
+
+Important!
+The first boot of a new Purity version may take longer if the new version includes controller firmware updates.
+DO NOT REBOOT THE CONTROLLER DURING THE FIRMWARE UPDATE.
+
+Refer to http://community.purestorage.com for more information about the Purity upgrade process and firmware updates.
+puresetup@PCTFJ2511009F:~$ pureboot reboot --offline
+[Errno 111] Connection refused
+ GNU GRUB  version 2.06
+
+/----------------------------------------------------------------------------\||||||||||||||||||||||||||\----------------------------------------------------------------------------/     Use the ^ and v keys to select which entry is highlighted.          
+      Press enter to boot the selected OS, `e' to edit the commands       
+      before booting or `c' for a command-line.                             Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (2024031915>
+*Purity 6.7.5 (202507101114+cee438d02700) with kernel 5.15.123+ (2025062316>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        The highlighted entry will be executed automatically in 3s.                    The highlighted entry will be executed automatically in 2s.                    The highlighted entry will be executed automatically in 1s.                    The highlighted entry will be executed automatically in 0s.                 
+Purity
+
+PCTFJ2511009F login: puresetup
+Password: 
+<fw_update_tool>
+===================================================================
+=                            NOTICE                               =
+===================================================================
+=                                                                 =
+=    Firmware is currently being checked and/or updated           =
+=    on this controller.                                          =
+=                                                                 =
+=    If updates are necessary they will be applied automatically, =
+=    and one or more automatic reboots may occur as a result.     =
+=    A completion notice will be provided when done.              =
+=                                                                 =
+=    DO NOT RESTART OR REMOVE POWER WHILE UPDATE IS IN PROGRESS   =
+=                                                                 =
+===================================================================
+<fw_update_tool>
+Last login: Fri Sep 19 23:24:14 UTC 2025 on ttyS0
+
+Fri Sep 19 23:36:58 2025
+Welcome puresetup. This is Purity Version 6.7.5 on FlashArray PCTFJ2511009F
+http://www.purestorage.com/
+puresetup@PCTFJ2511009F:~$  GNU GRUB  version 2.06
+
+/----------------------------------------------------------------------------\||||||||||||||||||||||||||\----------------------------------------------------------------------------/     Use the ^ and v keys to select which entry is highlighted.          
+      Press enter to boot the selected OS, `e' to edit the commands       
+      before booting or `c' for a command-line.                             Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (2024031915>
+*Purity 6.7.5 (202507101114+cee438d02700) with kernel 5.15.123+ (2025062316>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        The highlighted entry will be executed automatically in 3s.                    The highlighted entry will be executed automatically in 2s.                    The highlighted entry will be executed automatically in 1s.                    The highlighted entry will be executed automatically in 0s.                 
+Purity
+
+PCTFJ2511009F login:  GNU GRUB  version 2.06
+
+/----------------------------------------------------------------------------\||||||||||||||||||||||||||\----------------------------------------------------------------------------/     Use the ^ and v keys to select which entry is highlighted.          
+      Press enter to boot the selected OS, `e' to edit the commands       
+      before booting or `c' for a command-line.                             Purity 6.5.5 (202404130351+34e2b1e66ad3) with kernel 5.15.123+ (2024031915>
+*Purity 6.7.5 (202507101114+cee438d02700) with kernel 5.15.123+ (2025062316>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        The highlighted entry will be executed automatically in 3s.                    The highlighted entry will be executed automatically in 2s.                    The highlighted entry will be executed automatically in 1s.                    The highlighted entry will be executed automatically in 0s.                 
+Purity
+
+PCTFJ2511009F login: puresetup
+Password: 
+<fw_update_tool>
+===================================================================
+=                            NOTICE                               =
+===================================================================
+=                                                                 =
+=    Firmware is currently being checked and/or updated           =
+=    on this controller.                                          =
+=                                                                 =
+=    If updates are necessary they will be applied automatically, =
+=    and one or more automatic reboots may occur as a result.     =
+=    A completion notice will be provided when done.              =
+=                                                                 =
+=    DO NOT RESTART OR REMOVE POWER WHILE UPDATE IS IN PROGRESS   =
+=                                                                 =
+===================================================================
+<fw_update_tool>
+Last login: Fri Sep 19 23:36:57 UTC 2025 on ttyS0
+
+Sat Sep 20 00:00:02 2025
+Welcome puresetup. This is Purity Version 6.7.5 on FlashArray PCTFJ2511009F
+http://www.purestorage.com/
+puresetup@PCTFJ2511009F:~$                                                                                
+Broadcast message from root@PCTFJ2511009F (somewhere) (Sat Sep 20 00:00:25 2025
+                                                                               
+===================================================================            
+=                   UPDATE AND/OR CHECK COMPLETE                  =            
+=                                                                 =            
+=    The firmware checks/updates on this system are now complete. =            
+=    No further action is required, and the controller will       =            
+=    continue running as usual                                    =            
+=                                                                 =            
+===================================================================            
+                                                                               
+                                                                               

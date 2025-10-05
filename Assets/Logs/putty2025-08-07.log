@@ -1,0 +1,1003 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.08.07 10:09:30 =~=~=~=~=~=~=~=~=~=~=~=
+
+     root@MOPURE01-ct1:~# puredrive list
+Name       Type   Status     Capacity  Details
+CH0.BAY0   SSD    evacuated  0.00      -
+CH0.BAY1   SSD    evacuated  0.00      -
+CH0.BAY2   SSD    evacuated  0.00      -
+CH0.BAY3   SSD    evacuated  0.00      -
+CH0.BAY4   SSD    evacuated  0.00      -
+CH0.BAY5   SSD    evacuated  0.00      -
+CH0.BAY6   SSD    evacuated  0.00      -
+CH0.BAY7   SSD    evacuated  0.00      -
+CH0.BAY8   SSD    evacuated  0.00      -
+CH0.BAY9   SSD    evacuated  0.00      -
+CH0.BAY10  SSD    evacuated  0.00      -
+CH0.BAY11  SSD    evacuated  0.00      -
+CH0.BAY12  SSD    evacuated  0.00      -
+CH0.BAY13  SSD    evacuated  0.00      -
+CH0.BAY14  SSD    evacuated  0.00      -
+CH0.BAY15  SSD    evacuated  0.00      -
+CH0.BAY16  SSD    evacuated  0.00      -
+CH0.BAY17  SSD    evacuated  0.00      -
+CH0.BAY18  SSD    evacuated  0.00      -
+CH0.BAY19  SSD    evacuated  0.00      -
+CH0.NVB0   NVRAM  healthy    7.52G     -
+CH0.NVB1   NVRAM  healthy    7.52G     -
+CH0.NVB2   NVRAM  unused     0.00      -
+CH0.NVB3   NVRAM  unused     0.00      -
+SH9.BAY0   SSD    healthy    4.56T     -
+SH9.BAY1   SSD    healthy    4.56T     -
+SH9.BAY2   SSD    healthy    4.56T     -
+SH9.BAY3   SSD    healthy    4.56T     -
+SH9.BAY4   SSD    healthy    4.56T     -
+SH9.BAY5   SSD    healthy    4.56T     -
+SH9.BAY6   SSD    healthy    4.56T     -
+SH9.BAY7   SSD    healthy    4.56T     -
+SH9.BAY8   SSD    healthy    4.56T     -
+SH9.BAY9   SSD    healthy    4.56T     -
+SH9.BAY10  SSD    healthy    4.56T     -
+SH9.BAY11  SSD    healthy    4.56T     -
+SH9.BAY12  SSD    healthy    4.56T     -
+SH9.BAY13  SSD    healthy    4.56T     -
+SH9.BAY14  -      unused     0.00      -
+SH9.BAY15  -      unused     0.00      -
+SH9.BAY16  -      unused     0.00      -
+SH9.BAY17  -      unused     0.00      -
+SH9.BAY18  -      unused     0.00      -
+SH9.BAY19  -      unused     0.00      -
+SH9.BAY20  -      unused     0.00      -
+SH9.BAY21  -      unused     0.00      -
+SH9.BAY22  -      unused     0.00      -
+SH9.BAY23  -      unused     0.00      -
+SH9.BAY24  -      unused     0.00      -
+SH9.BAY25  -      unused     0.00      -
+SH9.BAY26  -      unused     0.00      -
+SH9.BAY27  -      unused     0.00      -
+     root@MOPURE01-ct1:~# purearray list --controller
+Name     Type              Mode       Model     Version  Status  Internal Details
+CT0      array_controller  secondary  FA-X20R3  6.5.10   ready   
+CT1      array_controller  primary    FA-X20R3  6.5.10   ready   
+SH9.SC0  shelf_controller  -          DFSC2     2.2.0    -       -
+SH9.SC1  shelf_controller  -          DFSC2     2.2.0    -       -
+     root@MOPURE01-ct1:~# purearray remoteassist --connect
+Name          Status      Opened                   Expires
+MOPURE01-ct1  connecting  2025-08-07 10:09:53 EDT  2025-08-09 10:09:53 EDT
+     root@MOPURE01-ct1:~# exit
+logout
+     root@MOPURE01-ct0:/var/home/pureeng# purearray remoteassist --connect
+Name          Status      Opened                   Expires
+MOPURE01-ct0  connecting  2025-08-07 10:10:05 EDT  2025-08-09 10:10:05 EDT
+     root@MOPURE01-ct0:/var/home/pureeng# purearray remoteassist --connectstatus
+Name          Status      Opened                   Expires
+MOPURE01-ct0  connecting  2025-08-07 10:10:05 EDT  2025-08-09 10:10:05 EDT
+     root@MOPURE01-ct0:/var/home/pureeng# purearray remoteassist --status
+Name          Status     Opened                   Expires
+MOPURE01-ct0  connected  2025-08-07 10:10:05 EDT  2025-08-09 10:10:05 EDT
+     root@MOPURE01-ct0:/var/home/pureeng# purearray list --space 
+Name      Capacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  Total
+MOPURE01  36.13T    100%    68265G            39.50T   41%                16.1 to 1       34.0 to 1        9.07T   5.83T      2.30T   0.00    0.00         17.20T
+     root@MOPURE01-ct0:/var/home/pureeng# purealert tag --timeout 360m --maintenance   
+Name         Created                  Expires
+maintenance  2025-08-07 10:11:58 EDT  2025-08-07 16:11:58 EDT
+     root@MOPURE01-ct0:/var/home/pureeng# puremessage list --open
+     root@MOPURE01-ct0:/var/home/pureeng# puredrive list
+Name       Type   Status     Capacity  Details
+CH0.BAY0   SSD    evacuated  0.00      -
+CH0.BAY1   SSD    evacuated  0.00      -
+CH0.BAY2   SSD    evacuated  0.00      -
+CH0.BAY3   SSD    evacuated  0.00      -
+CH0.BAY4   SSD    evacuated  0.00      -
+CH0.BAY5   SSD    evacuated  0.00      -
+CH0.BAY6   SSD    evacuated  0.00      -
+CH0.BAY7   SSD    evacuated  0.00      -
+CH0.BAY8   SSD    evacuated  0.00      -
+CH0.BAY9   SSD    evacuated  0.00      -
+CH0.BAY10  SSD    evacuated  0.00      -
+CH0.BAY11  SSD    evacuated  0.00      -
+CH0.BAY12  SSD    evacuated  0.00      -
+CH0.BAY13  SSD    evacuated  0.00      -
+CH0.BAY14  SSD    evacuated  0.00      -
+CH0.BAY15  SSD    evacuated  0.00      -
+CH0.BAY16  SSD    evacuated  0.00      -
+CH0.BAY17  SSD    evacuated  0.00      -
+CH0.BAY18  SSD    evacuated  0.00      -
+CH0.BAY19  SSD    evacuated  0.00      -
+CH0.NVB0   NVRAM  healthy    7.52G     -
+CH0.NVB1   NVRAM  healthy    7.52G     -
+CH0.NVB2   NVRAM  unused     0.00      -
+CH0.NVB3   NVRAM  unused     0.00      -
+SH9.BAY0   SSD    healthy    4.56T     -
+SH9.BAY1   SSD    healthy    4.56T     -
+SH9.BAY2   SSD    healthy    4.56T     -
+SH9.BAY3   SSD    healthy    4.56T     -
+SH9.BAY4   SSD    healthy    4.56T     -
+SH9.BAY5   SSD    healthy    4.56T     -
+SH9.BAY6   SSD    healthy    4.56T     -
+SH9.BAY7   SSD    healthy    4.56T     -
+SH9.BAY8   SSD    healthy    4.56T     -
+SH9.BAY9   SSD    healthy    4.56T     -
+SH9.BAY10  SSD    healthy    4.56T     -
+SH9.BAY11  SSD    healthy    4.56T     -
+SH9.BAY12  SSD    healthy    4.56T     -
+SH9.BAY13  SSD    healthy    4.56T     -
+SH9.BAY14  -      unused     0.00      -
+SH9.BAY15  -      unused     0.00      -
+SH9.BAY16  -      unused     0.00      -
+SH9.BAY17  -      unused     0.00      -
+SH9.BAY18  -      unused     0.00      -
+SH9.BAY19  -      unused     0.00      -
+SH9.BAY20  -      unused     0.00      -
+SH9.BAY21  -      unused     0.00      -
+SH9.BAY22  -      unused     0.00      -
+SH9.BAY23  -      unused     0.00      -
+SH9.BAY24  -      unused     0.00      -
+SH9.BAY25  -      unused     0.00      -
+SH9.BAY26  -      unused     0.00      -
+SH9.BAY27  -      unused     0.00      -
+     root@MOPURE01-ct0:/var/home/pureeng# puredrive list
+Name       Type   Status     Capacity  Details
+CH0.BAY0   SSD    empty      0.00      -
+CH0.BAY1   SSD    evacuated  0.00      -
+CH0.BAY2   SSD    evacuated  0.00      -
+CH0.BAY3   SSD    evacuated  0.00      -
+CH0.BAY4   SSD    evacuated  0.00      -
+CH0.BAY5   SSD    evacuated  0.00      -
+CH0.BAY6   SSD    evacuated  0.00      -
+CH0.BAY7   SSD    evacuated  0.00      -
+CH0.BAY8   SSD    evacuated  0.00      -
+CH0.BAY9   SSD    evacuated  0.00      -
+CH0.BAY10  SSD    evacuated  0.00      -
+CH0.BAY11  SSD    evacuated  0.00      -
+CH0.BAY12  SSD    evacuated  0.00      -
+CH0.BAY13  SSD    evacuated  0.00      -
+CH0.BAY14  SSD    evacuated  0.00      -
+CH0.BAY15  SSD    evacuated  0.00      -
+CH0.BAY16  SSD    evacuated  0.00      -
+CH0.BAY17  SSD    evacuated  0.00      -
+CH0.BAY18  SSD    evacuated  0.00      -
+CH0.BAY19  SSD    evacuated  0.00      -
+CH0.NVB0   NVRAM  healthy    7.52G     -
+CH0.NVB1   NVRAM  healthy    7.52G     -
+CH0.NVB2   NVRAM  unused     0.00      -
+CH0.NVB3   NVRAM  unused     0.00      -
+SH9.BAY0   SSD    healthy    4.56T     -
+SH9.BAY1   SSD    healthy    4.56T     -
+SH9.BAY2   SSD    healthy    4.56T     -
+SH9.BAY3   SSD    healthy    4.56T     -
+SH9.BAY4   SSD    healthy    4.56T     -
+SH9.BAY5   SSD    healthy    4.56T     -
+SH9.BAY6   SSD    healthy    4.56T     -
+SH9.BAY7   SSD    healthy    4.56T     -
+SH9.BAY8   SSD    healthy    4.56T     -
+SH9.BAY9   SSD    healthy    4.56T     -
+SH9.BAY10  SSD    healthy    4.56T     -
+SH9.BAY11  SSD    healthy    4.56T     -
+SH9.BAY12  SSD    healthy    4.56T     -
+SH9.BAY13  SSD    healthy    4.56T     -
+SH9.BAY14  -      unused     0.00      -
+SH9.BAY15  -      unused     0.00      -
+SH9.BAY16  -      unused     0.00      -
+SH9.BAY17  -      unused     0.00      -
+SH9.BAY18  -      unused     0.00      -
+SH9.BAY19  -      unused     0.00      -
+SH9.BAY20  -      unused     0.00      -
+SH9.BAY21  -      unused     0.00      -
+SH9.BAY22  -      unused     0.00      -
+SH9.BAY23  -      unused     0.00      -
+SH9.BAY24  -      unused     0.00      -
+SH9.BAY25  -      unused     0.00      -
+SH9.BAY26  -      unused     0.00      -
+SH9.BAY27  -      unused     0.00      -
+     root@MOPURE01-ct0:/var/home/pureeng# puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   -      unused   0.00      -
+CH0.BAY1   -      unused   0.00      -
+CH0.BAY2   -      unused   0.00      -
+CH0.BAY3   -      unused   0.00      -
+CH0.BAY4   -      unused   0.00      -
+CH0.BAY5   -      unused   0.00      -
+CH0.BAY6   -      unused   0.00      -
+CH0.BAY7   -      unused   0.00      -
+CH0.BAY8   -      unused   0.00      -
+CH0.BAY9   -      unused   0.00      -
+CH0.BAY10  -      unused   0.00      -
+CH0.BAY11  -      unused   0.00      -
+CH0.BAY12  -      unused   0.00      -
+CH0.BAY13  -      unused   0.00      -
+CH0.BAY14  -      unused   0.00      -
+CH0.BAY15  -      unused   0.00      -
+CH0.BAY16  -      unused   0.00      -
+CH0.BAY17  -      unused   0.00      -
+CH0.BAY18  -      unused   0.00      -
+CH0.BAY19  -      unused   0.00      -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  unused   0.00      -
+CH0.NVB3   NVRAM  unused   0.00      -
+SH9.BAY0   SSD    healthy  4.56T     -
+SH9.BAY1   SSD    healthy  4.56T     -
+SH9.BAY2   SSD    healthy  4.56T     -
+SH9.BAY3   SSD    healthy  4.56T     -
+SH9.BAY4   SSD    healthy  4.56T     -
+SH9.BAY5   SSD    healthy  4.56T     -
+SH9.BAY6   SSD    healthy  4.56T     -
+SH9.BAY7   SSD    healthy  4.56T     -
+SH9.BAY8   SSD    healthy  4.56T     -
+SH9.BAY9   SSD    healthy  4.56T     -
+SH9.BAY10  SSD    healthy  4.56T     -
+SH9.BAY11  SSD    healthy  4.56T     -
+SH9.BAY12  SSD    healthy  4.56T     -
+SH9.BAY13  SSD    healthy  4.56T     -
+SH9.BAY14  -      unused   0.00      -
+SH9.BAY15  -      unused   0.00      -
+SH9.BAY16  -      unused   0.00      -
+SH9.BAY17  -      unused   0.00      -
+SH9.BAY18  -      unused   0.00      -
+SH9.BAY19  -      unused   0.00      -
+SH9.BAY20  -      unused   0.00      -
+SH9.BAY21  -      unused   0.00      -
+SH9.BAY22  -      unused   0.00      -
+SH9.BAY23  -      unused   0.00      -
+SH9.BAY24  -      unused   0.00      -
+SH9.BAY25  -      unused   0.00      -
+SH9.BAY26  -      unused   0.00      -
+SH9.BAY27  -      unused   0.00      -
+     root@MOPURE01-ct0:/var/home/pureeng# purearray remoteassist --sttatus
+Name          Status     Opened                   Expires
+MOPURE01-ct0  connected  2025-08-07 10:10:05 EDT  2025-08-09 10:10:05 EDT
+     root@MOPURE01-ct0:/var/home/pureeng# purearray remoteassist --status
+Name          Status     Opened                   Expires
+MOPURE01-ct0  connected  2025-08-07 10:10:05 EDT  2025-08-09 10:10:05 EDT
+     root@MOPURE01-ct0:/var/home/pureeng# purearray remoteassist --status
+Name          Status     Opened                   Expires
+MOPURE01-ct0  connected  2025-08-07 10:10:05 EDT  2025-08-09 10:10:05 EDT
+     root@MOPURE01-ct0:/var/home/pureeng# ssh peer:; purearray remoteassist --sta tus
+Last login: Mon Jul 28 11:27:49 2025 from fe80::26a9:37ff:fe55:b537%haeth0
+
+Thu Aug 07 10:29:14 2025
+Welcome root. This is Purity Version 6.5.10 on FlashArray MOPURE01
+http://www.purestorage.com/
+     root@MOPURE01-ct1:~# exitpurearray remoteassist --connectexitpurearray remoteassist --status
+Name          Status          Opened                   Expires
+MOPURE01-ct1  session-active  2025-08-07 10:09:53 EDT  2025-08-09 10:09:53 EDT
+     root@MOPURE01-ct1:~# exit
+logout
+Name          Status     Opened                   Expires
+MOPURE01-ct0  connected  2025-08-07 10:10:05 EDT  2025-08-09 10:10:05 EDT
+     root@MOPURE01-ct0:/var/home/pureeng# purearray list --space
+Name      Capacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  Total
+MOPURE01  36.13T    98%     68265G            39.50T   41%                16.0 to 1       34.0 to 1        9.07T   5.82T      2.30T   0.00    0.00         17.19T
+     root@MOPURE01-ct0:/var/home/pureeng# watch "puredrive list && puredb list drives "
+
+
+Every 2.0s: puredrive list && puredb ...  MOPURE01-ct0: Thu Aug  7 10:49:02 2025NameType   Status   Capacity  DetailsCH0.BAY0   SSD    healthy  4.56T     -CH0.BAY1   -unused   0.00-CH0.BAY2   -unused   0.00-CH0.BAY3   -unused   0.00-CH0.BAY4   -unused   0.00-CH0.BAY5   -unused   0.00-CH0.BAY6   -unused   0.00-CH0.BAY7   -unused   0.00-CH0.BAY8   -unused   0.00-CH0.BAY9   -unused   0.00-CH0.BAY10  -unused   0.00-CH0.BAY11  -unused   0.00-CH0.BAY12  -unused   0.00-CH0.BAY13  -unused   0.00-CH0.BAY14  -unused   0.00-CH0.BAY15  -unused   0.00-CH0.BAY16  -unused   0.00-CH0.BAY17  -unused   0.00-CH0.BAY18  -unused   0.00-CH0.BAY19  -unused   0.00-CH0.NVB0   NVRAM  healthy  7.52G     -5810     root@MOPURE01-ct0:/var/home/pureeng# watch "puredrive list && puredb list drives "
+
+     root@MOPURE01-ct0:/var/home/pureeng# wathc ch purearray list --space
+Every 2.0s: purearray list --spaceMOPURE01-ct0: Thu Aug  7 10:49:26 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  TotalMOPURE01  36.13T    100%    68265G39.50T   41%16.0 to 134.0 to 19.07T   5.82T2.30T   0.00    0.0017.19T8313     root@MOPURE01-ct0:/var/home/pureeng# puredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    NVMe      healthy  4.56T     0.00          0.00      12127998120357217627:9743501130521424583   23/97          40923/103450
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      4198321796986717932:10271596641845195179   -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      4760235170723286728:13380119290743967208   -              -
+SH9.DRV1   1        SSD    NVMe      healthy  4.56T     0.00          0.00      1729517205411876050:10995576580356506332   25/97          41179/103387
+SH9.DRV2   1        SSD    NVMe      healthy  4.56T     0.00          0.00      5236417666449754167:10098709074752803720   28/97          41361/103481
+SH9.DRV3   1        SSD    NVMe      healthy  4.56T     0.00          0.00      2610235591275463581:10550084051730324992   26/97          41154/103378
+SH9.DRV4   1        SSD    NVMe      healthy  4.56T     0.00          0.00      262540858229998773:11638394487527487450    28/97          41182/103373
+SH9.DRV5   1        SSD    NVMe      healthy  4.56T     0.00          0.00      13790211528521633430:12851285268792932079  20/97          41324/103419
+SH9.DRV6   1        SSD    NVMe      healthy  4.56T     0.00          0.00      9643754275849715997:12540066882305638814   28/97          41136/103344
+SH9.DRV7   1        SSD    NVMe      healthy  4.56T     0.00          0.00      17853508920920459482:12079495276854767137  29/97          41257/103378
+SH9.DRV8   1        SSD    NVMe      healthy  4.56T     0.00          0.00      13365138475721052067:12645268659174513313  27/97          41038/103478
+SH9.DRV9   1        SSD    NVMe      healthy  4.56T     0.00          0.00      4626243913791000048:12522912402933154273   26/97          41168/103388
+SH9.DRV10  1        SSD    NVMe      healthy  4.56T     0.00          0.00      2839167718158254734:10293623870925263487   24/97          41081/103579
+SH9.DRV11  1        SSD    NVMe      healthy  4.56T     0.00          0.00      3835426171172503840:9649149924003970491    23/97          41222/103536
+SH9.DRV12  1        SSD    NVMe      healthy  4.56T     0.00          0.00      6705611001293980985:12958134364757853999   27/97          41045/103520
+SH9.DRV13  1        SSD    NVMe      healthy  4.56T     0.00          0.00      17752259077949506222:13081826954522849822  26/97          41297/103502
+     root@MOPURE01-ct0:/var/home/pureeng# puredb list driveswatch purearray list --space
+Every 2.0s: purearray list --spaceMOPURE01-ct0: Thu Aug  7 10:51:03 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  TotalMOPURE01  36.76T    100%    68265G39.50T   41%16.1 to 134.0 to 19.07T   5.81T2.30T   0.00    0.0017.19T581035720257     root@MOPURE01-ct0:/var/home/pureeng# watch purearray list --spacepuredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    NVMe      healthy  4.56T     0.00          0.00      12127998120357217627:9743501130521424583   22/97          40938/103450
+CH0.DRV1   1        SSD    NVMe      healthy  4.56T     0.00          0.00      1729517205411876050:10995576580356506332   25/97          41126/103387
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      4198321796986717932:10271596641845195179   -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      4760235170723286728:13380119290743967208   -              -
+SH9.DRV2   1        SSD    NVMe      healthy  4.56T     0.00          0.00      5236417666449754167:10098709074752803720   28/97          41370/103481
+SH9.DRV3   1        SSD    NVMe      healthy  4.56T     0.00          0.00      2610235591275463581:10550084051730324992   26/97          41162/103378
+SH9.DRV4   1        SSD    NVMe      healthy  4.56T     0.00          0.00      262540858229998773:11638394487527487450    28/97          41192/103373
+SH9.DRV5   1        SSD    NVMe      healthy  4.56T     0.00          0.00      13790211528521633430:12851285268792932079  21/97          41333/103419
+SH9.DRV6   1        SSD    NVMe      healthy  4.56T     0.00          0.00      9643754275849715997:12540066882305638814   28/97          41145/103344
+SH9.DRV7   1        SSD    NVMe      healthy  4.56T     0.00          0.00      17853508920920459482:12079495276854767137  29/97          41266/103378
+SH9.DRV8   1        SSD    NVMe      healthy  4.56T     0.00          0.00      13365138475721052067:12645268659174513313  27/97          41043/103478
+SH9.DRV9   1        SSD    NVMe      healthy  4.56T     0.00          0.00      4626243913791000048:12522912402933154273   26/97          41178/103388
+SH9.DRV10  1        SSD    NVMe      healthy  4.56T     0.00          0.00      2839167718158254734:10293623870925263487   24/97          41088/103579
+SH9.DRV11  1        SSD    NVMe      healthy  4.56T     0.00          0.00      3835426171172503840:9649149924003970491    23/97          41230/103536
+SH9.DRV12  1        SSD    NVMe      healthy  4.56T     0.00          0.00      6705611001293980985:12958134364757853999   27/97          41052/103520
+SH9.DRV13  1        SSD    NVMe      healthy  4.56T     0.00          0.00      17752259077949506222:13081826954522849822  26/97          41302/103502
+     root@MOPURE01-ct0:/var/home/pureeng# puredb list driveswatch purearray list --space
+Every 2.0s: purearray list --spaceMOPURE01-ct0: Thu Aug  7 10:51:43 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  TotalMOPURE01  36.76T    100%    68265G39.50T   41%16.1 to 134.0 to 19.07T   5.81T2.30T   0.00    0.0017.19T58503558% 82:00358103582035983035840357502573:00257912479224793146941469514694:01368113682136100%83035840368513659% 85:0136811368213660183136     root@MOPURE01-ct0:/var/home/pureeng# watch purearray list --spacepuredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    NVMe      healthy  4.56T     0.00          0.00      12127998120357217627:9743501130521424583   29/97          40990/103450
+CH0.DRV1   1        SSD    NVMe      healthy  4.56T     0.00          0.00      1729517205411876050:10995576580356506332   28/97          41171/103387
+CH0.DRV2   1        SSD    NVMe      healthy  4.56T     0.00          0.00      5236417666449754167:10098709074752803720   29/97          41200/103481
+CH0.DRV3   1        SSD    NVMe      healthy  4.56T     0.00          0.00      2610235591275463581:10550084051730324992   29/97          40992/103378
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      4198321796986717932:10271596641845195179   -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      4760235170723286728:13380119290743967208   -              -
+SH9.DRV4   1        SSD    NVMe      healthy  4.56T     0.00          0.00      262540858229998773:11638394487527487450    30/97          41227/103373
+SH9.DRV5   1        SSD    NVMe      healthy  4.56T     0.00          0.00      13790211528521633430:12851285268792932079  24/97          41371/103419
+SH9.DRV6   1        SSD    NVMe      healthy  4.56T     0.00          0.00      9643754275849715997:12540066882305638814   30/97          41178/103344
+SH9.DRV7   1        SSD    NVMe      healthy  4.56T     0.00          0.00      17853508920920459482:12079495276854767137  29/97          41302/103378
+SH9.DRV8   1        SSD    NVMe      healthy  4.56T     0.00          0.00      13365138475721052067:12645268659174513313  27/97          41088/103478
+SH9.DRV9   1        SSD    NVMe      healthy  4.56T     0.00          0.00      4626243913791000048:12522912402933154273   30/97          41219/103388
+SH9.DRV10  1        SSD    NVMe      healthy  4.56T     0.00          0.00      2839167718158254734:10293623870925263487   28/97          41128/103579
+SH9.DRV11  1        SSD    NVMe      healthy  4.56T     0.00          0.00      3835426171172503840:9649149924003970491    29/97          41267/103536
+SH9.DRV12  1        SSD    NVMe      healthy  4.56T     0.00          0.00      6705611001293980985:12958134364757853999   28/97          41091/103520
+SH9.DRV13  1        SSD    NVMe      healthy  4.56T     0.00          0.00      17752259077949506222:13081826954522849822  28/97          41343/103502
+     root@MOPURE01-ct0:/var/home/pureeng# puredb list driveswatch purearray list --space
+Every 2.0s: purearray list --spaceMOPURE01-ct0: Thu Aug  7 10:55:46 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  TotalMOPURE01  36.76T    60%     68265G39.50T   41%16.1 to 134.0 to 19.07T   5.81T2.31T   0.00    0.0017.19T951     root@MOPURE01-ct0:/var/home/pureeng# watch purearray list --spacepuredb list driveswatch purearray list --space
+Every 2.0s: purearray list --spaceMOPURE01-ct0: Thu Aug  7 10:56:01 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  TotalMOPURE01  36.76T    98%     68265G39.50T   41%16.1 to 134.0 to 19.07T   5.81T2.31T   0.00    0.0017.19T4691146921469     root@MOPURE01-ct0:/var/home/pureeng# watch purearray list --space
+Every 2.0s: purearray listMOPURE01-ct0: Thu Aug  7 10:56:34 2025NameIDOSVersionMOPURE01  1ac6fa3b-b130-46e2-b8f3-c93a527f2e82  Purity//FA  6.5.1079     root@MOPURE01-ct0:/var/home/pureeng# puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    healthy  4.56T     -
+CH0.BAY1   SSD    healthy  4.56T     -
+CH0.BAY2   SSD    healthy  4.56T     -
+CH0.BAY3   SSD    healthy  4.56T     -
+CH0.BAY4   -      unused   0.00      -
+CH0.BAY5   -      unused   0.00      -
+CH0.BAY6   -      unused   0.00      -
+CH0.BAY7   -      unused   0.00      -
+CH0.BAY8   -      unused   0.00      -
+CH0.BAY9   -      unused   0.00      -
+CH0.BAY10  -      unused   0.00      -
+CH0.BAY11  -      unused   0.00      -
+CH0.BAY12  -      unused   0.00      -
+CH0.BAY13  -      unused   0.00      -
+CH0.BAY14  -      unused   0.00      -
+CH0.BAY15  -      unused   0.00      -
+CH0.BAY16  -      unused   0.00      -
+CH0.BAY17  -      unused   0.00      -
+CH0.BAY18  -      unused   0.00      -
+CH0.BAY19  -      unused   0.00      -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  unused   0.00      -
+CH0.NVB3   NVRAM  unused   0.00      -
+SH9.BAY0   -      unused   0.00      -
+SH9.BAY1   -      unused   0.00      -
+SH9.BAY2   -      unused   0.00      -
+SH9.BAY3   -      unused   0.00      -
+SH9.BAY4   SSD    healthy  4.56T     -
+SH9.BAY5   SSD    healthy  4.56T     -
+SH9.BAY6   SSD    healthy  4.56T     -
+SH9.BAY7   SSD    healthy  4.56T     -
+SH9.BAY8   SSD    healthy  4.56T     -
+SH9.BAY9   SSD    healthy  4.56T     -
+SH9.BAY10  SSD    healthy  4.56T     -
+SH9.BAY11  SSD    healthy  4.56T     -
+SH9.BAY12  SSD    healthy  4.56T     -
+SH9.BAY13  SSD    healthy  4.56T     -
+SH9.BAY14  -      unused   0.00      -
+SH9.BAY15  -      unused   0.00      -
+SH9.BAY16  -      unused   0.00      -
+SH9.BAY17  -      unused   0.00      -
+SH9.BAY18  -      unused   0.00      -
+SH9.BAY19  -      unused   0.00      -
+SH9.BAY20  -      unused   0.00      -
+SH9.BAY21  -      unused   0.00      -
+SH9.BAY22  -      unused   0.00      -
+SH9.BAY23  -      unused   0.00      -
+SH9.BAY24  -      unused   0.00      -
+SH9.BAY25  -      unused   0.00      -
+SH9.BAY26  -      unused   0.00      -
+SH9.BAY27  -      unused   0.00      -
+     root@MOPURE01-ct0:/var/home/pureeng# puredrive listwatch purearray list --space
+Every 2.0s: purearray list --spaceMOPURE01-ct0: Thu Aug  7 10:56:52 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  TotalMOPURE01  36.76T    98%     68265G39.50T   41%16.1 to 134.0 to 19.07T   5.81T2.31T   0.00    0.0017.19T4797:02479     root@MOPURE01-ct0:/var/home/pureeng# watch purearray list --spacepuredrive listwatch purearray list --spacepuredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    NVMe      healthy  4.56T     0.00          0.00      12127998120357217627:9743501130521424583   29/97          41001/103450
+CH0.DRV1   1        SSD    NVMe      healthy  4.56T     0.00          0.00      1729517205411876050:10995576580356506332   28/97          41185/103387
+CH0.DRV2   1        SSD    NVMe      healthy  4.56T     0.00          0.00      5236417666449754167:10098709074752803720   29/97          41212/103481
+CH0.DRV3   1        SSD    NVMe      healthy  4.56T     0.00          0.00      2610235591275463581:10550084051730324992   29/97          40969/103378
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      4198321796986717932:10271596641845195179   -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      4760235170723286728:13380119290743967208   -              -
+SH9.DRV4   1        SSD    NVMe      healthy  4.56T     0.00          0.00      262540858229998773:11638394487527487450    30/97          41238/103373
+SH9.DRV5   1        SSD    NVMe      healthy  4.56T     0.00          0.00      13790211528521633430:12851285268792932079  24/97          41382/103419
+SH9.DRV6   1        SSD    NVMe      healthy  4.56T     0.00          0.00      9643754275849715997:12540066882305638814   30/97          41191/103344
+SH9.DRV7   1        SSD    NVMe      healthy  4.56T     0.00          0.00      17853508920920459482:12079495276854767137  29/97          41315/103378
+SH9.DRV8   1        SSD    NVMe      healthy  4.56T     0.00          0.00      13365138475721052067:12645268659174513313  27/97          41100/103478
+SH9.DRV9   1        SSD    NVMe      healthy  4.56T     0.00          0.00      4626243913791000048:12522912402933154273   30/97          41230/103388
+SH9.DRV10  1        SSD    NVMe      healthy  4.56T     0.00          0.00      2839167718158254734:10293623870925263487   28/97          41140/103579
+SH9.DRV11  1        SSD    NVMe      healthy  4.56T     0.00          0.00      3835426171172503840:9649149924003970491    29/97          41281/103536
+SH9.DRV12  1        SSD    NVMe      healthy  4.56T     0.00          0.00      6705611001293980985:12958134364757853999   28/97          41102/103520
+SH9.DRV13  1        SSD    NVMe      healthy  4.56T     0.00          0.00      17752259077949506222:13081826954522849822  28/97          41356/103502
+     root@MOPURE01-ct0:/var/home/pureeng# puredb list driveswatch purearray list --space
+Every 2.0s: purearray list --spaceMOPURE01-ct0: Thu Aug  7 10:57:24 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  TotalMOPURE01  36.76T    98%     68265G39.50T   41%16.1 to 134.0 to 19.07T   5.81T2.31T   0.00    0.0017.19T6931469414685136100%88:0136811368213583035840358503589:00358     root@MOPURE01-ct0:/var/home/pureeng# puredrb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    NVMe      healthy  4.56T     0.00          0.00      12127998120357217627:9743501130521424583   31/97          41013/103450
+CH0.DRV1   1        SSD    NVMe      healthy  4.56T     0.00          0.00      1729517205411876050:10995576580356506332   30/97          41203/103387
+CH0.DRV2   1        SSD    NVMe      healthy  4.56T     0.00          0.00      5236417666449754167:10098709074752803720   27/97          41229/103481
+CH0.DRV3   1        SSD    NVMe      healthy  4.56T     0.00          0.00      2610235591275463581:10550084051730324992   31/97          40979/103378
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      4198321796986717932:10271596641845195179   -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      4760235170723286728:13380119290743967208   -              -
+SH9.DRV4   1        SSD    NVMe      healthy  4.56T     0.00          0.00      262540858229998773:11638394487527487450    30/97          41246/103373
+SH9.DRV5   1        SSD    NVMe      healthy  4.56T     0.00          0.00      13790211528521633430:12851285268792932079  25/97          41398/103419
+SH9.DRV6   1        SSD    NVMe      healthy  4.56T     0.00          0.00      9643754275849715997:12540066882305638814   30/97          41199/103344
+SH9.DRV7   1        SSD    NVMe      healthy  4.56T     0.00          0.00      17853508920920459482:12079495276854767137  30/97          41331/103378
+SH9.DRV8   1        SSD    NVMe      healthy  4.56T     0.00          0.00      13365138475721052067:12645268659174513313  27/97          41118/103478
+SH9.DRV9   1        SSD    NVMe      healthy  4.56T     0.00          0.00      4626243913791000048:12522912402933154273   30/97          41239/103388
+SH9.DRV10  1        SSD    NVMe      healthy  4.56T     0.00          0.00      2839167718158254734:10293623870925263487   30/97          41151/103579
+SH9.DRV11  1        SSD    NVMe      healthy  4.56T     0.00          0.00      3835426171172503840:9649149924003970491    30/97          41296/103536
+SH9.DRV12  1        SSD    NVMe      healthy  4.56T     0.00          0.00      6705611001293980985:12958134364757853999   28/97          41115/103520
+SH9.DRV13  1        SSD    NVMe      healthy  4.56T     0.00          0.00      17752259077949506222:13081826954522849822  30/97          41371/103502
+     root@MOPURE01-ct0:/var/home/pureeng# purearray dirrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    healthy  4.56T     -
+CH0.BAY1   SSD    healthy  4.56T     -
+CH0.BAY2   SSD    healthy  4.56T     -
+CH0.BAY3   SSD    healthy  4.56T     -
+CH0.BAY4   -      unused   0.00      -
+CH0.BAY5   -      unused   0.00      -
+CH0.BAY6   -      unused   0.00      -
+CH0.BAY7   -      unused   0.00      -
+CH0.BAY8   -      unused   0.00      -
+CH0.BAY9   -      unused   0.00      -
+CH0.BAY10  -      unused   0.00      -
+CH0.BAY11  -      unused   0.00      -
+CH0.BAY12  -      unused   0.00      -
+CH0.BAY13  -      unused   0.00      -
+CH0.BAY14  -      unused   0.00      -
+CH0.BAY15  -      unused   0.00      -
+CH0.BAY16  -      unused   0.00      -
+CH0.BAY17  -      unused   0.00      -
+CH0.BAY18  -      unused   0.00      -
+CH0.BAY19  -      unused   0.00      -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  unused   0.00      -
+CH0.NVB3   NVRAM  unused   0.00      -
+SH9.BAY0   -      unused   0.00      -
+SH9.BAY1   -      unused   0.00      -
+SH9.BAY2   -      unused   0.00      -
+SH9.BAY3   -      unused   0.00      -
+SH9.BAY4   SSD    healthy  4.56T     -
+SH9.BAY5   SSD    healthy  4.56T     -
+SH9.BAY6   SSD    healthy  4.56T     -
+SH9.BAY7   SSD    healthy  4.56T     -
+SH9.BAY8   SSD    healthy  4.56T     -
+SH9.BAY9   SSD    healthy  4.56T     -
+SH9.BAY10  SSD    healthy  4.56T     -
+SH9.BAY11  SSD    healthy  4.56T     -
+SH9.BAY12  SSD    healthy  4.56T     -
+SH9.BAY13  SSD    healthy  4.56T     -
+SH9.BAY14  -      unused   0.00      -
+SH9.BAY15  -      unused   0.00      -
+SH9.BAY16  -      unused   0.00      -
+SH9.BAY17  -      unused   0.00      -
+SH9.BAY18  -      unused   0.00      -
+SH9.BAY19  -      unused   0.00      -
+SH9.BAY20  -      unused   0.00      -
+SH9.BAY21  -      unused   0.00      -
+SH9.BAY22  -      unused   0.00      -
+SH9.BAY23  -      unused   0.00      -
+SH9.BAY24  -      unused   0.00      -
+SH9.BAY25  -      unused   0.00      -
+SH9.BAY26  -      unused   0.00      -
+SH9.BAY27  -      unused   0.00      -
+     root@MOPURE01-ct0:/var/home/pureeng# puredrive listb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    NVMe      healthy  4.56T     0.00          0.00      12127998120357217627:9743501130521424583   31/97          40994/103450
+CH0.DRV1   1        SSD    NVMe      healthy  4.56T     0.00          0.00      1729517205411876050:10995576580356506332   30/97          41198/103387
+CH0.DRV2   1        SSD    NVMe      healthy  4.56T     0.00          0.00      5236417666449754167:10098709074752803720   27/97          41212/103481
+CH0.DRV3   1        SSD    NVMe      healthy  4.56T     0.00          0.00      2610235591275463581:10550084051730324992   31/97          40958/103378
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      4198321796986717932:10271596641845195179   -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      4760235170723286728:13380119290743967208   -              -
+SH9.DRV4   1        SSD    NVMe      healthy  4.56T     0.00          0.00      262540858229998773:11638394487527487450    30/97          41226/103373
+SH9.DRV5   1        SSD    NVMe      healthy  4.56T     0.00          0.00      13790211528521633430:12851285268792932079  25/97          41379/103419
+SH9.DRV6   1        SSD    NVMe      healthy  4.56T     0.00          0.00      9643754275849715997:12540066882305638814   30/97          41178/103344
+SH9.DRV7   1        SSD    NVMe      healthy  4.56T     0.00          0.00      17853508920920459482:12079495276854767137  30/97          41314/103378
+SH9.DRV8   1        SSD    NVMe      healthy  4.56T     0.00          0.00      13365138475721052067:12645268659174513313  27/97          41100/103478
+SH9.DRV9   1        SSD    NVMe      healthy  4.56T     0.00          0.00      4626243913791000048:12522912402933154273   30/97          41218/103388
+SH9.DRV10  1        SSD    NVMe      healthy  4.56T     0.00          0.00      2839167718158254734:10293623870925263487   30/97          41131/103579
+SH9.DRV11  1        SSD    NVMe      healthy  4.56T     0.00          0.00      3835426171172503840:9649149924003970491    30/97          41279/103536
+SH9.DRV12  1        SSD    NVMe      healthy  4.56T     0.00          0.00      6705611001293980985:12958134364757853999   28/97          41093/103520
+SH9.DRV13  1        SSD    NVMe      healthy  4.56T     0.00          0.00      17752259077949506222:13081826954522849822  30/97          41350/103502
+     root@MOPURE01-ct0:/var/home/pureeng# puredb list drivesrive listb list driveswatch purearray list --space
+Every 2.0s: purearray list --spaceMOPURE01-ct0: Thu Aug  7 10:59:36 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  TotalMOPURE01  36.76T    100%    68265G39.50T   41%16.1 to 134.0 to 19.07T   5.81T2.31T   0.00    0.0017.19T941469514659% 91:00:01469114692146600931469414685136100%81:013681136     root@MOPURE01-ct0:/var/home/pureeng# watch purearray list --spacepuredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    NVMe      healthy  4.56T     0.00          0.00      12127998120357217627:9743501130521424583   31/97          41008/103450
+CH0.DRV1   1        SSD    NVMe      healthy  4.56T     0.00          0.00      1729517205411876050:10995576580356506332   29/97          41221/103387
+CH0.DRV2   1        SSD    NVMe      healthy  4.56T     0.00          0.00      5236417666449754167:10098709074752803720   28/97          41238/103481
+CH0.DRV3   1        SSD    NVMe      healthy  4.56T     0.00          0.00      2610235591275463581:10550084051730324992   31/97          40981/103378
+CH0.DRV4   1        SSD    NVMe      healthy  4.56T     0.00          0.00      262540858229998773:11638394487527487450    28/97          41090/103373
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      4198321796986717932:10271596641845195179   -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      4760235170723286728:13380119290743967208   -              -
+SH9.DRV5   1        SSD    NVMe      healthy  4.56T     0.00          0.00      13790211528521633430:12851285268792932079  26/97          41399/103419
+SH9.DRV6   1        SSD    NVMe      healthy  4.56T     0.00          0.00      9643754275849715997:12540066882305638814   29/97          41192/103344
+SH9.DRV7   1        SSD    NVMe      healthy  4.56T     0.00          0.00      17853508920920459482:12079495276854767137  31/97          41330/103378
+SH9.DRV8   1        SSD    NVMe      healthy  4.56T     0.00          0.00      13365138475721052067:12645268659174513313  27/97          41115/103478
+SH9.DRV9   1        SSD    NVMe      healthy  4.56T     0.00          0.00      4626243913791000048:12522912402933154273   30/97          41233/103388
+SH9.DRV10  1        SSD    NVMe      healthy  4.56T     0.00          0.00      2839167718158254734:10293623870925263487   29/97          41145/103579
+SH9.DRV11  1        SSD    NVMe      healthy  4.56T     0.00          0.00      3835426171172503840:9649149924003970491    30/97          41303/103536
+SH9.DRV12  1        SSD    NVMe      healthy  4.56T     0.00          0.00      6705611001293980985:12958134364757853999   30/97          41105/103520
+SH9.DRV13  1        SSD    NVMe      healthy  4.56T     0.00          0.00      17752259077949506222:13081826954522849822  31/97          41364/103502
+     root@MOPURE01-ct0:/var/home/pureeng# puredb list driveswatch purearray list --space
+Every 2.0s: purearray list --spaceMOPURE01-ct0: Thu Aug  7 11:01:23 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  TotalMOPURE01  36.76T    100%    68265G39.50T   41%16.1 to 134.0 to 19.07T   5.81T2.30T   0.00    0.0017.19T5730357402575025859% 2:0035810257202579830257402479524793:0247911469214693146841368513684:01368103582035100%83035740257502575:002479125720     root@MOPURE01-ct0:/var/home/pureeng# watch purearray list --spacepuredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    NVMe      healthy  4.56T     0.00          0.00      12127998120357217627:9743501130521424583   32/97          41015/103450
+CH0.DRV1   1        SSD    NVMe      healthy  4.56T     0.00          0.00      1729517205411876050:10995576580356506332   29/97          41239/103387
+CH0.DRV2   1        SSD    NVMe      healthy  4.56T     0.00          0.00      5236417666449754167:10098709074752803720   29/97          41253/103481
+CH0.DRV3   1        SSD    NVMe      healthy  4.56T     0.00          0.00      2610235591275463581:10550084051730324992   32/97          40987/103378
+CH0.DRV4   1        SSD    NVMe      healthy  4.56T     0.00          0.00      262540858229998773:11638394487527487450    29/97          41112/103373
+CH0.DRV5   1        SSD    NVMe      healthy  4.56T     0.00          0.00      13790211528521633430:12851285268792932079  25/97          41238/103419
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      4198321796986717932:10271596641845195179   -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      4760235170723286728:13380119290743967208   -              -
+SH9.DRV6   1        SSD    NVMe      healthy  4.56T     0.00          0.00      9643754275849715997:12540066882305638814   28/97          41194/103344
+SH9.DRV7   1        SSD    NVMe      healthy  4.56T     0.00          0.00      17853508920920459482:12079495276854767137  31/97          41335/103378
+SH9.DRV8   1        SSD    NVMe      healthy  4.56T     0.00          0.00      13365138475721052067:12645268659174513313  31/97          41115/103478
+SH9.DRV9   1        SSD    NVMe      healthy  4.56T     0.00          0.00      4626243913791000048:12522912402933154273   30/97          41244/103388
+SH9.DRV10  1        SSD    NVMe      healthy  4.56T     0.00          0.00      2839167718158254734:10293623870925263487   31/97          41146/103579
+SH9.DRV11  1        SSD    NVMe      healthy  4.56T     0.00          0.00      3835426171172503840:9649149924003970491    29/97          41306/103536
+SH9.DRV12  1        SSD    NVMe      healthy  4.56T     0.00          0.00      6705611001293980985:12958134364757853999   30/97          41115/103520
+SH9.DRV13  1        SSD    NVMe      healthy  4.56T     0.00          0.00      17752259077949506222:13081826954522849822  33/97          41365/103502
+     root@MOPURE01-ct0:/var/home/pureeng# puredb list driveswatch purearray list --space
+Every 2.0s: purearray list --spaceMOPURE01-ct0: Thu Aug  7 11:05:26 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  TotalMOPURE01  36.76T    100%    68265G39.50T   41%16.1 to 134.0 to 19.07T   5.82T2.31T   0.00    0.0017.19T83136841368513659% 86:01369114692146100%931368     root@MOPURE01-ct0:/var/home/pureeng# watch purearray list --spacepuredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    NVMe      healthy  4.56T     0.00          0.00      12127998120357217627:9743501130521424583   34/97          41044/103450
+CH0.DRV1   1        SSD    NVMe      healthy  4.56T     0.00          0.00      1729517205411876050:10995576580356506332   31/97          41262/103387
+CH0.DRV2   1        SSD    NVMe      healthy  4.56T     0.00          0.00      5236417666449754167:10098709074752803720   29/97          41280/103481
+CH0.DRV3   1        SSD    NVMe      healthy  4.56T     0.00          0.00      2610235591275463581:10550084051730324992   34/97          41014/103378
+CH0.DRV4   1        SSD    NVMe      healthy  4.56T     0.00          0.00      262540858229998773:11638394487527487450    31/97          41149/103373
+CH0.DRV5   1        SSD    NVMe      healthy  4.56T     0.00          0.00      13790211528521633430:12851285268792932079  26/97          41263/103419
+CH0.DRV6   1        SSD    NVMe      healthy  4.56T     0.00          0.00      9643754275849715997:12540066882305638814   28/97          40962/103344
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      4198321796986717932:10271596641845195179   -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      4760235170723286728:13380119290743967208   -              -
+SH9.DRV7   1        SSD    NVMe      healthy  4.56T     0.00          0.00      17853508920920459482:12079495276854767137  32/97          41363/103378
+SH9.DRV8   1        SSD    NVMe      healthy  4.56T     0.00          0.00      13365138475721052067:12645268659174513313  31/97          41148/103478
+SH9.DRV9   1        SSD    NVMe      healthy  4.56T     0.00          0.00      4626243913791000048:12522912402933154273   30/97          41272/103388
+SH9.DRV10  1        SSD    NVMe      healthy  4.56T     0.00          0.00      2839167718158254734:10293623870925263487   33/97          41178/103579
+SH9.DRV11  1        SSD    NVMe      healthy  4.56T     0.00          0.00      3835426171172503840:9649149924003970491    30/97          41329/103536
+SH9.DRV12  1        SSD    NVMe      healthy  4.56T     0.00          0.00      6705611001293980985:12958134364757853999   31/97          41141/103520
+SH9.DRV13  1        SSD    NVMe      healthy  4.56T     0.00          0.00      17752259077949506222:13081826954522849822  35/97          41390/103502
+     root@MOPURE01-ct0:/var/home/pureeng# puredb list driveswatch purearray list --space
+Every 2.0s: purearray list --spaceMOPURE01-ct0: Thu Aug  7 11:06:45 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  TotalMOPURE01  36.76T    100%    68265G39.50T   41%16.1 to 134.0 to 19.07T   5.82T2.31T   0.00    0.0017.19T7     root@MOPURE01-ct0:/var/home/pureeng# purederive listrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    healthy  4.56T     -
+CH0.BAY1   SSD    healthy  4.56T     -
+CH0.BAY2   SSD    healthy  4.56T     -
+CH0.BAY3   SSD    healthy  4.56T     -
+CH0.BAY4   SSD    healthy  4.56T     -
+CH0.BAY5   SSD    healthy  4.56T     -
+CH0.BAY6   SSD    healthy  4.56T     -
+CH0.BAY7   -      unused   0.00      -
+CH0.BAY8   -      unused   0.00      -
+CH0.BAY9   -      unused   0.00      -
+CH0.BAY10  -      unused   0.00      -
+CH0.BAY11  -      unused   0.00      -
+CH0.BAY12  -      unused   0.00      -
+CH0.BAY13  -      unused   0.00      -
+CH0.BAY14  -      unused   0.00      -
+CH0.BAY15  -      unused   0.00      -
+CH0.BAY16  -      unused   0.00      -
+CH0.BAY17  -      unused   0.00      -
+CH0.BAY18  -      unused   0.00      -
+CH0.BAY19  -      unused   0.00      -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  unused   0.00      -
+CH0.NVB3   NVRAM  unused   0.00      -
+SH9.BAY0   -      unused   0.00      -
+SH9.BAY1   -      unused   0.00      -
+SH9.BAY2   -      unused   0.00      -
+SH9.BAY3   -      unused   0.00      -
+SH9.BAY4   -      unused   0.00      -
+SH9.BAY5   -      unused   0.00      -
+SH9.BAY6   -      unused   0.00      -
+SH9.BAY7   SSD    healthy  4.56T     -
+SH9.BAY8   SSD    healthy  4.56T     -
+SH9.BAY9   SSD    healthy  4.56T     -
+SH9.BAY10  SSD    healthy  4.56T     -
+SH9.BAY11  SSD    healthy  4.56T     -
+SH9.BAY12  SSD    healthy  4.56T     -
+SH9.BAY13  SSD    healthy  4.56T     -
+SH9.BAY14  -      unused   0.00      -
+SH9.BAY15  -      unused   0.00      -
+SH9.BAY16  -      unused   0.00      -
+SH9.BAY17  -      unused   0.00      -
+SH9.BAY18  -      unused   0.00      -
+SH9.BAY19  -      unused   0.00      -
+SH9.BAY20  -      unused   0.00      -
+SH9.BAY21  -      unused   0.00      -
+SH9.BAY22  -      unused   0.00      -
+SH9.BAY23  -      unused   0.00      -
+SH9.BAY24  -      unused   0.00      -
+SH9.BAY25  -      unused   0.00      -
+SH9.BAY26  -      unused   0.00      -
+SH9.BAY27  -      unused   0.00      -
+     root@MOPURE01-ct0:/var/home/pureeng# puredrive listwatch purearray list --space
+Every 2.0s: purearray list --spaceMOPURE01-ct0: Thu Aug  7 11:07:01 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  TotalMOPURE01  36.76T    100%    68265G39.50T   41%16.1 to 134.0 to 19.07T   5.82T2.31T   0.00    0.0017.19T358103     root@MOPURE01-ct0:/var/home/pureeng# watch purearray list --spacepuredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    healthy  4.56T     -
+CH0.BAY1   SSD    healthy  4.56T     -
+CH0.BAY2   SSD    healthy  4.56T     -
+CH0.BAY3   SSD    healthy  4.56T     -
+CH0.BAY4   SSD    healthy  4.56T     -
+CH0.BAY5   SSD    healthy  4.56T     -
+CH0.BAY6   SSD    healthy  4.56T     -
+CH0.BAY7   -      unused   0.00      -
+CH0.BAY8   -      unused   0.00      -
+CH0.BAY9   -      unused   0.00      -
+CH0.BAY10  -      unused   0.00      -
+CH0.BAY11  -      unused   0.00      -
+CH0.BAY12  -      unused   0.00      -
+CH0.BAY13  -      unused   0.00      -
+CH0.BAY14  -      unused   0.00      -
+CH0.BAY15  -      unused   0.00      -
+CH0.BAY16  -      unused   0.00      -
+CH0.BAY17  -      unused   0.00      -
+CH0.BAY18  -      unused   0.00      -
+CH0.BAY19  -      unused   0.00      -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  unused   0.00      -
+CH0.NVB3   NVRAM  unused   0.00      -
+SH9.BAY0   -      unused   0.00      -
+SH9.BAY1   -      unused   0.00      -
+SH9.BAY2   -      unused   0.00      -
+SH9.BAY3   -      unused   0.00      -
+SH9.BAY4   -      unused   0.00      -
+SH9.BAY5   -      unused   0.00      -
+SH9.BAY6   -      unused   0.00      -
+SH9.BAY7   SSD    healthy  4.56T     -
+SH9.BAY8   SSD    healthy  4.56T     -
+SH9.BAY9   SSD    healthy  4.56T     -
+SH9.BAY10  SSD    healthy  4.56T     -
+SH9.BAY11  SSD    healthy  4.56T     -
+SH9.BAY12  SSD    healthy  4.56T     -
+SH9.BAY13  SSD    healthy  4.56T     -
+SH9.BAY14  -      unused   0.00      -
+SH9.BAY15  -      unused   0.00      -
+SH9.BAY16  -      unused   0.00      -
+SH9.BAY17  -      unused   0.00      -
+SH9.BAY18  -      unused   0.00      -
+SH9.BAY19  -      unused   0.00      -
+SH9.BAY20  -      unused   0.00      -
+SH9.BAY21  -      unused   0.00      -
+SH9.BAY22  -      unused   0.00      -
+SH9.BAY23  -      unused   0.00      -
+SH9.BAY24  -      unused   0.00      -
+SH9.BAY25  -      unused   0.00      -
+SH9.BAY26  -      unused   0.00      -
+SH9.BAY27  -      unused   0.00      -
+     root@MOPURE01-ct0:/var/home/pureeng# puredrive listwatch purearray list --space
+Every 2.0s: purearray list --spaceMOPURE01-ct0: Thu Aug  7 11:07:21 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  TotalMOPURE01  36.76T    100%    68265G39.50T   41%16.1 to 134.0 to 19.07T   5.82T2.31T   0.00    0.0017.19T3683136841368513659% 88:0135810358203579830257402575025799:02479124792246931469414695136810:01368113682035100%18303584035     root@MOPURE01-ct0:/var/home/pureeng# watch purearray list --spacepuredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    healthy  4.56T     -
+CH0.BAY1   SSD    healthy  4.56T     -
+CH0.BAY2   SSD    healthy  4.56T     -
+CH0.BAY3   SSD    healthy  4.56T     -
+CH0.BAY4   SSD    healthy  4.56T     -
+CH0.BAY5   SSD    healthy  4.56T     -
+CH0.BAY6   SSD    healthy  4.56T     -
+CH0.BAY7   SSD    healthy  4.56T     -
+CH0.BAY8   -      unused   0.00      -
+CH0.BAY9   -      unused   0.00      -
+CH0.BAY10  -      unused   0.00      -
+CH0.BAY11  -      unused   0.00      -
+CH0.BAY12  -      unused   0.00      -
+CH0.BAY13  -      unused   0.00      -
+CH0.BAY14  -      unused   0.00      -
+CH0.BAY15  -      unused   0.00      -
+CH0.BAY16  -      unused   0.00      -
+CH0.BAY17  -      unused   0.00      -
+CH0.BAY18  -      unused   0.00      -
+CH0.BAY19  -      unused   0.00      -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  unused   0.00      -
+CH0.NVB3   NVRAM  unused   0.00      -
+SH9.BAY0   -      unused   0.00      -
+SH9.BAY1   -      unused   0.00      -
+SH9.BAY2   -      unused   0.00      -
+SH9.BAY3   -      unused   0.00      -
+SH9.BAY4   -      unused   0.00      -
+SH9.BAY5   -      unused   0.00      -
+SH9.BAY6   -      unused   0.00      -
+SH9.BAY7   -      unused   0.00      -
+SH9.BAY8   SSD    healthy  4.56T     -
+SH9.BAY9   SSD    healthy  4.56T     -
+SH9.BAY10  SSD    healthy  4.56T     -
+SH9.BAY11  SSD    healthy  4.56T     -
+SH9.BAY12  SSD    healthy  4.56T     -
+SH9.BAY13  SSD    healthy  4.56T     -
+SH9.BAY14  -      unused   0.00      -
+SH9.BAY15  -      unused   0.00      -
+SH9.BAY16  -      unused   0.00      -
+SH9.BAY17  -      unused   0.00      -
+SH9.BAY18  -      unused   0.00      -
+SH9.BAY19  -      unused   0.00      -
+SH9.BAY20  -      unused   0.00      -
+SH9.BAY21  -      unused   0.00      -
+SH9.BAY22  -      unused   0.00      -
+SH9.BAY23  -      unused   0.00      -
+SH9.BAY24  -      unused   0.00      -
+SH9.BAY25  -      unused   0.00      -
+SH9.BAY26  -      unused   0.00      -
+SH9.BAY27  -      unused   0.00      -
+     root@MOPURE01-ct0:/var/home/pureeng# ^C
+     root@MOPURE01-ct0:/var/home/pureeng# puredrive listwatch purearray list --spacepuredrive listwatch purearray list --spacepuredrive listwatch purearray list --spacepuredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    NVMe      healthy  4.56T     0.00          0.00      12127998120357217627:9743501130521424583   36/97          41065/103450
+CH0.DRV1   1        SSD    NVMe      healthy  4.56T     0.00          0.00      1729517205411876050:10995576580356506332   32/97          41280/103387
+CH0.DRV2   1        SSD    NVMe      healthy  4.56T     0.00          0.00      5236417666449754167:10098709074752803720   30/97          41317/103481
+CH0.DRV3   1        SSD    NVMe      healthy  4.56T     0.00          0.00      2610235591275463581:10550084051730324992   35/97          41033/103378
+CH0.DRV4   1        SSD    NVMe      healthy  4.56T     0.00          0.00      262540858229998773:11638394487527487450    33/97          41176/103373
+CH0.DRV5   1        SSD    NVMe      healthy  4.56T     0.00          0.00      13790211528521633430:12851285268792932079  31/97          41296/103419
+CH0.DRV6   1        SSD    NVMe      healthy  4.56T     0.00          0.00      9643754275849715997:12540066882305638814   30/97          40982/103344
+CH0.DRV7   1        SSD    NVMe      healthy  4.56T     0.00          0.00      17853508920920459482:12079495276854767137  30/97          41216/103378
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      4198321796986717932:10271596641845195179   -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      4760235170723286728:13380119290743967208   -              -
+SH9.DRV8   1        SSD    NVMe      healthy  4.56T     0.00          0.00      13365138475721052067:12645268659174513313  33/97          41164/103478
+SH9.DRV9   1        SSD    NVMe      healthy  4.56T     0.00          0.00      4626243913791000048:12522912402933154273   31/97          41282/103388
+SH9.DRV10  1        SSD    NVMe      healthy  4.56T     0.00          0.00      2839167718158254734:10293623870925263487   29/97          41195/103579
+SH9.DRV11  1        SSD    NVMe      healthy  4.56T     0.00          0.00      3835426171172503840:9649149924003970491    31/97          41344/103536
+SH9.DRV12  1        SSD    NVMe      healthy  4.56T     0.00          0.00      6705611001293980985:12958134364757853999   34/97          41161/103520
+SH9.DRV13  1        SSD    NVMe      healthy  4.56T     0.00          0.00      17752259077949506222:13081826954522849822  36/97          41408/103502
+     root@MOPURE01-ct0:/var/home/pureeng# ^C
+     root@MOPURE01-ct0:/var/home/pureeng# puredb list drivesrive listwatch purearray list --space
+Every 2.0s: purearray list --spaceMOPURE01-ct0: Thu Aug  7 11:11:02 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  TotalMOPURE01  36.76T    100%    68265G39.51T   41%16.1 to 134.0 to 19.07T   5.82T2.31T   0.00    0.0017.19T57102572025759% 302584035850357702:002571025720247100%93247942479514693:0146911469214659% 9314694146951469884:0136811368213583035840358     root@MOPURE01-ct0:/var/home/pureeng# watch purearray list --spacepuredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    NVMe      healthy  4.56T     0.00          0.00      12127998120357217627:9743501130521424583   36/97          41121/103450
+CH0.DRV1   1        SSD    NVMe      healthy  4.56T     0.00          42.00M    1729517205411876050:10995576580356506332   34/97          41332/103387
+CH0.DRV2   1        SSD    NVMe      healthy  4.56T     0.00          42.00M    5236417666449754167:10098709074752803720   35/97          41367/103481
+CH0.DRV3   1        SSD    NVMe      healthy  4.56T     0.00          42.00M    2610235591275463581:10550084051730324992   34/97          41086/103378
+CH0.DRV4   1        SSD    NVMe      healthy  4.56T     0.00          42.00M    262540858229998773:11638394487527487450    31/97          41234/103373
+CH0.DRV5   1        SSD    NVMe      healthy  4.56T     0.00          84.00M    13790211528521633430:12851285268792932079  32/97          41361/103419
+CH0.DRV6   1        SSD    NVMe      healthy  4.56T     0.00          42.00M    9643754275849715997:12540066882305638814   31/97          41042/103344
+CH0.DRV7   1        SSD    NVMe      healthy  4.56T     0.00          42.00M    17853508920920459482:12079495276854767137  27/97          41268/103378
+CH0.DRV8   1        SSD    NVMe      healthy  4.56T     0.00          0.00      13365138475721052067:12645268659174513313  31/97          41051/103478
+CH0.DRV9   1        SSD    NVMe      healthy  4.56T     0.00          84.00M    4626243913791000048:12522912402933154273   31/97          41092/103388
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      4198321796986717932:10271596641845195179   -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      4760235170723286728:13380119290743967208   -              -
+SH9.DRV10  1        SSD    NVMe      healthy  4.56T     0.00          0.00      2839167718158254734:10293623870925263487   26/97          41253/103579
+SH9.DRV11  1        SSD    NVMe      healthy  4.56T     0.00          42.00M    3835426171172503840:9649149924003970491    34/97          41390/103536
+SH9.DRV12  1        SSD    NVMe      healthy  4.56T     0.00          0.00      6705611001293980985:12958134364757853999   35/97          41217/103520
+SH9.DRV13  1        SSD    NVMe      healthy  4.56T     0.00          42.00M    17752259077949506222:13081826954522849822  37/97          41452/103502
+     root@MOPURE01-ct0:/var/home/pureeng# puredb list driveswatch purearray list --space
+Every 2.0s: purearray list --spaceMOPURE01-ct0: Thu Aug  7 11:15:33 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  TotalMOPURE01  36.76T    98%     68265G39.50T   41%16.1 to 134.0 to 19.07T   5.82T2.31T   0.00    0.0017.19T68413585035100%86:00358102582025759% 3025740257502476097:024791247921469893146941368513688:0136810358203583035740257502579:002479124792246100%931469414695136820:01368113682035083035840357502571:00257102572025758% 9324794247952476092:02579124792247100%93146941     root@MOPURE01-ct0:/var/home/pureeng# watch purearray list --spacepuredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    NVMe      healthy  4.56T     0.00          0.00      12127998120357217627:9743501130521424583   39/97          41143/103450
+CH0.DRV1   1        SSD    NVMe      healthy  4.56T     0.00          0.00      1729517205411876050:10995576580356506332   41/97          41355/103387
+CH0.DRV2   1        SSD    NVMe      healthy  4.56T     0.00          0.00      5236417666449754167:10098709074752803720   37/97          41397/103481
+CH0.DRV3   1        SSD    NVMe      healthy  4.56T     0.00          0.00      2610235591275463581:10550084051730324992   35/97          41096/103378
+CH0.DRV4   1        SSD    NVMe      healthy  4.56T     0.00          0.00      262540858229998773:11638394487527487450    36/97          41259/103373
+CH0.DRV5   1        SSD    NVMe      healthy  4.56T     0.00          0.00      13790211528521633430:12851285268792932079  36/97          41389/103419
+CH0.DRV6   1        SSD    NVMe      healthy  4.56T     0.00          0.00      9643754275849715997:12540066882305638814   35/97          41065/103344
+CH0.DRV7   1        SSD    NVMe      healthy  4.56T     0.00          0.00      17853508920920459482:12079495276854767137  32/97          41329/103378
+CH0.DRV8   1        SSD    NVMe      healthy  4.56T     0.00          0.00      13365138475721052067:12645268659174513313  36/97          41073/103478
+CH0.DRV9   1        SSD    NVMe      healthy  4.56T     0.00          0.00      4626243913791000048:12522912402933154273   30/97          41118/103388
+CH0.DRV10  1        SSD    NVMe      healthy  4.56T     0.00          0.00      2839167718158254734:10293623870925263487   24/97          41218/103579
+CH0.DRV11  1        SSD    NVMe      healthy  4.56T     0.00          0.00      3835426171172503840:9649149924003970491    35/97          41090/103536
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      4198321796986717932:10271596641845195179   -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      4760235170723286728:13380119290743967208   -              -
+SH9.DRV12  1        SSD    NVMe      healthy  4.56T     0.00          0.00      6705611001293980985:12958134364757853999   36/97          41243/103520
+SH9.DRV13  1        SSD    NVMe      healthy  4.56T     0.00          0.00      17752259077949506222:13081826954522849822  40/97          41479/103502
+     root@MOPURE01-ct0:/var/home/pureeng# puredb list driveswatch purearray list --space
+Every 2.0s: purearray list --spaceMOPURE01-ct0: Thu Aug  7 11:22:47 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  TotalMOPURE01  36.76T    100%    68265G39.50T   41%16.1 to 134.0 to 19.07T   5.82T2.30T   0.00    0.0017.19T9524766% 93:024791246921460931368413685135100%84:00358103572025730257942479524795:0246911     root@MOPURE01-ct0:/var/home/pureeng# watch purearray list --spacepuredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    NVMe      healthy  4.56T     0.00          0.00      12127998120357217627:9743501130521424583   34/97          41146/103450
+CH0.DRV1   1        SSD    NVMe      healthy  4.56T     0.00          0.00      1729517205411876050:10995576580356506332   40/97          41358/103387
+CH0.DRV2   1        SSD    NVMe      healthy  4.56T     0.00          0.00      5236417666449754167:10098709074752803720   35/97          41406/103481
+CH0.DRV3   1        SSD    NVMe      healthy  4.56T     0.00          0.00      2610235591275463581:10550084051730324992   33/97          41103/103378
+CH0.DRV4   1        SSD    NVMe      healthy  4.56T     0.00          0.00      262540858229998773:11638394487527487450    38/97          41266/103373
+CH0.DRV5   1        SSD    NVMe      healthy  4.56T     0.00          0.00      13790211528521633430:12851285268792932079  37/97          41395/103419
+CH0.DRV6   1        SSD    NVMe      healthy  4.56T     0.00          0.00      9643754275849715997:12540066882305638814   35/97          41068/103344
+CH0.DRV7   1        SSD    NVMe      healthy  4.56T     0.00          0.00      17853508920920459482:12079495276854767137  32/97          41342/103378
+CH0.DRV8   1        SSD    NVMe      healthy  4.56T     0.00          0.00      13365138475721052067:12645268659174513313  36/97          41081/103478
+CH0.DRV9   1        SSD    NVMe      healthy  4.56T     0.00          0.00      4626243913791000048:12522912402933154273   30/97          41124/103388
+CH0.DRV10  1        SSD    NVMe      healthy  4.56T     0.00          0.00      2839167718158254734:10293623870925263487   24/97          41224/103579
+CH0.DRV11  1        SSD    NVMe      healthy  4.56T     0.00          0.00      3835426171172503840:9649149924003970491    36/97          41102/103536
+CH0.DRV12  1        SSD    NVMe      healthy  4.56T     0.00          0.00      6705611001293980985:12958134364757853999   34/97          41173/103520
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      4198321796986717932:10271596641845195179   -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      4760235170723286728:13380119290743967208   -              -
+SH9.DRV13  1        SSD    NVMe      healthy  4.56T     0.00          0.00      17752259077949506222:13081826954522849822  38/97          41484/103502
+     root@MOPURE01-ct0:/var/home/pureeng# puredb list driveswatch purearray list --space
+Every 2.0s: purearray list --spaceMOPURE01-ct0: Thu Aug  7 11:25:18 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  TotalMOPURE01  36.76T    100%    68265G39.50T   41%16.1 to 134.0 to 19.07T   5.82T2.30T   0.00    0.0017.19T213609T    67% 8313584035850355986:00357102572025     root@MOPURE01-ct0:/var/home/pureeng# purearray list --controller
+Name     Type              Mode       Model     Version  Status  Internal Details
+CT0      array_controller  secondary  FA-X20R3  6.5.10   ready   
+CT1      array_controller  primary    FA-X20R3  6.5.10   ready   
+SH9.SC0  shelf_controller  -          DFSC2     2.2.0    -       -
+SH9.SC1  shelf_controller  -          DFSC2     2.2.0    -       -
+     root@MOPURE01-ct0:/var/home/pureeng# puremessage list 0--open
+     root@MOPURE01-ct0:/var/home/pureeng# puremessage list --openarray list --controllerwatch purearray list --spacepuredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    NVMe      healthy  4.56T     0.00          84.00M    12127998120357217627:9743501130521424583   34/97          41159/103450
+CH0.DRV1   1        SSD    NVMe      healthy  4.56T     0.00          42.00M    1729517205411876050:10995576580356506332   44/97          41372/103387
+CH0.DRV2   1        SSD    NVMe      healthy  4.56T     0.00          0.00      5236417666449754167:10098709074752803720   38/97          41422/103481
+CH0.DRV3   1        SSD    NVMe      healthy  4.56T     0.00          84.00M    2610235591275463581:10550084051730324992   35/97          41120/103378
+CH0.DRV4   1        SSD    NVMe      healthy  4.56T     0.00          126.00M   262540858229998773:11638394487527487450    37/97          41274/103373
+CH0.DRV5   1        SSD    NVMe      healthy  4.56T     0.00          84.00M    13790211528521633430:12851285268792932079  38/97          41407/103419
+CH0.DRV6   1        SSD    NVMe      healthy  4.56T     0.00          42.00M    9643754275849715997:12540066882305638814   35/97          41078/103344
+CH0.DRV7   1        SSD    NVMe      healthy  4.56T     0.00          0.00      17853508920920459482:12079495276854767137  36/97          41357/103378
+CH0.DRV8   1        SSD    NVMe      healthy  4.56T     0.00          84.00M    13365138475721052067:12645268659174513313  36/97          41091/103478
+CH0.DRV9   1        SSD    NVMe      healthy  4.56T     0.00          84.00M    4626243913791000048:12522912402933154273   34/97          41140/103388
+CH0.DRV10  1        SSD    NVMe      healthy  4.56T     0.00          0.00      2839167718158254734:10293623870925263487   29/97          41239/103579
+CH0.DRV11  1        SSD    NVMe      healthy  4.56T     0.00          84.00M    3835426171172503840:9649149924003970491    39/97          41113/103536
+CH0.DRV12  1        SSD    NVMe      healthy  4.56T     0.00          126.00M   6705611001293980985:12958134364757853999   36/97          41188/103520
+CH0.DRV13  1        SSD    NVMe      healthy  4.56T     0.00          168.00M   17752259077949506222:13081826954522849822  36/97          41378/103502
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      4198321796986717932:10271596641845195179   -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      4760235170723286728:13380119290743967208   -              -
+     root@MOPURE01-ct0:/var/home/pureeng# puredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    NVMe      healthy  4.56T     0.00          84.00M    12127998120357217627:9743501130521424583   34/97          41153/103450
+CH0.DRV1   1        SSD    NVMe      healthy  4.56T     0.00          42.00M    1729517205411876050:10995576580356506332   44/97          41362/103387
+CH0.DRV2   1        SSD    NVMe      healthy  4.56T     0.00          0.00      5236417666449754167:10098709074752803720   38/97          41416/103481
+CH0.DRV3   1        SSD    NVMe      healthy  4.56T     0.00          84.00M    2610235591275463581:10550084051730324992   35/97          41110/103378
+CH0.DRV4   1        SSD    NVMe      healthy  4.56T     0.00          126.00M   262540858229998773:11638394487527487450    37/97          41263/103373
+CH0.DRV5   1        SSD    NVMe      healthy  4.56T     0.00          84.00M    13790211528521633430:12851285268792932079  38/97          41400/103419
+CH0.DRV6   1        SSD    NVMe      healthy  4.56T     0.00          42.00M    9643754275849715997:12540066882305638814   35/97          41070/103344
+CH0.DRV7   1        SSD    NVMe      healthy  4.56T     0.00          0.00      17853508920920459482:12079495276854767137  36/97          41351/103378
+CH0.DRV8   1        SSD    NVMe      healthy  4.56T     0.00          84.00M    13365138475721052067:12645268659174513313  36/97          41085/103478
+CH0.DRV9   1        SSD    NVMe      healthy  4.56T     0.00          84.00M    4626243913791000048:12522912402933154273   34/97          41134/103388
+CH0.DRV10  1        SSD    NVMe      healthy  4.56T     0.00          0.00      2839167718158254734:10293623870925263487   29/97          41235/103579
+CH0.DRV11  1        SSD    NVMe      healthy  4.56T     0.00          84.00M    3835426171172503840:9649149924003970491    39/97          41103/103536
+CH0.DRV12  1        SSD    NVMe      healthy  4.56T     0.00          126.00M   6705611001293980985:12958134364757853999   36/97          41179/103520
+CH0.DRV13  1        SSD    NVMe      healthy  4.56T     0.00          168.00M   17752259077949506222:13081826954522849822  36/97          41373/103502
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      4198321796986717932:10271596641845195179   -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      4760235170723286728:13380119290743967208   -              -
+     root@MOPURE01-ct0:/var/home/pureeng# puredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    NVMe      healthy  4.56T     0.00          84.00M    12127998120357217627:9743501130521424583   34/97          41153/103450
+CH0.DRV1   1        SSD    NVMe      healthy  4.56T     0.00          42.00M    1729517205411876050:10995576580356506332   44/97          41362/103387
+CH0.DRV2   1        SSD    NVMe      healthy  4.56T     0.00          0.00      5236417666449754167:10098709074752803720   38/97          41416/103481
+CH0.DRV3   1        SSD    NVMe      healthy  4.56T     0.00          84.00M    2610235591275463581:10550084051730324992   35/97          41110/103378
+CH0.DRV4   1        SSD    NVMe      healthy  4.56T     0.00          126.00M   262540858229998773:11638394487527487450    37/97          41263/103373
+CH0.DRV5   1        SSD    NVMe      healthy  4.56T     0.00          84.00M    13790211528521633430:12851285268792932079  38/97          41400/103419
+CH0.DRV6   1        SSD    NVMe      healthy  4.56T     0.00          42.00M    9643754275849715997:12540066882305638814   35/97          41070/103344
+CH0.DRV7   1        SSD    NVMe      healthy  4.56T     0.00          0.00      17853508920920459482:12079495276854767137  36/97          41351/103378
+CH0.DRV8   1        SSD    NVMe      healthy  4.56T     0.00          84.00M    13365138475721052067:12645268659174513313  36/97          41085/103478
+CH0.DRV9   1        SSD    NVMe      healthy  4.56T     0.00          84.00M    4626243913791000048:12522912402933154273   34/97          41134/103388
+CH0.DRV10  1        SSD    NVMe      healthy  4.56T     0.00          0.00      2839167718158254734:10293623870925263487   29/97          41235/103579
+CH0.DRV11  1        SSD    NVMe      healthy  4.56T     0.00          84.00M    3835426171172503840:9649149924003970491    39/97          41103/103536
+CH0.DRV12  1        SSD    NVMe      healthy  4.56T     0.00          126.00M   6705611001293980985:12958134364757853999   36/97          41179/103520
+CH0.DRV13  1        SSD    NVMe      healthy  4.56T     0.00          168.00M   17752259077949506222:13081826954522849822  36/97          41373/103502
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      4198321796986717932:10271596641845195179   -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      4760235170723286728:13380119290743967208   -              -
+     root@MOPURE01-ct0:/var/home/pureeng# puredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    NVMe      healthy  4.56T     0.00          84.00M    12127998120357217627:9743501130521424583   34/97          41153/103450
+CH0.DRV1   1        SSD    NVMe      healthy  4.56T     0.00          42.00M    1729517205411876050:10995576580356506332   44/97          41362/103387
+CH0.DRV2   1        SSD    NVMe      healthy  4.56T     0.00          0.00      5236417666449754167:10098709074752803720   38/97          41416/103481
+CH0.DRV3   1        SSD    NVMe      healthy  4.56T     0.00          84.00M    2610235591275463581:10550084051730324992   35/97          41110/103378
+CH0.DRV4   1        SSD    NVMe      healthy  4.56T     0.00          126.00M   262540858229998773:11638394487527487450    37/97          41263/103373
+CH0.DRV5   1        SSD    NVMe      healthy  4.56T     0.00          84.00M    13790211528521633430:12851285268792932079  38/97          41400/103419
+CH0.DRV6   1        SSD    NVMe      healthy  4.56T     0.00          42.00M    9643754275849715997:12540066882305638814   35/97          41070/103344
+CH0.DRV7   1        SSD    NVMe      healthy  4.56T     0.00          0.00      17853508920920459482:12079495276854767137  36/97          41351/103378
+CH0.DRV8   1        SSD    NVMe      healthy  4.56T     0.00          84.00M    13365138475721052067:12645268659174513313  36/97          41085/103478
+CH0.DRV9   1        SSD    NVMe      healthy  4.56T     0.00          84.00M    4626243913791000048:12522912402933154273   34/97          41134/103388
+CH0.DRV10  1        SSD    NVMe      healthy  4.56T     0.00          0.00      2839167718158254734:10293623870925263487   29/97          41235/103579
+CH0.DRV11  1        SSD    NVMe      healthy  4.56T     0.00          84.00M    3835426171172503840:9649149924003970491    39/97          41103/103536
+CH0.DRV12  1        SSD    NVMe      healthy  4.56T     0.00          126.00M   6705611001293980985:12958134364757853999   36/97          41179/103520
+CH0.DRV13  1        SSD    NVMe      healthy  4.56T     0.00          168.00M   17752259077949506222:13081826954522849822  36/97          41373/103502
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      4198321796986717932:10271596641845195179   -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      4760235170723286728:13380119290743967208   -              -
+     root@MOPURE01-ct0:/var/home/pureeng# puredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    NVMe      healthy  4.56T     0.00          84.00M    12127998120357217627:9743501130521424583   34/97          41156/103450
+CH0.DRV1   1        SSD    NVMe      healthy  4.56T     0.00          42.00M    1729517205411876050:10995576580356506332   44/97          41364/103387
+CH0.DRV2   1        SSD    NVMe      healthy  4.56T     0.00          0.00      5236417666449754167:10098709074752803720   38/97          41417/103481
+CH0.DRV3   1        SSD    NVMe      healthy  4.56T     0.00          84.00M    2610235591275463581:10550084051730324992   35/97          41113/103378
+CH0.DRV4   1        SSD    NVMe      healthy  4.56T     0.00          126.00M   262540858229998773:11638394487527487450    37/97          41264/103373
+CH0.DRV5   1        SSD    NVMe      healthy  4.56T     0.00          84.00M    13790211528521633430:12851285268792932079  38/97          41402/103419
+CH0.DRV6   1        SSD    NVMe      healthy  4.56T     0.00          42.00M    9643754275849715997:12540066882305638814   35/97          41073/103344
+CH0.DRV7   1        SSD    NVMe      healthy  4.56T     0.00          0.00      17853508920920459482:12079495276854767137  36/97          41354/103378
+CH0.DRV8   1        SSD    NVMe      healthy  4.56T     0.00          84.00M    13365138475721052067:12645268659174513313  36/97          41088/103478
+CH0.DRV9   1        SSD    NVMe      healthy  4.56T     0.00          84.00M    4626243913791000048:12522912402933154273   34/97          41136/103388
+CH0.DRV10  1        SSD    NVMe      healthy  4.56T     0.00          0.00      2839167718158254734:10293623870925263487   29/97          41238/103579
+CH0.DRV11  1        SSD    NVMe      healthy  4.56T     0.00          84.00M    3835426171172503840:9649149924003970491    39/97          41105/103536
+CH0.DRV12  1        SSD    NVMe      healthy  4.56T     0.00          126.00M   6705611001293980985:12958134364757853999   36/97          41182/103520
+CH0.DRV13  1        SSD    NVMe      healthy  4.56T     0.00          168.00M   17752259077949506222:13081826954522849822  36/97          41374/103502
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      4198321796986717932:10271596641845195179   -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      4760235170723286728:13380119290743967208   -              -
+     root@MOPURE01-ct0:/var/home/pureeng# puredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    NVMe      healthy  4.56T     0.00          0.00      12127998120357217627:9743501130521424583   34/97          41155/103450
+CH0.DRV1   1        SSD    NVMe      healthy  4.56T     0.00          0.00      1729517205411876050:10995576580356506332   44/97          41364/103387
+CH0.DRV2   1        SSD    NVMe      healthy  4.56T     0.00          0.00      5236417666449754167:10098709074752803720   38/97          41419/103481
+CH0.DRV3   1        SSD    NVMe      healthy  4.56T     0.00          0.00      2610235591275463581:10550084051730324992   36/97          41115/103378
+CH0.DRV4   1        SSD    NVMe      healthy  4.56T     0.00          0.00      262540858229998773:11638394487527487450    37/97          41264/103373
+CH0.DRV5   1        SSD    NVMe      healthy  4.56T     0.00          0.00      13790211528521633430:12851285268792932079  38/97          41404/103419
+CH0.DRV6   1        SSD    NVMe      healthy  4.56T     0.00          0.00      9643754275849715997:12540066882305638814   35/97          41070/103344
+CH0.DRV7   1        SSD    NVMe      healthy  4.56T     0.00          0.00      17853508920920459482:12079495276854767137  36/97          41353/103378
+CH0.DRV8   1        SSD    NVMe      healthy  4.56T     0.00          0.00      13365138475721052067:12645268659174513313  36/97          41088/103478
+CH0.DRV9   1        SSD    NVMe      healthy  4.56T     0.00          0.00      4626243913791000048:12522912402933154273   34/97          41135/103388
+CH0.DRV10  1        SSD    NVMe      healthy  4.56T     0.00          0.00      2839167718158254734:10293623870925263487   29/97          41239/103579
+CH0.DRV11  1        SSD    NVMe      healthy  4.56T     0.00          0.00      3835426171172503840:9649149924003970491    39/97          41106/103536
+CH0.DRV12  1        SSD    NVMe      healthy  4.56T     0.00          0.00      6705611001293980985:12958134364757853999   36/97          41181/103520
+CH0.DRV13  1        SSD    NVMe      healthy  4.56T     0.00          0.00      17752259077949506222:13081826954522849822  37/97          41373/103502
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      4198321796986717932:10271596641845195179   -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      4760235170723286728:13380119290743967208   -              -
+     root@MOPURE01-ct0:/var/home/pureeng# puredb list drivesmessage list --open
+     root@MOPURE01-ct0:/var/home/pureeng# puremessage list --opendb list drivesmessage list --openarray list --controllerwatch purearray list --space
+Every 2.0s: purearray list --spaceMOPURE01-ct0: Thu Aug  7 11:28:39 2025NameCapacity  Parity  Provisioned Size  Virtual  Thin Provisioning  Data Reduction  Total Reduction  Unique  Snapshots  Shared  System  Replication  TotalMOPURE01  36.09T    100%    68265G39.50T   41%16.1 to 134.0 to 19.07T   5.82T2.30T   0.00    0.0017.19T     root@MOPURE01-ct0:/var/home/pureeng# watch purearray list --spacepuremessage list --opendb list drivesmessage list --open
+     root@MOPURE01-ct0:/var/home/pureeng# purearray list --controller
+Name  Type              Mode       Model     Version  Status  Internal Details
+CT0   array_controller  secondary  FA-X20R3  6.5.10   ready   
+CT1   array_controller  primary    FA-X20R3  6.5.10   ready   
+     root@MOPURE01-ct0:/var/home/pureeng# purearray phonehome --send-today && ssh peer purearray phonehome --send-today
+
+Status   Action
+running  send_today
+phonehome is already running
+Status   Action
+running  send_today
+     root@MOPURE01-ct0:/var/home/pureeng# =~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.08.07 11:39:44 =~=~=~=~=~=~=~=~=~=~=~=
+
+     root@MOPURE01-ct0:/var/home/pureeng# 
+     root@MOPURE01-ct0:/var/home/pureeng# purearray remoteassist --disconnect
+Name          Status        Opened  Expires
+MOPURE01-ct0  disconnected  -       -
+     root@MOPURE01-ct0:/var/home/pureeng# ssh peer
+Last login: Thu Aug  7 10:29:13 2025 from fe80::26a9:37ff:fe55:b537%haeth0
+
+Thu Aug 07 11:39:56 2025
+Welcome root. This is Purity Version 6.5.10 on FlashArray MOPURE01
+http://www.purestorage.com/
+     root@MOPURE01-ct1:~# purearray remotessist --disconnect
+usage: purearray [-h]
+                 {activate,authorize,connect,default-protection,diagnose,disable,disconnect,enable,encryption,eradication-config,erase,eula,factory-reset-token,list,monitor,phonehome,remoteassist,rename,replace,report,setattr,suspend,tag,test,throttle,untag}
+                 ...
+purearray: error: argument subcommand: invalid choice: 'remotessist' (choose from 'activate', 'connect', 'default-protection', 'diagnose', 'disable', 'disconnect', 'enable', 'encryption', 'eradication-config', 'eula', 'list', 'monitor', 'phonehome', 'remoteassist', 'rename', 'replace', 'report', 'setattr', 'test', 'throttle', 'authorize', 'erase', 'factory-reset-token', 'suspend', 'tag', 'untag')
+     root@MOPURE01-ct1:~# purearray remotessist --disconnecta
+Name          Status        Opened  Expires
+MOPURE01-ct1  disconnected  -       -
+     root@MOPURE01-ct1:~# puredrive list
+Name       Type   Status   Capacity  Details
+CH0.BAY0   SSD    healthy  4.56T     -
+CH0.BAY1   SSD    healthy  4.56T     -
+CH0.BAY2   SSD    healthy  4.56T     -
+CH0.BAY3   SSD    healthy  4.56T     -
+CH0.BAY4   SSD    healthy  4.56T     -
+CH0.BAY5   SSD    healthy  4.56T     -
+CH0.BAY6   SSD    healthy  4.56T     -
+CH0.BAY7   SSD    healthy  4.56T     -
+CH0.BAY8   SSD    healthy  4.56T     -
+CH0.BAY9   SSD    healthy  4.56T     -
+CH0.BAY10  SSD    healthy  4.56T     -
+CH0.BAY11  SSD    healthy  4.56T     -
+CH0.BAY12  SSD    healthy  4.56T     -
+CH0.BAY13  SSD    healthy  4.56T     -
+CH0.BAY14  -      unused   0.00      -
+CH0.BAY15  -      unused   0.00      -
+CH0.BAY16  -      unused   0.00      -
+CH0.BAY17  -      unused   0.00      -
+CH0.BAY18  -      unused   0.00      -
+CH0.BAY19  -      unused   0.00      -
+CH0.NVB0   NVRAM  healthy  7.52G     -
+CH0.NVB1   NVRAM  healthy  7.52G     -
+CH0.NVB2   NVRAM  unused   0.00      -
+CH0.NVB3   NVRAM  unused   0.00      -
+     root@MOPURE01-ct1:~# puredb list drives
+Name       Subslot  Type   Protocol  Status   Capacity  Pinned Space  Degraded  Device Id                                  Boot Aus Used  Main Aus Used
+CH0.DRV0   1        SSD    NVMe      healthy  4.56T     0.00          0.00      12127998120357217627:9743501130521424583   34/97          41148/103450
+CH0.DRV1   1        SSD    NVMe      healthy  4.56T     0.00          0.00      1729517205411876050:10995576580356506332   41/97          41356/103387
+CH0.DRV2   1        SSD    NVMe      healthy  4.56T     0.00          0.00      5236417666449754167:10098709074752803720   38/97          41412/103481
+CH0.DRV3   1        SSD    NVMe      healthy  4.56T     0.00          0.00      2610235591275463581:10550084051730324992   36/97          41106/103378
+CH0.DRV4   1        SSD    NVMe      healthy  4.56T     0.00          0.00      262540858229998773:11638394487527487450    36/97          41255/103373
+CH0.DRV5   1        SSD    NVMe      healthy  4.56T     0.00          0.00      13790211528521633430:12851285268792932079  38/97          41398/103419
+CH0.DRV6   1        SSD    NVMe      healthy  4.56T     0.00          0.00      9643754275849715997:12540066882305638814   36/97          41063/103344
+CH0.DRV7   1        SSD    NVMe      healthy  4.56T     0.00          0.00      17853508920920459482:12079495276854767137  36/97          41346/103378
+CH0.DRV8   1        SSD    NVMe      healthy  4.56T     0.00          0.00      13365138475721052067:12645268659174513313  35/97          41081/103478
+CH0.DRV9   1        SSD    NVMe      healthy  4.56T     0.00          0.00      4626243913791000048:12522912402933154273   34/97          41127/103388
+CH0.DRV10  1        SSD    NVMe      healthy  4.56T     0.00          0.00      2839167718158254734:10293623870925263487   30/97          41232/103579
+CH0.DRV11  1        SSD    NVMe      healthy  4.56T     0.00          0.00      3835426171172503840:9649149924003970491    36/97          41095/103536
+CH0.DRV12  1        SSD    NVMe      healthy  4.56T     0.00          0.00      6705611001293980985:12958134364757853999   36/97          41176/103520
+CH0.DRV13  1        SSD    NVMe      healthy  4.56T     0.00          0.00      17752259077949506222:13081826954522849822  34/97          41362/103502
+CH0.NVR0   0        NVRAM  NVMe      healthy  7.52G     -             0.00      4198321796986717932:10271596641845195179   -              -
+CH0.NVR1   0        NVRAM  NVMe      healthy  7.52G     -             0.00      4760235170723286728:13380119290743967208   -              -
+     root@MOPURE01-ct1:~# puremessage list --open
+     root@MOPURE01-ct1:~# purearray list --controller
+sName  Type              Mode       Model     Version  Status  Internal Details
+CT0   array_controller  secondary  FA-X20R3  6.5.10   ready   
+CT1   array_controller  primary    FA-X20R3  6.5.10   ready   
+     root@MOPURE01-ct1:~# spurearray list --controllerexit
+logout
+     root@MOPURE01-ct0:/var/home/pureeng# exit
+exit
+pureeng@MOPURE01-ct0:~$ exit
+logout
