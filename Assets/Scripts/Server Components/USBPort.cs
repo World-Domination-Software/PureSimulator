@@ -23,6 +23,30 @@ public class USBPort : MonoBehaviour
     {
         flashDriveModel.SetActive(false);
         Dir.DirectoryName = "None";
+        
+        // Initialize files on USB drive based on version
+        UpdateFilesForVersion();
+    }
+    
+    // Method to update files based on purity version - extensible for future versions
+    private void UpdateFilesForVersion()
+    {
+        Dir._Files.Clear();
+        Dir._Files.Add($"purity_{purityVersionOnDrive}.ppkg");
+        Dir._Files.Add($"purity_{purityVersionOnDrive}.ppkg.sha1");
+    }
+    
+    // Public method to change Purity version on the USB drive
+    public void SetPurityVersion(string version)
+    {
+        purityVersionOnDrive = version;
+        UpdateFilesForVersion();
+    }
+    
+    // Get the current Purity version on this USB drive
+    public string GetPurityVersion()
+    {
+        return purityVersionOnDrive;
     }
 
     //universal serial bus port?

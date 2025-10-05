@@ -649,5 +649,67 @@ nvme1n1          87.34       445.67       556.78     445678     556789";
 
             return string.Join("\n", numberedLines);
         }
+        
+        public string HandleChmodCommand(string[] args)
+        {
+            if (args.Length < 3)
+            {
+                return "chmod: missing operand\nUsage: chmod [MODE] [FILE]";
+            }
+            
+            string mode = args[1];
+            string path = args[2];
+            
+            var node = fileSystem.GetNode(path);
+            if (node == null)
+            {
+                return $"chmod: cannot access '{path}': No such file or directory";
+            }
+            
+            // Update permissions (simplified - just acknowledge the command)
+            node.Permissions = mode.TrimStart('+');
+            return ""; // Success, no output
+        }
+        
+        public string HandleChownCommand(string[] args)
+        {
+            if (args.Length < 3)
+            {
+                return "chown: missing operand\nUsage: chown [OWNER]:[GROUP] [FILE]";
+            }
+            
+            string ownerGroup = args[1];
+            string path = args[2];
+            
+            var node = fileSystem.GetNode(path);
+            if (node == null)
+            {
+                return $"chown: cannot access '{path}': No such file or directory";
+            }
+            
+            // Check if user has permission (only root can chown)
+            if (fileSystem.GetCurrentUser() != "root")
+            {
+                return $"chown: changing ownership of '{path}': Operation not permitted";
+            }
+            
+            // Parse owner:group
+            string[] parts = ownerGroup.Split(':');
+            if (parts.Length > 0 && !string.IsNullOrEmpty(parts[0]))
+            {
+                node.Owner = parts[0];
+            }
+            if (parts.Length > 1 && !string.IsNullOrEmpty(parts[1]))
+            {
+                node.Group = parts[1];
+            }
+            else if (parts.Length == 1)
+            {
+                // If only owner specified, set group to same as owner
+                node.Group = parts[0];
+            }
+            
+            return ""; // Success, no output
+        }
     }
 }
