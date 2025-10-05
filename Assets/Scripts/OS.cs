@@ -652,6 +652,12 @@ public static class OS
                 case "touch":
                     result = fileSystemHandler.HandleTouchCommand(splits);
                     break;
+                case "chmod":
+                    result = fileSystemHandler.HandleChmodCommand(splits);
+                    break;
+                case "chown":
+                    result = fileSystemHandler.HandleChownCommand(splits);
+                    break;
                 // Add system information commands
                 case "df":
                 case "lsblk":
@@ -781,6 +787,48 @@ public static class OS
                 commandProcessor.Log("Controller  Read IOPS  Write IOPS  Read BW    Write BW");
                 commandProcessor.Log($"CT0         {Random.Range(1000, 5000)}       {Random.Range(2000, 8000)}        {Random.Range(100, 500)}MB/s   {Random.Range(150, 600)}MB/s");
                 commandProcessor.Log($"CT1         {Random.Range(1000, 5000)}       {Random.Range(2000, 8000)}        {Random.Range(100, 500)}MB/s   {Random.Range(150, 600)}MB/s");
+            }
+            return;
+        }
+        
+        if (splits[0] == "purevol")
+        {
+            if (splits[1] == "list")
+            {
+                commandProcessor.Log("Name          Size       Source     Serial                    Created");
+                // Sample volumes - extensible for future volume management
+                if (splits.Length > 2)
+                {
+                    if (splits[2] == "--connect")
+                    {
+                        commandProcessor.Log("Name          Size       Host       LUN  Initiator");
+                    }
+                    else if (splits[2] == "--pending")
+                    {
+                        commandProcessor.Log("Name          Size       Time");
+                        // No pending volumes
+                    }
+                    else if (splits[2] == "--snap")
+                    {
+                        commandProcessor.Log("Name          Size       Source     Created");
+                        // No snapshots
+                    }
+                    else if (splits[2] == "--protocol-endpoint")
+                    {
+                        commandProcessor.Log("Name                      Size");
+                        commandProcessor.Log("protocol-endpoint-0       1G");
+                    }
+                }
+            }
+            return;
+        }
+        
+        if (splits[0] == "puremastership")
+        {
+            if (splits[1] == "list")
+            {
+                commandProcessor.Log("Array           Role       Status");
+                commandProcessor.Log($"{chassis.GetComputerName()}       master     ok");
             }
             return;
         }
