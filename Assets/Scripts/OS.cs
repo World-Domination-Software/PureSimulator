@@ -416,6 +416,10 @@ public static class OS
                 commandProcessor.Log($"{splits[4].TrimStart('-', '-')}          {System.DateTime.Now.ToString()}          {expires.ToString()}");
                 return;
             }
+            if (splits[1] == "untag" && splits[2] == "--maintenance") {
+                commandProcessor.Log(""); // Command acknowledged
+                return;
+            }
         }
 
         //switching to root
@@ -449,7 +453,29 @@ public static class OS
             //if (splits[0] == "purehw" && splits[1] == "list" && splits[2] == "--all")
             if(splits[0] == "purehw" && splits[1] == "list")
             {
-                commandProcessor.Log(chassis.commandsExtension.PureHWList());
+                // Check for --type flag
+                if (splits.Length > 2 && splits[2] == "--type")
+                {
+                    string typeFilter = splits.Length > 3 ? splits[3] : "";
+                    if (typeFilter == "pwr")
+                    {
+                        // Filter for power supplies only
+                        commandProcessor.Log("Name          Status  Identify  Slot  Index  Speed       Temperature  Voltage  Details");
+                        commandProcessor.Log($"CH0.PWR0      ok      -         -     0      -           -            200 V    -");
+                        commandProcessor.Log($"CH0.PWR1      ok      -         -     1      -           -            200 V    -");
+                        commandProcessor.Log($"CT0.PWR0      ok      -         -     0      -           -            12 V     -");
+                        commandProcessor.Log($"CT1.PWR0      ok      -         -     0      -           -            12 V     -");
+                    }
+                    else
+                    {
+                        // For other types, show full list with filter (future enhancement)
+                        commandProcessor.Log(chassis.commandsExtension.PureHWList());
+                    }
+                }
+                else
+                {
+                    commandProcessor.Log(chassis.commandsExtension.PureHWList());
+                }
                 return;
             }
 
@@ -512,9 +538,27 @@ public static class OS
 
         if (splits[0] == "purenetwork") 
         {
-            if (splits[1] == "list") 
+            if (splits[1] == "list" && splits.Length == 2) 
             {
                 commandProcessor.Log(chassis.commandsExtension.PureNetworkList());
+            }
+            else if (splits[1] == "eth" && splits[2] == "list")
+            {
+                // List Ethernet interfaces
+                commandProcessor.Log("Name          Address              Netmask            Gateway            MTU    Enabled");
+                commandProcessor.Log($"eth0          192.168.1.100        255.255.255.0      192.168.1.1        1500   True");
+                commandProcessor.Log($"eth1          192.168.1.101        255.255.255.0      192.168.1.1        1500   True");
+                commandProcessor.Log($"eth2          192.168.2.100        255.255.255.0      192.168.2.1        9000   True");
+                commandProcessor.Log($"eth3          -                    -                  -                  1500   False");
+            }
+            else if (splits[1] == "fc" && splits[2] == "list")
+            {
+                // List Fibre Channel interfaces
+                commandProcessor.Log("Name          WWN                              Status    Speed");
+                commandProcessor.Log($"fc0           50:01:43:80:12:34:56:78          up        16Gb/s");
+                commandProcessor.Log($"fc1           50:01:43:80:12:34:56:79          up        16Gb/s");
+                commandProcessor.Log($"fc2           50:01:43:80:12:34:56:7a          down      -");
+                commandProcessor.Log($"fc3           50:01:43:80:12:34:56:7b          down      -");
             }
             return;
         }
@@ -532,6 +576,11 @@ public static class OS
                 commandProcessor.Log("Name        Status        Opened        Expires");
                 System.DateTime expires = System.DateTime.Now.AddDays(2);
                 commandProcessor.Log($"{chassis.GetComputerName()}{chassis.selectedController}        connected        {System.DateTime.Now.ToString()}        {expires.ToString()}");
+            }
+            if (splits[1] == "phonehome" && (splits[2] == "--send-today" || splits[2] == "--send-dotoday"))
+            {
+                commandProcessor.Log("Status  Action");
+                commandProcessor.Log("-       -");
             }
             if (splits[1] == "list" && splits.Length == 2)
             {
@@ -684,10 +733,54 @@ public static class OS
 
         if (splits[0] == "puremessage" && splits[1] == "list")
         {
-            if (splits[2] == "--open" && splits[3] == "--hidden") 
+            if (splits.Length > 2 && splits[2] == "--open") 
             {
                 commandProcessor.Log("ID          Time          Severity          Category          Code          Component          Name          Event          Expected          Action");
-                
+                // No messages to display (healthy system)
+            }
+            return;
+        }
+        
+        if (splits[0] == "pureport" && splits[1] == "list")
+        {
+            if (splits.Length > 2 && splits[2] == "--initiator")
+            {
+                commandProcessor.Log("Name          Initiator");
+                // Show sample port connections
+                commandProcessor.Log($"CT0.ETH0      -");
+                commandProcessor.Log($"CT0.ETH1      -");
+                commandProcessor.Log($"CT0.FC0       iqn.1993-08.org.debian:01:example");
+                commandProcessor.Log($"CT1.ETH0      -");
+                commandProcessor.Log($"CT1.FC0       iqn.1993-08.org.debian:01:example");
+            }
+            return;
+        }
+        
+        if (splits[0] == "puretune" && splits[1] == "--list")
+        {
+            commandProcessor.Log("Warning: failed to retrieve some tunable status (local puredb-chastity, peer puredb-chastity)");
+            commandProcessor.Log("local puredb              - <unset>");
+            commandProcessor.Log("peer puredb               - <unset>");
+            commandProcessor.Log("local puredb --platform   - <unset>");
+            commandProcessor.Log("peer puredb --platform    - <unset>");
+            return;
+        }
+        
+        if (splits[0] == "puredb")
+        {
+            // puredb commands - basic acknowledgment
+            commandProcessor.Log(""); // Command acknowledged
+            return;
+        }
+        
+        if (splits[0] == "iobalance")
+        {
+            if (splits.Length > 1 && (splits[1] == "--sampletime" || splits[1].StartsWith("-s")))
+            {
+                commandProcessor.Log("Sampling I/O balance...");
+                commandProcessor.Log("Controller  Read IOPS  Write IOPS  Read BW    Write BW");
+                commandProcessor.Log($"CT0         {Random.Range(1000, 5000)}       {Random.Range(2000, 8000)}        {Random.Range(100, 500)}MB/s   {Random.Range(150, 600)}MB/s");
+                commandProcessor.Log($"CT1         {Random.Range(1000, 5000)}       {Random.Range(2000, 8000)}        {Random.Range(100, 500)}MB/s   {Random.Range(150, 600)}MB/s");
             }
             return;
         }

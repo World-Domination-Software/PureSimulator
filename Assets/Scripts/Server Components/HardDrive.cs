@@ -49,6 +49,34 @@ namespace CrimsofallTechnologies.ServerSimulator
             SetLightsStatus();
         }
         
+        // Method to update drive size - allows for future dynamic size selection
+        public void SetStorageSize(double sizeInMB)
+        {
+            StorageSpace = sizeInMB;
+        }
+        
+        // Get storage size formatted for display (in TB)
+        public string GetFormattedSize()
+        {
+            return $"{StorageSpace/1000000}T";
+        }
+        
+        // Get storage size in various units
+        public double GetSizeInTB()
+        {
+            return StorageSpace / 1000000;
+        }
+        
+        public double GetSizeInGB()
+        {
+            return StorageSpace / 1000;
+        }
+        
+        public double GetSizeInMB()
+        {
+            return StorageSpace;
+        }
+        
         public string GetString()
         {
             string space = "";
