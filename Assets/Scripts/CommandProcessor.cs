@@ -306,12 +306,80 @@ namespace CrimsofallTechnologies.ServerSimulator
         private void AutocompleteFileNames() 
         {
             string[] splits = field.text.Split(' ');
-            string fullName = chassis.GetClosestFileStartingWith(splits[1]);
-            string txt = splits[0] + " " + fullName;
-            field.text = txt;
-
-            field.caretPosition = txt.Length;
-            field.selectionFocusPosition = txt.Length;
+            
+            // Need at least 2 parts (command and partial filename/path)
+            if (splits.Length < 2 || string.IsNullOrEmpty(splits[1]))
+                return;
+            
+            string partialPath = splits[1];
+            string autocompletedPath = "";
+            
+            // Handle paths with directories (e.g., /mnt/pur...)
+            if (partialPath.Contains("/"))
+            {
+                int lastSlashIndex = partialPath.LastIndexOf('/');
+                string dirPath = partialPath.Substring(0, lastSlashIndex + 1);
+                string partialName = partialPath.Substring(lastSlashIndex + 1);
+                
+                // Try to autocomplete based on the directory context
+                if (dirPath == "/mnt/" && Mounted && chassis.InsertedUsbPort != null)
+                {
+                    // Autocomplete files in mounted USB directory
+                    string closestFile = chassis.InsertedUsbPort.Dir.GetClosestFile(partialName);
+                    if (!string.IsNullOrEmpty(closestFile))
+                    {
+                        autocompletedPath = dirPath + closestFile;
+                    }
+                }
+                else if (dirPath.StartsWith("/dev/"))
+                {
+                    // Autocomplete device names
+                    string partialDevice = partialName;
+                    if (chassis.InsertedUsbPort != null)
+                    {
+                        string usbName = chassis.InsertedUsbPort.Dir.DirectoryName;
+                        if (usbName.StartsWith(partialDevice))
+                        {
+                            autocompletedPath = dirPath + usbName;
+                        }
+                    }
+                    // Also check for sda1 (internal drive)
+                    if (string.IsNullOrEmpty(autocompletedPath) && "sda1".StartsWith(partialDevice))
+                    {
+                        autocompletedPath = dirPath + "sda1";
+                    }
+                }
+                else
+                {
+                    // Default: try to autocomplete from current controller directory
+                    string closestFile = chassis.GetClosestFileStartingWith(partialName);
+                    if (!string.IsNullOrEmpty(closestFile))
+                    {
+                        autocompletedPath = dirPath + closestFile;
+                    }
+                }
+            }
+            else
+            {
+                // No path, just filename - autocomplete from current directory
+                autocompletedPath = chassis.GetClosestFileStartingWith(partialPath);
+            }
+            
+            // Only update if we found an autocomplete match
+            if (!string.IsNullOrEmpty(autocompletedPath))
+            {
+                string txt = splits[0] + " " + autocompletedPath;
+                
+                // Preserve any additional arguments
+                for (int i = 2; i < splits.Length; i++)
+                {
+                    txt += " " + splits[i];
+                }
+                
+                field.text = txt;
+                field.caretPosition = txt.Length;
+                field.selectionFocusPosition = txt.Length;
+            }
         }
 
         #region INPUT_OUTPUT

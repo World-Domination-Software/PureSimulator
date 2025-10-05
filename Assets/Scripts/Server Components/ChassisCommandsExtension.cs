@@ -142,29 +142,89 @@ namespace CrimsofallTechnologies.ServerSimulator
             }*/
 
             //find and list all directories with pattern:
-            if(spl[1] == "dev")
+            if(spl.Length >= 2 && spl[1] == "dev")
             {
                 if(spl.Length >= 3) //search via pattern
                 {
                     if(spl[2] == "") //like ls /dev/
-                        return chassis.InsertedUsbPort.Dir.DirectoryName;
-
-                    char[] pattern = spl[2].ToCharArray();
-                    string d = "*";
-                    if(chassis.InsertedUsbPort!=null && pattern.Length >= 4 && pattern[0] == 's' && 
-                        pattern[1] == 'd' && pattern[2] == '*' && pattern[3] == '1') {
-                        d = chassis.InsertedUsbPort.Dir.DirectoryName;
+                    {
+                        if(chassis.InsertedUsbPort != null)
+                            return chassis.InsertedUsbPort.Dir.DirectoryName;
+                        return s;
                     }
-                    return d;
+
+                    // Handle wildcard patterns like sd*1, sd*, sdb*, etc.
+                    string pattern = spl[2];
+                    if(pattern.Contains("*"))
+                    {
+                        string result = "";
+                        
+                        // Always include sda1 (internal drive) if pattern matches
+                        if(MatchesWildcard("sda1", pattern))
+                        {
+                            result = "/dev/sda1";
+                        }
+                        
+                        // Include USB drive if connected and matches pattern
+                        if(chassis.InsertedUsbPort != null)
+                        {
+                            string usbName = chassis.InsertedUsbPort.Dir.DirectoryName;
+                            if(MatchesWildcard(usbName, pattern))
+                            {
+                                if(result.Length > 0)
+                                    result += "  /dev/" + usbName;
+                                else
+                                    result = "/dev/" + usbName;
+                            }
+                        }
+                        
+                        // Return * if no matches found
+                        return result.Length > 0 ? result : "*";
+                    }
+                    
+                    // Direct name match (no wildcard)
+                    if(chassis.InsertedUsbPort!=null && spl[2] == chassis.InsertedUsbPort.Dir.DirectoryName)
+                    {
+                        return chassis.InsertedUsbPort.Dir.DirectoryName;
+                    }
+                    
+                    // Check for sda1 (internal drive)
+                    if(spl[2] == "sda1")
+                    {
+                        return "sda1";
+                    }
+                    
+                    return "*";
                 }
                 else if(chassis.InsertedUsbPort != null)
                 {
-                    //return connected drive
+                    //return connected drive when just "ls /dev"
                     return chassis.InsertedUsbPort.Dir.DirectoryName;
                 }
             }
 
             return s;
+        }
+        
+        // Helper method to match wildcards
+        private bool MatchesWildcard(string text, string pattern)
+        {
+            // Simple wildcard matching - * matches any sequence of characters
+            if(pattern == "*") return true;
+            
+            int starPos = pattern.IndexOf('*');
+            if(starPos == -1)
+            {
+                return text == pattern;
+            }
+            
+            string prefix = pattern.Substring(0, starPos);
+            string suffix = pattern.Substring(starPos + 1);
+            
+            if(text.Length < prefix.Length + suffix.Length)
+                return false;
+                
+            return text.StartsWith(prefix) && text.EndsWith(suffix);
         }
     }
 }

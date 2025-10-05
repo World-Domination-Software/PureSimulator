@@ -237,10 +237,35 @@ public static class OS
                 }
 
                 //copy files USB -> controller:
-                string[] spls = splits[1].Split('/'); //used as: cp /mnt/sdb1
-                if (spls.Length >= 2 && spls[1] == "mnt" && chassis.DirectoryExsists(spls[2])) 
+                string sourcePath = splits.Length > 1 ? splits[1] : "";
+                
+                // Handle wildcards in cp command (e.g., cp /mnt/* . or cp /mnt/6.7.2/* .)
+                if (sourcePath.Contains("*"))
                 {
-                    commandProcessor.CopyMountFiles(chassis.InsertedUsbPort.Dir.Files, 10f * commandProcessor.timeMultiplier);
+                    // For patterns like /mnt/* or /mnt/subdir/*, copy all USB files
+                    if (sourcePath.StartsWith("/mnt"))
+                    {
+                        commandProcessor.CopyMountFiles(chassis.InsertedUsbPort.Dir.Files, 10f * commandProcessor.timeMultiplier);
+                        return;
+                    }
+                }
+                
+                string[] spls = sourcePath.Split('/'); //used as: cp /mnt/sdb1
+                if (spls.Length >= 2 && spls[1] == "mnt") 
+                {
+                    // Check if it's just /mnt or /mnt/ (copy all)
+                    if (spls.Length == 2 || (spls.Length == 3 && spls[2] == ""))
+                    {
+                        commandProcessor.CopyMountFiles(chassis.InsertedUsbPort.Dir.Files, 10f * commandProcessor.timeMultiplier);
+                        return;
+                    }
+                    
+                    // Check if directory path matches USB directory
+                    if (chassis.DirectoryExsists(spls[2])) 
+                    {
+                        commandProcessor.CopyMountFiles(chassis.InsertedUsbPort.Dir.Files, 10f * commandProcessor.timeMultiplier);
+                        return;
+                    }
                 }
             }
 
