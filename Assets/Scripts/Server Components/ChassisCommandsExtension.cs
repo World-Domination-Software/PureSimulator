@@ -129,10 +129,33 @@ namespace CrimsofallTechnologies.ServerSimulator
                 return chassis.GetCurrentController().Dir.GetFilesNames();
             }
 
+            // Handle wildcard patterns in current directory (e.g., "*.ppkg", "file?.txt")
+            if(!dir.StartsWith("/") && (dir.Contains("*") || dir.Contains("?")))
+            {
+                var matches = chassis.GetCurrentController().Dir.GetMatchingFiles(dir);
+                if(matches.Count > 0)
+                {
+                    return "    " + string.Join("    ", matches);
+                }
+                return "."; // No matches
+            }
+
             //files in /mnt directory
             if(dir == "/mnt" && chassis.commandProcessor.Mounted)
             {
                 return chassis.InsertedUsbPort.Dir.GetFilesNames();
+            }
+            
+            // Handle wildcard patterns in /mnt directory (e.g., "/mnt/*.ppkg")
+            if(dir.StartsWith("/mnt/") && chassis.commandProcessor.Mounted && (dir.Contains("*") || dir.Contains("?")))
+            {
+                string pattern = dir.Substring(5); // Remove "/mnt/" prefix
+                var matches = chassis.InsertedUsbPort.Dir.GetMatchingFiles(pattern);
+                if(matches.Count > 0)
+                {
+                    return "    " + string.Join("    ", matches);
+                }
+                return "."; // No matches
             }
 
             //searching USB drive directory - does not work in linux
@@ -153,9 +176,9 @@ namespace CrimsofallTechnologies.ServerSimulator
                         return s;
                     }
 
-                    // Handle wildcard patterns like sd*1, sd*, sdb*, etc.
+                    // Handle wildcard patterns like sd*1, sd*, sdb?, etc. (supports * and ?)
                     string pattern = spl[2];
-                    if(pattern.Contains("*"))
+                    if(pattern.Contains("*") || pattern.Contains("?"))
                     {
                         string result = "";
                         
@@ -206,25 +229,48 @@ namespace CrimsofallTechnologies.ServerSimulator
             return s;
         }
         
-        // Helper method to match wildcards
+        // Helper method to match wildcards (* for multiple chars, ? for single char)
         private bool MatchesWildcard(string text, string pattern)
         {
-            // Simple wildcard matching - * matches any sequence of characters
-            if(pattern == "*") return true;
+            if (string.IsNullOrEmpty(pattern)) return string.IsNullOrEmpty(text);
+            if (pattern == "*") return true;
             
-            int starPos = pattern.IndexOf('*');
-            if(starPos == -1)
+            int textIdx = 0;
+            int patternIdx = 0;
+            int starIdx = -1;
+            int matchIdx = 0;
+            
+            while (textIdx < text.Length)
             {
-                return text == pattern;
+                if (patternIdx < pattern.Length && (pattern[patternIdx] == '?' || pattern[patternIdx] == text[textIdx]))
+                {
+                    textIdx++;
+                    patternIdx++;
+                }
+                else if (patternIdx < pattern.Length && pattern[patternIdx] == '*')
+                {
+                    starIdx = patternIdx;
+                    matchIdx = textIdx;
+                    patternIdx++;
+                }
+                else if (starIdx != -1)
+                {
+                    patternIdx = starIdx + 1;
+                    matchIdx++;
+                    textIdx = matchIdx;
+                }
+                else
+                {
+                    return false;
+                }
             }
             
-            string prefix = pattern.Substring(0, starPos);
-            string suffix = pattern.Substring(starPos + 1);
+            while (patternIdx < pattern.Length && pattern[patternIdx] == '*')
+            {
+                patternIdx++;
+            }
             
-            if(text.Length < prefix.Length + suffix.Length)
-                return false;
-                
-            return text.StartsWith(prefix) && text.EndsWith(suffix);
+            return patternIdx == pattern.Length;
         }
     }
 }

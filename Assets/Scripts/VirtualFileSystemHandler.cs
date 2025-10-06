@@ -67,6 +67,12 @@ namespace CrimsofallTechnologies.ServerSimulator
                 }
             }
 
+            // Handle wildcards in the target path
+            if (targetPath.Contains("*") || targetPath.Contains("?"))
+            {
+                return HandleWildcardLs(targetPath, longFormat, showHidden);
+            }
+
             var result = fileSystem.ListDirectory(targetPath, longFormat, showHidden);
             if (result == null)
             {
@@ -74,6 +80,110 @@ namespace CrimsofallTechnologies.ServerSimulator
             }
 
             return result;
+        }
+
+        // Handle ls with wildcard patterns
+        private string HandleWildcardLs(string pattern, bool longFormat, bool showHidden)
+        {
+            // Determine directory and pattern
+            string directory = fileSystem.GetCurrentDirectory();
+            string filePattern = pattern;
+            
+            if (pattern.Contains("/"))
+            {
+                int lastSlash = pattern.LastIndexOf('/');
+                directory = pattern.Substring(0, lastSlash);
+                if (string.IsNullOrEmpty(directory)) directory = "/";
+                filePattern = pattern.Substring(lastSlash + 1);
+            }
+
+            // Get all files in the directory
+            var dirNode = fileSystem.GetNode(directory);
+            if (dirNode == null || !dirNode.IsDirectory)
+            {
+                return $"ls: cannot access '{pattern}': No such file or directory";
+            }
+
+            var matchingFiles = new System.Collections.Generic.List<string>();
+            foreach (var child in dirNode.GetChildren())
+            {
+                if (!showHidden && child.Name.StartsWith(".")) continue;
+                
+                if (WildcardMatchPublic(child.Name, filePattern))
+                {
+                    matchingFiles.Add(child.Name);
+                }
+            }
+
+            if (matchingFiles.Count == 0)
+            {
+                return $"ls: cannot access '{pattern}': No such file or directory";
+            }
+
+            // Format output
+            if (longFormat)
+            {
+                var output = new System.Collections.Generic.List<string>();
+                foreach (var fileName in matchingFiles)
+                {
+                    var fullPath = directory == "/" ? "/" + fileName : directory + "/" + fileName;
+                    var node = fileSystem.GetNode(fullPath);
+                    if (node != null)
+                    {
+                        string permissions = node.IsDirectory ? "d" + node.Permissions : "-" + node.Permissions;
+                        output.Add($"{permissions} {node.Owner} {node.Group} {node.Size,8} {node.ModifiedTime:MMM dd HH:mm} {node.Name}");
+                    }
+                }
+                return string.Join("\n", output);
+            }
+            else
+            {
+                return string.Join("  ", matchingFiles);
+            }
+        }
+
+        // Public wildcard match helper
+        private bool WildcardMatchPublic(string text, string pattern)
+        {
+            if (string.IsNullOrEmpty(pattern)) return string.IsNullOrEmpty(text);
+            if (pattern == "*") return true;
+            
+            int textIdx = 0;
+            int patternIdx = 0;
+            int starIdx = -1;
+            int matchIdx = 0;
+            
+            while (textIdx < text.Length)
+            {
+                if (patternIdx < pattern.Length && (pattern[patternIdx] == '?' || pattern[patternIdx] == text[textIdx]))
+                {
+                    textIdx++;
+                    patternIdx++;
+                }
+                else if (patternIdx < pattern.Length && pattern[patternIdx] == '*')
+                {
+                    starIdx = patternIdx;
+                    matchIdx = textIdx;
+                    patternIdx++;
+                }
+                else if (starIdx != -1)
+                {
+                    patternIdx = starIdx + 1;
+                    matchIdx++;
+                    textIdx = matchIdx;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            
+            while (patternIdx < pattern.Length && pattern[patternIdx] == '*')
+            {
+                patternIdx++;
+            }
+            
+            return patternIdx == pattern.Length;
         }
 
         // Handle cd command

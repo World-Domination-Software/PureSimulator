@@ -239,13 +239,31 @@ public static class OS
                 //copy files USB -> controller:
                 string sourcePath = splits.Length > 1 ? splits[1] : "";
                 
-                // Handle wildcards in cp command (e.g., cp /mnt/* . or cp /mnt/6.7.2/* .)
-                if (sourcePath.Contains("*"))
+                // Handle wildcards in cp command (e.g., cp /mnt/*.ppkg . or cp /mnt/file?.txt .)
+                if (sourcePath.Contains("*") || sourcePath.Contains("?"))
                 {
-                    // For patterns like /mnt/* or /mnt/subdir/*, copy all USB files
-                    if (sourcePath.StartsWith("/mnt"))
+                    // For patterns like /mnt/* or /mnt/*.ppkg, copy matching USB files
+                    if (sourcePath.StartsWith("/mnt/"))
                     {
-                        commandProcessor.CopyMountFiles(chassis.InsertedUsbPort.Dir.Files, 10f * commandProcessor.timeMultiplier);
+                        string pattern = sourcePath.Substring(5); // Remove "/mnt/" prefix
+                        if (pattern == "*" || pattern == "")
+                        {
+                            // Copy all files
+                            commandProcessor.CopyMountFiles(chassis.InsertedUsbPort.Dir.Files, 10f * commandProcessor.timeMultiplier);
+                        }
+                        else
+                        {
+                            // Copy files matching the pattern
+                            var matchingFiles = chassis.InsertedUsbPort.Dir.GetMatchingFiles(pattern);
+                            if (matchingFiles.Count > 0)
+                            {
+                                commandProcessor.CopyMountFiles(matchingFiles.ToArray(), 10f * commandProcessor.timeMultiplier);
+                            }
+                            else
+                            {
+                                commandProcessor.LogError($"No files match pattern: {sourcePath}");
+                            }
+                        }
                         return;
                     }
                 }
