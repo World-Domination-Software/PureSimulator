@@ -57,6 +57,66 @@ public class VirtualDirectory
         return "";
     }
 
+    // Get all files matching a wildcard pattern (* and ? supported)
+    public List<string> GetMatchingFiles(string pattern)
+    {
+        var matches = new List<string>();
+        
+        for (int i = 0; i < _Files.Count; i++)
+        {
+            if (WildcardMatch(_Files[i], pattern))
+            {
+                matches.Add(_Files[i]);
+            }
+        }
+        
+        return matches;
+    }
+
+    // Wildcard matching supporting * (multiple chars) and ? (single char)
+    private bool WildcardMatch(string text, string pattern)
+    {
+        if (string.IsNullOrEmpty(pattern)) return string.IsNullOrEmpty(text);
+        if (pattern == "*") return true;
+        
+        int textIdx = 0;
+        int patternIdx = 0;
+        int starIdx = -1;
+        int matchIdx = 0;
+        
+        while (textIdx < text.Length)
+        {
+            if (patternIdx < pattern.Length && (pattern[patternIdx] == '?' || pattern[patternIdx] == text[textIdx]))
+            {
+                textIdx++;
+                patternIdx++;
+            }
+            else if (patternIdx < pattern.Length && pattern[patternIdx] == '*')
+            {
+                starIdx = patternIdx;
+                matchIdx = textIdx;
+                patternIdx++;
+            }
+            else if (starIdx != -1)
+            {
+                patternIdx = starIdx + 1;
+                matchIdx++;
+                textIdx = matchIdx;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        
+        while (patternIdx < pattern.Length && pattern[patternIdx] == '*')
+        {
+            patternIdx++;
+        }
+        
+        return patternIdx == pattern.Length;
+    }
+
     public bool FileExsists(string fileName)
     {
         for (int i = 0; i < _Files.Count; i++)

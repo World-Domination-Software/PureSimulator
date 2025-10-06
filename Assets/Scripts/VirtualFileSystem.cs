@@ -387,7 +387,7 @@ namespace CrimsofallTechnologies.ServerSimulator
 
             if (!node.IsDirectory)
             {
-                if (node.Name.Contains(pattern) || pattern == "*")
+                if (WildcardMatch(node.Name, pattern))
                 {
                     results.Add(currentPath);
                 }
@@ -399,6 +399,50 @@ namespace CrimsofallTechnologies.ServerSimulator
                 var childPath = currentPath == "/" ? "/" + child.Name : currentPath + "/" + child.Name;
                 FindFilesRecursive(child, childPath, pattern, results);
             }
+        }
+
+        // Wildcard matching supporting * (multiple chars) and ? (single char)
+        private bool WildcardMatch(string text, string pattern)
+        {
+            if (string.IsNullOrEmpty(pattern)) return string.IsNullOrEmpty(text);
+            if (pattern == "*") return true;
+            
+            int textIdx = 0;
+            int patternIdx = 0;
+            int starIdx = -1;
+            int matchIdx = 0;
+            
+            while (textIdx < text.Length)
+            {
+                if (patternIdx < pattern.Length && (pattern[patternIdx] == '?' || pattern[patternIdx] == text[textIdx]))
+                {
+                    textIdx++;
+                    patternIdx++;
+                }
+                else if (patternIdx < pattern.Length && pattern[patternIdx] == '*')
+                {
+                    starIdx = patternIdx;
+                    matchIdx = textIdx;
+                    patternIdx++;
+                }
+                else if (starIdx != -1)
+                {
+                    patternIdx = starIdx + 1;
+                    matchIdx++;
+                    textIdx = matchIdx;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            
+            while (patternIdx < pattern.Length && pattern[patternIdx] == '*')
+            {
+                patternIdx++;
+            }
+            
+            return patternIdx == pattern.Length;
         }
     }
 }
