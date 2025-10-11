@@ -1,10 +1,11 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class TopBar : MonoBehaviour
 {
    public GameObject simTypeUI;
-   public GameObject newArrayUI, cameraButton, backButton;
+   public GameObject newArrayUI, cameraButton, backButton, certificationPanel;
    public Text arrayViewText;
    
    private bool watchingFrontCam = true;
@@ -23,8 +24,8 @@ public class TopBar : MonoBehaviour
 
     public void Exam()
     {
-        LoadingUI.Instance.LoadScene("Exam");
         CloseAllUI();
+        certificationPanel.SetActive(true);
     }
 
     public void MoreInfo()
@@ -75,6 +76,7 @@ public class TopBar : MonoBehaviour
     {
         simTypeUI.SetActive(false);
         newArrayUI.SetActive(false);
+        certificationPanel.SetActive(false);
     }
 
     public void BackView()
@@ -94,5 +96,14 @@ public class TopBar : MonoBehaviour
         
         ui.EnableMainCameras();
         backButton.SetActive(false);
+    }
+
+    public void ChooseCertification(string Type)
+    {
+        CloseAllUI();
+        if(Type == "FA_IE") SceneManager.LoadScene("Exam_FA");
+        if(Type == "FB_IE") 
+            //SceneManager.LoadScene("Exam_FB");
+            ui.ShowPopup("Unsupported Feature", "This feature will be implemented in a future release.");
     }
 }
