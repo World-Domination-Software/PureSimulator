@@ -8,12 +8,12 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Amber Emmision
-  m_Shader: {fileID: 4800000, guid: 650dd9526735d5b46b79224bc6e94025, type: 3}
+  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_Parent: {fileID: 2100000, guid: 4b834575fa498d349af60c8388250021, type: 2}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords:
+  m_ValidKeywords:
   - _EMISSION
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -29,8 +29,8 @@ Material:
     m_Ints: []
     m_Floats: []
     m_Colors:
-    - _BaseColor: {r: 0.77, g: 0.5344706, b: 0, a: 1}
-    - _Color: {r: 0.77, g: 0.5344706, b: 0, a: 1}
+    - _BaseColor: {r: 0.90588236, g: 0.85490197, b: 0.14901961, a: 1}
+    - _Color: {r: 0.90588236, g: 0.85490197, b: 0.14901957, a: 1}
     - _EmissionColor: {r: 30, g: 8.233795, b: 0.20995298, a: 30}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
