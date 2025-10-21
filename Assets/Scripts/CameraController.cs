@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
+// using UnityEngine.Rendering.Universal; // Removed - not used in this script
 
 //a simple freelook camera with ability to move around but always looks at the server object!
 public class CameraController : MonoBehaviour

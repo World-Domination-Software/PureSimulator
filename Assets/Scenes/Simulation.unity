@@ -9332,7 +9332,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 816.263, y: -12.65}
+  m_AnchoredPosition: {x: 820.8633, y: -12.65}
   m_SizeDelta: {x: 1400, y: 25.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &650349830
@@ -12208,7 +12208,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 10
@@ -12633,8 +12633,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 58.13149, y: -12.65}
-  m_SizeDelta: {x: 116.26298, y: 25.3}
+  m_AnchoredPosition: {x: 60.431656, y: -12.65}
+  m_SizeDelta: {x: 120.86331, y: 25.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &876468737
 GameObject:

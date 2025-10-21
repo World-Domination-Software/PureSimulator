@@ -1,7 +1,9 @@
 {
     "name": "PureSim.Runtime",
     "rootNamespace": "PureSim",
-    "references": [],
+    "references": [
+        "Unity.TextMeshPro"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

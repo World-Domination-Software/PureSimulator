@@ -17,7 +17,7 @@ namespace PureSim.Editor
         [MenuItem("Tools/PureSim/Regenerate Task Menu")]
         public static void RegenerateMenu()
         {
-            string tasksPath = Path.Combine(Application.dataPath, "..", ".copilot/next_steps.json");
+            string tasksPath = Path.Combine(UnityEngine.Application.dataPath, "..", ".copilot/next_steps.json");
             
             if (!File.Exists(tasksPath))
             {
