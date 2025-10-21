@@ -12,7 +12,10 @@ namespace PureSim.Simulation
     [Serializable]
     public class SimulationState
     {
-        // Hardware state
+        // Hardware model - complete hardware representation
+        [SerializeField] private HardwareModel hardwareModel = new HardwareModel();
+        
+        // Array and workflow state
         [SerializeField] private List<ArrayState> arrays = new List<ArrayState>();
         [SerializeField] private List<ControllerState> controllers = new List<ControllerState>();
         [SerializeField] private List<ShelfState> shelves = new List<ShelfState>();
@@ -113,6 +116,9 @@ namespace PureSim.Simulation
         {
             return powerStates.TryGetValue(component, out bool state) ? state : true;
         }
+        
+        // Hardware Model Access
+        public HardwareModel GetHardwareModel() => hardwareModel;
         
         // Serialization support
         public string Serialize()
