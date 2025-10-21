@@ -1,0 +1,57 @@
+# Golden Transcript: USB Mount Workflow - Happy Path
+# This file contains expected output for a successful USB detection and mount workflow
+# Source: Docs/PuttyLogs/putty2025-02-18.log L648-653
+
+## Test: List devices with USB inserted
+Command: ls /dev/sd*1
+Expected Output:
+/dev/sda1  /dev/sdb1
+
+## Test: Mount USB device (clean)
+Command: mount /dev/sdb1 /mnt
+Expected Output:
+(no output - silent success)
+
+## Test: List devices after mount (verify still present)
+Command: ls /dev/sd*1
+Expected Output:
+/dev/sda1  /dev/sdb1
+
+---
+
+# Golden Transcript: USB Mount Workflow - Fault Path (USB Not Inserted)
+# This file contains expected output when USB is not inserted
+
+## Test: List devices without USB
+Command: ls /dev/sd*1
+Expected Output:
+/dev/sda1
+
+## Test: Attempt mount without USB
+Command: mount /dev/sdb1 /mnt
+Expected Output:
+mount: special device /dev/sdb1 does not exist
+
+---
+
+# Golden Transcript: USB Mount Workflow - Error Path (Already Mounted)
+
+## Test: Mount when already mounted
+Command: mount /dev/sdb1 /mnt
+Expected Output:
+mount: /dev/sdb1 is already mounted or /mnt busy
+       /dev/sdb1 is already mounted on /mnt
+
+---
+
+# Golden Transcript: USB Mount Workflow - Error Path (Wrong Device)
+
+## Test: Mount non-existent device
+Command: mount /dev/sdc1 /mnt
+Expected Output:
+mount: special device /dev/sdc1 does not exist
+
+## Test: Mount non-block device
+Command: mount /invalid/path /mnt
+Expected Output:
+mount: /invalid/path is not a block device
