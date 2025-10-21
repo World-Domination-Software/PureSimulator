@@ -1,0 +1,79 @@
+[
+  {
+    "id": "console-001",
+    "title": "Complete Quake Console Core Implementation",
+    "description": "Finish ConsoleController with input buffer, tokenizer, parser, dispatcher, history, autocomplete, and scrollback. Ensure toggle with backquote/tilde works reliably.",
+    "type": "code",
+    "status": "open"
+  },
+  {
+    "id": "console-002",
+    "title": "Implement Console Command Registry",
+    "description": "Create reflection-based discovery system that finds all [ConsoleCommand] decorated classes and registers them for dispatch.",
+    "type": "code",
+    "status": "open"
+  },
+  {
+    "id": "ui-001",
+    "title": "Create ConsoleOverlayUI Prefab",
+    "description": "Build the UI prefab with TextMeshPro for input line and scrollback area. Should be overlay-style, toggleable, and visually distinct from Serial Terminal.",
+    "type": "ui",
+    "status": "open"
+  },
+  {
+    "id": "serial-001",
+    "title": "Implement Serial Command Infrastructure",
+    "description": "Create ISerialCommand interface, SerialCommandAttribute, and dispatcher that mirrors real Purity command output from logs/PDFs.",
+    "type": "code",
+    "status": "open"
+  },
+  {
+    "id": "serial-002",
+    "title": "Create Lsblk Command with Error Paths",
+    "description": "Implement lsblk command showing device tree output. Include happy path with USB detected and error paths for missing USB and wrong device path. Cite sources from Docs/PuttyLogs.",
+    "type": "code",
+    "status": "open"
+  },
+  {
+    "id": "serial-003",
+    "title": "Create Mount Command with Error Paths",
+    "description": "Implement mount <dev> <path> command with success case, 'already mounted', 'not a block device', and 'no media present' error paths. Cite sources from Docs/PuttyLogs.",
+    "type": "code",
+    "status": "open"
+  },
+  {
+    "id": "sim-001",
+    "title": "Create Minimal SimulationState Class",
+    "description": "Stub out SimulationState as single source of truth for arrays, controllers, shelves, ports, cables, power, media/USB state. Serializable/checkpointable design.",
+    "type": "code",
+    "status": "open"
+  },
+  {
+    "id": "sim-002",
+    "title": "Create Minimal WorkflowEngine",
+    "description": "Stub out WorkflowEngine with workflow steps, CanJumpIn/CanJumpOut guards, and basic step management for console commands to integrate with.",
+    "type": "code",
+    "status": "open"
+  },
+  {
+    "id": "test-001",
+    "title": "Create Console Parser Tests",
+    "description": "Unit tests for console tokenizer and parser logic using NUnit in Editor folder.",
+    "type": "code",
+    "status": "open"
+  },
+  {
+    "id": "test-002",
+    "title": "Create Golden Transcript Tests",
+    "description": "Create PlayMode tests comparing Serial command output byte-for-byte with transcribed expected files from Docs/PuttyLogs.",
+    "type": "code",
+    "status": "open"
+  },
+  {
+    "id": "doc-001",
+    "title": "Document Dual Console Architecture",
+    "description": "Update repository documentation to clearly explain the separation between Serial Terminal (operational commands) and Quake Console (simulator control).",
+    "type": "code",
+    "status": "open"
+  }
+]
