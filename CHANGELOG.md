@@ -308,3 +308,142 @@ pureboot, pureversion, pureinstall, pureadm, pureeng, purewes, pureport, purevol
 - Some workflow preconditions are simplified stubs (e.g., firmware-applied, health-verified)
 
 ---
+
+## 2025-10-21 19:26:25 EDT — Complete Missing Commands and PCIe Port Architecture Refactor
+**Author:** Copilot  
+**Task:** Implement all missing commands from commands.txt and refactor port architecture to use PCIe card slots
+
+### Summary
+Implemented 10 missing Pure Storage commands that were listed in commands.txt but not yet created. Refactored the hardware model to properly represent PCIe card slots (1, 2, 3) per controller, with each slot holding a 4-port card (FC or ETH). Built-in management and replication ports are now separate from PCIe card ports, matching the real Pure Storage FlashArray architecture.
+
+### Files Created
+
+**Pure Storage Commands:**
+- `/Assets/Scripts/Serial/Commands/PureBootCommand.cs` — pureboot command
+  - list: Show boot partitions with current (*) and next boot (-->) markers
+  - reboot --primary/--secondary/--offline: Reboot to specific partition
+  - Source: Docs/PuttyLogs/putty2025-03-03.log L299-304
+
+- `/Assets/Scripts/Serial/Commands/PureVersionCommand.cs` — pureversion command
+  - list: Display installed Purity software versions
+  - Shows current and alternate partition versions
+  - Source: commands.txt
+
+- `/Assets/Scripts/Serial/Commands/PureInstallCommand.cs` — pureinstall command
+  - Install Purity .ppkg packages to alternate partition
+  - Shows installation progress and warnings about firmware updates
+  - Source: Docs/PuttyLogs/putty2025-03-03.log L1201-1226
+
+- `/Assets/Scripts/Serial/Commands/PureAdmCommand.cs` — pureadm command
+  - status: Show Purity service status (purity, lio-drv, foed, platform, gui, rest, etc.)
+  - Source: Docs/PuttyLogs/putty2025-03-03.log L238-248
+
+- `/Assets/Scripts/Serial/Commands/PureWesCommand.cs` — purewes command
+  - controller setattr --verify-array: Swap controller modes (primary/secondary)
+  - Shows pre-check validation (peer status, port list, iobalance)
+  - Updates controller mode in simulation state
+  - Source: Docs/PuttyLogs/ny2pure04.log, commands.txt L7
+
+- `/Assets/Scripts/Serial/Commands/PureDbCommand.cs` — puredb command
+  - prefer CT0|CT1: Set preferred controller for database operations
+  - npiv status: Show NPIV status
+  - Includes occasional XML-RPC errors for realism
+  - Source: Docs/PuttyLogs/putty2025-03-03.log L1122-1196
+
+- `/Assets/Scripts/Serial/Commands/IobalanceCommand.cs` — iobalance command
+  - --sampletime N: Monitor host I/O balance across controllers for N seconds
+  - Shows which hosts have unbalanced I/O between CT0 and CT1
+  - Source: Docs/PuttyLogs/putty2025-03-03.log L1136-1192
+
+- `/Assets/Scripts/Serial/Commands/PureTuneCommand.cs` — puretune command
+  - --list: Display system tunables and their values from pureadm and puredb
+  - Shows consistently and inconsistently set tunables
+  - Source: Docs/PuttyLogs/putty2025-03-03.log L430-493
+
+- `/Assets/Scripts/Serial/Commands/PurePortCommand.cs` — pureport command
+  - list: Show storage port connections with WWN, IQN, and target info
+  - Referenced in Docs/PuttyLogs/ny2pure04.log in purewes checks
+
+- `/Assets/Scripts/Serial/Commands/PureVolCommand.cs` — purevol command
+  - list: Display volumes
+  - list --connect: Show volume connections to hosts with LUN numbers
+  - Source: Docs/PuttyLogs/putty2025-03-03.log L428
+
+**Files Modified:**
+- `/Assets/Scripts/Simulation/HardwareModel.cs` — Major refactor for PCIe card architecture
+  - Added PCIeCard class to represent cards in slots 1, 2, 3
+  - Added PCIeCardType enum (None, FibreChannel, Ethernet)
+  - Added Slot field to EthernetPort (-1 for built-in, 1-3 for PCIe slot)
+  - Refactored port initialization to use PCIe cards:
+    - Built-in: ETH0 (management), ETH2-ETH3 (replication) - not on PCIe cards
+    - Slot 1: 4-port card (FC0-FC3 or ETH4-ETH7)
+    - Slot 2: 4-port card (FC4-FC7 or ETH8-ETH11)
+    - Slot 3: 4-port card (FC8-FC11 or ETH12-ETH15)
+  - Default configuration: 3 x 4-port FC cards per controller
+  - Port naming matches real logs: FC0-3 on slot 1, FC4-7 on slot 2, FC8-11 on slot 3
+
+- `/Assets/Scripts/Serial/Commands/PureNetworkCommand.cs` — Updated for new architecture
+  - HandleList() now shows FC ports first (uppercase), then ETH ports (lowercase)
+  - Matches real purenetwork list output from logs
+  - Source: Docs/PuttyLogs/putty2025-03-03.log
+
+### Acceptance Criteria
+✅ All 10 missing commands implemented with authentic log-based output  
+✅ PCIe card architecture implemented with slots 1, 2, 3 per controller  
+✅ Built-in ports (management, replication) separate from PCIe card ports  
+✅ FC port numbering matches real logs (0-3, 4-7, 8-11 by slot)  
+✅ All commands reference source logs/PDFs in code comments  
+✅ purenetwork list updated to show both FC and ETH ports  
+
+### Test Plan
+- Manual testing: Run each new command in virtual serial terminal
+- Verify pureboot list shows boot partitions with markers
+- Verify pureinstall shows installation progress
+- Verify pureadm status shows all Purity services
+- Verify purewes controller setattr runs pre-checks and updates mode
+- Verify puredb prefer CT0/CT1 sets preferred controller
+- Verify iobalance shows host I/O distribution
+- Verify puretune --list shows tunables
+- Verify pureport list shows port connections
+- Verify purevol list and list --connect show volumes
+- Verify purenetwork list shows FC ports before ETH ports
+- Verify purehw list still works with new PCIe card structure
+
+### References Used
+- **Docs/PuttyLogs/putty2025-03-03.log** — Boot commands, installation, pureadm, puredb, iobalance, puretune, purevol
+- **Docs/PuttyLogs/ny2pure04.log** — purewes controller setattr usage and output
+- **commands.txt** — List of tested commands to implement
+- **.github/copilot-instructions.md** — Architecture and coding standards
+- Real Pure Storage FlashArray configuration documentation
+
+### Design Decisions
+1. **PCIe Card Model**: Each controller has 3 PCIe slots, each can hold a 4-port card (FC or ETH)
+2. **Built-in Ports**: Management (ETH0) and replication (ETH2-3) are not on PCIe cards (Slot = -1)
+3. **Port Numbering**: FC0-3 on slot 1, FC4-7 on slot 2, FC8-11 on slot 3 matches real logs
+4. **Command Output**: All new commands mirror exact log format, spacing, and error messages
+5. **pureeng Note**: Not implemented as a command - it's a username for login, not a command to execute
+
+### Commands Status Summary
+**Implemented in this session:**
+- pureboot, pureversion, pureinstall, pureadm, purewes, puredb, iobalance, puretune, pureport, purevol
+
+**Previously implemented:**
+- purehw, puredrive, purearray, purenetwork, purealert, puremessage, puresetup
+- lsblk, mount, umount, sudo, cat, clear, exit/quit/logout, ssh, ping, df, dmesg, stty
+- hardware_check.py
+
+**Not yet implemented:**
+- Linux file operations: cp, mv, rm, mkdir, chmod, chown
+- Linux process management: ps, top, kill
+- Linux text processing: grep, awk, sed, tail, head
+- Diagnostic scripts: storage_view.py, cobalt_check.py
+
+### Next Steps
+1. Test all new commands in Unity Editor
+2. Implement ability to swap PCIe cards (FC <-> ETH) via console command
+3. Update 3D visualizers to show PCIe card slots
+4. Implement remaining Linux utilities (file operations, text processing, process management)
+5. Implement remaining diagnostic scripts
+6. Create hardware profiles for different array models (X70R3, X90R4, C60)
+
+---

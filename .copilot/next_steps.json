@@ -4,14 +4,14 @@
     "title": "Complete Quake Console Core Implementation",
     "description": "Finish ConsoleController with input buffer, tokenizer, parser, dispatcher, history, autocomplete, and scrollback. Ensure toggle with backquote/tilde works reliably.",
     "type": "code",
-    "status": "open"
+    "status": "done"
   },
   {
     "id": "console-002",
     "title": "Implement Console Command Registry",
     "description": "Create reflection-based discovery system that finds all [ConsoleCommand] decorated classes and registers them for dispatch.",
     "type": "code",
-    "status": "open"
+    "status": "done"
   },
   {
     "id": "ui-001",
@@ -25,42 +25,42 @@
     "title": "Implement Serial Command Infrastructure",
     "description": "Create ISerialCommand interface, SerialCommandAttribute, and dispatcher that mirrors real Purity command output from logs/PDFs.",
     "type": "code",
-    "status": "open"
+    "status": "done"
   },
   {
     "id": "serial-002",
     "title": "Create Lsblk Command with Error Paths",
     "description": "Implement lsblk command showing device tree output. Include happy path with USB detected and error paths for missing USB and wrong device path. Cite sources from Docs/PuttyLogs.",
     "type": "code",
-    "status": "open"
+    "status": "done"
   },
   {
     "id": "serial-003",
     "title": "Create Mount Command with Error Paths",
     "description": "Implement mount <dev> <path> command with success case, 'already mounted', 'not a block device', and 'no media present' error paths. Cite sources from Docs/PuttyLogs.",
     "type": "code",
-    "status": "open"
+    "status": "done"
   },
   {
     "id": "sim-001",
     "title": "Create Minimal SimulationState Class",
     "description": "Stub out SimulationState as single source of truth for arrays, controllers, shelves, ports, cables, power, media/USB state. Serializable/checkpointable design.",
     "type": "code",
-    "status": "open"
+    "status": "done"
   },
   {
     "id": "sim-002",
     "title": "Create Minimal WorkflowEngine",
     "description": "Stub out WorkflowEngine with workflow steps, CanJumpIn/CanJumpOut guards, and basic step management for console commands to integrate with.",
     "type": "code",
-    "status": "open"
+    "status": "done"
   },
   {
     "id": "test-001",
     "title": "Create Console Parser Tests",
     "description": "Unit tests for console tokenizer and parser logic using NUnit in Editor folder.",
     "type": "code",
-    "status": "open"
+    "status": "done"
   },
   {
     "id": "test-002",
@@ -73,6 +73,62 @@
     "id": "doc-001",
     "title": "Document Dual Console Architecture",
     "description": "Update repository documentation to clearly explain the separation between Serial Terminal (operational commands) and Quake Console (simulator control).",
+    "type": "code",
+    "status": "done"
+  },
+  {
+    "id": "serial-004",
+    "title": "Implement Missing Pure Commands",
+    "description": "Implement pureboot, pureversion, pureinstall, pureadm, purewes, puredb, iobalance, puretune, pureport, purevol commands from commands.txt.",
+    "type": "code",
+    "status": "done"
+  },
+  {
+    "id": "hw-001",
+    "title": "Refactor Port Architecture to PCIe Cards",
+    "description": "Change from fixed ports to PCIe card slots (1, 2, 3) per controller. Each slot holds a 4-port card (FC or ETH). Built-in management and replication ports are separate.",
+    "type": "code",
+    "status": "done"
+  },
+  {
+    "id": "hw-002",
+    "title": "Implement PCIe Card Swapping Console Command",
+    "description": "Create console command to swap PCIe cards between FC and ETH types. Update ports when card type changes.",
+    "type": "code",
+    "status": "open"
+  },
+  {
+    "id": "hw-003",
+    "title": "Create 3D Visualizers for PCIe Card Slots",
+    "description": "Create Unity scripts to visualize PCIe card slots in 3D and allow interactive card swapping.",
+    "type": "code",
+    "status": "open"
+  },
+  {
+    "id": "serial-005",
+    "title": "Implement Linux File Operations",
+    "description": "Implement cp, mv, rm, mkdir, chmod, chown commands for serial terminal.",
+    "type": "code",
+    "status": "open"
+  },
+  {
+    "id": "serial-006",
+    "title": "Implement Linux Process Management",
+    "description": "Implement ps, top, kill commands for serial terminal.",
+    "type": "code",
+    "status": "open"
+  },
+  {
+    "id": "serial-007",
+    "title": "Implement Linux Text Processing",
+    "description": "Implement grep, awk, sed, tail, head commands for serial terminal.",
+    "type": "code",
+    "status": "open"
+  },
+  {
+    "id": "serial-008",
+    "title": "Implement Diagnostic Scripts",
+    "description": "Implement storage_view.py and cobalt_check.py scripts for serial terminal.",
     "type": "code",
     "status": "open"
   }
