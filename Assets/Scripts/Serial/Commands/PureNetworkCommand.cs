@@ -57,22 +57,30 @@ namespace PureSim.Serial.Commands
         
         /// <summary>
         /// Handle 'purenetwork list' command - list all network interfaces.
-        /// Source: Docs/PuttyLogs/putty2025-02-22-2.txt showing purenetwork list
+        /// Source: Docs/PuttyLogs/putty2025-03-03.log showing purenetwork list with FC and ETH
         /// </summary>
         private void HandleList(Simulation.SimulationState sim, ISerialOutput terminal)
         {
             var hardware = sim.GetHardwareModel();
             
             // Header
-            terminal.WriteLine("Name       Enabled  Speed        Services");
+            terminal.WriteLine("Name      Enabled  Speed       Services");
             
             var sb = new StringBuilder();
             
-            // List all ethernet ports
+            // List FC ports first (uppercase names)
+            foreach (var port in hardware.FCPorts.OrderBy(p => p.Name))
+            {
+                var enabled = port.Speed != "0.00 b/s" ? "True" : "False";
+                sb.AppendFormat("{0,-9} {1,-8} {2,-11} {3}\n",
+                    port.Name, enabled, port.Speed, "scsi-fc");
+            }
+            
+            // Then list ethernet ports (lowercase names)
             foreach (var port in hardware.EthernetPorts.OrderBy(p => p.Name))
             {
-                var name = port.Name.ToLower().Replace(".", ".");  // ct0.eth0 format
-                sb.AppendFormat("{0,-10} {1,-8} {2,-12} {3}\n",
+                var name = port.Name.ToLower();
+                sb.AppendFormat("{0,-9} {1,-8} {2,-11} {3}\n",
                     name, port.Enabled ? "True" : "False", port.Speed, port.Services);
             }
             

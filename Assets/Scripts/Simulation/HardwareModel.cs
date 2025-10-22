@@ -21,6 +21,7 @@ namespace PureSim.Simulation
         [SerializeField] private List<Drive> drives = new List<Drive>();
         [SerializeField] private List<EthernetPort> ethernetPorts = new List<EthernetPort>();
         [SerializeField] private List<FCPort> fcPorts = new List<FCPort>();
+        [SerializeField] private List<PCIeCard> pcieCards = new List<PCIeCard>();
         [SerializeField] private List<Fan> fans = new List<Fan>();
         [SerializeField] private List<PowerSupply> powerSupplies = new List<PowerSupply>();
         [SerializeField] private List<TemperatureSensor> temperatureSensors = new List<TemperatureSensor>();
@@ -30,6 +31,7 @@ namespace PureSim.Simulation
         public IReadOnlyList<Drive> Drives => drives;
         public IReadOnlyList<EthernetPort> EthernetPorts => ethernetPorts;
         public IReadOnlyList<FCPort> FCPorts => fcPorts;
+        public IReadOnlyList<PCIeCard> PCIeCards => pcieCards;
         public IReadOnlyList<Fan> Fans => fans;
         public IReadOnlyList<PowerSupply> PowerSupplies => powerSupplies;
         public IReadOnlyList<TemperatureSensor> TemperatureSensors => temperatureSensors;
@@ -106,42 +108,121 @@ namespace PureSim.Simulation
                 });
             }
             
-            // Create ethernet ports for controllers
-            // Source: Docs/PuttyLogs/putty2025-03-03.log L79-88, L134-143
+            // Create PCIe cards for controllers (slots 1, 2, 3 per controller)
+            // Each card can be 4-port FC or 4-port ETH
+            // Built-in management (ETH0) and replication ports (ETH2, ETH3) are separate
+            // Source: Docs/PuttyLogs/putty2025-03-03.log L79-88, L134-143, L150-157
+            
             for (int ct = 0; ct <= 1; ct++)
             {
-                for (int i = 0; i < 10; i++)
+                // Built-in management port (ETH0) - not on PCIe card
+                ethernetPorts.Add(new EthernetPort
                 {
-                    var speed = i == 0 ? "1.00 Gb/s" : (i == 2 || i == 4) ? "25.00 Gb/s" : "0.00 b/s";
-                    ethernetPorts.Add(new EthernetPort
+                    Name = $"CT{ct}.ETH0",
+                    Status = "ok",
+                    Index = 0,
+                    Speed = "1.00 Gb/s",
+                    Enabled = true,
+                    Services = "management",
+                    Slot = -1  // Not on a PCIe slot
+                });
+                
+                // Built-in replication ports (ETH2, ETH3) - not on PCIe cards
+                ethernetPorts.Add(new EthernetPort
+                {
+                    Name = $"CT{ct}.ETH2",
+                    Status = "ok",
+                    Index = 2,
+                    Speed = "25.00 Gb/s",
+                    Enabled = true,
+                    Services = "replication",
+                    Slot = -1  // Not on a PCIe slot
+                });
+                
+                ethernetPorts.Add(new EthernetPort
+                {
+                    Name = $"CT{ct}.ETH3",
+                    Status = "ok",
+                    Index = 3,
+                    Speed = "25.00 Gb/s",
+                    Enabled = false,
+                    Services = "replication",
+                    Slot = -1  // Not on a PCIe slot
+                });
+                
+                // PCIe Slot 1: 4-port FC card (FC0-FC3)
+                var slot1Card = new PCIeCard
+                {
+                    Controller = $"CT{ct}",
+                    Slot = 1,
+                    CardType = PCIeCardType.FibreChannel,
+                    Model = "QLE2694",
+                    PortCount = 4,
+                    Status = "ok"
+                };
+                pcieCards.Add(slot1Card);
+                
+                for (int p = 0; p < 4; p++)
+                {
+                    fcPorts.Add(new FCPort
                     {
-                        Name = $"CT{ct}.ETH{i}",
+                        Name = $"CT{ct}.FC{p}",
                         Status = "ok",
-                        Index = i,
-                        Speed = speed,
-                        Enabled = i == 0 || i == 2 || i == 4,
-                        Services = i == 0 ? "management" : (i == 2 || i == 4 ? "replication" : "-")
+                        Slot = 1,
+                        Index = p,
+                        Speed = p < 2 ? "16.00 Gb/s" : "0.00 b/s"  // First 2 ports active
                     });
                 }
-            }
-            
-            // Create FC ports for CT1 (Fibre Channel)
-            // Source: Docs/PuttyLogs/putty2025-03-03.log L150-157
-            var fcPortDefs = new[] {
-                (0, 0, "16.00 Gb/s"), (0, 1, "16.00 Gb/s"), (0, 2, "0.00 b/s"), (0, 3, "0.00 b/s"),
-                (1, 4, "16.00 Gb/s"), (1, 5, "16.00 Gb/s"), (2, 8, "0.00 b/s"), (2, 9, "0.00 b/s")
-            };
-            
-            foreach (var (slot, index, speed) in fcPortDefs)
-            {
-                fcPorts.Add(new FCPort
+                
+                // PCIe Slot 2: 4-port FC card (FC4-FC7, but logs show FC4-FC5)
+                var slot2Card = new PCIeCard
                 {
-                    Name = $"CT1.FC{index}",
-                    Status = "ok",
-                    Slot = slot,
-                    Index = index,
-                    Speed = speed
-                });
+                    Controller = $"CT{ct}",
+                    Slot = 2,
+                    CardType = PCIeCardType.FibreChannel,
+                    Model = "QLE2694",
+                    PortCount = 4,
+                    Status = "ok"
+                };
+                pcieCards.Add(slot2Card);
+                
+                for (int p = 0; p < 4; p++)
+                {
+                    int portIndex = 4 + p;
+                    fcPorts.Add(new FCPort
+                    {
+                        Name = $"CT{ct}.FC{portIndex}",
+                        Status = "ok",
+                        Slot = 2,
+                        Index = portIndex,
+                        Speed = p < 2 ? "16.00 Gb/s" : "0.00 b/s"  // First 2 ports active (FC4-FC5)
+                    });
+                }
+                
+                // PCIe Slot 3: 4-port FC card (FC8-FC11, but logs show FC8-FC9)
+                var slot3Card = new PCIeCard
+                {
+                    Controller = $"CT{ct}",
+                    Slot = 3,
+                    CardType = PCIeCardType.FibreChannel,
+                    Model = "QLE2694",
+                    PortCount = 4,
+                    Status = "ok"
+                };
+                pcieCards.Add(slot3Card);
+                
+                for (int p = 0; p < 4; p++)
+                {
+                    int portIndex = 8 + p;
+                    fcPorts.Add(new FCPort
+                    {
+                        Name = $"CT{ct}.FC{portIndex}",
+                        Status = "ok",
+                        Slot = 3,
+                        Index = portIndex,
+                        Speed = p < 2 ? "0.00 b/s" : "0.00 b/s"  // Not active in logs
+                    });
+                }
             }
             
             // Create fans for controllers
@@ -246,6 +327,7 @@ namespace PureSim.Simulation
         public string Speed;     // 1.00 Gb/s, 10.00 Gb/s, 25.00 Gb/s, 100.00 Gb/s, 0.00 b/s
         public bool Enabled;
         public string Services;  // management, replication, iscsi, -
+        public int Slot = -1;    // PCIe slot number (1, 2, 3) or -1 for built-in
     }
     
     [Serializable]
@@ -282,5 +364,31 @@ namespace PureSim.Simulation
         public string Status;    // ok, warning
         public int Index;
         public string Temperature; // 20 C, 55 C
+    }
+    
+    /// <summary>
+    /// PCIe card type enumeration
+    /// </summary>
+    public enum PCIeCardType
+    {
+        None,
+        FibreChannel,    // FC HBA (e.g., QLE2694)
+        Ethernet         // Ethernet NIC (e.g., Intel X710)
+    }
+    
+    /// <summary>
+    /// PCIe card installed in a controller slot.
+    /// Each card typically has 4 ports (FC or ETH).
+    /// Slots 1, 2, 3 are available per controller.
+    /// </summary>
+    [Serializable]
+    public class PCIeCard
+    {
+        public string Controller;     // CT0, CT1
+        public int Slot;              // 1, 2, 3
+        public PCIeCardType CardType; // FibreChannel or Ethernet
+        public string Model;          // QLE2694, Intel X710, etc.
+        public int PortCount;         // Typically 4
+        public string Status;         // ok, failed, not_installed
     }
 }
