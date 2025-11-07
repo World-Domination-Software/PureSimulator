@@ -10,6 +10,8 @@ public class TopBar : MonoBehaviour
    private bool watchingFrontCam = true;
    private UIManager ui => UIManager.Instance;
 
+   private bool wasCommandsUIOpen = true;
+
     private void Start()
     {
         arrayViewText.text = "Watch Rack";   
@@ -29,23 +31,39 @@ public class TopBar : MonoBehaviour
 
     public void MoreInfo()
     {
+        CloseAllUI(false);
         ui.ShowInfoPanel();
         backButton.SetActive(true);
-        CloseAllUI();
     }
 
     public void WatchArray()
     {
+        if(ui.infoPanelUI.activeSelf)
+        {
+            ui.SeeServer();
+            arrayViewText.text = "Watch CLI";
+            cameraButton.SetActive(true);
+
+            wasCommandsUIOpen = false;
+            backButton.SetActive(false);
+            CloseAllUI();
+            return;
+        }
+
         if(ui.commandUI.activeSelf) { 
             ui.SeeServer();
             arrayViewText.text = "Watch CLI";
             cameraButton.SetActive(true);
+
+            wasCommandsUIOpen = false;
         }
         else 
         { 
             ui.SeeCommands(); 
             arrayViewText.text = "Watch Rack";
             cameraButton.SetActive(false);
+
+            wasCommandsUIOpen = true;
         }
         CloseAllUI();
     }
@@ -71,10 +89,17 @@ public class TopBar : MonoBehaviour
         cameraButton.SetActive(true);
     }
 
-    public void CloseAllUI()
+    public void CloseAllUI(bool hideInfoPanel = true)
     {
         simTypeUI.SetActive(false);
         newArrayUI.SetActive(false);
+
+        if(hideInfoPanel)
+        {
+            //close more info UI too!
+            ui.EnableMainCameras();
+            ui.HideInfoPanel();
+        }
     }
 
     public void BackView()
@@ -88,9 +113,15 @@ public class TopBar : MonoBehaviour
         }
     }
 
-    public void BackButton() {
-        if(ui.infoPanelUI.activeSelf) 
+    public void BackButton() 
+    {
+        if(wasCommandsUIOpen) {
             ui.SeeCommands();
+        }
+        else
+        {
+            ui.SeeServer();
+        }
         
         ui.EnableMainCameras();
         backButton.SetActive(false);

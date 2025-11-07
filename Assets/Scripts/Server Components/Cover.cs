@@ -22,6 +22,9 @@ public class Cover : MonoBehaviour
 
     public void SetLights(bool value) 
     {
+        if(mRenderer == null)
+            return;
+
         Material[] mats = mRenderer.materials;
         light_.enabled = value;
         

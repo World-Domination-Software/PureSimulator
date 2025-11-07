@@ -1,0 +1,7 @@
+﻿<Solution>
+  <Project Path="FullscreenEditor.csproj" />
+  <Project Path="Assembly-CSharp.csproj" />
+  <Project Path="PureSim.Runtime.csproj" />
+  <Project Path="Assembly-CSharp-Editor.csproj" />
+  <Project Path="PureSim.Editor.csproj" />
+</Solution>

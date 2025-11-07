@@ -1244,17 +1244,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 494a32481b0d28746bffbf27abed4ae2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Dir:
+    DirectoryName: 
+    _Files: []
   controllerID: CT1
   animator: {fileID: 5207470010577770111}
   flashDriveModel: {fileID: 2748922073108914102}
   chassis: {fileID: 637781819865327574}
   purityVersionOnDrive: 6.5.8
-  Files:
-  - purity_6.5.8.ppkg
-  - purity_6.5.8.ppkg.sha1
-  Folders:
-  - sda1
-  - sdb1
 --- !u!95 &5207470010577770111
 Animator:
   serializedVersion: 7
@@ -1659,17 +1656,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 494a32481b0d28746bffbf27abed4ae2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Dir:
+    DirectoryName: 
+    _Files: []
   controllerID: CT0
   animator: {fileID: 1620403366385721870}
   flashDriveModel: {fileID: 6976752604000064493}
   chassis: {fileID: 637781819865327574}
   purityVersionOnDrive: 6.5.8
-  Files:
-  - purity_6.5.8.ppkg
-  - purity_6.5.8.ppkg.sha1
-  Folders:
-  - sda1
-  - sdb1
 --- !u!95 &1620403366385721870
 Animator:
   serializedVersion: 7
@@ -2619,7 +2613,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 5.93, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.47661102, y: 0.47616777, z: 0.5161289}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7314100253937219033}

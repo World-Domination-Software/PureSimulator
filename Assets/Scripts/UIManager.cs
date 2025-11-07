@@ -144,6 +144,12 @@ public class UIManager : MonoBehaviour
         Invoke(nameof(HelpInfoTexts), helpTextTime);
     }
 
+    public void HideInfoPanel()
+    {
+        infoPanelAnimator.SetBool("Open", false);
+        StartCoroutine(DelayedCloseUI(infoPanelUI));
+    }
+
     private void HelpInfoTexts() 
     {
         helpTexts.SetActive(true);
