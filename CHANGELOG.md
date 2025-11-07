@@ -447,3 +447,91 @@ Implemented 10 missing Pure Storage commands that were listed in commands.txt bu
 6. Create hardware profiles for different array models (X70R3, X90R4, C60)
 
 ---
+
+---
+
+## 2025-11-07 07:16:00 EST — Consolidation of Copilot Instruction Files
+**Author:** Copilot  
+**Task:** Consolidate multiple Copilot instruction files into single authoritative source
+
+### Summary
+Consolidated two separate Copilot instruction files (`.github/copilot-instructions.md` and `.github/copilot-instructions-NEW.md`) into a single comprehensive, authoritative instruction file. This consolidation addresses the issue of scattered instructions and provides clear, consistent guidance for future development.
+
+The consolidated file integrates:
+- Comprehensive architectural guidance from the original file
+- Current implementation status and practical details from the NEW file
+- Documentation about the AI certification mode and training features
+- Clear emphasis on integrating with existing framework
+- Unified approach to change tracking and documentation
+
+### Files Changed
+- `.github/copilot-instructions.md` — Replaced with consolidated version (592 lines, comprehensive)
+- `.github/copilot-instructions-ORIGINAL-BACKUP.md` — Created backup of original instructions
+- `.github/copilot-instructions-NEW-BACKUP.md` — Created backup of NEW instructions
+- `.gitignore` — Added backup files to ignore list
+- `CHANGELOG.md` — This entry documenting the consolidation
+
+### Rationale
+The repository had two instruction files with overlapping but different content:
+1. **Original (`copilot-instructions.md`, 232 lines):** Strong architectural foundation, dual console contracts, workflow guidance
+2. **NEW (`copilot-instructions-NEW.md`, 290 lines):** Implementation status, current file locations, practical workflows
+
+This caused potential confusion and inconsistency. The consolidated version:
+- Merges the best aspects of both files
+- Starts with project overview and current implementation status (critical for AI agents)
+- Provides clear architectural guidance alongside practical implementation details
+- Emphasizes integration with existing framework per user requirements
+- References all documentation in Docs/ folder (15+ PDFs, Design.md, PuttyLogs)
+- Clarifies the AI certification mode and training features
+- Maintains CHANGELOG.md naming (not "change log.MD" as previously referenced)
+
+### Key Sections in Consolidated File
+1. **Project Overview** — Unity 6 simulator with AI certification mode
+2. **Prime Directive** — Always ground in authoritative resources (Docs/, PureResources/)
+3. **Current Implementation Status** — Clear state of dual console systems
+4. **Dual Console Architecture** — Strict separation rules with examples
+5. **Architecture** — Core simulation, hardware model, virtual filesystem
+6. **Authoritative References** — All documentation sources
+7. **Developer Workflows** — Step-by-step guidance for adding features
+8. **Coding Standards** — Unity 6, C# 10+, nullable enabled
+9. **Change Tracking** — CHANGELOG.md and Next Steps system
+10. **Integration with Existing Framework** — Emphasis per user requirements
+11. **Common Pitfalls** — Do's and don'ts
+12. **Quick Command Lookup** — Serial vs Console commands
+13. **Key Files Reference** — Must-read documentation
+14. **Reference Interfaces** — Canonical signatures
+15. **Review Checklist** — Quality gates
+16. **Task Pattern** — Template for feature implementation
+17. **Getting Started** — Practical guidance for common tasks
+
+### Test Plan
+- ✅ Verified consolidated file is comprehensive (592 lines vs 232+290)
+- ✅ Verified all key sections from both original files are present
+- ✅ Verified documentation references are complete (Docs/, PureResources/)
+- ✅ Verified AI certification mode and training features are mentioned
+- ✅ Verified emphasis on integrating with existing framework
+- ✅ Verified backup files created and added to .gitignore
+- Manual: Future Copilot interactions should reference the single authoritative file
+- Manual: Developers should find clearer guidance in consolidated version
+
+### Citations
+- `.github/copilot-instructions.md` (original) — Architectural foundation
+- `.github/copilot-instructions-NEW.md` — Implementation status and practical details
+- `Docs/Design.md` — Project architecture and AI certification mode
+- User request: "I want one authority file" and "focus on the instructions so that future requests are implemented correctly"
+
+### Impact
+This consolidation provides:
+- **Single source of truth** for Copilot instructions
+- **Clearer guidance** combining architecture with implementation reality
+- **Better integration** with existing framework (per user requirements)
+- **Complete documentation references** for grounding in authoritative sources
+- **Reduced confusion** from having multiple instruction files
+- **Foundation for consistent future development**
+
+### Next Steps
+The repository now has a single authoritative instruction file. Future tasks:
+- All Copilot-assisted changes should reference this consolidated file
+- All changes should continue to be documented in CHANGELOG.md
+- All new features should integrate with existing framework unless documented reason to change
+- All command outputs should be grounded in Docs/ and PureResources/ materials
