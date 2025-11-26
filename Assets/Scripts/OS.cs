@@ -17,7 +17,7 @@ public static class OS
 {
     public static CommandProcessor commandProcessor;
     private static Chassis chassis => commandProcessor.chassis;
-    public static VirtualFileSystemHandler fileSystemHandler;
+    public static VirtualFileSystemHandler fileSystemHandler => commandProcessor.chassis.fileSystemHandler;
 
     public static Color pink;
     public static Color yellow;
@@ -28,7 +28,7 @@ public static class OS
     private static bool switchedUserToRoot = false;
     private static bool switchedToOtherController = false;
 
-    public static void InitializeVirtualFileSystem()
+    /*public static void InitializeVirtualFileSystem()
     {
         if (commandProcessor != null && chassis != null)
         {
@@ -40,7 +40,7 @@ public static class OS
                 fileSystemHandler.Initialize(commandProcessor, chassis);
             }
         }
-    }
+    }*/
 
     public static void ProcessCommand(string cmd)
     {
@@ -220,16 +220,23 @@ public static class OS
         //before copying files make sure to mount the drives!
         if (splits[0] == "cp") 
         {
+             if (!commandProcessor.Mounted || !chassis.UsbCorrect()) {
+                    return;
+             }
+
             // Use virtual file system handler if available
-            if (fileSystemHandler != null)
+            /*if (fileSystemHandler != null)
             {
                 string result = fileSystemHandler.HandleCpCommand(splits);
                 if (!string.IsNullOrEmpty(result))
                 {
                     commandProcessor.LogError(result);
                 }
+                else
+                    commandProcessor.CopyMountFiles(chassis.InsertedUsbPort.Dir.Files, 10f * commandProcessor.timeMultiplier);
+
                 return;
-            }
+            }*/
 
             if (commandProcessor.Mounted) {
                 if (!chassis.UsbCorrect()) {

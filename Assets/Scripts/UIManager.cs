@@ -56,7 +56,7 @@ public class UIManager : MonoBehaviour
 
     public GameObject errorUI;
     public Text errorText;
-    private bool lastWasFrontCam;
+    private bool lastWasFrontCam = true; //alwasys start with front cam
 
     private void Start()
     {
@@ -206,11 +206,15 @@ public class UIManager : MonoBehaviour
         {
             frontCam.SetActive(true);
             backCam.SetActive(false);
+            
+            lastWasFrontCam = false;
         }
         else 
         {
             frontCam.SetActive(false);
             backCam.SetActive(true);
+
+            lastWasFrontCam = true;
         }
     }
 
@@ -232,6 +236,7 @@ public class UIManager : MonoBehaviour
     {
         backCam.SetActive(true);
         frontCam.SetActive(false);
+        lastWasFrontCam = true;
 
         //backCamButton.SetActive(false);
         //frontCamButton.SetActive(true);
@@ -241,6 +246,7 @@ public class UIManager : MonoBehaviour
     {
         backCam.SetActive(false);
         frontCam.SetActive(true);
+        lastWasFrontCam = false;
 
         //backCamButton.SetActive(true);
         //frontCamButton.SetActive(false);

@@ -23,6 +23,9 @@ public class Chassis : MonoBehaviour
     public WirePort insertedLaptopPort;
     public Cover Cover;
 
+    //assign as a must!
+    public VirtualFileSystemHandler fileSystemHandler; 
+
     [Space]
     public MeshRenderer[] ForeLights;
     public GameObject[] backLCD;
@@ -38,9 +41,6 @@ public class Chassis : MonoBehaviour
     private WirePort[] wirePorts;
     public FlashArray[] flashArrays = new FlashArray[0];
     public ChassisCommandsExtension commandsExtension;
-
-    //files of the controllers
-    private List<string> CT0Files = new(), CT1Files = new();
 
     //PSU power states
     private bool PSU0On = false;
@@ -86,12 +86,12 @@ public class Chassis : MonoBehaviour
         //return sdb1 for the first USB inserted!
         if(!InsertedUSBDriveNames.Contains("sdb1")) {
             InsertedUSBDriveNames.Add("sdb1");
-            return "sdb1";
+            return "/dev/sdb1";
         }
         else {
             int i = Random.Range(0, PossibleUsbNames.Length);
             InsertedUSBDriveNames.Add(PossibleUsbNames[i]);
-            return PossibleUsbNames[i];
+            return "/dev/" + PossibleUsbNames[i];
         }
     }
 
@@ -125,11 +125,14 @@ public class Chassis : MonoBehaviour
 
     public bool CanInsertMoreDrives() 
     {
-        if (InstallSize_Type.Contains("20") && numInsertedDrives >= 10) //only 10 drives max!
+        //bool allows 20 harddrives
+        bool allow20 = InstallSize_Type != "X20R4-LL";
+
+        if (!allow20 && numInsertedDrives >= 10) //only 10 drives max!
         {
             return false;
         }
-
+        
         return true;
     }
 
@@ -307,6 +310,8 @@ public class Chassis : MonoBehaviour
             PurityVersionInPartition1 = "6.5.5";
         }
 
+        fileSystemHandler.Initialize(commandProcessor, this);
+
         AutoHarddriveFiller[] hardDriveFillers = GetComponentsInChildren<AutoHarddriveFiller>();
         int bay = 0;
         for (int i = 0; i < hardDriveFillers.Length; i++)
@@ -375,7 +380,7 @@ public class Chassis : MonoBehaviour
         {
             rack.EnableAllCablesForChassis(chassisIndex, isShelf);
 
-            if (!isShelf)
+            if (!isShelf && insertedLaptopPort != null)
             {
                 insertedLaptopPort.Disable(false);
                 insertedLaptopPort.otherWireToDisable.Disable(false);

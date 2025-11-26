@@ -1,4 +1,5 @@
 using System;
+using CrimsofallTechnologies.ServerSimulator;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -90,6 +91,7 @@ public class USBPort : MonoBehaviour
         chassis.InsertedUsbPort = this;
 
         Dir.DirectoryName = chassis.GetNewRandomUSBName();
+        chassis.fileSystemHandler.hardwareManager.CreateAndAddDrive("USB", Dir);
     }
 
     public void RemoveDrive() 

@@ -9,6 +9,8 @@ public class FlashArray : MonoBehaviour
 
     public Material greenMat, amberMat, offMat;
     public MeshRenderer[] Lights;
+    public MeshRenderer PsuLight;
+    public Light[] realLights=new Light[0];
     public int index = 0;
 
     [Space]
@@ -30,7 +32,6 @@ public class FlashArray : MonoBehaviour
     public DateTime currentDateTime;
 
     private const string chars = "abcdefghijklmnopqrstuvwxyz0123456789";
-    private Light[] realLights=new Light[0];
 
     private void Start()
     {
@@ -69,14 +70,16 @@ public class FlashArray : MonoBehaviour
 
     public void SetLights(bool ok, bool isOn) 
     {
-        if(realLights.Length == 0) GetRealLights();
-
         if (!isOn)
         {
             //all lights off
             Lights[0].material = offMat; //OK light
             Lights[1].material = offMat; //ID light
             Lights[2].material = offMat; //PR1 light
+
+            Material[] mats = PsuLight.materials;
+            mats[1] = offMat; //PSU light
+            PsuLight.materials = mats;
 
             realLights[0].enabled = false;
             realLights[1].enabled = false;
@@ -88,6 +91,10 @@ public class FlashArray : MonoBehaviour
             realLights[0].enabled = true;
             realLights[1].enabled = false;
             realLights[2].enabled = false;
+
+            Material[] mats = PsuLight.materials;
+            mats[1] = greenMat;
+            PsuLight.materials = mats;
 
             //OK light
             if (ok) {
@@ -112,13 +119,5 @@ public class FlashArray : MonoBehaviour
                 realLights[2].enabled = false;
             }
         }
-    }
-
-    private void GetRealLights()
-    {
-        realLights = new Light[Lights.Length];
-        realLights[0] = Lights[0].GetComponentInChildren<Light>();
-        realLights[1] = Lights[1].GetComponentInChildren<Light>();
-        realLights[2] = Lights[2].GetComponentInChildren<Light>();
     }
 }

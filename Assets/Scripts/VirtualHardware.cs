@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using PureSim.Simulation;
 using UnityEngine;
 
 namespace CrimsofallTechnologies.ServerSimulator
@@ -18,6 +19,8 @@ namespace CrimsofallTechnologies.ServerSimulator
         public string Model;
         public string SerialNumber;
         public DateTime LastChecked;
+
+        public VirtualDrive() {}
 
         public VirtualDrive(string name, string devicePath, long sizeBytes)
         {
@@ -142,6 +145,9 @@ namespace CrimsofallTechnologies.ServerSimulator
     public class VirtualHardwareManager : MonoBehaviour
     {
         private List<VirtualDrive> drives;
+
+        //this stores which drive is at which index for easy lookup (for above drives list)
+        private Dictionary<string, int> indexedDrives;
         private List<VirtualNetworkInterface> networkInterfaces;
         private List<VirtualPCIeCard> pcieCards;
         private VirtualFileSystemHandler fileSystemHandler;
@@ -163,6 +169,12 @@ namespace CrimsofallTechnologies.ServerSimulator
             drives.Add(new VirtualDrive("System Drive", "/dev/sda1", 500L * 1024 * 1024 * 1024)); // 500GB
             drives.Add(new VirtualDrive("Data Drive 1", "/dev/nvme0n1", 2L * 1024 * 1024 * 1024 * 1024)); // 2TB
             drives.Add(new VirtualDrive("Data Drive 2", "/dev/nvme1n1", 2L * 1024 * 1024 * 1024 * 1024)); // 2TB
+
+            //init drive index lookup
+            indexedDrives = new Dictionary<string, int>();
+            for (int i = 0; i < drives.Count; i++) {
+                indexedDrives[drives[i].DevicePath] = i;
+            }
 
             // Create network interfaces
             networkInterfaces.Add(new VirtualNetworkInterface("eth0"));
@@ -348,6 +360,38 @@ SwapFree:        8388608 kB";
         public List<VirtualNetworkInterface> GetAllNetworkInterfaces()
         {
             return new List<VirtualNetworkInterface>(networkInterfaces);
+        }
+
+        //useful for inserting USB drives
+        public void CreateAndAddDrive(string driveName, VirtualDirectory Dir)
+        {
+            VirtualDrive drive = new VirtualDrive
+            {
+                Name = driveName,
+                DevicePath = Dir.DirectoryName,
+                SizeBytes = 32L * 1024 * 1024 * 1024, //32 GB,
+                UsedBytes = 7L * 1024 * 1024 * 1024, //7 GB used
+                Status = "Ready",
+                FileSystem = "NTFS",
+                Model = "USB Drive",
+                SerialNumber = "" + UnityEngine.Random.Range(10000000, 99999999),  
+            };
+
+            drives.Add(drive);
+            indexedDrives[drive.Name] = drives.Count - 1;
+
+            fileSystemHandler.GetFileSystem().CreateFile(Dir.DirectoryName, "[BLOCK DEVICE]");
+        }
+
+        //for removing USB drives
+        public void RemoveDrive(string driveName)
+        {
+            if(indexedDrives.ContainsKey(driveName))
+            {
+                indexedDrives.Remove(driveName, out int index);
+                drives.RemoveAt(index);
+                fileSystemHandler.GetFileSystem().DeleteFile(drives[index].DevicePath);
+            }
         }
     }
 }

@@ -148,15 +148,15 @@ namespace CrimsofallTechnologies.ServerSimulator
             if (inserting)
                 return;
 
-            //only wait for chassis that has OS installed and ready!
-            if (GlobalVar.lastHarddriveSettingUp && myChassis.IsOk())
+            //wait while last inserted drive is setting up, allow removal though
+            if (GlobalVar.lastHarddriveSettingUp && myChassis.IsOk() && status == HardDriveStatus.not_inserted)
             {
                 UIManager.Instance.ShowErrorUI("You cannot do that now! Wait 30 seconds before inserting a new drive.");
                 return;
             }
 
             //Can the server add this drive here - check if not removing?
-            if (!myChassis.CanInsertMoreDrives() && status == HardDriveStatus.not_inserted) 
+            if (!myChassis.CanInsertMoreDrives() && status == HardDriveStatus.not_inserted)
             {
                 Debug.Log("cannot insert more...");
                 return;

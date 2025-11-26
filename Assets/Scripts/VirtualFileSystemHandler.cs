@@ -10,7 +10,7 @@ namespace CrimsofallTechnologies.ServerSimulator
         private VirtualFileSystem fileSystem;
         private CommandProcessor commandProcessor;
         private Chassis chassis;
-        private VirtualHardwareManager hardwareManager;
+        public VirtualHardwareManager hardwareManager;
 
         public void Initialize(CommandProcessor processor, Chassis chassisRef)
         {

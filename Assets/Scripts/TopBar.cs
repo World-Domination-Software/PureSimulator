@@ -65,7 +65,7 @@ public class TopBar : MonoBehaviour
 
             wasCommandsUIOpen = true;
         }
-        CloseAllUI();
+        CloseAllUI(true, false);
     }
 
     public void NewArray()
@@ -89,7 +89,7 @@ public class TopBar : MonoBehaviour
         cameraButton.SetActive(true);
     }
 
-    public void CloseAllUI(bool hideInfoPanel = true)
+    public void CloseAllUI(bool hideInfoPanel = true, bool enableCamera = true)
     {
         simTypeUI.SetActive(false);
         newArrayUI.SetActive(false);
@@ -97,12 +97,12 @@ public class TopBar : MonoBehaviour
         if(hideInfoPanel)
         {
             //close more info UI too!
-            ui.EnableMainCameras();
+            if(enableCamera) ui.EnableMainCameras();
             ui.HideInfoPanel();
         }
     }
 
-    public void BackView()
+    public void SwitchCamera()
     {
         watchingFrontCam = !watchingFrontCam;
         if(!watchingFrontCam) {

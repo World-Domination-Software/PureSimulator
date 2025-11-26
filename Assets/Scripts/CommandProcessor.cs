@@ -1115,9 +1115,6 @@ namespace CrimsofallTechnologies.ServerSimulator
             Loading = false;
             field.ActivateInputField();
 
-            // Initialize virtual file system
-            OS.InitializeVirtualFileSystem();
-
             ResetScroll = true;
             CancelInvoke(nameof(CancelScrollReset));
             Invoke(nameof(CancelScrollReset), 0.5f);
@@ -1427,6 +1424,8 @@ namespace CrimsofallTechnologies.ServerSimulator
 
         public void InstalledFirmware() 
         {
+            if(chassis == null) return;
+
             //show a notice that the purity OS has been installed after reboot!
             if (LoggedIn)
             {

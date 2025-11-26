@@ -1,7 +1,4 @@
 using UnityEngine;
-using System.Collections.Generic;
-using CrimsofallTechnologies.ServerSimulator;
-using static UnityEngine.EventSystems.EventTrigger;
 
 [DefaultExecutionOrder(0)]
 public class ServerRack : MonoBehaviour
@@ -14,8 +11,8 @@ public class ServerRack : MonoBehaviour
         //public GameObject[] ethShelfCables;
         public GameObject[] ConnectionCables;
         
-        [Space]
-        public GameObject wallSocketPlug;
+        //[Space]
+        //public GameObject wallSocketPlug;
 
         public void EnableWire(string wireName, int id) 
         {
@@ -37,7 +34,7 @@ public class ServerRack : MonoBehaviour
             if (wireName == "PSU") 
             {
                 powerCables[id].SetActive(true);
-                wallSocketPlug.SetActive(true);
+                //wallSocketPlug.SetActive(true);
             }
         }
 
@@ -62,8 +59,8 @@ public class ServerRack : MonoBehaviour
             {
                 powerCables[id].SetActive(false);
 
-                if (!powerCables[0].activeSelf && !powerCables[1].activeSelf) //when both PSU wires are removed then plug is removed from wall socket too!
-                    wallSocketPlug.SetActive(false);
+                //if (!powerCables[0].activeSelf && !powerCables[1].activeSelf) //when both PSU wires are removed then plug is removed from wall socket too!
+                //    wallSocketPlug.SetActive(false);
             }
         }
 
@@ -72,9 +69,11 @@ public class ServerRack : MonoBehaviour
             for (int i = 0; i < powerCables.Length; i++) powerCables[i].SetActive(false);
             for (int i = 0; i < ethArrayCables.Length; i++) ethArrayCables[i].SetActive(false);
             //for (int i = 0; i < ethShelfCables.Length; i++) ethShelfCables[i].SetActive(false);
-            for (int i = 0; i < ConnectionCables.Length; i++) ConnectionCables[i].SetActive(false);
+            for (int i = 0; i < ConnectionCables.Length; i++) {
+                ConnectionCables[i].SetActive(false);
+            }
 
-            wallSocketPlug.SetActive(false);
+            //wallSocketPlug.SetActive(false);
         }
 
         public void EnableAllWires(bool isShelf)
@@ -83,14 +82,21 @@ public class ServerRack : MonoBehaviour
             if (!isShelf)
             {
                 for (int i = 0; i < ethArrayCables.Length; i++) ethArrayCables[i].SetActive(true);
-                for (int i = 0; i < ConnectionCables.Length; i++) ConnectionCables[i].SetActive(true);
+                
+                //diasable all laptop port cables!
+                for (int i = 0; i < ConnectionCables.Length; i++) 
+                    ConnectionCables[i].SetActive(false);
             }
             //else
              //   for (int i = 0; i < ethShelfCables.Length; i++) ethShelfCables[i].SetActive(true);
 
-            wallSocketPlug.SetActive(true);
+            //wallSocketPlug.SetActive(true);
         }
     }
+    
+    //assign all possible chassises that can be inserted into the rack (even disabled ones)
+    public Chassis[] AvaliableChassises = new Chassis[8];
+
     public WiresGroup[] Wires = new WiresGroup[0];
     public Chassis[] Servers = new Chassis[8];
     public GameObject[] Covers = new GameObject[0];
@@ -152,8 +158,11 @@ public class ServerRack : MonoBehaviour
 
     public Chassis AddArray(int id, string ModelName)
     {
-        Vector3 pos = Servers[0].transform.position + new Vector3(0f, arrayYDifference * id, 0f);
-        Chassis c = Instantiate(arrayPrefab, pos, Quaternion.identity, transform).GetComponent<Chassis>();
+        //Vector3 pos = Servers[0].transform.position + new Vector3(0f, arrayYDifference * id, 0f);
+        //Chassis c = Instantiate(arrayPrefab, pos, Quaternion.identity, transform).GetComponent<Chassis>();
+        
+        Chassis c = AvaliableChassises[id];
+        c.gameObject.SetActive(true);
         c.chassisIndex = id;
         c.CopySettings(Servers[0]);
         Servers[id] = c;
@@ -182,8 +191,10 @@ public class ServerRack : MonoBehaviour
 
     public Chassis AddShelf(int id, string ModelName)
     {
-        Vector3 pos = Servers[1].transform.position + new Vector3(0f, shelfYDifference * id, 0f);
-        Chassis c = Instantiate(shelfPrefab, pos, Quaternion.identity, transform).GetComponent<Chassis>();
+        //Vector3 pos = Servers[1].transform.position + new Vector3(0f, shelfYDifference * id, 0f);
+        //Chassis c = Instantiate(shelfPrefab, pos, Quaternion.identity, transform).GetComponent<Chassis>();
+        Chassis c = AvaliableChassises[id];
+        c.gameObject.SetActive(true);
         c.chassisIndex = id;
         c.CopySettings(Servers[1]);
         //c.SetComputerName($"PCTFJ{Random.Range(0, 9999999).ToString("0000000")}{alphabet[Random.Range(0, alphabet.Length)]}", 0);
