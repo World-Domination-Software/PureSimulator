@@ -1,6 +1,6 @@
 # Pure Simulator
 
-This is a Pure Equipment Simulator designed to train new people on how to use Pure Equipment. This program is still under development there may be some bugs here and there. The Simulator is designed 
+This is a Pure Equipment Simulator designed to train new people on how to use Pure Equipment. This program is still under development there may be some bugs here and there. The Simulator is designed for testing pure equipment before real work.
 
 ## Commands
 
